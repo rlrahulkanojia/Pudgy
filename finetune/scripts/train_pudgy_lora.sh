@@ -48,14 +48,16 @@ accelerate launch --num_processes=1 --mixed_precision=bf16 \
   --train_data_dir="$DATASET_NAME" \
   --train_data_meta="$DATASET_META_NAME" \
   \
-  `# ---- resolution: FIXED SQUARE. The adaptive flags (random_hw_adapt +` \
-  `# training_with_video_token_length + enable_bucket) bucket to an off-grid` \
-  `# resolution that breaks CogVideoX1.5's rotary embedding (grid 94 vs 48).` \
-  `# Fixed square uses Resize->CenterCrop and trains cleanly. 768 needs ~an 80GB` \
-  `# card (use 512 on smaller). NOTE: this center-crops 9:16 clips to a square.` \
+  `# ---- resolution: BUCKETED. --enable_bucket is REQUIRED (the trainer's` \
+  `# dataloader only exists under 'if enable_bucket'). Keep the two adaptive` \
+  `# flags OFF (--random_hw_adapt, --training_with_video_token_length): those` \
+  `# pick an off-grid downsample that breaks CogVideoX1.5 rotary (grid 94 vs 48).` \
+  `# enable_bucket alone buckets to a clean, portrait-preserving /16 resolution` \
+  `# (~576x1008 at size 768). Drop to 512 for less VRAM / faster.` \
   --image_sample_size=768 \
   --video_sample_size=768 \
   --token_sample_size=768 \
+  --enable_bucket \
   \
   `# ---- REQUIRED for THIS dataset (clips are 33 consecutive frames @16fps) ----` \
   --video_sample_n_frames=33 \
@@ -97,11 +99,10 @@ accelerate launch --num_processes=1 --mixed_precision=bf16 \
 # - Golden checkpoint: evaluate each checkpoint-*/ (every 250 steps); character
 #   fidelity usually peaks around 1000-2000 steps before overfitting. Pick the
 #   best, don't assume the last is best.
-# - Resolution: this uses FIXED SQUARE (see block above) because the adaptive/
-#   bucket path breaks CogVideoX1.5's rotary embedding. Lower to 512 for less
-#   VRAM/faster: set --image/video/token_sample_size=512.
-# - Want to KEEP 9:16 portrait framing? Re-add --enable_bucket (only) and test;
-#   if it throws the "grid 94 vs 48" rotary error, revert to fixed square.
+# - Resolution: --enable_bucket is REQUIRED and buckets to a clean portrait
+#   /16 size. Do NOT add --random_hw_adapt or --training_with_video_token_length
+#   (they trigger the "grid 94 vs 48" rotary crash). Lower to 512 for less VRAM:
+#   set --image/video/token_sample_size=512.
 # - VRAM tight? add: --use_8bit_adam  (needs `pip install bitsandbytes`).
 # - Multi-GPU / DeepSpeed: use finetune/scripts/train_cogvideox_i2v_lora_single_rank.sh
 #   as a reference and the zero_stage2_config.json in this folder.

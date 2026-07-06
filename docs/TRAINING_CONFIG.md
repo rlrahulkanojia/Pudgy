@@ -21,18 +21,20 @@ The stock script defaults are `--video_sample_n_frames=49 --video_sample_stride=
 ```sh
   --video_sample_n_frames=33 \   # our clips are exactly 33 frames (8N+1)
   --video_sample_stride=1 \      # read consecutive frames (no skipping)
-  --image_sample_size=768 \      # FIXED SQUARE (see warning below)
-  --video_sample_size=768 \      # 768 needs ~80GB; use 512 on smaller cards
+  --image_sample_size=768 \      # 768 needs ~80GB; use 512 on smaller cards
+  --video_sample_size=768 \
   --token_sample_size=768 \
-  # do NOT pass --enable_bucket / --random_hw_adapt / --training_with_video_token_length
+  --enable_bucket \              # REQUIRED — dataloader only exists under this
+  # do NOT pass --random_hw_adapt or --training_with_video_token_length
 ```
 
-> **⚠️ Do not use the adaptive-resolution flags.** `--enable_bucket` /
-> `--random_hw_adapt` / `--training_with_video_token_length` bucket to an
-> off-grid resolution that crashes CogVideoX1.5's rotary embedding
-> (`RuntimeError: ... Expected size 94 but got size 48`). Fixed-square uses a
-> clean `Resize→CenterCrop` grid the model accepts. Downside: 9:16 clips are
-> center-cropped to a square. (`train_pudgy_lora.sh` is already set up this way.)
+> **⚠️ `--enable_bucket` is required, the two adaptive flags are not.** The
+> trainer builds its dataloader only under `if args.enable_bucket`, so removing
+> it → `UnboundLocalError: train_dataloader`. But `--random_hw_adapt` /
+> `--training_with_video_token_length` pick an off-grid downsample that crashes
+> CogVideoX1.5's rotary embedding (`RuntimeError: ... Expected size 94 but got
+> size 48`). Keep bucket ON, those two OFF → clean, portrait-preserving /16
+> resolution (~576×1008 at size 768). (`train_pudgy_lora.sh` is set up this way.)
 
 Everything else from the repo's `CogVideoX-5B-I2V-v1.5` example is fine. Suggested tweaks for a **small dataset (75 clips)** — the repo defaults are tuned for large sets:
 

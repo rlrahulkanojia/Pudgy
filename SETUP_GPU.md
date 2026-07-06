@@ -50,7 +50,7 @@ Checkpoints → `finetune/output_dir/pudgy-lora-v1/checkpoint-*/` every 250 step
 - `--rank 64 --lora_alpha 32 --learning_rate 3e-5 --lr_scheduler cosine` — tuned for a small (~75-clip) set; repo defaults (rank 128, LR 1e-4) overfit/burn.
 - `--max_train_steps 2500 --checkpointing_steps 250` — ~10 checkpoints; character fidelity usually peaks ~1000–2000 steps.
 - `PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True` — set by the script to reduce fragmentation.
-- **Fixed-square resolution** (`image/video/token_sample_size=768`, NO `enable_bucket`/`random_hw_adapt`/`training_with_video_token_length`). The adaptive path buckets to an off-grid size that breaks CogVideoX1.5's rotary embedding (see gotchas). Square center-crops 9:16 clips to their center; drop to 512 for less VRAM/faster.
+- **Bucketed resolution** (`image/video/token_sample_size=768` + `--enable_bucket`). `--enable_bucket` is **required** (the trainer's dataloader only exists under it) and buckets to a clean, portrait-preserving /16 size (~576×1008). The two adaptive flags (`--random_hw_adapt`, `--training_with_video_token_length`) are **left off** — they trigger the rotary crash (see gotchas). Drop to 512 for less VRAM.
 
 ## Out of memory (common on 32 GB cards like the 5090)
 The 5B model + rank-64 LoRA + AdamW optimizer states is heavy. In rough order of impact, add to the launch script:
@@ -70,5 +70,6 @@ Pick the best checkpoint by eye (don't assume the last is best). The LoRA weight
 - **`huggingface-cli` deprecated** → use `hf download` (setup uses it).
 - **`ffprobe: not found`** in check_dataset → install system `ffmpeg` (setup does this).
 - **`diffusers` release instead of source** → CogVideoX1.5 I2V class missing; re-run `pip install -e ./diffusers`.
-- **Rotary embedding error** — `RuntimeError: Sizes of tensors must match ... Expected size 94 but got size 48` in `_prepare_rotary_positional_embeddings`. Caused by the **adaptive resolution** path (`enable_bucket`/`random_hw_adapt`/`training_with_video_token_length`) picking an off-grid size. Fix = fixed-square resolution (already the default here). Not a frame-count problem.
+- **Rotary embedding error** — `RuntimeError: Sizes of tensors must match ... Expected size 94 but got size 48` in `_prepare_rotary_positional_embeddings`. Caused by the **adaptive resolution** flags (`--random_hw_adapt` + `--training_with_video_token_length`) picking an off-grid downsample. Fix = keep `--enable_bucket` but drop those two (already the default here). Not a frame-count problem.
+- **`UnboundLocalError: train_dataloader`** — you removed `--enable_bucket`. It's required: the trainer only builds the dataloader under `if args.enable_bucket`. Keep it on.
 - **`ValueError: invalid literal for int(): '16/1'`** in `check_dataset.py` → ffprobe field-order difference across builds; fixed in the current script (parses by field name).
