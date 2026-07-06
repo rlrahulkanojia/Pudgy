@@ -1,0 +1,40 @@
+# ---- Data (kept separate; never commit the clips) ----
+training_dataset/
+**/train/*.mp4
+*.mp4
+*.mov
+*.gif
+
+# ---- Base model / weights / checkpoints ----
+finetune/models/
+**/*.safetensors
+**/*.bin
+**/*.pt
+**/*.ckpt
+output_dir/
+**/output_dir/
+checkpoint-*/
+
+# ---- Downloaded diffusers source (installed via setup script) ----
+diffusers/
+
+# ---- Python env & caches ----
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.cache/
+**/cache/
+cache/
+
+# ---- Logs / trackers ----
+wandb/
+*.log
+logs/
+
+# ---- OS / editor ----
+.DS_Store
+.idea/
+.vscode/
