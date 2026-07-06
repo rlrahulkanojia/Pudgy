@@ -1,14 +1,30 @@
-diffusers>=0.31.0
+# Core training deps for CogVideoX1.5-5B-I2V LoRA.
+# NOTE: torch/torchvision and diffusers are installed SEPARATELY (see setup_gpu_env.sh):
+#   - torch/torchvision: from the CUDA-matched wheel index (cu128 for RTX 50-series/Blackwell)
+#   - diffusers: from source (github main) — required for the 1.5 I2V training code
 accelerate>=1.1.1
 transformers>=4.46.2
 numpy==1.26.0
-torch>=2.5.0
-torchvision>=0.20.0
 sentencepiece>=0.2.0
-SwissArmyTransformer>=0.4.12
-gradio>=5.5.0
+peft>=0.13.0
+datasets>=2.19.0
+opencv-python-headless>=4.9.0
+einops>=0.8.0
+omegaconf>=2.3.0
+func-timeout>=4.3.5
+albumentations>=1.4.0
+prodigyopt>=1.0
+bitsandbytes>=0.44.0
+decord>=0.6.0
 imageio>=2.35.1
 imageio-ffmpeg>=0.5.1
-openai>=1.54.0
-moviepy>=1.0.3
-scikit-video>=1.1.11
+tqdm>=4.66.0
+wandb>=0.18.0
+Pillow>=10.0.0
+
+# --- Inference / tooling extras (NOT needed for training; install if you use inference/) ---
+# gradio>=5.5.0
+# moviepy>=1.0.3
+# scikit-video>=1.1.11
+# openai>=1.54.0
+# SwissArmyTransformer>=0.4.12   # can be tricky to build; only for SAT-format tools

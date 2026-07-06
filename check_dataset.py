@@ -24,11 +24,12 @@ for x in d:
         problems.append(f"missing file: {x['file_path']}"); continue
     if not x["text"].strip():
         problems.append(f"empty caption: {x['file_path']}")
-    info = subprocess.check_output([
+    out = subprocess.check_output([
         "ffprobe", "-v", "error", "-select_streams", "v:0", "-count_frames",
         "-show_entries", "stream=nb_read_frames,width,height,r_frame_rate",
-        "-of", "csv=p=0", p]).decode().strip().split(",")
-    nb, w, h, fr = info[0], info[1], info[2], info[3]
+        "-of", "default=noprint_wrappers=1:nokey=0", p]).decode()
+    kv = dict(line.split("=", 1) for line in out.strip().splitlines() if "=" in line)
+    nb, w, h, fr = kv.get("nb_read_frames", "?"), kv.get("width", "?"), kv.get("height", "?"), kv.get("r_frame_rate", "?")
     seen_frames.add(nb)
     if (int(nb), int(w), int(h), fr) != (EXP_FRAMES, EXP_W, EXP_H, EXP_FPS):
         problems.append(f"{x['file_path']}: {w}x{h} {fr} {nb}f (expected {EXP_W}x{EXP_H} {EXP_FPS} {EXP_FRAMES}f)")

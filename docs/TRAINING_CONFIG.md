@@ -21,10 +21,18 @@ The stock script defaults are `--video_sample_n_frames=49 --video_sample_stride=
 ```sh
   --video_sample_n_frames=33 \   # our clips are exactly 33 frames (8N+1)
   --video_sample_stride=1 \      # read consecutive frames (no skipping)
-  --video_sample_size=768 \      # our native short edge; or leave 512 to train smaller
+  --image_sample_size=768 \      # FIXED SQUARE (see warning below)
+  --video_sample_size=768 \      # 768 needs ~80GB; use 512 on smaller cards
   --token_sample_size=768 \
-  --enable_bucket \              # keep on: no center-crop, buckets by resolution (portrait 768x1360)
+  # do NOT pass --enable_bucket / --random_hw_adapt / --training_with_video_token_length
 ```
+
+> **⚠️ Do not use the adaptive-resolution flags.** `--enable_bucket` /
+> `--random_hw_adapt` / `--training_with_video_token_length` bucket to an
+> off-grid resolution that crashes CogVideoX1.5's rotary embedding
+> (`RuntimeError: ... Expected size 94 but got size 48`). Fixed-square uses a
+> clean `Resize→CenterCrop` grid the model accepts. Downside: 9:16 clips are
+> center-cropped to a square. (`train_pudgy_lora.sh` is already set up this way.)
 
 Everything else from the repo's `CogVideoX-5B-I2V-v1.5` example is fine. Suggested tweaks for a **small dataset (75 clips)** — the repo defaults are tuned for large sets:
 
@@ -44,7 +52,7 @@ Model: `--pretrained_model_name_or_path` → `THUDM/CogVideoX1.5-5B-I2V` (or a l
 
 ## Note on frame count (33 vs 49/81)
 
-33 satisfies the model's **8N+1** rule and `(frames−1) % 4 == 0`, and the 1.5-I2V pipeline pads latent frames internally, so it trains. If you hit a `patch_size_t`/OFS shape error on your diffusers build, the safe fallback is to regenerate at **49 frames** (one-line change in `split6.py`: `FRAMES=49`) — that yields ~32 clips but uses the more battle-tested length for this model.
+33 satisfies the model's **8N+1** rule and `(frames−1) % 4 == 0`; verified to train on this stack (A100 80GB, fixed-square 768). Note: the rotary-embedding crash we hit was a **resolution** problem (adaptive flags), not a frame-count one — see the warning above. If you ever want longer motion per clip, regenerate at **49 or 81 frames** (`FRAMES=49` in `split6.py`) and set `--video_sample_n_frames` to match (yields fewer clips).
 
 ## Files in this folder
 

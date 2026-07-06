@@ -29,8 +29,9 @@ Training setup for a Pax & Polly (Pudgy Penguins) style/character LoRA on
 
 ## Requirements
 
-- **NVIDIA CUDA GPU** — A100 80GB reference (H100 fine; ~40–48 GB min with 8-bit Adam). **Not runnable on macOS/MPS.**
-- diffusers installed **from source** (the 1.5 I2V code isn't in any pip release) — handled by `setup_gpu_env.sh`.
+- **NVIDIA CUDA GPU.** Verified on an RTX 5090 (32 GB, Blackwell); A100/H100 80 GB have more headroom. 32 GB cards need the OOM tweaks in `SETUP_GPU.md`. **Not runnable on macOS/MPS.**
+- **CUDA torch matched to GPU:** A100/H100 use `cu121` (default); RTX 50-series/Blackwell need `cu128`. Handled by `setup_gpu_env.sh`.
+- **diffusers from source** (the 1.5 I2V code isn't in any pip release) — handled by `setup_gpu_env.sh`.
 
 ## Quickstart (on the GPU box)
 

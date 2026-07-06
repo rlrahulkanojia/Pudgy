@@ -36,6 +36,7 @@ echo "DATASET_NAME = $DATASET_NAME"
 echo "META         = $DATASET_META_NAME"
 echo "OUTPUT       = $OUTPUT_PATH"
 
+export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True   # reduce fragmentation / OOM
 export NCCL_IB_DISABLE=1
 export NCCL_P2P_DISABLE=1
 export NCCL_TIMEOUT_MS=1800000
@@ -47,13 +48,14 @@ accelerate launch --num_processes=1 --mixed_precision=bf16 \
   --train_data_dir="$DATASET_NAME" \
   --train_data_meta="$DATASET_META_NAME" \
   \
-  `# ---- resolution (proven low-VRAM preset; see notes to train at 768) ----` \
-  --image_sample_size=1280 \
-  --video_sample_size=512 \
-  --token_sample_size=512 \
-  --random_hw_adapt \
-  --training_with_video_token_length \
-  --enable_bucket \
+  `# ---- resolution: FIXED SQUARE. The adaptive flags (random_hw_adapt +` \
+  `# training_with_video_token_length + enable_bucket) bucket to an off-grid` \
+  `# resolution that breaks CogVideoX1.5's rotary embedding (grid 94 vs 48).` \
+  `# Fixed square uses Resize->CenterCrop and trains cleanly. 768 needs ~an 80GB` \
+  `# card (use 512 on smaller). NOTE: this center-crops 9:16 clips to a square.` \
+  --image_sample_size=768 \
+  --video_sample_size=768 \
+  --token_sample_size=768 \
   \
   `# ---- REQUIRED for THIS dataset (clips are 33 consecutive frames @16fps) ----` \
   --video_sample_n_frames=33 \
@@ -95,9 +97,11 @@ accelerate launch --num_processes=1 --mixed_precision=bf16 \
 # - Golden checkpoint: evaluate each checkpoint-*/ (every 250 steps); character
 #   fidelity usually peaks around 1000-2000 steps before overfitting. Pick the
 #   best, don't assume the last is best.
-# - Train at native 768x1360 (more VRAM): set --video_sample_size=768
-#   --token_sample_size=768 and REMOVE --training_with_video_token_length.
-#   Watch VRAM; drop --gradient_accumulation_steps or add --use_8bit_adam if OOM.
+# - Resolution: this uses FIXED SQUARE (see block above) because the adaptive/
+#   bucket path breaks CogVideoX1.5's rotary embedding. Lower to 512 for less
+#   VRAM/faster: set --image/video/token_sample_size=512.
+# - Want to KEEP 9:16 portrait framing? Re-add --enable_bucket (only) and test;
+#   if it throws the "grid 94 vs 48" rotary error, revert to fixed square.
 # - VRAM tight? add: --use_8bit_adam  (needs `pip install bitsandbytes`).
 # - Multi-GPU / DeepSpeed: use finetune/scripts/train_cogvideox_i2v_lora_single_rank.sh
 #   as a reference and the zero_stage2_config.json in this folder.
