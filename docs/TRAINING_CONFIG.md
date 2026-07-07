@@ -21,9 +21,9 @@ The stock script defaults are `--video_sample_n_frames=49 --video_sample_stride=
 ```sh
   --video_sample_n_frames=33 \   # our clips are exactly 33 frames (8N+1)
   --video_sample_stride=1 \      # read consecutive frames (no skipping)
-  --image_sample_size=768 \      # 768 needs ~80GB; use 512 on smaller cards
-  --video_sample_size=768 \
-  --token_sample_size=768 \
+  --image_sample_size=592 \      # MAX on-grid for portrait; 512 for less VRAM
+  --video_sample_size=592 \
+  --token_sample_size=592 \
   --enable_bucket \              # REQUIRED — dataloader only exists under this
   # do NOT pass --random_hw_adapt or --training_with_video_token_length
 ```
@@ -33,8 +33,20 @@ The stock script defaults are `--video_sample_n_frames=49 --video_sample_stride=
 > it → `UnboundLocalError: train_dataloader`. But `--random_hw_adapt` /
 > `--training_with_video_token_length` pick an off-grid downsample that crashes
 > CogVideoX1.5's rotary embedding (`RuntimeError: ... Expected size 94 but got
-> size 48`). Keep bucket ON, those two OFF → clean, portrait-preserving /16
-> resolution (~576×1008 at size 768). (`train_pudgy_lora.sh` is set up this way.)
+> size 48`). Keep bucket ON, those two OFF.
+
+> **⚠️ Resolution ceiling — why 592, not 768.** The clips are PORTRAIT 768×1360
+> (ratio 1.77). CogVideoX1.5-5B-I2V's rotary grid is capped at **48 × 85 patches**
+> (= `sample_height/2` × `sample_width/2` = 96/2 × 170/2), i.e. a native canvas of
+> **768 (H) × 1360 (W)** — so a *portrait* clip can be at most **768 px tall**. The
+> ratio-1.77 bucket is `[672,384]` (H,W) scaled by `sample_size/512` and floored /16:
+> - `size 512` → **672×384** (H,W), grid 42×24 — safe, low VRAM
+> - `size 592` → **768×432** (H,W), grid 48×27 — **the maximum on-grid resolution**
+> - `size 768` → 1008×576, grid **63** > 48 → **crashes** (`Expected size 63 but got 48`)
+> - `size 1024` → 1344×768, grid **84** > 48 → **crashes**
+>
+> So `592` (any value 586–597 lands on 768×432) is the max; `train_pudgy_lora.sh`
+> uses it. Do not raise it for these portrait clips.
 
 Everything else from the repo's `CogVideoX-5B-I2V-v1.5` example is fine. Suggested tweaks for a **small dataset (75 clips)** — the repo defaults are tuned for large sets:
 

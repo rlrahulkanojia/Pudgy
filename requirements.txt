@@ -19,7 +19,8 @@ decord>=0.6.0
 imageio>=2.35.1
 imageio-ffmpeg>=0.5.1
 tqdm>=4.66.0
-wandb>=0.18.0
+tensorboard>=2.14.0     # training loss/lr curve (default --report_to tensorboard in train_pudgy_lora.sh)
+wandb>=0.18.0           # optional alt tracker (--report_to wandb)
 Pillow>=10.0.0
 
 # --- Inference / tooling extras (NOT needed for training; install if you use inference/) ---

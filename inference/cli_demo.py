@@ -36,7 +36,8 @@ def generate_video(
     prompt: str,
     model_path: str,
     lora_path: str = None,
-    lora_rank: int = 128,
+    lora_rank: int = 64,
+    lora_alpha: int = 32,
     num_frames: int = 81,
     width: int = 1360,
     height: int = 768,
@@ -95,7 +96,9 @@ def generate_video(
     # If you're using with lora, add this code
     if lora_path:
         pipe.load_lora_weights(lora_path, weight_name="pytorch_lora_weights.safetensors", adapter_name="test_1")
-        pipe.fuse_lora(lora_scale=1 / lora_rank,components = ["transformer"])
+        # Effective LoRA scale = lora_alpha/rank (training-time scale, 32/64 = 0.5 here).
+        # The old `1/lora_rank` (~0.008) under-applied the LoRA by ~rank x -> near no-op.
+        pipe.fuse_lora(lora_scale=lora_alpha / lora_rank, components=["transformer"])
          
         # 将lora和模型融合到一起然后保存到本地首先卸载lora
         # pipeline.unload_lora_weights()
@@ -173,7 +176,8 @@ if __name__ == "__main__":
         "--model_path", type=str, default="THUDM/CogVideoX1.5-5B", help="Path of the pre-trained model use"
     )
     parser.add_argument("--lora_path", type=str, default=None, help="The path of the LoRA weights to be used")
-    parser.add_argument("--lora_rank", type=int, default=128, help="The rank of the LoRA weights")
+    parser.add_argument("--lora_rank", type=int, default=64, help="The rank of the LoRA weights (repo default 64)")
+    parser.add_argument("--lora_alpha", type=int, default=32, help="The alpha of the LoRA weights (repo default 32)")
     parser.add_argument("--output_path", type=str, default="./output.mp4", help="The path save generated video")
     parser.add_argument("--guidance_scale", type=float, default=6.0, help="The scale for classifier-free guidance")
     parser.add_argument("--num_inference_steps", type=int, default=50, help="Inference steps")
@@ -193,6 +197,7 @@ if __name__ == "__main__":
         model_path=args.model_path,
         lora_path=args.lora_path,
         lora_rank=args.lora_rank,
+        lora_alpha=args.lora_alpha,
         output_path=args.output_path,
         num_frames=args.num_frames,
         width=args.width,

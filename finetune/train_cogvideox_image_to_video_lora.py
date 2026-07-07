@@ -833,8 +833,38 @@ def get_optimizer(args, params_to_optimize, use_deepspeed: bool = False):
     return optimizer
 
 
+def _save_checkpoint(args, accelerator, global_step, logger):
+    """Save an Accelerate checkpoint to `<output_dir>/checkpoint-<global_step>`.
+
+    The registered `save_model_hook` writes the LoRA safetensors into the same folder. The
+    directory name keeps the `checkpoint-<int>` form expected by `--resume_from_checkpoint`
+    and by the `checkpoints_total_limit` pruning below (both parse `int(name.split("-")[1])`).
+    """
+    # Prune old checkpoints on the main process BEFORE writing the new one.
+    if accelerator.is_main_process and args.checkpoints_total_limit is not None:
+        checkpoints = [d for d in os.listdir(args.output_dir) if d.startswith("checkpoint-")]
+        # Ignore any stray dirs that don't parse as checkpoint-<int>.
+        checkpoints = sorted(
+            [d for d in checkpoints if d.split("-")[1].isdigit()],
+            key=lambda x: int(x.split("-")[1]),
+        )
+        if len(checkpoints) >= args.checkpoints_total_limit:
+            num_to_remove = len(checkpoints) - args.checkpoints_total_limit + 1
+            removing_checkpoints = checkpoints[0:num_to_remove]
+            logger.info(
+                f"{len(checkpoints)} checkpoints already exist, removing {len(removing_checkpoints)} checkpoints"
+            )
+            logger.info(f"Removing checkpoints: {', '.join(removing_checkpoints)}")
+            for removing_checkpoint in removing_checkpoints:
+                shutil.rmtree(os.path.join(args.output_dir, removing_checkpoint))
+
+    save_path = os.path.join(args.output_dir, f"checkpoint-{global_step}")
+    accelerator.save_state(save_path)
+    logger.info(f"Saved state to {save_path}")
+
+
 def main(args):
-    
+
     if args.report_to == "wandb" and args.hub_token is not None:
         raise ValueError(
             "You cannot use both --report_to=wandb and --hub_token due to a security risk of exposing your token."
@@ -1238,7 +1268,12 @@ def main(args):
                 if batch_video_length <= 0:
                     batch_video_length = 1
 
-                new_examples["pixel_values"] = torch.stack([example[:batch_video_length] for example in new_examples["pixel_values"]])
+            # Stack AFTER collecting every example (dedented out of the `for example` loop).
+            # When this ran inside the loop it replaced the list with a Tensor after the first
+            # example, so a second example crashed with "'Tensor' object has no attribute
+            # 'append'" — which is why the trainer only ever worked at train_batch_size=1.
+            # `batch_video_length` is the min across examples here, so all clips truncate equally.
+            new_examples["pixel_values"] = torch.stack([example[:batch_video_length] for example in new_examples["pixel_values"]])
 
             if args.enable_text_encoder_in_dataloader:
                 prompt_ids = tokenizer(
@@ -1523,35 +1558,20 @@ def main(args):
                 progress_bar.update(1)
                 global_step += 1
 
-                # if accelerator.is_main_process:
-                #     if global_step % args.checkpointing_steps == 0:
-                #         # _before_ saving state, check if this save would set us over the `checkpoints_total_limit`
-                #         if args.checkpoints_total_limit is not None:
-                #             checkpoints = os.listdir(args.output_dir)
-                #             checkpoints = [d for d in checkpoints if d.startswith("checkpoint")]
-                #             checkpoints = sorted(checkpoints, key=lambda x: int(x.split("-")[1]))
+                # Save a checkpoint every `checkpointing_steps` optimizer steps. Naming is
+                # `checkpoint-<global_step>` so the resume logic and `checkpoints_total_limit`
+                # pruning (both parse `int(name.split("-")[1])`) work correctly.
+                if global_step % args.checkpointing_steps == 0:
+                    _save_checkpoint(args, accelerator, global_step, logger)
 
-                #             # before we save the new checkpoint, we need to have at _most_ `checkpoints_total_limit - 1` checkpoints
-                #             if len(checkpoints) >= args.checkpoints_total_limit:
-                #                 num_to_remove = len(checkpoints) - args.checkpoints_total_limit + 1
-                #                 removing_checkpoints = checkpoints[0:num_to_remove]
+                # Log one clean point per OPTIMIZER step (inside sync_gradients) so the
+                # TensorBoard loss/lr curves have exactly one value per global_step. Placing
+                # this outside the guard would log grad_accum_steps duplicate points per step.
+                logs = {"loss": loss.detach().item(), "lr": lr_scheduler.get_last_lr()[0]}
+                accelerator.log(logs, step=global_step)
 
-                #                 logger.info(
-                #                     f"{len(checkpoints)} checkpoints already exist, removing {len(removing_checkpoints)} checkpoints"
-                #                 )
-                #                 logger.info(f"Removing checkpoints: {', '.join(removing_checkpoints)}")
-
-                #                 for removing_checkpoint in removing_checkpoints:
-                #                     removing_checkpoint = os.path.join(args.output_dir, removing_checkpoint)
-                #                     shutil.rmtree(removing_checkpoint)
-
-                #         save_path = os.path.join(args.output_dir, f"checkpoint-{global_step}")
-                #         accelerator.save_state(save_path)
-                #         logger.info(f"Saved state to {save_path}")
-                        
             logs = {"loss": loss.detach().item(), "lr": lr_scheduler.get_last_lr()[0]}
             progress_bar.set_postfix(**logs)
-            accelerator.log(logs, step=global_step)
 
             if global_step >= args.max_train_steps:
                 break
@@ -1611,32 +1631,13 @@ def main(args):
         #         del transformer
         #         free_memory()
 
-        if accelerator.is_main_process:
-            if (epoch + 1) % args.checkpoint_epochs == 0:
-                # _before_ saving state, check if this save would set us over the `checkpoints_total_limit`
-                if args.checkpoints_total_limit is not None:
-                    checkpoints = os.listdir(args.output_dir)
-                    checkpoints = [d for d in checkpoints if d.startswith("checkpoint")]
-                    checkpoints = sorted(checkpoints, key=lambda x: int(x.split("-")[1]))
+        # NOTE: periodic checkpointing is handled step-based (every `--checkpointing_steps`)
+        # inside the loop above via `_save_checkpoint`, matching the README / launch script
+        # (~10 `checkpoint-<step>/` for a 2500-step run). The old per-epoch save here wrote
+        # `checkpoint-checkpoint{epoch+1}`, which (a) crashed the total-limit pruning
+        # (`int("checkpoint1")` -> ValueError) and (b) at ~18 steps/epoch would emit ~138
+        # checkpoints. It has been removed in favor of the single step-based mechanism.
 
-                    # before we save the new checkpoint, we need to have at _most_ `checkpoints_total_limit - 1` checkpoints
-                    if len(checkpoints) >= args.checkpoints_total_limit:
-                        num_to_remove = len(checkpoints) - args.checkpoints_total_limit + 1
-                        removing_checkpoints = checkpoints[0:num_to_remove]
-
-                        logger.info(
-                            f"{len(checkpoints)} checkpoints already exist, removing {len(removing_checkpoints)} checkpoints"
-                        )
-                        logger.info(f"Removing checkpoints: {', '.join(removing_checkpoints)}")
-
-                        for removing_checkpoint in removing_checkpoints:
-                            removing_checkpoint = os.path.join(args.output_dir, removing_checkpoint)
-                            shutil.rmtree(removing_checkpoint)
-
-                save_path = os.path.join(args.output_dir, f"checkpoint-checkpoint{epoch+1}")
-                accelerator.save_state(save_path)
-                logger.info(f"Saved state to {save_path}")
-                
     # Save the lora layers
     accelerator.wait_for_everyone()
     if accelerator.is_main_process:

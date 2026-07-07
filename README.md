@@ -46,9 +46,17 @@ python check_dataset.py "$DATASET_DIR"
 
 # 3. train
 DATASET_DIR=/path/to/training_dataset bash finetune/scripts/train_pudgy_lora.sh
+
+# 4. evaluate — auto-loads the LATEST checkpoint and generates a video
+python inference/eval_pudgy_lora.py --list                       # see checkpoints
+python inference/eval_pudgy_lora.py --dataset_dir "$DATASET_DIR" # generate from newest
 ```
 
-Checkpoints → `finetune/output_dir/pudgy-lora-v1/checkpoint-*/` every 250 steps. See `SETUP_GPU.md` for details, VRAM options, and gotchas.
+Checkpoints → `finetune/output_dir/pudgy-lora-v1/checkpoint-*/` every `--checkpointing_steps` (250) steps. See `SETUP_GPU.md` for details, VRAM options, and gotchas.
+
+## Evaluate / run inference
+
+`inference/eval_pudgy_lora.py` finds the newest `checkpoint-<step>/` in the output folder, applies the LoRA at the **correct scale** (`lora_alpha/rank` = 0.5), and clamps the output to a grid-safe resolution (portrait maxes at **432×768** on this model). Pick a specific checkpoint with `--checkpoint <step>` (or `final`), your own conditioning frame with `--image`, and dial the LoRA up/down with `--lora_scale`. On a <~48 GB card add `--cpu_offload`.
 
 ## Getting the data
 
@@ -59,8 +67,9 @@ Dataset spec (all clips): **768×1360, 16 fps, 33 frames (8N+1), H.264, silent.*
 ## Key config baked into the launch script
 
 - `--video_sample_n_frames=33 --video_sample_stride=1 --fps=16` — **mandatory** for this dataset (repo defaults of 49/stride-3 would sample 11 non-8N+1 frames and break).
+- `--*_sample_size=592` — **the maximum on-grid resolution** for these portrait clips → trains at **432×768**. Higher (768, 1024) overflows CogVideoX1.5's rotary grid and crashes (`Expected size 63 but got 48`); drop to 512 for less VRAM. See `docs/TRAINING_CONFIG.md`.
 - `--rank 64 --lora_alpha 32 --learning_rate 3e-5 --lr_scheduler cosine` — tuned for a small (~75-clip) set.
-- `--max_train_steps 2500 --checkpointing_steps 250` — ~10 checkpoints; pick the golden one (fidelity usually peaks ~1000–2000 steps).
+- `--max_train_steps 2500 --checkpointing_steps 250` — a `checkpoint-<step>/` every 250 steps (~10 total); pick the golden one (fidelity usually peaks ~1000–2000 steps).
 
 ## Credits
 

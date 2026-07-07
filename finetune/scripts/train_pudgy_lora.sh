@@ -48,15 +48,19 @@ accelerate launch --num_processes=1 --mixed_precision=bf16 \
   --train_data_dir="$DATASET_NAME" \
   --train_data_meta="$DATASET_META_NAME" \
   \
-  `# ---- resolution: BUCKETED. --enable_bucket is REQUIRED (the trainer's` \
-  `# dataloader only exists under 'if enable_bucket'). Keep the two adaptive` \
-  `# flags OFF (--random_hw_adapt, --training_with_video_token_length): those` \
-  `# pick an off-grid downsample that breaks CogVideoX1.5 rotary (grid 94 vs 48).` \
-  `# enable_bucket alone buckets to a clean, portrait-preserving /16 resolution` \
-  `# (~576x1008 at size 768). Drop to 512 for less VRAM / faster.` \
-  --image_sample_size=768 \
-  --video_sample_size=768 \
-  --token_sample_size=768 \
+  `# ---- resolution: BUCKETED at the MAXIMUM the model supports for THIS data. ----` \
+  `# The clips are PORTRAIT 768x1360 (ratio 1.77). CogVideoX1.5-5B-I2V's rotary grid is` \
+  `# capped at 48 x 85 patches (== sample_height/2=96/2 x sample_width/2=170/2), i.e. a` \
+  `# native canvas of 768 (H) x 1360 (W). So a portrait clip can be at most 768px TALL.` \
+  `# The bucket for ratio 1.77 is [672,384] (H,W) scaled by sample_size/512, floored /16.` \
+  `# sample_size=592 -> 768x432 (H,W), grid 48x27  <- the max on-grid portrait resolution.` \
+  `# DO NOT raise this: 768 -> 1008x576 (grid 63) and 1024 -> 1344x768 (grid 84) both blow` \
+  `# past the 48-row grid and crash with "Expected size 63/84 but got 48". Drop to 512` \
+  `# (-> 672x384, grid 42x24) for less VRAM. Keep --enable_bucket ON and the two adaptive` \
+  `# flags (--random_hw_adapt, --training_with_video_token_length) OFF (they go off-grid).` \
+  --image_sample_size=592 \
+  --video_sample_size=592 \
+  --token_sample_size=592 \
   --enable_bucket \
   \
   `# ---- REQUIRED for THIS dataset (clips are 33 consecutive frames @16fps) ----` \
@@ -79,8 +83,8 @@ accelerate launch --num_processes=1 --mixed_precision=bf16 \
   --max_grad_norm 1.0 \
   \
   `# ---- schedule / batching ----` \
-  --train_batch_size 1 \
-  --gradient_accumulation_steps 4 \
+  --train_batch_size 2 \
+  --gradient_accumulation_steps 2 \
   --gradient_checkpointing \
   --max_train_steps 2500 \
   --checkpointing_steps 250 \
@@ -92,17 +96,27 @@ accelerate launch --num_processes=1 --mixed_precision=bf16 \
   --seed 42 \
   --allow_tf32 \
   --output_dir "$OUTPUT_PATH" \
-  --nccl_timeout "$NCCL_TIMEOUT_MS"
+  --nccl_timeout "$NCCL_TIMEOUT_MS" \
+  \
+  `# ---- training log / loss curve (TensorBoard) ----` \
+  `# Without --report_to the trainer's accelerator.log(loss, lr) calls are silent no-ops,` \
+  `# so NO loss curve is captured (the v1 run had to be reverse-engineered from optimizer` \
+  `# state). This writes tfevents to $OUTPUT_PATH/logs. Needs \`pip install tensorboard\`.` \
+  `# Watch live:  tensorboard --logdir "$OUTPUT_PATH/logs" --host 0.0.0.0 --port 6006` \
+  --report_to tensorboard \
+  --logging_dir logs \
+  --tracker_name pudgy-lora-v1
 
 # =============================================================================
 # NOTES
 # - Golden checkpoint: evaluate each checkpoint-*/ (every 250 steps); character
 #   fidelity usually peaks around 1000-2000 steps before overfitting. Pick the
 #   best, don't assume the last is best.
-# - Resolution: --enable_bucket is REQUIRED and buckets to a clean portrait
-#   /16 size. Do NOT add --random_hw_adapt or --training_with_video_token_length
-#   (they trigger the "grid 94 vs 48" rotary crash). Lower to 512 for less VRAM:
-#   set --image/video/token_sample_size=512.
+# - Resolution: 592 is the MAXIMUM on-grid size for these portrait clips -> 768x432
+#   (H,W), grid 48x27. The model caps portrait height at 768px (rotary grid 48 rows).
+#   Do NOT raise above 597 (768 or 1024 crash: "Expected size 63/84 but got 48"), and
+#   do NOT add --random_hw_adapt / --training_with_video_token_length (same crash).
+#   Lower to 512 (-> 672x384) for less VRAM: set --image/video/token_sample_size=512.
 # - VRAM tight? add: --use_8bit_adam  (needs `pip install bitsandbytes`).
 # - Multi-GPU / DeepSpeed: use finetune/scripts/train_cogvideox_i2v_lora_single_rank.sh
 #   as a reference and the zero_stage2_config.json in this folder.
