@@ -246,10 +246,13 @@ def main():
     pipe.load_lora_weights(lora_dir, weight_name=LORA_WEIGHT_NAME, adapter_name="pudgy-lora")
     pipe.set_adapters(["pudgy-lora"], [lora_scale])
 
+    # VAE tiling/slicing keeps the decode of a full 33-frame video within VRAM. The decode
+    # peak is far higher than the diffusion steps; without this it OOMs on a 40GB card even
+    # though the transformer fits. Negligible quality impact, so enable it unconditionally.
+    pipe.vae.enable_slicing()
+    pipe.vae.enable_tiling()
     if args.cpu_offload:
         pipe.enable_sequential_cpu_offload()
-        pipe.vae.enable_slicing()
-        pipe.vae.enable_tiling()
     else:
         pipe.to("cuda")
 
