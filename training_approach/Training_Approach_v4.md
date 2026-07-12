@@ -253,7 +253,7 @@ Reuse the **v2 §5 rubric** (character identity, line/color quality, motion robu
 | Package mgr | **`uv`** (the LTX-2 repo uses `uv sync` / `uv run`). Install uv first. |
 | HF access | `hf auth login`; accept licenses for `Lightricks/LTX-2.3` and `google/gemma-3-12b-it-qat-q4_0-unquantized`. |
 | Anthropic API | `ANTHROPIC_API_KEY` for the prompt subsystem (Task 0.5). |
-| Data | Existing `training_dataset/` (75 clips) **and** the original **24 fps source footage** (needed to re-derive at 25 fps for Task 1.1). |
+| Data | **Raw sources only: `30_videos/` (30 source skits, ~24 fps) + `30_prompts/` (storyboard beats, one per skit).** The LTX training set is **built from these on the box** (Task 1.1). The old 75-clip set is *not* reused — wrong fps (16) and resolution (768×1360, not ÷32). |
 
 ### 12.1 Environment + model download
 
@@ -326,26 +326,40 @@ Build §7: `prompt/prompt_schema.json`, `prompt/character_bible.json` (from `doc
 
 ### Phase 1 — corrected baseline
 
-#### TASK 1.1 — Rebuild dataset to LTX-native
-Hard constraints (from the trainer docs): **`frames % 8 == 1`**, **width & height ÷ 32**, **fps 25** (trainer default `frame_rate: 25.0`).
-- ⚠️ **Our v1 spec fails ÷32:** 768×**1360** → 1360/32 = 42.5. Use a valid portrait bucket, e.g. **`544x960`** or **`768x1344`**; frames **49** (≈2 s @ 25 fps) or 81 (≈3.2 s).
-- Re-derive from the **24 fps source** to 25 fps (avoid double-resample), silent:
+#### TASK 1.1 — Build the LTX-native dataset from raw (`30_videos/` + `30_prompts/`)
+The box starts with **30 source skits + 30 storyboard prompts** — build the training set here. Hard targets (trainer docs): **width/height ÷ 32**, **`frames % 8 == 1`**, **fps 25**, silent. Canonical bucket **544×960×49** (≈2.0 s; use 81 for ≈3.2 s).
+> ⚠️ The old 75-clip set is wrong fps/res — do **not** reuse. `prep/build_dataset.py` hard-codes a stale 49/81-frame spec and the original `split6.py`/`assemble3.py` tiling scripts are **absent** — this task **reconstructs** the build.
 
+**a) Shot detection** — split each skit into shots (PySceneDetect, threshold 22, as in the original build):
 ```bash
-ffmpeg -i source_shot.mp4 -r 25 -vf "scale=544:960:flags=lanczos,crop=544:960" \
-       -an -c:v libx264 -crf 16 -pix_fmt yuv420p out_00000001.mp4
-# trim/segment so each clip has 49 frames (frames%8==1)
+mkdir -p shots
+for v in 30_videos/*.mp4; do
+  scenedetect -i "$v" detect-content --threshold 22 split-video -o shots/
+done
 ```
 
-- Build `dataset.json` in LTX format (captions from the Task 0.5 captioner):
+**b) Re-encode + window to LTX spec** — 25 fps, ÷32 crop to 544×960, non-overlapping 49-frame clips, silent:
+```bash
+mkdir -p clips
+ffmpeg -i shots/shot_001.mp4 \
+  -vf "fps=25,scale=544:960:flags=lanczos:force_original_aspect_ratio=increase,crop=544:960" \
+  -an -c:v libx264 -crf 16 -pix_fmt yuv420p -reset_timestamps 1 \
+  -f segment -segment_frames 49,98,147,196,245 clips/shot001_%03d.mp4
+```
+⚠️VERIFY each clip is **exactly 49 frames** (`ffprobe -count_frames -show_entries stream=nb_read_frames`); drop short tails so every clip satisfies `frames % 8 == 1`. (Robust alternative: extract fixed 49-frame windows with `-ss <start> -frames:v 49` in a loop.)
 
+**c) Content cull** — drop the non-training windows the original build removed: product/text end-cards, off-character shots, off-model costumes, wipe/match-cut straddlers. (Manual pass or reuse the original cull list.)
+
+**d) Caption each clip** (the Task 0.5 prompt subsystem) — for every clip: pull its source skit's **beat from `30_prompts/`**, add a **per-shot VLM frame description**, and have the **Claude captioner** emit the LTX-native structured record (rare-token identity + variable-only action, flat-style vocab, single <200-word paragraph). Anti-entanglement per `prep/caption_prune.py`.
+
+**e) Assemble `dataset.json`** (LTX `caption`/`video` schema):
 ```json
 [
-  { "caption": "pxngn0. 2d cartoon animation, cel-shaded, bold black outlines, flat pastel fills, the blue penguin waddles in and waves twice by a hanging lamp, cozy tiled room, static medium shot, flat lighting", "video": "videos/out_00000001.mp4" }
+  { "caption": "pxngn0. 2d cartoon animation, cel-shaded, bold black outlines, flat pastel fills, the blue penguin waddles in and waves twice by a hanging lamp, cozy tiled room, static medium shot, flat lighting", "video": "clips/shot001_000.mp4" }
 ]
 ```
 
-> **Report back:** clip count at the chosen bucket; a few sample frames confirming ÷32 crop didn't clip characters.
+> **Report back:** clip count after cull (expect a few dozen); sample frames confirming the ÷32 crop didn't clip characters; every clip = **exactly 49 frames @ 25 fps @ 544×960**; `dataset.json` passes the §7.4 validators.
 
 #### TASK 1.2 — Preprocess (precompute latents + text embeddings)
 
@@ -472,7 +486,7 @@ Generate the fixed held-out prompt set via the Task 0.5 **expander → dev pipel
 - [ ] 0.4 keyframe loop + end-of-clip-flash verdict
 - [ ] 0.5 prompt pipeline: valid records + 3 samples
 - [ ] G0 recommendation
-- [ ] 1.1–1.3 dataset rebuilt + preprocessed + style LoRA trained (config + checkpoints)
+- [ ] 1.1 dataset **built from raw 30 videos + 30 prompts** (÷32 / 25 fps / 49-frame clips + captions) → 1.2 preprocessed → 1.3 style LoRA trained (config + checkpoints)
 - [ ] 1.4 rubric scores vs v1 → **G1**
 
 ### Training heads-up from the LTX-2 issue tracker (read before Phase 1)
