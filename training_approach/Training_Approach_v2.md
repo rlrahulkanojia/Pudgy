@@ -178,7 +178,7 @@ Hold a fixed prompt set (mix of single-character, 2-shot, and an action-primitiv
 1. **Write & run the VAE round-trip diagnostic** (0.1) — one day, decides the base.
 2. **Caption A/B + LoRA-targeting re-run** on current CogVideoX (0.2, 0.3) — isolates model vs method.
 3. **Send the tightened client asset request** (§6) — starts the long-lead deliverables now.
-4. Stand up the Wan 2.2 (+ AniSora) training env in parallel (1.1).
+4. Stand up the Wan 2.2 (+ AniSora) training env in parallel (1.1). — ✅ **A14B env done**, see [`actions_done.md`](./actions_done.md) (built, pre-cached, smoke-tested on the A100-80GB; not yet trained).
 
 ---
 

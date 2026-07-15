@@ -1,0 +1,6 @@
+# In-training sample prompts (musubi --sample_prompts) for the Pudgy Wan2.2-A14B LoRA.
+# Plain I2V from the start keyframe (--i). Full FLF2V end-frame eval is separate (eval_flf2v.sh).
+# Smaller than native (480x832) to keep per-checkpoint sampling fast + low-VRAM during training.
+#   --w width  --h height  --f frames  --d seed  --s steps  --fs flow-shift  --i init image  --n negative
+# Clip 00000001 (Pax + door + Polly) — matches the v1 eval conditioning frame for comparison.
+A 2D cartoon animation in the Pudgy Penguins style, with thick clean black outlines and flat pastel colors, showing Pax, a short round blue penguin, standing in a tiled room and gesturing up toward a hanging lamp as a wooden door opens and Polly, a short round pink penguin, peeks in; they shift with gentle bouncy motion while the room and lamp stay completely still. --i /workspace/Pudgy/finetune/wan/sample_start.png --w 480 --h 832 --f 33 --d 42 --s 20 --fs 5.0 --n realistic, 3d render, photorealistic, soft shading, gradients, blurry outlines

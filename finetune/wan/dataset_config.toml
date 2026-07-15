@@ -1,0 +1,17 @@
+# Musubi-tuner dataset config — Pudgy Wan2.2-I2V-A14B LoRA
+# 75 clips, 768x1360 portrait, 33 frames (4*8+1), 16 fps (already resampled).
+# Latent per clip = 16 x 9 x 170 x 96 (matches phase0 VAE round-trip shape).
+
+[general]
+resolution = [768, 1360]   # [W, H] portrait — matches the source clips exactly
+batch_size = 1
+enable_bucket = true
+bucket_no_upscale = true    # all clips are already 768x1360; never upscale
+
+[[datasets]]
+video_jsonl_file = "/workspace/Pudgy/finetune/wan/dataset.jsonl"
+cache_directory = "/workspace/wan_cache/latents"
+target_frames = [33]        # 33 = 4N+1; clips are exactly 33 frames
+frame_extraction = "head"
+# source_fps intentionally omitted: clips are already 16 fps (Wan-native) -> use all 33 frames
+num_repeats = 1

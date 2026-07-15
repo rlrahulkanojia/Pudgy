@@ -4,7 +4,7 @@ training_dataset/
 *.mp4
 *.mov
 *.gif
-
+.venv-wan/
 # ---- Base model / weights / checkpoints ----
 finetune/models/
 **/*.safetensors
