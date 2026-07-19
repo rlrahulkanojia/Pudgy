@@ -4,10 +4,10 @@ Reproducible record of standing up the **Wan2.2-I2V-A14B + musubi-tuner** traini
 environment called for in [`Training_Approach_v2.md`](./Training_Approach_v2.md)
 §1.1 / §4. This is the concrete execution of the base migration, now that the box
 is an **A100 80 GB** — which lifts the v1 blocker (A14B was fp8+block-swap-only on
-the old 40 GB card; see [`FINDINGS.md`](./FINDINGS.md) §5).
+the old 40 GB card; see [`FINDINGS.md`](../FINDINGS.md) §5).
 
 **Date:** 2026-07-10 · **Status:** env built, pre-cached, smoke-tested. Not yet
-trained. G0 VAE decision was already settled in [`phase0_diagnostics.md`](./phase0_diagnostics.md)
+trained. G0 VAE decision was already settled in [`phase0_diagnostics.md`](../phase0_diagnostics.md)
 (8× VAE is near-lossless; avoid the 5B 16× VAE).
 
 ---
@@ -207,4 +207,4 @@ cd /workspace/musubi-tuner && pip install -e . && pip install tensorboard
    low-noise (identity) LoRA, optionally the high-noise (motion) LoRA.
 3. Score against the v2 §5 rubric vs the v1 CogVideoX baseline at **Gate G1**.
 
-*Related: [`Training_Approach_v2.md`](./Training_Approach_v2.md), [`base_model_exploration.md`](./base_model_exploration.md), [`phase0_diagnostics.md`](./phase0_diagnostics.md), and the in-env `Pudgy/finetune/wan/README.md`.*
+*Related: [`Training_Approach_v2.md`](./Training_Approach_v2.md), [`base_model_exploration.md`](../base_model_exploration.md), [`phase0_diagnostics.md`](../phase0_diagnostics.md), and the in-env `Pudgy/finetune/wan/README.md`.*

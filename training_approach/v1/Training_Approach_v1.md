@@ -1,6 +1,6 @@
 # Pudgy Penguins — Training Approach v1 (executed baseline)
 
-**Status:** ✅ built and run · ⚠️ results below bar on consistency + image quality → **superseded by [Training_Approach_v2.md](./Training_Approach_v2.md)**.
+**Status:** ✅ built and run · ⚠️ results below bar on consistency + image quality → **superseded by [Training_Approach_v2.md](../v2/Training_Approach_v2.md)**.
 
 This documents the **first approach**, exactly as executed, so the GPU team has the baseline that v2 is measured against. Nothing here is aspirational — it's what actually ran.
 

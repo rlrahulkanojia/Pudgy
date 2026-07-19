@@ -1,6 +1,6 @@
 # Pudgy Penguins — Training Approach v2
 
-> **Refined by [Training_Approach_v3.md](./Training_Approach_v3.md)** — v3 keeps this plan's thesis, rubric, and phases but commits the open base A/B to **AniSora V3.2** (anime-native Wan2.2-A14B) and makes the identity-pinning native. Read v3 for the current base decision.
+> **Refined by [Training_Approach_v3.md](../v3/Training_Approach_v3.md)** — v3 keeps this plan's thesis, rubric, and phases but commits the open base A/B to **AniSora V3.2** (anime-native Wan2.2-A14B) and makes the identity-pinning native. Read v3 for the current base decision.
 
 **Supersedes** the CogVideoX1.5-5B-I2V single-LoRA plan. Built directly on the *Model & Architecture Reassessment* memo and the three research threads behind it (SOTA I2V models, character-consistency methods, training-objective math).
 

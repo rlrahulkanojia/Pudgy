@@ -2,7 +2,7 @@
 
 Consolidated record of the first end-to-end CogVideoX1.5-5B-I2V LoRA run, the code fixes it
 required, the quality assessment of its outputs, the Phase-0 diagnostics from
-[`Training_Approach_v2.md`](Training_Approach_v2.md), and the base-model exploration that feeds
+[`Training_Approach_v2.md`](v2/Training_Approach_v2.md), and the base-model exploration that feeds
 Gate G0 / Phase 1.
 
 > **TL;DR.** The trainer had four real bugs (now fixed); the run completed cleanly and the LoRA

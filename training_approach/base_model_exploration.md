@@ -1,6 +1,6 @@
 # Base-model exploration (Gate G0 → Phase 1)
 
-Research toward the base migration in [`Training_Approach_v2.md`](Training_Approach_v2.md) §1.1 / §4.
+Research toward the base migration in [`Training_Approach_v2.md`](v2/Training_Approach_v2.md) §1.1 / §4.
 Goal: a base that (a) handles **768×1360 portrait natively**, (b) has an **8× VAE** (our round-trip
 proved outline fidelity matters — see [`phase0_diagnostics.md`](phase0_diagnostics.md)), (c) supports
 **identity-pinning** (FLF2V / keyframe interpolation), and (d) is trainable with mature LoRA tooling.

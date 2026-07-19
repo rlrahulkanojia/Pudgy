@@ -1,7 +1,7 @@
 # Pudgy Penguins — Training Approach v3 (AniSora)
 
 **Supersedes** the "Wan 2.2 A14B primary / AniSora in parallel" framing of
-[`Training_Approach_v2.md`](./Training_Approach_v2.md). v3 **commits to AniSora V3.2 as the
+[`Training_Approach_v2.md`](../v2/Training_Approach_v2.md). v3 **commits to AniSora V3.2 as the
 primary base** and makes concrete the identity-pinning mechanism v2 only sketched.
 
 **Goal (unchanged from v1/v2):** 2D cartoon animation of **Pax** (blue) and **Polly** (pink) —
@@ -9,7 +9,7 @@ flat pastel, thick black outlines — with **exacting character consistency, rob
 image quality**. Budget uncapped.
 
 **What changed vs v2:** v2 correctly diagnosed the problem (pipeline *shape*, not tuning — see
-[`FINDINGS.md`](./FINDINGS.md)) and named the fix (decouple identity from motion via
+[`FINDINGS.md`](../FINDINGS.md)) and named the fix (decouple identity from motion via
 keyframe/FLF2V interpolation on a flow-matching, 8× VAE base). It left the base as an open A/B
 between **Wan 2.2 A14B** and **AniSora**. The Phase-0 diagnostics + base-model exploration now
 resolve that A/B: **AniSora V3.2 is Wan 2.2 A14B, but anime-native, RLHF-quality-tuned, and it
@@ -65,7 +65,7 @@ going to have to bolt on via community FLF2V workflows.
    much easier, less overfit-prone target on 75 clips.
 
 3. **The existing 75-clip dataset already matches AniSora's native format.** ⚠️ **Corrects a v2
-   assumption:** [`GPU_HANDOVER.md`](./docs/GPU_HANDOVER.md) §Phase-1 says "AniSora 24 fps —
+   assumption:** [`GPU_HANDOVER.md`](../docs/GPU_HANDOVER.md) §Phase-1 says "AniSora 24 fps —
    resample from the 24 fps source." The actual V3/V3.2 inference scripts run at **16 fps with
    F=8x+1 frames**. Our dataset is **16 fps, 33 frames (33 = 8×4+1)** — it *already* satisfies
    AniSora's grid. **No fps re-derivation, no re-tiling from source needed** for a first LoRA;
@@ -74,7 +74,7 @@ going to have to bolt on via community FLF2V workflows.
    the `split6.py`/`assemble3.py` tiling scripts are missing from the repo).
 
 4. **The 432×768 rotary cap disappears.** v1's hard ceiling was CogVideoX1.5's rotary grid
-   (`Expected size 63 but got 48` — see [`FINDINGS.md`](./FINDINGS.md) §1). AniSora/Wan has no
+   (`Expected size 63 but got 48` — see [`FINDINGS.md`](../FINDINGS.md) §1). AniSora/Wan has no
    such cap; portrait is a `--size 720*1280` swap. We recover real portrait resolution, which was
    half of why v2 wanted to migrate at all.
 
@@ -95,8 +95,8 @@ going to have to bolt on via community FLF2V workflows.
 ## 4. Expected improvements on top of the v2 outcome
 
 Measured against v1's documented failure (LoRA learned style + both characters in the first ~5
-frames, then **drift → subject vanishes by ~f24**; [`FINDINGS.md`](./FINDINGS.md) §3) and the v2
-rubric ([`Training_Approach_v2.md`](./Training_Approach_v2.md) §5):
+frames, then **drift → subject vanishes by ~f24**; [`FINDINGS.md`](../FINDINGS.md) §3) and the v2
+rubric ([`Training_Approach_v2.md`](../v2/Training_Approach_v2.md) §5):
 
 | Rubric dimension | v1 result | v3 expected | Mechanism |
 |---|---|---|---|
@@ -235,7 +235,7 @@ https://huggingface.co/IndexTeam/Index-anisora · papers arXiv 2412.10255 (AniSo
 https://github.com/kijai/ComfyUI-WanVideoWrapper · trainers
 https://github.com/kohya-ss/musubi-tuner · https://github.com/tdrussell/diffusion-pipe · MoE-LoRA
 note https://huggingface.co/nomadoor/diff_lora-r8_anisora_wan2.1_i2v/discussions/1. See also
-[`FINDINGS.md`](./FINDINGS.md), [`base_model_exploration.md`](./base_model_exploration.md),
-[`Training_Approach_v2.md`](./Training_Approach_v2.md).*
+[`FINDINGS.md`](../FINDINGS.md), [`base_model_exploration.md`](../base_model_exploration.md),
+[`Training_Approach_v2.md`](../v2/Training_Approach_v2.md).*
 </content>
 </invoke>
