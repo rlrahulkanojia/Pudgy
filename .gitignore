@@ -39,3 +39,6 @@ logs/
 .idea/
 downloaded_ckpt/
 .vscode/
+
+# ---- Secrets ----
+.env
