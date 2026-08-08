@@ -5,6 +5,7 @@ training_dataset/
 *.mov
 *.gif
 .venv-wan/
+.venv-dashboard/
 # ---- Base model / weights / checkpoints ----
 finetune/models/
 **/*.safetensors
