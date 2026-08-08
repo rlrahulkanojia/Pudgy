@@ -43,25 +43,30 @@ jobs:
 
       - name: Deploy via Kudu ZipDeploy
         run: |
-          # Extract ZipDeploy basic-auth creds from the publish profile and mask
-          # them immediately so nothing leaks into the log, then POST the zip
-          # straight to the Kudu REST API (bypasses azure/webapps-deploy's
+          # Extract ZipDeploy basic-auth creds from the publish profile via
+          # command substitution (NOT $GITHUB_ENV -- that only applies to
+          # *subsequent* steps, so a same-step write+read left the vars
+          # empty and every request 401'd regardless of credential validity).
+          # Mask immediately so nothing leaks into the log, then POST the
+          # zip straight to the Kudu REST API (bypasses azure/webapps-deploy's
           # client-side profile validation, which rejects this app's profile
           # for unrelated parsing reasons even though the creds are valid).
-          python3 -c "
+          u=$(python3 -c "
           import re, os
           xml = os.environ['PUBLISH_PROFILE']
-          m = re.search(r'publishMethod=\"ZipDeploy\"[^>]*userName=\"([^\"]*)\"[^>]*userPWD=\"([^\"]*)\"', xml)
-          u, p = m.groups()
-          print(f'::add-mask::{u}')
-          print(f'::add-mask::{p}')
-          gh_env = os.environ['GITHUB_ENV']
-          with open(gh_env, 'a') as f:
-              f.write(f'KUDU_USER={u}\n')
-              f.write(f'KUDU_PASS={p}\n')
-          "
+          m = re.search(r'publishMethod=\"ZipDeploy\"[^>]*userName=\"([^\"]*)\"', xml)
+          print(m.group(1))
+          ")
+          p=$(python3 -c "
+          import re, os
+          xml = os.environ['PUBLISH_PROFILE']
+          m = re.search(r'publishMethod=\"ZipDeploy\"[^>]*userPWD=\"([^\"]*)\"', xml)
+          print(m.group(1))
+          ")
+          echo "::add-mask::$u"
+          echo "::add-mask::$p"
           http_code=$(curl -s -o /tmp/deploy_response.txt -w "%{http_code}" \
-            -u "$KUDU_USER:$KUDU_PASS" \
+            -u "$u:$p" \
             --data-binary @deploy.zip \
             "$AZURE_SCM_URL/api/zipdeploy?isAsync=false")
           echo "Kudu ZipDeploy responded HTTP $http_code"
