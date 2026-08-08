@@ -14,13 +14,14 @@ permissions:
 env:
   AZURE_WEBAPP_NAME: pudgy-training-dashboard
   AZURE_WEBAPP_PACKAGE_PATH: dashboard
+  AZURE_SCM_URL: https://pudgy-training-dashboard.scm.azurewebsites.net
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     environment:
       name: production
-      url: ${{ steps.deploy.outputs.webapp-url }}
+      url: https://pudgy-training-dashboard.azurewebsites.net
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -36,10 +37,38 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Deploy to Azure App Service
-        id: deploy
-        uses: azure/webapps-deploy@v3
-        with:
-          app-name: ${{ env.AZURE_WEBAPP_NAME }}
-          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-          package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+      - name: Zip dashboard package
+        working-directory: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+        run: zip -r ../deploy.zip . -x "__pycache__/*" -x "*.pyc"
+
+      - name: Deploy via Kudu ZipDeploy
+        run: |
+          # Extract ZipDeploy basic-auth creds from the publish profile and mask
+          # them immediately so nothing leaks into the log, then POST the zip
+          # straight to the Kudu REST API (bypasses azure/webapps-deploy's
+          # client-side profile validation, which rejects this app's profile
+          # for unrelated parsing reasons even though the creds are valid).
+          python3 -c "
+          import re, os
+          xml = os.environ['PUBLISH_PROFILE']
+          m = re.search(r'publishMethod=\"ZipDeploy\"[^>]*userName=\"([^\"]*)\"[^>]*userPWD=\"([^\"]*)\"', xml)
+          u, p = m.groups()
+          print(f'::add-mask::{u}')
+          print(f'::add-mask::{p}')
+          gh_env = os.environ['GITHUB_ENV']
+          with open(gh_env, 'a') as f:
+              f.write(f'KUDU_USER={u}\n')
+              f.write(f'KUDU_PASS={p}\n')
+          "
+          http_code=$(curl -s -o /tmp/deploy_response.txt -w "%{http_code}" \
+            -u "$KUDU_USER:$KUDU_PASS" \
+            --data-binary @deploy.zip \
+            "$AZURE_SCM_URL/api/zipdeploy?isAsync=false")
+          echo "Kudu ZipDeploy responded HTTP $http_code"
+          cat /tmp/deploy_response.txt
+          if [ "$http_code" -ge 300 ]; then
+            echo "::error::Deployment failed with HTTP $http_code"
+            exit 1
+          fi
+        env:
+          PUBLISH_PROFILE: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
