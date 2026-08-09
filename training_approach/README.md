@@ -1,12 +1,15 @@
 # Training Approach — index
 
-The Pudgy Penguins 2D-animation video-model effort, organised by version. Each version is a distinct base-model track; v4 is the current lead.
+The Pudgy Penguins 2D-animation video-model effort, organised by version. v1–v4 are distinct base-model tracks (v4 is the current trained lead); **v5 changes the data contract rather than the base** and is the current plan.
 
 ## Versions
 - **[v1/](v1/Training_Approach_v1.md)** — CogVideoX1.5-5B-I2V, single character/style LoRA. Executed baseline; mid-clip character drift → superseded.
 - **[v2/](v2/Training_Approach_v2.md)** — Wan2.2-A14B, decouple identity/motion (two-expert LoRA + FLF2V). **Validated (Gate G1 PASS).** Also: [actions_done.md](v2/actions_done.md) (env stand-up log).
 - **[v3/](v3/Training_Approach_v3.md)** — AniSora V3.2 (anime-native). The v2 thesis on an anime-native base; the parallel hedge track.
-- **[v4/](v4/Training_Approach_v4.md)** — LTX-2.3-22B (current lead): stylized-2D base, IC-LoRA control, Claude-driven prompt system. Plus **[GPU_HANDOFF_iteration_2_v4.md](v4/GPU_HANDOFF_iteration_2_v4.md)** — how the GPU box consumes the `iteration_2_v4` dataset (LTX re-encode → preprocess → train) — and **[CURATION_REPORT_iteration_2_v4.md](v4/CURATION_REPORT_iteration_2_v4.md)** — the data curation report (initial → work → final + validation).
+- **[v4/](v4/Training_Approach_v4.md)** — LTX-2.3-22B (current trained lead): stylized-2D base, IC-LoRA control, Claude-driven prompt system. Plus **[GPU_HANDOFF_iteration_2_v4.md](v4/GPU_HANDOFF_iteration_2_v4.md)** — how the GPU box consumes the `iteration_2_v4` dataset (LTX re-encode → preprocess → train) — and **[CURATION_REPORT_iteration_2_v4.md](v4/CURATION_REPORT_iteration_2_v4.md)** — the data curation report (initial → work → final + validation).
+- **v5/** — back to the **Wan2.2-A14B** line, primitives-first. Two documents at different scopes, both current:
+  - **[Training_Approach_v5_Happy_Expression_LoRA.md](v5/Training_Approach_v5_Happy_Expression_LoRA.md)** — the **executable pilot**: continue-train the v2 golden high-noise expert on the 7 Pax/happy clips delivered so far. Runnable now.
+  - **[Training_Approach_v5.md](v5/Training_Approach_v5.md)** — the **programme plan** the pilot sits inside: a closed taxonomy of motion / expression / interaction-moment primitives, trained as a curriculum (T0–T4), then composed into full video. Data-gated on the [Round 3 request](../docs/documents/Client_Data_Request_Round3.md).
 
 ## Shared reference material (cross-version)
 - **[FINDINGS.md](FINDINGS.md)** — consolidated run-v1 + Phase-0 diagnostics + base-model exploration results.

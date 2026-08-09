@@ -1,0 +1,19 @@
+# Musubi-tuner dataset config — v5 pilot, Pax "happy" expression.
+# 28 clips = 7 camera angles x 4 composited backgrounds (see prep_happy_v5.py).
+# 1024x1024 (NOT the source 1080): Wan's VAE is 8x with 2x2 patchify, so the
+# latent side must be even — 1080/8 = 135 is odd. 1024/8 = 128.
+# 21 frames = 4*5+1, musubi-legal; kept at source timing, no temporal resample.
+# Separate cache dir from the main run so nothing collides.
+
+[general]
+resolution = [1024, 1024]
+batch_size = 1
+enable_bucket = true
+bucket_no_upscale = true
+
+[[datasets]]
+video_jsonl_file = "/workspace/Pudgy/finetune/wan/dataset_happy.jsonl"
+cache_directory = "/workspace/wan_cache/latents_happy"
+target_frames = [21]
+frame_extraction = "head"
+num_repeats = 2          # 28 clips x 2 = 56 samples/epoch
