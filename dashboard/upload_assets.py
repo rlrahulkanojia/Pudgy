@@ -31,6 +31,7 @@ SOURCES = [
     ("training_approach/v4/final_videos/FINAL", "v4/FINAL"),
     ("training_approach/v4/final_videos/FINAL2", "v4/FINAL2"),
     ("training_approach/v4/final_videos/phase2_variations", "v4/phase2_variations"),
+    ("docs/training_reports/v5/final_videos", "v5"),
 ]
 
 

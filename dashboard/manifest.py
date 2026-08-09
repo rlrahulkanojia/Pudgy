@@ -39,14 +39,18 @@ DATASETS = [
     {
         "name": "Happy-expression pilot set",
         "used_by": ["v5"],
-        "clip_count": 7,
-        "resolution": "1080×1080 (square)",
+        "clip_count": 28,
+        "resolution": "1080×1080 source → 1024×1024 trained",
         "fps": 24,
         "frames": "21 (4×5+1)",
         "duration": "~0.875s",
-        "notes": "Blank/white background, single performance filmed from 7 fixed angles "
-                 "(front, quarter-front L/R, quarter-front-2 L/R, side L/R). Pilot scale, "
-                 "not a final-quality dataset.",
+        "notes": "7 source clips: ProRes 4444 with a real ALPHA channel (61.6% of frame "
+                 "transparent) — not white backgrounds; a naive decode composites onto black. "
+                 "One performance filmed from 7 fixed angles (front, quarter-front L/R, "
+                 "quarter-front-2 L/R, side L/R). Alpha lets the same performance be composited "
+                 "onto 4 flat grounds → 28 training clips, which is what buys background-"
+                 "invariance. Trained at 1024² not 1080²: Wan's 8× VAE + 2×2 patchify needs an "
+                 "even latent side (1080/8 = 135 is odd). Pilot scale, not a final-quality set.",
     },
 ]
 
@@ -113,20 +117,30 @@ TRAINING_APPROACHES = [
     {
         "id": "v5",
         "title": "v5 — Happy-Expression LoRA (Wan2.2-A14B extension)",
-        "base_model": "Wan2.2-I2V-A14B (extends v2's golden checkpoints)",
-        "status": "Pilot — in progress",
-        "status_color": "#f08c00",
-        "thesis": "Teach one controllable expression (Pax, happy) as a third independent axis "
-                  "alongside v2's identity/motion decomposition, on a 7-clip pilot set.",
+        "base_model": "Wan2.2-I2V-A14B (continue-trained from v2's golden checkpoints)",
+        "status": "Pilot complete — golden: low-noise expert",
+        "status_color": "#2f9e44",
+        "thesis": "Teach one controllable expression (Pax, happy) as a third axis alongside "
+                  "v2's identity/motion decomposition. Both experts were trained and run "
+                  "head-to-head to find where expression belongs.",
         "summary": [
-            "Scoped narrowly to the Wan2.2 line per client request — does not use v4 "
-            "(separate architecture/dataset track).",
-            "Picks up from v2's golden checkpoints; drivable both via I2V and text-prompted "
-            "(no client-supplied starting image).",
-            "Phase 0 diagnostics confirmed the 7 happy clips are character-design-sheet material "
-            "(clean multi-angle, zero-background) rather than narrative expression clips — "
-            "good signal for isolating the expression, deliberately small scale.",
-            "Deliberately small pilot — not a final-quality run.",
+            "**Expression belongs on the LOW-noise expert.** Two runs of 1008 steps (~7h each) "
+            "continue-trained from v2's goldens: high-noise (final loss 0.00184) vs low-noise "
+            "(0.00095). The low-noise run wins on every axis and is the only one that stays "
+            "**promptable** — it leaves v2's G1-validated motion prior untouched.",
+            "**Controllability verified.** Same start frame, prompt as the only variable: "
+            "the happy prompt gives squinted eyes + open beak; the neutral prompt gives open "
+            "eyes + closed beak (SSIM 0.934). The high-noise run ignored the prompt (SSIM 0.969).",
+            "**Best temporal stability in the programme:** adjacent-frame SSIM 0.978 "
+            "(v1 0.925, v2 0.949); subject never vanishes (area 19.7% → 19.9%).",
+            "**Generalises to unseen backgrounds** — background drift of 2/255 on a ground never "
+            "trained, holding identity under free I2V (no end keyframe), the exact condition "
+            "that broke v1.",
+            "Known limits: expression *hold* relaxes late (only 0.875s of hold data exists); "
+            "partial canonical-view drift on ¾ angles; conditioning-frame memorisation when "
+            "driven from the training frame — drive from real scene frames instead.",
+            "Image-conditioned only: the box holds i2v-A14B weights, so text-only generation "
+            "would need a separate t2v checkpoint. Every generation takes a start image.",
         ],
         "video_prefix": "v5",
         "video_groups": None,
