@@ -78,7 +78,8 @@ def render_overview():
         [
             {
                 "Dataset": d["name"],
-                "Clips": d["clip_count"],
+                "Clips (from client)": d["clip_count"],
+                "Training clips": d["training_clips"],
                 "Resolution": d["resolution"],
                 "FPS": d["fps"],
                 "Frames": d["frames"],
@@ -96,16 +97,22 @@ def render_overview():
         with st.container(border=True):
             st.markdown(f"#### {chosen['name']}")
             m1, m2, m3, m4 = st.columns(4)
-            m1.metric("Clips", chosen["clip_count"])
+            m1.metric("Clips from client", chosen["clip_count"],
+                      help="Clips as delivered. 'Training clips' is what reached the trainer "
+                           "after processing.")
             m2.metric("FPS", chosen["fps"])
             m3.metric("Frames", chosen["frames"])
             m4.metric("Duration", chosen["duration"])
+            st.markdown(f"**Training clips:** {chosen['training_clips']}"
+                        + ("" if chosen["training_clips"] == chosen["clip_count"]
+                           else "  ·  derived from the client's clips by processing, see notes"))
             st.markdown(f"**Resolution:** {chosen['resolution']}")
             st.markdown(f"**Used by:** {', '.join(chosen['used_by'])}")
             st.markdown(f"**Notes:** {chosen['notes']}")
 
             share = chosen["clip_count"] / max(total_clip_count(), 1)
-            st.caption(f"{share:.0%} of all curated clips ({chosen['clip_count']} of {total_clip_count()})")
+            st.caption(f"{share:.0%} of all client-delivered clips "
+                       f"({chosen['clip_count']} of {total_clip_count()})")
             st.progress(min(share, 1.0))
 
     st.subheader("Training approach summary")
@@ -170,7 +177,8 @@ def main():
 
     c1, c2, c3, c4 = st.columns(4)
     c1.metric("Datasets", len(DATASETS))
-    c2.metric("Total clips curated", total_clip_count())
+    c2.metric("Clips from client", total_clip_count(),
+              help="Total clips delivered by the client across all datasets.")
     c3.metric("Training approaches", len(TRAINING_APPROACHES))
     current_lead = next(a for a in TRAINING_APPROACHES if a["id"] == "v4")
     c4.metric("Current lead", current_lead["id"].upper(), current_lead["status"])

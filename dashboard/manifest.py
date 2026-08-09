@@ -16,7 +16,8 @@ DATASETS = [
     {
         "name": "Original 75-clip set",
         "used_by": ["v1", "v2"],
-        "clip_count": 75,
+        "clip_count": 75,          # as delivered by the client
+        "training_clips": 75,      # what actually reached the trainer
         "resolution": "768×1360 (portrait)",
         "fps": "16",
         "frames": "33 (4×8+1)",
@@ -27,7 +28,8 @@ DATASETS = [
     {
         "name": "iteration_2_v4 (LTX-2.3)",
         "used_by": ["v4"],
-        "clip_count": 249,
+        "clip_count": 249,             # as delivered by the client
+        "training_clips": "~303 windows",  # after LTX re-encode + 49-frame windowing
         "resolution": "1080×1920 native → 544×960 re-encoded",
         "fps": "24 native → 25 (LTX-native)",
         "frames": "49-frame windows (÷32 crop)",
@@ -39,7 +41,8 @@ DATASETS = [
     {
         "name": "Happy-expression pilot set",
         "used_by": ["v5"],
-        "clip_count": 28,
+        "clip_count": 7,           # as delivered by the client
+        "training_clips": 28,      # 7 angles x 4 composited backgrounds
         "resolution": "1080×1080 source → 1024×1024 trained",
         "fps": "24",
         "frames": "21 (4×5+1)",
@@ -153,4 +156,5 @@ def get_approach(approach_id):
 
 
 def total_clip_count():
+    """Clips as delivered by the client — not the derived training-set size."""
     return sum(d["clip_count"] for d in DATASETS)
