@@ -18,7 +18,7 @@ DATASETS = [
         "used_by": ["v1", "v2"],
         "clip_count": 75,
         "resolution": "768×1360 (portrait)",
-        "fps": 16,
+        "fps": "16",
         "frames": "33 (4×8+1)",
         "duration": "~2.06s",
         "notes": "Narrative skit fragments, mixed motion, real room backgrounds. "
@@ -41,7 +41,7 @@ DATASETS = [
         "used_by": ["v5"],
         "clip_count": 28,
         "resolution": "1080×1080 source → 1024×1024 trained",
-        "fps": 24,
+        "fps": "24",
         "frames": "21 (4×5+1)",
         "duration": "~0.875s",
         "notes": "7 source clips: ProRes 4444 with a real ALPHA channel (61.6% of frame "
@@ -95,7 +95,7 @@ TRAINING_APPROACHES = [
     },
     {
         "id": "v4",
-        "title": "v4 — LTX-2.3-22B (current lead)",
+        "title": "v4 — LTX-2.3-22B",
         "base_model": "Lightricks LTX-2.3-22B",
         "status": "G1 ✓ · G2 ✓ · Phase 3 trained (eval pending)",
         "status_color": "#2f9e44",

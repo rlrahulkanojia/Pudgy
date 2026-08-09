@@ -58,6 +58,22 @@ def render_video_grid(video_pairs, per_row=4):
 
 def render_overview():
     st.subheader("Datasets")
+
+    # Explorable: filter by the run that used a dataset, pick one, drill into it.
+    versions = sorted({v for d in DATASETS for v in d["used_by"]})
+    fcol, scol = st.columns([1, 2])
+    with fcol:
+        chosen_versions = st.multiselect(
+            "Filter by run", versions, default=versions,
+            help="Show only datasets used by these training runs.",
+        )
+    visible = [d for d in DATASETS if set(d["used_by"]) & set(chosen_versions)] or DATASETS
+    with scol:
+        selected_name = st.selectbox(
+            "Inspect a dataset", [d["name"] for d in visible],
+            help="Pick a dataset to see its full spec and provenance notes.",
+        )
+
     st.dataframe(
         [
             {
@@ -69,14 +85,28 @@ def render_overview():
                 "Duration": d["duration"],
                 "Used by": ", ".join(d["used_by"]),
             }
-            for d in DATASETS
+            for d in visible
         ],
         hide_index=True,
         use_container_width=True,
     )
-    with st.expander("Dataset notes"):
-        for d in DATASETS:
-            st.markdown(f"**{d['name']}** — {d['notes']}")
+
+    chosen = next((d for d in DATASETS if d["name"] == selected_name), None)
+    if chosen:
+        with st.container(border=True):
+            st.markdown(f"#### {chosen['name']}")
+            m1, m2, m3, m4 = st.columns(4)
+            m1.metric("Clips", chosen["clip_count"])
+            m2.metric("FPS", chosen["fps"])
+            m3.metric("Frames", chosen["frames"])
+            m4.metric("Duration", chosen["duration"])
+            st.markdown(f"**Resolution:** {chosen['resolution']}")
+            st.markdown(f"**Used by:** {', '.join(chosen['used_by'])}")
+            st.markdown(f"**Notes:** {chosen['notes']}")
+
+            share = chosen["clip_count"] / max(total_clip_count(), 1)
+            st.caption(f"{share:.0%} of all curated clips ({chosen['clip_count']} of {total_clip_count()})")
+            st.progress(min(share, 1.0))
 
     st.subheader("Training approach summary")
     st.dataframe(
