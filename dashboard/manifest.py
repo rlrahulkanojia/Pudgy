@@ -7,9 +7,15 @@ derivable at runtime, so it's kept here as plain data rather than re-parsed from
 on every page load.
 
 `video_prefix` is the blob-name prefix (folder) under the dashboard's Azure container
-where that version's final-output videos live. Sub-groups (e.g. v4's BEST/FINAL/FINAL2)
+where that version's final-output videos live. Sub-groups (e.g. LTX's BEST/FINAL/FINAL2)
 are represented as nested prefixes and are discovered dynamically at render time via
 `azure_utils.list_videos`.
+
+`id` stays the internal version key (it's the blob prefix and the link back to the docs);
+`name` is what the client sees. TRAINING_APPROACHES is ordered newest-first, so the first
+entry is the latest experiment — the one the main page highlights.
+
+`status_color` is a Streamlit badge colour name, not a hex value.
 """
 
 DATASETS = [
@@ -23,7 +29,7 @@ DATASETS = [
         "frames": "33 (4×8+1)",
         "duration": "~2.06s",
         "notes": "Narrative skit fragments, mixed motion, real room backgrounds. "
-                 "The founding dataset for the CogVideoX (v1) and Wan2.2-A14B (v2) runs.",
+                 "The founding dataset for the CogVideo and Wan2.2 runs.",
     },
     {
         "name": "iteration_2_v4 (LTX-2.3)",
@@ -59,53 +65,47 @@ DATASETS = [
 
 TRAINING_APPROACHES = [
     {
-        "id": "v1",
-        "title": "v1 — CogVideoX1.5-5B-I2V",
-        "base_model": "THUDM/CogVideoX1.5-5B-I2V",
-        "status": "Superseded",
-        "status_color": "#8a8f98",
-        "thesis": "Single character/style LoRA, attention-only, on the original 75-clip set.",
+        "id": "v5",
+        "name": "Happy Expression Wan 2.2",
+        "base_model": "Wan2.2-I2V-A14B (continue-trained from Wan2.2's golden checkpoints)",
+        "status": "Pilot complete — golden: low-noise expert",
+        "status_color": "green",
+        "thesis": "Teach one controllable expression (Pax, happy) as a third axis alongside "
+                  "Wan2.2's identity/motion decomposition. Both experts were trained and run "
+                  "head-to-head to find where expression belongs.",
         "summary": [
-            "Learned the Pudgy style and Pax/Polly identity in the first ~5 frames.",
-            "Every checkpoint loses the character mid-clip (drift → vanish) — a temporal/scene "
-            "failure, not a style one.",
-            "VAE round-trip proved the VAE was not the quality ceiling (PSNR ~38dB, SSIM ~0.996); "
-            "the problem was the generation path (432×768 portrait cap + attention-only + free-I2V drift).",
-            "Result: fixed 4 real trainer bugs, completed cleanly (9h39m, final loss 0.0294), "
-            "but architecturally superseded by v2's decoupled identity/motion approach.",
+            "**Expression belongs on the LOW-noise expert.** Two runs of 1008 steps (~7h each) "
+            "continue-trained from Wan2.2's goldens: high-noise (final loss 0.00184) vs low-noise "
+            "(0.00095). The low-noise run wins on every axis and is the only one that stays "
+            "**promptable** — it leaves Wan2.2's G1-validated motion prior untouched.",
+            "**Controllability verified.** Same start frame, prompt as the only variable: "
+            "the happy prompt gives squinted eyes + open beak; the neutral prompt gives open "
+            "eyes + closed beak (SSIM 0.934). The high-noise run ignored the prompt (SSIM 0.969).",
+            "**Best temporal stability in the programme:** adjacent-frame SSIM 0.978 "
+            "(CogVideo 0.925, Wan2.2 0.949); subject never vanishes (area 19.7% → 19.9%).",
+            "**Generalises to unseen backgrounds** — background drift of 2/255 on a ground never "
+            "trained, holding identity under free I2V (no end keyframe), the exact condition "
+            "that broke CogVideo.",
+            "Known limits: expression *hold* relaxes late (only 0.875s of hold data exists); "
+            "partial canonical-view drift on ¾ angles; conditioning-frame memorisation when "
+            "driven from the training frame — drive from real scene frames instead.",
+            "Image-conditioned only: the box holds i2v-A14B weights, so text-only generation "
+            "would need a separate t2v checkpoint. Every generation takes a start image.",
         ],
-        "video_prefix": "v1",
-        "video_groups": None,
-    },
-    {
-        "id": "v2",
-        "title": "v2 — Wan2.2-A14B (decoupled identity/motion)",
-        "base_model": "Wan2.2-I2V-A14B (MoE, two experts)",
-        "status": "Gate G1: PASS — golden",
-        "status_color": "#2f9e44",
-        "thesis": "Two-expert LoRA (identity low-noise + motion high-noise) + FLF2V keyframe "
-                  "interpolation to decouple identity from motion.",
-        "summary": [
-            "Held-out showcase: temporal SSIM 0.949, structural stability 0.880 (no mid-clip "
-            "vanish — the v1/CogVideoX failure), source fidelity SSIM 0.905.",
-            "Golden checkpoints: low-noise (identity) epoch 40, high-noise (motion) epoch 40.",
-            "Trained via musubi-tuner 0.3.4 on the same 75-clip dataset as v1.",
-            "Known limits: mild background drift on some scenes; canonical-view bias.",
-            "Foundation that v5 (happy expression) extends.",
-        ],
-        "video_prefix": "v2",
+        "video_prefix": "v5",
         "video_groups": None,
     },
     {
         "id": "v4",
-        "title": "v4 — LTX-2.3-22B",
+        "name": "Ltx",
         "base_model": "Lightricks LTX-2.3-22B",
         "status": "G1 ✓ · G2 ✓ · Phase 3 trained (eval pending)",
-        "status_color": "#2f9e44",
+        "status_color": "green",
         "thesis": "Stylized-2D-native base + IC-LoRA edge/Canny structure conditioning + "
                   "Claude-driven prompt pipeline, on a rebuilt/grown LTX-native dataset.",
         "summary": [
-            "Beats v1: motion survives the LoRA, characters stay stable (no mid-clip dissolve).",
+            "Beats CogVideo: motion survives the LoRA, characters stay stable (no mid-clip "
+            "dissolve).",
             "IC-LoRA edge conditioning fixes the catastrophic identity/colour failures that no "
             "inference knob could solve alone.",
             "Long clips (5s/10s) via edge control — removes the ~97-frame ceiling.",
@@ -118,34 +118,41 @@ TRAINING_APPROACHES = [
         "video_groups": ["BEST", "FINAL", "FINAL2", "phase2_variations"],
     },
     {
-        "id": "v5",
-        "title": "v5 — Happy-Expression LoRA (Wan2.2-A14B extension)",
-        "base_model": "Wan2.2-I2V-A14B (continue-trained from v2's golden checkpoints)",
-        "status": "Pilot complete — golden: low-noise expert",
-        "status_color": "#2f9e44",
-        "thesis": "Teach one controllable expression (Pax, happy) as a third axis alongside "
-                  "v2's identity/motion decomposition. Both experts were trained and run "
-                  "head-to-head to find where expression belongs.",
+        "id": "v2",
+        "name": "Wan2.2",
+        "base_model": "Wan2.2-I2V-A14B (MoE, two experts)",
+        "status": "Gate G1: PASS — golden",
+        "status_color": "green",
+        "thesis": "Two-expert LoRA (identity low-noise + motion high-noise) + FLF2V keyframe "
+                  "interpolation to decouple identity from motion.",
         "summary": [
-            "**Expression belongs on the LOW-noise expert.** Two runs of 1008 steps (~7h each) "
-            "continue-trained from v2's goldens: high-noise (final loss 0.00184) vs low-noise "
-            "(0.00095). The low-noise run wins on every axis and is the only one that stays "
-            "**promptable** — it leaves v2's G1-validated motion prior untouched.",
-            "**Controllability verified.** Same start frame, prompt as the only variable: "
-            "the happy prompt gives squinted eyes + open beak; the neutral prompt gives open "
-            "eyes + closed beak (SSIM 0.934). The high-noise run ignored the prompt (SSIM 0.969).",
-            "**Best temporal stability in the programme:** adjacent-frame SSIM 0.978 "
-            "(v1 0.925, v2 0.949); subject never vanishes (area 19.7% → 19.9%).",
-            "**Generalises to unseen backgrounds** — background drift of 2/255 on a ground never "
-            "trained, holding identity under free I2V (no end keyframe), the exact condition "
-            "that broke v1.",
-            "Known limits: expression *hold* relaxes late (only 0.875s of hold data exists); "
-            "partial canonical-view drift on ¾ angles; conditioning-frame memorisation when "
-            "driven from the training frame — drive from real scene frames instead.",
-            "Image-conditioned only: the box holds i2v-A14B weights, so text-only generation "
-            "would need a separate t2v checkpoint. Every generation takes a start image.",
+            "Held-out showcase: temporal SSIM 0.949, structural stability 0.880 (no mid-clip "
+            "vanish — the CogVideo failure), source fidelity SSIM 0.905.",
+            "Golden checkpoints: low-noise (identity) epoch 40, high-noise (motion) epoch 40.",
+            "Trained via musubi-tuner 0.3.4 on the same 75-clip dataset as CogVideo.",
+            "Known limits: mild background drift on some scenes; canonical-view bias.",
+            "Foundation that the Happy Expression run extends.",
         ],
-        "video_prefix": "v5",
+        "video_prefix": "v2",
+        "video_groups": None,
+    },
+    {
+        "id": "v1",
+        "name": "CogVideo",
+        "base_model": "THUDM/CogVideoX1.5-5B-I2V",
+        "status": "Superseded",
+        "status_color": "gray",
+        "thesis": "Single character/style LoRA, attention-only, on the original 75-clip set.",
+        "summary": [
+            "Learned the Pudgy style and Pax/Polly identity in the first ~5 frames.",
+            "Every checkpoint loses the character mid-clip (drift → vanish) — a temporal/scene "
+            "failure, not a style one.",
+            "VAE round-trip proved the VAE was not the quality ceiling (PSNR ~38dB, SSIM ~0.996); "
+            "the problem was the generation path (432×768 portrait cap + attention-only + free-I2V drift).",
+            "Result: fixed 4 real trainer bugs, completed cleanly (9h39m, final loss 0.0294), "
+            "but architecturally superseded by Wan2.2's decoupled identity/motion approach.",
+        ],
+        "video_prefix": "v1",
         "video_groups": None,
     },
 ]
@@ -153,6 +160,17 @@ TRAINING_APPROACHES = [
 
 def get_approach(approach_id):
     return next((a for a in TRAINING_APPROACHES if a["id"] == approach_id), None)
+
+
+def latest_approach():
+    """The newest experiment — TRAINING_APPROACHES is ordered newest-first."""
+    return TRAINING_APPROACHES[0]
+
+
+def approach_name(approach_id):
+    """Client-facing name for an internal version id (e.g. 'v2' -> 'Wan2.2')."""
+    approach = get_approach(approach_id)
+    return approach["name"] if approach else approach_id
 
 
 def total_clip_count():

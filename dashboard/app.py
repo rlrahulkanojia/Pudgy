@@ -16,7 +16,13 @@ REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 load_dotenv(os.path.join(REPO_ROOT, ".env"))
 
 import azure_utils
-from manifest import DATASETS, TRAINING_APPROACHES, total_clip_count
+from manifest import (
+    DATASETS,
+    TRAINING_APPROACHES,
+    approach_name,
+    latest_approach,
+    total_clip_count,
+)
 
 st.set_page_config(
     page_title="Pudgy Penguins — Training Dashboard",
@@ -56,18 +62,53 @@ def render_video_grid(video_pairs, per_row=4):
                 st.caption(_pretty_name(display_name))
 
 
+def render_outputs(approach):
+    """Rendered inference output for one experiment, grouped when the run has sub-groups."""
+    if approach["video_groups"]:
+        for group in approach["video_groups"]:
+            prefix = f"{approach['video_prefix']}/{group}"
+            videos = cached_list_videos(prefix)
+            st.markdown(f"#### {group} ({len(videos)})")
+            render_video_grid(videos)
+    else:
+        videos = cached_list_videos(approach["video_prefix"])
+        render_video_grid(videos)
+
+
+def render_latest_experiment():
+    """Headline the newest run on the main page so it lands without hunting through tabs."""
+    latest = latest_approach()
+    st.subheader("Latest experiment")
+    with st.container(border=True):
+        st.markdown(f"#### {latest['name']}")
+        st.badge(latest["status"], color=latest["status_color"])
+        st.markdown(f"**Base model:** {latest['base_model']}")
+        st.markdown(f"**Approach:** {latest['thesis']}")
+        st.markdown("**Key findings**")
+        for bullet in latest["summary"]:
+            st.markdown(f"- {bullet}")
+    st.markdown("**Final output**")
+    render_outputs(latest)
+
+
 def render_overview():
+    render_latest_experiment()
+
     st.subheader("Datasets")
 
     # Explorable: filter by the run that used a dataset, pick one, drill into it.
-    versions = sorted({v for d in DATASETS for v in d["used_by"]})
+    run_names = [a["name"] for a in TRAINING_APPROACHES
+                 if any(a["id"] in d["used_by"] for d in DATASETS)]
     fcol, scol = st.columns([1, 2])
     with fcol:
-        chosen_versions = st.multiselect(
-            "Filter by run", versions, default=versions,
+        chosen_runs = st.multiselect(
+            "Filter by run", run_names, default=run_names,
             help="Show only datasets used by these training runs.",
         )
-    visible = [d for d in DATASETS if set(d["used_by"]) & set(chosen_versions)] or DATASETS
+    visible = [
+        d for d in DATASETS
+        if {approach_name(v) for v in d["used_by"]} & set(chosen_runs)
+    ] or DATASETS
     with scol:
         selected_name = st.selectbox(
             "Inspect a dataset", [d["name"] for d in visible],
@@ -79,17 +120,18 @@ def render_overview():
             {
                 "Dataset": d["name"],
                 "Clips (from client)": d["clip_count"],
-                "Training clips": d["training_clips"],
+                # str(): the column mixes ints and "~303 windows", which Arrow can't type.
+                "Training clips": str(d["training_clips"]),
                 "Resolution": d["resolution"],
                 "FPS": d["fps"],
                 "Frames": d["frames"],
                 "Duration": d["duration"],
-                "Used by": ", ".join(d["used_by"]),
+                "Used by": ", ".join(approach_name(v) for v in d["used_by"]),
             }
             for d in visible
         ],
         hide_index=True,
-        use_container_width=True,
+        width="stretch",
     )
 
     chosen = next((d for d in DATASETS if d["name"] == selected_name), None)
@@ -107,7 +149,8 @@ def render_overview():
                         + ("" if chosen["training_clips"] == chosen["clip_count"]
                            else "  ·  derived from the client's clips by processing, see notes"))
             st.markdown(f"**Resolution:** {chosen['resolution']}")
-            st.markdown(f"**Used by:** {', '.join(chosen['used_by'])}")
+            st.markdown(f"**Used by:** "
+                        f"{', '.join(approach_name(v) for v in chosen['used_by'])}")
             st.markdown(f"**Notes:** {chosen['notes']}")
 
             share = chosen["clip_count"] / max(total_clip_count(), 1)
@@ -119,7 +162,7 @@ def render_overview():
     st.dataframe(
         [
             {
-                "Version": a["id"],
+                "Experiment": a["name"],
                 "Base model": a["base_model"],
                 "Status": a["status"],
                 "Approach": a["thesis"],
@@ -127,18 +170,12 @@ def render_overview():
             for a in TRAINING_APPROACHES
         ],
         hide_index=True,
-        use_container_width=True,
+        width="stretch",
     )
 
 
-def render_version_tab(approach):
-    badge_color = approach["status_color"]
-    st.markdown(
-        f"<span style='background:{badge_color}22;color:{badge_color};"
-        f"padding:3px 10px;border-radius:12px;font-weight:600;font-size:0.85em;'>"
-        f"{approach['status']}</span>",
-        unsafe_allow_html=True,
-    )
+def render_approach_tab(approach):
+    st.badge(approach["status"], color=approach["status_color"])
     st.markdown(f"**Base model:** {approach['base_model']}")
     st.markdown(f"**Approach:** {approach['thesis']}")
 
@@ -148,16 +185,7 @@ def render_version_tab(approach):
 
     st.divider()
     st.markdown("### Final output")
-
-    if approach["video_groups"]:
-        for group in approach["video_groups"]:
-            prefix = f"{approach['video_prefix']}/{group}"
-            videos = cached_list_videos(prefix)
-            st.markdown(f"#### {group} ({len(videos)})")
-            render_video_grid(videos)
-    else:
-        videos = cached_list_videos(approach["video_prefix"])
-        render_video_grid(videos)
+    render_outputs(approach)
 
 
 def main():
@@ -175,17 +203,18 @@ def main():
             icon="⚠️",
         )
 
-    c1, c2, c3, c4 = st.columns(4)
+    latest = latest_approach()
+    # The last column is wider — the latest experiment's name needs the room.
+    c1, c2, c3, c4 = st.columns([1, 1, 1, 2])
     c1.metric("Datasets", len(DATASETS))
     c2.metric("Clips from client", total_clip_count(),
               help="Total clips delivered by the client across all datasets.")
     c3.metric("Training approaches", len(TRAINING_APPROACHES))
-    current_lead = next(a for a in TRAINING_APPROACHES if a["id"] == "v4")
-    c4.metric("Current lead", current_lead["id"].upper(), current_lead["status"])
+    c4.metric("Latest experiment", latest["name"], help=latest["status"])
 
     st.divider()
 
-    tab_labels = ["Overview"] + [a["title"] for a in TRAINING_APPROACHES]
+    tab_labels = ["Overview"] + [a["name"] for a in TRAINING_APPROACHES]
     tabs = st.tabs(tab_labels)
 
     with tabs[0]:
@@ -193,7 +222,7 @@ def main():
 
     for tab, approach in zip(tabs[1:], TRAINING_APPROACHES):
         with tab:
-            render_version_tab(approach)
+            render_approach_tab(approach)
 
 
 if __name__ == "__main__":
