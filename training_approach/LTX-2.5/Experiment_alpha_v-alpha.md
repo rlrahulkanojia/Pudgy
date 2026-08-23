@@ -125,7 +125,7 @@ real Pax/Polly art at **768×1344**.
 
 Rebuild the v4 production stack on 2.5, changing **nothing but the base**.
 
-- Data: the existing **`Data/processed/v4_ltx_249clip/`** — 249 clips, 1080×1920 @ 24 fps, 825.8 s, captions
+- Data: the existing **`pudgy/processed/v4_ltx_249clip/`** (Azure; local `Data/processed/v4_ltx_249clip/`) — 249 clips, 1080×1920 @ 24 fps, 825.8 s, captions
   already colour-grounded and schema-conformant. Re-encode with the *unchanged*
   `prep_ltx.py --bucket 768x1344x49`.
 - Re-preprocess into a **fresh `.precomputed/`** (new VAE + Gemma 4).
@@ -471,9 +471,9 @@ checkpoints:
 | Artifact | Location |
 |---|---|
 | This plan | `training_approach/LTX-2.5/Experiment_alpha_v-alpha.md` |
-| Carry-over dataset | `Data/processed/v4_ltx_249clip/` (249 clips, captions, `prep_ltx.py`, `character_bible.json`) |
-| New-data intake tree | `Data/raw/iteration_3/` (68 of ~326 clips delivered; see its `CHANGELOG.md`) |
-| Prepared expression set | `Data/processed/v6_expressions_272/` (272 clips — built 2026-08-20, not yet trained) |
+| Carry-over dataset | Azure `pudgy/processed/v4_ltx_249clip/` — 271 MB, `az storage blob download-batch --account-name pudgytraining --source pudgy --pattern "processed/v4_ltx_249clip/*"` (249 clips, captions, `prep_ltx.py`, `character_bible.json`) |
+| New-data intake tree | Azure `pudgy/raw/iteration_3/` (68 of ~326 clips delivered; see its `CHANGELOG.md`) |
+| Prepared expression set | Azure `pudgy/processed/v6_expressions_272/` (272 clips across 3 shot sizes — not yet trained; the Wan-line plan is [`../v6/Training_Approach_v6.md`](../v6/Training_Approach_v6.md)) |
 | v4 measured results | [`training_approach/v4/README.md`](../v4/README.md) |
 | Primitive taxonomy + caption schema | [`training_approach/v5/Training_Approach_v5.md`](../v5/Training_Approach_v5.md) §3–4 |
 | Eval tooling (carries over unchanged) | `eval_v4/{g2_generate,g2_batch,micro_anim_eval,metrics,source_scan,make_montages}.py` |

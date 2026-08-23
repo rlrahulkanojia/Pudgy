@@ -2,7 +2,22 @@
 
 **Audience:** the GPU box operator. Turns the curated **`iteration_2_v4`** dataset into a trained LTX-2 (v4) LoRA. Plugs into **[`Training_Approach_v4.md` §12](./Training_Approach_v4.md)** (LTX env, checkpoints, trainer config, gotchas) — read §12.0–12.3 alongside this; here we cover only **how to consume THIS dataset**.
 
-> **Transfer note.** This doc reaches the box **via git** (it's in `training_approach/`). The **dataset itself is moved manually** — it lives outside the repo (`…/Pudgy/Data/processed/v4_ltx_249clip/`, ~271 MB). Copy it to the box and set `DATASET=/abs/path/to/v4_ltx_249clip`. The transform script **`prep_ltx.py` ships inside that folder** (it's data-coupled).
+> **Transfer note.** This doc reaches the box **via git** (it's in `training_approach/`).
+> The **dataset is pulled from Azure** — it lives outside the repo but is mirrored at
+> `pudgy/processed/v4_ltx_249clip/` (3,570 blobs, 271 MB):
+>
+> ```bash
+> az storage blob download-batch --account-name pudgytraining \
+>    --source pudgy --destination /workspace \
+>    --pattern "processed/v4_ltx_249clip/*"
+> DATASET=/workspace/processed/v4_ltx_249clip
+> ```
+>
+> The transform script **`prep_ltx.py` ships inside that folder** (it's data-coupled) and
+> resolves its own paths relative to itself, so it runs wherever the folder lands.
+> `artifacts/` (107 MB of curation crops) and `_work/` are included but **not needed for
+> training** — add `--pattern "processed/v4_ltx_249clip/{clips,prompts}/*"` plus the
+> top-level files if you want the 154 MB training-only subset.
 
 > **What the dataset is:** 249 human-curated **scene-split clips** of Pax/Polly (from 70 source skits) at **native 1080×1920 / 24 fps**, each with a v4 §7.1 prompt, plus an object catalog. It is **not yet LTX-native** — the re-encode to 25 fps / ÷32 / silent / 49-frame windows is **Step 2** (deferred to the box on purpose: no GPU on the authoring machine, and to preserve max resolution).
 

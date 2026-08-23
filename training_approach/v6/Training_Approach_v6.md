@@ -24,8 +24,8 @@ Everything below already exists and is verified. Nothing in this plan requires n
 |---|---|---|
 | Low-noise golden (**the init**) | Azure `pudgy/v2/weights/curated/lora_lownoise_GOLDEN_ep40.safetensors` | rank 16 / α 32, 400 modules, all-linear incl. FFN |
 | High-noise golden (**inference only**) | Azure `pudgy/v2/weights/curated/lora_highnoise_GOLDEN_ep40.safetensors` | G1-validated motion prior — do not train |
-| Training clips | `Data/processed/v6_expressions_272/clips/` (36 MB) | 272 × 1024², 24 fps, silent |
-| Dataset configs | same folder, `*.workspace.{toml,jsonl}` | 4 buckets, box paths pre-written |
+| Training clips | Azure **`pudgy/processed/v6_expressions_272/`** (284 blobs, 33 MB) · local `Data/processed/v6_expressions_272/clips/` | 272 × 1024², 24 fps, silent |
+| Dataset configs | same folder, `*.workspace.{toml,jsonl}` | 4 buckets, `/workspace/` paths pre-written — no editing on the box |
 | Raw sources | Azure `pudgy/raw/iteration_3/03_expression_clips/` | 68 ProRes-4444 alpha clips |
 | Trainer | musubi-tuner 0.3.4, `networks.lora_wan` | v2 stack, documented in [`../v2/actions_done.md`](../v2/actions_done.md) |
 | Train script | [`finetune/wan/train_pudgy_happy_expr.sh`](../../finetune/wan/train_pudgy_happy_expr.sh) | takes `DATASET=` — runs v6 with no code change |
@@ -34,6 +34,10 @@ Everything below already exists and is verified. Nothing in this plan requires n
 > volume. Step 0 of the runbook re-provisions and re-downloads ~65 GB of base weights.
 > This is also why the v5 training clips had to be rebuilt — see
 > `Data/processed/v5_happy_28/README.md`.
+>
+> Everything else the box needs is now **pullable from Azure** — both `raw/` and
+> `processed/` are mirrored (`scripts/mirror_data_to_azure.py`), so §8 is `az` commands
+> rather than a manual copy off a laptop. Nothing in this plan requires local disk access.
 
 ---
 
@@ -322,8 +326,17 @@ bash setup_wan_env.sh                       # venv + musubi 0.3.4 + ~65 GB base 
 az storage blob download-batch --source pudgy --destination /workspace/wan_output/v2_golden \
    --pattern "v2/weights/curated/*GOLDEN_ep40*"
 
-# 2. Prep runs LOCALLY, then you stage the output. The shipped set already carries
-#    the shot-size ladder (section 4.3) — rebuild only if you change something.
+# 2. Pull the training set straight from Azure — 284 blobs, 33 MB, ~20 s
+az storage blob download-batch --account-name pudgytraining \
+   --source pudgy --destination /workspace/data_v6 \
+   --pattern "processed/v6_expressions_272/*"
+mv /workspace/data_v6/processed/v6_expressions_272/* /workspace/data_v6/
+mv /workspace/data_v6/clips /workspace/data_v6/expressions_train   # path the configs expect
+#    The *.workspace.toml / *.workspace.jsonl in that folder already carry /workspace/
+#    paths, so nothing needs editing. Sanity: 272 mp4 in expressions_train/.
+#
+#    The set already carries the shot-size ladder (section 4.3). Only re-prep locally
+#    (then re-mirror) if you are changing the data:
 #      python finetune/wan/prep_expressions_v6.py              # ladder on (shipped state)
 #      python finetune/wan/prep_expressions_v6.py --no-zoom    # reproduce the pre-ladder set
 #
@@ -331,9 +344,7 @@ az storage blob download-batch --source pudgy --destination /workspace/wan_outpu
 #    it composes with the ladder (a clip's zoom is fixed per background, so both the
 #    full-length and 21-frame copies inherit it and the balance assertion still holds):
 #      python finetune/wan/prep_expressions_v6.py --common-bucket 21
-#
-#    Stage: Data/processed/v6_expressions_272/  ->  /workspace/data_v6/
-#           clips/ -> /workspace/data_v6/expressions_train/ ; *.workspace.* alongside
+#      python scripts/mirror_data_to_azure.py --only v6_expressions_272
 
 # 3. Pre-cache (VAE + T5) — 4 buckets, one pass
 cd /workspace/musubi-tuner ; PY=/workspace/Pudgy/.venv-wan/bin/python
