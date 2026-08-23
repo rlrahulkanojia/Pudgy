@@ -2,7 +2,7 @@
 
 **Audience:** the GPU box operator. Turns the curated **`iteration_2_v4`** dataset into a trained LTX-2 (v4) LoRA. Plugs into **[`Training_Approach_v4.md` §12](./Training_Approach_v4.md)** (LTX env, checkpoints, trainer config, gotchas) — read §12.0–12.3 alongside this; here we cover only **how to consume THIS dataset**.
 
-> **Transfer note.** This doc reaches the box **via git** (it's in `training_approach/`). The **dataset itself is moved manually** — it lives outside the repo (`…/Pudgy/Data/iteration_2_v4/`, ~271 MB). Copy it to the box and set `DATASET=/abs/path/to/iteration_2_v4`. The transform script **`prep_ltx.py` ships inside that folder** (it's data-coupled).
+> **Transfer note.** This doc reaches the box **via git** (it's in `training_approach/`). The **dataset itself is moved manually** — it lives outside the repo (`…/Pudgy/Data/processed/v4_ltx_249clip/`, ~271 MB). Copy it to the box and set `DATASET=/abs/path/to/v4_ltx_249clip`. The transform script **`prep_ltx.py` ships inside that folder** (it's data-coupled).
 
 > **What the dataset is:** 249 human-curated **scene-split clips** of Pax/Polly (from 70 source skits) at **native 1080×1920 / 24 fps**, each with a v4 §7.1 prompt, plus an object catalog. It is **not yet LTX-native** — the re-encode to 25 fps / ÷32 / silent / 49-frame windows is **Step 2** (deferred to the box on purpose: no GPU on the authoring machine, and to preserve max resolution).
 
@@ -26,7 +26,7 @@
 Stand up the LTX-2 env per **v4 §12.1**: clone `Lightricks/LTX-2`, `uv sync`, `hf auth login`, download `ltx-2.3-22b-dev` + `-distilled-1.1` + `spatial-upscaler` + `google/gemma-3-12b`. Pin **`transformers==4.57.6`** (v4 #116). CUDA 13+, 80 GB tier (train bf16). `ffmpeg`+`ffprobe` on PATH (Step 2 needs no CUDA).
 
 ## Step 1 — Place the dataset
-Manually copy `iteration_2_v4/` to the box; `export DATASET=/abs/path/to/iteration_2_v4`.
+Manually copy `iteration_2_v4/` to the box; `export DATASET=/abs/path/to/v4_ltx_249clip`.
 
 ## Step 2 — Build the LTX-native training set  ⭐ (the deferred re-encode)
 ```bash
