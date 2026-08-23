@@ -283,13 +283,58 @@ def verify_zoom_balance(jobs, tol=0.34):
     return problems
 
 
+def verify_length_confound(records):
+    """Report how strongly clip length predicts emotion, and flag what remains.
+
+    Pre-fix this dataset is a perfect bijection (21<->happy, 29<->surprised,
+    37<->angry, 57<->neutral), so a model can read the emotion off the sequence length
+    and ignore the caption entirely — the same shortcut-taking that made v5's start
+    frame a deterministic trigger, one level up.
+
+    What --common-bucket can and cannot fix, stated honestly:
+      * CAN: make the common bucket hold all four emotions. That bucket becomes the
+        majority of the set and the default generation length, so at that length the
+        emotion is carried only by the caption.
+      * CANNOT: give every emotion two lengths. `happy` ships at 21 frames and nothing
+        longer exists, so it can only ever occupy the short bucket. Likewise 29/37/57
+        each still hold a single emotion, because only one emotion was delivered at
+        each of those lengths. That residual is a property of the delivery, not of the
+        prep, and it is reported rather than hidden.
+    """
+    import collections
+    tab = collections.defaultdict(collections.Counter)
+    for r in records:
+        emo = r["job"]["emotion"]
+        for o in r["outputs"]:
+            tab[o["frames"]][emo] += 1
+
+    msgs = []
+    print("\nlength/emotion table (the section 4.1 confound):")
+    for n in sorted(tab):
+        c = tab[n]
+        total = sum(c.values())
+        share = max(c.values()) / total
+        mark = "  <- single-emotion bucket" if len(c) == 1 else ""
+        print(f"   f{n:<3} {total:>4} clips  {dict(c)}{mark}")
+        if len(c) == 1:
+            msgs.append(f"f{n} is {share:.0%} one emotion ({next(iter(c))}) — "
+                        f"length still identifies emotion at this length")
+    per_emo = collections.defaultdict(set)
+    for n, c in tab.items():
+        for e in c:
+            per_emo[e].add(n)
+    print("   emotion -> lengths: " + ", ".join(
+        f"{e}={sorted(ls)}" for e, ls in sorted(per_emo.items())))
+    return msgs
+
+
 def caption(job, bg_desc, zoom):
     e = EMOTIONS[job["emotion"]]
     return (f"{STYLE}{ANCHORS[job['char']]}, {e['action']}; {job['emotion']} expression; "
             f"{ZOOMS[zoom]}, eye level, {job['clause']}; {bg_desc}.")
 
 
-def process(job, clips_dir):
+def process(job, clips_dir, common_bucket=None):
     want = EMOTIONS[job["emotion"]]["frames"]
     have = probe_frames(job["src"])
     if have < want:
@@ -299,17 +344,34 @@ def process(job, clips_dir):
     for tag in BACKGROUNDS:
         by_zoom.setdefault(job["zooms"][tag], []).append(tag)
 
+    # The length de-confound (Training_Approach_v6 section 4.1). Each emotion ships at
+    # exactly one frame count, so length predicts emotion with 100% accuracy and a
+    # small-data LoRA will take that shortcut instead of reading the caption. Emitting a
+    # second copy of every longer emotion truncated to the common length breaks the
+    # bijection: the common bucket then holds all four emotions, so within it length
+    # carries no signal at all. The copy keeps the SAME caption, zoom and background —
+    # only the duration differs, which is precisely the variable we want decorrelated.
+    also = common_bucket if (common_bucket and want > common_bucket) else None
+
     out = []
     for zoom, tags in sorted(by_zoom.items()):
         frames = read_rgba_zoomed(job["src"], want, zoom)
         for tag in tags:
             bg_desc, rgb = BACKGROUNDS[tag]
-            name = f"{job['char'].lower()}_{job['emotion']}_{job['angle']}__{tag}.mp4"
-            dest = clips_dir / name
-            write_mp4(composite(frames, rgb), dest)
-            out.append({"name": name, "dest": dest,
-                        "caption": caption(job, bg_desc, zoom),
-                        "frames": want, "background": tag, "zoom": zoom})
+            cap = caption(job, bg_desc, zoom)
+            stem = f"{job['char'].lower()}_{job['emotion']}_{job['angle']}__{tag}"
+            comped = composite(frames, rgb)
+            write_mp4(comped, clips_dir / f"{stem}.mp4")
+            out.append({"name": f"{stem}.mp4", "dest": clips_dir / f"{stem}.mp4",
+                        "caption": cap, "frames": want, "background": tag,
+                        "zoom": zoom, "truncated_from": None})
+            if also:
+                # Re-encode from the frames already in memory — no second decode.
+                write_mp4(comped[:also], clips_dir / f"{stem}_c{also}.mp4")
+                out.append({"name": f"{stem}_c{also}.mp4",
+                            "dest": clips_dir / f"{stem}_c{also}.mp4",
+                            "caption": cap, "frames": also, "background": tag,
+                            "zoom": zoom, "truncated_from": want})
     return {"job": job, "outputs": out, "src_frames": have, "used_frames": want}
 
 
@@ -353,7 +415,21 @@ def main():
     ap.add_argument("--no-zoom", action="store_true",
                     help="disable the shot-size ladder; every clip at 1.0x close-up "
                          "(reproduces the pre-zoom set)")
+    ap.add_argument("--common-bucket", type=int, default=None, metavar="N",
+                    help="also emit every longer emotion truncated to N frames, so the "
+                         "N-frame bucket holds all four emotions and clip length stops "
+                         "predicting emotion (Training_Approach_v6 section 4.1). "
+                         "N must be 4k+1 and <= the shortest emotion, e.g. 21.")
     args = ap.parse_args()
+
+    if args.common_bucket is not None:
+        n = args.common_bucket
+        shortest = min(e["frames"] for e in EMOTIONS.values())
+        if (n - 1) % 4:
+            sys.exit(f"--common-bucket {n} is not musubi-legal (must be 4k+1)")
+        if n > shortest:
+            sys.exit(f"--common-bucket {n} exceeds the shortest emotion ({shortest} frames); "
+                     f"it must be a length every emotion can supply")
 
     jobs, skipped, collisions = discover(args.src)
     if args.no_zoom:
@@ -393,13 +469,28 @@ def main():
         sys.exit(f"refusing to run: duplicate output names would overwrite: {dupes}")
 
     with ThreadPoolExecutor(max_workers=args.workers) as ex:
-        records = list(ex.map(lambda j: process(j, clips_dir), jobs))
+        records = list(ex.map(lambda j: process(j, clips_dir, args.common_bucket), jobs))
 
     written = len(list(clips_dir.glob("*.mp4")))
-    expected = len(jobs) * len(BACKGROUNDS)
+    expected = sum(len(r["outputs"]) for r in records)
     if written != expected:
         sys.exit(f"expected {expected} clips on disk, found {written}")
-    print(f"\nwrote {sum(len(r['outputs']) for r in records)} clips -> {clips_dir}")
+    print(f"\nwrote {expected} clips -> {clips_dir}")
+
+    residual = verify_length_confound(records)
+    for m in residual:
+        print(f"  ~ residual: {m}")
+    if args.common_bucket:
+        # The achievable test: the common bucket must carry every emotion. The other
+        # buckets staying single-emotion is a property of the delivery (only one
+        # emotion was shipped at each of those lengths), not a prep failure.
+        got = {r["job"]["emotion"] for r in records
+               for o in r["outputs"] if o["frames"] == args.common_bucket}
+        if got != set(EMOTIONS):
+            sys.exit(f"refusing to run: f{args.common_bucket} holds {sorted(got)}, "
+                     f"expected all of {sorted(EMOTIONS)} — the de-confound did not take")
+        print(f"\n  OK f{args.common_bucket} carries all {len(got)} emotions "
+              f"— length no longer predicts emotion at the common length")
 
     cfg_local, counts = emit(records, args.out, str(clips_dir),
                              str(args.out / "cache"), "")
@@ -410,12 +501,15 @@ def main():
         "source_root": str(args.src),
         "size": SIZE, "fps": FPS, "backgrounds": list(BACKGROUNDS),
         "zoom_ladder": {str(z): ZOOMS[z] for z in sorted(ZOOMS)},
+        "common_bucket": args.common_bucket,
         "clips": [{"source": str(r["job"]["src"]), "source_md5": md5(r["job"]["src"]),
                    "character": r["job"]["char"], "emotion": r["job"]["emotion"],
                    "angle": r["job"]["angle"], "source_frames": r["src_frames"],
                    "used_frames": r["used_frames"],
                    "outputs": [{"name": o["name"], "background": o["background"],
-                                "zoom": o["zoom"]} for o in r["outputs"]]} for r in records],
+                                "zoom": o["zoom"], "frames": o["frames"],
+                                "truncated_from": o["truncated_from"]}
+                               for o in r["outputs"]]} for r in records],
     }
     (args.out / "manifest.json").write_text(json.dumps(manifest, indent=2))
     print(f"buckets: {counts}")
