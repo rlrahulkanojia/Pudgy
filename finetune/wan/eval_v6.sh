@@ -50,7 +50,15 @@ HIGH_LORA="$GOLD/lora_highnoise_GOLDEN_ep40.safetensors"
 
 TAG="${TAG:-$(basename "$CKPT" .safetensors)_f${FRAMES}_s${SEED}}"
 mkdir -p "$OUTDIR"
-SAVE="$OUTDIR/${TAG}.mp4"
+# musubi ALWAYS treats --save_path as a directory (it calls os.makedirs on it) and names
+# the files inside by timestamp: "<save_path>/<YYYYMMDD-HHMMSS-mmm>_<seed>_.mp4". Passing
+# a "....mp4" path therefore creates a DIRECTORY with that name and hides the video one
+# level down — which silently breaks any glob for "*.mp4" and makes an exists() check on
+# the tag match the directory, so reruns skip work that never happened. Give it a real
+# scratch directory and rename the result ourselves.
+SAVE="$OUTDIR/.raw_${TAG}"
+rm -rf "$SAVE"; mkdir -p "$SAVE"
+FINAL="$OUTDIR/${TAG}.mp4"
 
 END_ARG=()
 [ -n "$END" ] && END_ARG=(--end_image_path "$END")
@@ -75,9 +83,14 @@ cd /workspace/musubi-tuner
   --prompt "$PROMPT" --seed "$SEED" --attn_mode sdpa \
   --fp8 --fp8_scaled --fp8_t5 --vae_cache_cpu \
   "${EXTRA[@]}" \
-  --save_path "$SAVE" --output_type both
+  --save_path "$SAVE" --output_type video
 
-# musubi appends its own timestamp/suffix; resolve what it actually wrote.
-REAL=$(find "$OUTDIR" -name "*.mp4" -newer "$START" 2>/dev/null | sort | tail -1)
-REAL="${REAL:-$SAVE}"
-echo "== wrote: $REAL"
+# Rename the timestamped output to the tag, then drop the scratch dir. `video` (not
+# `both`) because the 6 MB latent per clip is dead weight for a visual review.
+PRODUCED=$(find "$SAVE" -name "*.mp4" -type f | sort | tail -1)
+if [ -z "$PRODUCED" ]; then
+  echo "!! generation produced no mp4 in $SAVE"; ls -la "$SAVE"; exit 1
+fi
+mv "$PRODUCED" "$FINAL"
+rm -rf "$SAVE"
+echo "== wrote: $FINAL"

@@ -48,12 +48,24 @@ def load_env(path="/workspace/.env"):
                 os.environ.setdefault(k.strip(), v.strip().strip('"'))
 
 
-def classify(p: Path, root: Path, with_states: bool):
-    """Local path -> blob name, or None to skip."""
+def classify(p: Path, root: Path, with_states: bool, flat: bool = False):
+    """Local path -> blob name, or None to skip.
+
+    `flat` preserves the relative path under the given prefix instead of sorting files
+    into weights/logs/docs buckets. Use it when the caller already named the destination
+    (e.g. --prefix v6/inference); otherwise media would be dropped and JSON would land in
+    a spurious extra docs/ level.
+    """
     rel = p.relative_to(root)
     parts = rel.parts
     if any(part.endswith("-state") for part in parts) and not with_states:
         return None
+    if flat:
+        return rel.as_posix()
+    # Media: renders and contact sheets. Without this they are silently skipped — the
+    # mirror reports "0 files uploaded" and nothing says the videos never went up.
+    if p.suffix.lower() in (".mp4", ".png", ".jpg", ".webm", ".gif"):
+        return f"inference/{rel.as_posix()}"
     if p.suffix == ".safetensors":
         return f"weights/{p.name}"
     # Drop a leading "logs/" from the relative path before re-prefixing it, or a file
@@ -68,13 +80,13 @@ def classify(p: Path, root: Path, with_states: bool):
     return None
 
 
-def sweep(cc, root: Path, prefix: str, seen: dict, with_states: bool, quiet=False):
+def sweep(cc, root: Path, prefix: str, seen: dict, with_states: bool, quiet=False, flat=False):
     now = time.time()
     pushed = 0
     for p in sorted(root.rglob("*")):
         if not p.is_file():
             continue
-        blobpart = classify(p, root, with_states)
+        blobpart = classify(p, root, with_states, flat)
         if blobpart is None:
             continue
         st = p.stat()
@@ -104,6 +116,9 @@ def main():
     ap.add_argument("--watch", action="store_true")
     ap.add_argument("--once", action="store_true")
     ap.add_argument("--interval", type=int, default=180)
+    ap.add_argument("--flat", action="store_true",
+                    help="preserve relative paths under --prefix instead of bucketing "
+                         "into weights/logs/docs")
     ap.add_argument("--with-states", action="store_true",
                     help="also upload *-state/ resume dirs (~15 GB per checkpoint)")
     args, _ = ap.parse_known_args()
@@ -121,14 +136,14 @@ def main():
           f"(states {'INCLUDED' if args.with_states else 'skipped'})", flush=True)
 
     if args.once or not args.watch:
-        n = sweep(cc, root, args.prefix, seen, args.with_states)
+        n = sweep(cc, root, args.prefix, seen, args.with_states, flat=args.flat)
         print(f"done: {n} file(s) uploaded", flush=True)
         return
 
     # Watch mode: runs as a child of the training script, dies with it.
     while True:
         try:
-            sweep(cc, root, args.prefix, seen, args.with_states, quiet=True)
+            sweep(cc, root, args.prefix, seen, args.with_states, quiet=True, flat=args.flat)
         except Exception as e:
             print(f"  ! sweep error: {type(e).__name__}: {e}", flush=True)
         time.sleep(args.interval)

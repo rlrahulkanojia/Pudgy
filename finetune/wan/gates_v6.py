@@ -59,6 +59,12 @@ KF = Path("/workspace/eval_v6/keyframes")
 OUT = Path("/workspace/eval_v6")
 
 FRONT = "facing the camera directly, front view"
+
+# G-C distinctness threshold on the FACE crop. Provisional: derived from 3 pairs at one
+# seed on epochs 2-3 (different prompts 0.84-0.88, same prompt 0.95). Re-anchor once a
+# full multi-seed sweep exists; until then read pairs near the line as undecided rather
+# than as passes. The whole-frame 0.95 bar from v5 is kept alongside for comparability.
+FACE_DISTINCT = 0.92
 # The neutral/idle action clause, used when a gate must ask for NO expression. It is
 # phrased in the same register as the trained action clauses so it stays in
 # distribution; it is not one of the four trained emotion labels.
@@ -93,15 +99,47 @@ def gray(v):
     return (v[..., 0] * 0.299 + v[..., 1] * 0.587 + v[..., 2] * 0.114).astype(np.float32)
 
 
-def ssim_pair(a, b):
+def face_box(zoom=1.00, size=1024):
+    """Crop around the head for a centred close-up, scaled by the shot-size zoom.
+
+    Measured on the real renders: the head sits in the upper-middle of the frame at
+    1.00x. The box is scaled about the frame centre so it still lands on the face at
+    0.75x medium and 0.55x wide, where the character is composited smaller.
+    """
+    y0, y1, x0, x1 = 120, 470, 330, 700
+    cy, cx = size / 2, size / 2
+    def s(v, c):
+        return int(round(c + (v - c) * zoom))
+    return max(0, s(y0, cy)), min(size, s(y1, cy)), max(0, s(x0, cx)), min(size, s(x1, cx))
+
+
+def ssim_pair(a, b, region=None):
     """Mean per-frame SSIM over the overlapping prefix of two clips.
 
     Compared frame-by-frame on the shared prefix rather than resampled to a common
     length: G-L deliberately compares clips of DIFFERENT lengths, and time-warping
     them would manufacture similarity that is not in the videos.
+
+    `region` restricts the comparison to a crop. Use it for anything measuring an
+    EXPRESSION change: about 85% of these frames are body, outline and flat background
+    that the prompt never touches, so whole-frame SSIM is dominated by pixels that
+    cannot differ and it badly understates the difference. Measured on real renders:
+
+        pair                     whole-frame   face-region
+        neutral vs happy            0.9485        0.8536
+        angry   vs happy            0.9382        0.8387
+        angry   vs neutral          0.9410        0.8821
+        same prompt (control)       0.9834        0.9528
+
+    Whole-frame put one genuine pair 0.0015 from failing; the face crop clears it by
+    0.10. This is the same trap v4 hit with whole-frame optical flow under-counting a
+    localized flipper wave.
     """
     n = min(len(a), len(b))
     ga, gb = gray(a[:n]), gray(b[:n])
+    if region:
+        y0, y1, x0, x1 = region
+        ga, gb = ga[:, y0:y1, x0:x1], gb[:, y0:y1, x0:x1]
     return float(np.mean([ssim(ga[i], gb[i], data_range=255) for i in range(n)]))
 
 
@@ -203,15 +241,21 @@ def gate_gc(ckpt, seeds, outdir, dry):
                 clips[(char, emo, seed)] = p
     if dry:
         return {"gate": "G-C", "status": "dry"}
+    fb = face_box(1.00)
     for char in ("Pax", "Polly"):
         for seed in seeds:
             for a, b in itertools.combinations(EMOTIONS, 2):
-                s = ssim_pair(read_video(clips[(char, a, seed)]),
-                              read_video(clips[(char, b, seed)]))
+                va, vb = read_video(clips[(char, a, seed)]), read_video(clips[(char, b, seed)])
+                whole = ssim_pair(va, vb)
+                face = ssim_pair(va, vb, region=fb)
+                # Gate on the face crop: it is the region the prompt actually controls,
+                # and it separates ~0.10 where whole-frame separates ~0.04. Whole-frame is
+                # still recorded so these stay comparable with v5's published numbers.
                 rows.append({"character": char, "seed": seed, "pair": f"{a}|{b}",
-                             "ssim": round(s, 4), "distinct": s < 0.95})
-    worst = max(rows, key=lambda r: r["ssim"])
-    per_char = {c: round(float(np.mean([r["ssim"] for r in rows if r["character"] == c])), 4)
+                             "ssim_face": round(face, 4), "ssim_whole": round(whole, 4),
+                             "distinct": face < FACE_DISTINCT})
+    worst = max(rows, key=lambda r: r["ssim_face"])
+    per_char = {c: round(float(np.mean([r["ssim_face"] for r in rows if r["character"] == c])), 4)
                 for c in ("Pax", "Polly")}
     gap = abs(per_char["Pax"] - per_char["Polly"])
     return {"gate": "G-C", "rows": rows, "worst_pair": worst,

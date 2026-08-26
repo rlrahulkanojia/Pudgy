@@ -269,7 +269,7 @@ bash finetune/wan/train_pudgy_expr_v6.sh
 | Steps/epoch | **272** | = clips × repeats ÷ batch |
 | Epochs | **11** (~3,000 steps) | v2's golden was 3,000 steps; sweep inside that band |
 | Save cadence | **every epoch** + `--save_state` | the golden is often early (v5: ep04 moved more than ep18) |
-| Block-swap | **0** | v5 §4.7 measured it as a 2× throughput tax when VRAM is free |
+| Block-swap | **32 of 40** | ⚠️ **contradicts the plan** — measured, see §7.1 |
 | Seed | 42 | comparability with v2/v5 |
 | Mirroring | **on, during the run** | risk 9.8 — the v5 box was destroyed *with* its weights |
 
@@ -286,6 +286,63 @@ floor — attention is super-linear in sequence length):
 
 Plan for 3.5–4.5 h/epoch → **~40–50 h** for 11 epochs. `neutral` alone is ~40% of the
 compute; it earns it as both the contrastive class and the only sustained-hold data.
+
+### 7.1 ⚠️ Block-swap 32, not 0 — the plan's setting OOMs
+
+**The first launch died on step 0 with `blocks_to_swap: 0`, the value the plan specifies.**
+
+The plan's reasoning (§5, evidence #10) is sound but rests on a measurement that does not
+generalise: v5 §4.7 found block-swap to be a 2× throughput tax when VRAM is free
+(27.5 → 13.7 s/it), so the plan set it to 0. **But v5 only ever trained 21-frame clips.**
+v6 introduces a 57-frame bucket at 61,440 tokens — 2.5× the sequence length — and it does
+not fit. The plan's compute table (§6) projected *time* per bucket and never *memory*.
+
+The failure is precise: `torch.OutOfMemoryError: Tried to allocate 1.17 GiB` inside
+`WanRMSNorm._norm`, which upcasts activations to fp32. At f57 that tensor is
+61,440 × 5120 × 4 B ≈ **1.26 GB**, matching the failed allocation almost exactly. So the
+pressure is **activations, not weights** — which is also why it is unaffected by the fact
+that LoRA training keeps only 400 small modules trainable.
+
+Probed on the f57 bucket alone (each probe run to ≥4 real steps on a cleared card):
+
+| `blocks_to_swap` | f57 peak VRAM | headroom | f57 rate | Verdict |
+|---|---|---|---|---|
+| 0 (plan) | OOM at 76.4 / 79.2 GB | — | — | ❌ dies on step 0 |
+| 24 | 76.1 GB (93%) | 5.8 GB | 72.7 s/it | fits, thin margin |
+| **32** | **70.7 GB (86%)** | **11.2 GB** | **74.3 s/it** | ✅ **chosen** |
+
+32 costs ~2% throughput over 24 and buys double the headroom. For a ~35 h run where an OOM
+forfeits up to a full epoch, that trade is obviously right.
+
+**The feared cost to the short buckets did not materialise.** f21 with 32 blocks swapped
+runs at **18.5 s/it** — still faster than v5's **26.7 s/it** on an *unswapped* card. This
+box is an A100-**SXM4** where v5's was PCIe, and the extra bandwidth absorbs most of the
+swap tax. Peak on f21 is only 32.6 GB.
+
+Observed in the live run: **100% GPU utilisation sustained**, 320–430 W, with VRAM
+oscillating **28 → 70 GB** as the sampler moves between buckets. The idle VRAM on short
+buckets is not recoverable throughput — the SMs are already saturated. Raising
+`batch_size` to consume it was rejected: the plan fixes `batch_size = 1`, and v4 §12.3
+measured that a larger batch *hurts* LoRA fidelity on small datasets.
+
+> **Carry-forward:** `blocks_to_swap: 0` is safe only while every bucket is ≤ ~21 frames at
+> 1024². Any future run that lengthens clips must re-probe memory before launch.
+
+**Do not extrapolate run time from single-bucket probes.** Weighting the probe rates by
+the real bucket mix (56×f21 + 72×f29 + 72×f37 + 72×f57) predicts ~41.7 s/it. The live run
+measures **61.7 s/it** — 48% higher. The probes ran *homogeneous* batches back to back;
+the real run interleaves four bucket shapes, so the caching allocator and the block-swap
+machinery churn on every shape change. Actuals:
+
+| | Probe-based estimate | Plan estimate | **Measured** |
+|---|---|---|---|
+| s/it | 41.7 | — | **61.7** |
+| per epoch | 3.2 h | 3.5–4.5 h | **4.66 h** |
+| 11 epochs | 35 h | 40–50 h | **~51 h** |
+| epoch-2 gate | 6.4 h | ~9 h | **~9.3 h** |
+
+The plan's own estimate was closer than the probe extrapolation. Worth remembering next
+time: probes bound *memory* reliably and *throughput* only loosely.
 
 ---
 
@@ -338,6 +395,7 @@ regenerating.
 | 4 | `eval_v6.sh` for G-C/G-L | **written**, plus `gates_v6.py` | The emotion × length loop did not exist; prompts are built from the same constants as the prep script so they match the training distribution by construction. |
 | 5 | torch cu128 (v2 stack) | **cu126** | Host driver is CUDA 12.6, older than the v5 box. |
 | 6 | Mirror to Azure after the run | **during** the run | Risk 9.8; a 40–50 h run is one preemption from total loss. |
+| 8 | `blocks_to_swap: 0` | **32** | The plan's value OOMs on step 0 — the 57-frame bucket is 2.5× v5's sequence length and v5 is where the "0" came from. See §7.1. |
 | 7 | Novel frame = v1 clip `00000001` | clips `00000010` / `00000016` | The original clips the subject at the frame edge, corrupting G-M's metric. |
 
 ---
