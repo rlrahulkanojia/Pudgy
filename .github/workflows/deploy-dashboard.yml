@@ -65,15 +65,58 @@ jobs:
           ")
           echo "::add-mask::$u"
           echo "::add-mask::$p"
+
+          # isAsync=true, then poll. The previous isAsync=false blocked until the
+          # deploy finished, but App Service cuts synchronous SCM requests at ~230s,
+          # and this deploy had been creeping toward that ceiling for months:
+          #   2m43s  2m44s  2m53s  2m58s  3m01s   <- all under
+          #   4m34s  <- HTTP 504 GatewayTimeout
+          # The 504 is the worst part: it means the REQUEST timed out, not that the
+          # deploy failed. Kudu often finishes server-side anyway, so the job reports
+          # a failure for a deployment that actually landed — and a re-run "fixes" it
+          # without anything having been wrong. Polling reports the real outcome and
+          # is not bounded by the gateway.
           http_code=$(curl -s -o /tmp/deploy_response.txt -w "%{http_code}" \
             -u "$u:$p" \
             --data-binary @deploy.zip \
-            "$AZURE_SCM_URL/api/zipdeploy?isAsync=false")
-          echo "Kudu ZipDeploy responded HTTP $http_code"
-          cat /tmp/deploy_response.txt
+            "$AZURE_SCM_URL/api/zipdeploy?isAsync=true")
+          echo "Kudu accepted the upload with HTTP $http_code"
+          cat /tmp/deploy_response.txt || true
+          # 202 Accepted is the expected async response; anything >=300 is a real
+          # upload failure and there is nothing to poll for.
           if [ "$http_code" -ge 300 ]; then
-            echo "::error::Deployment failed with HTTP $http_code"
+            echo "::error::Upload failed with HTTP $http_code"
             exit 1
           fi
+
+          # Poll until Kudu reports the deployment finished. `complete` flips true for
+          # BOTH success and failure, so `status` decides: 4 == success, 3 == failed.
+          echo "Polling deployment status..."
+          for i in $(seq 1 60); do
+            sleep 10
+            body=$(curl -s -u "$u:$p" "$AZURE_SCM_URL/api/deployments/latest" || true)
+            complete=$(printf '%s' "$body" | python3 -c "
+          import json,sys
+          try: print(json.load(sys.stdin).get('complete'))
+          except Exception: print('unknown')
+          ")
+            status=$(printf '%s' "$body" | python3 -c "
+          import json,sys
+          try: print(json.load(sys.stdin).get('status'))
+          except Exception: print('unknown')
+          ")
+            echo "  [$((i*10))s] complete=$complete status=$status"
+            if [ "$complete" = "True" ]; then
+              if [ "$status" = "4" ]; then
+                echo "Deployment succeeded."
+                exit 0
+              fi
+              echo "::error::Deployment finished with status $status (4 == success)"
+              printf '%s\n' "$body" | head -c 2000
+              exit 1
+            fi
+          done
+          echo "::error::Deployment did not complete within 10 minutes"
+          exit 1
         env:
           PUBLISH_PROFILE: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
