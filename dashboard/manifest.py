@@ -45,6 +45,25 @@ DATASETS = [
                  "internal-cut clips).",
     },
     {
+        "name": "Expression set (all 4 emotions)",
+        "used_by": ["v6"],
+        # 61 NEW clips; the 7 Pax/happy clips the v5 pilot used came in the same
+        # iteration_3 delivery and are already counted there. 68 sources in total.
+        "clip_count": 61,
+        "training_clips": 272,     # 68 sources x 4 backgrounds, one zoom per pair
+        "resolution": "1080×1080 source → 1024×1024 trained",
+        "fps": "24",
+        "frames": "21 / 29 / 37 / 57 (per emotion, 4N+1)",
+        "duration": "0.875s – 2.4s",
+        "notes": "68 ProRes-4444 alpha clips: 2 characters × 4 emotions (happy, surprised, "
+                 "angry, neutral) × 7–9 camera angles. Alpha-composited onto 4 flat grounds "
+                 "and rendered across a synthesised close-up/medium/wide shot ladder → 272 "
+                 "training clips. First set in the programme with even character balance "
+                 "(136 Pax / 136 Polly) and 100% colour-grounded captions. Each emotion "
+                 "ships at exactly one frame count, which made clip length a perfect "
+                 "predictor of emotion in training — tested and cleared at eval (G-L).",
+    },
+    {
         "name": "Happy-expression pilot set",
         "used_by": ["v5"],
         "clip_count": 7,           # as delivered by the client
@@ -64,6 +83,39 @@ DATASETS = [
 ]
 
 TRAINING_APPROACHES = [
+    {
+        "id": "v6",
+        "name": "Expressions Wan 2.2",
+        "base_model": "Wan2.2-I2V-A14B (continue-trained from Wan2.2's golden checkpoints)",
+        "status": "Trained · G-L ✓ · G-F ✓",
+        "status_color": "green",
+        "thesis": "Teach all four expressions to both characters at once, so expression "
+                  "becomes a promptable axis. Trained contrastively — the same start frame "
+                  "maps to four different labelled outcomes — on the low-noise expert only, "
+                  "leaving Wan2.2's validated motion prior untouched.",
+        "summary": [
+            "**Expressions are promptable and distinct.** All 4 emotions × both characters "
+            "render correctly from one start frame with only the caption changing. Measured "
+            "on the face region, every emotion pair separates (0.83–0.85 typical) far beyond "
+            "what changing the checkpoint does (0.95).",
+            "**Verified across 3 seeds.** 72/72 emotion pairs distinct at every clip length. "
+            "`surprised` is the weakest class and the shortest length the tightest — both "
+            "still pass, and both are where more data would help most.",
+            "**No hidden dependence on clip length.** Each emotion was only ever trained at "
+            "one duration, so length could have become a shortcut for emotion. It did not: "
+            "asking for any emotion at any length gives that emotion.",
+            "**No start-frame lock-in.** Driving from the exact training frame with a prompt "
+            "asking for *no* expression yields no expression — the failure that broke the "
+            "Happy Expression pilot does not recur.",
+            "**The step it adds is essential.** Wan2.2's golden alone cannot render these "
+            "expressions — asked for 'angry' it produces a malformed face. ",
+            "Known limits: 1 seed on the start-frame test; the golden checkpoint is still "
+            "being selected (epoch 1 separates as well as epoch 11, and epoch 1 accounts for "
+            "~76% of the total change from baseline).",
+        ],
+        "video_prefix": "v6",
+        "video_groups": ["showcase", "gl", "epoch_00"],
+    },
     {
         "id": "v5",
         "name": "Happy Expression Wan 2.2",

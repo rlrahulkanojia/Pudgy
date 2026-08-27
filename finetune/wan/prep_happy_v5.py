@@ -19,14 +19,19 @@ Output: 1024x1024, 21 frames (4*5+1, musubi-legal), silent mp4 + captions.
 even — 1080/8 = 135 (odd) would leave musubi to bucket it somewhere ambiguous.
 1024/8 = 128. Clean.
 """
-import json, subprocess, sys
+import argparse, json, subprocess, sys
 from pathlib import Path
 
 import numpy as np
 from PIL import Image
 
-SRC = Path("/workspace/data_v5/happy_pax_raw")
-OUT = Path("/workspace/data_v5/happy_pax_train")
+# The GPU box this originally ran on is gone, and the composited clips were never
+# mirrored to Azure (only the weights, eval and this manifest were) — so the defaults
+# now point at the local tree, which reproduces the set from the surviving raw clips.
+# Pass --src/--out/--jsonl to target a box again.
+DEFAULT_SRC = Path("/Users/rahul/Documents/Projects/Saksham/Pudgy/Data/raw/iteration_3/03_expression_clips/Pax/happy")
+DEFAULT_OUT = Path("/Users/rahul/Documents/Projects/Saksham/Pudgy/Data/processed/v5_happy_28/clips")
+DEFAULT_JSONL = Path("/Users/rahul/Documents/Projects/Saksham/Pudgy/Data/processed/v5_happy_28/dataset_happy.jsonl")
 SIZE = 1024
 NFRAMES = 21
 
@@ -95,6 +100,16 @@ def write_mp4(frames: np.ndarray, dest: Path):
 
 
 def main():
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--src", type=Path, default=DEFAULT_SRC, help="folder of source .mov clips")
+    ap.add_argument("--out", type=Path, default=DEFAULT_OUT, help="folder for composited .mp4 clips")
+    ap.add_argument("--jsonl", type=Path, default=DEFAULT_JSONL, help="dataset manifest to write")
+    ap.add_argument("--path-prefix", default=None,
+                    help="write this prefix into video_path instead of --out "
+                         "(e.g. /workspace/data_v5/happy_pax_train for a GPU box)")
+    args = ap.parse_args()
+    SRC, OUT = args.src, args.out
+
     OUT.mkdir(parents=True, exist_ok=True)
     records = []
     for src in sorted(SRC.glob("*.mov")):
@@ -109,10 +124,12 @@ def main():
             write_mp4(composite(frames, rgb), dest)
             caption = (f"{ANCHOR}, {ACTION}; happy expression; "
                        f"static close-up shot, eye level, {ANGLES[stem]}; {bg_desc}.")
-            records.append({"video_path": str(dest), "caption": caption})
+            listed = f"{args.path_prefix.rstrip('/')}/{dest.name}" if args.path_prefix else str(dest)
+            records.append({"video_path": listed, "caption": caption})
             print(f"  ✓ {dest.name}")
 
-    jsonl = Path("/workspace/Pudgy/finetune/wan/dataset_happy.jsonl")
+    jsonl = args.jsonl
+    jsonl.parent.mkdir(parents=True, exist_ok=True)
     with open(jsonl, "w") as f:
         for r in records:
             f.write(json.dumps(r) + "\n")
