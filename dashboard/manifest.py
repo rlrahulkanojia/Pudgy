@@ -114,7 +114,7 @@ TRAINING_APPROACHES = [
             "~76% of the total change from baseline).",
         ],
         "video_prefix": "v6",
-        "video_groups": ["showcase", "gl", "epoch_00"],
+        "video_groups": ["showcase"],
     },
     {
         "id": "v5",

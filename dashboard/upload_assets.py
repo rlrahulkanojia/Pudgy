@@ -47,11 +47,10 @@ BLOB_SOURCES = [
     ("v4", "v4/inference/FINAL2",            "v4/FINAL2"),
     ("v4", "v4/inference/phase2_variations", "v4/phase2_variations"),
     ("v5", "v5/inference",                   "v5"),
-    # v6 — showcase is the client-facing set; gl/ is the emotion x length evidence
-    # matrix and epoch_00 is the pre-v6 control (what the base could do alone).
+    # v6 — the showcase only. The G-L matrix (48 diagnostic clips) and the ep00
+    # control are evaluation evidence, not client material; they stay in the
+    # training container under v6/inference/ and are cited from the reports.
     ("v6", "v6/inference/showcase",          "v6/showcase"),
-    ("v6", "v6/inference/gl",                "v6/gl"),
-    ("v6", "v6/inference/epoch_00",          "v6/epoch_00"),
 ]
 
 # Optional local fallbacks — used only if the directory exists.
