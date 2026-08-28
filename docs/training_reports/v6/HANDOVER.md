@@ -125,8 +125,19 @@ ep1→ep4 ≈ 18%, ep4→ep11 ≈ 7%.
 1. **`surprised` is the weakest expression.** Hardest to distinguish from every other
    emotion (all three of its pairs are the three hardest, for both characters), and
    visibly weaker on unseen backgrounds.
-1b. **`angry` is seed-fragile at 37 frames** — renders clearly on 1 of 3 seeds, weakly
-   or not at all on the other two. G-H is the only failing gate.
+1b. **`angry` is seed-fragile.** G-H found it renders clearly on only 1 of 3 seeds at
+   37 frames — the only failing gate. Reviewing the 4 showcase variants of Pax/angry at
+   **21** frames by eye, 2 of 4 are clear and 2 are weak, so the fragility is not
+   specific to the long length. Sample is Pax only; not quantified across all 32 takes.
+
+> ⚠️ **There is no working automated measure of expression *strength*.** An obvious
+> candidate — face-region SSIM between f0 and the peak frame — was tried and is invalid:
+> it scores `neutral` (0.7575 mean) about the same as `angry` (0.7349), because it
+> captures any change at all (blinks, head turns, body shifts) rather than whether the
+> requested expression formed. Every strength claim in these documents is therefore a
+> visual judgement on a named sample, not a measured rate. Building a real measure —
+> e.g. a classifier over the four expressions — is the single highest-value evaluation
+> improvement available, because separability gates structurally cannot see this.
 2. **Wide framing loses expression legibility.** At 0.55× the face is ~55% linear size
    before the 8× VAE shrinks it again; the showcase's wide clip has barely readable
    brows. The ladder makes *framing* promptable; the *expression* does not survive it.

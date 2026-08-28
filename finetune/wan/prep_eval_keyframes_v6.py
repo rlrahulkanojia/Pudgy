@@ -144,6 +144,17 @@ def main():
                      out / f"{char.lower()}_neutral_{tag}_start.png")
             made.append(f"{char.lower()}_neutral_{tag}_start.png")
 
+    # --- 3b. Trained grounds, for showcase variants -----------------------------------
+    # white already covered above; blue/peach/mint are the other three the model saw, and
+    # a showcase that varies the ground needs a start frame on each.
+    for char in ("Pax", "Polly"):
+        j = pick(jobs, char, "neutral")
+        frames = read_rgba_zoomed(j["src"], 2, 1.00)
+        for name in ("blue", "peach", "mint"):
+            save_png(composite(frames, BACKGROUNDS[name][1])[0],
+                     out / f"{char.lower()}_neutral_{name}_start.png")
+            made.append(f"{char.lower()}_neutral_{name}_start.png")
+
     # --- 4. G-B: unseen grounds ------------------------------------------------------
     for char in ("Pax", "Polly"):
         j = pick(jobs, char, "neutral")

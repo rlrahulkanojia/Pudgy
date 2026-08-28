@@ -41,21 +41,31 @@ PY = "/workspace/Pudgy/.venv-wan/bin/python"
 REPO = "/workspace/musubi-tuner"
 
 
+# Four variants per (character, emotion). Ground AND seed both change, so the set
+# demonstrates range rather than four near-identical takes: it shows the expression
+# survives a background swap and is not a fluke of one seed. All four grounds here
+# were trained, so this is a fair showcase, not a robustness test — the unseen-ground
+# probes below are what test generalisation.
+VARIANTS = [("white", 42), ("blue", 7), ("peach", 123), ("mint", 5)]
+
+
 def build(seed):
     """(label, char, emotion, zoom, bg, start-keyframe stem, frames)."""
     items = []
     for char in ("Pax", "Polly"):
         for emo in EMOTIONS:
-            items.append((f"{char.lower()}_{emo}", char, emo, 1.00, "white",
-                          f"{char.lower()}_neutral", 21))
+            for bg, sd in VARIANTS:
+                items.append((f"{char.lower()}_{emo}_{bg}_s{sd}", char, emo, 1.00, bg,
+                              f"{char.lower()}_neutral" if bg == "white"
+                              else f"{char.lower()}_neutral_{bg}", 21, sd))
     items.append(("pax_happy_UNSEEN_lavender", "Pax", "happy", 1.00, "lavender",
-                  "pax_neutral_lavender", 21))
+                  "pax_neutral_lavender", 21, seed))
     items.append(("polly_surprised_UNSEEN_lavender", "Polly", "surprised", 1.00,
-                  "lavender", "polly_neutral_lavender", 21))
+                  "lavender", "polly_neutral_lavender", 21, seed))
     items.append(("pax_angry_WIDE", "Pax", "angry", 0.55, "white",
-                  "pax_neutral_wide", 21))
+                  "pax_neutral_wide", 21, seed))
     items.append(("polly_neutral_LONG57", "Polly", "neutral", 1.00, "white",
-                  "polly_neutral", 57))
+                  "polly_neutral", 57, seed))
     return items
 
 
@@ -69,22 +79,22 @@ def main():
 
     OUT.mkdir(parents=True, exist_ok=True)
     items = build(args.seed)
-    todo = [i for i in items if not (OUT / f"{i[0]}_s{args.seed}.mp4").exists()]
+    todo = [i for i in items if not (OUT / f"{i[0]}.mp4").exists()]
     print(f"showcase :: {args.ckpt.name}")
     print(f"  {len(items)} clips, {len(todo)} to render, ONE model load")
-    for lab, char, emo, zoom, bg, kf, fr in todo:
-        print(f"    {lab:<34} {char}/{emo} zoom {zoom} bg {bg} {fr}f")
+    for lab, char, emo, zoom, bg, kf, fr, sd in todo:
+        print(f"    {lab:<38} {char}/{emo} zoom {zoom} bg {bg} {fr}f seed {sd}")
     if args.dry_run or not todo:
         return
 
     scratch = Path(tempfile.mkdtemp(prefix="showcase_", dir=str(OUT)))
     lines = []
-    for lab, char, emo, zoom, bg, kf, fr in todo:
+    for lab, char, emo, zoom, bg, kf, fr, sd in todo:
         start = KF / f"{kf}_start.png"
         if not start.exists():
             sys.exit(f"missing keyframe {start}")
         lines.append(f"{caption_for(char, emo, zoom=zoom, bg=bg)} "
-                     f"--w 1024 --h 1024 --f {fr} --d {args.seed} --i {start}")
+                     f"--w 1024 --h 1024 --f {fr} --d {sd} --i {start}")
     pf = scratch / "prompts.txt"
     pf.write_text("\n".join(lines) + "\n")
 
@@ -113,7 +123,7 @@ def main():
     if len(produced) != len(todo):
         sys.exit(f"expected {len(todo)} clips, got {len(produced)}")
     for (lab, *_rest), src in zip(todo, produced):
-        dest = OUT / f"{lab}_s{args.seed}.mp4"
+        dest = OUT / f"{lab}.mp4"
         src.rename(dest)
         print(f"    -> {dest.name}")
     for f in scratch.glob("*"):
