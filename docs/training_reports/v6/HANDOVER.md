@@ -29,11 +29,43 @@ malformed face: artifact marks for eyes, a mangled blob for the beak.
 |---|---|---|---|
 | **G-L** length de-confound | **PASS** | 42, 7, 123 | 72/72 pairs distinct; worst 0.9109 vs 0.92 |
 | **G-F** frame trigger | **PASS** | 42 | closest emotion match 0.8351 vs 0.92; no clip frozen |
-| **G-B** unseen background | pending | 42, 7, 123 | — |
-| **G-Z** shot size | pending | 42, 7, 123 | — |
-| **G-H** sustained hold | pending | 42, 7, 123 | — |
-| **G-L Polly** | pending | 42, 7, 123 | — |
+| **G-F** frame trigger | **PASS** | 7, 123 | all 12 clips moving; none frozen |
+| **G-B** unseen background | **PASS** | 42, 7, 123 | lavender 1.31 / sky 1.11 mean drift, vs a 5/255 bar |
+| **G-Z** framing | **PASS** | 42, 7, 123 | subject area orders closeup > medium > wide on every seed |
+| **G-H** sustained hold | **FAIL** | 42, 7, 123 | `angry` f37 fails on 2 of 3 seeds — see below |
+| **G-L Polly** | **PASS** | 42, 7, 123 | 18/18 distinct; worst `surprised\|angry` 0.9005 |
 | **G-C / G-P / G-R** | not run | — | — |
+
+### G-H — the one failure, and it is not what the gate name says
+
+Scored as "is the expression sustained past f30", `angry` at 37 frames failed on
+seeds 42 (0.8805) and 123 (0.8880), passing only on seed 7 (0.9561). `neutral` at 57
+frames passed on all three (0.9990 / 0.9541 / 0.9408).
+
+**Visual inspection shows the cause is not relaxation.** The metric measures deviation
+from the peak frame across the late window, which scores "still building" and "never
+built" identically to "relaxed":
+
+- **seed 123** — essentially *no* angry expression forms; the character stays neutral
+  for the whole clip.
+- **seed 42** — a faint brow appears only in the final frames (peak frame = f36, the
+  last one). Still building at the end, not decaying.
+- **seed 7** — clear brow drop and glare by mid-clip, held.
+
+So the real finding is that **`angry` is seed-fragile at 37 frames** — its own native
+training length, and the length at which G-L measured the *best* separability
+(mean 0.8261). Separability is not quality: two weak expressions are still distinct
+from each other. A single seed would have shown either a clean pass or a clean fail
+depending which one was picked.
+
+### G-B / G-Z — comfortable passes
+
+Background drift on grounds never trained is **1.1–1.8 / 255** against a 5/255 bar —
+the alpha-compositing generalisation holds. Framing tracks the prompt exactly
+(subject area 0.188 / 0.106 / 0.057 for close-up / medium / wide, identical across
+seeds). Note G-Z as implemented tests only that *framing* follows the prompt; it does
+**not** measure whether the expression stays legible at wide, which the showcase
+suggests it does not.
 
 ### G-L — the one that could have sunk the run
 
@@ -91,7 +123,21 @@ ep1→ep4 ≈ 18%, ep4→ep11 ≈ 7%.
 ## 3. Defects in the model as it stands
 
 1. **`surprised` is the weakest expression.** Hardest to distinguish from every other
-   emotion, and visibly weaker on unseen backgrounds (no flippers-to-face gesture).
+   emotion (all three of its pairs are the three hardest, for both characters), and
+   visibly weaker on unseen backgrounds.
+1b. **`angry` is seed-fragile.** G-H found it renders clearly on only 1 of 3 seeds at
+   37 frames — the only failing gate. Reviewing the 4 showcase variants of Pax/angry at
+   **21** frames by eye, 2 of 4 are clear and 2 are weak, so the fragility is not
+   specific to the long length. Sample is Pax only; not quantified across all 32 takes.
+
+> ⚠️ **There is no working automated measure of expression *strength*.** An obvious
+> candidate — face-region SSIM between f0 and the peak frame — was tried and is invalid:
+> it scores `neutral` (0.7575 mean) about the same as `angry` (0.7349), because it
+> captures any change at all (blinks, head turns, body shifts) rather than whether the
+> requested expression formed. Every strength claim in these documents is therefore a
+> visual judgement on a named sample, not a measured rate. Building a real measure —
+> e.g. a classifier over the four expressions — is the single highest-value evaluation
+> improvement available, because separability gates structurally cannot see this.
 2. **Wide framing loses expression legibility.** At 0.55× the face is ~55% linear size
    before the 8× VAE shrinks it again; the showcase's wide clip has barely readable
    brows. The ladder makes *framing* promptable; the *expression* does not survive it.

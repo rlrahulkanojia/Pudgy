@@ -1,6 +1,6 @@
 # v6 findings — multi-expression LoRA on the v2 Wan2.2 goldens
 
-**Status:** trained ✅ · **G-L PASS** · **G-F PASS** (both 1 seed, provisional) · multi-seed running
+**Status:** trained ✅ · **G-L / G-F / G-B / G-Z / G-L-Polly PASS** · **G-H FAIL** (`angry` seed-fragile at f37)
 Detail: [`REPORT_v6.md`](./REPORT_v6.md) · inputs: [`PREFLIGHT_v6.md`](./PREFLIGHT_v6.md)
 
 ## Approach
@@ -89,6 +89,17 @@ a prompt asking for *no* expression:
 pixel while barely moving the centroid — measured 19–72 px on clips visibly performing the
 action correctly. Gating on it produced a false FAIL. Criterion replaced with "not frozen";
 x-range retained as informational.
+
+**8. Coverage gates: 4 pass, 1 fail.** G-F holds at seeds 7/123 (no frozen clips).
+G-B passes comfortably — drift on never-trained grounds is 1.1–1.8/255 against a 5/255
+bar. G-Z: framing tracks the prompt exactly. G-L for Polly: 18/18 distinct, mirroring
+Pax including `surprised|angry` as the worst pair.
+
+**G-H fails, and the cause is not what the gate measures.** `angry` at 37 frames failed
+on 2 of 3 seeds. Visually the expression does not *relax* — on seed 123 it never forms
+at all, and on seed 42 it is still building at the last frame. `angry` is seed-fragile
+at its own native training length. Separability is not quality: G-L rated f37 the most
+separable length while two of three clips there are weak.
 
 ## Not yet answered
 - **Multi-seed** — everything above is seed 42, so **G-L's pass is provisional**. A single
