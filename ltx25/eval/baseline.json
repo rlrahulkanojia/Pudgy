@@ -1,0 +1,96 @@
+{
+ "source": "/Users/rahul/Documents/Projects/Saksham/Pudgy/Data/raw/iteration_4/LSLTTT-Project",
+ "clips": 215,
+ "note": "Thresholds for generated clips must be set RELATIVE to these numbers. The client's own animation contains deliberate frozen holds; scoring generated output against 0% frozen would fail the source itself.",
+ "corpus": {
+  "frozen_pct_median": 37.9,
+  "frozen_pct_p90": 65.0,
+  "centroid_travel_median": 18.59
+ },
+ "per_label": {
+  "ANGRY": {
+   "n": 18,
+   "frozen_pct_median": 46.2,
+   "frozen_pct_max": 56.4,
+   "centroid_travel_median": 22.02,
+   "motion_energy_median": 1.785
+  },
+  "CONFUSED": {
+   "n": 18,
+   "frozen_pct_median": 65.0,
+   "frozen_pct_max": 75.0,
+   "centroid_travel_median": 5.58,
+   "motion_energy_median": 0.831
+  },
+  "CRYING": {
+   "n": 18,
+   "frozen_pct_median": 46.7,
+   "frozen_pct_max": 46.7,
+   "centroid_travel_median": 28.05,
+   "motion_energy_median": 1.865
+  },
+  "HAPPY": {
+   "n": 15,
+   "frozen_pct_median": 40.0,
+   "frozen_pct_max": 65.0,
+   "centroid_travel_median": 9.49,
+   "motion_energy_median": 1.068
+  },
+  "JUMPING": {
+   "n": 18,
+   "frozen_pct_median": 12.5,
+   "frozen_pct_max": 15.6,
+   "centroid_travel_median": 131.8,
+   "motion_energy_median": 4.784
+  },
+  "LAUGHING": {
+   "n": 18,
+   "frozen_pct_median": 28.9,
+   "frozen_pct_max": 36.8,
+   "centroid_travel_median": 19.17,
+   "motion_energy_median": 1.377
+  },
+  "NEUTRAL": {
+   "n": 18,
+   "frozen_pct_median": 96.6,
+   "frozen_pct_max": 100.0,
+   "centroid_travel_median": 4.01,
+   "motion_energy_median": 0.115
+  },
+  "RUNNING": {
+   "n": 18,
+   "frozen_pct_median": 0.0,
+   "frozen_pct_max": 0.0,
+   "centroid_travel_median": 71.57,
+   "motion_energy_median": 7.237
+  },
+  "SITTING": {
+   "n": 18,
+   "frozen_pct_median": 42.5,
+   "frozen_pct_max": 85.2,
+   "centroid_travel_median": 5.43,
+   "motion_energy_median": 0.597
+  },
+  "SURPRISE": {
+   "n": 18,
+   "frozen_pct_median": 37.9,
+   "frozen_pct_max": 41.4,
+   "centroid_travel_median": 62.72,
+   "motion_energy_median": 5.127
+  },
+  "WALKING": {
+   "n": 20,
+   "frozen_pct_median": 0.0,
+   "frozen_pct_max": 6.7,
+   "centroid_travel_median": 8.55,
+   "motion_energy_median": 2.053
+  },
+  "WAVING": {
+   "n": 18,
+   "frozen_pct_median": 24.0,
+   "frozen_pct_max": 28.0,
+   "centroid_travel_median": 13.59,
+   "motion_energy_median": 1.567
+  }
+ }
+}

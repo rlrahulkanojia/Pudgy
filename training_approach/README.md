@@ -22,3 +22,5 @@ The Pudgy Penguins 2D-animation video-model effort, organised by version. v1–v
 - **[docs/](docs/)** — GPU handover notes; **[scripts/vae_roundtrip.py](scripts/vae_roundtrip.py)** — multi-VAE round-trip tool; **[assets/](assets/)** — montages referenced by FINDINGS.
 
 > The `iteration_2_v4` **dataset** (clips, prompts, catalog, `prep_ltx.py`) lives outside this repo under `Data/processed/v4_ltx_249clip/` and is transferred to the GPU box manually — see the v4 GPU handoff doc above.
+
+> **Note:** the current LTX-2.5 work is **not** part of this version line and does not live here. It is a standalone clean-slate experiment in [`../ltx25/`](../ltx25/README.md) — its own docs, prep and evaluation, sharing no code, data or recipe with v1–v7. `alpha v-alpha` above remains as the historical LTX plan that was framed as a port of the v4 track.
