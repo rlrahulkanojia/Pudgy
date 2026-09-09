@@ -112,11 +112,14 @@ TRAINING_APPROACHES = [
             "Known limits: the sweep below is 1 seed — the plan requires ≥3 for a verdict, so "
             "these rank checkpoints rather than select the golden. Motion gates have not run.",
         ],
-        "video_prefix": "v7/sweep",
-        # One group per checkpoint: the sweep's whole point is comparing the SAME label
-        # across training steps, and a flat 70-clip grid loses that axis entirely.
-        "video_groups": ["step00000500", "step00001000", "step00001750",
-                         "step00002500", "step00003500"],
+        # The LATEST checkpoint only. The full 5-checkpoint sweep is diagnostic evidence
+        # and lives in the training container under v7/eval/sweep/; showing every step
+        # here buries the current result under 70 near-identical clips.
+        # NOTE: latest is not the same as golden. Separability is flat across the run
+        # (0.8070 at step 500 -> 0.8030 at step 3,500), so the golden is expected to be
+        # EARLY; whichever checkpoint the 3-seed refinement selects should replace this.
+        "video_prefix": "v7",
+        "video_groups": ["sweep"],
     },
     {
         "id": "v6",

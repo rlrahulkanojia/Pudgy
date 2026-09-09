@@ -55,7 +55,7 @@ BLOB_SOURCES = [
     # evaluation evidence) these ARE the client-visible result so far: the expression
     # run finished but the motion A/B has not, so there is no showcase to show yet.
     # 70 clips = 7 labels x 2 characters x 5 checkpoints, one seed.
-    ("v7", "v7/eval/sweep",                  "v7/sweep"),
+    ("v7", "v7/eval/sweep/step00003500",     "v7/sweep"),
 ]
 
 # Optional local fallbacks — used only if the directory exists.
