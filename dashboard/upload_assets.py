@@ -51,6 +51,11 @@ BLOB_SOURCES = [
     # control are evaluation evidence, not client material; they stay in the
     # training container under v6/inference/ and are cited from the reports.
     ("v6", "v6/inference/showcase",          "v6/showcase"),
+    # v7 — the G-C sweep. Unlike v6 (where the diagnostic matrix was held back as
+    # evaluation evidence) these ARE the client-visible result so far: the expression
+    # run finished but the motion A/B has not, so there is no showcase to show yet.
+    # 70 clips = 7 labels x 2 characters x 5 checkpoints, one seed.
+    ("v7", "v7/eval/sweep",                  "v7/sweep"),
 ]
 
 # Optional local fallbacks — used only if the directory exists.
@@ -103,7 +108,14 @@ def gather_blobs(svc, only=None):
             print(f"  skip (no mp4s at {SOURCE_CONTAINER}/{s_prefix})")
             continue
         for b in blobs:
-            yield b.name, f"{d_prefix}/{os.path.basename(b.name)}", b.size
+            # Keep the path RELATIVE TO THE SOURCE PREFIX, not just the basename.
+            # basename() flattens subdirectories, which is harmless for the v1-v6 sources
+            # (flat folders) but silently collapsed v7's per-checkpoint sweep: 70 clips
+            # across 5 step folders share only 14 distinct filenames, so 56 uploads
+            # overwrote each other and the dashboard saw one checkpoint's worth.
+            rel = b.name[len(s_prefix.rstrip("/")) + 1:] if not s_prefix.lower().endswith(".mp4") \
+                else os.path.basename(b.name)
+            yield b.name, f"{d_prefix}/{rel}", b.size
 
 
 def gather_local(only=None):

@@ -41,6 +41,13 @@ def cached_signed_url(blob_name):
     return azure_utils.signed_url(blob_name)
 
 
+# 60s, not the 300s used for video listings: this is live progress and a five-minute-old
+# step count reads as a stalled run.
+@st.cache_data(ttl=60, show_spinner=False)
+def cached_live_status():
+    return azure_utils.read_json("v7/status.json")
+
+
 def _pretty_name(display_name):
     return display_name.rsplit(".", 1)[0].replace("_", " ")
 
@@ -91,7 +98,52 @@ def render_latest_experiment():
     render_outputs(latest)
 
 
+
+def render_live_training():
+    """Live progress for the in-flight v7 runs, published from the GPU box.
+
+    The box is not reachable from here, so everything comes from v7/status.json, which
+    `finetune/wan/publish_status_v7.py` pushes on a timer. Absent or stale JSON renders
+    as "no data" rather than an error — the dashboard outlives the box.
+    """
+    status = cached_live_status()
+    if not status or not status.get("runs"):
+        return
+    st.subheader("Live training — v7")
+    st.caption(f"Published {status.get('generated_utc', '?')} UTC by the GPU box.")
+
+    for run in status["runs"]:
+        state = run.get("state", "unknown")
+        colour = {"running": "green", "complete": "blue",
+                  "stopped": "red", "not started": "grey"}.get(state, "grey")
+        with st.container(border=True):
+            head, badge = st.columns([4, 1])
+            head.markdown(f"**{run['name']}**")
+            badge.badge(state, color=colour)
+            if state == "not started":
+                st.caption("Queued — has not started on the box yet.")
+                continue
+
+            done, total = run.get("step", 0), run.get("total_steps", 0)
+            a, b, c, d = st.columns(4)
+            a.metric("Step", f"{done:,} / {total:,}")
+            b.metric("Steps remaining", f"{run.get('steps_remaining', 0):,}")
+            c.metric("Elapsed", run.get("elapsed", "—"))
+            d.metric("Time remaining", run.get("eta", "—") if state == "running" else "—")
+            if total:
+                st.progress(min(done / total, 1.0))
+
+            bits = [f"epoch {run['epoch']}" if run.get("epoch") else None,
+                    f"{run['sec_per_step']:.1f} s/step" if run.get("sec_per_step") else None,
+                    f"loss {run['loss']:.5f}" if run.get("loss") is not None else None,
+                    f"{run.get('checkpoints', 0)} checkpoints"]
+            st.caption("  ·  ".join(x for x in bits if x))
+            if run.get("oom"):
+                st.warning("This run hit a CUDA OOM at some point — check the log.", icon="⚠️")
+
+
 def render_overview():
+    render_live_training()
     render_latest_experiment()
 
     st.subheader("Datasets")

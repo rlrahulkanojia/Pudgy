@@ -50,6 +50,13 @@ DOCS = [
     "finetune/wan/prep_v7.py",
     "finetune/wan/train_pudgy_v7.sh",
     "finetune/wan/azure_upload_v7.py",
+    # v7 gate harness — the v6 scripts are NOT drop-in (7 expression / 6 motion labels,
+    # two experts, G-D is new). Both are needed to reproduce the v7 gates.
+    "finetune/wan/prep_eval_keyframes_v7.py",
+    "finetune/wan/eval_v7.sh",
+    "finetune/wan/gates_v7.py",
+    "finetune/wan/sweep_v7.py",
+    "finetune/wan/publish_status_v7.py",
     "finetune/wan/eval_v6.sh",
     "finetune/wan/gates_v6.py",
     "finetune/wan/gate_gl_v6.py",
@@ -94,7 +101,10 @@ def collect(with_states: bool) -> list[tuple[Path, str]]:
         # "*.mp4", so a bare glob yields directories and the upload dies on IsADirectory.
         for f in list(ev.rglob("*.mp4")) + list(ev.rglob("*.png")) + list(ev.rglob("*.json")):
             if f.is_file():
-                items.append((f, f"{PREFIX}/eval/{ev.name}/{f.relative_to(ev)}"))
+                # No `{ev.name}` segment: the dir is already /workspace/eval_v7, so
+                # keying on it produced v7/eval/eval_v7/... — a doubled path that does
+                # not match the layout documented at the top of this file.
+                items.append((f, f"{PREFIX}/eval/{f.relative_to(ev)}"))
 
     for f in sorted(Path("/workspace").glob("train_v7_*.log")):
         items.append((f, f"{PREFIX}/logs/{f.name}"))

@@ -73,3 +73,17 @@ def signed_url(blob_name):
         expiry=expiry,
     )
     return f"https://{_account_name()}.blob.core.windows.net/{CONTAINER}/{blob_name}?{sas}"
+
+
+def read_json(blob_name):
+    """Read a small JSON blob (e.g. the live training status) from the dashboard container.
+
+    Returns None rather than raising: the dashboard must still render when the GPU box
+    has never published a status, or has been destroyed.
+    """
+    import json
+    try:
+        client = _service_client().get_container_client(CONTAINER).get_blob_client(blob_name)
+        return json.loads(client.download_blob().readall())
+    except Exception:
+        return None

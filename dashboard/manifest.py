@@ -84,6 +84,41 @@ DATASETS = [
 
 TRAINING_APPROACHES = [
     {
+        "id": "v7",
+        "name": "Motion + Expressions Wan 2.2",
+        "base_model": "Wan2.2-I2V-A14B (continue-trained from the v2 goldens)",
+        "status": "Expression trained · G-C 41/42 · motion A/B in progress",
+        "status_color": "orange",
+        "thesis": "Widen v6 from four expressions to seven, add six motion primitives, and "
+                  "train each on its own expert: expression continues the low-noise golden, "
+                  "motion is an A/B across both experts decided by gate G-X. Every label is "
+                  "also emitted at a common short length, so clip length cannot become a "
+                  "shortcut for the label.",
+        "summary": [
+            "**Expression is promptable across all 7 labels.** 41 of 42 label pairs separate "
+            "at every checkpoint, from one start frame with only the caption changing — the "
+            "contrastive fix from v6 holds at nearly double the label count.",
+            "**One measured failure: `confused` vs `neutral` for Polly** (face-SSIM ~0.95 "
+            "against a 0.92 bar), consistent across the whole run. `confused` is the thinnest "
+            "class in the set (64 clips against 216 for the mature labels, and 7 source angles "
+            "where others have 9) and is also the subtlest expression, so this reads as a data "
+            "gap rather than a training failure.",
+            "**More training does not help.** Mean separability is flat across 3,000 steps "
+            "(0.8070 at step 500 → 0.8030 at step 3,500), matching v5's finding that "
+            "responsiveness plateaus early. The golden is early, not late.",
+            "**Motion is a live A/B.** Both experts are being trained on the same 1,072-clip "
+            "motion set; gate G-X decides which one carries motion. Until it resolves, the "
+            "untouched v2 golden remains the frozen partner so any regression stays bisectable.",
+            "Known limits: the sweep below is 1 seed — the plan requires ≥3 for a verdict, so "
+            "these rank checkpoints rather than select the golden. Motion gates have not run.",
+        ],
+        "video_prefix": "v7/sweep",
+        # One group per checkpoint: the sweep's whole point is comparing the SAME label
+        # across training steps, and a flat 70-clip grid loses that axis entirely.
+        "video_groups": ["step00000500", "step00001000", "step00001750",
+                         "step00002500", "step00003500"],
+    },
+    {
         "id": "v6",
         "name": "Expressions Wan 2.2",
         "base_model": "Wan2.2-I2V-A14B (continue-trained from Wan2.2's golden checkpoints)",
