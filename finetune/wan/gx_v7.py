@@ -8,8 +8,18 @@ is a different proposition — so this has never been tested and is a measuremen
 assumption.
 
 Pass = the arm whose action outputs stay distinguishable (pairwise SSIM < 0.95 across
-all pairs) AND which retains prompt response (subject x-range > 200 px). v5 calibration:
-0.9692 = prompt ignored, 0.9340 = prompt works, 0.8 px = motion collapse.
+all pairs) AND which actually animates. v5 calibration: 0.9692 = prompt ignored,
+0.9340 = prompt works.
+
+⚠️ "Animates" is NOT subject x-range here. v5's 200 px bar comes from G-M, which asks a
+character to TURN ITS HEAD from a novel frame — the subject's centre of mass sweeps
+horizontally. Every v7 motion label is deliberately in place ("walking IN PLACE with a
+steady waddling gait", "hopping straight UP"), so the centre of mass barely moves even
+when the animation is perfect. Scoring translation here reported 5-16 px against a 200 px
+bar and failed both arms on clips that visibly animate. The right question for an in-place
+action is whether the frame CHANGES, so this measures mean frame-to-frame MAE against a
+generated static reference (a neutral-expression clip, where the character is deliberately
+still): ~0.005. An animating clip runs 3-6x that.
 
     python gx_v7.py --seeds 42 43 44
 """
@@ -22,6 +32,12 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import gates_v7 as g
 import sweep_v7 as sw
 
+# Mean frame-to-frame MAE of a GENERATED static clip (neutral expression, character
+# deliberately still). Measured, not assumed: 0.0049 across Pax and Polly at step 3500.
+# Generated-vs-generated is the only fair baseline — the source-footage figures in
+# prep_v7 are real renders at a different length and are not comparable.
+STATIC_MAE = 0.0049
+
 ARMS = {
     "M-high": ("high", Path("/workspace/wan_output/pudgy-v7-motion-highnoise/pudgy-v7-motion-highnoise.safetensors")),
     "M-low":  ("low",  Path("/workspace/wan_output/pudgy-v7-motion-lownoise/pudgy-v7-motion-lownoise.safetensors")),
@@ -33,6 +49,8 @@ def main():
     ap.add_argument("--seeds", type=int, nargs="+", default=[42, 43, 44])
     ap.add_argument("--labels", nargs="*")
     ap.add_argument("--outroot", default="/workspace/eval_v7/gx")
+    ap.add_argument("--rescore", action="store_true",
+                    help="score clips already on disk; generate nothing")
     a = ap.parse_args()
     # standing_idle is excluded: it is the counter-class (the character should NOT move),
     # so including it in a "do the actions differ" matrix would reward the wrong thing.
@@ -46,10 +64,18 @@ def main():
         out.mkdir(parents=True, exist_ok=True)
         pf = out / "prompts.txt"
         index = sw.build_prompt_file(labels, a.seeds, "motion", pf)
-        print(f"== {arm} ({side}-noise): {len(index)} generations, 1 model load", flush=True)
-        clips = sw.generate_batch(ckpt, pf, out, side=side)
-        if len(clips) == len(index):
-            clips = sw.rename_clips(clips, index)
+        if a.rescore:
+            clips = [out / f"{i['character'].lower()}_{i['label']}_s{i['seed']}.mp4"
+                     for i in index]
+            missing = [c for c in clips if not c.exists()]
+            if missing:
+                sys.exit(f"--rescore: {len(missing)} clips missing, e.g. {missing[0]}")
+            print(f"== {arm} ({side}-noise): rescoring {len(clips)} existing clips", flush=True)
+        else:
+            print(f"== {arm} ({side}-noise): {len(index)} generations, 1 model load", flush=True)
+            clips = sw.generate_batch(ckpt, pf, out, side=side)
+            if len(clips) == len(index):
+                clips = sw.rename_clips(clips, index)
         by = {(i["character"], i["label"], i["seed"]): c for i, c in zip(index, clips)}
 
         rows, xr = [], []
@@ -63,22 +89,24 @@ def main():
                     rows.append({"character": char, "seed": seed, "pair": f"{x}|{y}",
                                  "ssim": round(s, 4), "distinct": s < g.WHOLE_DISTINCT})
         for k, p in by.items():
-            xr.append(g.subject_stats_flat(g.read_video(p), g.bg_rgb("white"))["x_range_px"])
+            v = g.read_video(p)
+            f = v.astype(np.float32) / 255.0
+            xr.append(float(np.mean(np.abs(f[1:] - f[:-1]))))
         verdict[arm] = {
             "expert": side, "checkpoint": ckpt.name, "n_clips": len(clips),
             "rows": rows,
             "all_distinct": bool(rows) and all(r["distinct"] for r in rows),
             "worst_ssim": round(max(r["ssim"] for r in rows), 4) if rows else None,
             "mean_ssim": round(float(np.mean([r["ssim"] for r in rows])), 4) if rows else None,
-            "mean_x_range_px": round(float(np.mean(xr)), 1) if xr else 0.0,
-            "retains_motion": bool(xr) and float(np.mean(xr)) > g.XRANGE_NOVEL,
+            "mean_frame_mae": round(float(np.mean(xr)), 4) if xr else 0.0,
+            "animates": bool(xr) and float(np.mean(xr)) > STATIC_MAE * 2.0,
         }
         v = verdict[arm]
         print(f"   mean_ssim={v['mean_ssim']} worst={v['worst_ssim']} "
-              f"x_range={v['mean_x_range_px']}px distinct={v['all_distinct']} "
-              f"motion={v['retains_motion']}", flush=True)
+              f"frame_mae={v['mean_frame_mae']} ({v['mean_frame_mae']/STATIC_MAE:.1f}x static) "
+              f"distinct={v['all_distinct']} animates={v['animates']}", flush=True)
 
-    winners = [k for k, v in verdict.items() if v["all_distinct"] and v["retains_motion"]]
+    winners = [k for k, v in verdict.items() if v["all_distinct"] and v["animates"]]
     decision = (winners[0] if len(winners) == 1 else
                 min(winners, key=lambda k: verdict[k]["worst_ssim"]) if winners else None)
     res = {"gate": "G-X", "arms": verdict, "winners": winners, "decision": decision,
@@ -89,7 +117,7 @@ def main():
     print("\n== G-X ==")
     for k, v in verdict.items():
         print(f"  {k:7s} ssim(mean/worst)={v['mean_ssim']}/{v['worst_ssim']}  "
-              f"x_range={v['mean_x_range_px']}px  distinct={v['all_distinct']}  motion={v['retains_motion']}")
+              f"frame_mae={v['mean_frame_mae']}  distinct={v['all_distinct']}  animates={v['animates']}")
     print(f"  -> decision: {decision or 'NO ARM PASSES'}")
 
 

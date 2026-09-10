@@ -56,6 +56,9 @@ BLOB_SOURCES = [
     # run finished but the motion A/B has not, so there is no showcase to show yet.
     # 70 clips = 7 labels x 2 characters x 5 checkpoints, one seed.
     ("v7", "v7/eval/sweep/step00003500",     "v7/sweep"),
+    # v7 movement — the arm that WON gate G-X (low-noise), one seed. The losing arm and
+    # the other two seeds are evaluation evidence and stay in the training container.
+    ("v7", "v7/eval/motion_showcase",        "v7/motion"),
 ]
 
 # Optional local fallbacks — used only if the directory exists.

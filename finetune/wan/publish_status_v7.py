@@ -81,8 +81,11 @@ STAGES = {
                  "set of expressions from several snapshots to find which one takes "
                  "direction best — more training is not automatically better.",
         "decides": "Which saved snapshot becomes the delivered model.",
-        "root": "/workspace/eval_v7/sweep",
-        "log": "/workspace/sweep_coarse.log",
+        # A sweep runs over expression OR motion, in its own outroot with its own log.
+        # Globs, not fixed paths: hardcoding the expression pair made a running motion
+        # sweep report as "idle".
+        "root": "/workspace/eval_v7/sweep*",
+        "log": "/workspace/sweep_*.log",
     },
     "gates": {
         "name": "Checking the model behaves",
@@ -112,15 +115,23 @@ def active_stage():
     if key is None:
         return None
     meta = STAGES[key]
-    root = Path(meta["root"])
+    roots = sorted(Path("/workspace/eval_v7").glob(Path(meta["root"]).name)) \
+        if "*" in meta["root"] else [Path(meta["root"])]
+    # newest first: a sweep started later is the one running now
+    roots = sorted(roots, key=lambda r: r.stat().st_mtime if r.exists() else 0, reverse=True)
+    roots = roots[:1] or roots
     total = done = 0
-    for pf in root.glob("*/prompts.txt"):
-        total += len([l for l in pf.read_text().splitlines() if l.strip()])
+    for root in roots:
+        for pf in root.glob("*/prompts.txt"):
+            total += len([l for l in pf.read_text().splitlines() if l.strip()])
     # Count generations from the trainer log, NOT written mp4s. musubi's --from_file
     # mode holds every latent in memory and decodes the whole batch only after the last
     # generation, so the output directory stays empty for hours and then fills at once —
     # a file-count progress bar would sit at 0% and jump straight to 100%.
-    lg = Path(meta["log"])
+    logs = sorted(Path("/workspace").glob(Path(meta["log"]).name),
+                  key=lambda f: f.stat().st_mtime, reverse=True) \
+        if "*" in meta["log"] else [Path(meta["log"])]
+    lg = logs[0] if logs else Path(meta["log"])
     if lg.exists():
         txt = lg.read_text(errors="ignore").replace("\r", "\n")
         hits = re.findall(r"Processing prompt (\d+)/(\d+)", txt)

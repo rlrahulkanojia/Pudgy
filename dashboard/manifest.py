@@ -87,7 +87,7 @@ TRAINING_APPROACHES = [
         "id": "v7",
         "name": "Motion + Expressions Wan 2.2",
         "base_model": "Wan2.2-I2V-A14B (continue-trained from the v2 goldens)",
-        "status": "All 3 runs trained · G-C 41/42 · choosing the movement model",
+        "status": "Trained · expressions 41/42 · movement model chosen (G-X)",
         "status_color": "orange",
         "thesis": "Widen v6 from four expressions to seven, add six motion primitives, and "
                   "train each on its own expert: expression continues the low-noise golden, "
@@ -106,12 +106,20 @@ TRAINING_APPROACHES = [
             "**More training does not help.** Mean separability is flat across 3,000 steps "
             "(0.8070 at step 500 → 0.8030 at step 3,500), matching v5's finding that "
             "responsiveness plateaus early. The golden is early, not late.",
-            "**Both movement models are trained; we are picking one.** The same 1,072-clip "
-            "movement set was trained into each half of the model separately. Gate G-X is "
-            "generating the same actions from both to see which takes direction better — "
-            "the winner is finished and delivered, the other is kept for the record. Until "
-            "it resolves, the untouched v2 golden stays the frozen partner so any "
-            "regression remains attributable.",
+            "**Movement works, and we picked where it lives.** The same 1,072-clip movement "
+            "set was trained into each half of the model separately and gate G-X generated "
+            "the same five actions from both. The fine-detail half won: its actions stay "
+            "distinguishable (0.944 against a 0.95 bar) and it animates ~50% more than the "
+            "alternative, which blurred actions together (0.962, close to ignoring the "
+            "prompt entirely).",
+            "**That is the safer outcome.** Because the broad-motion half was left "
+            "untouched, it still acts as a fixed reference: if something regresses later we "
+            "can swap one piece back and prove which half caused it. Had the other arm won, "
+            "both halves would have changed and that ability would be gone.",
+            "Known limits on movement: the actions animate but subtly — these are 0.5-second "
+            "test clips at the shortest trained length, and `sitting` is a seated idle by "
+            "design so it barely moves. Longer, stronger samples come after the winning "
+            "model finishes training.",
             "Known limits: the sweep below is 1 seed — the plan requires ≥3 for a verdict, so "
             "these rank checkpoints rather than select the golden. Motion gates have not run.",
         ],
@@ -122,7 +130,7 @@ TRAINING_APPROACHES = [
         # (0.8070 at step 500 -> 0.8030 at step 3,500), so the golden is expected to be
         # EARLY; whichever checkpoint the 3-seed refinement selects should replace this.
         "video_prefix": "v7",
-        "video_groups": ["sweep"],
+        "video_groups": ["sweep", "motion"],
     },
     {
         "id": "v6",
