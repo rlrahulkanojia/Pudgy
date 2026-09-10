@@ -20,6 +20,40 @@ entry is the latest experiment — the one the main page highlights.
 
 DATASETS = [
     {
+        "name": "Motion + expression primitives (v7)",
+        "used_by": ["v7"],
+        # 140 NEW clips from the iteration_4 delivery. The other 68 sources are the
+        # iteration_3 expression clips already counted under v5 (7) and v6 (61) — counting
+        # them again would inflate the client-delivered total.
+        "clip_count": 140,
+        "training_clips": 2272,    # 208 sources x 4 grounds x shot ladder x duration ladder
+        "resolution": "1080×1080 source → 1024×1024 trained",
+        "fps": "24",
+        "frames": "13 / 17 / 21 / 25 / 29 / 33 / 37 / 57 (4N+1)",
+        "duration": "0.54s – 2.4s",
+        "notes": "208 source clips across 13 labels — 7 expressions (happy, surprised, angry, "
+                 "confused, crying, neutral, laughing) and 6 movements (walking, running, "
+                 "waving, sitting, jumping, standing idle) — for 2 characters at 9 camera "
+                 "angles. Each is alpha-composited onto 4 flat grounds and rendered across a "
+                 "close-up/medium/wide shot ladder AND a duration ladder, giving 2,272 "
+                 "training clips: 8× the v6 set. Character balance is near-even (111 Pax / "
+                 "115 Polly). "
+                 "The duration ladder is the substantive change: every label is also emitted "
+                 "at a common short length (13 frames for movement, 21 for expression), so "
+                 "clip length cannot act as a shortcut for the label — in v6 each emotion "
+                 "shipped at exactly one length, which made length a perfect predictor. "
+                 "1,368 of the 2,272 clips (60%) are head-truncations of longer footage and "
+                 "are captioned 'opening frames only', so the caption matches what is on "
+                 "screen rather than the full arc. Nothing is loop-tiled or time-stretched: "
+                 "the longest clip for every label is exactly what the client shot. "
+                 "Known gaps: 'standing idle' was never delivered and is DERIVED from the "
+                 "neutral footage, where the body is frozen — so it teaches 'stop' as "
+                 "'freeze'. Three clips were dropped as unrecoverably damaged, leaving "
+                 "'happy' at 14 sources and 'confused' and 'walking' at 16, against 18 for "
+                 "every other label; 'confused' is also the one label that failed the "
+                 "expression distinctness gate, for Polly.",
+    },
+    {
         "name": "Original 75-clip set",
         "used_by": ["v1", "v2"],
         "clip_count": 75,          # as delivered by the client
