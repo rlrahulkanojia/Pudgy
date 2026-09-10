@@ -59,6 +59,69 @@ def running(outdir_name):
         return False
 
 
+
+# What each post-training stage is FOR, in plain language. The dashboard is read by
+# people who will not know what a "gate" is, so each entry says what question the stage
+# answers and what happens next — not what it technically measures.
+STAGES = {
+    "gx": {
+        "name": "Choosing where movement lives",
+        "focus": "The model has two halves — one handles broad motion, the other fine "
+                 "detail. We trained the movement skills into each half separately and "
+                 "are now generating the same actions from both to see which version "
+                 "takes direction better. The winner becomes the movement model; the "
+                 "other is kept for the record.",
+        "decides": "Which of the two movement models we keep and finish training.",
+        "root": "/workspace/eval_v7/gx",
+    },
+    "sweep": {
+        "name": "Finding the best checkpoint",
+        "focus": "Training saves a snapshot every 250 steps. This re-generates the same "
+                 "set of expressions from several snapshots to find which one takes "
+                 "direction best — more training is not automatically better.",
+        "decides": "Which saved snapshot becomes the delivered model.",
+        "root": "/workspace/eval_v7/sweep",
+    },
+    "gates": {
+        "name": "Checking the model behaves",
+        "focus": "Generating test clips to confirm each expression and movement responds "
+                 "to the prompt, holds up at different clip lengths and shot sizes, and "
+                 "has not damaged anything the previous model could already do.",
+        "decides": "Whether the model is ready to hand over.",
+        "root": "/workspace/eval_v7",
+    },
+}
+
+
+def active_stage():
+    """Which post-training stage is running, and how far along.
+
+    Progress is counted from the batch prompt file (one line = one clip to generate)
+    against the clips actually written, so it stays honest if a batch is restarted.
+    """
+    try:
+        ps = subprocess.run(["ps", "-eo", "cmd"], capture_output=True, text=True).stdout
+    except Exception:
+        ps = ""
+    key = ("gx" if "gx_v7.py" in ps else
+           "sweep" if "sweep_v7.py" in ps else
+           "gates" if "gates_v7.py" in ps else None)
+    if key is None:
+        return None
+    meta = STAGES[key]
+    root = Path(meta["root"])
+    total = done = 0
+    for pf in root.glob("*/prompts.txt"):
+        total += len([l for l in pf.read_text().splitlines() if l.strip()])
+        done += len(list(pf.parent.glob("*.mp4")))
+    out = {"key": key, "name": meta["name"], "focus": meta["focus"],
+           "decides": meta["decides"], "state": "running"}
+    if total:
+        out.update({"done": done, "total": total,
+                    "percent": int(100 * done / total)})
+    return out
+
+
 def main():
     runs = []
     for label, log, outdir in RUNS:
@@ -78,6 +141,7 @@ def main():
         runs.append(st)
 
     doc = {"generated_utc": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
+           "stage": active_stage(),
            "runs": runs}
     cs = os.environ.get("AZURE_STORAGE_CONNECTION_STRING")
     if not cs:

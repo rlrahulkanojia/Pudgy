@@ -112,6 +112,25 @@ def render_live_training():
     st.subheader("Live training — v7")
     st.caption(f"Published {status.get('generated_utc', '?')} UTC by the GPU box.")
 
+    # What is happening RIGHT NOW. Training finishing is not the end of the work, and
+    # without this the panel reads "all complete" while hours of evaluation are still
+    # running — the single most misleading state this dashboard can show.
+    stage = status.get("stage")
+    if stage:
+        with st.container(border=True):
+            head, badge = st.columns([4, 1])
+            head.markdown(f"#### Now running — {stage['name']}")
+            badge.badge(stage.get("state", "running"), color="orange")
+            st.markdown(stage["focus"])
+            if stage.get("decides"):
+                st.markdown(f"**What it decides:** {stage['decides']}")
+            if stage.get("total"):
+                st.progress(min(stage.get("done", 0) / stage["total"], 1.0))
+                st.caption(f"{stage.get('done', 0)} of {stage['total']} test clips "
+                           f"generated in the current batch.")
+    else:
+        st.info("No evaluation running — the box is idle between stages.", icon="⏸️")
+
     for run in status["runs"]:
         state = run.get("state", "unknown")
         colour = {"running": "green", "complete": "blue",

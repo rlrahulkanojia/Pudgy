@@ -87,7 +87,7 @@ TRAINING_APPROACHES = [
         "id": "v7",
         "name": "Motion + Expressions Wan 2.2",
         "base_model": "Wan2.2-I2V-A14B (continue-trained from the v2 goldens)",
-        "status": "Expression trained · G-C 41/42 · motion A/B in progress",
+        "status": "All 3 runs trained · G-C 41/42 · choosing the movement model",
         "status_color": "orange",
         "thesis": "Widen v6 from four expressions to seven, add six motion primitives, and "
                   "train each on its own expert: expression continues the low-noise golden, "
@@ -106,9 +106,12 @@ TRAINING_APPROACHES = [
             "**More training does not help.** Mean separability is flat across 3,000 steps "
             "(0.8070 at step 500 → 0.8030 at step 3,500), matching v5's finding that "
             "responsiveness plateaus early. The golden is early, not late.",
-            "**Motion is a live A/B.** Both experts are being trained on the same 1,072-clip "
-            "motion set; gate G-X decides which one carries motion. Until it resolves, the "
-            "untouched v2 golden remains the frozen partner so any regression stays bisectable.",
+            "**Both movement models are trained; we are picking one.** The same 1,072-clip "
+            "movement set was trained into each half of the model separately. Gate G-X is "
+            "generating the same actions from both to see which takes direction better — "
+            "the winner is finished and delivered, the other is kept for the record. Until "
+            "it resolves, the untouched v2 golden stays the frozen partner so any "
+            "regression remains attributable.",
             "Known limits: the sweep below is 1 seed — the plan requires ≥3 for a verdict, so "
             "these rank checkpoints rather than select the golden. Motion gates have not run.",
         ],

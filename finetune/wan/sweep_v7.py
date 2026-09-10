@@ -44,7 +44,7 @@ def build_prompt_file(labels, seeds, kind, dest):
     return index
 
 
-def generate_batch(ckpt, prompt_file, outdir):
+def generate_batch(ckpt, prompt_file, outdir, side="low"):
     outdir.mkdir(parents=True, exist_ok=True)
     cmd = [PY, str(REPO / "src/musubi_tuner/wan_generate_video.py"),
            "--task", "i2v-A14B",
@@ -53,10 +53,13 @@ def generate_batch(ckpt, prompt_file, outdir):
            "--timestep_boundary", "0.9",
            "--vae", str(M / "comfy21/split_files/vae/wan_2.1_vae.safetensors"),
            "--t5", str(M / "t5/models_t5_umt5-xxl-enc-bf16.pth"),
-           # expression checkpoint on low-noise; high-noise stays the UNTOUCHED v2 golden
-           # so any regression remains bisectable (plan section 4).
-           "--lora_weight", str(ckpt), "--lora_multiplier", "1.0",
-           "--lora_weight_high_noise", str(GOLD / "lora_highnoise_GOLDEN_ep40.safetensors"),
+           # The expert under test carries the checkpoint; its PARTNER stays the
+           # untouched v2 golden, so any regression remains bisectable (plan section 4).
+           "--lora_weight",
+           str(ckpt if side == "low" else GOLD / "lora_lownoise_GOLDEN_ep40.safetensors"),
+           "--lora_multiplier", "1.0",
+           "--lora_weight_high_noise",
+           str(ckpt if side == "high" else GOLD / "lora_highnoise_GOLDEN_ep40.safetensors"),
            "--lora_multiplier_high_noise", "1.0",
            "--video_size", "1024", "1024", "--fps", "24",
            "--infer_steps", "25", "--flow_shift", "5.0", "--guidance_scale", "5.0",
@@ -110,6 +113,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--ckpt"); ap.add_argument("--sweep", nargs="*", type=int)
     ap.add_argument("--kind", default="expression")
+    ap.add_argument("--side", default="low", choices=("low", "high"),
+                    help="which expert carries the checkpoint under test")
     ap.add_argument("--seeds", type=int, nargs="+", default=[42])
     ap.add_argument("--labels", nargs="*")
     ap.add_argument("--outroot", default="/workspace/eval_v7/sweep")
@@ -133,7 +138,7 @@ def main():
         out.mkdir(parents=True, exist_ok=True)
         index = build_prompt_file(labels, a.seeds, a.kind, pf)
         print(f"== {tag}: {len(index)} generations, 1 model load", flush=True)
-        clips = generate_batch(ck, pf, out)
+        clips = generate_batch(ck, pf, out, side=a.side)
         if len(clips) == len(index):
             clips = rename_clips(clips, index)
         if len(clips) != len(index):
