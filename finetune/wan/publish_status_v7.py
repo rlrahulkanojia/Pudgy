@@ -73,6 +73,7 @@ STAGES = {
                  "other is kept for the record.",
         "decides": "Which of the two movement models we keep and finish training.",
         "root": "/workspace/eval_v7/gx",
+        "log": "/workspace/gx_v7.log",
     },
     "sweep": {
         "name": "Finding the best checkpoint",
@@ -81,6 +82,7 @@ STAGES = {
                  "direction best — more training is not automatically better.",
         "decides": "Which saved snapshot becomes the delivered model.",
         "root": "/workspace/eval_v7/sweep",
+        "log": "/workspace/sweep_coarse.log",
     },
     "gates": {
         "name": "Checking the model behaves",
@@ -89,6 +91,7 @@ STAGES = {
                  "has not damaged anything the previous model could already do.",
         "decides": "Whether the model is ready to hand over.",
         "root": "/workspace/eval_v7",
+        "log": "/workspace/gates_v7.log",
     },
 }
 
@@ -113,7 +116,16 @@ def active_stage():
     total = done = 0
     for pf in root.glob("*/prompts.txt"):
         total += len([l for l in pf.read_text().splitlines() if l.strip()])
-        done += len(list(pf.parent.glob("*.mp4")))
+    # Count generations from the trainer log, NOT written mp4s. musubi's --from_file
+    # mode holds every latent in memory and decodes the whole batch only after the last
+    # generation, so the output directory stays empty for hours and then fills at once —
+    # a file-count progress bar would sit at 0% and jump straight to 100%.
+    lg = Path(meta["log"])
+    if lg.exists():
+        txt = lg.read_text(errors="ignore").replace("\r", "\n")
+        hits = re.findall(r"Processing prompt (\d+)/(\d+)", txt)
+        if hits:
+            done = int(hits[-1][0])
     out = {"key": key, "name": meta["name"], "focus": meta["focus"],
            "decides": meta["decides"], "state": "running"}
     if total:
