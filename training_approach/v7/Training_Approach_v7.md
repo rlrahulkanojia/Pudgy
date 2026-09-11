@@ -352,6 +352,33 @@ per label so duration control could not be asked. Budget roughly a day.
 the training distribution by construction — preserve that by importing from `prep_v7.py`
 rather than retyping strings.
 
+> ## ⚠️ RUN OUTCOME (2026-09-11) — read before using this section
+>
+> The run is complete and the GPU has been released. **Gate coverage is partial.**
+>
+> | Ran | Outcome |
+> |---|---|
+> | **G-X** | **PASS — motion goes on the LOW-noise expert.** M-high blurs actions (0.9618); M-low separates (0.9444) and animates ~50% more. The high-noise golden stays frozen, so **G-S is unnecessary**. |
+> | **G-C** | expression 125/126 pairs distinct (3 seeds); motion all pairs distinct at every checkpoint |
+> | **G-P** | PASS — 1.7% character gap against a 10% bar |
+> | **G-D** | partial — a 4-action probe only; the full ladder matrix did not run |
+>
+> **Not run:** G-F, G-L, G-B, G-M, G-N, G-H, G-Z — all implemented and dry-run verified,
+> needing only GPU. **G-R is blocked:** v2's 10 showcase prompt strings exist nowhere in
+> this repo or the Azure container. **G-A is not applicable** — §9's pose holdout was never
+> taken (QF2_R is in the training set).
+>
+> Two plan assumptions did not survive contact:
+> * **§5's `blocks_to_swap: 0` OOMs on expression** — the 57-frame bucket is 2.7× the
+>   sequence length v5 calibrated on. Expression needs **16**; motion runs fine at 0.
+>   `docs/training_reports/v6/PREFLIGHT_v6.md` §7.1 had already found this and used 32.
+> * **§5.2's expectation that the golden is EARLY is not reproduced.** Separability is
+>   flat (spread 0.0040 expression / 0.0035 motion) and very weakly favours *later*;
+>   step 2500 beats step 500. The 3,500-step ceiling run was therefore not run.
+>
+> Full register: [`GATES_v7.md`](../../docs/training_reports/v7/GATES_v7.md) ·
+> Results and defects: [`REPORT_v7.md`](../../docs/training_reports/v7/REPORT_v7.md)
+
 Execution steps, credentials, hardware and report-back checklist:
 **[`GPU_HANDOFF_v7.md`](GPU_HANDOFF_v7.md)**.
 

@@ -43,3 +43,6 @@ downloaded_ckpt/
 
 # ---- Secrets ----
 .env
+
+# ---- Raw client footage staged locally (1 GB+); never commit ----
+Data/

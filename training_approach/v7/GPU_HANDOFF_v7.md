@@ -11,6 +11,31 @@ evidence behind each decision, and the gates. This document is only the executab
 
 ---
 
+> ## ⚠️ CORRECTIONS FROM THE 2026-09 RUN — apply these or the steps below fail
+>
+> 1. **§3 leaves the goldens where the trainer cannot find them.** `download-batch`
+>    preserves the blob path, so they arrive at `v2_golden/v2/weights/curated/` — but
+>    `train_pudgy_v7.sh` reads `$GOLDEN/` **flat**. Move them up, or the run dies with
+>    `FileNotFoundError` two minutes in, *after* loading a 28.6 GB DiT.
+> 2. **§3's `download-batch` needs the destination to already exist.** `mkdir -p` first,
+>    or it fails with "destination must be an existing directory" while the *other*
+>    download in the same block succeeds — easy to miss.
+> 3. **§5's `--vae` / `--t5` paths are placeholders.** Real paths on a box built by
+>    `setup_wan_env.sh`: `wan_models/comfy21/split_files/vae/wan_2.1_vae.safetensors` and
+>    `wan_models/t5/models_t5_umt5-xxl-enc-bf16.pth`.
+> 4. **§6's `BLOCKS_TO_SWAP=0` OOMs on the expression run** (f57 bucket). Use **16** for
+>    expression; **0** is correct for motion (longest bucket f33) and worth ~10 h across
+>    the two arms. Probe it — force the largest bucket rather than waiting for the shuffle.
+> 5. **§6's ~500-step gate cannot run concurrently on a single 80 GB card.** Training
+>    holds ~67 GB and gate inference needs ~60 GB more. Either use two cards as §0
+>    prefers, or stop / gate / resume from the saved state.
+> 6. **§7's gate scripts now exist for v7** — `gates_v7.py` (all 12), `eval_v7.sh`,
+>    `sweep_v7.py`, `gx_v7.py`, `prep_eval_keyframes_v7.py`. They batch by default: one
+>    model load per LoRA configuration, not one per clip (~33 h saved across a full table).
+>
+> Outcome of the run this document was written for:
+> [`REPORT_v7.md`](../../docs/training_reports/v7/REPORT_v7.md)
+
 ## 0. Hardware and prerequisites
 
 | | |
