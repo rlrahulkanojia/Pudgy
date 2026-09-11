@@ -49,6 +49,10 @@ from gates_v6 import (  # noqa: E402  — calibrated metrics, label-set independ
     subject_stats_flat, adjacent_ssim, gray as gray_,
 )
 
+# Generation mode for generate(): "direct" | "collect" | "replay". See generate().
+_MODE = "direct"
+_REQUESTS = []
+
 HERE = Path(__file__).resolve().parent
 KF = Path("/workspace/eval_v7/keyframes")
 OUT = Path("/workspace/eval_v7")
@@ -122,7 +126,31 @@ def ladder_for(kind, label):
 # ------------------------------------------------------------------- generation -----
 def generate(tag, prompt, start, frames, seed, outdir, side="low", ckpt=None,
              low=None, high=None, blkswap=0, dry=False):
+    """Produce one clip, or record the request for a batch.
+
+    Three modes, held in _MODE:
+
+      "direct"  — shell out to eval_v7.sh. One full two-expert model load PER CLIP
+                  (~4 min on an A100). Correct but slow; kept as the fallback.
+      "collect" — record the request and return where the clip WILL be. Used to walk a
+                  gate's whole matrix without generating anything.
+      "replay"  — return where the clip now IS, after the batch has run.
+
+    The two-pass trick works because every gate enumerates its full matrix before it
+    scores anything (that is what --dry already relies on), so the same code path can be
+    walked once to collect and once to score. Batching matters: the remaining v7 gates
+    are ~300 generations, which is ~20 h of pure model loading if each one reloads.
+    """
     dest = Path(outdir) / f"{tag}.mp4"
+    if _MODE == "collect":
+        _REQUESTS.append({"tag": tag, "prompt": prompt, "start": str(start),
+                          "frames": frames, "seed": seed, "outdir": str(outdir),
+                          "side": side, "ckpt": str(ckpt) if ckpt else None,
+                          "low": str(low) if low else None,
+                          "high": str(high) if high else None})
+        return dest
+    if _MODE == "replay":
+        return dest
     if dest.exists():
         return dest
     if dry:
@@ -144,6 +172,59 @@ def generate(tag, prompt, start, frames, seed, outdir, side="low", ckpt=None,
         print(r.stdout[-2500:]); print(r.stderr[-2500:])
         sys.exit(f"generation failed for {tag}")
     return dest
+
+
+def run_batched(gate_fn, a):
+    """Collect a gate's whole matrix, generate it in as few model loads as possible,
+    then score. One load per distinct LoRA configuration, not one per clip."""
+    global _MODE
+    _REQUESTS.clear()
+    _MODE = "collect"
+    try:
+        saved, a.dry = a.dry, True
+        gate_fn(a)                      # walks the matrix, generates nothing
+    finally:
+        a.dry = saved
+        _MODE = "direct"
+    reqs = list(_REQUESTS)
+    if not reqs:
+        return gate_fn(a)
+
+    # Group by LoRA config: clips sharing one config share one model load.
+    groups = {}
+    for r in reqs:
+        groups.setdefault((r["side"], r["ckpt"], r["low"], r["high"]), []).append(r)
+    todo = sum(1 for r in reqs if not Path(r["outdir"], f"{r['tag']}.mp4").exists())
+    print(f"   batched: {len(reqs)} clips ({todo} to generate) in {len(groups)} model load(s)",
+          flush=True)
+
+    import sweep_v7 as sw
+    for (side, ckpt, low, high), items in groups.items():
+        pending = [r for r in items
+                   if not Path(r["outdir"], f"{r['tag']}.mp4").exists()]
+        if not pending:
+            continue
+        out = Path(pending[0]["outdir"]); out.mkdir(parents=True, exist_ok=True)
+        pf = out / f"_batch_{abs(hash((side, ckpt, low, high))) % 10**8}.txt"
+        pf.write_text("\n".join(
+            f"{r['prompt']} --i {r['start']} --f {r['frames']} --d {r['seed']}"
+            for r in pending) + "\n")
+        weights = Path(ckpt) if ckpt else (Path(low) if side == "low" else Path(high))
+        produced = sw.generate_batch(weights, pf, out, side=side)
+        # musubi names by timestamp; mtime order == prompt-file order.
+        if len(produced) < len(pending):
+            sys.exit(f"batch produced {len(produced)} clips for {len(pending)} prompts")
+        for src, r in zip(produced[-len(pending):], pending):
+            dst = Path(r["outdir"], f"{r['tag']}.mp4")
+            if src != dst:
+                src.rename(dst)
+        pf.unlink(missing_ok=True)
+
+    _MODE = "replay"
+    try:
+        return gate_fn(a)
+    finally:
+        _MODE = "direct"
 
 
 def start_frame(char, kind):
@@ -664,6 +745,8 @@ def main():
     ap.add_argument("--both-chars", action="store_true",
                     help="run single-character gates (G-L/G-Z/G-H) for Polly too")
     ap.add_argument("--prompts", help="G-R: file of v2 showcase prompts")
+    ap.add_argument("--no-batch", action="store_true",
+                    help="one model load per clip (slow); default batches the matrix")
     ap.add_argument("--dry", action="store_true", help="print the matrix, generate nothing")
     a = ap.parse_args()
 
@@ -678,7 +761,8 @@ def main():
     if len(a.seeds) < 3 and not a.dry:
         print("!! fewer than 3 seeds — the plan requires >=3 (evidence #10)", file=sys.stderr)
 
-    res = GATES[a.gate](a)
+    res = (GATES[a.gate](a) if (a.dry or a.no_batch)
+           else run_batched(GATES[a.gate], a))
     print(json.dumps(res, indent=2, default=str))
     if a.dry:
         # Never persist a dry run. A file named `<gate>_result.json` gets mirrored to
