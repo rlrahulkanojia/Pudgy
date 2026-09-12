@@ -440,8 +440,8 @@ has never been trained on more than 33 solo clips. Oversample Polly via a per-ch
 - **Precedent:** [`../v5/Training_Approach_v5_Happy_Expression_LoRA.md`](../v5/Training_Approach_v5_Happy_Expression_LoRA.md)
   and its report [`../../docs/training_reports/v5/REPORT_happy_pilot.md`](../../docs/training_reports/v5/REPORT_happy_pilot.md).
 - **Base validation:** [`../v2/Training_Approach_v2.md`](../v2/Training_Approach_v2.md) (Gate G1 PASS).
-- **Parallel track:** [`../LTX-2.5/Experiment_alpha_v-alpha.md`](../LTX-2.5/Experiment_alpha_v-alpha.md)
-  ports the **LTX** line to 2.5. v6 is the **Wan** line. They are independent and can run
-  concurrently on separate boxes.
+- **Parallel track:** [`../../ltx25/`](../../ltx25/README.md) — the standalone **LTX-2.5**
+  experiment. v6 is the **Wan** line. They are fully independent (no shared code, data, config or
+  recipe) and can run concurrently on separate boxes.
 - **Data:** `Data/processed/v6_expressions_272/README.md` · sources at
   `Data/raw/iteration_3/` (`CHANGELOG.md` records what arrived when).

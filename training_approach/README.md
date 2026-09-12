@@ -1,6 +1,6 @@
 # Training Approach — index
 
-The Pudgy Penguins 2D-animation video-model effort, organised by version. v1–v4 are distinct base-model tracks (v4 is the current trained lead); **v5 changes the data contract rather than the base**. Two current plans run in parallel on independent tracks: **[v6](v6/Training_Approach_v6.md)** continues the **Wan** line on the full expression set, and **[`alpha v-alpha`](LTX-2.5/Experiment_alpha_v-alpha.md)** moves the **LTX** line to 2.5.
+The Pudgy Penguins 2D-animation video-model effort, organised by version. v1–v4 are distinct base-model tracks (v4 is the current trained lead); **v5 changes the data contract rather than the base**. The current plan in this line is **[v6](v6/Training_Approach_v6.md)**, continuing the **Wan** line on the full expression set. The **LTX-2.5** work is *not* part of this line at all — it is a standalone, isolated experiment in [`../ltx25/`](../ltx25/README.md) (see the note below).
 
 ## Versions
 - **[v1/](v1/Training_Approach_v1.md)** — CogVideoX1.5-5B-I2V, single character/style LoRA. Executed baseline; mid-clip character drift → superseded.
@@ -11,8 +11,7 @@ The Pudgy Penguins 2D-animation video-model effort, organised by version. v1–v
   - **[Training_Approach_v5_Happy_Expression_LoRA.md](v5/Training_Approach_v5_Happy_Expression_LoRA.md)** — the **executable pilot**: continue-train the v2 golden high-noise expert on the 7 Pax/happy clips delivered so far. Runnable now.
   - **[Training_Approach_v5.md](v5/Training_Approach_v5.md)** — the **programme plan** the pilot sits inside: a closed taxonomy of motion / expression / interaction-moment primitives, trained as a curriculum (T0–T4), then composed into full video. Data-gated on the [Round 3 request](../docs/documents/Client_Data_Request_Round3.md).
 
-- **[LTX-2.5/](LTX-2.5/Experiment_alpha_v-alpha.md)** — **experiment `alpha v-alpha`**: ports the v4 LTX track to **LTX-2.5-22B** and, in the same harness, runs the data-contract ablation v4 left open (does a small clean corpus beat the big dirty one?). Five gated arms; A1/A0/A2/A3 need **no new data**, and A4's 60-clip T1 gate was largely met by the 2026-08-20 delivery (68 clips in; `sad` and the turnaround stills still open).
-
+- **[v7/](v7/Training_Approach_v7.md)** — **executed 2026-09-05 → 09-11.** Motion + 7 expressions on the v2 goldens; gate G-X put motion on the **low-noise** expert, so v2's motion prior stays frozen. Training complete, gate coverage partial — see [`GATES_v7.md`](../docs/training_reports/v7/GATES_v7.md) and [`REPORT_v7.md`](../docs/training_reports/v7/REPORT_v7.md).
 - **[v6/](v6/Training_Approach_v6.md)** — **the current Wan-line plan**: continue-train the **v2 low-noise golden** on all 272 clips of `Data/processed/v6_expressions_272` (2 characters × 4 emotions). Teaches expression *contrastively* so it becomes promptable — the fix for v5's conditioning-frame memorisation. Low-noise expert only; the v2 high-noise motion golden stays frozen. Runnable now, no new client data.
 
 ## Shared reference material (cross-version)
@@ -23,4 +22,4 @@ The Pudgy Penguins 2D-animation video-model effort, organised by version. v1–v
 
 > The `iteration_2_v4` **dataset** (clips, prompts, catalog, `prep_ltx.py`) lives outside this repo under `Data/processed/v4_ltx_249clip/` and is transferred to the GPU box manually — see the v4 GPU handoff doc above.
 
-> **Note:** the current LTX-2.5 work is **not** part of this version line and does not live here. It is a standalone clean-slate experiment in [`../ltx25/`](../ltx25/README.md) — its own docs, prep and evaluation, sharing no code, data or recipe with v1–v7. `alpha v-alpha` above remains as the historical LTX plan that was framed as a port of the v4 track.
+> **Note:** the LTX-2.5 work is **not** part of this version line and does not live here. It is a standalone clean-slate experiment in [`../ltx25/`](../ltx25/README.md) — its own docs, prep, config and evaluation, sharing **no code, data, config or recipe** with v1–v7. That separation is a requirement of the experiment, not an accident: a result there has to mean something on its own rather than relative to a chain of prior runs. Measured facts about the art and the client carry over; none of the Wan- or v4-specific structure does. An earlier LTX-2.5 plan (`alpha v-alpha`) that framed the move as a port of the v4 track was **removed** for exactly that reason — it is recoverable from git history at `f42e3f2` if the analysis is ever wanted.
