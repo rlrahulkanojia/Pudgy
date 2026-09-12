@@ -154,6 +154,14 @@ ANGLES = {
 # The corruption is non-deterministic, so this runs on the frames about to be written.
 TEAR_FRAC = 0.60
 DECODE_TRIES = 24
+# Per-ffmpeg-call ceiling. MEASURED: the corrupt ProRes files do not merely tear, they can
+# wedge ffmpeg indefinitely - a 32-worker run parked 16 decoders in S state for 28 minutes
+# at 0% CPU and deadlocked the pool, having written 851 of 924 clips. Without a timeout a
+# single bad stream stalls the whole build forever. A timeout is just a failed attempt, so
+# it feeds the DECODE_TRIES retry loop exactly like a torn decode does.
+DECODE_TIMEOUT = 120     # full RGBA decode; the longest legitimate source is ~60 frames
+PROBE_TIMEOUT = 60       # ffprobe / small grayscale probes
+ENCODE_TIMEOUT = 300     # libx264 write
 
 
 # ------------------------------------------------------------------------- small utils
@@ -179,10 +187,13 @@ def active_frames(path: Path, total: int) -> int:
     rungs are chosen. Frozen holds INSIDE a clip are preserved, because those are the
     client's animation intent; only the dead tail goes.
     """
-    out = subprocess.run(
-        ["ffmpeg", "-v", "error", "-i", str(path),
-         "-vf", "scale=128:128,format=gray", "-f", "rawvideo", "-"],
-        capture_output=True).stdout
+    try:
+        out = subprocess.run(
+            ["ffmpeg", "-v", "error", "-i", str(path),
+             "-vf", "scale=128:128,format=gray", "-f", "rawvideo", "-"],
+            capture_output=True, timeout=PROBE_TIMEOUT).stdout
+    except subprocess.TimeoutExpired:
+        return total                   # cannot measure: keep the full length, trim nothing
     n = 128 * 128
     c = len(out) // n
     if c < 2:
@@ -205,10 +216,13 @@ def md5(path: Path) -> str:
 
 def probe_frames(path: Path) -> int:
     """True decodable frame count. ffprobe's container metadata lies on this corpus."""
-    out = subprocess.run(
-        ["ffprobe", "-v", "error", "-count_frames", "-select_streams", "v:0",
-         "-show_entries", "stream=nb_read_frames", "-of", "csv=p=0", str(path)],
-        capture_output=True, text=True).stdout.strip()
+    try:
+        out = subprocess.run(
+            ["ffprobe", "-v", "error", "-count_frames", "-select_streams", "v:0",
+             "-show_entries", "stream=nb_read_frames", "-of", "csv=p=0", str(path)],
+            capture_output=True, text=True, timeout=PROBE_TIMEOUT).stdout.strip()
+    except subprocess.TimeoutExpired:
+        return 0
     try:
         return int(out)
     except ValueError:
@@ -362,12 +376,17 @@ def buckets_for(job: dict) -> list[int]:
 
 def read_rgba(path: Path, want: int, loop: bool) -> list[np.ndarray] | None:
     """Decode to raw RGBA at SIZE. `loop` wraps a cycle that is shorter than `want`."""
-    proc = subprocess.run(
-        ["ffmpeg", "-v", "error", "-i", str(path),
-         "-vf", "format=rgba",
-         "-f", "rawvideo", "-pix_fmt", "rgba", "-"],
-        capture_output=True)
+    try:
+        proc = subprocess.run(
+            ["ffmpeg", "-v", "error", "-i", str(path),
+             "-vf", "format=rgba",
+             "-f", "rawvideo", "-pix_fmt", "rgba", "-"],
+            capture_output=True, timeout=DECODE_TIMEOUT)
+    except subprocess.TimeoutExpired:
+        return None                    # wedged stream; counts as one failed decode attempt
     side = _probe_side(path)
+    if side <= 0:
+        return None
     n = side * side * 4
     buf = proc.stdout
     count = len(buf) // n
@@ -383,10 +402,14 @@ def read_rgba(path: Path, want: int, loop: bool) -> list[np.ndarray] | None:
 
 
 def _probe_side(path: Path) -> int:
-    out = subprocess.run(
-        ["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries",
-         "stream=width", "-of", "csv=p=0", str(path)], capture_output=True, text=True).stdout
-    return int(out.strip().split(",")[0])
+    try:
+        out = subprocess.run(
+            ["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries",
+             "stream=width", "-of", "csv=p=0", str(path)],
+            capture_output=True, text=True, timeout=PROBE_TIMEOUT).stdout
+        return int(out.strip().split(",")[0])
+    except (subprocess.TimeoutExpired, ValueError):
+        return 0
 
 
 def alpha_bbox(frames: list[np.ndarray]) -> tuple[int, int, int, int]:
@@ -465,14 +488,44 @@ def composite(frames: list[np.ndarray], rgb: tuple[int, int, int]) -> bytes:
     return np.concatenate(out, axis=0).tobytes()
 
 
+def write_png(rgb_bytes: bytes, dest: Path) -> None:
+    """Write one still as LOSSLESS PNG.
+
+    NOT a single-frame mp4, for two independent reasons.
+
+    1. CORRECTNESS. The trainer dispatches on file extension
+       (`process_videos.py:159`): only .png/.jpg/.jpeg reach `_preprocess_image`,
+       which handles F=1 properly. Everything else goes to `_preprocess_video`,
+       whose `_resize_and_crop` "returns [C, H, W] for single-frame input (squeeze
+       removes dim 0)" - so the following `for frame in frames_resized` iterates
+       over CHANNELS, hands torchvision a 2-D [1024,1024] tensor, and preprocessing
+       dies with "Expected tensor to be a tensor image of size (..., C, H, W)".
+       MEASURED: a stills-as-mp4 corpus kills process_dataset.py in the video phase.
+
+    2. QUALITY. h264 yuv420p subsamples chroma 2x1 in both axes. On flat 2D art with
+       saturated fills and thin black outlines that is exactly the wrong loss, and
+       stills exist to teach APPEARANCE (LTX-2 #249). PNG spends a little disk to
+       keep the outlines the VAE is going to be judged on.
+    """
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    arr = np.frombuffer(rgb_bytes, dtype=np.uint8).reshape(SIZE, SIZE, 3)
+    Image.fromarray(arr).save(dest, format="PNG", optimize=True)
+
+
 def write_mp4(rgb_bytes: bytes, dest: Path, nframes: int) -> None:
     dest.parent.mkdir(parents=True, exist_ok=True)
     subprocess.run(
         ["ffmpeg", "-y", "-v", "error",
          "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{SIZE}x{SIZE}", "-r", str(FPS), "-i", "-",
+         # x264 defaults to one thread PER CORE. With --workers 32 that is ~1024 threads
+         # competing for 32 cores; MEASURED: pthread_create fails and ffmpeg dies with
+         # SIGABRT partway through the build (it did so at clip 898/924). These clips are
+         # 17-33 frames, so per-clip threading buys nothing anyway - the parallelism that
+         # matters is across clips, which the worker pool already provides.
+         "-threads", "2",
          "-an", "-c:v", "libx264", "-preset", "slow", "-crf", "16",
          "-pix_fmt", "yuv420p", "-frames:v", str(nframes), str(dest)],
-        input=rgb_bytes, check=True, capture_output=True)
+        input=rgb_bytes, check=True, capture_output=True, timeout=ENCODE_TIMEOUT)
 
 
 # ----------------------------------------------------------------------------- captions
@@ -607,8 +660,8 @@ def emit_stills(jobs: list[dict], out: Path, per_character: int) -> list[dict]:
                     one = apply_shot(frames, shot[2])[idx]
                     stem = (f"{character.lower()}_still_{angle}_{shot[0]}"
                             f"__{ground.replace(' ', '')}_{made:03d}")
-                    dest = out_stills / f"{stem}.mp4"
-                    write_mp4(composite([one], GROUNDS[ground]), dest, 1)
+                    dest = out_stills / f"{stem}.png"
+                    write_png(composite([one], GROUNDS[ground]), dest)
                     records.append({"file": f"stills/{dest.name}", "frames": 1, "ground": ground,
                                     "shot": shot[0], "label": job["label"],
                                     "character": character, "kind": "still",
@@ -672,9 +725,22 @@ def build(jobs: list[dict], out: Path, workers: int, limit: int | None,
     train = [r for r in records if r["angle"] != HOLDOUT_ANGLE]
     hold = [r for r in records if r["angle"] == HOLDOUT_ANGLE]
 
-    # Stills join the training split only. The holdout stays video-only so that the
+    # Stills join the training split only: the holdout stays video-only so that the
     # evaluation measures motion and identity over time, not a single frame.
-    train += [dict(r, file=r["file"]) for r in still_records]
+    #
+    # But they are filtered BY ANGLE first. MEASURED LEAK: without this filter, 24
+    # SIDE_R stills landed in the training split while SIDE_R clips were held out, so
+    # the model had seen the held-out viewpoint's APPEARANCE and only its MOTION was
+    # actually novel. That silently weakens the single generalisation axis this corpus
+    # can support (PIPELINE.md S5: a viewpoint holdout and a start-frame holdout, and
+    # no novel-action holdout at all). The holdout angle must be absent from EVERY
+    # bucket, stills included.
+    train += [dict(r, file=r["file"]) for r in still_records
+              if r["angle"] != HOLDOUT_ANGLE]
+    held_stills = [r for r in still_records if r["angle"] == HOLDOUT_ANGLE]
+    if held_stills:
+        print(f"  excluded {len(held_stills)} {HOLDOUT_ANGLE} stills from training "
+              f"(viewpoint holdout integrity)")
 
     def to_entries(rs):
         entries, unknown = [], set()

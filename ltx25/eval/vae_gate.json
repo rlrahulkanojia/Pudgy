@@ -1,0 +1,122 @@
+{
+ "size": 1024,
+ "frames": 17,
+ "reference": {
+  "psnr": 38.9,
+  "ssim": 0.996
+ },
+ "thresholds": {
+  "edge_psnr": 32.0,
+  "shimmer_abs": 1.0
+ },
+ "results": {
+  "diffusion": {
+   "per_clip": {
+    "pax_angry_FRONT__mustard_wide_f17.mp4": {
+     "frames": 17,
+     "psnr": 37.28,
+     "ssim": 0.9952,
+     "edge_psnr": 19.42,
+     "edge_cov": 0.0112,
+     "flat_band": 0.102,
+     "shimmer_abs": 0.106
+    },
+    "pax_angry_FRONT__olive_medium_f17.mp4": {
+     "frames": 17,
+     "psnr": 37.04,
+     "ssim": 0.9945,
+     "edge_psnr": 20.51,
+     "edge_cov": 0.0181,
+     "flat_band": 0.08,
+     "shimmer_abs": 0.096
+    },
+    "polly_angry_FRONT__rust_wide_f17.mp4": {
+     "frames": 17,
+     "psnr": 39.27,
+     "ssim": 0.9966,
+     "edge_psnr": 20.5,
+     "edge_cov": 0.0104,
+     "flat_band": 0.086,
+     "shimmer_abs": 0.101
+    },
+    "polly_angry_FRONT__sagegreen_medium_f17.mp4": {
+     "frames": 17,
+     "psnr": 37.18,
+     "ssim": 0.9957,
+     "edge_psnr": 20.81,
+     "edge_cov": 0.0172,
+     "flat_band": 0.08,
+     "shimmer_abs": 0.094
+    }
+   },
+   "mean": {
+    "psnr": 37.6925,
+    "ssim": 0.9955,
+    "edge_psnr": 20.31,
+    "edge_cov": 0.0142,
+    "flat_band": 0.087,
+    "shimmer_abs": 0.0993
+   }
+  },
+  "conv": {
+   "per_clip": {
+    "pax_angry_FRONT__mustard_wide_f17.mp4": {
+     "frames": 17,
+     "psnr": 39.76,
+     "ssim": 0.9956,
+     "edge_psnr": 21.81,
+     "edge_cov": 0.0112,
+     "flat_band": 0.08,
+     "shimmer_abs": 0.115
+    },
+    "pax_angry_FRONT__olive_medium_f17.mp4": {
+     "frames": 17,
+     "psnr": 39.54,
+     "ssim": 0.9948,
+     "edge_psnr": 23.2,
+     "edge_cov": 0.0181,
+     "flat_band": 0.097,
+     "shimmer_abs": 0.137
+    },
+    "polly_angry_FRONT__rust_wide_f17.mp4": {
+     "frames": 17,
+     "psnr": 41.89,
+     "ssim": 0.9964,
+     "edge_psnr": 23.44,
+     "edge_cov": 0.0104,
+     "flat_band": 0.121,
+     "shimmer_abs": 0.158
+    },
+    "polly_angry_FRONT__sagegreen_medium_f17.mp4": {
+     "frames": 17,
+     "psnr": 39.99,
+     "ssim": 0.9958,
+     "edge_psnr": 23.06,
+     "edge_cov": 0.0172,
+     "flat_band": 0.095,
+     "shimmer_abs": 0.125
+    }
+   },
+   "mean": {
+    "psnr": 40.295,
+    "ssim": 0.9957,
+    "edge_psnr": 22.8775,
+    "edge_cov": 0.0142,
+    "flat_band": 0.0983,
+    "shimmer_abs": 0.1338
+   }
+  }
+ },
+ "verdict": {
+  "picked": "diffusion",
+  "pass": true,
+  "decided_by": "EYE CHECK, which OVERRULED the metric ranking",
+  "why": "Gate zero PASSES: LTX-2.5 can represent this art. The diffusion VAE preserves thin black outlines, flat fills and eye highlights near-indistinguishably from source at 4x zoom, on both characters. Temporal shimmer is a non-issue (0.099 grey levels added on pixels the source holds still), so LTX-2 #223 does NOT bite this corpus, and flat_band 0.087 shows no banding or grid artefact.",
+  "metric_inversion": "MEASURED AND IMPORTANT: PSNR ranked the two decoders BACKWARDS. conv scored higher on every fidelity metric (psnr 40.30 vs 37.69, edge_psnr 22.88 vs 20.31) yet visibly DISSOLVES outlines - Polly's black beak outline degrades into an orange blur and the eye highlights smear, while diffusion holds them. Reading the table alone would have selected the decoder that destroys the one feature this art depends on. This is PIPELINE.md S8.3's warning ('no metric sees identity') reproducing at the VAE stage.",
+  "threshold_note": "The edge_psnr >= 32 default is UNEARNED - it was a guess with no calibration and it produced a FAIL the pixels do not support. The only earned bar is CogVideoX's global 38.9 dB / 0.996 on this same art; diffusion sits just under on psnr (37.69) and at parity on ssim (0.9955). Treat edge_psnr as a comparative signal, not a pass/fail.",
+  "evidence": [
+   "ltx25/eval/vae_gate_frames/outline_zoom_4x.png",
+   "ltx25/eval/vae_gate_frames/outline_zoom_polly_4x.png"
+  ]
+ }
+}
