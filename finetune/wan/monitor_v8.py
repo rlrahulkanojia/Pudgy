@@ -34,7 +34,9 @@ LOG = Path(os.environ.get("V8_LOG", "/var/log/portal/pudgy-v8-train.log"))
 EVAL = Path("/workspace/eval_v8")
 PREFIX = "v8"
 HERE = Path(__file__).resolve().parent
-BAR = re.compile(r"steps:\s+(\d+)%\|[^|]*\|\s*(\d+)/(\d+)\s*\[([\d:]+)<([\d:?]+),\s*([\d.]+)s/it")
+# The supervisor log (log-tee) strips tqdm's bar glyphs: "steps:   4% 22/600 [..]", while
+# a raw terminal log keeps them: "steps:   4%|▍   | 22/600 [..]". Match both.
+BAR = re.compile(r"steps:\s+(\d+)%(?:\|[^|]*\|)?\s*(\d+)/(\d+)\s*\[([\d:]+)<([\d:?]+),\s*([\d.]+)s/it")
 LOSS = re.compile(r"avr_loss=([\d.]+)")
 WANDB = re.compile(r"View run at (https://wandb\.ai/\S+)")
 
