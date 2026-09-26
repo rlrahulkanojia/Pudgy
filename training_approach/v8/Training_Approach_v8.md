@@ -87,6 +87,38 @@ What this changes:
 `BASE_WEIGHTS=/workspace/wan_output/v2_golden/lora_lownoise_GOLDEN_ep40.safetensors`
 restores the golden-only start if the v7 base turns out to cap what v8 can learn.
 
+#### 1.2 Is the v7 base a head start or a trap? — thresholds fixed before step 100
+
+Tier-1 baselines on the 26 held-out clips (k = 2, paired noise), per kind:
+
+| start | expr loss | expr margin | motion loss | motion margin |
+|---|---|---|---|---|
+| v2 golden | 0.00564 | −0.0137 | 0.00604 | −0.0128 |
+| **v7fixed (v8 step 0)** | **0.00499** | **+0.0227** | **0.00467** | **−0.0047** |
+| v7expr alone | 0.00323 | +0.0250 | — | — |
+| v7motion alone | — | — | 0.00283 | −0.0039 |
+
+v7fixed beats the golden on 75% (expr) / 100% (motion) of clips, paired, and keeps ~90% of
+the expression margin — but it keeps only **27%** (expr) / **43%** (motion) of each v7
+specialist's loss reduction over the golden: combining the two LoRAs re-adds their shared
+component (§1 #2). So v8 has to *undo interference* before it adds anything. (v7 trained on
+QF2_R, so its lead here is partly memory; `blushing`, unseen by all, ranks 2nd/1st for
+v7fixed vs 6th/7th for the golden — n = 2.)
+
+Both starts can reach the same place in principle (the rank-32 v8 LoRA can represent
+either the two label task vectors, effective rank ≈ 9 each, or the interference correction,
+which lives in the same rank-16+16 subspaces); the v7 start buys ≈ 500–1,000 clips of the
+4,800-clip budget. The decision rule, written down **before** the data exists:
+
+| Gate | v7 base is working if (holdout split, per kind) | Otherwise |
+|---|---|---|
+| **step 100** | expr loss **< 0.0040** and motion loss **< 0.0035** (well below v7fixed's 0.0050 / 0.0047, toward the specialists' 0.0032 / 0.0028), **and** margins ≥ v7fixed's (+0.0227 expr / −0.0047 motion) | note it; continue — one gate is not enough evidence to discard ~9 h |
+| **step 300** | loss keeps falling past the step-100 values toward the specialists, margins hold or grow | if loss is still **≥ 0.0045 (expr) / ≥ 0.0042 (motion)** — within ~10% of v7fixed — the v7 base is a trap: **restart from the golden** (`BASE_WEIGHTS=…/lora_lownoise_GOLDEN_ep40.safetensors`, fresh output dir) |
+
+Margins and losses are read from `/workspace/eval_v8/dcls/v8@<step>_k2.json` (`summary`),
+compared paired against `v7fixed_k2.json`. Accuracy is reported but not used for the
+decision: at n = 16 / 10 it moves in steps of 0.06 / 0.10.
+
 ---
 
 ## 2. Data — `processed/v8_joint_2096`
@@ -199,8 +231,8 @@ on clips its LoRA never fitted — not unseen-angle generalisation (except `blus
 
 | Break | Tier 1 | Tier 2 | Proceed if |
 |---|---|---|---|
-| **step 100** (~800 clips) | v8@100 + baselines | — | holdout accuracy and margin move above `v7fixed` (step 0). **If nothing moved: LR → 1e-4** (fresh LoRA, α/r = 1 — the documented fallback), not more steps |
-| **step 300** | v8@300 | — | still improving or flat; drift share (Tier 0) above v7's 19% |
+| **step 100** (~800 clips) | v8@100 + baselines | — | holdout margin and loss move beyond `v7fixed` (step 0) — **base thresholds in §1.2** (expr loss < 0.0040, motion < 0.0035, margins ≥ v7fixed). **If nothing moved at all: LR → 1e-4** (fresh LoRA, α/r = 1 — the documented fallback), not more steps |
+| **step 300** | v8@300 | — | still improving; drift share (Tier 0) above v7's 19%; **§1.2 trap test** — loss still ≥ 0.0045 / 0.0042 ⇒ restart from the golden |
 | **final / plateau** | all saved checkpoints ≥ 100, + `swa` of the plateau | `core`, `compose`, `gb`, `gd`, `guide` on the Tier-1 winner vs `golden` and `v7fixed` | ship bars below |
 
 **Ship bars** (Tier 2, n per cell is small — read as ±0.1):
