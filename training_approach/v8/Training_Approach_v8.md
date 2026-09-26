@@ -87,6 +87,38 @@ What this changes:
 `BASE_WEIGHTS=/workspace/wan_output/v2_golden/lora_lownoise_GOLDEN_ep40.safetensors`
 restores the golden-only start if the v7 base turns out to cap what v8 can learn.
 
+#### 1.2 Is the v7 base a head start or a trap? — thresholds fixed before step 100
+
+Tier-1 baselines on the 26 held-out clips (k = 2, paired noise), per kind:
+
+| start | expr loss | expr margin | motion loss | motion margin |
+|---|---|---|---|---|
+| v2 golden | 0.00564 | −0.0137 | 0.00604 | −0.0128 |
+| **v7fixed (v8 step 0)** | **0.00499** | **+0.0227** | **0.00467** | **−0.0047** |
+| v7expr alone | 0.00323 | +0.0250 | — | — |
+| v7motion alone | — | — | 0.00283 | −0.0039 |
+
+v7fixed beats the golden on 75% (expr) / 100% (motion) of clips, paired, and keeps ~90% of
+the expression margin — but it keeps only **27%** (expr) / **43%** (motion) of each v7
+specialist's loss reduction over the golden: combining the two LoRAs re-adds their shared
+component (§1 #2). So v8 has to *undo interference* before it adds anything. (v7 trained on
+QF2_R, so its lead here is partly memory; `blushing`, unseen by all, ranks 2nd/1st for
+v7fixed vs 6th/7th for the golden — n = 2.)
+
+Both starts can reach the same place in principle (the rank-32 v8 LoRA can represent
+either the two label task vectors, effective rank ≈ 9 each, or the interference correction,
+which lives in the same rank-16+16 subspaces); the v7 start buys ≈ 500–1,000 clips of the
+4,800-clip budget. The decision rule, written down **before** the data exists:
+
+| Gate | v7 base is working if (holdout split, per kind) | Otherwise |
+|---|---|---|
+| **step 100** | expr loss **< 0.0040** and motion loss **< 0.0035** (well below v7fixed's 0.0050 / 0.0047, toward the specialists' 0.0032 / 0.0028), **and** margins ≥ v7fixed's (+0.0227 expr / −0.0047 motion) | note it; continue — one gate is not enough evidence to discard ~9 h |
+| **step 300** | loss keeps falling past the step-100 values toward the specialists, margins hold or grow | if loss is still **≥ 0.0045 (expr) / ≥ 0.0042 (motion)** — within ~10% of v7fixed — the v7 base is a trap: **restart from the golden** (`BASE_WEIGHTS=…/lora_lownoise_GOLDEN_ep40.safetensors`, fresh output dir) |
+
+Margins and losses are read from `/workspace/eval_v8/dcls/v8@<step>_k2.json` (`summary`),
+compared paired against `v7fixed_k2.json`. Accuracy is reported but not used for the
+decision: at n = 16 / 10 it moves in steps of 0.06 / 0.10.
+
 ---
 
 ## 2. Data — `processed/v8_joint_2096`
@@ -199,8 +231,8 @@ on clips its LoRA never fitted — not unseen-angle generalisation (except `blus
 
 | Break | Tier 1 | Tier 2 | Proceed if |
 |---|---|---|---|
-| **step 100** (~800 clips) | v8@100 + baselines | — | holdout accuracy and margin move above `v7fixed` (step 0). **If nothing moved: LR → 1e-4** (fresh LoRA, α/r = 1 — the documented fallback), not more steps |
-| **step 300** | v8@300 | — | still improving or flat; drift share (Tier 0) above v7's 19% |
+| **step 100** (~800 clips) | v8@100 + baselines | — | holdout margin and loss move beyond `v7fixed` (step 0) — **base thresholds in §1.2** (expr loss < 0.0040, motion < 0.0035, margins ≥ v7fixed). **If nothing moved at all: LR → 1e-4** (fresh LoRA, α/r = 1 — the documented fallback), not more steps |
+| **step 300** | v8@300 | — | still improving; drift share (Tier 0) above v7's 19%; **§1.2 trap test** — loss still ≥ 0.0045 / 0.0042 ⇒ restart from the golden |
 | **final / plateau** | all saved checkpoints ≥ 100, + `swa` of the plateau | `core`, `compose`, `gb`, `gd`, `guide` on the Tier-1 winner vs `golden` and `v7fixed` | ship bars below |
 
 **Ship bars** (Tier 2, n per cell is small — read as ±0.1):
@@ -258,10 +290,8 @@ supervisorctl start pudgy-v8-monitor pudgy-v8-train
 tail -f /var/log/portal/pudgy-v8-train.log
 #   tensorboard: already running (portal) over /workspace - run dir logs/ + logs/diag
 
-# 3. Gate break at step 100 (repeat at 300)
-supervisorctl stop pudgy-v8-train                       # state for step 100 is on disk
-python finetune/wan/eval_v8/dcls_v8.py --configs v8@100
-supervisorctl start pudgy-v8-train                      # resumes from the newest state
+# 3. Gate breaks at steps 100 and 300 - automated (stop -> dcls + traj -> restart -> verify)
+nohup finetune/wan/eval_v8/gate_break_v8.sh 100 300 > /workspace/eval_v8/gate_break.log 2>&1 &
 
 # 4. After the run
 python finetune/wan/eval_v8/lora_tools_v8.py traj /workspace/wan_output/pudgy-v8-joint-lownoise
@@ -270,6 +300,19 @@ python finetune/wan/eval_v8/lora_tools_v8.py swa /workspace/wan_output/pudgy-v8-
 python finetune/wan/eval_v8/dcls_v8.py --configs v8@swa300-600
 python finetune/wan/eval_v8/suite_v8.py --suite all --configs golden v7fixed v8@<winner>
 ```
+
+**Resuming (found 2026-09-26, fixed before the first gate break).** musubi v0.3.4's
+`--resume` restores the LoRA, optimizer, LR scheduler and RNG, but restarts the step
+counter at 0 (`# TODO skip until initial step`). Unpatched, a resume at step 100 would save
+its step 150 as `…-step00000050` (overwriting the real one), run 600 *more* steps, and
+push the restored cosine past its end, where it rises again.
+`patches/musubi-v0.3.4-resume-step.patch` continues the count from the state
+directory's step; `setup_wan_env.sh` applies it; `gate_break_v8.sh` verifies after every
+restart that the log says `continuing at global step N` and that the bar passes N, and
+stops training if not. Remaining v0.3.4 behaviour: the data loader starts a fresh,
+reshuffled epoch on resume, so the clips of a partial epoch are not skipped — at two
+breaks this is ≤ 300 clips seen out of order, not a bias. The W&B run continues under the
+same id (`WANDB_RUN_ID` + `WANDB_RESUME=allow`, set by the service wrapper).
 
 Inference with a v8 checkpoint always loads its base **and** τ:
 `--lora_weight pudgy-v7-fixed-combined.safetensors pudgy-v8-…-stepN.safetensors --lora_multiplier 1 1`

@@ -51,8 +51,20 @@ if [ ! -d "$REPO_DIR" ]; then
 else
   echo "-- trainer already present"
 fi
+# Pin by TAG, not by warning: a HEAD clone is not 0.3.4.
+git -C "$REPO_DIR" fetch -q --tags 2>/dev/null || true
+git -C "$REPO_DIR" checkout -q v0.3.4 2>/dev/null || true
 grep -q 'version = "0.3.4"' "$REPO_DIR/pyproject.toml" \
-  || echo "!! musubi-tuner is not 0.3.4 — v2/v5/v6 were all trained on 0.3.4"
+  || echo "!! musubi-tuner is not 0.3.4 — v2/v5/v6/v7/v8 were all trained on 0.3.4"
+# Local fixes on top of 0.3.4 (see finetune/wan/patches/*.patch headers). Idempotent.
+for p in /workspace/Pudgy/finetune/wan/patches/*.patch; do
+  [ -f "$p" ] || continue
+  if git -C "$REPO_DIR" apply --reverse --check "$p" 2>/dev/null; then
+    echo "-- patch already applied: $(basename "$p")"
+  else
+    git -C "$REPO_DIR" apply "$p" && echo "-- applied patch: $(basename "$p")"
+  fi
+done
 
 # --- 2. Venv -----------------------------------------------------------------------
 # Deliberately NOT /venv/main: musubi pins diffusers 0.32.1 / transformers 4.57.6 /
