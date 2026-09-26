@@ -258,10 +258,8 @@ supervisorctl start pudgy-v8-monitor pudgy-v8-train
 tail -f /var/log/portal/pudgy-v8-train.log
 #   tensorboard: already running (portal) over /workspace - run dir logs/ + logs/diag
 
-# 3. Gate break at step 100 (repeat at 300)
-supervisorctl stop pudgy-v8-train                       # state for step 100 is on disk
-python finetune/wan/eval_v8/dcls_v8.py --configs v8@100
-supervisorctl start pudgy-v8-train                      # resumes from the newest state
+# 3. Gate breaks at steps 100 and 300 - automated (stop -> dcls + traj -> restart -> verify)
+nohup finetune/wan/eval_v8/gate_break_v8.sh 100 300 > /workspace/eval_v8/gate_break.log 2>&1 &
 
 # 4. After the run
 python finetune/wan/eval_v8/lora_tools_v8.py traj /workspace/wan_output/pudgy-v8-joint-lownoise
@@ -270,6 +268,19 @@ python finetune/wan/eval_v8/lora_tools_v8.py swa /workspace/wan_output/pudgy-v8-
 python finetune/wan/eval_v8/dcls_v8.py --configs v8@swa300-600
 python finetune/wan/eval_v8/suite_v8.py --suite all --configs golden v7fixed v8@<winner>
 ```
+
+**Resuming (found 2026-09-26, fixed before the first gate break).** musubi v0.3.4's
+`--resume` restores the LoRA, optimizer, LR scheduler and RNG, but restarts the step
+counter at 0 (`# TODO skip until initial step`). Unpatched, a resume at step 100 would save
+its step 150 as `…-step00000050` (overwriting the real one), run 600 *more* steps, and
+push the restored cosine past its end, where it rises again.
+`patches/musubi-v0.3.4-resume-step.patch` continues the count from the state
+directory's step; `setup_wan_env.sh` applies it; `gate_break_v8.sh` verifies after every
+restart that the log says `continuing at global step N` and that the bar passes N, and
+stops training if not. Remaining v0.3.4 behaviour: the data loader starts a fresh,
+reshuffled epoch on resume, so the clips of a partial epoch are not skipped — at two
+breaks this is ≤ 300 clips seen out of order, not a bias. The W&B run continues under the
+same id (`WANDB_RUN_ID` + `WANDB_RESUME=allow`, set by the service wrapper).
 
 Inference with a v8 checkpoint always loads its base **and** τ:
 `--lora_weight pudgy-v7-fixed-combined.safetensors pudgy-v8-…-stepN.safetensors --lora_multiplier 1 1`
