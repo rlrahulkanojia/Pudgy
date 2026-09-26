@@ -4,6 +4,20 @@ Parallel training env for the v2 base migration — **separate from** the CogVid
 setup (`setup_gpu_env.sh`, `../train_cogvideox_*`). Built for an **A100 80 GB**,
 which lifts the v1 blocker (A14B was tight/fp8-only on the old 40 GB card).
 
+> **Latest: v8** — one joint LoRA on a golden-merged base, evaluated by likelihood on a
+> held-out angle. Plan: [`training_approach/v8/Training_Approach_v8.md`](../../training_approach/v8/Training_Approach_v8.md).
+>
+> | v8 file | Does |
+> |---|---|
+> | `prep_v8.py` | builds `processed/v8_joint_2096` (joint set, blushing, f49 loop-tiled rung, gap-aware rungs, QF2_R holdout) |
+> | `train_pudgy_v8.sh` | `--base_weights` golden + fresh rank-32 LoRA, accum 8, cosine; run via `supervisorctl start pudgy-v8-train` |
+> | `verify_cache_v8.py` | every jsonl row has a readable latent + T5 cache of the right length |
+> | `monitor_v8.py` | status + Tier-0 weight diagnostics + Azure mirror (`pudgy/v8/`); `supervisorctl start pudgy-v8-monitor` |
+> | `eval_v8/dcls_v8.py` | Tier 1: diffusion classifier on held-out clips (checkpoint selection) |
+> | `eval_v8/suite_v8.py`, `score_v8.py`, `gen_v8.py` | Tier 2: generated suites scored with CLIP/DINOv2 |
+> | `eval_v8/lora_tools_v8.py` | Tier 0: trajectory diagnostics, checkpoint averaging (SWA), LoRA geometry |
+> | `eval_v8/build_assets_v8.py` | start frames (incl. holdout view, unseen grounds) + classifier clip set |
+
 ## What's installed / where
 
 | Thing | Location |

@@ -52,7 +52,7 @@ from pathlib import Path
 from azure.core.exceptions import ResourceNotFoundError
 from azure.storage.blob import BlobServiceClient, ContentSettings
 
-DATA = Path("/Users/rahul/Documents/Projects/Saksham/Pudgy/Data")
+DATA = Path(os.environ.get("PUDGY_DATA", "/Users/rahul/Documents/Projects/Saksham/Pudgy/Data"))
 TREES = ("raw", "processed")
 CONTAINER = "pudgy"
 SKIP_NAMES = {".DS_Store"}
