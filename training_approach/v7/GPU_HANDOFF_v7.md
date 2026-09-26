@@ -258,6 +258,58 @@ same policy as v2/v5).
 - **3 source clips are unusable and already excluded** from the dataset; 17 more were
   recovered from damaged files. Nothing to do on the box — flagged so the counts make sense
   (`confused` has 16 sources, `walking` 16, where others have 18).
+- **The dataset does not include the 26 Sep delivery.** See §9a before assuming a re-prep
+  picks it up — `prep_v7.py` does not scan `iteration_5`.
+
+---
+
+## 9a. iteration_5 — delivered and mirrored, **not** in this dataset
+
+The 26 Sep delivery (`raw/iteration_5`, 242 files, 1.7 GB) is mirrored at
+`pudgy/raw/iteration_5/` and size+MD5 verified, but **nothing in `/workspace/data_v7` comes
+from it.** `prep_v7.py` scans `SRC_IT3` and `SRC_IT4` only. If you are re-prepping rather
+than training the existing set, read this first.
+
+Only **26 of its 242 files are new** — 216 are byte-identical re-sends of `iteration_4`
+plus `iteration_3`'s turnaround. New material is blushing (14), waving (9), hugging (3).
+
+### Already handled — filename normalisation in `parse_angle()`
+
+Nothing under `raw/` is ever renamed, so two iteration_5 naming defects are absorbed in the
+parser instead. Both fixes are already in `finetune/wan/prep_v7.py`:
+
+| Defect | Absorbed by |
+|---|---|
+| `INTERACTION_HUGGING__QF3_L.mov` — doubled underscore | splitting on `[_-]+`, not `[_-]` |
+| `BLUSHING` / `INTERACTION` / `HUGGING` — label tokens the parser had never seen, so the angle was no longer `toks[0]` | `ANGLE_HEAD`, which skips unknown leading tokens |
+
+The second one is the load-bearing fix: before it, **all 26 new clips parsed as `None`**,
+the doubled underscore being the lesser problem. Regression-checked over every `.mov` stem
+in iterations 3–5 — 245 stems, **0 existing results changed**, 26 newly parsing.
+`PAX_TURNAROUND` still returns `None`, correctly: it is a 240-frame turnaround, not an
+angle-indexed clip.
+
+Expect `NOISE` to keep going stale — it can only list labels already seen. `ANGLE_HEAD` is
+what makes the next unknown label a non-event.
+
+### Still required before iteration_5 can be prepped
+
+Name parsing is necessary but **not** sufficient. Five things remain:
+
+1. **Add the source root + MD5 dedupe.** 216 of 242 files are re-sends; reading the tree
+   naively trains those clips two or three times over.
+2. **Character attribution for `INTERACTION_CLIPS/`.** These are the first two-character
+   clips in the programme: no `<CHAR>/` subfolder, no character in the filename, both
+   penguins in frame. `discover()`'s character-from-path logic cannot read it, and the
+   caption convention assumes a single subject.
+3. **`POLLY_EXPRESSION_BLUSHING_QF1_L.mov` is filed under `BLUSHING/PAX/`.** Character-from-
+   path would label a pink penguin as Pax. Key off the filename prefix for this one.
+4. **`blushing` needs an `EXPRESSIONS` entry** — 41 source frames (4·10+1), plus a caption
+   clause and a frame budget.
+5. **`PAX_EXPRESSION_BLUSHING_QF2_L.mov` is damaged** — claims 41 frames, 33 decode, with 8
+   absent outright rather than blank (the timestamps jump 1.292s → 1.667s). `preflight()`
+   catches it; the leading 32-frame run is clean, so it is truncatable rather than a
+   write-off.
 
 ---
 
