@@ -62,7 +62,8 @@ def status():
         losses = LOSS.findall(tail)
         if losses:
             s["avr_loss"] = float(losses[-1])
-        w = WANDB.findall(LOG.read_bytes()[:2_000_000].decode("utf-8", "replace"))
+        head = re.sub(r"\x1b\[[0-9;]*m", "", LOG.read_bytes()[:2_000_000].decode("utf-8", "replace"))
+        w = WANDB.findall(head)          # wandb colours its log lines; strip ANSI first
         if w:
             s["wandb"] = w[-1]
         s["finished"] = "== done:" in tail
