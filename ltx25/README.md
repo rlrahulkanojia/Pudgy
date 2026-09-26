@@ -102,6 +102,17 @@ The folder is authoritative for character and label; the filename supplies only 
 | Truncated streams (`PAX_MOTION_WALKING_QF1_R`: 11f of a claimed 16) | Dropped, by comparison against the cell's modal length |
 | **Three different angle naming conventions** (`QF1_L`, `QF_L2`, `QF_L`, `FR`) | All normalised |
 
+## Run 1 results
+
+**[docs/FINDINGS_run1.md](docs/FINDINGS_run1.md)** — everything measured on the first full
+pass. Gate zero PASSED (diffusion VAE, chosen by eye-check *overruling* the metrics) and the
+pipeline works end to end, but the run disproved its own assumption A2: **one rank-32 LoRA
+cannot carry both motion and expression.** Expressions hold flat across 3,000 steps while
+`waving` decays from 1.48x source motion to ~0.53x. Cause measured: the corpus holds **24
+distinct performances** (one take per cell, 9 cameras each), each seen ~500x.
+
+Samples and evidence: Azure `pudgytraining` / `pudgy` / `ltx25/run1/`.
+
 ## Open items
 
 - **`sad`, `scared` and `affectionate` have never been delivered.** Twelve labels exist;

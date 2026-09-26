@@ -1,2 +1,5 @@
 __pycache__/
 *.pyc
+# Generated evaluation media. The shareable bundle lives in Azure at
+# pudgytraining/pudgy/ltx25/run1/ ; only the verdict JSONs are tracked.
+eval/vae_gate_frames/

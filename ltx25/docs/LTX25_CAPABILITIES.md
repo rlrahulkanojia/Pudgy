@@ -1,7 +1,14 @@
 # LTX-2.5 feature survey — what's actually available, and what v7 can use
 
-**Status:** survey · **Companion to:** [`Experiment_alpha_v-alpha.md`](Experiment_alpha_v-alpha.md)
+**Status:** survey · **Live plan:** [`PIPELINE.md`](PIPELINE.md)
 **Reference corpus:** `raw/iteration_4` → `processed/v7_primitives_1776` · **Written:** 2026-09-05
+
+> **Note on "the plan" below.** This survey was written against an earlier LTX-2.5 plan
+> (`alpha v-alpha`) that framed the move as a **port of the v4 track**. That plan has since been
+> **removed** — it could not satisfy this experiment's isolation requirement, since every one of its
+> arms was defined relative to v1–v7. It survives in git history at `f42e3f2`. The corrections and
+> findings below stand on their own as facts about LTX-2.5; read "the plan" as "that removed plan".
+> The live plan is [`PIPELINE.md`](PIPELINE.md).
 
 > **One line.** The plan doc was written against a partial view of LTX-2.5: it knows one IC-LoRA
 > and assumes every LoRA must be retrained. There are **17 IC-LoRA adapters**, the vendor says
@@ -14,9 +21,9 @@
 
 ---
 
-## 0. Corrections to the plan doc
+## 0. Corrections to the earlier (removed) plan doc
 
-Two load-bearing claims in `Experiment_alpha_v-alpha.md` are contradicted by current vendor
+Two load-bearing claims in that removed plan are contradicted by current vendor
 documentation. Both change cost, so both are worth resolving before booking GPU time.
 
 | Plan says | Vendor says | Consequence |
