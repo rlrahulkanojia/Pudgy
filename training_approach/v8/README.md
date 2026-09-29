@@ -56,7 +56,8 @@ its action text) and you get waving, with the same character, camera and backgro
 
 ## Where things are
 
+- **Run results:** [`REPORT_v8.md`](../../docs/training_reports/v8/REPORT_v8.md) (winner: step 550)
 - Dataset summary, data issues, and the maths behind v8: [`NOTES.md`](NOTES.md)
 - Full technical plan: [`Training_Approach_v8.md`](Training_Approach_v8.md)
 - Training clips: Azure `pudgy/processed/v8_joint_2096/`
-- Results, as they arrive: Azure `pudgy/v8/`
+- Weights, logs and results: Azure `pudgy/v8/` (the v8 base is `pudgy/v8/base/`)

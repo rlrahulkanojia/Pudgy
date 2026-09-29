@@ -57,6 +57,9 @@ Details: [`ANALYSIS_v7.md`](../../docs/training_reports/v7/ANALYSIS_v7.md) and
 | 9 | Telling two checkpoints apart by 10 points needs **~350 clips each** | The old 21-clip tests could never decide | The cheap classifier does the selection; generated clips are the final check |
 | 10 | The trainer's resume **restarted its step count at 0** | Would have overwritten checkpoints at the first pause | Patched and verified at step 100 |
 
-**Where it stands (27 Sep, step 240 of 600):** at step 100, all four pre-set targets were met.
-Expression recognition on the held-out clips went from 0.63 to 0.81, and loss fell on
-every clip. Motion recognition hasn't improved yet; it's the thing to watch at step 300.
+**Final (29 Sep):** training finished at step 600; the winner is **step 550**. On the held-out
+clips, loss fell 40% (expressions) and 43% (motion) against the v7 starting point, on every
+clip. Recognition rose from 0.63 to 0.81 for expressions and from 0.60 to 0.80 for motion,
+and *blushing* is recognised for both characters. It also beats each separate v7 add-on on
+that add-on's own kind. Most of the gain came by step 300. Full report:
+[`REPORT_v8.md`](../../docs/training_reports/v8/REPORT_v8.md).
