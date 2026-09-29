@@ -232,7 +232,7 @@ on clips its LoRA never fitted — not unseen-angle generalisation (except `blus
 | Break | Tier 1 | Tier 2 | Proceed if |
 |---|---|---|---|
 | **step 100** (~800 clips) | v8@100 + baselines | — | holdout margin and loss move beyond `v7fixed` (step 0) — **base thresholds in §1.2** (expr loss < 0.0040, motion < 0.0035, margins ≥ v7fixed). **If nothing moved at all: LR → 1e-4** (fresh LoRA, α/r = 1 — the documented fallback), not more steps |
-| **step 300** | v8@300 | — | still improving; drift share (Tier 0) above v7's 19%; **§1.2 trap test** — loss still ≥ 0.0045 / 0.0042 ⇒ restart from the golden |
+| **step 300** | v8@300 | — | still improving; drift share (Tier 0) above v7's 19% ⚠️ *invalid bar: the drift fit assumes a constant LR; under cosine use the consecutive-update cosine — see REPORT_v8 §3.3*; **§1.2 trap test** — loss still ≥ 0.0045 / 0.0042 ⇒ restart from the golden |
 | **final / plateau** | all saved checkpoints ≥ 100, + `swa` of the plateau | `core`, `compose`, `gb`, `gd`, `guide` on the Tier-1 winner vs `golden` and `v7fixed` | ship bars below |
 
 **Ship bars** (Tier 2, n per cell is small — read as ±0.1):
