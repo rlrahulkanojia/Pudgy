@@ -11,7 +11,7 @@ embeddings recover the label 57-71% and the seed at chance. So:
   dino_nn     same as label_nn on DINOv2 CLS (a second, non-text-trained view)
   view_nn     1-NN recovery of the START VIEW - high is fine (framing), but label_nn
               must not collapse on the holdout view
-  motion      mean frame-to-frame MAE over the character (animation energy)
+  energy      mean frame-to-frame MAE over the character (animation energy)
   repeat      periodicity of the CLIP-embedding sequence (max autocorrelation after
               the first dip) - G-D: does a long cycle REPEAT or play once slowly?
   corner      background drift in the four corners (G-B, v5 bar 5/255)
@@ -136,7 +136,7 @@ def score_dir(suite, d):
         v = read_video(p)
         c, dn, seq = embed(v)
         rows.append({"tag": tag, **m, "clip": c, "dino": dn, "seq": seq,
-                     "motion": motion_energy(v[:, ::4, ::4]), "repeat": periodicity(seq),
+                     "energy": motion_energy(v[:, ::4, ::4]), "repeat": periodicity(seq),
                      "frames": len(v), "v": v if suite == "gb" else None})
     out = {"n": len(rows)}
     if suite in ("core", "guide", "gb"):
@@ -158,7 +158,7 @@ def score_dir(suite, d):
                          "label_nn": round(loo_nn(C, labs), 3),
                          "dino_nn": round(loo_nn(D, labs), 3),
                          "label_zs": round(float(np.mean(zs == np.array(labs))), 3),
-                         "motion": round(float(np.mean([r["motion"] for r in rs])), 3)}
+                         "energy": round(float(np.mean([r["energy"] for r in rs])), 3)}
                 if "view" in rs[0]:
                     entry["view_nn"] = round(loo_nn(C, [r["view"] for r in rs]), 3)
                     for view in ("FRONT", "QF2_R"):
@@ -177,10 +177,10 @@ def score_dir(suite, d):
                                                == np.array([r["motion"] for r in rows]))), 3)
         out["expr_zs"] = round(float(np.mean(np.array(emos)[(C @ Te.T).argmax(1)]
                                              == np.array([r["expression"] for r in rows]))), 3)
-        out["motion_energy"] = round(float(np.mean([r["motion"] for r in rows])), 3)
+        out["motion_energy"] = round(float(np.mean([r["energy"] for r in rows])), 3)
     if suite == "gd":
         out["clips"] = {r["tag"]: {"frames": r["frames"], "repeat": round(r["repeat"], 3),
-                                   "motion": round(r["motion"], 3)} for r in rows}
+                                   "energy": round(r["energy"], 3)} for r in rows}
     if suite == "gb":
         from common import UNSEEN_BG
         out["corner_drift"] = {r["tag"]: round(corner_drift(r["v"], UNSEEN_BG[r["bg"]][1]), 2)
