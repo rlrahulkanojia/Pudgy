@@ -1,8 +1,9 @@
 # v8 — joint motion + expression LoRA on the combined v7: run report
 
 **Run** 2026-09-26 20:03 → 2026-09-29 05:32 UTC · **Hardware** 1× A100 80GB PCIe (Vast.ai, not
-persistent; box deleted after this report) · **Status** training complete, Tier 1 complete,
-Tier 2 (generated suites) partial — see §6.
+persistent) · **Status** training complete, Tier 1 complete, **Tier 2 complete for the winner**
+(§3.4); v7fixed / golden comparison suites running (§6). Updated 2026-09-30 — findings and
+next steps in §9, plan in [`Training_Approach_v9.md`](../../../training_approach/v9/Training_Approach_v9.md).
 Plan: [`Training_Approach_v8.md`](../../../training_approach/v8/Training_Approach_v8.md) ·
 plain-language: [`README.md`](../../../training_approach/v8/README.md),
 [`NOTES.md`](../../../training_approach/v8/NOTES.md) · v7 analysis that motivated it:
@@ -79,6 +80,17 @@ SWA. SWA 0.0438, step 550 0.0437, 600, 400, 500 tied; step 550 had the lowest lo
 **Remaining misses at step 550** are all near-misses (rank 2–4): Pax jumping→walking,
 laughing→happy, neutral→angry, waving→jumping; Polly neutral→angry.
 
+**Per action** (held-out loss, mean of 2 clips; change-masked, so faster actions have more to
+predict). The classifier recognises the fast actions, but they keep the most residual error:
+
+| action | unique training footage | golden | v7fixed | **v8@550** | vs golden | ranks |
+|---|---|---|---|---|---|---|
+| sitting | 11.8 s | 0.00257 | 0.00153 | 0.00083 | −68% | 1, 1 |
+| waving | 16.7 s | 0.00290 | 0.00193 | 0.00113 | −61% | 4, 1 |
+| walking | 7.6 s | 0.00437 | 0.00435 | 0.00258 | −41% | 1, 1 |
+| jumping | 22.0 s | 0.00949 | 0.00750 | **0.00436** | −54% | 2, 1 |
+| running | 11.3 s | 0.01085 | 0.00806 | **0.00452** | −58% | 1, 1 |
+
 ### 3.2 The v7-base decision (thresholds fixed before step 100, plan §1.2)
 
 | Gate | threshold | measured | verdict |
@@ -106,15 +118,33 @@ past the specialists.
   that fit and should be ignored; the consecutive-update cosine is the schedule-robust
   measure. For v7 (constant LR) the fit is valid.
 
-### 3.4 Tier 2 — generated suites (partial when the box was deleted)
+### 3.4 Tier 2 — generated suites on the winner (CLIP / DINOv2 scoring, `score_v8.py`)
 
-Complete for the winner: **`compose`** (18 clips, motion × expression in one prompt). Visual
-check: Polly *jumping + laughing* — full hop cycle with the laugh building, both axes
-render; Pax *walking + angry* — scowl held, gait subtle; Pax *waving + crying* — wave
-starts, then the cry takes over and he covers his face (expression dominates the second
-half). **Composition works partially; the expression tends to win late in the clip.**
-Clips: `pudgy/v8/eval/suites/compose/v8@550/`. The other suites (`core`, `gb`, `gd`,
-`guide`, and the v7fixed / golden comparisons) had not finished — see §6.
+| suite | n | result |
+|---|---|---|
+| `core` — controllability, FRONT + QF2_R start frames | 52 | CLIP 1-NN label accuracy: expr **0.44** Pax / **0.50** Polly (chance 0.125); motion **0.40** / **0.60** (chance 0.20). Zero-shot by view: expr 0.50 / 0.38 on both views; motion FRONT 0.6 / 1.0 → QF2_R 0.4 / 0.6 |
+| `compose` — motion × expression in one prompt | 18 | expression reads **0.94**, motion **0.44**; motion energy 12.9 = **78%** of motion-only clips |
+| `gb` — unseen grounds (lavender, sky blue) | 12 | label 1-NN 1.0 / 0.67 (chance 0.33); corner drift **1.1–1.7 / 255** |
+| `gd` — duration: walking/waving/jumping/sitting f49, neutral/laughing f57 | 12 | periodicity **−0.27 … 0.23** — no clip repeats its cycle |
+| `guide` — label-contrastive negative prompt | 16 | 1-NN 1.0, zero-shot 0.25 (chance 0.25) |
+
+**Against the v8 ship bars** (plan §5; n per cell 2–4, read ±0.1):
+
+| bar | | |
+|---|---|---|
+| controllability 1-NN ≥ 0.57 (v7's range) | ❌ except Polly motion 0.60 | the v7 range came from a different clip set — the like-for-like v7fixed `core` run is in progress (§6) |
+| holdout view ≤ 0.15 below FRONT | expr ✅, motion ❌ (−0.2 / −0.4) | |
+| composition: motion energy ≥ 80% | ❌ 78% | borderline |
+| unseen grounds: drift ≤ 5/255 | ✅ | |
+| duration: periodicity ≥ 0.5 | ❌ | long clips play one slow arc |
+| Pax/Polly parity within 10% | expr ✅, motion ❌ | |
+
+**Reading.** Tier 1 improved decisively on every label; the Tier-2 misses are concentrated on
+**motion** — controllability, holdout view, duration and composition. Visually (`compose`):
+Polly *jumping + laughing* — full hop with the laugh building; Pax *walking + angry* — scowl
+held, gait subtle; Pax *waving + crying* — the cry takes over and he covers his face.
+**The model can play motion and expression together, but the expression wins.**
+Clips: `pudgy/v8/eval/suites/<suite>/v8@550/`.
 
 ## 4. Defects found and fixed during v8
 
@@ -154,17 +184,17 @@ estimate (≤ 29 s/clip) was wrong — block-swap costs every clip, not just lon
 Code: `main` of this repo (PRs #8–#11 + this report). Weights verified byte-identical by
 downloading every file back and comparing MD5 (`archive_v8.py --verify`).
 
-## 6. Not done — what a fresh box should run
+## 6. Still running / not done
 
-1. **Tier-2 suites** on the winner: `core` (controllability, FRONT + holdout view), `gb`
-   (unseen grounds), `gd` (duration/loops), `guide` (label-contrastive negative prompt); then
-   `core` + `compose` on v7fixed and `core` on golden (≈ 20 GPU-h total):
-   `python finetune/wan/eval_v8/suite_v8.py --suite all --configs v8@550` etc.
-   Inputs needed: the winner + base + v2 high golden from Azure, keyframes from `v8/eval/keyframes`.
+1. **Comparison suites** (`/workspace/eval_v8/resume_suites.sh`, resumed 2026-09-30 15:21
+   UTC after the long-form pause): `core` on v7fixed → `compose` on v7fixed → `core` on
+   golden, each scored against v8@550. These decide whether §3.4's motion misses are a v8
+   regression or inherited. Results go to `v8/eval/suites/{core,compose}/scores.json`.
 2. v7-harness gates still open: G-F (training-frame trigger), G-M (novel frame), G-H (hold),
    G-N (idle — expected to fail, no idle footage), G-R (blocked: v2 showcase prompts missing).
-3. Composition is the weakest axis (§3.4) — the data has no motion × expression clips; this
-   is the next data ask, together with the 17 re-exports, idle, sad / scared / affectionate.
+3. Data: **21 files** still need re-exporting — the 20 from the earlier list came back in
+   iteration_5 byte-for-byte identical, plus `PAX_EXPRESSION_BLUSHING_QF2_L` (41 frames, 33
+   real). Requested again in [`Client_Data_Request_Round5.md`](../../documents/Client_Data_Request_Round5.md).
 
 ## 7. Rebuild on a new box
 
@@ -217,3 +247,31 @@ duplicate-character checks; EatingStages backgrounds are flat (grain 0.00) with 
 step at every cut. Findings: single-character beats are clean from one frame; two characters
 plus props on a shared table lose the layout ~0.8 s in (pops, morphs) unless the end frame is
 anchored. `pudgy/v8/longform/`.
+
+---
+
+## 9. Findings and next steps (2026-09-30)
+
+**Findings**
+
+1. **The faster the motion, the more data it needs.** Fast actions (running, jumping) are the
+   least accurate: highest residual held-out loss of any motion (§3.1, per action), and in
+   generated clips motion is where every Tier-2 bar fails (§3.4). The training data explains
+   it: 7.6–22 s of unique footage per action, each **one performance from nine angles**,
+   performed on the spot, longest running clip 0.71 s (< 2 strides) — and the VAE's 4×
+   temporal compression leaves a stride about 2 latent steps.
+2. **The model can combine animations in one clip** — motion and expression together
+   (`compose`), with the expression reading 94% and the motion 44%: co-existence works, the
+   balance favours the face.
+
+**Next steps** → [`Training_Approach_v9.md`](../../../training_approach/v9/Training_Approach_v9.md)
+
+1. **Longer videos** — i. with props, ii. with different backgrounds, iii. with captions for
+   long-form: mine the 101 client skits (iteration_1 + iteration_2) into shots with scene
+   captions; composite the alpha clips onto set backgrounds (v9b).
+2. **More samples of fast animation** — Round 5 data request (tiered by motion complexity,
+   ≥ 5 takes and ≈ 90 s per fast action) plus travel/speed augmentation, a high-noise LoRA,
+   and a data-scaling experiment (v9a).
+3. **Prop images** (bus, plate, pillow, …) trained incrementally with the videos they appear
+   in, with replay and a regression gate per stage (v9c).
+
