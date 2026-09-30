@@ -182,3 +182,38 @@ az storage blob download-batch --account-name pudgytraining -s pudgy -d /workspa
 # to TRAIN further: also processed/v8_joint_2096 (-> /workspace/data_v8), finetune/wan/services/cache_v8.sh,
 #   and v8/state/... for --resume; supervisor units in finetune/wan/services/
 ```
+
+---
+
+## 8. Addendum (2026-09-29 → 30): interaction, zoom-out, long-form
+
+**Interaction (untrained).** Four two-character tests with v8@550 (waving together; hug;
+waving → hug; waving from two separately placed frames): no identity blending in any, and the
+action change to a different interaction works. This is Wan's base two-character ability kept
+on-model, not learned interaction. `pudgy/v8/eval/interaction/`.
+
+**Zoom-out in movement clips.** Measured (character head line + ground-shadow width per
+frame): expressions hold size (±2%); running / walking / jumping / sitting shrink 8–28% in
+shadow width with feet planted — reads as a camera pull-back. Training clips don't do it, and
+v7 did too. Cause: Wan's default negative prompt contains "static / still / motionless frame"
+while every caption says "static … shot", so guidance pushes against a still camera. Three
+inference-side rounds (`eval_v8/experiments/run_zoomfix*.py`):
+
+| negative | zoom (shadow) | motion | issue |
+|---|---|---|---|
+| default | −11.4% | 5.96 | zoom-out |
+| static/still removed | −1.1% | −30% | sitting freezes |
+| default + anti-zoom-out | −0.5% | −19% | sitting freezes; running approaches camera |
+| default + camera-only, both directions | −5.5% | −12% | inconsistent per seed |
+| guidance 3.5 | −11.1% | same | no effect — `--guidance_scale` is low-noise only; high-noise already 3.5 |
+
+No inference-only fix is clean. **v9 fix:** replace "static … shot" in captions (e.g. "fixed
+camera, locked-off shot, the character stays the same size") and add standing→seated clips.
+
+**Long-form scenes.** LifeWithHer (14.5 s, 5 beats, plain I2V) and EatingStages (13.9 s,
+5 beats; 4 anchored on start + end reference frames, colour-graded) at 1080×1920 / 24 fps.
+Pipeline and QA: `finetune/wan/longform/README.md`. Every take passed drift / pop /
+duplicate-character checks; EatingStages backgrounds are flat (grain 0.00) with a 0.0 palette
+step at every cut. Findings: single-character beats are clean from one frame; two characters
+plus props on a shared table lose the layout ~0.8 s in (pops, morphs) unless the end frame is
+anchored. `pudgy/v8/longform/`.

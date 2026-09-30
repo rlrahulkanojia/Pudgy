@@ -1,0 +1,21 @@
+{
+ "name": "eating_stages",
+ "reference": "/workspace/Data/raw/iteration_1/30_videos/2D_PP_EatingStages_Base.mp4",
+ "shots": [
+  {
+   "clip": "/workspace/longform/takes/eating_stages/eat_1_s42_flf_cm.mp4"
+  },
+  {
+   "clip": "/workspace/longform/takes/eating_stages/eat_2_s42_flf_cm.mp4"
+  },
+  {
+   "clip": "/workspace/longform/takes/eating_stages/eat_3_s42_flf_cm.mp4"
+  },
+  {
+   "clip": "/workspace/longform/takes/eating_stages/eat_4_s42_flf_cm.mp4"
+  },
+  {
+   "clip": "/workspace/longform/takes/eating_stages/eat_5_s42_cm.mp4"
+  }
+ ]
+}

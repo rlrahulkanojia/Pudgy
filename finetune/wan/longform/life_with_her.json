@@ -1,0 +1,21 @@
+{
+ "name": "life_with_her",
+ "reference": "/workspace/Data/raw/iteration_1/30_videos/2D_PP_LifeWithHer_Base.mp4",
+ "shots": [
+  {
+   "clip": "/workspace/longform/takes/life_with_her/lwh_1_s42.mp4"
+  },
+  {
+   "clip": "/workspace/longform/takes/life_with_her/lwh_2_s42.mp4"
+  },
+  {
+   "clip": "/workspace/longform/takes/life_with_her/lwh_3_s42.mp4"
+  },
+  {
+   "clip": "/workspace/longform/takes/life_with_her/lwh_4_s42.mp4"
+  },
+  {
+   "clip": "/workspace/longform/takes/life_with_her/lwh_5_s42.mp4"
+  }
+ ]
+}

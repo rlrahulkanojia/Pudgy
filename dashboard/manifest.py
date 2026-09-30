@@ -20,6 +20,30 @@ entry is the latest experiment — the one the main page highlights.
 
 DATASETS = [
     {
+        "name": "Joint motion + expression set (v8)",
+        "used_by": ["v8"],
+        # 14 NEW clips: the iteration_5 blushing delivery. Everything else was already
+        # counted under v5-v7; iteration_5 re-sent 216 files, which md5 de-dup drops.
+        "clip_count": 14,
+        "training_clips": 2096,
+        "resolution": "1080×1080 source → 1024×1024 trained",
+        "fps": "24",
+        "frames": "13 – 57, plus 49-frame loops (4N+1)",
+        "duration": "0.54s – 2.4s",
+        "notes": "One combined set for one model: 5 movements (walking, running, waving, sitting, "
+                 "jumping) and 8 expressions — blushing is new — for both characters, 2,096 "
+                 "training clips from 193 client performances. One camera angle (26 "
+                 "performances) is held back to test the model on clips it was not trained on. "
+                 "New this round: smooth 2-second looped versions of walking, waving, jumping and "
+                 "sitting, made only where the client's cycle joins seamlessly. While building it "
+                 "we found 21 client files that are missing frames — the decoder silently repeats "
+                 "the previous frame, which puts a stutter in the motion — so those clips are cut "
+                 "before the first missing frame (a re-export has been requested). Known gaps: "
+                 "confused and happy were delivered at one short length only (48 clips each vs 192), "
+                 "and there is still no standing-idle, sad, scared or two-character interaction footage "
+                 "in training.",
+    },
+    {
         "name": "Motion + expression primitives (v7)",
         "used_by": ["v7"],
         # 140 NEW clips from the iteration_4 delivery. The other 68 sources are the
@@ -117,6 +141,42 @@ DATASETS = [
 ]
 
 TRAINING_APPROACHES = [
+    {
+        "id": "v8",
+        "name": "Joint Motion + Expression Wan 2.2",
+        "base_model": "Wan2.2-I2V-A14B, fine-tuned on top of v7 (both v7 models, combined correctly)",
+        "status": "Trained · best checkpoint selected · long-form scenes produced",
+        "status_color": "green",
+        "thesis": "Build on everything v7 learned, but as one model for movement and expression "
+                  "instead of two that interfere; add blushing and looped movement; and choose the "
+                  "best checkpoint with a test that measures whether the model understands each "
+                  "label, on a camera angle held out of this round's training.",
+        "summary": [
+            "**Better at both jobs than v7's specialists.** On held-out test clips, the single v8 "
+            "model reconstructs expressions better than v7's expression model and movements better "
+            "than v7's movement model (denoising error 0.0030 vs 0.0032, and 0.0027 vs 0.0028).",
+            "**Recognisable labels.** On clips from a camera angle held out of v8's training, v8 picks "
+            "the right expression 81% of the time (chance: 12.5%) and the right movement 80% (chance: "
+            "20%), up from 63% and 60% for the v7 starting point. The new blushing expression is "
+            "recognised for both characters.",
+            "**A problem in v7 found and fixed.** Loading v7's two models together counted a shared "
+            "component twice — a 76% error that made the combined model about 10× worse at "
+            "reconstructing real clips. v8 starts from the corrected combination.",
+            "**Most of the learning happens early.** The biggest gains came in the first 300 of 600 "
+            "training steps; the chosen checkpoint is step 550.",
+            "**Long-form scenes.** Two of the client's skits, LifeWithHer (14.5 s) and EatingStages "
+            "(13.9 s), were re-made shot by shot from the storyboards at 1080×1920, 24 fps. Each "
+            "shot starts from the matching frame of the original skit; shots with several props on "
+            "a shared table are also anchored on the original's end frame to keep the props steady.",
+            "Known limits: in some movement clips the camera slowly pulls back (a zoom-out) — "
+            "traced to the base model and the standard negative prompt, and planned for a "
+            "training-data fix; when a movement and an expression are asked for together, the "
+            "expression tends to win later in the clip; two-character interaction works from the "
+            "base model's own ability but has not been trained yet.",
+        ],
+        "video_prefix": "v8",
+        "video_groups": ["Long-form_scenes", "Expressions", "Movements", "Motion_and_expression", "Interaction"],
+    },
     {
         "id": "v7",
         "name": "Motion + Expressions Wan 2.2",

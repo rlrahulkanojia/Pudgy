@@ -45,7 +45,9 @@ def cached_signed_url(blob_name):
 # step count reads as a stalled run.
 @st.cache_data(ttl=60, show_spinner=False)
 def cached_live_status():
-    return azure_utils.read_json("v7/status.json")
+    # The v8 run is finished and publishes no live status, so this renders nothing
+    # (the v7 JSON would show a long-finished run as live).
+    return azure_utils.read_json("v8/status.json")
 
 
 def _pretty_name(display_name):
@@ -75,7 +77,7 @@ def render_outputs(approach):
         for group in approach["video_groups"]:
             prefix = f"{approach['video_prefix']}/{group}"
             videos = cached_list_videos(prefix)
-            st.markdown(f"#### {group} ({len(videos)})")
+            st.markdown(f"#### {group.replace('_', ' ')} ({len(videos)})")
             render_video_grid(videos)
     else:
         videos = cached_list_videos(approach["video_prefix"])
@@ -109,7 +111,7 @@ def render_live_training():
     status = cached_live_status()
     if not status or not status.get("runs"):
         return
-    st.subheader("Live training — v7")
+    st.subheader("Live training")
     st.caption(f"Published {status.get('generated_utc', '?')} UTC by the GPU box.")
 
     # What is happening RIGHT NOW. Training finishing is not the end of the work, and
