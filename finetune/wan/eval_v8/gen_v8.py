@@ -45,6 +45,8 @@ def run(config, jobs, outdir, dry=False):
         line = f"{j['prompt']} --i {j['start']} --f {j['frames']} --d {j['seed']}"
         if j.get("neg"):
             line += f" --n {j['neg']}"
+        if j.get("end"):                       # first+last-frame (FLF2V): pins the final state of the shot
+            line += f" --ei {j['end']}"
         lines.append(line)
     pf.write_text("\n".join(lines) + "\n")
     cmd = [str(PY), "src/musubi_tuner/wan_generate_video.py",
@@ -59,6 +61,8 @@ def run(config, jobs, outdir, dry=False):
            "--guidance_scale", str(GUIDE), "--attn_mode", "sdpa",
            "--fp8", "--fp8_scaled", "--fp8_t5", "--vae_cache_cpu",
            "--from_file", str(pf), "--save_path", str(raw), "--output_type", "video"]
+    # Opt-in, for running beside another GPU job: e.g. GEN_EXTRA="--blocks_to_swap 30 --lazy_loading"
+    cmd += os.environ.get("GEN_EXTRA", "").split()
     env = dict(os.environ, PYTORCH_CUDA_ALLOC_CONF="expandable_segments:True",
                HF_HUB_OFFLINE="1", TRANSFORMERS_OFFLINE="1")
     (raw / "cmd.json").write_text(json.dumps(cmd, indent=1))

@@ -72,7 +72,8 @@ def signed_url(blob_name):
         permission=BlobSasPermissions(read=True),
         expiry=expiry,
     )
-    return f"https://{_account_name()}.blob.core.windows.net/{CONTAINER}/{blob_name}?{sas}"
+    from urllib.parse import quote
+    return f"https://{_account_name()}.blob.core.windows.net/{CONTAINER}/{quote(blob_name)}?{sas}"
 
 
 def read_json(blob_name):
