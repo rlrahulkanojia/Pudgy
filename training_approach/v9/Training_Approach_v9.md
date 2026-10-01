@@ -12,7 +12,7 @@ each with its own measurement before any training starts.
 | **Data** | three new sets: `v9_motion` (fast motion, Round 5 + augmentation), `v9_scenes` (mined from the 101 client skits), `v9_props` (prop images + the shots they appear in) |
 | **Order** | Phase 0 (measure, no training) → **v9a** fast motion → **v9b** scenes → **v9c** props, incremental |
 | **Supersedes** | [v8](../v8/Training_Approach_v8.md) — results in [`REPORT_v8.md`](../../docs/training_reports/v8/REPORT_v8.md) |
-| **Status** | plan (2026-09-30). v9a is blocked on the Round 5 data ([`Client_Data_Request_Round5.md`](../../docs/documents/Client_Data_Request_Round5.md)); Phase 0 and the skit mining can start now |
+| **Status** | plan (2026-09-30; client data requested 2026-10-01, §2.1). v9a is blocked on the Round 5 data ([`Client_Data_Request_Round5.md`](../../docs/documents/Client_Data_Request_Round5.md)); Phase 0 and the skit mining can start now |
 
 ---
 
@@ -89,6 +89,42 @@ The three next steps agreed after v8, and where each lands:
 | **1. Longer videos** — i. with props, ii. with different backgrounds, iii. with captions for long-form | scene mining + compositing + scene captions | `v9_scenes` | **v9b** |
 | **2. More samples of fast animation** (running, jumping, …) | Round 5 request + augmentation | `v9_motion` | **v9a** |
 | **3. Prop images** (bus, plate, pillow, …) fed incrementally with the videos they appear in | prop library, staged training with replay | `v9_props` | **v9c** |
+
+### 2.1 What the client has been asked for (2026-10-01) — and what it unlocks
+
+More data has been requested: **fast-animation videos** and **longer clip durations** (full
+spec: [`Client_Data_Request_Round5.md`](../../docs/documents/Client_Data_Request_Round5.md)).
+
+| ask | unlocks | why it matters |
+|---|---|---|
+| **fast animation** (run, chase, jump sequences, …) | **v9a** — the run is blocked on it | running has 11.3 s of unique footage, all one performance; F1 says fast motion needs the most data |
+| **longer durations** (3–5 s, ≥ 3 cycles) | **v9a** (cycles, f81 rung) and **v9b** (full shots) | longest running clip today is 0.71 s (< 2 strides): the model has never seen a stride repeat — the `gd` periodicity failure (≤ 0.23 vs 0.5) |
+
+**What makes the delivery count** (confirm with the client):
+1. **Different performances, not more angles** — 5 runs from 4 angles beat 1 run from 9. Every
+   action so far is one take re-rendered from nine cameras, so more footage has not meant more
+   variety.
+2. **Some clips that cross the frame**, not only in-place — scenes need travel (and the
+   high-noise LoRA needs it to learn anything).
+3. **Same format**: 1080×1080, 24 fps, alpha (ProRes 4444) — so the travel/speed augmentation
+   (§3.1) and compositing (§3.2) work on it unchanged.
+4. **Transitions** (idle→run→stop, walk→run) — the joins long-form scenes need.
+5. **`<TAKE>` in the filename** — so takes are told apart and some held out for evaluation.
+
+**How long clips are used.** One generated shot is ≤ 81 frames (3.4 s at 24 fps); clips up to
+that train as-is, longer clips are cut into several windows (more cycles, plus the transitions
+inside them). A 15 s scene is still a chain of shots — longer data makes each shot better, it
+does not remove the chaining.
+
+**How much is enough is measured, not assumed.** The ≈ 90 s per fast action (≈ 8× today's
+running) is a judgement; the data-scaling experiment (§5.3) trains on 25 / 50 / 100% of the
+new takes and shows where the gains flatten, which sizes any follow-up request.
+
+**Not covered by this ask:** prop images (v9c — client asset art preferred), keyframes for
+new scenes (§7), and the **21 damaged files**, which still need a re-export.
+
+**While the data is pending** (no client data needed): Phase 0 (§5.1), skit mining (§3.2),
+travel/speed augmentation (§3.1) — so v9a can start on delivery.
 
 ---
 
