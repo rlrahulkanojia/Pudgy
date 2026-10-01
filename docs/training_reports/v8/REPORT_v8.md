@@ -197,11 +197,24 @@ estimate (≤ 29 s/clip) was wrong — block-swap costs every clip, not just lon
 | `v8/eval/dcls/` | Tier-1 JSON for every config above (per-clip rows) |
 | `v8/eval/holdout/`, `v8/eval/keyframes/` | classifier clip set + index; start frames (incl. holdout view, unseen grounds) |
 | `v8/eval/suites/` | generated clips + `meta.json`; `winner.json`; gate / final / baseline logs |
+| `v8/eval/interaction/`, `v8/eval/zoomfix/` | two-character tests; zoom-out experiments (§8) |
+| `v8/eval/holdout/cache/` | the classifier set's latent + text cache (saves rebuilding it) |
+| `v8/longform/final/` | the two long-form scenes, with and without soundtrack |
+| `v8/longform/workdir/` | the long-form working folder: keyframes, every take, takes JSONs, QA sheets, logs, scripts (as run) |
+| `v8/cache/latents_v8/` | the 20 GB training latent + text cache for `v8_joint_2096` (rebuild: 2.5 h) |
 | `processed/v8_joint_2096/` | the dataset (MD5-verified) |
+| `raw/iteration_1` … `_5` | every client delivery (iteration_2's 72 skits live only here) |
 | `v2/weights/curated/`, `v7/weights/` | the inputs the v8 base was built from |
 
-Code: `main` of this repo (PRs #8–#11 + this report). Weights verified byte-identical by
-downloading every file back and comparing MD5 (`archive_v8.py --verify`).
+Code: `main` of this repo (PRs #8–#17). Weights verified byte-identical by downloading every
+file back and comparing MD5 (`archive_v8.py --verify`, last run 2026-10-01: 570/570 files,
+15/15 weights).
+
+**Box decommission check (2026-10-01).** Every local file was compared with Azure by name
+and size before deletion: raw (602 files), processed (2,119), v7/v2 inputs, all eval outputs,
+the long-form folder and the latent cache are on Azure. Deliberately *not* uploaded: the Wan
+base models and CLIP/DINOv2 (public, re-downloaded by `setup_wan_env.sh`), the venvs, and
+secrets (`.env`).
 
 ## 6. Still running / not done
 
@@ -224,7 +237,8 @@ az storage blob download-batch --account-name pudgytraining -s pudgy -d /workspa
 # flatten into the paths eval_v8/common.py expects:
 #   /workspace/wan_output/pudgy-v8-joint-lownoise/, /workspace/wan_output/v7_baseline/pudgy-v7-fixed-combined.safetensors,
 #   /workspace/wan_output/v2_golden/lora_{low,high}noise_GOLDEN_ep40.safetensors
-# to TRAIN further: also processed/v8_joint_2096 (-> /workspace/data_v8), finetune/wan/services/cache_v8.sh,
+# to TRAIN further: also processed/v8_joint_2096 (-> /workspace/data_v8), and either v8/cache/latents_v8
+#   (-> /workspace/wan_cache/latents_v8, skips the 2.5 h rebuild) or finetune/wan/services/cache_v8.sh,
 #   and v8/state/... for --resume; supervisor units in finetune/wan/services/
 ```
 
