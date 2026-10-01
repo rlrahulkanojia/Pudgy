@@ -45,14 +45,27 @@ its action text) and you get waving, with the same character, camera and backgro
 
 - **Always say the colour.** Without "blue" or "pink" the model can mix the two characters up.
 - **Keep "pink" out of Pax prompts.** Pax's blush is described as "rosy" for this reason.
-- **Loops:** walking, waving, jumping and sitting can repeat smoothly for about 2 seconds. Add
-  "repeating in a continuous loop" after the label. Running doesn't loop.
-- **One thing at a time works best.** The model learned movements and expressions separately.
-  Combining them ("walking while angry") hasn't been taught, and we test it as an experiment.
+- **Loops:** you can ask for walking, waving, jumping and sitting "repeating in a continuous
+  loop", but in tests 2-second clips played the action once, slowly, rather than repeating it.
+  Running doesn't loop.
+- **One thing at a time works best.** Combining a movement and an expression ("walking while
+  angry") works partly: the expression comes through almost always, the movement in under half
+  the clips, and the expression tends to take over late in the clip.
 - **Weaker areas:** *confused* and *happy* have less footage (a quarter of the others), so
   expect them to be less reliable.
 - **Not included yet:** two-character scenes (hugging, waving together), sad, scared,
   and a relaxed "standing idle".
+
+## How v8 did
+
+- **Best model so far.** On the same test prompts, v8 is as good as or better than both earlier
+  models (v7 and the v2 "golden") at producing the expression or movement asked for.
+- **Expressions are its strength;** a new one, *blushing*, was learned on the first try.
+- **Fast movement is its weakness** — running and jumping are the least accurate. The earlier
+  models are weaker still here, so it is the footage that limits it: each movement is one
+  short performance, filmed on the spot. More movement footage is requested in
+  [Round 5](../../docs/documents/Client_Data_Request_Round5.md); the next run is planned in
+  [`v9`](../v9/Training_Approach_v9.md).
 
 ## Where things are
 

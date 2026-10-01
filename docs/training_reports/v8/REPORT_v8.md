@@ -1,8 +1,8 @@
 # v8 — joint motion + expression LoRA on the combined v7: run report
 
 **Run** 2026-09-26 20:03 → 2026-09-29 05:32 UTC · **Hardware** 1× A100 80GB PCIe (Vast.ai, not
-persistent) · **Status** training complete, Tier 1 complete, **Tier 2 complete for the winner**
-(§3.4); v7fixed / golden comparison suites running (§6). Updated 2026-09-30 — findings and
+persistent) · **Status** training complete, Tier 1 complete, **Tier 2 complete** incl. the v7fixed /
+golden comparisons (§3.4, finished 2026-10-01 04:55 UTC). Updated 2026-09-30 — findings and
 next steps in §9, plan in [`Training_Approach_v9.md`](../../../training_approach/v9/Training_Approach_v9.md).
 Plan: [`Training_Approach_v8.md`](../../../training_approach/v8/Training_Approach_v8.md) ·
 plain-language: [`README.md`](../../../training_approach/v8/README.md),
@@ -132,12 +132,31 @@ past the specialists.
 
 | bar | | |
 |---|---|---|
-| controllability 1-NN ≥ 0.57 (v7's range) | ❌ except Polly motion 0.60 | the v7 range came from a different clip set — the like-for-like v7fixed `core` run is in progress (§6) |
+| controllability 1-NN ≥ 0.57 (v7's range) | ❌ except Polly motion 0.60 | the v7 range came from a different clip set; like-for-like, v8 beats v7fixed and golden (below) |
 | holdout view ≤ 0.15 below FRONT | expr ✅, motion ❌ (−0.2 / −0.4) | |
 | composition: motion energy ≥ 80% | ❌ 78% | borderline |
 | unseen grounds: drift ≤ 5/255 | ✅ | |
 | duration: periodicity ≥ 0.5 | ❌ | long clips play one slow arc |
 | Pax/Polly parity within 10% | expr ✅, motion ❌ | |
+
+**Comparison** (same 52 `core` / 18 `compose` prompts, seeds and start frames; CLIP 1-NN
+label accuracy, the primary metric):
+
+| | golden | v7fixed | **v8@550** |
+|---|---|---|---|
+| Pax expression | 0.44 | 0.19 | **0.44** |
+| Polly expression | 0.44 | 0.38 | **0.50** |
+| Pax motion | 0.20 | 0.30 | **0.40** |
+| Polly motion | 0.50 | 0.50 | **0.60** |
+| `compose` motion / expression (zero-shot) | — | 0.39 / 0.89 | **0.44 / 0.94** |
+| `compose` motion energy | — | 12.6 | 12.9 |
+
+v8 is **best or tied in every cell**, so the bar misses above are **inherited, not a v8
+regression**: golden and v7fixed miss the same bars, by more. The steps are small (n = 10
+per motion cell → ±0.1–0.2; zero-shot is mixed, e.g. Pax motion 0.7 v7fixed vs 0.5 v8), and
+golden ties v8 on Pax expression — the generated-clip probe separates the configs far less
+than Tier 1 does. Motion is the weakest axis for **every** model trained on this data.
+Clips: `pudgy/v8/eval/suites/{core,compose}/{golden,v7fixed,v8@550}/`.
 
 **Reading.** Tier 1 improved decisively on every label; the Tier-2 misses are concentrated on
 **motion** — controllability, holdout view, duration and composition. Visually (`compose`):
@@ -186,13 +205,9 @@ downloading every file back and comparing MD5 (`archive_v8.py --verify`).
 
 ## 6. Still running / not done
 
-1. **Comparison suites** (`/workspace/eval_v8/resume_suites.sh`, resumed 2026-09-30 15:21
-   UTC after the long-form pause): `core` on v7fixed → `compose` on v7fixed → `core` on
-   golden, each scored against v8@550. These decide whether §3.4's motion misses are a v8
-   regression or inherited. Results go to `v8/eval/suites/{core,compose}/scores.json`.
-2. v7-harness gates still open: G-F (training-frame trigger), G-M (novel frame), G-H (hold),
+1. v7-harness gates still open: G-F (training-frame trigger), G-M (novel frame), G-H (hold),
    G-N (idle — expected to fail, no idle footage), G-R (blocked: v2 showcase prompts missing).
-3. Data: **21 files** still need re-exporting — the 20 from the earlier list came back in
+2. Data: **21 files** still need re-exporting — the 20 from the earlier list came back in
    iteration_5 byte-for-byte identical, plus `PAX_EXPRESSION_BLUSHING_QF2_L` (41 frames, 33
    real). Requested again in [`Client_Data_Request_Round5.md`](../../documents/Client_Data_Request_Round5.md).
 

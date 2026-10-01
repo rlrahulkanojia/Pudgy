@@ -49,7 +49,7 @@ motion energy drops to 78% of motion-only clips. Visually the expression takes o
 second half (Pax waving → crying covers his face). Co-existence works; the balance favours
 the face.
 
-### 1.2 What v8's ship bars say (Tier 2, winner only — v7fixed/golden comparisons still running)
+### 1.2 What v8's ship bars say (Tier 2)
 
 | bar | measured (v8@550) | |
 |---|---|---|
@@ -61,9 +61,11 @@ the face.
 | parity within 10% | expr ✅, motion ❌ (0.40 vs 0.60) | ❌ motion |
 
 Tier 1 (likelihood on held-out clips) improved decisively; Tier 2 (what generated clips look
-like) is weakest exactly on **motion** — the same message as F1. Whether this is a v8
-regression or inherited is answered by the v7fixed `core` run in progress; the v7 bar
-(0.57–0.71) was measured on a different clip set, so read these as indicative until then.
+like) is weakest exactly on **motion** — the same message as F1. **Inherited, not a v8
+regression:** on the same prompts v8 is best or tied in every cell (motion 1-NN Pax 0.20 →
+0.30 → **0.40**, Polly 0.50 → 0.50 → **0.60** for golden → v7fixed → v8; `compose` motion 0.39
+→ 0.44), so every model trained on this data misses the motion bars. More data, not a
+different recipe, is what v9a tests.
 
 ### 1.3 → v9 decisions
 
