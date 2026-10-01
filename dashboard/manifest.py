@@ -145,7 +145,7 @@ TRAINING_APPROACHES = [
         "id": "v8",
         "name": "Joint Motion + Expression Wan 2.2",
         "base_model": "Wan2.2-I2V-A14B, fine-tuned on top of v7 (both v7 models, combined correctly)",
-        "status": "Trained · best checkpoint selected · long-form scenes produced",
+        "status": "Trained · fully evaluated · long-form scenes produced · v9 planned",
         "status_color": "green",
         "thesis": "Build on everything v7 learned, but as one model for movement and expression "
                   "instead of two that interfere; add blushing and looped movement; and choose the "
@@ -162,6 +162,22 @@ TRAINING_APPROACHES = [
             "**A problem in v7 found and fixed.** Loading v7's two models together counted a shared "
             "component twice — a 76% error that made the combined model about 10× worse at "
             "reconstructing real clips. v8 starts from the corrected combination.",
+            "**Best model so far on generated clips too.** On the same test prompts, seeds and start "
+            "frames, v8 produces the asked-for expression or movement as often as or more often than "
+            "both earlier models — e.g. movement: Pax 40% (v7: 30%, v2: 20%), Polly 60% (v7 and v2: "
+            "50%). Small test sets (10 clips per cell), so read these as ±10–20 points.",
+            "**Finding 1 — the faster the movement, the more footage it needs.** Running and jumping "
+            "are the least accurate movements, and they are weaker still in the earlier models — so "
+            "the limit is the footage, not the training: each movement is one short performance "
+            "(running: 0.7 s, under two strides) filmed from nine angles, always on the spot.",
+            "**Finding 2 — two animations in one clip works, unevenly.** Asked for a movement and an "
+            "expression together, the expression comes through in 94% of clips and the movement in "
+            "44%; the expression tends to take over later in the clip.",
+            "**Next steps (v9).** (1) Longer scenes — with props, different backgrounds, and captions "
+            "written for whole scenes, cut from the client's 101 finished skits. (2) Much more footage "
+            "of fast movement — several different takes per action, 3–5 s clips, characters crossing "
+            "the frame (Round 5 data request). (3) Images of the props that appear in scenes (bus, "
+            "plate, pillow, …), added a few at a time together with the clips they appear in.",
             "**Most of the learning happens early.** The biggest gains came in the first 300 of 600 "
             "training steps; the chosen checkpoint is step 550.",
             "**Long-form scenes.** Two of the client's skits, LifeWithHer (14.5 s) and EatingStages "
@@ -169,10 +185,10 @@ TRAINING_APPROACHES = [
             "shot starts from the matching frame of the original skit; shots with several props on "
             "a shared table are also anchored on the original's end frame to keep the props steady.",
             "Known limits: in some movement clips the camera slowly pulls back (a zoom-out) — "
-            "traced to the base model and the standard negative prompt, and planned for a "
-            "training-data fix; when a movement and an expression are asked for together, the "
-            "expression tends to win later in the clip; two-character interaction works from the "
-            "base model's own ability but has not been trained yet.",
+            "traced to the base model and the standard negative prompt, with a caption fix planned "
+            "for v9; longer movement clips play the action once slowly rather than repeating it; "
+            "two-character interaction works from the base model's own ability but has not been "
+            "trained yet.",
         ],
         "video_prefix": "v8",
         "video_groups": ["Long-form_scenes", "Expressions", "Movements", "Motion_and_expression", "Interaction"],
