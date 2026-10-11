@@ -1,7 +1,7 @@
 # MiniMax H3: can it be the base for the Pudgy Penguins LoRA work?
 
 **Date:** 2026-10-11
-**Status:** desk research only. No GPU job was run and nothing was paid for.
+**Status:** desk research only. No GPU job was run and nothing was paid for. Revised the same day: the per-label lengths (§4.1) were re-counted from the raw files, and the shift test (§6.3, §6.5) was corrected. The experiment plan is [`expv2-minimax-h3/`](../../../expv2-minimax-h3/README.md).
 **Licence:** set aside at the user's request (2026-10-11). The verdict, pros/cons and gates below are **technical only**. The licence findings are kept, for the record only, in Appendix A.
 **Scope:** MiniMax H3 (open weights released 2026-07-28 to 08-02), compared with the bases and recipes of v1–v9 and the standalone LTX-2.5 run. The Kandinsky experiment is left out on purpose.
 
@@ -35,7 +35,7 @@ Lesson tags such as A6, B11 or D4 point to the index of v1–v9 lessons, each wi
 | Question | Answer | Confidence |
 |---|---|---|
 | Is H3 a better *base model* than what v2–v9 used? | **Probably yes on general I2V quality.** LMArena I2V ranks it #1 (Elo 1495). Wan 2.2 A14B scores 1170 there, which works out to an **≈87% expected preference** for H3. On Artificial Analysis silent I2V the margin is 1356 vs 1107, **≈81%**. It is the top open-weight model on both boards. | Medium. These are general-content votes, not 2D-cartoon votes, and the AA entry was probably run through MiniMax's hosted pipeline (§3) |
-| Does it fit our current data? | **Partly.** H3's shortest legal clip is 22 frames. **144 of 208 source clips (69%) reach 22 frames, but only 18 (9%, all `neutral`) reach 39**, so a run on today's data is in practice a **0.92 s (22-frame) model**. **4 of 13 labels have no clip that long**: walking (13 f), running (17 f), happy (21 f), confused (21 f). Walking can be loop-tiled as in v8 and happy/confused padded by one frame; running needs Round 5's 3–5 s takes (§4.1) | High. Counted from the v7 manifest's `source_frames` |
+| Does it fit our current data? | **Partly.** H3's shortest legal clip is 22 frames. Of 227 single-character sources, **145 (64%) reach 22 frames, 67 (30%) reach 39** (angry, laughing, blushing, neutral) **and 18 (8%, `neutral`) reach 56**. Every label is present only at 22, so a run on today's data is in practice a **0.92 s (22-frame) model**. **4 of 13 labels have no clip that long**: walking (16 f), running (17 f), happy (21 f), confused (21 f). Sitting has missing frames in 13 of 18 sources, which leaves **5**. Walking can be loop-tiled as in v8, and 21-frame clips padded by one frame; running needs Round 5's 3–5 s takes (§4.1) | High. Counted from the raw files' decoded frame timestamps, de-duplicated by MD5 |
 | Can it be fine-tuned on our hardware? | **Yes, on 1× A100 80 GB.** Use the pruned AdaLN base (40 GB bf16 / 21 GB int8). One public first-frame I2V LoRA was trained on exactly that card at **12.5 s/step at 768²×73 frames** (§6.4) | Medium–high |
 | Will a LoRA hold its quality? | **Unknown, and this is the main technical risk.** Only **CFG-distilled** weights are public. Plain LoRA training "de-distils" them: washed-out output and lost prompt adherence, reported by every trainer. Workarounds exist, but degradation is still reported at 3–5k steps (§6.1) | Medium |
 | Will the VAE keep Pudgy's thin outlines and flat grounds? | **Unknown, and risky.** Its spatial compression is 16×, leaving **2.1–2.7× fewer latent values per pixel than Wan's VAE**. There are open reports of line art fading (#73) and colour shift on plain backgrounds (HF #78). It must be measured on our frames before anything else (§4.4) | Medium |
@@ -45,7 +45,7 @@ Lesson tags such as A6, B11 or D4 point to the index of v1–v9 lessons, each wi
 - Run it in this order; each step stops the experiment if it fails:
   1. **VAE gate (G0.1):** Pax and Polly round-trip through H3's VAE at 768² and hold their outlines at 4× zoom (the ltx25 §1 method), with flat-ground drift ≤ 2/255. This is the cheapest test, needs no training, and decides the most.
   2. **Zero-shot probe (G0.4):** on unseen start frames, at 22/39/56 frames and 3 seeds, measure cadence (on ones or twos?), 3D drift and first-frame drift.
-  3. **First LoRA on today's data:** a 22-frame corpus covering 12 of 13 labels (running excluded).
+  3. **First LoRA on today's data:** a 22-frame corpus covering 12 of 13 labels (running excluded; sitting thin at 7 usable sources).
   4. **Round 5 re-run:** a second run once Round 5's longer takes arrive. This is where H3's 39–56-frame buckets and its native 4–15 s output can actually be used.
 - Expected cost: ≈6–14 A100-hours for a v8-sized run, against v8's 57.5 h (§6.4). That is an estimate, to be re-measured in G0.6.
 
@@ -137,22 +137,33 @@ Applied to our data:
 
 Sources: `training_approach/v9/Training_Approach_v9.md:30–34`; `training_approach/v8/Training_Approach_v8.md:135–154`.
 
-**Per label, from the source clips** (v7 manifest `source_frames`, 208 source clips, `derived_from` rows excluded; blushing arrived later in iteration_5 and is mostly ≥ 29 f):
+**Per label, from the raw files.**
+- Method: `Data/raw/iteration_3–5`, 240 unique files by MD5. The turnaround and the 12 two-character clips are excluded, leaving 227 sources.
+- "Usable" means the frames before the first missing one, read from decoded frame timestamps (the `prep_v8.real_frame_gap` method). That method finds the same 21 damaged files v8 found.
+- An earlier draft of this table used the v7 manifest's `source_frames`. Those values are v7's 4k+1 rungs, not true lengths, and v7 never detected missing frames. That draft therefore under-counted angry, laughing and neutral and over-counted sitting.
 
-| Label | Sources | Source length (f) | ≥22 | ≥39 | ≥56 | Share of the performance kept at 22 f |
+| Label | Sources | Usable length (f) | ≥22 | ≥39 | ≥56 | Share of the performance kept at 22 f |
 |---|---|---|---|---|---|---|
-| neutral | 18 | 57 | 18 | 18 | 18 | all (56 f bucket) |
-| angry, laughing | 18 + 18 | 37 | 36 | 0 | 0 | 59% |
-| crying, surprised | 18 + 18 | 29 | 36 | 0 | 0 | 76% |
+| neutral | 18 | 60 | 18 | 18 | 18 | 37% (56 f keeps 93%) |
+| angry | 18 | 40 | 18 | 18 | 0 | 55% (39 f keeps 98%) |
+| laughing | 18 | 39 | 18 | 18 | 0 | 56% (39 f keeps all) |
+| blushing | 14 | 41 (one source 32) | 14 | 13 | 0 | 54% (39 f keeps 95%) |
 | jumping | 18 | 33 | 18 | 0 | 0 | 67% (the landing may be cut) |
-| sitting, waving | 18 + 18 | 25 | 36 | 0 | 0 | 88% |
-| happy, confused | 14 + 16 | 21 | 0 | 0 | 0 | — (one frame short) |
+| crying, surprised | 18 + 18 | 31, 30 | 36 | 0 | 0 | 71%, 73% |
+| waving | 18 | 26 | 18 | 0 | 0 | 85% |
+| sitting | 18 | 28, but **13 sources have gaps** at frames 13–25 | **5** (7 at ≥ 21) | 0 | 0 | 79% |
+| happy | 14 | 21 | 0 | 0 | 0 | — (one frame short) |
+| confused | 18 | 21 (4 damaged: 5, 8, 17, 17) | 0 (14 at 21) | 0 | 0 | — (one frame short) |
 | running | 18 | 17 | 0 | 0 | 0 | — |
-| walking | 16 | 13 | 0 | 0 | 0 | — |
-| **Total** | **208** | | **144 (69%)** | **18 (9%)** | **18 (9%)** | |
+| walking | 19 | 16 (one file undecodable) | 0 | 0 | 0 | — |
+| **Total** | **227** | | **145 (64%)** | **67 (30%)** | **18 (8%)** | |
+
+Two consequences:
+- **The 22-frame floor is the only length every trained label shares.** The 39- and 56-frame rungs exist for four expressions only. That is allowed, since length must not predict the label only at the shared floor (B11), but it means every motion trains at 22 frames.
+- **Sitting is the new thin class.** It has 5 sources at 22 frames, or 7 if a single held frame is allowed. Neither sitting `QF2_R` clip (17 and 21 frames) reaches 22.
 
 **Ways round it, and what each costs**
-- **Padding with held frames:** teaches "stop moving", the failure we keep fighting (ltx25 waving decay; v8 compose motion 0.44). **One** held frame (happy and confused, 21 → 22) is negligible next to the source's own 37.9% median frozen share. Five held frames (running, 17 → 22) are not.
+- **Padding with held frames:** teaches "stop moving", the failure we keep fighting (ltx25 waving decay; v8 compose motion 0.44). **One** held frame (happy, confused and two sitting sources, 21 → 22) is negligible next to the source's own 37.9% median frozen share. Five held frames (running, 17 → 22) are not.
 - **Loop-tiling:** works only for walking.
 - **Waiting for Round 5:** the client was asked for 3–5 s clips with ≥3 cycles (`docs/documents/Client_Data_Request_Round5.md:48–58`). Those clips would land in H3's range (73–124 frames). Until then H3 trains almost entirely at 22 frames, about **5.6× below its 124-frame trained floor**.
 
@@ -260,14 +271,14 @@ The guidance loss costs **~1.5× step time** (V, musubi PR #1045). Alternatively
 | Setting | Value | Why / source |
 |---|---|---|
 | Base | Pruned FL2VA, bf16 40 GB (or int8-ConvRot 21 GB; A100 has int8 tensor cores but **no FP8**) | V |
-| Lengths | 22 / 39 / 56 frames, cut **before the first missing frame** (A6). Walking loop-tiled to 22 (v8 seam 0.62–1.04); happy and confused padded by one held frame; running excluded until Round 5 | V grid; §4.1 |
+| Lengths | 22 / 39 / 56 frames, cut **before the first missing frame** (A6). Walking loop-tiled to 22 (v8 seam 0.62–1.04); 21-frame sources (happy, confused, two sitting) padded by one held frame; running excluded until Round 5 | V grid; §4.1 |
 | Resolution | **768²**, or 768×1344 for 9:16 work; 512² only as an explicit off-distribution arm | §4.2 |
 | Grounds and holdout | As v8: 4 flat grounds composited from alpha, 2 held out; `QF2_R` held out; written lossless | B9, B15; alvdansen "composite onto white", "encode losslessly" |
 | Captions | Official three-field format + I2V line, "2D-animated" style word, colour words, `overall_soundscape: N/A` and `non_diegetic_music: N/A`; frozen between train and eval | §4.5 |
 | LoRA | **Rank 32** on `qkv_proj, out_proj, fc1, fc2`, no AdaLN = **155.1M params** (our arithmetic matches the 155M reported in DiffSynth PR #1680) | V |
 | Optimiser | adamw8bit, LR **5e-5 → test 1e-4**, cosine to 10%, accumulation 8 | v8 D4 lesson; DiffSynth and pablodawson used 1e-4 |
 | Distillation | `--training_cfg_scale 4` in both stages, *or* the DeCFG adapter (A/B); never both untested | §6.1 |
-| Timestep shift | **Unresolved:** DiffSynth trains at 2.22 ("empirical"; one user argues "at least 5"); musubi and ai-toolkit at the official 12/3 | Settle it at Phase 0 on base-model likelihood, as expv-style G0 measurements do |
+| Timestep shift | **Unresolved:** DiffSynth trains at 2.22 ("empirical"; one user argues "at least 5"); musubi and ai-toolkit at the official 12/3 | Settle it with two short pilot LoRAs (2.22 vs 12) scored by Tier 1. Base-model likelihood cannot settle it: the per-timestep loss does not depend on the shift, only the weighting over timesteps does |
 | Audio | `--audio_loss_weight 0` | §4.6 |
 | Steps | Budget in **exposures per performance** (v8 ≈185 plateaued; ltx25 ≈500 memorised); save every 50; expect best ≤ 2,000 samples | v8, ltx25, #1585 |
 | Inference | CFG 1, shift 12/3, ≥50 steps (the default 50-step grid has only one evaluation below σ = 0.2, which matters for thin lines), generate 22/39/56 and trim, strip audio, write at CRF ≤ 16 | V; musubi #1057 |
@@ -297,7 +308,7 @@ These H3 timings are **extrapolations, not measurements**. G0.6 must re-measure 
 2. **Zero-shot probe (G0.4):**
    - Unseen start frames, 3 seeds, 22/39/56 frames.
    - Measure the duplicated-frame rate (on twos?), 3D drift, outline fidelity, first-frame drift (frame 0 is *not* pinned), and motion energy against source (G0.5).
-3. **Shift A/B:** base-model likelihood at shift 2.22 vs 12 on held-out clips.
+3. **Shift A/B:** two 100-step pilot LoRAs, one at shift 2.22 and one at 12, compared by Tier 1 on the held-out clips. Comparing the base model's likelihood under the two shifts would only compare the two timestep weightings.
 4. **Memory and throughput probe (G0.6):** the longest bucket, with guidance loss on.
 
 ---
@@ -321,7 +332,7 @@ These H3 timings are **extrapolations, not measurements**. G0.6 must re-measure 
 ### Cons
 
 1. **CFG-distilled weights only.** Every LoRA recipe is a workaround, and degradation is reported at 3k–5k steps even with them. The v-line trained plain flow-matching LoRAs for 600 × 8 and 7,888 steps without that failure mode.
-2. **Our clips are mostly below its length floor.** 48.7% of v8's clips are under 22 frames; walking, running, happy and confused have **no** legal-length clip. Trained range 4–15 s vs our 0.5–2.4 s. Wan took f13–f57 as delivered.
+2. **Our clips are mostly below its length floor.** 48.7% of v8's clips are under 22 frames. Walking, running, happy and confused have **no** legal-length clip, and only 5 of 18 sitting sources reach 22 frames before a missing frame. Trained range 4–15 s vs our 0.5–2.5 s. Wan took f13–f57 as delivered.
 3. **More compressive VAE on the art it is weakest at.** It has 2.1–2.7× fewer latent values per pixel than Wan, and there are open reports of line-art fading, flat-background colour shift, fine-detail loss and 17-frame-cadence dips. Wan's VAE showed no outline problems in v2–v8.
 4. **Style priors against the brief:** anime animated on twos (~12 fps) vs the client's true 24 fps on ones; 2D output "leaning 3D", the v4 claymation risk again.
 5. **Resolution off-distribution at our usual sizes.** 512² is below the 768 short edge, and 1024² is over the area cap. Only 768² or 768×1344 are on-canvas.
