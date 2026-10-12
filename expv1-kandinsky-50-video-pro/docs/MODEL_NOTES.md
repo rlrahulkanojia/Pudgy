@@ -85,7 +85,7 @@ trained on. **Off everywhere.** musubi's generator does not call the rewriter (*
 | Path | Where the clean first-frame latent goes | `visual_cond` channels | mask |
 |---|---|---|---|
 | **Official inference** (`generation_utils.py:159–168`) | **overwrites the noisy input** at frame 0, every step | all zeros | 1 at frame 0 |
-| **musubi inference** (`kandinsky5/generation_utils.py:369–383`) | overwrites the noisy input at frame 0 | all zeros | 1 at frame 0 |
+| **musubi inference** (`kandinsky5/generation_utils.py:369–383`) | overwrites the noisy input at frame 0 | **first frame** (corrected 2026-10-12: the code also writes `visual_cond[0]`; G0.2 dump confirms) | 1 at frame 0 |
 | **Official LoRA trainer** (`train/train_utils.py:398–416`) | into the **`visual_cond` channels**; the noisy input stays noisy | first frame | 1 at frame 0 |
 | **musubi trainer** (`kandinsky5_train_network.py:796–840`) | into the **`visual_cond` channels** | see §2.4 | see §2.4 |
 
@@ -106,7 +106,8 @@ layout it was trained on (it should explain held-out clips better under that lay
 
 As read, a "first frame only" run shows the model the clip's last frame at latent index 1
 and flags all frames as given. The same code is on musubi `main` (checked 2026-10-07).
-**Verify** with the G0.2 dump; the expv1 patch replaces this path anyway.
+**Verified** by the G0.2 dump (2026-10-12): last frame at latent index 1, mask 1 on every frame,
+frame 0 in the loss. The expv1 patch replaces this path (`--i2v_layout A|A1|B`).
 
 ### 2.5 The official LoRA trainer encodes captions with the image template
 
@@ -152,6 +153,31 @@ error. Measured on the A100 box (2026-10-12), frames in → latent frames → fr
 clip encoded with Kandinsky's code, or a start-and-end anchor, must be 13, 17 or 8k+1.
 musubi caches latents with its own VAE code, so check its behaviour separately (G0.2).
 `eval/vae_gate.py` uses `k5_len()` and asserts that the frame count out equals the count in.
+**musubi's cacher has the same truncation** when `--vae` is the VAE *directory* (Kandinsky's
+class): a 21-frame clip was cached as 3 latent frames. The expv1 patch makes the cacher refuse
+any clip whose latent count is wrong (G0.2).
+
+### 2.9 musubi's `--vae` path picks the VAE implementation
+
+`kandinsky5/models/vae.py:build_vae`: a **file** path loads HunyuanVideo's own VAE code
+(`hunyuan_model.vae.load_vae`); a **directory** loads musubi's copy of Kandinsky's class. They
+differ: frame-0 latents 4.2% apart on the same clip. The directory form matches Kandinsky's
+own encode to 0.5% (bf16). **Pass the directory** (`.../HunyuanVideo`), not the
+`.safetensors` file musubi's docs show.
+
+### 2.10 Training saw a different first-frame latent from the one inference gives
+
+musubi caches the first-frame latent as frame 0 of the **whole-clip** encode. Both generators
+encode the start image **on its own** (`opt_tiling=False`). Even in Kandinsky's own fp16 code
+those differ by **4.4%** (sampling noise is 0.07%). The expv1 cacher flag
+`--first_frame_image_encode` encodes frame 0 as the generator does: 0.08% from Kandinsky's
+image encode (G0.2).
+
+### 2.11 musubi's generator `--frames` counts latent frames
+
+`kandinsky5_generate_video.py --frames 17` produced a **65-frame** video. Video frames =
+4 × (latent − 1) + 1, so a 17-frame clip is `--frames 5`, 25 frames is `--frames 7`. Assert the
+output frame count on every generation.
 
 ---
 

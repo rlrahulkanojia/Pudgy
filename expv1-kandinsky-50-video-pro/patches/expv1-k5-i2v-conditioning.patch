@@ -1,0 +1,130 @@
+diff --git a/src/musubi_tuner/kandinsky5_cache_latents.py b/src/musubi_tuner/kandinsky5_cache_latents.py
+index 82f576d..ebafd32 100644
+--- a/src/musubi_tuner/kandinsky5_cache_latents.py
++++ b/src/musubi_tuner/kandinsky5_cache_latents.py
+@@ -18,6 +18,12 @@ logger = logging.getLogger(__name__)
+ logging.basicConfig(level=logging.INFO)
+ 
+ 
++# expv1: encode the first frame on its own, exactly as the generator encodes the start image
++# (generation_utils.get_reference_latents: vae.encode(frame, opt_tiling=False)); frame 0 of a
++# whole-clip encode differs from it by ~4% (measured, G0.2).
++FIRST_FRAME_IMAGE_ENCODE = False
++
++
+ def encode_and_save_batch(vae, batch: List[ItemInfo]):
+     if len(batch) == 0:
+         return
+@@ -69,13 +75,27 @@ def encode_and_save_batch(vae, batch: List[ItemInfo]):
+             latents = encoded
+     latents = latents * scaling_factor
+ 
++    # expv1: Kandinsky's VAE tiles time in 17-frame windows at stride 8 and silently drops frames
++    # unless F is 13, 17 or 8k+1 (21 -> 3 latent frames). Never cache a truncated clip.
++    n_in = inputs.shape[2]
++    if n_in > 1 and latents.shape[2] != (n_in - 1) // 4 + 1:
++        raise ValueError(f"VAE returned {latents.shape[2]} latent frames for {n_in} frames "
++                         f"(expected {(n_in - 1) // 4 + 1}); use 13, 17 or 8k+1 frames")
++
++    first_image = None
++    if FIRST_FRAME_IMAGE_ENCODE and inputs.shape[2] > 1:
++        with torch.no_grad():
++            enc1 = vae.encode(inputs[:, :, :1], opt_tiling=False)
++            first_image = (enc1.latent_dist.sample() if hasattr(enc1, "latent_dist") else enc1[0]) * scaling_factor
++        first_image = first_image.cpu()
++
+     latents = latents.cpu()
+ 
+     for idx, (item, latent) in enumerate(zip(batch, latents)):
+         image_latent = None
+         if latent.dim() == 4:
+             # C, F, H, W
+-            first = latent[:, :1, :, :]
++            first = latent[:, :1, :, :] if first_image is None else first_image[idx].to(latent.dtype)
+             last = latent[:, -1:, :, :] if latent.shape[1] > 1 else first
+             image_latent = torch.cat([first, last], dim=1).clone()
+         logger.info(
+@@ -93,6 +113,11 @@ def encode_and_save_batch(vae, batch: List[ItemInfo]):
+ 
+ def main():
+     parser = cache_latents.setup_parser_common()
++    parser.add_argument(
++        "--first_frame_image_encode",
++        action="store_true",
++        help="expv1: cache the first-frame latent from an image encode of frame 0 (as the generator does)",
++    )
+     parser.add_argument(
+         "--nabla_resize",
+         action="store_true",
+@@ -115,6 +140,8 @@ def main():
+         return
+ 
+     assert args.vae is not None, "VAE checkpoint is required"
++    global FIRST_FRAME_IMAGE_ENCODE
++    FIRST_FRAME_IMAGE_ENCODE = bool(args.first_frame_image_encode)
+ 
+     # Build VAE (Hunyuan-based 3D VAE) from Kandinsky weights
+     vae_conf = type("VAEConf", (), {"name": "hunyuan", "checkpoint_path": args.vae})
+diff --git a/src/musubi_tuner/kandinsky5_train_network.py b/src/musubi_tuner/kandinsky5_train_network.py
+index ab2d4ee..68d577e 100644
+--- a/src/musubi_tuner/kandinsky5_train_network.py
++++ b/src/musubi_tuner/kandinsky5_train_network.py
+@@ -105,6 +105,8 @@ class Kandinsky5NetworkTrainer(NetworkTrainer):
+         if self._i2v_training:
+             logger.info("I2V training mode enabled")
+         self._i2v_mode = getattr(args, "i2v_mode", "first") or "first"
++        # expv1: first-frame input layout for training (stock = musubi's own path, untouched)
++        self._i2v_layout = getattr(args, "i2v_layout", "stock") or "stock"
+         self._control_training = False
+         self.visual_cond_prob = float(getattr(args, "visual_cond_prob", 1.0) or 0.0)
+         if self.visual_cond_prob < 0.0 or self.visual_cond_prob > 1.0:
+@@ -825,7 +827,22 @@ class Kandinsky5NetworkTrainer(NetworkTrainer):
+                         elif cond_lat.shape[0] > x.shape[0]:
+                             cond_lat = cond_lat[: x.shape[0]]
+ 
+-                    if cond_lat is not None:
++                    if cond_lat is not None and self._i2v_layout != "stock":
++                        # expv1 layouts (first frame only; the cached last frame is never used):
++                        #   A  = official inference: clean first-frame latent written into the noisy
++                        #        input at frame 0, visual_cond all zero, mask 1 at frame 0
++                        #   A1 = musubi generator: as A, plus visual_cond[0] = first frame
++                        #   B  = stock-trainer style: noisy input untouched, visual_cond[0] = first
++                        #        frame, mask 1 at frame 0 only
++                        # Frame 0 is excluded from the loss in all three (below).
++                        first = cond_lat[0]
++                        if self._i2v_layout in ("A", "A1"):
++                            x = x.clone()
++                            x[0] = first
++                        if self._i2v_layout in ("A1", "B"):
++                            visual_cond[0] = first
++                        visual_cond_mask[0] = 1
++                    elif cond_lat is not None:
+                         if self._i2v_mode == "first_last" and cond_lat.shape[0] >= 2:
+                             frame_mask = torch.zeros(cond_lat.shape[0], device=cond_lat.device, dtype=torch.bool)
+                             frame_mask[0] = True
+@@ -897,6 +914,9 @@ class Kandinsky5NetworkTrainer(NetworkTrainer):
+                 target_d = target_d.permute(1, 0, 2, 3)
+             else:
+                 target_d = target_d.unsqueeze(0)
++            if self._i2v_layout != "stock" and model_pred.shape[0] > 1:
++                # expv1: frame 0 is given (clean or conditioned), so its target is meaningless
++                model_pred, target_d = model_pred[1:], target_d[1:]
+             preds.append(model_pred)
+             targets.append(target_d)
+ 
+@@ -924,6 +944,15 @@ def kandinsky5_setup_parser(parser: argparse.ArgumentParser) -> argparse.Argumen
+         choices=["first", "first_last"],
+         help="I2V conditioning mode: first frame only (default) or first+last frame.",
+     )
++    parser.add_argument(
++        "--i2v_layout",
++        type=str,
++        default="stock",
++        choices=["stock", "A", "A1", "B"],
++        help="expv1: first-frame input layout. stock = unchanged musubi; A = official inference "
++        "(clean latent in the noisy input at frame 0); A1 = musubi generator (A + visual_cond[0]); "
++        "B = visual_cond[0] only. A/A1/B use the first frame only and drop frame 0 from the loss.",
++    )
+     parser.add_argument(
+         "--force_nabla_attention", action="store_true", help="Force nabla attention for training regardless of task default"
+     )

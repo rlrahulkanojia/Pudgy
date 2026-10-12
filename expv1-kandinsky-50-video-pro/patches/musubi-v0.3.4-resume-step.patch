@@ -1,0 +1,24 @@
+diff --git a/src/musubi_tuner/training/trainer_base.py b/src/musubi_tuner/training/trainer_base.py
+index fecfacf..0d151c1 100644
+--- a/src/musubi_tuner/training/trainer_base.py
++++ b/src/musubi_tuner/training/trainer_base.py
+@@ -1921,6 +1921,19 @@ class NetworkTrainer:
+ 
+         epoch_to_start = 0
+         global_step = 0
++        # [pudgy v8 patch] --resume restores LoRA, optimizer, LR scheduler and RNG
++        # (accelerator.load_state) but v0.3.4 restarts this counter at 0. The resumed run
++        # would then save its step 150 as "...-step00000050" (overwriting the real one),
++        # train max_train_steps MORE steps, and drive the restored cosine past its end.
++        # Continue the count from the state dir's step instead. The data loader still
++        # starts a fresh (reshuffled) epoch - see Training_Approach_v8 section 7.
++        if args.resume and not args.resume_from_huggingface:
++            import re as _re
++            _m = _re.search(r"-step(\d+)-state$", os.path.basename(os.path.normpath(args.resume)))
++            if _m:
++                global_step = int(_m.group(1))
++                progress_bar.update(global_step)
++                logger.info(f"resume: continuing at global step {global_step} / {args.max_train_steps}")
+         noise_scheduler = FlowMatchDiscreteScheduler(shift=args.discrete_flow_shift, reverse=True, solver="euler")
+ 
+         loss_recorder = train_utils.LossRecorder()
