@@ -1,0 +1,44 @@
+diff --git a/examples/minimax_h3/model_training/train.py b/examples/minimax_h3/model_training/train.py
+index 332aa34d..0e46314e 100644
+--- a/examples/minimax_h3/model_training/train.py
++++ b/examples/minimax_h3/model_training/train.py
+@@ -154,12 +154,20 @@ def minimax_h3_parser():
+     parser.add_argument("--silent_on_missing_audio", default=False, action="store_true", help="Whether to use silent audio as a fallback when no audio track is present in the video data.")
+     parser.add_argument("--training_cfg_scale", type=float, default=1.0, help="Inverse-CFG scale for preserving MiniMax-H3 guidance distillation during fine-tuning. Values greater than 1 enable a no-grad unconditional branch; 1 keeps the standard flow-matching loss.")
+     parser.add_argument("--audio_loss_weight", type=float, default=1.0, help="Weight of the audio term in the MiniMax-H3 loss. 1 keeps video and audio equally weighted; 0 trains on the video term only while the audio stream is still noised and forwarded.")
++    # expv2 patch (diffsynth-h3-train-shift.patch): the training sigma schedule is otherwise
++    # hard-coded at FlowMatchScheduler.set_timesteps_minimax_h3's default shift=2.22, while
++    # inference uses flow_shift=12 / audio_flow_shift=3.
++    parser.add_argument("--train_flow_shift", type=float, default=None, help="Timestep shift of the TRAINING sigma schedule for video. Default: DiffSynth's 2.22.")
++    parser.add_argument("--train_audio_flow_shift", type=float, default=None, help="Timestep shift of the TRAINING sigma schedule for audio. Default: DiffSynth's 2.22.")
++    parser.add_argument("--seed", type=int, default=None, help="Global seed (torch/numpy/random via accelerate.utils.set_seed) for timestep and noise sampling. Default: unseeded.")
+     return parser
+ 
+ 
+ if __name__ == "__main__":
+     parser = minimax_h3_parser()
+     args = parser.parse_args()
++    if args.seed is not None:
++        accelerate.utils.set_seed(args.seed)
+     if args.num_frames % MINIMAX_H3_TIME_DIVISION_FACTOR != MINIMAX_H3_TIME_DIVISION_REMAINDER:
+         raise ValueError(
+             f"--num_frames must be {MINIMAX_H3_TIME_DIVISION_FACTOR}n+{MINIMAX_H3_TIME_DIVISION_REMAINDER} "
+@@ -232,6 +240,18 @@ if __name__ == "__main__":
+         task=args.task,
+         device="cpu" if (args.initialize_model_on_cpu or args.enable_model_cpu_offload) else accelerator.device,
+     )
++    # expv2 patch: re-build the training schedules with the requested shifts. The loss draws
++    # timestep_id uniformly over these 1000 entries and indexes the video and audio tables
++    # with the same id, so the two shifts set the (video, audio) noise pairing.
++    if args.train_flow_shift is not None:
++        model.pipe.scheduler.set_timesteps(1000, training=True, shift=args.train_flow_shift)
++    if args.train_audio_flow_shift is not None:
++        model.pipe.scheduler_audio.set_timesteps(1000, training=True, shift=args.train_audio_flow_shift)
++    for name, sched in (("video", model.pipe.scheduler), ("audio", model.pipe.scheduler_audio)):
++        sig = sched.sigmas
++        print(f"[expv2] training sigma schedule ({name}): n={len(sig)} "
++              f"q10={float(sig.quantile(0.1)):.4f} median={float(sig.median()):.4f} "
++              f"q90={float(sig.quantile(0.9)):.4f} mean={float(sig.mean()):.4f}", flush=True)
+     model_logger = ModelLogger(
+         args.output_path,
+         remove_prefix_in_ckpt=args.remove_prefix_in_ckpt,

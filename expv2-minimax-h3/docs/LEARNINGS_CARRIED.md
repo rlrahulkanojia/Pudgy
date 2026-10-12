@@ -23,7 +23,7 @@ from expv1, and adds the facts that are new (N1–N5).
 | A2 | 24 fps, on ones | H3 is native 24 fps, but its anime prior is on twos (MODEL_NOTES 2.12). Cadence is measured (bar V10) |
 | A3 | ProRes 4444 with real alpha | Composite onto flat grounds explicitly |
 | A4 | Character fills ~91–92% of frame height | Shot sizes by **zooming out** only: 1.00 / 0.75 / 0.55 |
-| A5 | 37.9% frozen at the median; `neutral` 96.6% | Upper rungs (39/56) are built only where the source's **active** length reaches them. `neutral` is exempt, because holding is its content |
+| A5 | 37.9% frozen at the median; `neutral` 96.6% | Upper rungs (39/56) are built only where the source's **active** length reaches them. `neutral` is exempt, because holding is its content. Measured: only neutral qualifies (angry holds from frame 24, blushing from ~31, laughing from 38), so the long rungs are built but **not trained** (B11, PLAN §5.1) |
 | A6 | Files are missing frames; ffmpeg pads them with duplicates | Cut before the first missing frame. Re-counted for expv2 (N1, N2): **sitting loses 13 of 18 sources** at the 22-frame floor |
 | A7 | ProRes decodes tear non-deterministically | Tear check on every written frame, up to 24 decode attempts |
 | A8 | Later deliveries re-send earlier files | MD5 de-duplication: 526 raw `.mov` → 240 unique |
@@ -48,7 +48,7 @@ from expv1, and adds the facts that are new (N1–N5).
 | B8 | Trainer-side samples are not the inference path | Generate only through DiffSynth's `MiniMaxH3Pipeline`, the same code that defines the training layout |
 | B9 | Decide the holdout before launch | `QF2_R` for every label, fixed now: **23 clips** at 22 frames (Pax sitting `QF2_R` has 17 usable frames, so it is a start frame only) |
 | B10 | Training start frames reward memorisation | Verdict on unseen start frames; the seen–unseen gap is bar V8 |
-| B11 | Length must not predict the label | The 22-frame floor contains **every trained label**, asserted. The 39/56 rungs exist for four expressions only, which B11 allows (N4) |
+| B11 | Length must not predict the label | The 22-frame floor contains **every trained label**, asserted, and is the **only trained length**: with A5 applied, f39/f56 hold neutral alone, so training them would make length predict the label (N4) |
 | B12 | Contrastive labels make the label promptable | One template; the label clause is the only part that changes |
 | B13 | A default negative prompt can fight the captions | H3 has no negative prompt, so the failure cannot happen, and the lever is gone too. The camera clause "fixed camera, locked-off shot, the character stays the same size" stays |
 | B14 | Prompt enhancers inject off-style vocabulary | H3's rewriter (Context-IR) is not released; nothing rewrites prompts |
@@ -63,8 +63,8 @@ from expv1, and adds the facts that are new (N1–N5).
 | # | Lesson (short) | How expv2 applies it |
 |---|---|---|
 | C1 | Box disk is not persistent | Azure mirror on a timer from the first hour |
-| C2 | musubi v0.3.4 `--resume` resets the step counter | **Not applicable** (DiffSynth). DiffSynth's own resume is undocumented (MODEL_NOTES 2.15), so the plan does not depend on resuming |
-| C3 | Trainer naming quirks | Record DiffSynth's checkpoint names in G0.2 and rename into `step-NNNN` |
+| C2 | musubi v0.3.4 `--resume` resets the step counter | **Not applicable** (DiffSynth). DiffSynth's `--resume_from_checkpoint` restores weights only, with no optimizer state (MODEL_NOTES 2.15, code-read), so the plan never resumes: every run starts from zero |
+| C3 | Trainer naming quirks | Found by reading the code: DiffSynth names checkpoints `step-<samples>`, not optimizer steps (MODEL_NOTES 2.18). Files keep DiffSynth's names; every eval script maps them to optimizer steps (`<run>@<optstep>`) |
 | C4 | Model loading dominated inference | Two-pass evaluation: Qwen3-VL encodes everything once, then one DiT load per checkpoint |
 | C5 | Re-probe memory whenever clip length changes | G0.6 probes the **f56** bucket with guidance loss on |
 | C6 | Re-plan from the first hour's s/it | Applied |
@@ -79,9 +79,9 @@ from expv1, and adds the facts that are new (N1–N5).
 | D1 | LTX-2.5: one LoRA could not carry motion and expression | Tracked by the motion probe on every checkpoint. No rank fallback: expv2's pre-declared fallback is for **distillation** (arm D), the risk specific to H3 |
 | D2 | Wan v8: one joint LoRA did carry both | The counter-example; which way H3 falls is a finding |
 | D3 | Best checkpoint came early | Save every 50; H3 reports suggest best ≤ ~2,000 samples (Eval §6.1) |
-| D4 | Batch 1 + constant LR = noisy updates; accum 8 + cosine fixed it | Accumulation 8 + cosine, patched in if DiffSynth has no scheduler (MODEL_NOTES 2.15). Tier 0 checks |
+| D4 | Batch 1 + constant LR = noisy updates; accum 8 + cosine fixed it | Accumulation 8 + cosine. DiffSynth has only ConstantLR, so `patches/diffsynth-cosine-lr.patch` adds it (MODEL_NOTES 2.15). Tier 0 checks |
 | D5 | Effective rank ≈ 9 of 32 on Wan | Rank 32 not expected to bind |
-| D6 | ~500 exposures/performance memorised; v8 plateaued at ~90 of ~185 | 3,920 samples ≈ **163 per performance** |
+| D6 | ~500 exposures/performance memorised; v8 plateaued at ~90 of ~185 | 4,032 samples ≈ **168 per performance** |
 | D7 | Expressions learned more easily than motion | Expected; reported separately |
 | D8 | CogVideoX's and Wan's 8× VAEs kept the outlines | Not assumed for H3's 16× VAE. G0.1 measures it, with Wan's VAE on the same clips as a reference |
 | D9 | A character LoRA can freeze motion | Covered by D1's tracking |
@@ -107,5 +107,5 @@ from expv1, and adds the facts that are new (N1–N5).
 | N1 | **The v7 manifest's `source_frames` are not source lengths.** They are v7's 4k+1 rungs (angry 37 vs a true 40, neutral 57 vs 60), and v7 never detected missing frames | Raw re-count, 2026-10-11 (ffprobe decoded timestamps, the `prep_v8.real_frame_gap` method; 21 damaged files, matching v8 NOTES) | Prep measures every length from the raw file. Eval §4.1 was corrected the same day |
 | N2 | **Sitting has gaps in 13 of 18 sources**, at frames 13–25. Only 5 reach 22 frames (Pax FRONT, Pax QF3_R, Polly QF3_R, SIDE_L, SIDE_R), or 7 with one held frame (Polly QF1_R, QF2_R at 21). Pax sitting `QF2_R` has 17 | Same | Sitting trains on 6 sources and is held out on 1. It is the class to watch, ahead of confused |
 | N3 | **A training shift cannot be chosen by base-model likelihood.** The per-timestep loss does not depend on the shift; only the weighting over timesteps does | Reasoning (I), correcting Eval §6.3 and §6.5 | Shift chosen by two pilot LoRAs (PLAN §6.3) |
-| N4 | **Every motion trains at exactly 22 frames on today's data.** Only angry, laughing, blushing and neutral reach 39, and only neutral reaches 56 | Raw re-count | Motion results speak for 0.92 s only. The `native` suite tests 39/56 frames for those four expressions alone |
+| N4 | **Everything trains at exactly 22 frames on today's data.** Angry, laughing, blushing and neutral reach 39 frames by file length, but only neutral's **active** length does (prep, 2026-10-12: angry holds from 24, blushing from ~31, laughing from 38 of 39) | Raw re-count + prep | Results speak for 0.92 s only. The `native` suite asks for 39/56 frames as an untrained-length probe, reported and not gated |
 | N5 | **Pruned-build LoRAs are not portable** to the full build, and the DeCFG adapter has a separate file per layout | DiffSynth example script | One build end to end; parity checked once (G0.2) |

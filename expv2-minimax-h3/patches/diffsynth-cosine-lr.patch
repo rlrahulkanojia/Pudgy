@@ -1,0 +1,91 @@
+diff --git a/diffsynth/diffusion/logger.py b/diffsynth/diffusion/logger.py
+index d1608d5a..3b6ae306 100644
+--- a/diffsynth/diffusion/logger.py
++++ b/diffsynth/diffusion/logger.py
+@@ -110,6 +110,11 @@ class ModelLogger:
+             if loss is not None:
+                 for logger in self.loggers:
+                     logger.log("loss", loss, self.num_steps)
++            # expv2 patch (diffsynth-cosine-lr.patch): also log the LR, for Tier 0 (B18).
++            lr = kwargs.get("lr")
++            if lr is not None:
++                for logger in self.loggers:
++                    logger.log("lr", lr, self.num_steps)
+         if save_steps is not None and self.num_steps % save_steps == 0:
+             self.save_model(accelerator, model, f"step-{self.num_steps}.safetensors")
+ 
+diff --git a/diffsynth/diffusion/parsers.py b/diffsynth/diffusion/parsers.py
+index 29cd6b0d..0fcb4e60 100644
+--- a/diffsynth/diffusion/parsers.py
++++ b/diffsynth/diffusion/parsers.py
+@@ -43,6 +43,10 @@ def add_training_config(parser: argparse.ArgumentParser):
+     parser.add_argument("--weight_decay", type=float, default=0.01, help="Weight decay.")
+     parser.add_argument("--task", type=str, default="sft", required=False, help="Task type.")
+     parser.add_argument("--customized_optimizer", type=str, default=None, help="Customized optimizer, e.g., `bitsandbytes.optim.Adam8bit` and `torch.optim.Adam`. The default optimizer is `torch.optim.AdamW`.")
++    # expv2 patch (diffsynth-cosine-lr.patch): DiffSynth otherwise always uses ConstantLR.
++    parser.add_argument("--lr_scheduler", type=str, default="constant", choices=["constant", "cosine"], help="LR schedule over optimizer steps. `constant` keeps DiffSynth's ConstantLR; `cosine` = linear warmup then cosine decay to lr * lr_min_ratio.")
++    parser.add_argument("--lr_warmup_steps", type=int, default=0, help="Linear warmup length in optimizer steps (cosine only).")
++    parser.add_argument("--lr_min_ratio", type=float, default=0.1, help="Final LR as a fraction of --learning_rate (cosine only).")
+     return parser
+ 
+ def add_output_config(parser: argparse.ArgumentParser):
+diff --git a/diffsynth/diffusion/runner.py b/diffsynth/diffusion/runner.py
+index 59a89424..f9c53b0a 100644
+--- a/diffsynth/diffusion/runner.py
++++ b/diffsynth/diffusion/runner.py
+@@ -1,4 +1,4 @@
+-import os, json, torch, importlib
++import os, json, math, torch, importlib
+ from tqdm import tqdm
+ from accelerate import Accelerator
+ from .training_module import DiffusionTrainingModule
+@@ -50,6 +50,30 @@ def exclude_quantized_params_from_ddp_sync(accelerator: Accelerator, model: Diff
+         print(f"Warning: failed to exclude quantized weights from DDP state synchronization: {e}")
+ 
+ 
++def build_lr_scheduler(optimizer, accelerator, num_samples, args=None):
++    """expv2 patch (diffsynth-cosine-lr.patch). Steps are OPTIMIZER steps: the scheduler is
++    prepared by accelerate, whose AcceleratedScheduler only advances when gradients sync,
++    i.e. once per gradient_accumulation_steps samples."""
++    kind = getattr(args, "lr_scheduler", "constant") if args is not None else "constant"
++    if kind == "constant":
++        return torch.optim.lr_scheduler.ConstantLR(optimizer)
++    accum = max(1, int(getattr(accelerator, "gradient_accumulation_steps", 1)))
++    total = max(1, math.ceil(num_samples / accum))
++    warmup = max(0, int(getattr(args, "lr_warmup_steps", 0)))
++    floor = float(getattr(args, "lr_min_ratio", 0.1))
++
++    def lr_lambda(step):
++        if step < warmup:
++            return (step + 1) / warmup
++        progress = min(1.0, (step - warmup) / max(1, total - warmup))
++        return floor + (1.0 - floor) * 0.5 * (1.0 + math.cos(math.pi * progress))
++
++    if accelerator.is_main_process:
++        print(f"[expv2] lr schedule: cosine, {total} optimizer steps ({num_samples} samples / accum {accum}), "
++              f"warmup {warmup}, floor {floor:g} x lr", flush=True)
++    return torch.optim.lr_scheduler.LambdaLR(optimizer, lr_lambda)
++
++
+ def launch_training_task(
+     accelerator: Accelerator,
+     dataset: torch.utils.data.Dataset,
+@@ -83,8 +107,8 @@ def launch_training_task(
+ 
+     optimizer_class = get_optimizer_class(customized_optimizer)
+     optimizer = optimizer_class(model.trainable_modules(), lr=learning_rate, weight_decay=weight_decay)
+-    scheduler = torch.optim.lr_scheduler.ConstantLR(optimizer)
+     dataloader = torch.utils.data.DataLoader(dataset, shuffle=True, collate_fn=lambda x: x[0], num_workers=num_workers)
++    scheduler = build_lr_scheduler(optimizer, accelerator, len(dataloader) * num_epochs, args)
+ 
+     if enable_model_cpu_offload:
+         optimizer, dataloader, scheduler = accelerator.prepare(optimizer, dataloader, scheduler)
+@@ -109,7 +133,7 @@ def launch_training_task(
+                 optimizer.step()
+                 scheduler.step()
+                 optimizer.zero_grad()
+-                model_logger.on_step_end(accelerator, model, save_steps, loss=loss)
++                model_logger.on_step_end(accelerator, model, save_steps, loss=loss, lr=scheduler.get_last_lr()[0])
+         if save_steps is None:
+             model_logger.on_epoch_end(accelerator, model, epoch_id)
+ 

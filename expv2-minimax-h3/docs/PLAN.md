@@ -47,12 +47,12 @@ fine-tuning, int8/FP8 bases.
 
 | Input | Source | Pin |
 |---|---|---|
-| DiT (trained and evaluated) | `Comfy-Org/MiniMax-H3: diffusion_models/minimax_h3_fl2va_pruned_bf16.safetensors` (40.2 GB) | revision + MD5 into `eval/phase0/pins.json` |
-| DiT (G0.2 parity only) | `Comfy-Org/MiniMax-H3: diffusion_models/minimax_h3_fl2va_bf16.safetensors`: same Comfy layout, AdaLN not pruned | revision + MD5; deleted after G0.2 |
-| Text encoder | `MiniMax/MiniMax-H3: FL2VA/text_encoder/model*.safetensors` (Qwen3-VL-32B) | revision |
-| Video VAE, audio VAE | `MiniMax/MiniMax-H3: FL2VA/video_vae/source/model.safetensors`, `FL2VA/audio_vae/model.safetensors` | revision |
-| DeCFG adapter (arm D only) | `DiffSynth-Studio/MiniMax-H3-TrainingAdapter: model_for_comfy_dit.safetensors` | revision |
-| Trainer and pipeline | DiffSynth-Studio at one commit that has `--training_cfg_scale` and `--audio_loss_weight` | SHA. Patches in `patches/` (§6.1) |
+| DiT (trained and evaluated) | `Comfy-Org/MiniMax-H3: diffusion_models/minimax_h3_fl2va_pruned_bf16.safetensors` (40.2 GB) | HF revision `e5eb578` + LFS sha256, written to `eval/phase0/pins.json` by `setup/fetch_models.py` |
+| DiT (G0.2 parity only) | `Comfy-Org/MiniMax-H3: diffusion_models/minimax_h3_fl2va_bf16.safetensors` (66.3 GB): same Comfy layout, AdaLN not pruned | same revision + sha256; deleted after G0.2 (`fetch_models.py --delete parity`) |
+| Text encoder | `MiniMaxAI/MiniMax-H3: FL2VA/text_encoder/model*.safetensors` (Qwen3-VL-32B, 14 shards, 66.7 GB) + `FL2VA/processor/` | HF revision `42ed227` |
+| Video VAE, audio VAE | `MiniMaxAI/MiniMax-H3: FL2VA/video_vae/source/model.safetensors` (10.4 GB, fp32), `FL2VA/audio_vae/model.safetensors` (0.6 GB) | same revision + sha256 |
+| DeCFG adapter (arm D only) | `DiffSynth-Studio/MiniMax-H3-TrainingAdapter: model_for_comfy_dit.safetensors` (0.62 GB). **ModelScope only** (not on HF) | sha256 `0bbb4469…` checked by `fetch_models.py --verify` |
+| Trainer and pipeline | DiffSynth-Studio **`acf2ad2`** (2026-10-09, v2.1.9): has `--training_cfg_scale` and `--audio_loss_weight`. Its H3 training code was read for this plan (MODEL_NOTES 2.15–2.21) | `expv2_common.DIFFSYNTH_SHA`; both patches in `patches/` always applied (§6.1) |
 | G0.1 references | Wan2.1 VAE (the one Wan2.2-A14B uses; 8×) and Wan2.2-TI2V-5B VAE (16×), via the registry in `training_approach/scripts/vae_roundtrip.py` (copied, provenance noted) | repo ids as in that registry |
 | Raw data | `Data/raw/iteration_3/`, `_4/`, `_5/` (Azure `pudgy/raw/`) | MD5-deduplicated (A8): 526 files → 240 unique |
 | Hardware | 1× A100-80GB (no FP8), ≥ 128 GB host RAM (Qwen3-VL stage), ≥ 300 GB disk. Disk is not persistent (C1) | — |
@@ -62,7 +62,9 @@ fine-tuning, int8/FP8 bases.
 ## 4. Phase 0 — measure before training
 
 No LoRA is trained until G0.1 and G0.2 pass. Each step writes a JSON report and a contact
-sheet to `eval/phase0/`, mirrored to Azure.
+sheet to `eval/phase0/`, mirrored to Azure. **Order on the box:** the corpus (§5) is built
+first, on CPU, because G0.1 reads its `vae_gate/` set and G0.2e–f need the corpus and the
+stage-1 cache. [`../RUNBOOK.md`](../RUNBOOK.md) is the executable order.
 
 ### G0.1 — VAE gate (stop if it fails)
 
@@ -75,8 +77,9 @@ defaults), not diffusers. Run the **same clips** through the two reference VAEs.
 - **Metrics** (ltx25 gate's definitions, copied): PSNR, SSIM, edge-PSNR over positive
   gradients with edge coverage, flat-band, absolute shimmer. Added for H3:
   - **ground drift:** mean absolute per-channel error on ground pixels, /255;
-  - **chunk-boundary dip:** mean luminance per frame, the largest step at frames 5, 22 and
-    39 (chunk starts) minus the largest step elsewhere (Eval §4.4, #85).
+  - **chunk-boundary dip:** mean luminance per frame, the largest step at frames 17, 34 and
+    51 (the VAE's 17-frame clips start at frame 0; the 5-frame remainder is the tail,
+    `MiniMaxH3VideoVAE.encode_temporal`) minus the largest step elsewhere (Eval §4.4, #85).
 - **By eye at 4× zoom:** beak outline, eye highlights, flipper outline, blush shapes.
 - All comparisons on decoded arrays or PNG; no mp4 anywhere (MODEL_NOTES 2.11).
 
@@ -100,9 +103,9 @@ decoder.
 | c | **Guidance-loss branch:** with `--training_cfg_scale 4`, which inputs the no-grad unconditional pass drops | recorded (2.16); no pass/fail |
 | d | **Audio:** silent fallback active; audio loss term logged | audio term exactly 0 (2.9) |
 | e | **Loader:** frames the loader reads, hashed, vs the 22/39/56 PNGs prep wrote | bit-identical, no padding or looping (2.3) |
-| f | **Mixed lengths:** three stage-1 caches (f22, f39, f56) in one stage-2 run at batch 1 | first 20 steps print mixed shapes, no error. If it fails, **drop the 39/56 rungs** and train f22 only (pre-declared) |
+| f | **Mixed lengths:** three stage-1 caches (f22, f39, f56) in one stage-2 run at batch 1 | first 20 steps print mixed shapes, no error. **Only run if the long rungs are trained** (§5.1: they are not by default) |
 | g | **Two-pass evaluation:** cached-embedding generation vs the one-pass pipeline on 2 clips | identical frames (PSNR ≥ 50 dB) |
-| h | **Trainer flags:** `--help` and code for an LR scheduler, max steps, save semantics, resume | record; apply `patches/diffsynth-cosine-lr.patch` if no scheduler; confirm `patches/diffsynth-h3-train-shift.patch` changes the training sigma schedule (logged sigmas) |
+| h | **Trainer flags:** `--help` shows the patched flags (`--train_flow_shift`, `--train_audio_flow_shift`, `--seed`, `--lr_scheduler`, `--lr_warmup_steps`, `--lr_min_ratio`); the code read found no scheduler, no max-steps, sample-counted `--save_steps`, weights-only resume (MODEL_NOTES 2.15, 2.18) | flags present; the start-up log prints the shifted σ quantiles for S12 and S2.22 and they differ |
 
 ### G0.3 — Base Tier-1 baseline
 
@@ -137,9 +140,14 @@ The real clips at 768², per label, on the frames each suite uses (first 22; 39/
 | ground flatness | pixel spread of the ground |
 | late-frame identity | DINOv2 similarity of the character crop, last vs first frame |
 | saturation | mean HSV saturation inside the character mask |
-| fill flatness | luminance std inside the character mask minus the outline mask |
+| fill flatness | **local** luminance std (5×5 window) inside the character mask minus the outline mask, median over pixels. A global std would mix the character's several flat colours and measure the palette, not the flatness; it is reported, not gated |
 
-These are the denominators for §9 (B6).
+These are the denominators for §9 (B6). Two notes from writing `eval/metrics.py`:
+- *h* is relative to each label's own moving pairs, so `neutral`, which moves slowly but
+  continuously (0.07–1.2 grey levels per pair), does **not** come out ~97% frozen as in A5,
+  which used an absolute threshold. The two numbers are not comparable;
+- the source ground is exactly flat (spread 0), so V6's "≤ 2× the source's" spread has a
+  floor: max(1.0, G0.1's flat-fill round-trip std).
 
 ### G0.6 — Memory and throughput
 
@@ -158,13 +166,25 @@ from `finetune/wan/prep_v8.py` with provenance noted; it never imports them.
 
 - **768×768**, re-decoded from the 1080² source straight to target size (one resample; the
   flat ground is regenerated, not resampled).
-- **24 fps, silent.** Lossless H.264 (`-qp 0`) in a pixel format DiffSynth's loader decodes
-  bit-exactly (G0.2e). A PNG copy of every clip is kept for scoring.
+- **24 fps, silent.** Lossless RGB H.264 (`libx264rgb -qp 0`, `rgb24`), which ffmpeg decodes
+  bit-exactly to the loader's RGB (G0.2e). Each mp4 holds the clip's N frames **plus one copy
+  of the last frame**, because DiffSynth's loader rounds the container duration down
+  (MODEL_NOTES 2.17); it reads exactly N. A PNG copy of exactly N frames is kept for scoring.
+- **Metadata:** `metadata_f{22,39,56}.csv` with columns `video,prompt,input_audio`, where
+  `input_audio` is the clip's own (audio-less) mp4 so the silent fallback fires (MODEL_NOTES
+  2.9). Full layout: [`INTERFACES.md`](INTERFACES.md).
 - **Lengths on the 17n+5 grid:**
-  - **f22, the floor:** every trained label, asserted (B11);
-  - **f39:** sources whose **active** length reaches 39 (A5): angry, laughing, blushing,
-    neutral at most;
+  - **f22, the floor:** every trained label, asserted (B11). **This is the only trained
+    length** (decided 2026-10-12, below);
+  - **f39:** sources whose **active** length reaches 39 (A5). Measured: **neutral only**;
   - **f56:** neutral only (exempt from the active-length rule, A5).
+- **Why only f22 is trained.** The active-length rule leaves no expression but neutral at 39:
+  every angry source holds exactly from frame 24, blushing from ~31, laughing from 38 (one
+  frame short). Training f39/f56 would make "longer than 22 frames" mean "neutral" (the
+  confound B11 forbids, and v8's `standing_idle` cap avoided) and give neutral 3× the
+  weight of any other label. So the pre-declared fallback of G0.2f applies from the
+  start: **train f22 only**. The f39/f56 clips are still built and kept in the corpus;
+  training them is one switch (`EXPV2_BUCKETS="22 39 56"` in `configs/env.sh`).
 - **Cut before the first missing frame** (A6), measured from decoded timestamps (N1).
 - **Two departures, both pre-declared:**
   - **one held frame** for 21-frame sources (happy, confused, two sitting): 21 → 22. Prep
@@ -174,27 +194,29 @@ from `finetune/wan/prep_v8.py` with provenance noted; it never imports them.
 - **Truncation captions** follow v8's rule exactly: a clip shorter than its source's usable
   length gets `"<label>, opening frames only"`.
 
-### 5.2 Content (counted from raw on 2026-10-11; prep re-counts and must agree)
+### 5.2 Content (built by `prep_expv2.py` on 2026-10-12; a re-build must agree exactly)
 
-| Label | Kind | Usable at f22 | Held out (`QF2_R`) | Train sources | f22 clips | f39 sources (≤) | f56 sources |
+| Label | Kind | Usable at f22 | Held out (`QF2_R`) | Train sources | f22 clips | f39 sources (active ≥ 39) | f56 sources |
 |---|---|---|---|---|---|---|---|
-| angry | expr | 18 | 2 | 16 | 64 | 16 | — |
-| laughing | expr | 18 | 2 | 16 | 64 | 16 | — |
-| blushing | expr | 14 | 2 | 12 | 48 | 11 | — |
-| neutral | expr | 18 | 2 | 16 | 64 | 16 | 16 |
+| angry | expr | 18 | 2 | 16 | 64 | 0 (active 24 of 40) | — |
+| laughing | expr | 18 | 2 | 16 | 64 | 0 (active 37–38 of 39) | — |
+| blushing | expr | 14 | 2 | 12 | 48 | 0 (active 30–32 of 41) | — |
+| neutral | expr | 18 | 2 | 16 | 64 | 16 (exempt) | 16 |
 | crying | expr | 18 | 2 | 16 | 64 | — | — |
 | surprised | expr | 18 | 2 | 16 | 64 | — | — |
 | happy | expr | 14 (padded) | 2 | 12 | 48 | — | — |
 | confused | expr | 14 (padded; 4 damaged dropped) | 2 | 12 | 48 | — | — |
 | waving | motion | 18 | 2 | 16 | 64 | — | — |
 | jumping | motion | 18 | 2 | 16 | 64 | — | — |
-| walking | motion | 18 (tiled; 1 undecodable dropped) | 2 | 16 | 64 | — | — |
+| walking | motion | **16** (tiled; Pax QF1_R undecodable; no Pax SIDE_R walk exists, A9) | 2 | **14** | **56** | — | — |
 | sitting | motion | **7** (5 + 2 padded; 11 gapped dropped) | **1** (Polly) | **6** | 24 | — | — |
 | running | motion | 0 (17 f) | start frames only | 0 | 0 | — | — |
-| **Total** | | **193** | **23** | **170** | **680** | **≤ 59 → ≤ 236 clips** | **16 → 64 clips** |
+| **Total** | | **191** | **23** | **168** | **672** | **16 → 64 clips** (built, not trained) | **16 → 64 clips** (built, not trained) |
 
-Corpus ≈ **980 clips**, 24 performances (A1). Each clip is one (source, ground) pair; 4
-grounds per source. Excluded and listed in `manifest.json` with reasons: the turnaround,
+**Trained corpus: 672 f22 clips**, 24 performances (A1); 800 clips are built. Each clip is
+one (source, ground) pair; 4 grounds per source. The 2026-10-11 hand count differed in two
+places (walking 18 → 16; f39 ≤ 59 → 16): the hand count read file lengths, prep measures
+active length and resolves names. Captions: at most 203 Qwen3-VL tokens (exact count). Excluded and listed in `manifest.json` with reasons: the turnaround,
 the 12 two-character clips (A14), running, every file that tears on all 24 decode attempts
 (A7), and every file whose first missing frame falls below 21.
 
@@ -260,10 +282,12 @@ non_diegetic_music: None.
 
 ### 6.1 Patches (written before Phase 2, checked in G0.2h)
 
+Both are written against `acf2ad2`, applied by `patches/apply.sh` (idempotent) and always on:
+
 | Patch | Why |
 |---|---|
-| `diffsynth-h3-train-shift.patch` | Exposes the training shift, hard-coded at 2.22 (2.5). Needed for the shift-12 pilot |
-| `diffsynth-cosine-lr.patch` | Only if G0.2h finds no scheduler: warmup + cosine to 10% (D4) |
+| `diffsynth-h3-train-shift.patch` | `--train_flow_shift` / `--train_audio_flow_shift`: the training shift is otherwise fixed at 2.22 (2.5). Also `--seed`: DiffSynth has none (2.20) |
+| `diffsynth-cosine-lr.patch` | `--lr_scheduler cosine --lr_warmup_steps --lr_min_ratio`: DiffSynth only has ConstantLR (2.15). Steps are optimizer steps; the LR is logged to `loss.csv` |
 
 ### 6.2 Arm A
 
@@ -278,22 +302,26 @@ non_diegetic_music: None.
 | Schedule | warmup 20, cosine → 10% | D4 |
 | Batch | 1 × **grad-accum 8** | D4 |
 | Training shift | the pilot winner (§6.3) | 2.5 |
-| Budget | `--dataset_repeat 4`, 1 epoch = **3,920 samples = 490 optimizer steps** | §6.4 |
-| Saving | every 50 optimizer steps, keep all | D3 |
+| Budget | `--dataset_repeat 6`, 1 epoch = 672 × 6 = **4,032 samples = 504 optimizer steps** | §6.4 |
+| Saving | every 50 optimizer steps = `--save_steps 400`, keep all (`step-N` counts samples, 2.18) | D3 |
 | Precision | bf16, gradient checkpointing | — |
-| Seed | 42 | — |
+| Seed | 42 (`--seed`, from the shift patch) | 2.20 |
+| Cache | stage 1 at `--training_cfg_scale 4` too, so the unconditional embeddings are cached | 2.19 |
 
 ### 6.3 Pilots — the training shift, and the first sanity gate
 
-Two runs, identical except the training shift: **S12** (12, the inference value) and **S2**
-(2.22, DiffSynth's default). Each is **1 epoch, 980 samples, 122 optimizer steps**, with the
-cosine schedule over its own length.
+Two runs, identical except the training shift: **S12** (video 12 / audio 3, the inference
+pairing) and **S2** (2.22 / 2.22, DiffSynth's default). The loss indexes the video and audio
+tables with one shared timestep id, so the audio shift sets which audio noise level each video
+noise level trains against. Each is **`--dataset_repeat 2`: 1,344 samples, 168 optimizer
+steps** (a third of the main run), with the cosine schedule over its own length.
 
 1. **Calibrate Tier 1** (B4): on the 24 trained-angle `FRONT` clips, compute each pilot's
-   and the base's true-caption margin at t ∈ {0.25, 0.5, 0.75, 0.875, 0.9375} (multiples of
-   1/1024, where the pruned build's 1,025-entry table is exact if it is indexed linearly in
-   t; G0.2a checks). Fix the **two** t values where (pilot − base) margin, averaged over both
-   pilots, is largest. Frozen for the rest of expv2.
+   and the base's true-caption margin at σ ∈ {0.25, 0.5, 0.75, 0.875, 0.9375} (σ = noise
+   fraction; DiffSynth's model sees t = 1 − σ. Multiples of 1/1024, where the pruned build's
+   1,025-entry table is exact if it is indexed linearly; G0.2a checks). Fix the **two** σ
+   values where the (pilot − base) margin is largest: averaged over both pilots, per kind,
+   then summed over the two kinds. Frozen for the rest of expv2.
 2. **Sanity gate:** in at least one pilot, both kinds' held-out losses must be below the base
    on ≥ 75% of clips (expression ≥ 12/16, motion ≥ 5/7). If neither pilot does, **stop and
    re-check the conditioning (G0.2b) before touching LR**. If both are *above* the base on
@@ -307,12 +335,12 @@ undocumented (2.15), so nothing depends on continuing a pilot.
 
 ### 6.4 Exposure budget
 
-3,920 samples ÷ 24 performances ≈ **163 exposures per performance**:
+4,032 samples ÷ 24 performances ≈ **168 exposures per performance**:
 - LTX-2.5 memorised at ~500;
 - v8 plateaued at ~90 of ~185 (D6);
 - public H3 LoRAs improved by ~2,000 samples and degraded by ~12,000 (Eval §6.1).
 
-The best checkpoint is expected well inside the budget. If Tier 1 still improves at step 490,
+The best checkpoint is expected well inside the budget. If Tier 1 still improves at step 504,
 report it, and extend only by a stated number of steps in a new run.
 
 ### 6.5 No mid-run gate breaks
@@ -362,6 +390,14 @@ verdict (§9) is computed for each arm. expv2 passes if either does; both are re
 *guided* velocity. Tier 1 compares captions under shared noise, so ranking still works, but
 its absolute margins are not comparable with v8's.
 
+**Tier-1 mechanics** (`eval/dcls.py`): x_σ = (1 − σ)·x₀ + σ·ε with one ε per (clip, σ, draw),
+seeded and identical across checkpoints; the error is ‖v̂ − (ε − x₀)‖² per latent, weights
+|z[f] − z[0]| (channel mean, normalised to mean 1 over the kept latents), latent 0 dropped.
+The silent audio stream is noised at the **same σ** as the video. In training the two
+modalities share a table index instead (different σ under different shifts); Tier 1 fixes
+audio at the video σ so that only the caption varies. DiffSynth's per-σ training weight is
+not applied, because it cannot change a ranking within one σ.
+
 ### 7.3 Winner rule (Tier 1)
 
 1. Among checkpoints whose held-out losses beat the base on ≥ 15/16 expression and
@@ -376,7 +412,13 @@ its absolute margins are not comparable with v8's.
 | Suite | Content | Clips |
 |---|---|---|
 | `core` | 13 labels × 2 characters × {FRONT, `QF2_R`} × 3 seeds at f22. Running is an untrained label, reported apart from the bars | 156 |
-| `native` | angry, laughing, blushing at f39, neutral at f56; `QF2_R`; 2 characters × 3 seeds. Does the arc complete where the footage allows? | 24 |
+
+**Start frames, every suite:** frame 0 of the character's **`neutral`** source at that view
+and ground, 1.00×: v8's rule (`build_assets_v8.py`). The same image serves every label, so
+the label can only come from the prompt (V4), and §8 compares like with like. The `QF2_R`
+neutral source is held out, so those start frames are unseen. Truncation suffixes still
+follow each label's own source. Tier 1 is different: it uses each held-out clip's own frame 0.
+| `native` | angry, laughing, blushing at f39, neutral at f56; `QF2_R`; 2 characters × 3 seeds. **Untrained lengths** (§5.1): does the model hold together and complete the arc when asked for more frames than it trained on? Reported, not gated | 24 |
 | `gb` | angry, waving, jumping × 2 characters × {lavender, sky-blue} × 3 seeds | 36 |
 | motion probe | 4 trained motions × 2 characters × `QF2_R` × seed 42, on every checkpoint | 8 per checkpoint |
 
@@ -427,18 +469,22 @@ excluding running.
 | V3 | Tier 1 | held-out accuracy ≥ 0.75 expression (≥ 12/16; chance 0.125) and ≥ 0.70 motion (≥ 5/7; chance 0.25); losses below the base on ≥ 15/16 expression and ≥ 6/7 motion clips |
 | V4 | Controllability | CLIP 1-NN label accuracy ≥ 0.45 expression and ≥ 0.40 motion |
 | V5 | Motion | per trained motion: median motion energy ≥ 0.8× source, frozen fraction ≤ source + 15 points |
-| V6 | Camera and ground | \|zoom\| ≤ 3%; corner drift ≤ 5/255 on unseen grounds (`gb`); ground spread ≤ 2× the source's |
+| V6 | Camera and ground | \|zoom\| ≤ 3% (zoom minus the label's source zoom: jumping's shadow shrinks by design); corner drift ≤ 5/255 on unseen grounds (`gb`); ground spread ≤ max(2× the source's, the floor in G0.5) |
 | V7 | Late-frame identity | last-vs-first DINOv2 similarity of the character ≥ 0.9× the source's |
 | V8 | Memorisation | FRONT minus `QF2_R` 1-NN accuracy ≤ 0.15 |
 | **V9** | **First-frame fidelity** (2.2) | on ≥ 95% of `core` `QF2_R` clips: generated frame 0 vs the supplied start frame, PSNR ≥ (G0.1's mean 768² round-trip PSNR − 3 dB) and character-crop DINOv2 similarity ≥ 0.95 |
 | **V10** | **Cadence** (2.12) | per-label median twos index ≤ the source's + 0.10, for ≥ 10 of 12 labels |
-| **V11** | **Colour and flatness** (2.1, 2.13) | median character saturation ≥ 0.9× source; median fill flatness (luminance std) ≤ 1.5× source |
+| **V11** | **Colour and flatness** (2.1, 2.13) | median character saturation ≥ 0.9× source; median fill flatness (local 5×5 luminance std, G0.5) ≤ 1.5× source |
+
+Ratios "vs source" are taken per label, then the median over labels, so the label mix
+cannot move a bar.
 
 | Outcome | Meaning | Next |
 |---|---|---|
 | **PASS** (V1–V11, arm A or D) | H3 learns Pudgy at 0.92 s and stays controllable on unseen views | §8 label; §12 when Round 5 lands |
 | **PARTIAL** (V1–V3 pass; some of V4–V11 fail) | it learns the labels, but generation misses bars | §8 read; decide whether Round 5 data is likely to fix it |
 | **FAIL at V1, V2 or V11** (after arm D if triggered) | the VAE, the style prior or the distillation does not suit this art | stop; record why |
+| **FAIL at V3** | the labels were not learned (Tier 1), whatever the generations look like | stop; re-check G0.2b and the captions before any re-run |
 
 V9–V11 are new for H3 and set before any data. If the base (G0.4) already misses one by a
 wide margin, that is recorded; the bar does not move.
@@ -454,15 +500,15 @@ f39 and 11.1k at f56. That gives ≈ 4.7 / 7.3 / 9.9 s per sample, and ≈ 5.7 s
 
 | Item | Estimate |
 |---|---|
-| G0.1 VAE gate (VAE only, ~5 GB) | ≤ 1 h |
+| G0.1 VAE gate (VAE only; 10.4 GB fp32 file) | ≤ 1 h |
 | G0.2 checks (incl. the full-DiT parity load) | ≈ 2 h |
 | G0.6 memory probe | ≈ 0.5 h |
-| Stage-1 cache: Qwen3-VL over ~980 clips + ~400 evaluation pairs, VAE encode | ≈ 1.5–2 h |
-| Pilots: 2 × 980 samples × 5.7 s | ≈ 3.1 h |
-| Main: 3,920 samples × 5.7 s | ≈ 6.2 h |
-| Tier 1: base + 2 pilots + 10 checkpoints, ~15 min each, + calibration | ≈ 4–5 h |
+| Stage-1 cache: Qwen3-VL over 672 clips + ~400 evaluation pairs, VAE encode | ≈ 1–1.5 h |
+| Pilots: 2 × 1,344 samples × 4.7 s (f22) | ≈ 3.5 h |
+| Main: 4,032 samples × 4.7 s | ≈ 5.3 h |
+| Tier 1: the 5-σ grid on base + 2 pilots (holdout + calib, ≈ 3,200 forwards each, ≈ 1.5 h each), then 11 main checkpoints + base at the 2 calibrated σ (≈ 624 forwards, ~18 min each) | ≈ 8 h |
 | Generation: ≈ 490 clips × 45–90 s (≈ 1.7 s/step × 50 steps at f22, from HF #35's A100 timing scaled by tokens) | ≈ 6–12 h |
-| **Total, arm A** | **≈ 25–32 A100-h** |
+| **Total, arm A** | **≈ 28–37 A100-h** |
 | Arm D, if triggered: train + Tier 1 + Tier 2 | + 11–13 h |
 
 For scale: v8's training alone took 57.5 h, and expv1's plan budgets 45–60 h.
@@ -477,7 +523,7 @@ For scale: v8's training alone took 57.5 h, and expv1's plan budgets 45–60 h.
 | Distillation drift (wash-out, lost adherence) | guidance loss; early checkpoints; V11; arm D |
 | The trainer silently trains first + last frame, or pads a short clip | G0.2b, G0.2e |
 | The shift is wrong for our data | pilots (§6.3) |
-| 22 frames is 5.6× below H3's trained floor (124 frames): an untested regime | Phase 0's base probe shows it at no training cost; `native` measures 39/56 where possible |
+| 22 frames is 5.6× below H3's trained floor (124 frames): an untested regime | Phase 0's base probe shows it at no training cost; `native` asks for 39/56 frames (untrained lengths, reported). Round 5's longer footage is what lifts the 22-frame ceiling (§12) |
 | Sitting has 6 training sources; confused and happy 12 | read as the watch cells; no upweighting (A12) |
 | On-twos and 3D priors | caption counter-wording; V10, V2, V11 |
 | DiffSynth is young; flags or behaviour change between commits | one pinned SHA; G0.2 on that SHA |
@@ -501,61 +547,19 @@ reached PASS or PARTIAL.
 
 ---
 
-## 13. Runbook (scripts marked † are still to write)
+## 13. Runbook
 
-```bash
-# 0. Environment
-git clone https://github.com/modelscope/DiffSynth-Studio /workspace/DiffSynth-Studio
-git -C /workspace/DiffSynth-Studio checkout <SHA>             # record in eval/phase0/pins.json
-pip install -e /workspace/DiffSynth-Studio
-git -C /workspace/DiffSynth-Studio apply expv2-minimax-h3/patches/diffsynth-h3-train-shift.patch   # †
-#   download the inputs of section 3; write revisions + MD5s to eval/phase0/pins.json
+The executable order, every command and the report-back points are in
+[`../RUNBOOK.md`](../RUNBOOK.md). The scripts it calls are in this folder (`setup/`,
+`patches/`, `prep/`, `configs/`, `eval/`, `scripts/`); file layouts are in
+[`INTERFACES.md`](INTERFACES.md).
 
-# 1. Phase 0
-python expv2-minimax-h3/eval/vae_gate.py                      # † G0.1 -> stop on fail
-python expv2-minimax-h3/eval/pipeline_checks.py               # † G0.2a-h (applies the cosine patch if needed)
-python expv2-minimax-h3/eval/source_baseline.py               # † G0.5 (CPU)
-python expv2-minimax-h3/eval/dcls.py --ckpt base              # † G0.3
-python expv2-minimax-h3/eval/generate.py --ckpt base --suites core,native   # † G0.4
-python expv2-minimax-h3/eval/mem_probe.py --frames 22,39,56   # † G0.6
-
-# 2. Corpus
-python expv2-minimax-h3/prep/prep_expv2.py --dry-run          # † plan only; prints the section 5.2 table
-python expv2-minimax-h3/prep/prep_expv2.py --workers 16       # † -> Data/processed/expv2_h3/{clips,png,metadata_f22.csv,metadata_f39.csv,metadata_f56.csv}
-
-CACHE_MODELS="MiniMax/MiniMax-H3:FL2VA/text_encoder/model*.safetensors,Comfy-Org/MiniMax-H3:diffusion_models/minimax_h3_fl2va_pruned_bf16.safetensors,MiniMax/MiniMax-H3:FL2VA/video_vae/source/model.safetensors,MiniMax/MiniMax-H3:FL2VA/audio_vae/model.safetensors"
-LORA="--lora_base_model dit --lora_target_modules attn.qkv_proj,attn.out_proj,mlp.fc1,mlp.fc2 --lora_rank 32"
-cd /workspace/DiffSynth-Studio
-for F in 22 39 56; do                                         # stage 1, once per bucket
-  accelerate launch examples/minimax_h3/model_training/train.py \
-    --dataset_base_path <repo>/Data/processed/expv2_h3 \
-    --dataset_metadata_path <repo>/Data/processed/expv2_h3/metadata_f${F}.csv \
-    --data_file_keys "video,input_audio" --extra_inputs "input_audio,input_image" \
-    --silent_on_missing_audio --height 768 --width 768 --num_frames $F --dataset_repeat 1 \
-    --model_id_with_origin_paths "$CACHE_MODELS" --remove_prefix_in_ckpt "pipe.dit." \
-    --output_path /workspace/expv2_cache/f${F} $LORA --use_gradient_checkpointing \
-    --task "sft:data_process"
-done
-#   merge the three caches as G0.2f established
-
-# 3. Pilots, then main (the flags configs/train_expv2.sh† will wrap)
-DIT="Comfy-Org/MiniMax-H3:diffusion_models/minimax_h3_fl2va_pruned_bf16.safetensors"
-for S in 12 2.22; do
-  accelerate launch examples/minimax_h3/model_training/train.py \
-    --dataset_base_path /workspace/expv2_cache/all --dataset_repeat 1 --num_epochs 1 \
-    --model_id_with_origin_paths "$DIT" --remove_prefix_in_ckpt "pipe.dit." \
-    --learning_rate 1e-4 --weight_decay 1e-3 --gradient_accumulation_steps 8 \
-    --training_cfg_scale 4 --audio_loss_weight 0 \
-    --train_flow_shift $S \
-    $LORA --use_gradient_checkpointing --find_unused_parameters --save_steps 50 \
-    --output_path /workspace/expv2_output/pilot_s$S --task "sft:train"
-done
-#   --train_flow_shift comes from the shift patch; scheduler flags from the cosine patch if applied
-python expv2-minimax-h3/eval/dcls.py --calibrate --ckpt pilot_s12,pilot_s2.22   # † section 6.3 -> shift
-#   main: same command, --train_flow_shift <winner> --dataset_repeat 4, output .../main
-
-# 4. Tier 1 on every checkpoint, motion probe, winner rule (section 7.3)
-# 5. Tier 2 on the winner (and the base from G0.4); section 8 head-to-head; section 9 verdict -> docs/REPORT.md
-# 6. Arm D only if section 6.6 triggers: main command with --training_cfg_scale 1 \
-#      --preset_lora_path <adapter>/model_for_comfy_dit.safetensors --preset_lora_model dit
-```
+Reading DiffSynth's code at `acf2ad2` (2026-10-12) changed four things in the first
+version of this section, all now handled by `configs/`:
+- stage 1 loads **no DiT**, and must run at **`--training_cfg_scale 4`** too, or the
+  guidance loss has no unconditional embeddings to read (MODEL_NOTES 2.19);
+- **`--save_steps` counts samples**, so "every 50 optimizer steps" is `--save_steps 400`
+  (2.18);
+- the three bucket caches need **no merge**: stage 2 finds `.pth` files recursively under
+  one parent (§1 of MODEL_NOTES);
+- stage 2 still needs a valid `--num_frames`, and the run needs the `--seed` patch (2.20–2.21).
