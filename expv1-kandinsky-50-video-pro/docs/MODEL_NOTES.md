@@ -135,6 +135,24 @@ HD: 1024×1024). The output size follows the start frame:
 
 **Pre-size every start frame to exactly 512×512, and assert the output size.**
 
+### 2.8 Kandinsky's VAE drops frames unless the clip is 8k+1 (measured)
+
+`AutoencoderKLHunyuanVideo.encode` (kandinsky-5 @ 3a74261) picks its tiling with
+`get_enc_optimal_tiling`, which returns 17-frame temporal tiles at **stride 8**. Above 17
+frames, only lengths of the form **8k+1** come back whole. The others are cut short with no
+error. Measured on the A100 box (2026-10-12), frames in → latent frames → frames out:
+
+| in | 13 | 17 | **21** | 25 | **29** | 33 | **37** | 41 | 49 | 57 | 121 |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| latent | 4 | 5 | **3** | 7 | **7** | 9 | **9** | 11 | 13 | 15 | 31 |
+| out | 13 | 17 | **9** | 25 | **25** | 33 | **33** | 41 | 49 | 57 | 121 |
+
+**Effect on the plan:** PLAN §5.1 uses 4k+1 lengths, and §7.4's `core` suite runs at
+**f21**. Any clip that goes through this encode path, whether a VAE gate clip, a Tier-1
+clip encoded with Kandinsky's code, or a start-and-end anchor, must be 13, 17 or 8k+1.
+musubi caches latents with its own VAE code, so check its behaviour separately (G0.2).
+`eval/vae_gate.py` uses `k5_len()` and asserts that the frame count out equals the count in.
+
 ---
 
 ## 3. What already fits the footage, and what does not
