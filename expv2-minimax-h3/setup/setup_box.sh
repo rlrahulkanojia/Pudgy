@@ -75,7 +75,7 @@ say "5. expv2 dependencies"
 # transformers must provide Qwen3VLModel (diffsynth/models/minimax_h3_text_encoder.py).
 # diffusers: only for G0.1's Wan reference VAEs (eval/vae_gate.py). scipy: scoring.
 pip install -q --upgrade "transformers>=4.57" "huggingface_hub[hf_transfer]" modelscope diffusers \
-  "imageio[ffmpeg]" av safetensors pandas scipy pillow azure-storage-blob python-dotenv tensorboard
+  "imageio[ffmpeg]" av safetensors pandas scipy scikit-image pillow azure-storage-blob python-dotenv tensorboard
 python -c 'from transformers import Qwen3VLModel; import torchaudio, diffsynth; print("imports ok")'
 
 say "6. accelerate (1 GPU, bf16)"

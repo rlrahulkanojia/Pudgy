@@ -95,6 +95,11 @@ stage_base() {
   run python "$E/eval/dcls.py" --ckpt base --set holdout,calib --sigmas grid
   run python "$E/eval/generate.py" --ckpt base --suites core,native
   run python "$E/eval/score.py" --ckpt base --suites core,native
+  # Early read, not a gate: the untrained base vs v8@550 on the same 48 PLAN-8 pairs.
+  # The final PLAN-8 label is only ever computed on the trained winner (stage tier2).
+  run python "$E/scripts/azure_sync.py" pull v8
+  run python "$E/eval/h2h_v8.py" --ckpt base --v8-dir "$EXPV2_WORK/v8_550" \
+    --out "$EXPV2_WORK/eval/reports/h2h_v8_base.json"
 }
 
 stage_pilots() {

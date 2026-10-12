@@ -236,7 +236,10 @@ def load_wan(key):
     print(f"[load] {key}: {spec['cls']} from {spec['repo']}  ({spec['note']})")
     vae = cls.from_pretrained(spec["repo"], subfolder="vae", torch_dtype=torch.float32)
     vae = vae.to("cuda").eval()
-    for m in ("enable_slicing", "enable_tiling"):
+    # diffusers 0.35's tiled_encode skips patchify, so a patch_size VAE (Wan2.2-5B) crashes
+    # tiled ("expected 12 channels, got 3"). Untiled fits on 80 GB at 768^2.
+    tiling = getattr(vae.config, "patch_size", None) in (None, 1)
+    for m in ("enable_slicing",) + (("enable_tiling",) if tiling else ()):
         if hasattr(vae, m):
             getattr(vae, m)()
     return vae
@@ -496,8 +499,10 @@ def main():
     for v, by_size in results.items():
         for s, by_clip in by_size.items():
             keys = ("psnr", "ssim", "edge_psnr", "edge_cov", "flat_band", "shimmer_abs")
-            means.setdefault(v, {})[s] = {k: (round(float(np.mean([m[k] for m in by_clip.values() if m.get(k) is not None])), 4)
-                                              if any(m.get(k) is not None for m in by_clip.values()) else None) for k in keys}
+            # NaN = metric undefined for that clip (edge_psnr on the flat-fill clip has no edges)
+            ok = lambda x: x is not None and x == x  # noqa: E731
+            means.setdefault(v, {})[s] = {k: (round(float(np.mean([m[k] for m in by_clip.values() if ok(m.get(k))])), 4)
+                                              if any(ok(m.get(k)) for m in by_clip.values()) else None) for k in keys}
             means[v][s]["ground_drift"] = round(float(np.nanmean([m["h3"]["ground_drift"] for c, m in by_clip.items()
                                                                   if not c.startswith("flatfill")] or [np.nan])), 3)
     vd = verdict(results, sizes)

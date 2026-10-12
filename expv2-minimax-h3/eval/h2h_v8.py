@@ -192,6 +192,8 @@ def main():
     ap.add_argument("--rubric", default=str(C.EVAL / "reports" / "h2h_rubric.json"))
     ap.add_argument("--rubric-template", action="store_true", help="write the blinded rubric + key and exit")
     ap.add_argument("--workers", type=int, default=8)
+    ap.add_argument("--out", default=str(C.EVAL / "reports" / "h2h_v8.json"),
+                    help="report path (an early read on the base writes reports/h2h_v8_base.json)")
     a = ap.parse_args()
 
     ckpt = a.ckpt or ((C.load_json(C.EVAL / "reports" / "winner.json", {}) or {})
@@ -301,7 +303,7 @@ def main():
            "label": label,
            "note": "Never a replacement before PLAN §12: H3 does not cover running on today's data.",
            "confounds": CONFOUNDS, "pairs": rows}
-    dest = C.EVAL / "reports" / "h2h_v8.json"
+    dest = Path(a.out)
     C.write_json(dest, M.clean(out))
     print(f"CLIP 1-NN: H3 {stats['clip']['acc_h3']:.3f} vs v8 {stats['clip']['acc_v8']:.3f}; "
           f"b={b} c={c} p={p:.4f}; rubric h3={r3} v8={r8}\n-> {label}\n-> {dest}")
