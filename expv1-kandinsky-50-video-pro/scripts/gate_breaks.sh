@@ -30,6 +30,9 @@ for S in "$@"; do
   supervisorctl stop expv1-train
   cp "$TLOG" "$OUT/train_segment_to_step$S.log" 2>/dev/null
   ( cd "$E" && "$PY" eval/dcls.py score --configs "expv1@$S" --split holdout seen ) || echo "!! dcls failed"
+  if [ "$S" = 300 ]; then                    # PLAN §6.3: the step-300 break also runs the motion probe
+    ( cd "$E" && "$PY" eval/gen_core.py --config "expv1@$S" --suite probe ) || echo "!! motion probe failed"
+  fi
   ( cd "$E" && "$PY" eval/gate_rule.py --step "$S" ); rc=$?
   if [ $rc = 2 ]; then
     echo "!! [$(ts)] gate at step $S FAILED - training stays stopped (PLAN §6.3). See eval/reports/gate_$S.json"

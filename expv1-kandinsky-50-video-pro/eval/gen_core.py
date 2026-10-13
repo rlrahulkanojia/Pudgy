@@ -20,6 +20,10 @@ the naming of v8's core clips, so compare_v8.py pairs them directly.
 
     python eval/gen_core.py --config base [--seeds 42 43 44] [--limit 2]
     python eval/gen_core.py --config expv1@550
+    python eval/gen_core.py --config expv1@300 --suite probe   # PLAN §6.3 motion probe
+
+--suite probe = the motion probe: 5 motion labels x 2 characters x QF2_R x seed 42 (10 clips),
+a subset of `core` with the same names in the same directory, so it is reused by the suite.
 """
 import argparse
 import gc
@@ -35,10 +39,10 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import expv1_common as C  # noqa: E402
 
 
-def items(seeds, views=("FRONT", C.HOLDOUT_ANGLE)):
+def items(seeds, views=("FRONT", C.HOLDOUT_ANGLE), labels=C.LABELS):
     out = []
     for char in C.CHARS:
-        for label in C.LABELS:
+        for label in labels:
             n = C.H2H_WINDOW[C.kind_of(label)]
             for view in views:
                 for s in seeds:
@@ -75,6 +79,7 @@ def main():
     ap.add_argument("--seeds", type=int, nargs="+", default=[42])
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--steps", type=int, default=None, help="override (smoke tests only)")
+    ap.add_argument("--suite", choices=("core", "probe"), default="core")
     a = ap.parse_args()
 
     import torch
@@ -92,7 +97,9 @@ def main():
 
     out_dir = C.EVAL / "gen" / a.config.replace("/", "_").replace(":", "_") / "core"
     out_dir.mkdir(parents=True, exist_ok=True)
-    todo = [it for it in items(a.seeds) if not (out_dir / it["name"]).exists()]
+    its = (items([42], views=(C.HOLDOUT_ANGLE,), labels=C.MOTION_LABELS) if a.suite == "probe"
+           else items(a.seeds))
+    todo = [it for it in its if not (out_dir / it["name"]).exists()]
     if a.limit:
         todo = todo[:a.limit]
     if not todo:

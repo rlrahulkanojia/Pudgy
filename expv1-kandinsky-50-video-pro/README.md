@@ -1,13 +1,18 @@
 # `expv1-kandinsky-50-video-pro/` — isolated experiment, not a version
 
-**Status (2026-10-13):** Phase 0 in progress. No LoRA has been trained yet.
+**Status (2026-10-13, 22:10Z):** arm A trained (600 steps); winner **expv1@550**. Full
+findings, numbers and logic: [`docs/REPORT.md`](docs/REPORT.md).
 
-- **G0.1** VAE gate: **PASS**.
-- **G0.2** conditioning check: **PASS**.
-- **G0.3** layout: **A**. The checkpoint expects official-inference layout A; musubi's
-  generator gives it A1, so the generator is patched (MODEL_NOTES §2.12).
-- **Is expv1 better than v8@550?** That question now has a pre-registered statistical test
-  (PLAN §8b, `eval/compare_v8.py`). It has been checked against v8's own runs.
+- **Phase 0:** G0.1 VAE **PASS**, G0.2 conditioning **PASS**, G0.3 layout **A** (generator
+  patched, MODEL_NOTES §2.12).
+- **Gates:** step 100 PASS (loss below base on 26/26 held-out clips); step 300 expression
+  margin above base, motion not (reported, not a stop rule).
+- **Tier 1 (held-out `QF2_R`), expv1@550:** expression **0.75** (base 0.375, v8 0.81), motion
+  0.30 (base 0.30, v8 0.80). Expression is learned; motion labels are not.
+- **Motion probe:** no arm-B trigger; the LoRA fixes under-motion on run/jump but over-moves
+  small actions (1.5-4.5x source).
+- **vs v8@550:** Tier 1 interim: not better (0.58 vs 0.81 pooled, p = 0.09 for v8).
+  Tier 2 (52 generated pairs) **pending**.
 
 **This is an isolated test.** It is not v10, and it is not a continuation of v1–v9. It
 starts from the public **Kandinsky 5.0 Video Pro** image-to-video checkpoint. No earlier
