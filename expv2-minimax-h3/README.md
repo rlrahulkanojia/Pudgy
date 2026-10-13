@@ -1,9 +1,14 @@
 # `expv2-minimax-h3/` — isolated experiment, not a version
 
-**Status:** ready for a GPU box (2026-10-12). Plan, scripts and runbook are written. The
-corpus prep and every CPU-side script have run on the Mac; nothing has run on a GPU yet.
-**To start a box, follow [`RUNBOOK.md`](RUNBOOK.md)**, or run `run_expv2.sh auto` once
-sections 1–5 of it are done.
+**Status: ENDED at Phase 0, G0.1 FAIL (2026-10-12).** H3's video VAE breaks thin outlines.
+On the angry clips the stroke centerline survival is at minimum 0.86–0.89 (Wan2.1: 0.9996),
+with 13–16 broken stroke gaps per frame (Wan2.1: 0), and eyebrows, crest and mouth line are
+lost. The result is the same in fp32, and Wan2.2-5B (also 16×) keeps every stroke, so the cause
+is H3's decoder. The metric bars (ground drift, chunk dip, flat fill) passed. Nothing was
+trained. **Findings, every number and what would reopen it:
+[`docs/REPORT_G01.md`](docs/REPORT_G01.md).** The MiniMax weights have been deleted from the
+box. The plan, scripts and runbook below are kept as written; [`RUNBOOK.md`](RUNBOOK.md) still
+describes how a re-run would go.
 
 **This is an isolated test.** It is not v10, not a continuation of v1–v9, and not a
 follow-up to `expv1-kandinsky-50-video-pro`. It starts from the public **MiniMax H3 FL2VA**
@@ -60,6 +65,7 @@ frames says whether H3 is worth a Round 5 re-run as the replacement candidate.
 | [`docs/PLAN.md`](docs/PLAN.md) | Phase 0 measurements, corpus, recipe, pilots, evaluation tiers, the v8@550 head-to-head, the pass/fail rule fixed before any data exists, cost |
 | [`docs/INTERFACES.md`](docs/INTERFACES.md) | Every file the scripts read and write: corpus layout, box scratch, eval outputs, JSON schemas |
 | [`RUNBOOK.md`](RUNBOOK.md) | The executable order on a fresh GPU box, with stop rules and what to report back |
+| [`docs/REPORT_G01.md`](docs/REPORT_G01.md) | **The outcome:** the G0.1 VAE gate failure. Per-clip and per-VAE statistics, the pre-stated rule, the evidence that the cause is H3's decoder, the bugs fixed, the §8 smoke statistics, and the Azure artifacts |
 
 ---
 
@@ -106,7 +112,8 @@ expv2-minimax-h3/
 │   ├── PLAN.md               design, gates, pre-registered verdict, cost
 │   ├── MODEL_NOTES.md        H3 facts this plan depends on, and the gotchas
 │   ├── LEARNINGS_CARRIED.md  v1–v9 lessons as they apply to H3, plus new ones
-│   └── INTERFACES.md         file layouts and JSON schemas
+│   ├── INTERFACES.md         file layouts and JSON schemas
+│   └── REPORT_G01.md         the result: G0.1 FAIL, findings and statistics
 ├── setup/
 │   ├── setup_box.sh          apt, venv, torch, DiffSynth @ acf2ad2 + patches, deps, env.json
 │   └── fetch_models.py       pinned HF/ModelScope downloads, sha256, pins.json

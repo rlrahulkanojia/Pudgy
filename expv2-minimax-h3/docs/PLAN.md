@@ -1,5 +1,11 @@
 # expv2-minimax-h3 — plan
 
+> **Outcome (2026-10-12): stopped at G0.1, FAIL at V1.** The metric bars passed, but bar 1
+> (outlines intact against Wan2.1) failed on the pre-stated proxy rule. Stroke centerline min
+> was 0.86–0.89 on the angry clips (Wan2.1: 0.9996), the same in fp32, while Wan2.2-5B (16×)
+> was intact. Nothing past G0.1 ran. Full findings: [`REPORT_G01.md`](REPORT_G01.md). The
+> plan below is unchanged.
+
 **Status:** plan, written 2026-10-11, nothing run. **Isolated experiment**: see
 [`../README.md`](../README.md). Lessons are cited by tag (A1–E from expv1's register, N1–N5
 new), as applied in [`LEARNINGS_CARRIED.md`](LEARNINGS_CARRIED.md). Model facts and gotchas
@@ -89,6 +95,8 @@ defaults), not diffusers. Run the **same clips** through the two reference VAEs.
 2. ground drift ≤ 2/255 on every clip (the v5/v8 bar; HF #78's colour-shift risk);
 3. chunk-boundary dip ≤ 1/255;
 4. no grid or banding on the flat-fill clip.
+
+**Result (2026-10-12): FAIL on bar 1. Bars 2–4 passed.** See [`REPORT_G01.md`](REPORT_G01.md).
 
 **Fail → stop expv2 and report.** Informational: H3 vs the Wan2.2-5B 16× VAE, the only other
 16× VAE we can test, says whether a failure is about the compression ratio or about H3's

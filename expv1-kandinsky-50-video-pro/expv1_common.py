@@ -66,7 +66,10 @@ GROUNDS = {"white": (255, 255, 255), "pastel blue": (198, 222, 241), "peach": (2
 NEG = ("photorealistic, 3D render, realistic lighting, gradient shading, soft shadows, textured background, "
        "blurry, distorted, deformed, low quality, worst quality")
 
-# --- labels (action clauses copied from prep_v8.py; `native` = expv1's legal length) -------
+# --- labels (action clauses copied from prep_v8.py) -------------------------------------------
+# `native`: the shortest legal length holding the label's whole arc in the delivered footage
+# (measured by prep_expv1: active length); laughing's arc (38-39 frames) does not fit before
+# the sources end, so every laughing clip is 'opening frames only' (native 41 > any rung).
 MOTION = {
     "walking": {"native": 13, "label": "walk cycle",
                 "action": ("walking in place with a steady waddling gait, feet alternating, "
@@ -92,7 +95,7 @@ EXPRESSIONS = {
     "surprised": {"native": 25, "label": "surprised expression",
                   "action": ("eyes widening in surprise, brows shooting up, beak opening into a "
                              "small round gasp, body pulling back slightly")},
-    "angry": {"native": 33, "label": "angry expression",
+    "angry": {"native": 25, "label": "angry expression",
               "action": ("scowling into an angry glare, brows dropping and pressing together, "
                          "beak set in a hard frown, shoulders squaring")},
     "confused": {"native": 17, "label": "confused expression",
@@ -106,11 +109,11 @@ EXPRESSIONS = {
     "neutral": {"native": 57, "label": "neutral expression",
                 "action": ("standing still with a calm neutral expression, body held steady and "
                            "beak closed, eyes open apart from a slow blink")},
-    "blushing": {"native": 41, "label": "blushing expression",
+    "blushing": {"native": 33, "label": "blushing expression",
                  "action": ("blushing shyly, rosy blush marks appearing on both cheeks, eyes "
                             "glancing up bashfully with the beak small and closed, body shifting "
                             "slightly, then holding the shy look")},
-    "laughing": {"native": 33, "label": "laughing expression",
+    "laughing": {"native": 41, "label": "laughing expression",
                  "action": ("laughing out loud, eyes squeezing shut with mirth, beak opening in "
                             "an open-mouthed laugh, flippers coming up to its belly as its body "
                             "rocks back, then holding the laugh")},
@@ -159,10 +162,11 @@ def clause_for_angle(slug):
     raise ValueError(f"no clause for angle {slug!r}")
 
 
-def caption(char, label, angle, nframes, zoom=1.00, ground="white"):
-    """PLAN §5.5, frozen. The label clause is the only part that changes between labels."""
+def caption(char, label, angle, nframes, zoom=1.00, ground="white", native=None):
+    """PLAN §5.5, frozen. The label clause is the only part that changes between labels.
+    `native`: the source's own full length (prep); eval prompts use the label's recipe length."""
     r = recipe(label)
-    lab = r["label"] if nframes >= r["native"] else f"{r['label']}, opening frames only"
+    lab = r["label"] if nframes >= (native or r["native"]) else f"{r['label']}, opening frames only"
     if "pink" in r["action"] and char == "Pax":
         raise AssertionError("'pink' in a Pax caption")
     return (f"{STYLE}\n{ANCHORS[char]}, {r['action']}; {lab}.\n"
