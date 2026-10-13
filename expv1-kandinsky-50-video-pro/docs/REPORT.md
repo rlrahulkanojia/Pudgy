@@ -1,10 +1,11 @@
 # expv1 — findings report (Kandinsky 5.0 Video Pro I2V + one LoRA)
 
-**Status (2026-10-13, 22:10Z):** training finished (600 steps). Tier 1 has been run on every
+**Status (2026-10-13, 23:50Z):** training finished (600 steps). Tier 1 has been run on every
 50-step checkpoint and the motion probe on every 100-step checkpoint. The winner rule picked
-**expv1@550**. Its Tier-2 `core` suite is generating, and the comparison with v8@550 (PLAN §8b)
-runs when that finishes. **§11 (Tier 2 and the verdict) is PENDING** and will be filled in
-when those clips land.
+**expv1@550**. Its 52-clip `core` suite is generated and compared with v8@550 (PLAN §8b, §11).
+**Verdict: expv1@550 is not better than v8@550.** The formal label reads "PENDING: N1" only
+because the blinded style rubric needs a human rater, but the rubric cannot turn it into BETTER
+(§11.3).
 
 Every number below comes from a file under `/workspace/expv1/eval/` (mirrored to Azure
 `pudgy/expv1-kandinsky-50-video-pro/eval/`). Each section names its source file and the
@@ -24,7 +25,9 @@ script that produced it.
 | Does it move? | Yes, too much: probed motion is 1.4–2.1× the real clips' energy, and up to 4.5× on `sitting` | §6 |
 | Winner (PLAN §7 rule) | **expv1@550**: step 600 scored highest but the motion veto applied | §7 |
 | Better than v8@550 on Tier 1? | **No**: 0.58 vs 0.81 pooled (b = 4, c = 10, not significant, p = 0.09 for v8). Expression is close (0.75 vs 0.81); motion is far behind (0.30 vs 0.80) | §8 |
-| Better than v8@550 overall? | **PENDING**: Tier 2 (52 generated pairs) and the blinded rubric | §11 |
+| Better than v8@550 overall? | **No.** Both primaries favour v8 (Tier 1 0.58 vs 0.81; Tier-2 CLIP 1-NN 0.385 vs 0.423), neither significantly. Non-inferiority N2-N5 hold (after a zoom-measurement fix, §11.2). Outcome: NO DETECTABLE DIFFERENCE if the rubric passes, NOT BETTER if it fails. BETTER is ruled out either way | §11 |
+| Where expv1 is ahead | Steadier camera (\|zoom\| −0.033 vs v8, p = 0.005), less motion overshoot (1.62× vs 1.79× source), DINOv2 1-NN expression 0.53 vs 0.25 (secondary, not gated) | §11 |
+| Where expv1 is behind | Motion labels (Tier 1 0.30 vs 0.80; Tier-2 CLIP 0.45 vs 0.65), late-frame identity (−0.011), ground drift (4.1 vs 2.0 /255, under the 5/255 bar), and a visible frame-0 → frame-1 shadow/tint pop | §11 |
 
 ---
 
@@ -344,13 +347,107 @@ is P2, below.
    `core`, `native` and `gb` suites are still to run for §9.
 3. Base `core` is at 26/52 clips.
 4. G0.5 full source baseline not yet computed (§2.6).
+5. `zoom_estimate` reference fixed after the first expv1 vs v8 run (§11.2); validation runs
+   unchanged by it.
 
 ---
 
-## 11. Tier 2 and the verdict vs v8@550: **PENDING**
+## 11. Tier 2 and the verdict vs v8@550 (`eval/reports/compare_expv1-550_vs_v8-550.json`)
 
-*Fills in when `eval/gen/expv1@550/core` (52 clips) and `compare_expv1@550_vs_v8-550.json` exist.*
+`core` suite: `eval/gen_core.py --config expv1@550 --seeds 42`, which gives 52 clips at 512²:
+13 labels × 2 characters × {FRONT, `QF2_R`}, f13 motion / f17 expression, 50 steps, CFG 5,
+layout A, start frame = neutral frame 0 on white. Every clip's frame count and size are
+asserted. 10 of the 52 are the probe clips (same files). v8@550's 52 clips come from Azure
+`pudgy/v8/eval/suites/core/v8@550`, resized 1024² → 512² and trimmed to the same window. Both
+sets are scored by the same code.
 
-N1 (blinded style rubric) needs a human rater: `compare_v8.py --rubric-template` writes the
-blinded sheet and a separate key. Until it is rated, the verdict can at best read
-"PENDING: N1".
+### 11.1 Results
+
+**Primary endpoints** (one-sided exact McNemar; b = expv1 right & v8 wrong, c = the reverse):
+
+| | expv1@550 | v8@550 | b / c | p (expv1 better) | p (v8 better) | Holm p (v8 better) | P(expv1 better) |
+|---|---|---|---|---|---|---|---|
+| **P1** Tier-1 held-out acc (26) | 0.577 | 0.808 | 4 / 10 | 0.97 | 0.090 | 0.18 | 0.06 |
+| **P2** Tier-2 CLIP 1-NN acc (52) | 0.385 | 0.423 | 7 / 9 | 0.77 | 0.40 | 0.40 | 0.31 |
+
+Per kind (secondary):
+
+| | Expression expv1 / v8 | b / c | Motion expv1 / v8 | b / c |
+|---|---|---|---|---|
+| Tier 1 | 0.750 / 0.812 | 3 / 4 | 0.300 / 0.800 | 1 / 6 (p = 0.06 for v8) |
+| Tier-2 CLIP 1-NN | 0.344 / 0.281 | 5 / 3 | 0.450 / 0.650 | 2 / 6 |
+| Tier-2 DINOv2 1-NN | **0.531 / 0.250** | 15 / 6 (p = 0.039, unadjusted) | 0.600 / 0.600 | 5 / 5 |
+| Tier-2 all, DINOv2 | 0.558 / 0.385 | 20 / 11 (p = 0.075) | | |
+
+CLIP 1-NN predictions collapse towards `laughing` for **both** models (expv1 18/32 expression
+clips, v8 14/32), the weak expression sensitivity of CLIP at f17 already noted in validation.
+DINOv2 separates expressions better and favours expv1 there. That is a secondary measure,
+reported and not gated, so it cannot change the verdict.
+
+**Non-inferiority** (90% paired bootstrap CI):
+
+| Gate | Measured | Bar | Holds |
+|---|---|---|---|
+| N1 style (blinded rubric) | not rated yet: 104-clip blinded sheet `eval/reports/rubric_expv1-550_vs_v8-550.json` (key in `..._key.json`, do not open while rating) | lower bound ≥ −0.10, colour 100% | **pending** |
+| N2 motion, mean log(expv1 / v8 ratio) | −0.047, CI [−0.129, +0.033]; median ratio to source expv1 1.62, v8 1.79 | lower bound ≥ log 0.8 = −0.223 | yes |
+| N3 camera, mean \|zoom\| expv1 − v8 | **−0.033**, CI [−0.049, −0.017], Wilcoxon p = 0.005 (expv1 steadier) | upper bound ≤ +0.01 | yes (after fix, §11.2) |
+| N4 late-frame identity, DINOv2 | −0.011, CI [−0.021, −0.001] | lower bound ≥ −0.05 | yes |
+| N5 ground, median corner drift | expv1 4.08 /255 (v8 2.02) | ≤ 5 /255 | yes |
+
+### 11.2 A measurement bug found and fixed: the zoom reference (N3)
+
+**First run:** NOT BETTER on N3, with a mean \|zoom\| difference of **+4.18** (CI [2.6, 5.8]). The
+zoom is a fraction, so that claimed a ≈ 400% scale change. Implausible, so it was checked
+before being accepted. The raw output is kept: `compare_expv1-550_vs_v8-550.raw_zoom.json`.
+
+**Cause.** `zoom_estimate` takes the ground-shadow width in the last third of the clip relative
+to **frame 0**. In expv1's clips the VAE-decoded frame 0 has a slightly lighter, bluish shadow:
+RGB (209, 213, 215), against a target of ground × 0.8 = 202 ± 14. The real start frame has 203,
+and v8's frame 0 has 202. At the edge of the tolerance the shadow mask fragments and is opened
+away, so frame 0 measured **24–176 px** against **≈ 293 px** on every later frame. The
+character's height did not change (444 → 428 px, −4%). The contact sheets confirm no zoom.
+
+**Fix** (`eval/metrics.py: zoom_estimate`). Frame 0 is the reference only if its shadow
+width is within 20% of the median of frames 1–3, since no camera changes scale by 20% in 1/24 s.
+Otherwise frame 1 is the reference. This is applied to both models.
+
+**Checks that the fix is not goal-post moving:**
+- v8 vs itself, golden vs v8 and v7fixed vs v8 give **identical** numbers before and after (zoom
+  diffs 0.0 / −0.0076 / −0.0102). The fix only changes clips whose frame-0 mask failed.
+- After the fix, expv1 is as steady or steadier than v8 on 16/20 motion pairs, worse by at most
+  +0.014 on the other 4.
+- A first, looser version of the fix (frame 0 valid if ≥ 0.5× the clip median) still let two
+  clips through at 173 / 176 px (zoom +0.64 / +0.69), and N3 still failed. Those were inspected:
+  same artifact. Hence the 20% rule.
+- The fix was made **after** seeing the result. It is stated here so a reader can weigh it.
+  Without it the formal label would be NOT BETTER; with it, PENDING: N1. Neither is BETTER.
+
+**What it does reveal:** expv1's frame 0 → frame 1 has a visible **shadow/tint pop**: the shadow
+darkens and widens, and the background picks up a slight grey tint on some frames. That is a
+real (small) defect of expv1's I2V output, also reflected in its higher corner drift (4.1 vs
+2.0 /255), and the rubric rater should look for it.
+
+### 11.3 Verdict
+
+| Condition | Status |
+|---|---|
+| Every N holds | N2–N5 yes; N1 pending |
+| ≥ 1 primary significant for expv1 (Holm) | **no**: Holm p = 1.0 for both |
+| Neither primary favours v8 | **no**: both point estimates favour v8 |
+| v8 significantly better on a primary | no (Holm 0.18 / 0.40) |
+
+- If N1 holds, the result is **NO DETECTABLE DIFFERENCE**. If N1 fails, it is **NOT BETTER**.
+  BETTER and PROBABLY BETTER are impossible because both primaries favour v8.
+- **Replacement candidate: no.**
+- **Plain reading.** expv1@550 has caught up with v8 on expressions: Tier 1 is close, and
+  generation is level on CLIP and ahead on DINOv2. It has a steadier camera and less motion
+  overshoot. It does **not** know or show motion labels as well as v8, and that is where the gap is.
+- **Power caveat.** With 26 and 52 pairs, P1 detects 0.95 vs 0.81 only ≈ 28% of the time, so
+  "no detectable difference" is not proof of equality. v8 is not proven better either: Holm
+  p = 0.18 on P1.
+
+### 11.4 Not done (PLAN §9 needs these; not part of the §8b comparison)
+- N1 / §9 V2: human rating of the blinded rubric.
+- 3-seed `core`, `native` and `gb` suites for the winner; base `core` (26/52); the G0.5 full
+  source baseline. §9 V3 already **fails** on Tier 1: motion 0.30 < 0.70 (expression 0.75
+  meets its 0.75 bar). So the best §9 outcome available is PARTIAL.

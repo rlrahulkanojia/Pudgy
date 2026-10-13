@@ -219,8 +219,18 @@ def zoom_estimate(masks):
     T = len(masks)
     tail = slice(max(1, (2 * T) // 3), T)
     w = shadow_widths(masks)
-    if np.isfinite(w[0]) and np.isfinite(w).mean() >= 0.5 and np.isfinite(w[tail]).any():
-        z, src = float(np.nanmedian(w[tail] / w[0]) - 1.0), "shadow"
+    # Reference = frame 0's shadow, unless its mask failed: missing, or more than 20% off the
+    # median of frames 1-3 (no camera changes scale by 20% in 1/24 s). A shadow tint at the
+    # edge of SHADOW_TOL fragments and is opened away: expv1's VAE-decoded frame 0 measured
+    # 24-176 px vs ~293 px on every later frame, which read as a +60..+1100% "zoom". Then the
+    # reference is frame 1. Added 2026-10-13 after the expv1@550 vs v8 run, applied to both
+    # models; v8 / golden / v7fixed results are unchanged by it (REPORT §11).
+    nxt = w[1:4][np.isfinite(w[1:4])]
+    r0 = 0
+    if len(nxt) and (not np.isfinite(w[0]) or abs(w[0] / np.median(nxt) - 1.0) > 0.2):
+        r0 = 1
+    if (np.isfinite(w[r0]) and np.isfinite(w).mean() >= 0.5 and np.isfinite(w[tail]).any()):
+        z, src = float(np.nanmedian(w[tail] / w[r0]) - 1.0), "shadow" if r0 == 0 else f"shadow@{r0}"
     else:
         hs = []
         for m in masks:

@@ -1,6 +1,6 @@
 # `expv1-kandinsky-50-video-pro/` — isolated experiment, not a version
 
-**Status (2026-10-13, 22:10Z):** arm A trained (600 steps); winner **expv1@550**. Full
+**Status (2026-10-13, 23:50Z):** arm A trained (600 steps); winner **expv1@550**. Full
 findings, numbers and logic: [`docs/REPORT.md`](docs/REPORT.md).
 
 - **Phase 0:** G0.1 VAE **PASS**, G0.2 conditioning **PASS**, G0.3 layout **A** (generator
@@ -11,8 +11,11 @@ findings, numbers and logic: [`docs/REPORT.md`](docs/REPORT.md).
   0.30 (base 0.30, v8 0.80). Expression is learned; motion labels are not.
 - **Motion probe:** no arm-B trigger; the LoRA fixes under-motion on run/jump but over-moves
   small actions (1.5-4.5x source).
-- **vs v8@550:** Tier 1 interim: not better (0.58 vs 0.81 pooled, p = 0.09 for v8).
-  Tier 2 (52 generated pairs) **pending**.
+- **vs v8@550 (PLAN §8b): not better.** Both primaries favour v8, neither significantly
+  (Tier 1 0.58 vs 0.81; Tier-2 CLIP 1-NN 0.385 vs 0.423). N2-N5 hold; N1 (blinded rubric) awaits
+  a human rater, but cannot make it BETTER. expv1 is level/ahead on expressions and camera
+  steadiness, behind on motion labels. A zoom-measurement bug was found and fixed on the way
+  (REPORT §11.2). Not a replacement candidate.
 
 **This is an isolated test.** It is not v10, and it is not a continuation of v1–v9. It
 starts from the public **Kandinsky 5.0 Video Pro** image-to-video checkpoint. No earlier
