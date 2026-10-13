@@ -161,6 +161,14 @@ On the actual box, longest bucket (f57) at 512², batch 1:
 
 ---
 
+**G0.6 (measured 2026-10-13, at the start of arm A):**
+- **Setup:** bf16 base, no block swap, gradient checkpointing, SDPA.
+- **Memory:** 57.5 GB on the A100-80GB.
+- **Speed:** ≈ 32 s per optimizer step (8 clips), i.e. ≈ 4 s per clip. Arm A's 600 steps
+  ≈ 5.5 h plus gate breaks, against §10's 16–25 h estimate.
+
+---
+
 ## 5. Corpus — `Data/processed/expv1_k5pro/`
 
 Built by `prep/prep_expv1.py` (to write) from raw. It may copy decoding helpers from
@@ -182,6 +190,21 @@ Built by `prep/prep_expv1.py` (to write) from raw. It may copy decoding helpers 
   only the opening of the arc, and the caption has to say so.
 - Rungs are measured against **active** length (A5). The dead tail is trimmed, but never
   below the floor.
+
+**Amended 2026-10-13, before training** (`prep/prep_expv1.py`):
+- **Legal lengths:** only Kandinsky-legal lengths are used (13, 17, 8k+1; MODEL_NOTES §2.8).
+- **Third rung:** each source also gets the kind's eval length (f13 motion, f17 expression), so
+  Tier 1 and `core` measure at trained lengths.
+- **Top rung:** the *shortest* legal length that covers the whole active arc. "The largest
+  legal length ≤ active" would have cut, for example, surprised's 21-frame arc to 17 frames,
+  under a caption that calls it complete.
+- **"Complete" captions:** a rung is captioned as the complete label only if it holds the
+  whole arc (≤ 3 trailing active frames dropped) and no missing-frame gap cuts it. Every
+  laughing clip is "opening frames only", because its 38–39-frame arc runs to the end of the
+  sources.
+- **Result:** floor f13; **1,860 clips** from 196 sources (26 performances); f13 784, f17 568,
+  f25 276, f33 180, f57 52; max caption 124 Qwen tokens; 35 exclusions, listed in
+  `manifest.json`.
 
 ### 5.2 Content
 

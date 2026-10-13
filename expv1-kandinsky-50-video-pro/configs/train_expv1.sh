@@ -44,7 +44,7 @@ export HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1
 
 EXTRA=()
 [ "$BLOCKS_TO_SWAP" -gt 0 ] && EXTRA+=(--blocks_to_swap "$BLOCKS_TO_SWAP")
-RESUME="${RESUME:-$(ls -d "$OUT"/"$NAME"-step*-state 2>/dev/null | sort | tail -1)}"
+RESUME="${RESUME:-$( (ls -d "$OUT"/"$NAME"-step*-state 2>/dev/null || true) | sort | tail -1)}"
 [ -n "$RESUME" ] && EXTRA+=(--resume "$RESUME")
 
 echo "== expv1 arm $ARM ($NAME) $(date -u +%FT%TZ) =="
