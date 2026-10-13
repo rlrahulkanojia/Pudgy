@@ -99,8 +99,21 @@ layouts (the Tier-1 machinery, §7). Compare:
 | Layout | First frame |
 |---|---|
 | **A** (inference) | written into the noisy input at frame 0 |
+| **A1** (musubi generator; added after G0.2) | as A, plus the same latent in `visual_cond[0]` |
 | **B** (stock trainers) | in the `visual_cond` channels, mask at frame 0 only |
-| **B′** (stock musubi) | as B, plus the last frame at latent index 1 and the mask on every frame |
+| **B′** (stock musubi, `stock`) | as B, plus the last frame at latent index 1 and the mask on every frame |
+
+Implemented as `eval/dcls.py score --configs base --layouts A A1 B stock --true-only`, then
+`eval/dcls.py g03` (true-caption loss only, paired per clip; Wilcoxon reported).
+
+**Result (2026-10-13): A.** The mean true-caption loss was A 0.0342, A1 0.0395 (+15.6%),
+B 0.0423 (+23.6%) and stock 0.2495 (+630%). A was lowest on **26/26** clips against every
+other layout (Wilcoxon p = 3·10⁻⁸ each).
+- musubi's own generator (A1) therefore does **not** feed the checkpoint what it was trained
+  on.
+- The expv1 patch adds `--i2v_layout A` to the generator. G0.2's `gen_A` check shows that its
+  input now matches trainer layout A.
+- **expv1 trains, generates and scores Tier 1 in A.** `eval/phase0/g03_layout.json`
 
 **Rule:** the layout with the lower paired loss is the one the checkpoint was trained on.
 The report (§6.3.1) predicts A.
@@ -313,7 +326,7 @@ with:
 | Tier | What | When |
 |---|---|---|
 | **0** | LoRA norm, consecutive-update cosine (B18) | every checkpoint, CPU |
-| **1** | **Diffusion classifier** on the 26 held-out `QF2_R` clips: is the true caption the best denoiser among all 13 label captions? Loss on frames ≥ 1, change-masked, t ∈ {0.65, 0.85}, k = 2 noise draws identical across checkpoints (B4). Paired comparisons with bootstrap CIs | base (G0.4), gate breaks, every 50-step checkpoint after training |
+| **1** | **Diffusion classifier** (`eval/dcls.py`, layout A, clips f13 motion / **f17** expression: f21 is truncated by the VAE, MODEL_NOTES §2.8) on the 26 held-out `QF2_R` clips: is the true caption the best denoiser among all 13 label captions? Loss on frames ≥ 1, change-masked, t ∈ {0.65, 0.85}, k = 2 noise draws identical across checkpoints (B4). Paired comparisons with bootstrap CIs | base (G0.4), gate breaks, every 50-step checkpoint after training |
 | **2** | Generated suites, 3 seeds (B2), scored with CLIP/DINOv2 1-NN against the **real source clips** (B3), plus the G0.5 measures | winner + base |
 
 **Winner rule (Tier 1):**
@@ -327,7 +340,7 @@ with:
 
 | Suite | Content | Clips |
 |---|---|---|
-| `core` | 13 labels × 2 characters × {FRONT (trained angle), `QF2_R` (held out)} × 3 seeds, at **f13 motion / f21 expression** (both trained lengths; the same lengths v8's `core` used) | 156 |
+| `core` | 13 labels × 2 characters × {FRONT (trained angle), `QF2_R` (held out)} × 3 seeds, at **f13 motion / f17 expression** (amended 2026-10-13 from f21, which Kandinsky's VAE truncates; v8's f21 clips are trimmed to f17 for §8b). `eval/gen_core.py` | 156 |
 | `native` | each label at its native length, `QF2_R`, 3 seeds: does the action complete? | 78 |
 | `gb` | 3 labels × 2 characters × {lavender, sky-blue} × 3 seeds | 36 |
 
@@ -336,6 +349,9 @@ The base runs `core` only (the control). Total: **≈ 426 clips**.
 ---
 
 ## 8. Reference read — context, not a gate
+
+*(Superseded as the comparison with v8 by §8b, added 2026-10-13 before any expv1 training.
+The read below stays as context for §9.)*
 
 v8@550's `core` clips already exist (Azure `pudgy/v8/eval/suites/core/v8@550/`: 52 clips,
 seed 42, FRONT + `QF2_R`, f13/f21). Downscale them to 512² and score them with **expv1's**
@@ -349,6 +365,65 @@ same lengths.
 
 **Use:** it answers *"does expv1 fail where v8 also fails?"* If yes, the shortfall is
 probably the data (A13). If no, it is probably the base. It never changes a §9 outcome.
+
+---
+
+## 8b. Is expv1 better than v8@550? — pre-registered (2026-10-13), `eval/compare_v8.py`
+
+Fixed before any expv1 checkpoint exists. Every comparison is **paired** on the same held-out
+material, and the verdict follows from the numbers alone.
+
+**Material.**
+- **Tier 1** (does the model *know* the label?): the 26 `QF2_R` source clips. Each model scores
+  every label caption of the clip's kind; correct = the true caption has the lowest loss.
+  v8: `v8/eval/dcls/v8@550_k2.json`. expv1: `eval/dcls/<ckpt>__A_k2.json`. Paired by
+  (character, label).
+- **Tier 2** (does it *show* the label?): `core` seed 42, 13 labels × 2 characters ×
+  {FRONT, `QF2_R`} = **52 pairs**. Same start frame for both models, scored by the same code at
+  the same window (f13 / f17) against the same real-clip bank (leave-angle-out CLIP 1-NN, same
+  character, the kind's labels).
+
+**Primary endpoints** (superiority; exact one-sided McNemar on the discordant pairs, Holm over
+the two): **P1** Tier-1 held-out accuracy (26 pairs); **P2** Tier-2 CLIP 1-NN accuracy (52 pairs).
+The posterior P(expv1 better) = P(θ > ½), θ ~ Beta(b+1, c+1), is reported next to each p.
+
+**Non-inferiority gates** (all must hold for "better"; 90% paired bootstrap CIs):
+
+| | Gate | Holds when |
+|---|---|---|
+| N1 | Style (blinded rubric, `--rubric-template`) | lower bound of (expv1 − v8) pass rate ≥ −0.10, and expv1 colour correct on 100% |
+| N2 | Motion | lower bound of mean log(expv1 / v8 motion ratio) ≥ log 0.8 |
+| N3 | Camera | upper bound of mean (\|zoom\| expv1 − \|zoom\| v8) ≤ +0.01 |
+| N4 | Late-frame identity | lower bound of mean (expv1 − v8) DINOv2 similarity ≥ −0.05 |
+| N5 | Ground | expv1 median corner drift ≤ 5/255 (V6) |
+
+**Verdict:**
+
+| Outcome | When |
+|---|---|
+| **BETTER** | every N holds, ≥ 1 primary significant (Holm p < 0.05), neither primary's estimate favours v8 |
+| **WORSE** | v8 significantly better on a primary |
+| **NOT BETTER** | a non-inferiority gate fails |
+| **PROBABLY BETTER** | every N holds, both primaries favour expv1 with P(better) ≥ 0.80, nothing significant |
+| **NO DETECTABLE DIFFERENCE** | otherwise |
+
+"Replacement candidate" = BETTER **and** §9 PASS.
+
+**Validated on v8's own runs (2026-10-13):**
+- **v8 against itself:** b = c = 0 everywhere, so no difference is found.
+- **v2 golden against v8:** **WORSE**. v8 is significantly better on P1 (Holm p = 0.0004).
+- **v7fixed against v8:** **no detectable difference** (P1 b = 1, c = 6: one-sided p = 0.06, Holm 0.125).
+- **Exact test, false positives:** under a simulated null it fires 2.9% of the time at
+  α = 0.05 (n = 52).
+
+**Power, stated up front:**
+- **P2:** 52 pairs detect 0.80 vs 0.60 with power ≈ 0.80.
+- **P1:** sits near the ceiling, because v8 is already at 0.81. 0.95 vs 0.81 is detected only
+  ≈ 28% of the time.
+- **So** a "no detectable difference" on P1 is not evidence that the two are equal.
+
+**Confounds:** resolution (v8 1024² resized to 512²), captions, v8 saw `QF2_R` through v7,
+Tier-1 lengths f21 vs f17, one seed per model.
 
 ---
 
@@ -425,7 +500,13 @@ git -C /workspace/musubi-tuner apply expv1-kandinsky-50-video-pro/patches/expv1-
 
 # 1. Phase 0
 python expv1-kandinsky-50-video-pro/eval/vae_gate.py                 # † G0.1  -> stop on fail
-python expv1-kandinsky-50-video-pro/eval/cond_check.py               # † G0.2 + G0.3
+python expv1-kandinsky-50-video-pro/eval/cond_check.py               # G0.2
+python expv1-kandinsky-50-video-pro/eval/build_refs.py               # Tier-1 clips, real-clip bank, start frames
+#   cache: kandinsky5_cache_latents.py --dataset_config /workspace/expv1/refs/tier1/tier1.toml --vae <VAE dir> --first_frame_image_encode
+python expv1-kandinsky-50-video-pro/eval/dcls.py score --configs base --layouts A A1 B stock --true-only
+python expv1-kandinsky-50-video-pro/eval/dcls.py g03                 # G0.3
+python expv1-kandinsky-50-video-pro/eval/dcls.py score --configs base --split holdout seen   # Tier-1 control
+python expv1-kandinsky-50-video-pro/eval/gen_core.py --config base   # Tier-2 core, seed 42
 python expv1-kandinsky-50-video-pro/eval/probe.py --config base      # † G0.4
 python expv1-kandinsky-50-video-pro/eval/baseline.py                 # † G0.5
 
@@ -447,11 +528,15 @@ accelerate launch --num_cpu_threads_per_process 1 --mixed_precision bf16 \
   --optimizer_args "weight_decay=0.001" "betas=(0.9,0.95)" --max_grad_norm 1.0 \
   --lr_scheduler cosine_with_min_lr --lr_warmup_steps 20 --lr_scheduler_min_lr_ratio 0.1 \
   --gradient_accumulation_steps 8 --max_train_steps 600 \
-  --timestep_sampling shift --discrete_flow_shift 5.0 \
+  --timestep_sampling shift --discrete_flow_shift 5.0 --i2v_layout A \
   --save_every_n_steps 50 --save_state --seed 42 \
   --output_dir /workspace/expv1_output --output_name expv1-k5pro-a \
   --log_with all --log_tracker_name pudgy --wandb_run_name expv1-k5pro-a
 
 # 4. Gate breaks at 100 and 300, then Tier 1 on every checkpoint, the motion probe, the winner rule
-# 5. Tier 2 on the winner and the base; section 8 reference read; section 9 verdict -> docs/REPORT.md
+# 5. Tier 2 on the winner and the base; section 9 verdict -> docs/REPORT.md
+# 6. Section 8b: is expv1 better than v8@550? (v8 refs: az pudgy/v8/eval/{dcls,suites/core} -> /workspace/v8_ref)
+python expv1-kandinsky-50-video-pro/eval/compare_v8.py --a-name expv1@<step> \
+    --a-dcls /workspace/expv1/eval/dcls/expv1@<step>__A_k2.json \
+    --a-gen /workspace/expv1/eval/gen/expv1@<step>/core --rubric-template     # rate blind, then rerun without the flag
 ```

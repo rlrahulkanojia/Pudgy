@@ -85,7 +85,7 @@ trained on. **Off everywhere.** musubi's generator does not call the rewriter (*
 | Path | Where the clean first-frame latent goes | `visual_cond` channels | mask |
 |---|---|---|---|
 | **Official inference** (`generation_utils.py:159–168`) | **overwrites the noisy input** at frame 0, every step | all zeros | 1 at frame 0 |
-| **musubi inference** (`kandinsky5/generation_utils.py:369–383`) | overwrites the noisy input at frame 0 | **first frame** (corrected 2026-10-12: the code also writes `visual_cond[0]`; G0.2 dump confirms) | 1 at frame 0 |
+| **musubi inference** (`kandinsky5/generation_utils.py:369–383`) | overwrites the noisy input at frame 0 | **first frame** (corrected 2026-10-12: the code also writes `visual_cond[0]`; G0.2 dump confirms). Off-distribution: see §2.12 | 1 at frame 0 |
 | **Official LoRA trainer** (`train/train_utils.py:398–416`) | into the **`visual_cond` channels**; the noisy input stays noisy | first frame | 1 at frame 0 |
 | **musubi trainer** (`kandinsky5_train_network.py:796–840`) | into the **`visual_cond` channels** | see §2.4 | see §2.4 |
 
@@ -178,6 +178,33 @@ image encode (G0.2).
 `kandinsky5_generate_video.py --frames 17` produced a **65-frame** video. Video frames =
 4 × (latent − 1) + 1, so a 17-frame clip is `--frames 5`, 25 frames is `--frames 7`. Assert the
 output frame count on every generation.
+
+### 2.12 The checkpoint expects layout A, and musubi's generator feeds it A1 (measured)
+
+G0.3 (2026-10-13) scored the base model's flow-matching loss on the 26 held-out `QF2_R` clips.
+It used the true caption only, frames ≥ 1 with the change mask, t ∈ {0.65, 0.85}, and k = 2
+noise draws shared across layouts.
+
+| Layout | Mean loss | vs A |
+|---|---|---|
+| **A** (official inference: clean latent in the noisy input, `visual_cond` zero) | **0.0342** | — |
+| A1 (musubi generator: A + `visual_cond[0]`) | 0.0395 | +15.6%, worse on 26/26 |
+| B (`visual_cond[0]` only) | 0.0423 | +23.6%, worse on 26/26 |
+| stock musubi trainer (§2.4) | 0.2495 | +630%, worse on 26/26 |
+
+All three Wilcoxon p = 3·10⁻⁸. This matches the report's description (§1) and the official
+pipeline (§2.3).
+
+- **musubi's generator is off-distribution for this checkpoint.** It writes the first frame into
+  `visual_cond` as well (§2.3).
+- **The expv1 patch adds `--i2v_layout A`** to `kandinsky5_generate_video.py` and to
+  `generate_sample_latents_only`. G0.2's `gen_A` check shows that the DiT input then matches
+  trainer layout A.
+- **expv1 trains with `--i2v_layout A`, generates with `--i2v_layout A`, and scores Tier 1 in A.**
+
+Text length: musubi's text cacher defaults to a Qwen `max_length` of 512, and the generator
+uses the task's 256. With right padding and a causal encoder, the valid-token embeddings are
+the same for any caption under 256 tokens. Keep captions ≤ 200 tokens (PLAN §5.5).
 
 ---
 

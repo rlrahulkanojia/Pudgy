@@ -1,3 +1,44 @@
+diff --git a/src/musubi_tuner/kandinsky5/generation_utils.py b/src/musubi_tuner/kandinsky5/generation_utils.py
+index d6a654f..5401982 100644
+--- a/src/musubi_tuner/kandinsky5/generation_utils.py
++++ b/src/musubi_tuner/kandinsky5/generation_utils.py
+@@ -241,6 +241,7 @@ def generate_sample_latents_only(
+     conf=None,
+     progress=False,
+     i2v_mode=None,  # unused; kept for call-site compatibility
++    i2v_layout="A1",
+ ):
+     """Minimal sampler that returns latents only (no VAE decode)."""
+     bs, duration, height, width, dim = shape
+@@ -329,6 +330,7 @@ def generate_sample_latents_only(
+         tp_mesh=None,
+         attention_mask=attention_mask,
+         null_attention_mask=null_attention_mask,
++        i2v_layout=i2v_layout,
+     )
+     return latents
+ 
+@@ -354,6 +356,7 @@ def generate(
+     attention_mask=None,
+     null_attention_mask=None,
+     first_frame_indices=None,
++    i2v_layout="A1",
+ ):
+     sparse_params = get_sparse_params(conf, {"visual": img}, device)
+     timesteps = torch.linspace(1, 0, num_steps + 1, device=device)
+@@ -382,7 +385,11 @@ def generate(
+                     if 0 <= frame_idx < img.shape[0]:
+                         img[frame_idx : frame_idx + 1] = ff[idx]
+                         visual_cond_mask[frame_idx : frame_idx + 1] = 1
+-                        visual_cond[frame_idx : frame_idx + 1] = ff[idx]
++                        # expv1: layout A (official Kandinsky inference) leaves visual_cond at zero;
++                        # A1 (musubi's default) also writes the frame there. G0.3 measured that the
++                        # I2V Pro checkpoint expects A.
++                        if i2v_layout != "A":
++                            visual_cond[frame_idx : frame_idx + 1] = ff[idx]
+             model_input = torch.cat([img, visual_cond, visual_cond_mask], dim=-1)
+         else:
+             model_input = img
 diff --git a/src/musubi_tuner/kandinsky5_cache_latents.py b/src/musubi_tuner/kandinsky5_cache_latents.py
 index 82f576d..ebafd32 100644
 --- a/src/musubi_tuner/kandinsky5_cache_latents.py
@@ -65,6 +106,33 @@ index 82f576d..ebafd32 100644
  
      # Build VAE (Hunyuan-based 3D VAE) from Kandinsky weights
      vae_conf = type("VAEConf", (), {"name": "hunyuan", "checkpoint_path": args.vae})
+diff --git a/src/musubi_tuner/kandinsky5_generate_video.py b/src/musubi_tuner/kandinsky5_generate_video.py
+index da529be..b7e8d40 100644
+--- a/src/musubi_tuner/kandinsky5_generate_video.py
++++ b/src/musubi_tuner/kandinsky5_generate_video.py
+@@ -42,6 +42,14 @@ def parse_args() -> argparse.Namespace:
+     parser.add_argument("--guidance", type=float, default=None)
+     parser.add_argument("--scheduler_scale", type=float, default=None)
+     parser.add_argument("--seed", type=int, default=42)
++    parser.add_argument(
++        "--i2v_layout",
++        type=str,
++        default="A1",
++        choices=["A1", "A"],
++        help="expv1: A1 = musubi default (first frame in the noisy input AND visual_cond); "
++        "A = official Kandinsky inference (visual_cond left zero)",
++    )
+     parser.add_argument("--device", type=str, default=None)
+     parser.add_argument("--dit", type=str, default=None)
+     parser.add_argument("--vae", type=str, default=None)
+@@ -267,6 +275,7 @@ def main():
+                 conf=conf_ns,
+                 progress=True,
+                 i2v_mode=i2v_mode,
++                i2v_layout=args.i2v_layout,
+             )
+         # free DiT
+         dit.to("cpu")
 diff --git a/src/musubi_tuner/kandinsky5_train_network.py b/src/musubi_tuner/kandinsky5_train_network.py
 index ab2d4ee..68d577e 100644
 --- a/src/musubi_tuner/kandinsky5_train_network.py

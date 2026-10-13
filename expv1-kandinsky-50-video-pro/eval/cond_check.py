@@ -6,7 +6,7 @@ one sampling step of the generator, with the DiT's input dumped per latent frame
     python eval/cond_check.py cache      # musubi latents (VAE as directory AND as file) + text
     python eval/cond_check.py latents    # G0.2-L: frame counts, musubi vs Kandinsky first latent
     python eval/cond_check.py train --layout stock|A|A1|B     # 1 step, dump
-    python eval/cond_check.py gen        # 1 sampling step of kandinsky5_generate_video.py, dump
+    python eval/cond_check.py gen [--layout A]   # 1 sampling step of kandinsky5_generate_video.py, dump
     python eval/cond_check.py report     # signatures + pass/fail -> report.json
 
 Layouts (MODEL_NOTES §2.3-2.4, corrected on the box 2026-10-12):
@@ -237,8 +237,8 @@ def train(layout, n=17):
     T.main()   # not runpy: run_module re-executes the module, bypassing the patched class
 
 
-def gen(cid="pax_angry", n=17):
-    out = G / "gen"
+def gen(cid="pax_angry", n=17, layout="A1"):
+    out = G / ("gen" if layout == "A1" else f"gen_{layout}")
     out.mkdir(parents=True, exist_ok=True)
     install_dit_hook(out / "dit_input.pt")
     cap = (DATA / f"f{n}" / "video" / f"{cid}.txt").read_text()
@@ -249,6 +249,8 @@ def gen(cid="pax_angry", n=17):
                 "--width", str(SIZE), "--height", str(SIZE), "--frames", str((n - 1) // 4 + 1), "--steps", "1",
                 "--seed", "42",
                 "--sdpa", "--output", str(out / "gen.mp4")]
+    if layout != "A1":
+        sys.argv += ["--i2v_layout", layout]   # patched generator (G0.3 chose A)
     os.chdir(MUSUBI)
     runpy.run_module("musubi_tuner.kandinsky5_generate_video", run_name="__main__")
 
@@ -291,6 +293,8 @@ def report():
                              "stream=nb_read_frames", "-of", "csv=p=0", str(G / "gen" / "gen.mp4")],
                             capture_output=True, text=True).stdout.strip()
         rep["gen"]["video_frames_out"] = int(nf) if nf.isdigit() else None
+    if (G / "gen_A" / "dit_input.pt").exists():
+        rep["gen_A"] = signature(torch.load(G / "gen_A" / "dit_input.pt")["x"])
     lat = json.loads((G / "latents.json").read_text()) if (G / "latents.json").exists() else None
     rep["latents"] = lat
 
@@ -303,6 +307,12 @@ def report():
         checks["generator_outputs_17_frames"] = g.get("video_frames_out") == 17
         checks["A1_matches_generator"] = (layout_key(a1) == layout_key(g) and a1["noisy_f0_is_clean_first"]
                                           and a1["cond_f0_is_clean_first"] and g["noisy_f0_equals_cond_f0"])
+    a, ga = rep["layouts"].get("A"), rep.get("gen_A")
+    if a and ga:   # after G0.3: the patched generator in layout A must hand the DiT what trainer A does
+        F = ga["frames"]
+        checks["A_matches_generator_A"] = (layout_key(a) == layout_key(ga) and a["noisy_f0_is_clean_first"]
+                                           and ga["cond_nonzero"] == [False] * F
+                                           and ga["mask"] == [1.0] + [0.0] * (F - 1))
     for k in ("A", "A1", "B"):
         s = rep["layouts"].get(k)
         if s:
@@ -337,7 +347,8 @@ def main():
     ap.add_argument("--layout", default="stock", choices=["stock", "A", "A1", "B"])
     a = ap.parse_args()
     G.mkdir(parents=True, exist_ok=True)
-    {"build": build, "cache": cache, "latents": latents, "gen": gen, "report": report,
+    {"build": build, "cache": cache, "latents": latents, "report": report,
+     "gen": lambda: gen(layout="A" if a.layout == "A" else "A1"),
      "train": lambda: train(a.layout)}[a.cmd]()
 
 

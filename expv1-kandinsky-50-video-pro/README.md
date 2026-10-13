@@ -1,6 +1,13 @@
 # `expv1-kandinsky-50-video-pro/` — isolated experiment, not a version
 
-**Status:** plan (2026-10-10). Nothing in this folder has run yet.
+**Status (2026-10-13):** Phase 0 in progress. No LoRA has been trained yet.
+
+- **G0.1** VAE gate: **PASS**.
+- **G0.2** conditioning check: **PASS**.
+- **G0.3** layout: **A**. The checkpoint expects official-inference layout A; musubi's
+  generator gives it A1, so the generator is patched (MODEL_NOTES §2.12).
+- **Is expv1 better than v8@550?** That question now has a pre-registered statistical test
+  (PLAN §8b, `eval/compare_v8.py`). It has been checked against v8's own runs.
 
 **This is an isolated test.** It is not v10, and it is not a continuation of v1–v9. It
 starts from the public **Kandinsky 5.0 Video Pro** image-to-video checkpoint. No earlier
@@ -40,7 +47,7 @@ this one passes.
 | **Trains** | one LoRA, rank 32, from zero |
 | **Data** | own corpus from `Data/raw/iteration_3–5`, the `QF2_R` camera angle held out, two background colours never trained |
 | **Verdict** | pre-registered bars ([`docs/PLAN.md`](docs/PLAN.md) §9), measured only on start frames the model did not train on |
-| **Reference only** | v8@550's existing clips are re-scored with expv1's scorer for context. They are **not** a gate and **not** a parent |
+| **vs v8@550** | v8@550's existing Tier-1 rows and `core` clips are re-scored with expv1's scorer and compared pair by pair (PLAN §8b: exact McNemar, Holm, non-inferiority gates). v8 is **not** a parent, and the comparison never changes the §9 verdict |
 
 ---
 
@@ -87,9 +94,18 @@ expv1-kandinsky-50-video-pro/
 │   ├── PLAN.md               design, gates, pre-registered verdict
 │   ├── LEARNINGS_CARRIED.md  what earlier runs taught, and how expv1 uses it
 │   └── MODEL_NOTES.md        the base model, and the gotchas found in its code
-├── patches/                  (to write) resume-step fix (copied) + I2V conditioning fix
+├── expv1_common.py          paths, labels, the frozen caption grammar, raw-source discovery
+├── patches/                  resume-step fix (copied) + I2V conditioning fix (trainer, cacher, generator)
 ├── prep/                     (to write) prep_expv1.py: raw -> corpus
-├── eval/                     (to write) vae gate, conditioning check, probe, tiers 0–2
+├── eval/
+│   ├── vae_gate.py           G0.1
+│   ├── cond_check.py         G0.2 (+ gen --layout A after G0.3)
+│   ├── build_refs.py         Tier-1 clip sets, the real-clip bank, start frames
+│   ├── dcls.py               Tier 1 diffusion classifier; G0.3 (`score --true-only`, `g03`)
+│   ├── gen_core.py           Tier-2 `core` suite (one model load, layout A)
+│   ├── metrics.py            measurements (copied from expv2)
+│   ├── stats.py              exact McNemar, posterior P(better), Wilcoxon, bootstrap, Holm, power
+│   └── compare_v8.py         PLAN §8b: is expv1 better than v8@550?
 └── configs/                  (to write) dataset .toml, launch script
 ```
 
