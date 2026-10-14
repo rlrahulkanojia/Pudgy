@@ -27,9 +27,10 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--step", type=int, required=True)
     ap.add_argument("--config", default=None)
+    ap.add_argument("--prefix", default="expv1", help="expv1 (arm A) | expv1b (arm B)")
     ap.add_argument("--base", default=str(DCLS / "base__A_k2.json"))
     a = ap.parse_args()
-    cfg = a.config or f"expv1@{a.step}"
+    cfg = a.config or f"{a.prefix}@{a.step}"
     ck = C.load_json(DCLS / f"{cfg}__A_k2.json")
     base = C.load_json(a.base)
     if not ck or not base:
@@ -63,7 +64,7 @@ def main():
         out["rule"] = "margins above base (reported)"
         out["pass"] = all(v["margin"] > v["margin_base"] for v in out["kinds"].values())
         out["action"] = "continue"
-    C.write_json(C.EVAL / "reports" / f"gate_{a.step}.json", out)
+    C.write_json(C.EVAL / "reports" / (f"gate_{a.step}.json" if a.prefix == "expv1" else f"gate_{a.prefix}_{a.step}.json"), out)
     for k, v in out["kinds"].items():
         print(f"step {a.step} {k:<10} below base on {v['frac_below_base']:.0%}  loss -{v['rel_loss_drop']:.1%}  "
               f"acc {v['acc']:.3f} (base {v['acc_base']:.3f})  margin {v['margin']:+.4f} (base {v['margin_base']:+.4f})")

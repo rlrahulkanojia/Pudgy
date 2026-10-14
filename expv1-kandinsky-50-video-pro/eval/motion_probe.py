@@ -31,6 +31,7 @@ def energy(frames):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--configs", nargs="+", required=True)
+    ap.add_argument("--prefix", default="expv1", help="expv1 (arm A) | expv1b (arm B): which checkpoints form the D1 curve")
     a = ap.parse_args()
     src = {}
     for char in C.CHARS:
@@ -53,7 +54,7 @@ def main():
                                "median_ratio": float(np.median([r["ratio"] for r in rows])),
                                "rows": rows}
     # D1 trigger over the trained checkpoints, in step order
-    ck = sorted((c for c in out["configs"] if c.startswith("expv1@")), key=lambda c: int(c.split("@")[1]))
+    ck = sorted((c for c in out["configs"] if c.startswith(a.prefix + "@")), key=lambda c: int(c.split("@")[1]))
     e = [out["configs"][c]["median_energy"] for c in ck]
     run, trig = 0, False
     for i in range(len(e)):
@@ -61,7 +62,7 @@ def main():
         trig |= run >= 3
     out["d1"] = {"checkpoints": ck, "median_energy": e, "triggered": trig,
                  "rule": "median energy <= 0.75x its best-so-far on >= 3 consecutive probed checkpoints"}
-    C.write_json(C.EVAL / "reports" / "motion_probe.json", out)
+    C.write_json(C.EVAL / "reports" / ("motion_probe.json" if a.prefix == "expv1" else f"motion_probe_{a.prefix}.json"), out)
     print(f"source (real QF2_R, f{W}) median energy {out['source_median']:.3f}")
     for c, v in out["configs"].items():
         print(f"{c:<11} median energy {v['median_energy']:.3f}  median ratio to source {v['median_ratio']:.2f}")

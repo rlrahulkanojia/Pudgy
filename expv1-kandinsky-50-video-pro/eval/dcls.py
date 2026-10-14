@@ -29,9 +29,10 @@ build_refs.py's tier1.toml sets up.
     python eval/dcls.py score --configs base --layouts A A1 B stock --true-only   # G0.3
     python eval/dcls.py score --configs expv1@300 expv1@550 --split holdout seen
     python eval/dcls.py g03                                          # G0.3 report
-  configs: base | expv1@<step> (WORK/output/expv1-k5pro-a-step<8d>.safetensors) | file:<lora>
+  configs: base | expv1@<step> (arm A: WORK/output/expv1-k5pro-a-step<8d>.safetensors) | expv1b@<step> (arm B) | file:<lora>
 """
 import argparse
+import re
 import gc
 import hashlib
 import sys
@@ -172,9 +173,10 @@ class Scorer:
 def lora_path(config):
     if config.startswith("file:"):
         return Path(config[5:])
-    if config.startswith("expv1@"):
-        step = config[6:]
-        return LORA_RUN / f"expv1-k5pro-a-step{int(step):08d}.safetensors"
+    m = re.fullmatch(r"expv1(b?)@(\d+)", config)            # expv1@S = arm A, expv1b@S = arm B
+    if m:
+        arm = m.group(1) or "a"
+        return LORA_RUN / f"expv1-k5pro-{arm}-step{int(m.group(2)):08d}.safetensors"
     raise ValueError(f"unknown config {config!r}")
 
 

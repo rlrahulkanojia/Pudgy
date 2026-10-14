@@ -5,11 +5,12 @@ set -u
 E=/workspace/Pudgy/expv1-kandinsky-50-video-pro
 PY=/workspace/venv-expv1/bin/python
 export HF_HOME=/workspace/hf_home PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1
-CFGS="base expv1@100 expv1@200 expv1@300 expv1@400 expv1@500 expv1@600 $*"
+PFX=${PFX:-expv1}                              # expv1 (arm A) | expv1b (arm B)
+CFGS="base $PFX@100 $PFX@200 $PFX@300 $PFX@400 $PFX@500 $PFX@600 $*"
 cd "$E"
 for c in $CFGS; do
   echo "== [$(date -u +%FT%TZ)] probe $c"
   "$PY" eval/gen_core.py --config "$c" --suite probe || { echo "!! generation failed for $c"; exit 1; }
 done
-"$PY" eval/motion_probe.py --configs $CFGS
+"$PY" eval/motion_probe.py --prefix "$PFX" --configs $CFGS
 echo "== [$(date -u +%FT%TZ)] probe done"

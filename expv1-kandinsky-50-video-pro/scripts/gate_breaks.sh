@@ -6,11 +6,13 @@
 # Training and the classifier cannot share the 80 GB card, hence the stop. After the last
 # break, Tier 1 runs on every 50-step checkpoint once training finishes (the winner rule, §7).
 #
+#   PFX=expv1b NAME=expv1-k5pro-b nohup scripts/gate_breaks.sh 100 300 ...   # arm B
 #   nohup scripts/gate_breaks.sh 100 300 > /workspace/expv1/logs/gate_breaks.log 2>&1 &
 set -u
 E=/workspace/Pudgy/expv1-kandinsky-50-video-pro
 OUT=/workspace/expv1/output
 NAME=${NAME:-expv1-k5pro-a}
+PFX=${PFX:-expv1}                            # config prefix: expv1 (arm A) | expv1b (arm B)
 TLOG=/workspace/expv1/logs/train.log
 PY=/workspace/venv-expv1/bin/python
 export HF_HOME=/workspace/hf_home PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
@@ -29,11 +31,11 @@ for S in "$@"; do
   echo "== [$(ts)] step $S saved - stopping training"
   supervisorctl stop expv1-train
   cp "$TLOG" "$OUT/train_segment_to_step$S.log" 2>/dev/null
-  ( cd "$E" && "$PY" eval/dcls.py score --configs "expv1@$S" --split holdout seen ) || echo "!! dcls failed"
+  ( cd "$E" && "$PY" eval/dcls.py score --configs "$PFX@$S" --split holdout seen ) || echo "!! dcls failed"
   if [ "$S" = 300 ]; then                    # PLAN §6.3: the step-300 break also runs the motion probe
-    ( cd "$E" && "$PY" eval/gen_core.py --config "expv1@$S" --suite probe ) || echo "!! motion probe failed"
+    ( cd "$E" && "$PY" eval/gen_core.py --config "$PFX@$S" --suite probe ) || echo "!! motion probe failed"
   fi
-  ( cd "$E" && "$PY" eval/gate_rule.py --step "$S" ); rc=$?
+  ( cd "$E" && "$PY" eval/gate_rule.py --step "$S" --prefix "$PFX" ); rc=$?
   if [ $rc = 2 ]; then
     echo "!! [$(ts)] gate at step $S FAILED - training stays stopped (PLAN §6.3). See eval/reports/gate_$S.json"
     exit 2
@@ -57,7 +59,7 @@ done
 
 echo "== [$(ts)] gate breaks done; waiting for training to finish"
 while running; do sleep 120; done
-CK=$(ls "$OUT"/"$NAME"-step*.safetensors | sed -E 's/.*-step0*([0-9]+)\.safetensors/expv1@\1/' | sort -t@ -k2 -n)
+CK=$(ls "$OUT"/"$NAME"-step*.safetensors | sed -E "s/.*-step0*([0-9]+)\.safetensors/$PFX@\1/" | sort -t@ -k2 -n)
 echo "== [$(ts)] Tier 1 on every checkpoint: $CK"
 ( cd "$E" && "$PY" eval/dcls.py score --configs $CK --split holdout seen )
 echo "== [$(ts)] all done"

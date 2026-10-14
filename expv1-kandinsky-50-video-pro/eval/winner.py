@@ -29,13 +29,18 @@ def holdout(cfg):
 
 
 def main():
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--prefix", default="expv1", help="expv1 (arm A) | expv1b (arm B)")
+    a = ap.parse_args()
+    sfx = "" if a.prefix == "expv1" else f"_{a.prefix}"
     base = holdout("base")
-    probe = C.load_json(C.EVAL / "reports" / "motion_probe.json")
+    probe = C.load_json(C.EVAL / "reports" / f"motion_probe{sfx}.json")
     if not probe:
         sys.exit("run eval/motion_probe.py first")
-    energy = {c: v["median_energy"] for c, v in probe["configs"].items() if c.startswith("expv1@")}
+    energy = {c: v["median_energy"] for c, v in probe["configs"].items() if c.startswith(a.prefix + "@")}
     rows = []
-    for p in sorted(DCLS.glob("expv1@*__A_k2.json"), key=lambda p: int(p.name.split("@")[1].split("__")[0])):
+    for p in sorted(DCLS.glob(f"{a.prefix}@*__A_k2.json"), key=lambda p: int(p.name.split("@")[1].split("__")[0])):
         cfg = p.name.split("__")[0]
         ck = holdout(cfg)
         r = {"config": cfg, "step": int(cfg.split("@")[1]), "energy": energy.get(cfg)}
@@ -58,13 +63,15 @@ def main():
     best_e = max(energy.values())
     steps = [f"step 1-2: {pick['config']} (score {pick['score']:+.4f}; top {top:+.4f})"]
     if pick["energy"] is None:
-        sys.exit(f"{pick['config']} was not probed - add it to scripts/run_probe.sh and re-run")
+        print(f"NEED_PROBE: {pick['config']}")          # exit 3: the runner probes these and re-runs
+        sys.exit(3)
     veto = pick["energy"] < 0.8 * best_e
     if veto:
         near = [r for r in elig if r["score"] >= top - 0.002]
         unprobed = [r["config"] for r in near if r["energy"] is None]
         if unprobed:
-            sys.exit(f"motion veto applies but {unprobed} (within 0.002) were not probed")
+            print(f"NEED_PROBE: {' '.join(unprobed)}")     # motion veto applies; candidates not probed
+            sys.exit(3)
         new = max(near, key=lambda r: r["energy"])
         steps.append(f"step 3: VETO - energy {pick['energy']:.3f} < 0.8 x best {best_e:.3f}; "
                      f"best-motion within 0.002 of top: {new['config']} ({new['energy']:.3f})")
@@ -73,7 +80,7 @@ def main():
         steps.append(f"step 3: no veto - energy {pick['energy']:.3f} >= 0.8 x best {best_e:.3f}")
     out = {"winner": pick["config"], "trace": steps, "best_probed_energy": best_e,
            "d1_triggered": probe["d1"]["triggered"], "rows": rows}
-    C.write_json(C.EVAL / "reports" / "winner.json", out)
+    C.write_json(C.EVAL / "reports" / f"winner{sfx}.json", out)
     print(f"{'config':<11} {'elig':<5} {'score':>8}  {'expr acc/margin':>16}  {'motion acc/margin':>17}  energy")
     for r in rows:
         e = f"{r['energy']:.3f}" if r["energy"] is not None else "-"
