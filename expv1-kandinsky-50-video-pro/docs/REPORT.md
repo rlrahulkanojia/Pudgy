@@ -1,11 +1,10 @@
 # expv1 — findings report (Kandinsky 5.0 Video Pro I2V + one LoRA)
 
-**Status (2026-10-13, 23:50Z):** training finished (600 steps). Tier 1 has been run on every
-50-step checkpoint and the motion probe on every 100-step checkpoint. The winner rule picked
-**expv1@550**. Its 52-clip `core` suite is generated and compared with v8@550 (PLAN §8b, §11).
-**Verdict: expv1@550 is not better than v8@550.** The formal label reads "PENDING: N1" only
-because the blinded style rubric needs a human rater, but the rubric cannot turn it into BETTER
-(§11.3).
+**Status (2026-10-14, 20:40Z):** both arms trained and compared with v8@550.
+**Arm A** (rank 32): winner **expv1@550**, NO DETECTABLE DIFFERENCE if the style rubric passes,
+NOT BETTER if it fails (§11). **Arm B** (rank 16, §12): winner **expv1b@500**, **NOT BETTER**
+(fails N2 motion: front-view jumps do not happen in the window). **Neither arm is better than
+v8@550; v8 stays the production model.** Arm A remains expv1's best checkpoint.
 
 Every number below comes from a file under `/workspace/expv1/eval/` (mirrored to Azure
 `pudgy/expv1-kandinsky-50-video-pro/eval/`). Each section names its source file and the
@@ -28,6 +27,9 @@ script that produced it.
 | Better than v8@550 overall? | **No.** Both primaries favour v8 (Tier 1 0.58 vs 0.81; Tier-2 CLIP 1-NN 0.385 vs 0.423), neither significantly. Non-inferiority N2-N5 hold (after a zoom-measurement fix, §11.2). Outcome: NO DETECTABLE DIFFERENCE if the rubric passes, NOT BETTER if it fails. BETTER is ruled out either way | §11 |
 | Where expv1 is ahead | Steadier camera (\|zoom\| −0.033 vs v8, p = 0.005), less motion overshoot (1.62× vs 1.79× source), DINOv2 1-NN expression 0.53 vs 0.25 (secondary, not gated) | §11 |
 | Where expv1 is behind | Motion labels (Tier 1 0.30 vs 0.80; Tier-2 CLIP 0.45 vs 0.65), late-frame identity (−0.011), ground drift (4.1 vs 2.0 /255, under the 5/255 bar), and a visible frame-0 → frame-1 shadow/tint pop | §11 |
+| Does a lower rank (arm B, 16/16) help? | **No.** Motion labels a little up (Tier 1 0.40 vs 0.30), expression down (0.625 vs 0.75), DINOv2 1-NN 0.27 vs 0.56 (p = 0.0007 for A), still 1.7× source motion | §12 |
+| Arm B vs v8@550 | **NOT BETTER**: P1 0.54 vs 0.81 (unadjusted p = 0.046 for v8), P2 0.35 vs 0.42; **N2 fails** (−0.237, CI lower −0.351 < −0.223), driven by FRONT jumps at 0.55× source vs v8's 1.35× | §12.6 |
+| expv1 overall (PLAN §6.4) | **Not better than v8 with either arm** | §12.8 |
 
 ---
 
@@ -451,3 +453,164 @@ real (small) defect of expv1's I2V output, also reflected in its higher corner d
 - 3-seed `core`, `native` and `gb` suites for the winner; base `core` (26/52); the G0.5 full
   source baseline. §9 V3 already **fails** on Tier 1: motion 0.30 < 0.70 (expression 0.75
   meets its 0.75 bar). So the best §9 outcome available is PARTIAL.
+
+---
+
+## 12. Arm B: rank 16 / α 16 (PLAN §6.4)
+
+**Why it was trained.** The pre-declared D1 trigger (motion energy ≤ 0.75× its best on ≥ 3
+consecutive probed checkpoints) did **not** fire for arm A (§6). Arm B was trained anyway, on
+request, as a direct test of the LTX-2.5 lesson that a lower rank keeps motion. Everything
+except rank and α is identical to arm A (§6.1 recipe, data, seed 42, 600 steps, same gates and
+scorers). PLAN §6.4: the verdict is computed per arm; expv1 passes if either arm does.
+
+**Wiring.** Config prefix `expv1b@<step>` → `output/expv1-k5pro-b-step*.safetensors`; reports
+carry an `_expv1b` suffix (`gate_expv1b_*.json`, `motion_probe_expv1b.json`,
+`winner_expv1b.json`). Orchestration: `scripts/gate_breaks.sh` (PFX=expv1b) then
+`scripts/after_training_b.sh` (probe → winner → `core` → compare vs v8@550 → compare vs arm A).
+Training logs: `output/train_b_segment_to_step{100,300,600}.log`.
+
+### 12.1 Training
+
+Started 2026-10-14 06:57Z, finished 14:41Z (gate breaks included). ≈ 38 s per optimizer step,
+the same as arm A (rank does not change the cost; the DiT dominates). The two resumes (steps 100,
+300) were verified to continue at the right step. The traceback at the end of the step-300
+segment log is the `KeyboardInterrupt` from `supervisorctl stop`, not a crash.
+
+| Segment end | tqdm running avr_loss |
+|---|---|
+| step 100 | 0.0141 |
+| step 300 | 0.0118 |
+| step 600 | 0.0094 (arm A: 0.0089) |
+
+### 12.2 Gate breaks
+
+| | Step 100 B | Step 100 A | Step 300 B | Step 300 A | base |
+|---|---|---|---|---|---|
+| Expression held-out clips below base loss | 16/16 | 16/16 | 16/16 | 16/16 | – |
+| Expression rel. loss drop | 14.8% | 16.6% | 25.0% | 26.5% | – |
+| Expression acc / margin | **0.50** / −0.0035 | 0.375 / −0.0148 | 0.375 / −0.0009 | **0.625** / −0.0002 | 0.375 / −0.0070 |
+| Motion held-out clips below base loss | 10/10 | 10/10 | 10/10 | 10/10 | – |
+| Motion rel. loss drop | 19.4% | 22.4% | 28.9% | 32.6% | – |
+| Motion acc / margin | 0.30 / −0.0174 | 0.30 / −0.0017 | 0.30 / **+0.0163** | 0.20 / −0.0145 | 0.30 / −0.0084 |
+| Rule result | **PASS** | PASS | **PASS** (margins above base) | expression only | |
+
+Lower rank learns slightly less in loss terms (as expected), and at step 300 it is the first
+run of either arm with a motion margin above the base.
+
+### 12.3 Tier 1 on every checkpoint (held-out `QF2_R`; every checkpoint below base loss on 100% of clips in both kinds)
+
+| config | expr acc | expr margin | motion acc | motion margin | winner score |
+|---|---|---|---|---|---|
+| base | 0.375 | −0.0070 | 0.30 | −0.0084 | |
+| expv1b@50 | 0.500 | −0.0037 | 0.30 | −0.0154 | −0.0191 |
+| expv1b@100 | 0.500 | −0.0035 | 0.30 | −0.0174 | −0.0209 |
+| expv1b@150 | 0.562 | −0.0065 | 0.20 | −0.0125 | −0.0190 |
+| expv1b@200 | 0.562 | +0.0035 | 0.30 | −0.0114 | −0.0079 |
+| expv1b@250 | 0.625 | +0.0009 | 0.30 | +0.0020 | +0.0029 |
+| expv1b@300 | 0.375 | −0.0009 | 0.30 | +0.0163 | +0.0153 |
+| expv1b@350 | 0.625 | +0.0036 | 0.20 | +0.0052 | +0.0089 |
+| expv1b@400 | 0.438 | +0.0021 | 0.30 | +0.0094 | +0.0115 |
+| expv1b@450 | 0.562 | +0.0103 | 0.40 | +0.0135 | **+0.0237** |
+| expv1b@500 | 0.625 | +0.0087 | 0.40 | +0.0147 | +0.0234 |
+| expv1b@550 | 0.562 | +0.0120 | 0.40 | +0.0066 | +0.0186 |
+| expv1b@600 | 0.500 | +0.0103 | **0.50** | +0.0034 | +0.0138 |
+| *arm A winner expv1@550* | *0.750* | *+0.0130* | *0.30* | *+0.0032* | *+0.0161* |
+
+Reading: arm B keeps motion — margin positive from step 250 on and accuracy 0.40–0.50 late,
+where arm A fell to 0.30 / 0.20. It pays on expression: peak 0.625 against arm A's 0.75. Tier-1
+expression is noisy step to step (0.375 ↔ 0.625 between neighbouring checkpoints: 16 clips, one
+clip = 0.0625).
+
+### 12.4 Motion probe (`eval/reports/motion_probe_expv1b.json`; source median energy 7.59)
+
+| | base | @100 | @200 | @300 | @400 | @450 | @500 | @600 |
+|---|---|---|---|---|---|---|---|---|
+| median energy | 9.25 | 13.52 | **18.52** | 17.26 | 15.74 | 12.53 | 13.40 | 15.88 |
+| median ratio to source | 1.22 | 1.86 | 2.24 | 2.18 | 1.91 | 1.71 | 1.71 | 1.96 |
+
+D1 trigger: no. Per clip at @500: run 1.05–1.08×, jump 0.98–1.25× (fixed from the base's
+0.46–0.59×), walk/wave 1.6–1.9×, sitting 3.2–3.3× (arm A@550: 4.3–4.5×). At @450 the
+QF2_R jumps fall back to 0.52–0.55× (under-move). Lower rank did **not** reduce overall
+over-motion: medians are in the same 1.7–2.2× band as arm A (1.6–2.1×).
+
+### 12.5 Winner (`eval/reports/winner_expv1b.json`)
+
+- Steps 1–2: **expv1b@450** (+0.0237); @500 (+0.0234) is within 0.001, and the rule takes the earliest.
+- Step 3, motion veto: @450's energy 12.53 < 0.8 × the best probed (@200, 18.52) → the best-motion
+  checkpoint within 0.002 of the top: **expv1b@500** (13.40). **Winner: expv1b@500.**
+- Same caveat as §7: the veto treats more energy as better, and @200's 18.5 is a 2.2× overshoot.
+  Here it changed little (the scores differ by 0.0003), and it happened to avoid @450's
+  under-moving QF2_R jumps, but the rule should use |log ratio to source| in a future plan.
+
+### 12.6 Verdict vs v8@550 (`eval/reports/compare_expv1b-500_vs_v8-550.json`)
+
+Same method as §8/§11: 52-clip `core` suite, seed 42, scored by the same code.
+
+**Primary endpoints:**
+
+| | expv1b@500 | v8@550 | b / c | p (v8 better) | Holm p (v8 better) | P(expv1b better) |
+|---|---|---|---|---|---|---|
+| **P1** Tier-1 held-out acc (26) | 0.538 | 0.808 | 3 / 10 | **0.046** | 0.092 | 0.03 |
+| **P2** Tier-2 CLIP 1-NN acc (52) | 0.346 | 0.423 | 2 / 6 | 0.145 | 0.145 | 0.09 |
+
+Per kind (secondary):
+
+| | Expression B / v8 | b / c | Motion B / v8 | b / c |
+|---|---|---|---|---|
+| Tier 1 | 0.625 / 0.812 | 2 / 5 | 0.400 / 0.800 | 1 / 5 |
+| Tier-2 CLIP 1-NN | 0.281 / 0.281 | 1 / 1 | 0.450 / 0.650 | 1 / 5 |
+| Tier-2 DINOv2 1-NN | 0.281 / 0.250 | 4 / 3 | 0.250 / 0.600 | 2 / 9 (p = 0.033 for v8) |
+
+**Non-inferiority** (90% paired bootstrap CI):
+
+| Gate | Measured | Bar | Holds |
+|---|---|---|---|
+| N1 style | blinded sheet `rubric_expv1b-500_vs_v8-550.json` (+ `_key.json`), not rated | | pending |
+| N2 motion, mean log(B / v8 ratio) | **−0.237**, CI [−0.351, −0.128]; median ratio to source B 1.69, v8 1.79 | lower bound ≥ −0.223 | **NO** |
+| N3 camera, mean \|zoom\| B − v8 | −0.034, CI [−0.057, −0.010] (B steadier) | upper ≤ +0.01 | yes |
+| N4 late-frame identity | +0.007, CI [−0.001, +0.016] | lower ≥ −0.05 | yes |
+| N5 ground, median corner drift | 3.76 /255 (v8 2.02) | ≤ 5 /255 | yes |
+
+**N2 checked before accepting it (as N3 was in §11.2).** The mean is driven by the FRONT jumps:
+log ratio −0.91 (Pax) and −0.89 (Polly). B's FRONT jump clips move at 0.54× / 0.56× source
+against v8's 1.35× / 1.36×. A frame strip (Pax, FRONT, f13) shows it is real, not a metric
+artifact: v8@550 is airborne from frame 8 and arm A@550 from frame 10 (of 13); expv1b@500 only crouches with
+its feet tucked in the last frame. B also moves less than v8 on the sitting clips (−0.47 to
+−0.57). Without the two jumps the mean is −0.16 (ratio 0.85, which would pass), but dropping
+them would be goal-post moving: a jump that does not happen in the window is exactly the
+failure N2 exists to catch. The visible frame-0 → frame-1 shadow/tint pop (§11.2) is present
+in arm B too.
+
+**Verdict: NOT BETTER** (N2 fails). Replacement candidate: no. Even setting N2 aside, both
+primaries favour v8 and P1 is close to significant for v8 (unadjusted p = 0.046, Holm 0.092),
+so the best possible reading would have been NO DETECTABLE DIFFERENCE.
+
+### 12.7 Arm B vs arm A (`eval/reports/compare_expv1b-500_vs_expv1-550.json`, same scorer)
+
+| | expv1b@500 | expv1@550 | b / c | note |
+|---|---|---|---|---|
+| P1 Tier 1 | 0.538 | 0.577 | 1 / 2 | ns |
+| Tier 1 expression / motion | 0.625 / **0.400** | **0.750** / 0.300 | 0/2, 1/0 | ns |
+| P2 CLIP 1-NN | 0.346 | 0.385 | 5 / 7 | ns |
+| DINOv2 1-NN all | 0.269 | **0.558** | 3 / 18 | **p = 0.0007 for A** |
+| DINOv2 expression / motion | 0.281 / 0.250 | **0.531 / 0.600** | 3/11, 0/7 | p = 0.029 / 0.008 for A |
+| motion ratio to source (median) | 1.69 | 1.62 | | B moves less on matched clips: mean log −0.19, CI [−0.31, −0.08] |
+| late-frame identity | +0.018 vs A | | | CI [+0.011, +0.027], B keeps identity better |
+| corner drift | 3.76 | 4.08 | | |
+
+Arm B does not beat arm A: the primaries are level-to-worse, arm A's one clear advantage over
+v8 (DINOv2 expression 0.53) **disappears** in arm B (0.28), and B under-moves on the FRONT jumps.
+B's real gains are Tier-1 motion (0.40 vs 0.30, one clip), identity (+0.018) and slightly less
+drift. **Arm A (expv1@550) remains expv1's best checkpoint.**
+
+### 12.8 What arm B settles
+
+- **Rank is not the lever.** Halving the rank moved the trade-off (motion labels a little up,
+  expression and DINOv2 similarity down) without closing the gap to v8 on any primary.
+- **The LTX-2.5 lesson does not transfer as stated.** Arm A never showed the LTX-2.5 motion
+  collapse (D1 did not fire), and the lower rank did not reduce over-motion overall; it
+  under-moved on two jumps instead.
+- **expv1 outcome (PLAN §6.4: passes if either arm does): neither arm is better than v8@550.**
+  Arm A: NO DETECTABLE DIFFERENCE / NOT BETTER (pending N1). Arm B: NOT BETTER. v8@550 stays
+  the production model.

@@ -1,7 +1,8 @@
 # `expv1-kandinsky-50-video-pro/` — isolated experiment, not a version
 
-**Status (2026-10-13, 23:50Z):** arm A trained (600 steps); winner **expv1@550**. Full
-findings, numbers and logic: [`docs/REPORT.md`](docs/REPORT.md).
+**Status (2026-10-14, 20:40Z):** both arms trained and compared. **Neither is better than
+v8@550; v8 stays the production model.** Arm A (rank 32) winner **expv1@550**; arm B (rank 16)
+winner **expv1b@500**. Full findings, numbers and logic: [`docs/REPORT.md`](docs/REPORT.md).
 
 - **Phase 0:** G0.1 VAE **PASS**, G0.2 conditioning **PASS**, G0.3 layout **A** (generator
   patched, MODEL_NOTES §2.12).
@@ -16,6 +17,11 @@ findings, numbers and logic: [`docs/REPORT.md`](docs/REPORT.md).
   a human rater, but cannot make it BETTER. expv1 is level/ahead on expressions and camera
   steadiness, behind on motion labels. A zoom-measurement bug was found and fixed on the way
   (REPORT §11.2). Not a replacement candidate.
+- **Arm B (rank 16 / α 16, REPORT §12): NOT BETTER than v8@550.** Gates 100/300 PASS; Tier 1
+  0.54 vs 0.81 (unadjusted p = 0.046 for v8), CLIP 1-NN 0.35 vs 0.42; **N2 motion fails**
+  (FRONT jumps at 0.55x source, v8 1.35x; verified on frames). Against arm A: motion labels
+  0.40 vs 0.30, but expression 0.625 vs 0.75 and DINOv2 1-NN 0.27 vs 0.56. A lower rank is
+  not the lever; arm A stays expv1's best.
 
 **This is an isolated test.** It is not v10, and it is not a continuation of v1–v9. It
 starts from the public **Kandinsky 5.0 Video Pro** image-to-video checkpoint. No earlier
