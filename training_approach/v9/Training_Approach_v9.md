@@ -10,11 +10,50 @@ each with its own measurement before any training starts.
 | **Base** | Wan2.2-I2V-A14B + **`pudgy-v8-merged`** = v7fixed + v8@550, one exact LoRA (`lora_tools_v8.py combine`, as v8 did for v7) |
 | **Trains** | low-noise LoRA (as v8) **+ a high-noise LoRA for the first time** — layout and travel are decided at high noise, where the v2 golden has been frozen since v2 |
 | **Data** | three new sets: `v9_motion` (fast motion, Round 5 + augmentation), `v9_scenes` (mined from the 101 client skits), `v9_props` (prop images + the shots they appear in) |
-| **Order** | Phase 0 (measure, no training) → **v9a** fast motion → **v9b** scenes → **v9c** props, incremental |
+| **Order** | **v9c-phone first** (2026-10-24, §0) → **v9b** scenes → **v9a** fast motion when its data arrives → more v9c prop stages; Phase 0 alongside |
 | **Supersedes** | [v8](../v8/Training_Approach_v8.md) — results in [`REPORT_v8.md`](../../docs/training_reports/v8/REPORT_v8.md) |
-| **Status** | plan (2026-09-30; client data requested 2026-10-01, §2.1). v9a is blocked on the Round 5 data ([`Client_Data_Request_Round5.md`](../../docs/documents/Client_Data_Request_Round5.md)); Phase 0 and the skit mining can start now |
+| **Assets** | [`Assets_v9.md`](Assets_v9.md): asset registry, props and set plates in training and inference |
+| **Run it** | [`RUNBOOK_v9c_phone.md`](RUNBOOK_v9c_phone.md): `finetune/wan/v9_box.sh`, step by step, on a fresh GPU box |
+| **Status** | **v9c-phone ready to run** (2026-10-24): data mirrored, `prep_v9.py` built and verified locally, box scripts and runbook written. v9a is still blocked on Round 5 Tier A (iteration_6 has no new fast motion) |
 
 ---
+
+## 0. Update 2026-10-24: iteration_6, and the phone stage runs first
+
+iteration_6 brought the following (changelog: `Data/raw/iteration_6/CHANGELOG.md`, outside the repo; on Azure at `pudgy/raw/iteration_6/CHANGELOG.md`):
+
+- **the first prop**: the iFin phone, 36 texting clips plus 24 views; the client confirmed
+  `PRP_PHONE` is the iFin;
+- **the first set plates**: 33 unique living-room / TV-room plates;
+- **a second sitting performance** (Sitting V2);
+- **a clean Confused re-export** (Confused V2).
+
+It brought **no fast motion**, so v9a's data still has not arrived. The order therefore
+changes:
+
+| run | data | base | status |
+|---|---|---|---|
+| **v9c-phone** | 36 phone texting clips (32 trained, 4 held out) + 20% stratified v8 replay = 475 clips | `pudgy-v8-merged` = v7fixed + v8@550 (one exact file) | **ready**, [runbook](RUNBOOK_v9c_phone.md) |
+| v9b | skit shots + character composites on the iteration_6 plates | v9c-phone merged | needs the skit-mining pipeline and plate floor annotations |
+| v9a | Round 5 Tier A fast motion | the latest merged base | blocked on the client |
+| v9c-2… | the next props, about 5 per stage | the latest merged base | as the client delivers prop art + in-use clips |
+
+**Why the phone goes first.** It is the only complete new data set, and the client is
+animating phone use next. One small stage also tests the whole asset mechanism end to end
+before it scales to many props: registry → captions → staged LoRA → gate → merge. The
+mechanism is in [Assets_v9.md](Assets_v9.md).
+
+**What v9c-phone changes, and what it deliberately keeps.**
+
+| | v9c-phone | why |
+|---|---|---|
+| base | v8@550, merged into one file | every stage stacks on a single exact base; no LoRA stacking at inference (v7's 76% error) |
+| LoRA | fresh, low-noise, rank 16, ≤ 200 steps, save every 25 | §4 (prop stages) |
+| high-noise | frozen | §4; prop entry is handled by first+last-frame anchoring |
+| data | phone clips at f21 / f41 / f61, from each clip's longest clean window; replay sampled per (character, label), with every label kept at its common bucket | 11 Polly clips are damaged mid-clip, and every clip ends on a 10-frame hold |
+| phone stills | **not trained** | in image-to-video a 1-frame sample is conditioned on itself, so it teaches almost nothing; the views are keyframe pixels and the eval reference (corrects §3.3) |
+| captions | v8's wording unchanged (incl. "static … shot"); the phone named by the registry phrase | one new variable per stage; the camera-clause fix (§1.3 #5) moves to v9a |
+| gate | held-out v8-label loss ≤ 1.05× base; held-out phone loss < 1.0× base; name binding reported | §4 regression gate, fixed before the data |
 
 ## 1. What v8 showed
 
@@ -289,6 +328,7 @@ Ship bars from v8 (§1.2) carry forward unchanged; motion rows are the ones v9a 
 
 | step | needs | can start |
 |---|---|---|
+| **v9c-phone** (§0) | iteration_6 (mirrored), v8 weights (on Azure) | **now**, [runbook](RUNBOOK_v9c_phone.md) |
 | Phase 0 (VAE ceiling, metrics, scene baseline) | v8 weights, real clips | **now** |
 | skit mining → `v9_scenes` | iteration_1/2 from Azure | **now** |
 | augmentation → part of `v9_motion` | iteration_3–5 alpha clips | **now** |

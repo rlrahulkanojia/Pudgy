@@ -1,0 +1,288 @@
+# Pudgy asset registry: one entry per character, prop and set.
+#
+# The ONLY place asset wording lives. prep_v9.py builds training captions from it, the
+# eval builds candidate captions from it, and the long-form prompt compiler / keyframe
+# composer read it at inference - so a name and its look are bound by construction.
+# Design: training_approach/v9/Assets_v9.md. Lint before every build:
+#
+#   python finetune/wan/assets/registry.py lint --data /workspace/Data
+#
+# Paths are relative to the Data root (PUDGY_DATA). `{phrase}` inside an action clause is
+# replaced by the asset's phrase; `{name}` by its short name.
+
+[assets.pax]
+kind = "character"
+# Verbatim from prep_v8 ANCHORS (v1/v2 caption convention). Never change: every LoRA in
+# the base was trained on exactly these words.
+phrase = "Pax, a short round blue penguin"
+
+[assets.polly]
+kind = "character"
+phrase = "Polly, a short round pink penguin"
+
+# --------------------------------------------------------------------------------------
+[assets.phone]
+kind = "prop"
+# Client confirmed 2026-10-24: PRP_PHONE is the iFin (Prp_iFin on the Survival sheet).
+client_ids = ["PRP_PHONE", "Prp_iFin"]
+name = "the iFin phone"
+# No "blue"/"pink" (character colour anchors): the body is pale blue-grey, written "pale grey".
+phrase = "the iFin phone, a small pale grey phone with a black screen, three camera lenses on the back and a little tuft on top"
+refs_dir = "raw/iteration_6/Samples/PROPS/PHONE/PRP_PHONE"
+refs_glob = "PRP_PHONE_*.png"
+# One back, one front, one edge view: never used in training or keyframes, kept for eval.
+holdout_views = ["PRP_PHONE_05", "PRP_PHONE_14", "PRP_PHONE_20"]
+placement = ["held", "on_surface"]
+# Filled after a stage passes its gate: "<stage> <checkpoint>".
+trained_in = ""
+
+[assets.phone.states]
+screen_off = "its screen dark"
+
+# In-use footage. `folder` is the client's folder under clips_dir; characters are read
+# from the filename (trusted over the folder). Clauses written from the footage frame by
+# frame (2026-10-24): one flipper holds the phone at chest height, the other taps at it,
+# the phone's back faces the camera; head and body still. Frames 64-73 of every clip are a
+# held copy of frame 63 - `animated_frames` keeps them out of training.
+[assets.phone.clips]
+clips_dir = "raw/iteration_6/Samples/PROPS/PHONE"
+animated_frames = 64
+
+[[assets.phone.actions]]
+folder = "PRP_PHONE_TEXTING_SITTING"
+label = "phone_texting_sitting"
+action = "sitting on the ground with its legs stretched out in front, holding {phrase}, up in front of its chest in one flipper and tapping at it with the other, the screen turned toward itself, head still and eyes on the phone"
+label_text = "texting on a phone, seated"
+
+[[assets.phone.actions]]
+folder = "PRP_PHONE_TEXTING_STANDING"
+label = "phone_texting_standing"
+action = "standing and holding {phrase}, up in front of its chest in one flipper, tapping at it with the other, the screen turned toward itself, head still and eyes on the phone"
+label_text = "texting on a phone, standing"
+
+# --------------------------------------------------------------------------------------
+# Not trained in v9c-phone. Used by v9b composites and by the inference keyframe composer.
+# Families / times / framing are a first pass from contact sheets (2026-10-24); `floor`
+# (walkable polygon, x,y in plate pixels) and `scale` (character height vs y) are filled
+# when the plates are annotated for compositing. Byte-duplicates (AFrame_002-004 =
+# Frame_002-004, Frame_06 = Frame_04) are not listed.
+[assets.living_room]
+kind = "set"
+name = "the igloo living room"
+phrase = "inside the igloo living room, with pale ice walls, a cream couch, a glass coffee table and a round window"
+plates_dir = "raw/iteration_6/Samples/BGS/BG_LIVINGROOM"
+# One per main family, never composited or trained: the unseen-set test.
+holdout_plates = ["Frame_05.png", "PP_BG_Ep089Sc04_TVRoom_003.png", "BG_Ep080Sc01_LivingRoom_003.png", "PP_Scene02_v02.png"]
+# Skits drawn in the same rooms. Checked 2026-10-24: same set design, but the shots are
+# framed differently, so no plate lines up pixel-for-pixel with a skit frame we have.
+skits_same_set = ["Posters", "Tone"]
+
+[assets.living_room.times]
+day = ""
+morning = "in the morning"
+storm = "on a stormy day"
+sunset = "at sunset"
+evening = "in the evening"
+night = "at night"
+
+# family: door_a (couch, glass table, door) · door_b (round window, side table, door) ·
+# tvroom (couch, glass table, round window) · tv_fg (TV/armchair foreground) ·
+# dim_couch (Ep080, dim light, TV foreground) · closeup · dressed (props on the table)
+[[assets.living_room.plates]]
+file = "AFrame_001.png"
+family = "door_a"
+time = "day"
+framing = "wide"
+note = "door closed"
+[[assets.living_room.plates]]
+file = "Frame_002.png"
+family = "door_a"
+time = "day"
+framing = "wide"
+note = "door opening"
+[[assets.living_room.plates]]
+file = "Frame_003.png"
+family = "door_a"
+time = "day"
+framing = "wide"
+note = "door opening"
+[[assets.living_room.plates]]
+file = "Frame_004.png"
+family = "door_a"
+time = "day"
+framing = "wide"
+note = "door open"
+[[assets.living_room.plates]]
+file = "Frame_01.png"
+family = "door_b"
+time = "day"
+framing = "wide"
+note = "door closed; same room as the Posters skit"
+[[assets.living_room.plates]]
+file = "Frame_02.png"
+family = "door_b"
+time = "day"
+framing = "wide"
+note = "door sequence"
+[[assets.living_room.plates]]
+file = "Frame_03.png"
+family = "door_b"
+time = "day"
+framing = "wide"
+note = "door sequence"
+[[assets.living_room.plates]]
+file = "Frame_04.png"
+family = "door_b"
+time = "day"
+framing = "wide"
+note = "door sequence (Frame_06 is the same bytes)"
+[[assets.living_room.plates]]
+file = "Frame_05.png"
+family = "door_b"
+time = "day"
+framing = "wide"
+note = "door open"
+[[assets.living_room.plates]]
+file = "PP_BG_Ep089Sc04_TVRoom_001 (2).png"
+family = "tvroom"
+time = "day"
+framing = "wide"
+note = ""
+[[assets.living_room.plates]]
+file = "PP_BG_Ep089Sc04_TVRoom_002.png"
+family = "tvroom"
+time = "day"
+framing = "wide"
+note = "sun in the window"
+[[assets.living_room.plates]]
+file = "PP_BG_Ep089Sc04_TVRoom_003.png"
+family = "tvroom"
+time = "storm"
+framing = "wide"
+note = "storm clouds in the window"
+[[assets.living_room.plates]]
+file = "PP_BG_Ep089Sc04_TVRoom_004.png"
+family = "tvroom"
+time = "morning"
+framing = "wide"
+note = "pale low sun"
+[[assets.living_room.plates]]
+file = "PP_BG_Ep089Sc04_TVRoom_005.png"
+family = "tvroom"
+time = "sunset"
+framing = "wide"
+note = "orange sky"
+[[assets.living_room.plates]]
+file = "PP_BG_Ep089Sc04_TVRoom_006.png"
+family = "tvroom"
+time = "evening"
+framing = "wide"
+note = "dark sky, room slightly dimmer"
+[[assets.living_room.plates]]
+file = "PP_BG_Ep089Sc04_TVRoom_007.png"
+family = "tvroom"
+time = "night"
+framing = "wide"
+note = "moon and moonbeam, room dim"
+[[assets.living_room.plates]]
+file = "BG_Ep081Sc06_TVRoom_001.png"
+family = "tvroom"
+time = "day"
+framing = "wide"
+note = "couch edge and glass table"
+[[assets.living_room.plates]]
+file = "Frame_001_.png"
+family = "tvroom"
+time = "day"
+framing = "wide"
+note = "couch and round window, no table"
+[[assets.living_room.plates]]
+file = "PP_BG_Ep089Sc04_TVRoom_001.png"
+family = "tv_fg"
+time = "day"
+framing = "wide"
+note = "TV and armchair in the foreground; same room as the Tone skit"
+[[assets.living_room.plates]]
+file = "PP_Scene02_v01.png"
+family = "tv_fg"
+time = "day"
+framing = "medium"
+note = "couch behind the TV"
+[[assets.living_room.plates]]
+file = "PP_Scene02_v01 (2).png"
+family = "tv_fg"
+time = "day"
+framing = "medium"
+note = "couch behind the TV"
+[[assets.living_room.plates]]
+file = "BG_Ep080Sc01_LivingRoom_001.png"
+family = "dim_couch"
+time = "evening"
+framing = "medium"
+note = "TV foreground, dim light"
+[[assets.living_room.plates]]
+file = "BG_Ep080Sc01_LivingRoom_001 (2).png"
+family = "dim_couch"
+time = "evening"
+framing = "medium"
+note = "blanket on the couch"
+[[assets.living_room.plates]]
+file = "BG_Ep080Sc01_LivingRoom_002.png"
+family = "dim_couch"
+time = "evening"
+framing = "medium"
+note = "door only"
+[[assets.living_room.plates]]
+file = "BG_Ep080Sc01_LivingRoom_002 (2).png"
+family = "dim_couch"
+time = "evening"
+framing = "medium"
+note = "blanket on the couch"
+[[assets.living_room.plates]]
+file = "BG_Ep080Sc01_LivingRoom_003.png"
+family = "dim_couch"
+time = "evening"
+framing = "medium"
+note = "blanket on the couch"
+[[assets.living_room.plates]]
+file = "BG_Ep080Sc01_LivingRoom_004.png"
+family = "dim_couch"
+time = "evening"
+framing = "medium"
+note = "blanket on the couch"
+[[assets.living_room.plates]]
+file = "Frame_001 (3).png"
+family = "closeup"
+time = "day"
+framing = "close"
+note = "couch"
+[[assets.living_room.plates]]
+file = "Frame_002 (2).png"
+family = "closeup"
+time = "day"
+framing = "close"
+note = "couch, popcorn and a drink"
+[[assets.living_room.plates]]
+file = "PP_Scene02_v02.png"
+family = "closeup"
+time = "day"
+framing = "close"
+note = "couch, popcorn and a drink"
+[[assets.living_room.plates]]
+file = "PP_BG_Ep038Sc01_Livingroom_A001.png"
+family = "closeup"
+time = "day"
+framing = "close"
+note = "couch with a cushion"
+[[assets.living_room.plates]]
+file = "Frame_001.png"
+family = "dressed"
+time = "day"
+framing = "medium"
+note = "small dark object on the coffee table"
+[[assets.living_room.plates]]
+file = "Frame_001 (2).png"
+family = "dressed"
+time = "day"
+framing = "medium"
+note = "magazine, popcorn and a drink on the coffee table"

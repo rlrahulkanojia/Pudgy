@@ -31,8 +31,10 @@ from pathlib import Path
 
 RUN = Path(os.environ.get("V8_RUN", "/workspace/wan_output/pudgy-v8-joint-lownoise"))
 LOG = Path(os.environ.get("V8_LOG", "/var/log/portal/pudgy-v8-train.log"))
-EVAL = Path("/workspace/eval_v8")
-PREFIX = "v8"
+# v9 reuses this monitor: MONITOR_EVAL / MONITOR_PREFIX point it at its own eval dir
+# and Azure prefix (finetune/wan/v9_box.sh train). Defaults are v8's.
+EVAL = Path(os.environ.get("MONITOR_EVAL", "/workspace/eval_v8"))
+PREFIX = os.environ.get("MONITOR_PREFIX", "v8")
 HERE = Path(__file__).resolve().parent
 # The supervisor log (log-tee) strips tqdm's bar glyphs: "steps:   4% 22/600 [..]", while
 # a raw terminal log keeps them: "steps:   4%|▍   | 22/600 [..]". Match both.
