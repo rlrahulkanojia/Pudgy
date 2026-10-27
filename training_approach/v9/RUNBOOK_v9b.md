@@ -376,3 +376,17 @@ bash finetune/wan/v9b_box.sh archive
     - Every other handover blob matches by content: all 566 set files, the code bundle and the doc. The eval tar and the merged base have no stored MD5; each was uploaded once and is in `SHA256SUMS`.
     - `azure_sync.py push` gained an opt-in `--force`; the default behaviour is unchanged.
   - **Merged into `main` (user request, 27 Oct).** `origin/main` was still `ab559fb`, so `main` was fast-forwarded to `cdc8dda`; `v9b-handover` points at the same commit. The handover now clones `main`.
+
+### New machine (Vast C.57924132, A100-SXM4 80GB)
+
+- **27 Oct, 06:45–07:05 UTC: set up and verified (HANDOVER_v9b §4 Steps 1–3).**
+  - **Machine:** A100-SXM4-80GB, driver 580.173.02 (CUDA 13.0), ~1 TB RAM, 250 GB disk on `/workspace` (not a volume; Azure is the backup).
+  - **Step 1:** cloned `main` at `01c5289`; `registry.toml` md5 `3757257814f5588603317d747f2e250e` ✓; `.env` from the user, git-ignored, mode 600.
+  - **Step 2 (06:50–06:54):** `v9_box.sh setup` OK in 3 min.
+    - musubi-tuner v0.3.4 (tag), `musubi-v0.3.4-resume-step.patch` applied;
+    - torch **2.14.1+cu130**: the script matches the wheel to the driver, which reports CUDA 13.0. Earlier boxes ran cu126/cu128; A100 (sm_80) is covered by all of them. diffusers 0.32.1 · transformers 4.57.6 · accelerate 1.6.0 · bitsandbytes 0.50.2;
+    - all four weight files present (DiT low/high fp16 28.6 GB each, VAE, T5); HF downloaded 65 GB in ~3 min.
+  - **Step 3 (06:54–07:04):** the archive came from the old box over SSH (read-only: only `v9b_handover_all.tar` and its `.sha256`).
+    - rsync: 2.66 GB in 9 min 48 s (4.5 MB/s); `sha256sum -c v9b_handover_all.tar.sha256` OK;
+    - extracted to `/workspace`: **all 571 `SHA256SUMS` OK**;
+    - links made, `eval_for_v9b.tar` extracted; merged base md5 `ec333748284410bb341f431b88f5026f` ✓; `data_v9b/manifest.json` present; **535 clips** ✓; the archive's `HANDOVER_v9b.md` is identical to the repo's.
