@@ -1,0 +1,238 @@
+{
+ "skit": "iteration_2/72_videos/PP-PackingClothes-Base.mp4",
+ "frames": 301,
+ "fps": 24,
+ "curated_by": "curator-11",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "PACKING CLOTHES",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a bedroom drawn on a plain pale grey background"
+  },
+  "s2": {
+   "kind": "set",
+   "desc": "a snowy yard with pine trees and soft white clouds"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 44,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "lead_hidden",
+   "camera": "static",
+   "notes": "top-down insert of a small open suitcase; only Pax's two flippers reach in to pack socks and a toothbrush"
+  },
+  {
+   "start": 44,
+   "end": 113,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a pale bed in front of him and a lamp on a yellow nightstand at the left",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 100,
+       "screen": "right-center"
+      },
+      {
+       "frame": 106,
+       "screen": "right"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 44,
+     "end": 53,
+     "text": "Pax closes the lid of a small green suitcase lying on the bed"
+    },
+    {
+     "start": 53,
+     "end": 76,
+     "text": "Pax rests his flippers on the closed suitcase and gives a satisfied nod, eyes closing in a smile"
+    },
+    {
+     "start": 76,
+     "end": 96,
+     "text": "Pax leans to one side to look the suitcase over, then straightens up beside it"
+    },
+    {
+     "start": 96,
+     "end": 113,
+     "text": "Pax tips the suitcase off the bed by its handle and waddles off to the right, pulling it along"
+    }
+   ],
+   "props": [
+    "small suitcase",
+    "bed",
+    "lamp"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "keep12 low (0.62) because Pax moves; compare 44 vs 112: lamp and bed edges black. Lamp is drawn soft-focus. Pax is half out at the right edge in the last frames"
+  },
+  {
+   "start": 113,
+   "end": 161,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with the back of a red car with its trunk open",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 131,
+       "screen": "center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 113,
+     "end": 134,
+     "text": "Pax waddles toward the car with his eyes closed in a content smile, pulling a small green suitcase behind him"
+    },
+    {
+     "start": 134,
+     "end": 143,
+     "text": "Pax turns his back and lifts the suitcase up into the open trunk"
+    },
+    {
+     "start": 143,
+     "end": 155,
+     "text": "Pax stands with his back turned at the trunk, settling the suitcase inside"
+    },
+    {
+     "start": 155,
+     "end": 161,
+     "text": "Pax turns his head to glance back over his shoulder"
+    }
+   ],
+   "props": [
+    "small suitcase",
+    "car"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "licence plate"
+   ],
+   "travel": "moves_within",
+   "notes": "compare 113 vs 160: car and trees locked; only the clouds drift (constant tiny region diff)"
+  },
+  {
+   "start": 161,
+   "end": 186,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "close-up",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with the back of the red car behind him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 161,
+     "end": 172,
+     "text": "Pax sways gently, eyes shut and grinning, swinging his flippers in and out across his chest"
+    },
+    {
+     "start": 172,
+     "end": 186,
+     "text": "Pax sways side to side, his beak opening and closing as he hums happily"
+    }
+   ],
+   "props": [
+    "car"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "ends at f186, the first frame where the dark shadow starts creeping up his belly | verification 2026-10-26: beat [161,172) corrected"
+  },
+  {
+   "start": 186,
+   "end": 228,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "effect",
+   "camera": "static",
+   "notes": "a big shadow wipes up over Pax (his white front turns grey, then the car darkens) while his eyes snap open in dread; lighting wash that changes the lead's colours"
+  },
+  {
+   "start": 228,
+   "end": 250,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "tilt_up",
+   "notes": "tilt up a towering luggage cart; no lead clearly visible"
+  },
+  {
+   "start": 250,
+   "end": 280,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "effect",
+   "camera": "static",
+   "notes": "high-angle wide of tiny Pax in front of the car, the whole scene under a grey shadow (Pax drawn grey); colour wash on everything"
+  },
+  {
+   "start": 280,
+   "end": 301,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "other",
+   "notes": "Polly peeks out from behind the luggage cart; the background igloo and cart edges all shift (compare 280/300); 21 frames"
+  }
+ ]
+}

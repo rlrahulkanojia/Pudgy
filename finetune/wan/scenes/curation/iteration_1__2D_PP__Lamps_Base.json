@@ -1,0 +1,139 @@
+{
+ "skit": "iteration_1/30_videos/2D_PP_ Lamps_Base.mp4",
+ "frames": 257,
+ "fps": 24,
+ "curated_by": "curator-batch4",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "LAMPS",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a room with a tiled pale slate wall and a small light switch"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 24,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "effect",
+   "camera": "static",
+   "notes": "Pax waddles in from the right and reaches toward the light switch in an unlit room (camera locked: wall-edge fit identity 1.000). Dropped because the whole picture is under a dark grey-blue lights-off wash: Pax's white belly reads grey-blue and his feet brown, so his identity colours are off. Would be a clean keep without the wash"
+  },
+  {
+   "start": 24,
+   "end": 44,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "20 frames: Polly peeks out from behind a wooden door and steps out, under the same dim tint"
+  },
+  {
+   "start": 44,
+   "end": 54,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "10 frames: Pax at the light switch with Polly sliding in from the left edge"
+  },
+  {
+   "start": 54,
+   "end": 58,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "effect",
+   "camera": "static",
+   "notes": "the overhead light comes on and washes the whole picture white"
+  },
+  {
+   "start": 58,
+   "end": 81,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "effect",
+   "camera": "static",
+   "notes": "Polly flinches on a white background (flash-bang reaction), fading to pure white by f62; pure white f62-80"
+  },
+  {
+   "start": 81,
+   "end": 102,
+   "boundary": "transition",
+   "keep": false,
+   "drop_reason": "transition",
+   "camera": "static",
+   "notes": "fade in from white to Polly at a TV cabinet (luma settles at f102)"
+  },
+  {
+   "start": 102,
+   "end": 110,
+   "boundary": "after_transition",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "8 frames: Polly switches on an orange table lamp, which blooms with a soft radial glow"
+  },
+  {
+   "start": 110,
+   "end": 139,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "plush toys of Pax and Polly sitting on a glass coffee table (lead copies); only Polly's flipper reaches in to switch on a lamp, and a radial glow builds around the plushies"
+  },
+  {
+   "start": 139,
+   "end": 181,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "wide living room: the Pax and Polly plushies sit on the coffee table in the foreground throughout; Polly switches on the floor and side lamps under heavy radial glow"
+  },
+  {
+   "start": 181,
+   "end": 188,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pull_back",
+   "notes": "the view widens to show an armchair on the right and Pax standing at the back"
+  },
+  {
+   "start": 188,
+   "end": 208,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "same living room, plushies still on the coffee table, glow overlays; Polly and Pax small at the back"
+  },
+  {
+   "start": 208,
+   "end": 222,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "14 frames: the living room after the overhead light is switched off, warm dim wash"
+  },
+  {
+   "start": 222,
+   "end": 257,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "effect",
+   "camera": "static",
+   "notes": "Pax squints and rubs his eye in the dark, but the whole picture is under a heavy warm purple-brown colour wash with a yellow glow at the bottom: Pax reads purple with a salmon belly, so his identity colours are wrong"
+  }
+ ]
+}

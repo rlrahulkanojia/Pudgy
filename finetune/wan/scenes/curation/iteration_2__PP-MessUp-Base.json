@@ -1,0 +1,412 @@
+{
+ "skit": "iteration_2/72_videos/PP-MessUp-Base.mp4",
+ "frames": 343,
+ "fps": 24,
+ "curated_by": "curator-09",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "MESS UP",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a bathroom drawn on a plain pale grey background"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "an empty space with a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 15,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "Polly half out of the picture at the left, wiping the mirror, sparkles (15 frames before the zoom out)"
+  },
+  {
+   "start": 15,
+   "end": 47,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "zoom_out",
+   "notes": "zoom out from the mirror to the wide bathroom; the mirror frame settles at 46-47"
+  },
+  {
+   "start": 47,
+   "end": 99,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a cream double-sink vanity under a mirror in a peach frame",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "enters",
+     "enters_at": 47,
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 47,
+     "end": 56,
+     "text": "Pax waddles in from the left while Polly stands by the vanity with a yellow cloth and a spray bottle"
+    },
+    {
+     "start": 56,
+     "end": 65,
+     "text": "Pax stops by the sinks with one flipper raised while Polly glances up and sparkles twinkle around the vanity"
+    },
+    {
+     "start": 65,
+     "end": 74,
+     "text": "Polly picks up the trash bag and turns round to face Pax, the spray bottle and cloth in her other flipper"
+    },
+    {
+     "start": 74,
+     "end": 89,
+     "text": "Pax blows Polly a kiss with his eyes closed as a little heart floats up by the mirror"
+    },
+    {
+     "start": 89,
+     "end": 99,
+     "text": "Pax turns his back and reaches toward the sink while Polly watches him"
+    }
+   ],
+   "props": [
+    "spray bottle",
+    "cleaning cloth",
+    "trash bag",
+    "vanity",
+    "mirror"
+   ],
+   "prop_events": [],
+   "effects": [
+    "sparkles",
+    "heart"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "enters",
+   "notes": "Mirror frame and vanity edges identical 47-98 (camera locked). Pax is already a sliver at the left edge at 47. The mirror shows no reflections. | verification pass 2 (verify3_report_1): Polly never wipes the counter. Over f47-64 she stands still to the right of the vanity, holding the yellow cloth and the purple spray bottle, glancing up (blink at f49). Beats 47-56 and 56-65 both say she wipes.; Polly picks up the trash bag at f64-65 as she turns, and carries it for the rest of the span; beat 65-74 leaves this out.; Camera locked: the mirror and vanity edges are black in compare"
+  },
+  {
+   "start": 99,
+   "end": 140,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a round teal sink, its tap and a glass of water on the counter in front of him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "partial",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 99,
+     "end": 112,
+     "text": "Pax squeezes a long ribbon of toothpaste from the tube onto his toothbrush"
+    },
+    {
+     "start": 112,
+     "end": 121,
+     "text": "Pax puts the toothbrush in his beak as the tube drops onto the counter"
+    },
+    {
+     "start": 121,
+     "end": 140,
+     "text": "Pax scrubs his teeth hard while foam swells up and spreads over his face"
+    }
+   ],
+   "props": [
+    "toothbrush",
+    "toothpaste tube",
+    "sink",
+    "glass of water"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": ""
+  },
+  {
+   "start": 140,
+   "end": 170,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "other",
+   "camera": "static",
+   "notes": "Pax seen only as his reflection in the mirror (glass sheen over him, washed-out colours), scrubbing with foam and flying droplets. Camera locked. Dropped as unsure: a reflection is a depiction of the lead, not the lead itself, and the colours are off-model."
+  },
+  {
+   "start": 170,
+   "end": 208,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 170,
+     "end": 208,
+     "text": "Polly stands frozen holding a spray bottle, a cloth and a trash bag, staring ahead with her beak open and blinking"
+    }
+   ],
+   "props": [
+    "spray bottle",
+    "cleaning cloth",
+    "trash bag"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "Almost still: two blinks (around 185 and 194)."
+  },
+  {
+   "start": 208,
+   "end": 253,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a vanity, a running sink and a mirror, and a puddle spreading on the floor",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 208,
+     "end": 217,
+     "text": "Pax leans over the running sink, scooping up water in his flippers"
+    },
+    {
+     "start": 217,
+     "end": 226,
+     "text": "Pax splashes the water over his face, sending droplets flying onto the mirror"
+    },
+    {
+     "start": 226,
+     "end": 235,
+     "text": "Pax leans back over the overflowing sink for more water"
+    },
+    {
+     "start": 235,
+     "end": 244,
+     "text": "Pax splashes his face again, spraying water over the mirror and the floor"
+    },
+    {
+     "start": 244,
+     "end": 253,
+     "text": "Pax reaches back into the overflowing sink as water spills off the counter into the puddle"
+    }
+   ],
+   "props": [
+    "sink",
+    "mirror",
+    "puddle"
+   ],
+   "prop_events": [],
+   "effects": [
+    "water splashes"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "Pax seen from behind at three-quarter view; the mirror gets covered in droplets but shows no reflection. | verification pass 2 (verify2_report_5): Beat 244-253 says Pax 'keeps scrubbing his face': from f242 he leans back over the sink and reaches into it again with his flipper while water spills off the counter. He is not at his face. Locked (vanity and mirror black 208/230/252)."
+  },
+  {
+   "start": 253,
+   "end": 291,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 253,
+     "end": 266,
+     "text": "Polly stands holding the spray bottle, cloth and trash bag, staring in shock with a sweat drop on her face"
+    },
+    {
+     "start": 266,
+     "end": 273,
+     "text": "Polly lets the spray bottle, the cloth and the trash bag fall to the floor"
+    },
+    {
+     "start": 273,
+     "end": 291,
+     "text": "Polly stands still with empty flippers and her beak hanging open, the dropped things at her feet"
+    }
+   ],
+   "props": [
+    "spray bottle",
+    "cleaning cloth",
+    "trash bag"
+   ],
+   "prop_events": [],
+   "effects": [
+    "sweat drop"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "The d1 spikes at 267-268 are the drop, not a cut; Polly's outline stays exactly in place."
+  },
+  {
+   "start": 291,
+   "end": 321,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the vanity and a droplet-covered mirror, and bottles, a razor, soap and towels strewn across the wet floor",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "enters",
+     "enters_at": 310,
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 291,
+     "end": 301,
+     "text": "Pax dabs his face dry with a teal towel, eyes closed and smiling"
+    },
+    {
+     "start": 301,
+     "end": 305,
+     "text": "Pax lets the towel drop to the floor"
+    },
+    {
+     "start": 305,
+     "end": 311,
+     "text": "Pax stands with a pleased smile in the messy bathroom"
+    },
+    {
+     "start": 311,
+     "end": 317,
+     "text": "Polly rushes in from the right toward Pax"
+    },
+    {
+     "start": 317,
+     "end": 321,
+     "text": "Polly grabs Pax by the face and shoves him up toward the mirror"
+    }
+   ],
+   "props": [
+    "towel",
+    "vanity",
+    "mirror"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "enters",
+   "notes": "Mirror, vanity and floor clutter identical 291-320; the camera pulls back from 321."
+  },
+  {
+   "start": 321,
+   "end": 328,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pull_back",
+   "notes": "quick pull back as Polly presses Pax against the mirror"
+  },
+  {
+   "start": 328,
+   "end": 343,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "Polly rubbing Pax against the mirror like a cloth, wide (15 frames)"
+  }
+ ]
+}

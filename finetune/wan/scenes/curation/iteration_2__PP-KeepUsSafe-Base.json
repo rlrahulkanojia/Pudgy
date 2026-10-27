@@ -1,0 +1,41 @@
+{
+ "skit": "iteration_2/72_videos/PP-KeepUsSafe-Base.mp4",
+ "frames": 273,
+ "fps": 24,
+ "curated_by": "curator-06",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "KEEP US SAFE",
+ "cast": {},
+ "outfits": {},
+ "settings": {},
+ "spans": [
+  {
+   "start": 0, "end": 24, "boundary": "start", "keep": false, "drop_reason": "camera_move", "camera": "other",
+   "notes": "tracking shot: the red sled car with Pax and Polly and a black sports car driven by a grey penguin in sunglasses; the igloo village scrolls past (about 20 px/23 f on the cars, far more on the scenery)"
+  },
+  {
+   "start": 24, "end": 51, "boundary": "cut", "keep": false, "drop_reason": "no_lead", "camera": "other",
+   "notes": "driver's POV: the black sports car (in-world brand plate) recedes down the road while the street scrolls toward the viewer; no lead"
+  },
+  {
+   "start": 51, "end": 82, "boundary": "cut", "keep": false, "drop_reason": "camera_move", "camera": "other",
+   "notes": "in-car shot of Polly: the car interior is locked but the village scrolls past behind her (scenery shift about 385 px over the shot). Vehicle-mounted tracking, dropped for consistency with the fixed-camera caption"
+  },
+  {
+   "start": 82, "end": 106, "boundary": "cut", "keep": false, "drop_reason": "camera_move", "camera": "other",
+   "notes": "in-car shot of Pax driving: interior locked, scenery scrolls about 490 px; vehicle-mounted tracking"
+  },
+  {
+   "start": 106, "end": 160, "boundary": "cut", "keep": false, "drop_reason": "camera_move", "camera": "other",
+   "notes": "in-car shot of Polly screaming and waving: scenery scrolls and the shot also scales (0.92 over the span)"
+  },
+  {
+   "start": 160, "end": 212, "boundary": "cut", "keep": false, "drop_reason": "camera_move", "camera": "pan_left",
+   "notes": "missed hard cut at f160 (first-pass merged it with 106). Fast pull back f160-163, then a slow tracking pan with the two tiny cars past a speed-limit sign (sign drifts about 500 px). Leads tiny anyway"
+  },
+  {
+   "start": 212, "end": 273, "boundary": "cut", "keep": false, "drop_reason": "camera_move", "camera": "other",
+   "notes": "front view over the hood of Pax driving and Polly beside him: car and leads locked, but the igloo buildings behind scroll past (doubled edges in compare 212/272). Vehicle-mounted tracking: dropped conservatively. Judgement call: if the lead allows car-mounted shots, this is a clean 61-frame two-shot (Polly closes her eyes and sings, Pax side-eyes her)"
+  }
+ ]
+}

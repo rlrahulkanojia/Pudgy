@@ -1,0 +1,175 @@
+{
+ "skit": "iteration_1/30_videos/PP-Overstimulated-Base.mp4",
+ "frames": 100,
+ "fps": 24,
+ "curated_by": "curator-05",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "OVERSTIMULATED",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a living room drawn on a plain pale background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 27,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a long cream sofa and a coral cushion",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 27,
+     "text": "Pax leans over Polly on the sofa and tickles her while she squirms on her back, laughing with her eyes shut"
+    }
+   ],
+   "props": [
+    "sofa",
+    "cushion"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked (compare 0/26: sofa edges black)."
+  },
+  {
+   "start": 27,
+   "end": 70,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the sofa and a coral cushion behind her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 27,
+     "end": 50,
+     "text": "Polly lies back against the cushion laughing hard, eyes squeezed shut with tears at the corners, as a fin reaching in from the right tickles her"
+    },
+    {
+     "start": 50,
+     "end": 58,
+     "text": "Polly stops laughing and opens her eyes into a flat, narrowed glare"
+    },
+    {
+     "start": 58,
+     "end": 70,
+     "text": "Polly's face flushes red and she frowns angrily, pushing at the fin that keeps poking her"
+    }
+   ],
+   "props": [
+    "sofa",
+    "cushion"
+   ],
+   "prop_events": [],
+   "effects": [
+    "tears",
+    "red flush on the cheeks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked (compare 27/69: sofa edges black). Pax is only a fin entering from the right edge, so he is not listed as a character (the caption would otherwise promise Pax on screen); the beat calls it a fin. The explosion burst starts on f70."
+  },
+  {
+   "start": 70,
+   "end": 78,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "effect",
+   "camera": "static",
+   "setting": "s1",
+   "notes": "cartoon explosion: a yellow light burst then a grey smoke cloud covers the whole picture (f70-77), clearing on f78 to the wide sofa view."
+  },
+  {
+   "start": 78,
+   "end": 100,
+   "boundary": "after_transition",
+   "keep": true,
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a long cream sofa scorched black where Polly sat, wisps of smoke rising from the burn",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 78,
+     "end": 88,
+     "text": "Pax sits alone on the sofa streaked with grey soot, staring ahead in shock beside a smoking scorched patch"
+    },
+    {
+     "start": 88,
+     "end": 100,
+     "text": "Pax blinks slowly, frozen in place, while the last thin wisps of smoke fade above the burn"
+    }
+   ],
+   "props": [
+    "sofa",
+    "cushion"
+   ],
+   "prop_events": [],
+   "effects": [
+    "smoke wisps"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked (compare 78/99: sofa black, only the smoke changes). 22 frames. Polly is gone (blown away in the explosion)."
+  }
+ ]
+}

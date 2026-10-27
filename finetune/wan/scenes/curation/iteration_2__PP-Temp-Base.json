@@ -1,0 +1,404 @@
+{
+ "skit": "iteration_2/72_videos/PP-Temp-Base.mp4",
+ "frames": 432,
+ "fps": 24,
+ "curated_by": "curator-08",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "TEMP",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "a yellow hoodie"
+ },
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a bedroom drawn on a plain pale grey background, with a big yellow bed with duck-topped bedposts"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 25,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with white pillows behind them",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "partial",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "partial",
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 17,
+     "text": "Pax and Polly sit side by side in bed and touch beaks in a kiss as a little heart pops up between them"
+    },
+    {
+     "start": 17,
+     "end": 25,
+     "text": "Pax and Polly lean apart, smiling with their eyes closed"
+    }
+   ],
+   "props": [
+    "pillows"
+   ],
+   "prop_events": [],
+   "effects": [
+    "hearts"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "Both leads are cut by the frame edges (Pax left, Polly right). Static: compare 0/24 (headboard and pillow edges black)."
+  },
+  {
+   "start": 25,
+   "end": 114,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a wall air conditioner above the bed, a desk fan on the left nightstand and blankets on the bed",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 25,
+     "end": 36,
+     "text": "Pax and Polly sit side by side against the pillows, opening their eyes and gazing ahead"
+    },
+    {
+     "start": 36,
+     "end": 42,
+     "text": "Pax straightens up tall and closes his eyes while Polly grabs the top edge of the blanket"
+    },
+    {
+     "start": 42,
+     "end": 92,
+     "text": "Polly pulls one blanket after another up to her chin while Pax sits beside her with his eyes closed"
+    },
+    {
+     "start": 92,
+     "end": 104,
+     "text": "Polly tugs the yellow hood up over her head"
+    },
+    {
+     "start": 104,
+     "end": 114,
+     "text": "Polly turns toward the right side of the bed and opens her eyes wide while Pax sits still with his eyes closed"
+    }
+   ],
+   "props": [
+    "air conditioner",
+    "desk fan",
+    "blankets",
+    "remote"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "Static f25-f113 (compare 25/113; bed-region phase shift 0 to f113). A fast push-in onto Polly starts at f114. | verification pass 2 (verify2_report_1): Beat 104-114 says Polly 'rolls onto her side to sleep', but at f108-113 she turns toward the right side of the bed and her eyes pop open wide (alert, not sleeping).; Beat 25-38 says Polly 'lies back against her pillow': she is already sitting against the pillows and only turns from facing Pax (eyes closed f25-26) to facing ahead with her eyes open; Pax straightens up at f37-38 and keeps his eyes c"
+  },
+  {
+   "start": 114,
+   "end": 120,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "notes": "Fast push-in from the wide two-shot to Polly; static again from f120 (bedpost region identical f120-f153)."
+  },
+  {
+   "start": 120,
+   "end": 154,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a small heater on the nightstand beside her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 120,
+     "end": 134,
+     "text": "Polly, tucked under the blankets with her hood up, reaches over and switches on the small heater"
+    },
+    {
+     "start": 134,
+     "end": 154,
+     "text": "Polly settles back with her eyes closed and a cozy smile as the heater glows orange"
+    }
+   ],
+   "props": [
+    "heater",
+    "blankets"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "Static: compare 120/153."
+  },
+  {
+   "start": 154,
+   "end": 289,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a desk fan and a remote on the nightstand beside him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 154,
+     "end": 218,
+     "text": "Pax sits up in bed with his eyes closed, panting with his beak open as sweat drops form on his face"
+    },
+    {
+     "start": 218,
+     "end": 236,
+     "text": "Pax opens his eyes and turns toward the desk fan on the nightstand"
+    },
+    {
+     "start": 236,
+     "end": 250,
+     "text": "Pax switches the fan on and its blades start spinning"
+    },
+    {
+     "start": 250,
+     "end": 262,
+     "text": "Pax faces the breeze with his eyes closed in relief"
+    },
+    {
+     "start": 262,
+     "end": 274,
+     "text": "Pax reaches over and picks up the remote from the nightstand"
+    },
+    {
+     "start": 274,
+     "end": 289,
+     "text": "Pax holds the remote up and points it ahead, looking up with a worried frown"
+    }
+   ],
+   "props": [
+    "desk fan",
+    "remote"
+   ],
+   "prop_events": [],
+   "effects": [
+    "sweat drops"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "Static: compare 154/288. Ends at f288: a whip tilt up to the air conditioner starts at f289. | verification pass 2 (verify2_report_1): Beat 274-289 says Pax 'jabs its buttons': the remote and flipper are frozen f272-288 (identical positions); Pax only holds it up pointing ahead/up with worried eyes and a moving beak."
+  },
+  {
+   "start": 289,
+   "end": 297,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "whip",
+   "notes": "Whip tilt up from Pax to the wall air conditioner (picture slides down f289-292, the unit settles f293-296)."
+  },
+  {
+   "start": 297,
+   "end": 339,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "Insert: the air conditioner alone, its temperature readout dropping, frost, snow and icicles growing on it. No lead."
+  },
+  {
+   "start": 339,
+   "end": 378,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a desk fan and a remote on the nightstand and a rope hanging down beside the bed",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 339,
+     "end": 344,
+     "text": "Pax sits in bed with his head turned to the left and his eyes shut"
+    },
+    {
+     "start": 344,
+     "end": 352,
+     "text": "Pax turns to face ahead and opens his eyes with a worried frown"
+    },
+    {
+     "start": 352,
+     "end": 366,
+     "text": "Pax reaches out and grabs a rope hanging beside the bed"
+    },
+    {
+     "start": 366,
+     "end": 378,
+     "text": "Pax pulls the rope down, holding it in his flipper"
+    }
+   ],
+   "props": [
+    "rope",
+    "desk fan",
+    "remote"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "Static: compare 339/377. | verification pass 2 (verify2_report_1): Beat 339-352 omits that Pax's eyes are shut and his head is turned to the left f339-343; he turns to face ahead and opens worried eyes only at f344."
+  },
+  {
+   "start": 378,
+   "end": 432,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a frosted air conditioner dripping icicles above the bed, a desk fan and a glowing heater on the nightstands",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 378,
+     "end": 390,
+     "text": "Pax lets go of a rope hanging above the bed and it slides back up out of view while Polly sleeps beside a glowing heater"
+    },
+    {
+     "start": 390,
+     "end": 397,
+     "text": "Pax sits back with his flippers relaxed and his eyes closed, smiling calmly, while Polly sleeps on"
+    },
+    {
+     "start": 397,
+     "end": 412,
+     "text": "Pax disappears under a stream of ice cubes pouring down from above"
+    },
+    {
+     "start": 412,
+     "end": 432,
+     "text": "Pax sits buried in a mound of ice cubes with only his face showing, eyes closed and content, while Polly sleeps on"
+    }
+   ],
+   "props": [
+    "rope",
+    "ice cubes",
+    "air conditioner",
+    "heater",
+    "desk fan"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "air conditioner temperature display"
+   ],
+   "travel": "none",
+   "notes": "Static: compare 378/431. Pax is fully covered by falling ice for a few frames (~f400-408); Polly stays visible throughout. | verification pass 2 (verify2_report_1): Beat 378-392 says Pax tugs the rope: he is letting go of it (f383) and it slides back up out of view f384-392.; Beat 392-405 says Pax 'looks up' as the ice pours: his eyes are closed with a calm smile f390-397; ice falls from f393 and hides him completely f398-411 (not ~f400-408 as noted)."
+  }
+ ]
+}

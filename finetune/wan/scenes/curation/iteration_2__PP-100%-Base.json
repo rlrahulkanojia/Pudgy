@@ -1,0 +1,33 @@
+{
+ "skit": "iteration_2/72_videos/PP-100%-Base.mp4",
+ "frames": 237,
+ "fps": 24,
+ "curated_by": "curator-07",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "100%",
+ "cast": {},
+ "outfits": {},
+ "settings": {},
+ "spans": [
+  {
+   "start": 0, "end": 35, "boundary": "start", "keep": false, "drop_reason": "graphic_overlay",
+   "camera": "static",
+   "notes": "park bench, both leads clink boba drinks; two battery meters with percentage text hover over them the whole shot"
+  },
+  {
+   "start": 35, "end": 101, "boundary": "cut", "keep": false, "drop_reason": "graphic_overlay",
+   "camera": "static",
+   "notes": "bedroom, Pax spoon-feeds Polly (ice bag on her head); battery meters overhead the whole shot"
+  },
+  {
+   "start": 101, "end": 195, "boundary": "cut", "keep": false, "drop_reason": "graphic_overlay",
+   "camera": "static",
+   "notes": "couch, Pax in a necktie slumped on Polly, briefcase on the floor; battery meters overhead the whole shot"
+  },
+  {
+   "start": 195, "end": 237, "boundary": "cut", "keep": false, "drop_reason": "graphic_overlay",
+   "camera": "static",
+   "notes": "plain backdrop, the leads step together and the two meters merge into one; meters the whole shot"
+  }
+ ]
+}

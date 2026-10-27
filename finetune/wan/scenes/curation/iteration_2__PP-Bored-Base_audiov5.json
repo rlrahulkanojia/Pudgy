@@ -1,0 +1,64 @@
+{
+ "skit": "iteration_2/72_videos/PP-Bored-Base_audiov5.mp4",
+ "frames": 238,
+ "fps": 24,
+ "curated_by": "curator-09",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "BORED",
+ "cast": {
+  "pax": {"kind": "lead"},
+  "polly": {"kind": "lead"}
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {"kind": "flat", "desc": "a dining nook drawn on a plain pale grey background"}
+ },
+ "spans": [
+  {
+   "start": 0, "end": 53, "boundary": "start", "keep": false, "drop_reason": "camera_move", "camera": "push_in",
+   "notes": "Pax alone at the table nibbling a seaweed hand roll; slow continuous push in for the whole shot (chair and table drift ~0.6 px/frame, ~32 px by the end)"
+  },
+  {
+   "start": 53, "end": 82, "boundary": "cut", "keep": true, "camera": "static",
+   "framing": "medium wide", "angle": "eye level", "setting": "s1",
+   "view": "with a round cream table on a glass pedestal and two wooden chairs",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "left-center", "presence": "full", "outfit": []},
+    {"id": "polly", "screen": "right-center", "presence": "full", "outfit": []}
+   ],
+   "beats": [
+    {"start": 53, "end": 64, "text": "Pax holds his seaweed hand roll and chews while Polly sits beside him, flippers clasped under her chin, sparkles twinkling around her"},
+    {"start": 64, "end": 73, "text": "Polly closes her eyes in a dreamy smile while Pax keeps holding his hand roll"},
+    {"start": 73, "end": 82, "text": "Polly opens her eyes wide with an adoring, starry look as Pax stares ahead"}
+   ],
+   "props": ["seaweed hand roll", "round table", "wooden chairs"], "prop_events": [], "effects": ["sparkles", "blush marks"],
+   "overlays": [], "in_world_text": [], "travel": "none",
+   "notes": "Table bbox identical in every frame 53-81 (camera locked)."
+  },
+  {
+   "start": 82, "end": 94, "boundary": "cut", "keep": false, "drop_reason": "too_short", "camera": "static",
+   "notes": "Polly close-up behind the table, sparkles; locked for 12 frames before the push starts"
+  },
+  {
+   "start": 94, "end": 131, "boundary": "camera", "keep": false, "drop_reason": "camera_move", "camera": "push_in",
+   "notes": "slow push in on Polly (table drifts ~1.5 px/frame from 94 to the cut)"
+  },
+  {
+   "start": 131, "end": 192, "boundary": "cut", "keep": false, "drop_reason": "camera_move", "camera": "zoom_in",
+   "notes": "Two-shot at the table: Polly leans in with puckered lips, then dives past Pax and bites his hand roll. Slow continuous zoom in: the table's width grows from 918 to 958 px (about 4%) between 131 and 192; settled from 192. Good action, but the zoom is real, so dropped (D3)."
+  },
+  {
+   "start": 192, "end": 205, "boundary": "camera", "keep": false, "drop_reason": "too_short", "camera": "static",
+   "notes": "locked 13 frames: Polly eating the stolen hand roll, Pax rearing up"
+  },
+  {
+   "start": 205, "end": 222, "boundary": "camera", "keep": false, "drop_reason": "camera_move", "camera": "other",
+   "notes": "fast pan right and down following Pax as he leaps onto Polly and they tumble to the floor"
+  },
+  {
+   "start": 222, "end": 238, "boundary": "camera", "keep": false, "drop_reason": "too_short", "camera": "static",
+   "notes": "locked 16 frames: Pax lying on top of Polly on the floor, hugging her"
+  }
+ ]
+}

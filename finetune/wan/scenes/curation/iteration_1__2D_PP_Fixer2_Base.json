@@ -1,0 +1,77 @@
+{
+ "skit": "iteration_1/30_videos/2D_PP_Fixer2_Base.mp4",
+ "frames": 164,
+ "fps": 24,
+ "curated_by": "curator-11",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "FIXER",
+ "cast": {
+  "pax": {"kind": "lead"},
+  "polly": {"kind": "lead"}
+ },
+ "outfits": {
+  "o1": "a yellow hard hat with a pencil tucked in it",
+  "o2": "an orange safety vest"
+ },
+ "settings": {
+  "s1": {"kind": "flat", "desc": "a room drawn on a plain pale grey background"},
+  "s2": {"kind": "flat", "desc": "a bedroom drawn on a plain pale grey background"},
+  "s3": {"kind": "flat", "desc": "a bathroom drawn on a plain pale grey background"}
+ },
+ "spans": [
+  {
+   "start": 0, "end": 43, "boundary": "start", "keep": true, "camera": "static",
+   "framing": "medium wide", "angle": "eye level", "setting": "s1",
+   "view": "with an open arched wooden door and a blurred room beyond the doorway",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "right", "presence": "full", "outfit": ["o1", "o2"],
+     "moves": [{"frame": 12, "screen": "right-center"}]}
+   ],
+   "beats": [
+    {"start": 0, "end": 20, "text": "Pax waddles left toward the open door, carrying a power drill in one flipper and a red toolbox in the other"},
+    {"start": 20, "end": 36, "text": "Pax stops beside the doorway, glances to the side and gives a quick wink"},
+    {"start": 36, "end": 43, "text": "Pax holds a smug half-lidded look while a small heart pops up beside the doorway"}
+   ],
+   "props": ["power drill", "toolbox", "door"], "prop_events": [], "effects": ["hearts"], "overlays": [],
+   "in_world_text": [], "travel": "moves_within",
+   "notes": "keep12 is low (0.67) because Pax moves; compare 0 vs 42 shows the door edges overlapping exactly, camera locked"
+  },
+  {
+   "start": 43, "end": 94, "boundary": "cut", "keep": true, "camera": "static",
+   "framing": "medium wide", "angle": "eye level", "setting": "s2",
+   "view": "with a big bed with pale bedding and a cream headboard with round brass knobs",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "polly", "screen": "right-center", "presence": "full", "outfit": [],
+     "moves": [{"frame": 51, "screen": "center"}]}
+   ],
+   "beats": [
+    {"start": 43, "end": 51, "text": "Polly lies on her belly on the bed, blushing and smiling with her feet raised behind her"},
+    {"start": 51, "end": 72, "text": "Polly springs up to stand on the bed and squeals with her eyes squeezed shut and her flippers pressed to her cheeks"},
+    {"start": 72, "end": 94, "text": "Polly flops onto her back on the bed with her flippers spread while little hearts float up above her"}
+   ],
+   "props": ["bed"], "prop_events": [], "effects": ["hearts", "blush marks"], "overlays": [],
+   "in_world_text": [], "travel": "none", "notes": ""
+  },
+  {
+   "start": 94, "end": 164, "boundary": "cut", "keep": true, "camera": "static",
+   "framing": "medium wide", "angle": "eye level", "setting": "s3",
+   "view": "with a sink vanity and a mirror behind him, and a toolbox, a drill, a hammer, pliers and puddles of water on the floor",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "right-center", "presence": "full", "outfit": ["o1", "o2"]}
+   ],
+   "beats": [
+    {"start": 94, "end": 130, "text": "Pax frowns down at {ifin}, holding a wrench on the gushing faucet with his other flipper"},
+    {"start": 130, "end": 158, "text": "Pax turns to face forward with wide blank eyes, holding {ifin} at his chest while water keeps spraying up from the sink"},
+    {"start": 158, "end": 164, "text": "Pax leans back with his beak open as the spray of water bursts much bigger over the sink"}
+   ],
+   "props": ["wrench", "phone", "sink", "toolbox", "power drill", "hammer", "pliers"],
+   "prop_events": [{"prop": "phone", "event": "uses", "frame": 94, "by": "pax", "is_ifin": true}],
+   "effects": [], "overlays": [],
+   "in_world_text": [], "travel": "none",
+   "notes": "phone is the iFin: pale grey back, three-lens camera block, small tuft on the top edge (held sideways). The water spray growing at f159 is in-scene water, background edges stay locked (compare 94 vs 163)"
+  }
+ ]
+}

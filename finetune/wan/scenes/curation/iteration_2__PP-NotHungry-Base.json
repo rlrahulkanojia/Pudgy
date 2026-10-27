@@ -1,0 +1,240 @@
+{
+ "skit": "iteration_2/72_videos/PP-NotHungry-Base.mp4",
+ "frames": 215,
+ "fps": 24,
+ "curated_by": "curator-00",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "NOT HUNGRY",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "a coral and white striped hooded blanket with a little fish print"
+ },
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a living room with a long cream couch against a plain pale wall"
+  },
+  "s2": {
+   "kind": "set",
+   "desc": "an igloo room with pale ice-block walls"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 94,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with yellow shell-shaped cushions on the couch and a teal retro television in the foreground at the lower left",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 18,
+     "text": "Pax, holding {ifin}, talks to Polly with his beak open while she sips through the straw of her tumbler"
+    },
+    {
+     "start": 18,
+     "end": 28,
+     "text": "Pax flashes a quick closed-eye smile, then watches Polly as she keeps sipping"
+    },
+    {
+     "start": 28,
+     "end": 38,
+     "text": "Polly lowers her tumbler and starts talking to Pax while he watches her"
+    },
+    {
+     "start": 38,
+     "end": 72,
+     "text": "Polly talks to Pax with a small open beak and a soft smile while he turns to her and listens"
+    },
+    {
+     "start": 72,
+     "end": 94,
+     "text": "Polly lifts her tumbler and sips through the straw again while Pax sits beside her holding {ifin}"
+    }
+   ],
+   "props": [
+    "iFin phone",
+    "tumbler with a straw",
+    "couch",
+    "television"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 0,
+     "by": "pax",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "locked (compare 0/93: 7408 static vs 610 changed edge px). Pax holds the iFin (grey back, lens bump, tuft) throughout. Polly wears the striped hooded blanket; her face is fully visible. Storyboard puts Pax behind the couch; the animation has him sitting beside her. | verification pass 2 (verify2_report_4): beat 2 (f20-38) says Pax closes his eyes with a small smile and leans back: his eyes are closed only f19-20, open again from f21; no lean back is visible. Polly keeps sipping until ~f27 and then talks (beak open f28), also not in the beats"
+  },
+  {
+   "start": 94,
+   "end": 139,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a small white stool, an arched wooden door and a bright doorway onto the snow",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "enters",
+     "enters_at": 100,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 118,
+       "screen": "center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 94,
+     "end": 100,
+     "text": "The arched wooden door stands closed beside a small white stool in the empty igloo room"
+    },
+    {
+     "start": 100,
+     "end": 106,
+     "text": "Pax swings the door open and steps in carrying a pizza box and a striped bucket of fried chicken"
+    },
+    {
+     "start": 106,
+     "end": 121,
+     "text": "Pax waddles forward into the room holding up the pizza box and the bucket"
+    },
+    {
+     "start": 121,
+     "end": 139,
+     "text": "Pax stops in the middle of the room and stands holding the food with a pleased, sly little look"
+    }
+   ],
+   "props": [
+    "pizza box",
+    "bucket of fried chicken",
+    "stool",
+    "door"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "label on the pizza box"
+   ],
+   "travel": "enters",
+   "notes": "hard cut at f94; locked (ORB 0 px vs f94 at f110-f138; stool and wall edges black in compare 94/138). keep12 was low only because the door swings and Pax fills part of a sparse picture. Room is empty f94-99."
+  },
+  {
+   "start": 139,
+   "end": 143,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "4 static frames over Pax's shoulder (his back and the chicken bucket in the foreground, Polly small on the couch) before the push-in starts"
+  },
+  {
+   "start": 143,
+   "end": 155,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "notes": "fast push-in past Pax to Polly (ORB scale 1.02 at f143 to 1.31 at f146, still settling to f154); background diff 0.01 from 155->156"
+  },
+  {
+   "start": 155,
+   "end": 215,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the cream couch armrest and a yellow shell-shaped cushion in front of her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 155,
+     "end": 163,
+     "text": "Polly sits on the couch with her flippers pressed together under her chin, looking up with wide eyes"
+    },
+    {
+     "start": 163,
+     "end": 171,
+     "text": "Polly squeezes her eyes shut in a shy, happy smile"
+    },
+    {
+     "start": 171,
+     "end": 215,
+     "text": "Polly gazes up with wide shining eyes and her flippers clasped under her chin while sparkles twinkle around her"
+    }
+   ],
+   "props": [
+    "couch"
+   ],
+   "prop_events": [],
+   "effects": [
+    "sparkles"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "locked from f155 (ORB <1 px vs f214 from f156 on; couch edges black in compare 155/214). Pax has left the picture during the push-in."
+  }
+ ]
+}

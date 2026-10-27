@@ -1,0 +1,70 @@
+{
+ "skit": "iteration_1/30_videos/2D_PP_TheresYou_Base.mp4",
+ "frames": 288,
+ "fps": 24,
+ "curated_by": "curator-batch4",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "THERE'S YOU",
+ "cast": {
+  "polly": {"kind": "lead"},
+  "x1": {"kind": "extra", "desc": "a crowd of dark penguins seen from behind"}
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {"kind": "flat", "desc": "an open space drawn on a plain dark slate background"}
+ },
+ "spans": [
+  {
+   "start": 0, "end": 101, "boundary": "start", "keep": false, "drop_reason": "camera_move", "camera": "push_in",
+   "notes": "Pax stands among a crowd of dark penguin silhouettes passing by, looking left and right; hidden behind blurred foreground silhouettes until ~f22. Slow continuous push-in: a scale fit on Pax's feet gives 1.006 (f28-33), 1.019 (f28-43), 1.050 (f28-78), 1.062 (f28-98), overlap 0.97-0.995 vs 0.15 unscaled. The plain backdrop has no fixed edges, so keep12 cannot show it"
+  },
+  {
+   "start": 101, "end": 188, "boundary": "cut", "keep": false, "drop_reason": "camera_move", "camera": "push_in",
+   "notes": "closer view of Pax with his flippers clasped, then a blushing smile with his flippers out, while blurred silhouettes pass in the foreground. Very slow push-in: feet scale fit f103 to f140/f170/f185 = 1.006/1.010/1.026 (overlap ~1.0). Judgement call: only ~2.6% over the shot, but it is not locked"
+  },
+  {
+   "start": 188, "end": 196, "boundary": "transition", "keep": false, "drop_reason": "transition", "camera": "whip",
+   "notes": "wipe: the picture slides left past Pax into the moving crowd (storyboard WIPE TRANSITION)"
+  },
+  {
+   "start": 196, "end": 208, "boundary": "after_transition", "keep": false, "drop_reason": "lead_hidden",
+   "camera": "static",
+   "notes": "big blurred dark silhouettes fill the screen; Polly is hidden behind them until ~f205"
+  },
+  {
+   "start": 208, "end": 243, "boundary": "same_shot", "keep": true, "camera": "static",
+   "framing": "medium wide", "angle": "eye level", "setting": "s1", "view": "",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "polly", "screen": "center", "presence": "full", "outfit": []},
+    {"id": "x1", "screen": "center", "presence": "full", "outfit": []}
+   ],
+   "beats": [
+    {"start": 208, "end": 218, "text": "{x1} shuffles past in front, uncovering Polly standing in the middle of the crowd"},
+    {"start": 218, "end": 234, "text": "Polly stands among the crowd and spreads her flippers out to the sides, looking straight ahead with wide eyes"},
+    {"start": 234, "end": 240, "text": "Polly squeezes her eyes shut in a wide happy grin"},
+    {"start": 240, "end": 243, "text": "Polly hops up off the ground with both flippers spread wide"}
+   ],
+   "props": [], "prop_events": [], "effects": ["blush marks"], "overlays": [],
+   "in_world_text": [], "travel": "none",
+   "notes": "Polly's feet stay at the same pixels from f211 to f238 (static camera); the crowd row and the blurred foreground silhouettes are side characters, not lookalikes. Polly is partly behind a passing silhouette until ~f214"
+  },
+  {
+   "start": 243, "end": 288, "boundary": "cut", "keep": true, "camera": "static",
+   "framing": "medium wide", "angle": "eye level", "setting": "s1",
+   "view": "with a warm spotlight beam shining down onto a lit circle on the floor",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "polly", "screen": "center", "presence": "full", "outfit": []},
+    {"id": "x1", "screen": "center", "presence": "full", "outfit": []}
+   ],
+   "beats": [
+    {"start": 243, "end": 252, "text": "Polly lands from a little hop in the spotlight with both flippers raised and her eyes shut in a grin"},
+    {"start": 252, "end": 288, "text": "Polly waves one raised flipper with a blushing smile while little sparkles twinkle around her"}
+   ],
+   "props": [], "prop_events": [], "effects": ["sparkles", "blush marks", "spotlight beam"], "overlays": [],
+   "in_world_text": [], "travel": "none",
+   "notes": "compare f243/f287: spotlight cone and floor circle edges overlap exactly, camera locked. The spotlight is a local drawn light cone, not a whole-picture effect"
+  }
+ ]
+}

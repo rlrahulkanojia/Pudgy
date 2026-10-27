@@ -1,0 +1,458 @@
+{
+ "skit": "iteration_2/72_videos/PP-Handful-Base.mp4",
+ "frames": 368,
+ "fps": 24,
+ "curated_by": "curator-06",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "HANDFUL",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "a pair of teal safety goggles"
+ },
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a snowy yard in front of an igloo"
+  },
+  "s2": {
+   "kind": "set",
+   "desc": "a snowy field with pale hills and pine trees"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 67,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with an open red toolbox on the snow and the igloo's wooden door behind her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 30,
+     "text": "Polly bends over the open toolbox, rummaging inside it"
+    },
+    {
+     "start": 30,
+     "end": 36,
+     "text": "Polly straightens up holding a yellow power drill"
+    },
+    {
+     "start": 36,
+     "end": 46,
+     "text": "Polly raises the drill up beside her face, pointing it upward"
+    },
+    {
+     "start": 46,
+     "end": 67,
+     "text": "Polly holds the drill in front of her chest, looking straight ahead with her beak moving"
+    }
+   ],
+   "props": [
+    "toolbox",
+    "power drill"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "the blue shape at the right edge is the sled car's bumper, not Pax | verification pass 2 (verify2_report_1): Beat 36-48 'squeezes its trigger a few times': no trigger action is visible; she raises the drill beside her face pointing up (slight jiggle).; Beat 48-67 'looking it over with a small smile': she holds the drill at her chest and looks straight ahead with her beak opening and closing (talking), not at the drill and not smiling."
+  },
+  {
+   "start": 67,
+   "end": 116,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a red sled car with its hood up and the edge of an igloo",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 67,
+     "end": 82,
+     "text": "Pax leans into the open front of the red sled car, working on it with his back turned"
+    },
+    {
+     "start": 82,
+     "end": 88,
+     "text": "Pax straightens up and turns around, his face smudged with grease"
+    },
+    {
+     "start": 88,
+     "end": 108,
+     "text": "Pax holds out an open flipper to the left and waits, glancing around"
+    },
+    {
+     "start": 108,
+     "end": 116,
+     "text": "Pax keeps his flipper held out as another flipper reaches in from the left edge and rests on it"
+    }
+   ],
+   "props": [
+    "sled car"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "Polly's flipper pokes in at the left edge f109-115 only | verification pass 2 (verify2_report_1): Beat 88-116 omits the off-screen flipper (Polly's) that reaches in from the left edge f108-115 and rests on Pax's outstretched flipper (7 of the last 8 frames; the note mentions it but no beat does)."
+  },
+  {
+   "start": 116,
+   "end": 123,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pull_back",
+   "notes": "fast pull back to the wide shot (v4 read it as a dissolve); settles at f123"
+  },
+  {
+   "start": 123,
+   "end": 152,
+   "boundary": "camera",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a red sled car raised on a jack and an open toolbox on the snow",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    },
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 123,
+     "end": 138,
+     "text": "Polly reaches out and touches Pax's outstretched flipper, her other flipper raised to her beak"
+    },
+    {
+     "start": 138,
+     "end": 152,
+     "text": "Pax holds up an open flipper while Polly pulls her flippers to her chest, blinks, and looks at him with her beak open"
+    }
+   ],
+   "props": [
+    "toolbox",
+    "sled car",
+    "car jack"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "kept part ends one frame before the speech bubble pops in at f152 | verification 2026-10-26: beats corrected (eyes open)"
+  },
+  {
+   "start": 152,
+   "end": 190,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "graphic_overlay",
+   "camera": "static",
+   "notes": "speech bubble with a wrench icon over Pax's head, f152-f188"
+  },
+  {
+   "start": 190,
+   "end": 263,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a red sled car with its hood up on a yellow jack",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 190,
+     "end": 208,
+     "text": "Pax stands beside the car holding out an open flipper, waiting"
+    },
+    {
+     "start": 208,
+     "end": 228,
+     "text": "Pax blinks as a hammer, a shovel and a pair of pliers fly past him from the left"
+    },
+    {
+     "start": 228,
+     "end": 244,
+     "text": "Pax stares with wide eyes and an open beak as a ladder, a screwdriver and a chainsaw sail over him"
+    },
+    {
+     "start": 244,
+     "end": 263,
+     "text": "Pax covers his head with a flipper as a sack, a wheelbarrow and a drill tumble through the air around him"
+    }
+   ],
+   "props": [
+    "sled car",
+    "car jack",
+    "flying tools",
+    "ladder",
+    "wheelbarrow"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "verification pass 2 (verify2_report_1): Beat 228-245 'leans back': Pax stays upright with his flipper out the whole time; he only stares wide-eyed with an open beak (f236-242). The 'saw' is a chainsaw.; Beat 245-263 'winces': he winces only f244-252, then looks up with open eyes f254-262 while covering his head; the 'tire' is the wheelbarrow's wheel."
+  },
+  {
+   "start": 263,
+   "end": 287,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "notes": "push in on Polly throwing tools out of the toolbox while Pax comes over (scale 1.06 over the span); settles at f287"
+  },
+  {
+   "start": 287,
+   "end": 312,
+   "boundary": "camera",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with an open red toolbox on the snow and the igloo's wooden door behind them",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "exits",
+     "exits_at": 305,
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 287,
+     "end": 296,
+     "text": "Polly digs through the open toolbox while Pax stands beside her with a flipper at his beak"
+    },
+    {
+     "start": 296,
+     "end": 300,
+     "text": "Polly springs up with a wrench and smacks Pax under the chin"
+    },
+    {
+     "start": 300,
+     "end": 306,
+     "text": "Pax is knocked up into the air and flies out of view to the right"
+    },
+    {
+     "start": 306,
+     "end": 312,
+     "text": "Polly holds the wrench up beside her and looks up to the right"
+    }
+   ],
+   "props": [
+    "toolbox",
+    "wrench"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "exits",
+   "notes": "ORB similarity f287->f311: scale 1.0000 | verification pass 2 (verify2_report_1): motion_hint bad frame f291 is a false alarm: ECC on the igloo dome f287->291/295/299/305/311 gives scale 1.0000, shift <=0.02 px; the fit was fooled by the leads' motion.; Beat 306-312 'looking pleased': Polly's face is neutral, eyes turned up to the right (where Pax flew off), small open beak; no smile."
+  },
+  {
+   "start": 312,
+   "end": 342,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a red sled car with its hood up on a yellow jack",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "enters_exits",
+     "enters_at": 316,
+     "exits_at": 334,
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 312,
+     "end": 316,
+     "text": "The red sled car stands empty on its jack with the hood up"
+    },
+    {
+     "start": 316,
+     "end": 322,
+     "text": "Pax tumbles in upside down from above and lands headfirst in the car seat"
+    },
+    {
+     "start": 322,
+     "end": 328,
+     "text": "Pax sticks out of the seat with his feet in the air as the car rocks on the jack"
+    },
+    {
+     "start": 328,
+     "end": 335,
+     "text": "Pax is carried off as the car slides off the jack and speeds away to the right"
+    },
+    {
+     "start": 335,
+     "end": 342,
+     "text": "The yellow jack stands alone on the empty snow"
+    }
+   ],
+   "props": [
+    "sled car",
+    "car jack"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "crosses",
+   "notes": "background locked (hills/trees ROI scale 1.0000); Pax visible f316-333, 18 of 30 frames"
+  },
+  {
+   "start": 342,
+   "end": 368,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with an open red toolbox on the snow and the igloo's wooden door behind her",
+   "time": "day",
+   "size_change": true,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "exits",
+     "exits_at": 362,
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 342,
+     "end": 348,
+     "text": "Polly holds a wrench in both flippers, looking at it through her goggles"
+    },
+    {
+     "start": 348,
+     "end": 354,
+     "text": "Polly flings the wrench back over her shoulder"
+    },
+    {
+     "start": 354,
+     "end": 362,
+     "text": "Polly hurries off toward the front right, growing larger, and leaves the picture as the wrench drops beside the toolbox"
+    },
+    {
+     "start": 362,
+     "end": 368,
+     "text": "The open toolbox and the wrench lie on the snow in front of the igloo door"
+    }
+   ],
+   "props": [
+    "toolbox",
+    "wrench"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "exits",
+   "notes": "verification 2026-10-26: size_change true: Polly runs toward the front right as she leaves (+20% height)"
+  }
+ ]
+}

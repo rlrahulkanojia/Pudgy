@@ -1,0 +1,69 @@
+{
+ "skit": "iteration_1/30_videos/PP_Customize_9x16_BASE_1.mp4",
+ "frames": 346,
+ "fps": 23.976,
+ "curated_by": "curator-06",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "CUSTOMIZING",
+ "cast": {
+  "pax": {"kind": "lead"},
+  "polly": {"kind": "lead"}
+ },
+ "outfits": {},
+ "settings": {},
+ "spans": [
+  {
+   "start": 0, "end": 28, "boundary": "start", "keep": false, "drop_reason": "camera_move", "camera": "other",
+   "notes": "pan right from Pax (hockey stick) to Polly by the couch, then a pull back f17-21; the static tail f21-27 is only ~7 frames"
+  },
+  {
+   "start": 28, "end": 56, "boundary": "cut", "keep": false, "drop_reason": "ad_merch", "camera": "static",
+   "notes": "product insert: the Everyday Duffel bag with sparkles, printed with drawings of Pax and Polly; only Polly's flipper visible"
+  },
+  {
+   "start": 56, "end": 70, "boundary": "cut", "keep": false, "drop_reason": "too_short", "camera": "static",
+   "notes": "Pax by the desk, static for 14 frames before the pull back"
+  },
+  {
+   "start": 70, "end": 76, "boundary": "camera", "keep": false, "drop_reason": "camera_move", "camera": "pull_back",
+   "notes": "pull back from Pax to a two-shot of Pax and Polly"
+  },
+  {
+   "start": 76, "end": 111, "boundary": "camera", "keep": false, "drop_reason": "lead_copy", "camera": "static",
+   "prop_events": [{"prop": "phone", "event": "uses", "frame": 76, "by": "polly", "is_ifin": true}],
+   "notes": "static two-shot (compare 76/110 clean) but Polly clips a tiny Polly-shaped charm (Phone Pudgy) onto Pax's iFin from ~f78, and from f103 both phones are shown with lock-screen photos of Pax and Polly: lead copies (figurine + photos). Dropped conservatively; small in frame. iFin: pale grey back, three lenses, tuft on top visible at f76"
+  },
+  {
+   "start": 111, "end": 144, "boundary": "cut", "keep": false, "drop_reason": "lead_copy", "camera": "static",
+   "notes": "insert of the two phones with Pax and Polly charms and lock-screen photos of them, sparkles; no lead body, only Polly's flippers"
+  },
+  {
+   "start": 144, "end": 175, "boundary": "cut", "keep": false, "drop_reason": "lead_copy", "camera": "static",
+   "notes": "static (compare 144/174 clean), Pax reaches for his keys on the hook, but the keys carry a clearly drawn Polly-figurine keychain the whole span (lead copy, merch). Dropped conservatively"
+  },
+  {
+   "start": 175, "end": 180, "boundary": "camera", "keep": false, "drop_reason": "camera_move", "camera": "pull_back",
+   "notes": "pull back as Polly comes in from the right"
+  },
+  {
+   "start": 180, "end": 200, "boundary": "camera", "keep": false, "drop_reason": "too_short", "camera": "static",
+   "notes": "20 frames; Polly hands back the keys, both hold Pax and Polly figurine keychains (would also be lead_copy)"
+  },
+  {
+   "start": 200, "end": 220, "boundary": "cut", "keep": false, "drop_reason": "lead_copy", "camera": "static",
+   "notes": "insert of the two key rings whose Pax and Polly figurine charms snap together; no lead"
+  },
+  {
+   "start": 220, "end": 258, "boundary": "cut", "keep": false, "drop_reason": "camera_move", "camera": "pan_right",
+   "notes": "tracking pan with Pax walking past the igloo (tree and igloo slide), then a whip at f256-257 to the glooglider"
+  },
+  {
+   "start": 258, "end": 274, "boundary": "cut", "keep": false, "drop_reason": "too_short", "camera": "static",
+   "notes": "16 frames: Pax next to the glooglider wrapped in a Pax-and-Polly pattern (would also be lead_copy)"
+  },
+  {
+   "start": 274, "end": 346, "boundary": "cut", "keep": false, "drop_reason": "ad_merch", "camera": "static",
+   "notes": "end card: product photo with title text"
+  }
+ ]
+}

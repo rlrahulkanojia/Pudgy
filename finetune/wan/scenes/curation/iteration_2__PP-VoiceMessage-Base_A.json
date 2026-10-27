@@ -1,0 +1,33 @@
+{
+ "skit": "iteration_2/72_videos/PP-VoiceMessage-Base_A.mp4",
+ "frames": 223,
+ "fps": 24,
+ "curated_by": "curator-11",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "VOICE MESSAGE",
+ "cast": {},
+ "outfits": {},
+ "settings": {},
+ "spans": [
+  {
+   "start": 0, "end": 48, "boundary": "start", "keep": false, "drop_reason": "no_lead",
+   "camera": "static", "notes": "phone-screen insert: the iFin (front view, tuft on top) fills the frame, held by Pax's flippers at the bottom edge; chat thread with text and a voice-message bubble pops in; Polly's avatar at the top (also lead_copy)",
+   "prop_events": [{"prop": "phone", "event": "uses", "frame": 0, "by": "pax", "is_ifin": true}]
+  },
+  {
+   "start": 48, "end": 101, "boundary": "cut", "keep": false, "drop_reason": "graphic_overlay",
+   "camera": "static", "notes": "Pax in an office chair with earphones, presses play on his phone and listens with a dreamy smile; a voice-message player bar (waveform, timer) is drawn over the top of the picture for the whole shot",
+   "prop_events": [{"prop": "phone", "event": "uses", "frame": 48, "by": "pax", "is_ifin": "unsure"}]
+  },
+  {
+   "start": 101, "end": 182, "boundary": "cut", "keep": false, "drop_reason": "graphic_overlay",
+   "camera": "static", "notes": "Pax at an office coffee machine, phone at his chest, earphones in, picks up a cup; the voice-message player bar overlay stays on top for the whole shot",
+   "prop_events": [{"prop": "phone", "event": "uses", "frame": 101, "by": "pax", "is_ifin": "unsure"}]
+  },
+  {
+   "start": 182, "end": 223, "boundary": "cut", "keep": false, "drop_reason": "graphic_overlay",
+   "camera": "static", "notes": "Pax standing in a train car holding a strap and his phone, grinning; the voice-message player bar overlay stays on top for the whole shot",
+   "prop_events": [{"prop": "phone", "event": "uses", "frame": 182, "by": "pax", "is_ifin": "unsure"}]
+  }
+ ]
+}

@@ -1,0 +1,23 @@
+{
+ "skit": "iteration_1/30_videos/2D_PP_MovingIn_Base.mp4",
+ "frames": 350,
+ "fps": 24,
+ "curated_by": "curator-01",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "MOVING IN",
+ "cast": {},
+ "outfits": {},
+ "settings": {},
+ "spans": [
+  {"start": 0, "end": 98, "boundary": "start", "keep": false, "drop_reason": "off_style", "camera": "static",
+   "notes": "isometric cut-away of the igloo (whole dome seen from outside, tiny characters); a moving truck slides in at the lower left, Pax and Polly carry boxes inside"},
+  {"start": 98, "end": 149, "boundary": "cut", "keep": false, "drop_reason": "off_style", "camera": "static",
+   "notes": "isometric cut-away; time-skip cut at f98 (subtle, d1 only 8.9): boxes rearranged, Pax and Polly at the table"},
+  {"start": 149, "end": 256, "boundary": "cut", "keep": false, "drop_reason": "off_style", "camera": "static",
+   "notes": "isometric cut-away; time-skip cut at f149 missed by profile (d1 4.2): couch carried in, then the pair naps on it"},
+  {"start": 256, "end": 296, "boundary": "cut", "keep": false, "drop_reason": "off_style", "camera": "static",
+   "notes": "isometric cut-away at night (dark navy surround), pair asleep on the couch"},
+  {"start": 296, "end": 350, "boundary": "cut", "keep": false, "drop_reason": "off_style", "camera": "static",
+   "notes": "isometric cut-away of the finished, colourful igloo; Polly cooking, Pax tidying"}
+ ]
+}

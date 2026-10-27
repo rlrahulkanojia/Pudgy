@@ -1,0 +1,163 @@
+{
+ "skit": "iteration_2/72_videos/PP-RevengeEating-Base.mp4",
+ "frames": 205,
+ "fps": 24,
+ "curated_by": "curator-11",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "REVENGE EATING",
+ "cast": {
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a dining corner with a round cream table and a wooden chair, drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 28,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a dark phone and a little mug shaped like a penguin face on the table",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 8,
+     "text": "Polly sits slumped at the round table with her chin propped on one flipper, frowning in a sulk"
+    },
+    {
+     "start": 8,
+     "end": 28,
+     "text": "Polly grumbles to herself with a cross frown, her beak opening slightly, without lifting her chin from her flipper"
+    }
+   ],
+   "props": [
+    "phone",
+    "mug",
+    "round table",
+    "chair"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "compare 0 vs 27: everything locked, Polly barely moves (only her beak). The phone lies screen-up and dark on the table (tuft visible at one end, back not visible): written as a phone, no prop event since nobody handles it (iFin unsure). Span ends at f28, where the phone screen lights up with a call showing Pax's face"
+  },
+  {
+   "start": 28,
+   "end": 44,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "same shot; the phone on the table rings and buzzes, its screen showing a small photo of Pax's face (lead copy); 16 frames"
+  },
+  {
+   "start": 44,
+   "end": 76,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "top-down insert of the ringing phone on the table with Pax's photo on the call screen; Polly's flipper sweeps in at f62 and takes it"
+  },
+  {
+   "start": 76,
+   "end": 126,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the edge of the table in front of her and the wooden chair behind her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 76,
+     "end": 88,
+     "text": "Polly holds {ifin} in both flippers, her frown turning into wide-eyed surprise"
+    },
+    {
+     "start": 88,
+     "end": 100,
+     "text": "Polly narrows her eyes and squeezes them shut in an annoyed squint"
+    },
+    {
+     "start": 100,
+     "end": 120,
+     "text": "Polly glares down at the phone with narrowed eyes and a flat frown"
+    },
+    {
+     "start": 120,
+     "end": 126,
+     "text": "Polly thrusts the phone out at arm's length, staring with wide eyes and an open beak"
+    }
+   ],
+   "props": [
+    "phone"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 76,
+     "by": "polly",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "phone back faces the viewer: pale grey, three-lens camera block, tuft on top = iFin. keep12 dips because Polly's arm moves; region diff 0 on the table for the whole span, compare 76 vs 125 locked"
+  },
+  {
+   "start": 126,
+   "end": 182,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "graphic_overlay",
+   "camera": "push_in",
+   "notes": "video-call view: Pax eats a lollipop and an iced drink at a parody coffee shop while a picture-in-picture window of Polly's face sits over the top-left (UI overlay and lead copy); brand-parody shop logo; slow push-in per v4"
+  },
+  {
+   "start": 182,
+   "end": 205,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "effect",
+   "camera": "push_in",
+   "notes": "same call view in black and white with a heavy dark vignette"
+  }
+ ]
+}

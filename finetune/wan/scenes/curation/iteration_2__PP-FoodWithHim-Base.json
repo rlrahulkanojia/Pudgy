@@ -1,0 +1,69 @@
+{
+ "skit": "iteration_2/72_videos/PP-FoodWithHim-Base.mp4",
+ "frames": 248,
+ "fps": 24,
+ "curated_by": "curator-01",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "FOOD WITH HIM",
+ "cast": {
+  "polly": {"kind": "lead"}
+ },
+ "outfits": {
+  "o1": "a purple shower cap",
+  "o2": "a cream bathrobe",
+  "o3": "small fish- and star-shaped stickers on her face"
+ },
+ "settings": {
+  "s1": {"kind": "set", "desc": "a kitchen with a long bright teal counter in front of a pale, softly blurred wall"},
+  "s2": {"kind": "set", "desc": "a kitchen with a long bright teal counter in front of a dim grey, softly blurred wall"}
+ },
+ "spans": [
+  {
+   "start": 0, "end": 101, "boundary": "start", "keep": true, "camera": "static",
+   "framing": "medium", "angle": "eye level", "setting": "s1",
+   "view": "with a wooden board of sushi, a stemmed glass and a soy sauce bottle on the counter in front of her",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "polly", "screen": "center", "presence": "full", "outfit": []}
+   ],
+   "beats": [
+    {"start": 0, "end": 6, "text": "Polly sits behind the counter and pushes the board of sushi forward, looking ahead with a smile"},
+    {"start": 6, "end": 21, "text": "Polly closes her eyes in a pleased smile behind the sushi board"},
+    {"start": 21, "end": 39, "text": "Polly picks up the stemmed glass and raises it beside her, smiling with bright eyes"},
+    {"start": 39, "end": 57, "text": "Polly leans in and clinks her glass against a glass held out by a flipper reaching in from the right"},
+    {"start": 57, "end": 63, "text": "Polly sits back with her glass raised, smiling"},
+    {"start": 63, "end": 72, "text": "Polly lifts a piece of sushi to her beak and pops it in"},
+    {"start": 72, "end": 101, "text": "Polly chews with her eyes closed and a blissful smile, swaying gently with her glass in her flipper"}
+   ],
+   "props": ["sushi board", "stemmed glass", "soy sauce bottle"], "prop_events": [], "effects": [], "overlays": [],
+   "in_world_text": [], "travel": "none",
+   "notes": "compare 0/12 and 0/100: wall, counter and drawers black (the global estimator's +50 px at f0-f8 is the board and Polly sliding forward, not the camera). The background is drawn soft/blurred throughout (style of this skit, not a blur effect). f39-f57: the glass at the right is held by a flipper (Pax's arm, only the flipper is in view) - Pax not listed"
+  },
+  {
+   "start": 101, "end": 110, "boundary": "transition", "keep": false, "drop_reason": "transition", "camera": "static",
+   "notes": "cross-dissolve (luma ramps 204 -> 173 over f101-f109) from the sushi scene to the dim robe scene"
+  },
+  {
+   "start": 110, "end": 248, "boundary": "after_transition", "keep": true, "camera": "static",
+   "framing": "medium", "angle": "eye level", "setting": "s2",
+   "view": "",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "polly", "screen": "right", "presence": "enters", "enters_at": 110, "outfit": ["o1", "o2", "o3"],
+     "moves": [{"frame": 122, "screen": "right-center"}]}
+   ],
+   "beats": [
+    {"start": 110, "end": 126, "text": "Polly shuffles in from the right with heavy-lidded eyes and stops behind the counter"},
+    {"start": 126, "end": 146, "text": "Polly raises a flipper to her beak and gives a big sleepy yawn"},
+    {"start": 146, "end": 170, "text": "Polly stands behind the counter with droopy half-closed eyes, swaying slightly"},
+    {"start": 170, "end": 184, "text": "Polly bends down behind the counter and comes back up holding a bag of seaweed snacks"},
+    {"start": 184, "end": 210, "text": "Polly holds the bag of seaweed snacks up beside her, staring blankly with heavy-lidded eyes"},
+    {"start": 210, "end": 222, "text": "Polly pulls out a piece of seaweed with one flipper and stuffs it into her beak"},
+    {"start": 222, "end": 248, "text": "Polly chews slowly with heavy-lidded eyes, holding the open bag in front of her"}
+   ],
+   "props": ["bag of seaweed snacks"], "prop_events": [], "effects": [], "overlays": [],
+   "in_world_text": ["snack bag label"], "travel": "enters",
+   "notes": "compare 110/247: wall, counter and drawers black; global estimate 110->180 and 180->247 identity. Judgement: Polly kept although her head tuft is under the shower cap and her body under the robe - her face, beak and flippers stay visible and she reads as Polly. The palette of this part is dimmer (grey wall, Polly slightly desaturated); treated as scene lighting (the counter keeps its full colour), not a colour-wash effect. Polly is already partly in at the right edge at f110 and settles right of center by f122"
+  }
+ ]
+}

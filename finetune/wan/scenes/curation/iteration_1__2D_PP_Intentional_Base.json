@@ -1,0 +1,86 @@
+{
+ "skit": "iteration_1/30_videos/2D_PP_Intentional_Base.mp4",
+ "frames": 342,
+ "fps": 24,
+ "curated_by": "curator-10",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "INTENTIONAL",
+ "cast": {
+  "pax": {"kind": "lead"}
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {"kind": "flat", "desc": "a bathroom with round ice-block sinks on a counter, drawn on a plain pale grey background"},
+  "s2": {"kind": "flat", "desc": "a bedroom with a cream bed and a bedside table, drawn on a plain pale grey background"}
+ },
+ "spans": [
+  {
+   "start": 0, "end": 11, "boundary": "start", "keep": false, "drop_reason": "lead_copy", "camera": "static",
+   "notes": "Polly pours milk into a mug; the two mugs on the counter are penguin-face mugs drawn as Pax and Polly (lead copies)"
+  },
+  {
+   "start": 11, "end": 20, "boundary": "camera", "keep": false, "drop_reason": "camera_move", "camera": "zoom_out",
+   "notes": "quick pull-back from Polly at the counter to the wider kitchen view"
+  },
+  {
+   "start": 20, "end": 64, "boundary": "camera", "keep": false, "drop_reason": "lead_copy", "camera": "static",
+   "notes": "locked; Polly spoons sugar into a mug, but the Pax-face and Polly-face mugs sit in the middle of the picture the whole time. Judgement call: treated as a lead copy (a drawing of the leads on an object)"
+  },
+  {
+   "start": 64, "end": 161, "boundary": "cut", "keep": true, "drop_reason": "", "camera": "static",
+   "framing": "medium close-up", "angle": "eye level", "setting": "s1",
+   "view": "with a cup of two toothbrushes on the counter beside the sink",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "center", "presence": "full", "outfit": []}
+   ],
+   "beats": [
+    {"start": 64, "end": 78, "text": "Pax holds a toothpaste tube over the sink and twists the cap off, setting the cap on the counter"},
+    {"start": 78, "end": 92, "text": "Pax reaches over to the toothbrush cup and pulls out the purple toothbrush"},
+    {"start": 92, "end": 108, "text": "Pax squeezes a line of toothpaste onto the purple toothbrush"},
+    {"start": 108, "end": 116, "text": "Pax puts the purple toothbrush back into the cup"},
+    {"start": 116, "end": 128, "text": "Pax pulls the teal toothbrush out of the cup"},
+    {"start": 128, "end": 142, "text": "Pax squeezes toothpaste onto the teal toothbrush"},
+    {"start": 142, "end": 161, "text": "Pax brushes his teeth with the teal toothbrush, eyes closed and foam around his beak"}
+   ],
+   "props": ["toothpaste tube", "toothbrushes", "toothbrush cup", "sink"], "prop_events": [], "effects": [], "overlays": [],
+   "in_world_text": [], "travel": "none",
+   "notes": "keep12 median 0.78 is Pax's arm motion; sinks and cup edges identical f64 vs f160"
+  },
+  {
+   "start": 161, "end": 180, "boundary": "cut", "keep": false, "drop_reason": "too_short", "camera": "static",
+   "notes": "Polly packs a lunch into a purple bag at the table; locked only 161-179 (19 frames)"
+  },
+  {
+   "start": 180, "end": 189, "boundary": "camera", "keep": false, "drop_reason": "camera_move", "camera": "zoom_out",
+   "notes": "pull-back to a wide view of Polly at the table"
+  },
+  {
+   "start": 189, "end": 196, "boundary": "camera", "keep": false, "drop_reason": "too_short", "camera": "static",
+   "notes": "7 locked frames of the wide view"
+  },
+  {
+   "start": 196, "end": 272, "boundary": "cut", "keep": false, "drop_reason": "no_lead", "camera": "other",
+   "notes": "overhead insert of a lunch box being wrapped in a cloth; only Polly's flippers, a heart and a love note with text"
+  },
+  {
+   "start": 272, "end": 342, "boundary": "cut", "keep": true, "drop_reason": "", "camera": "static",
+   "framing": "medium", "angle": "eye level", "setting": "s2",
+   "view": "with a lamp on the bedside table",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "right-center", "presence": "full", "outfit": []}
+   ],
+   "beats": [
+    {"start": 272, "end": 286, "text": "Pax, standing behind the bed, sets a big tumbler with a handle down on the bedside table"},
+    {"start": 286, "end": 292, "text": "Pax turns back toward the bed with a happy closed-eye smile"},
+    {"start": 292, "end": 298, "text": "Pax picks up a folded checkered blanket from beside the bed"},
+    {"start": 298, "end": 310, "text": "Pax swings the checkered blanket out and spreads it over the bed"},
+    {"start": 310, "end": 342, "text": "Pax smooths the checkered blanket flat across the bed with both flippers"}
+   ],
+   "props": ["tumbler", "checkered blanket", "bed", "lamp"], "prop_events": [], "effects": [], "overlays": [],
+   "in_world_text": [], "travel": "none",
+   "notes": "bed, lamp and table edges identical f272 vs f341; the storyboard's snoring beat is not in the footage. time left as day: bedtime in the story but the picture is not darkened"
+  }
+ ]
+}

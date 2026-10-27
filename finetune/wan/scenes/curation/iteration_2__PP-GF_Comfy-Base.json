@@ -1,0 +1,288 @@
+{
+ "skit": "iteration_2/72_videos/PP-GF_Comfy-Base.mp4",
+ "frames": 197,
+ "fps": 24,
+ "curated_by": "curator-01",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "GF COMFY",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "a pair of headphones",
+  "o2": "a purple hoodie with the hood up"
+ },
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a bedroom with a yellow wooden bed, pale bedding and nightstands with peach lamps, drawn on a plain grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 27,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the bed in the middle and a nightstand with a lamp on each side",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "enters",
+     "enters_at": 0,
+     "outfit": [
+      "o1"
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": [
+      "o2"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 12,
+     "text": "Pax waddles in from the left holding a handheld game console while Polly lies in bed under the blanket looking at her phone"
+    },
+    {
+     "start": 12,
+     "end": 27,
+     "text": "Pax stops beside the nightstand and looks over at Polly while she keeps her eyes on her phone"
+    }
+   ],
+   "props": [
+    "handheld game console",
+    "phone",
+    "bed"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 0,
+     "by": "polly",
+     "is_ifin": "unsure"
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "enters",
+   "notes": "compare 0/26: bed and nightstands black; global estimate identity. Pax is half in at the left edge at f0. The phone is the iFin (seen clearly in the next shot) but too small to identify here, so the beat says her phone"
+  },
+  {
+   "start": 27,
+   "end": 52,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [
+      "o2"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 27,
+     "end": 52,
+     "text": "Polly lies tucked under the blanket in bed and blinks slowly as she gazes at {ifin}"
+    }
+   ],
+   "props": [
+    "phone",
+    "bed"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 27,
+     "by": "polly",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "compare 27/51: everything black except her eyes; nearly a hold. Phone checked at full resolution: pale grey back, three lenses, tuft on top = iFin"
+  },
+  {
+   "start": 52,
+   "end": 91,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "notes": "Pax's face with headphones and console; continuous push-in (global scale +5% by f70, +11% by f90)"
+  },
+  {
+   "start": 91,
+   "end": 122,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [
+      "o2"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 91,
+     "end": 109,
+     "text": "Polly lies under the blanket, blinking now and then as she looks at {ifin}"
+    },
+    {
+     "start": 109,
+     "end": 122,
+     "text": "Polly breaks into a wide open-beaked grin with narrowed eyes, giggling at the phone"
+    }
+   ],
+   "props": [
+    "phone",
+    "bed"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 91,
+     "by": "polly",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "compare 91/121: background black; global estimate identity"
+  },
+  {
+   "start": 122,
+   "end": 155,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a nightstand and its lamp behind him and the side of the bed on the right",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "exits",
+     "exits_at": 153,
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 122,
+     "end": 131,
+     "text": "Pax pulls off his headphones and tosses them and his game console onto the floor"
+    },
+    {
+     "start": 131,
+     "end": 141,
+     "text": "Pax stands by the bed looking toward it with a sly little smile"
+    },
+    {
+     "start": 141,
+     "end": 149,
+     "text": "Pax spreads his flippers and crouches low with his eyes squeezed shut, ready to spring"
+    },
+    {
+     "start": 149,
+     "end": 155,
+     "text": "Pax leaps high into the air and flies up out of view at the top"
+    }
+   ],
+   "props": [
+    "headphones",
+    "handheld game console",
+    "nightstand",
+    "bed"
+   ],
+   "prop_events": [
+    {
+     "prop": "headphones",
+     "event": "drops",
+     "frame": 127,
+     "by": "pax"
+    },
+    {
+     "prop": "handheld game console",
+     "event": "drops",
+     "frame": 127,
+     "by": "pax"
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "exits",
+   "notes": "compare 122/154: nightstand, lamp and bed black; global estimate identity. Headphones (o1) are worn only for the first ~5 frames, then lie on the floor | verification pass 2 (verify2_report_3): Outfit o1 (headphones) is listed on Pax for the whole span, so every caption says 'Pax ... wearing a pair of headphones', but he pulls them off and drops them by f128 (6 of 33 frames worn). The beat already describes taking them off"
+  },
+  {
+   "start": 155,
+   "end": 169,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "14 frames: Pax flying toward the viewer over the bed in slow motion, growing and darkening"
+  },
+  {
+   "start": 169,
+   "end": 197,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "effect",
+   "camera": "static",
+   "notes": "POV from Polly in bed looking up: Pax seen from underneath, upside down, dropping toward the viewer, growing and shading progressively darker until he fills the picture in near-navy. Camera locked (lamp fixed), but the darkening lighting effect on the lead and the from-below view would teach a dark, upside-down Pax; dropped conservatively"
+  }
+ ]
+}

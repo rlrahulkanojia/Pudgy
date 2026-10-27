@@ -1,0 +1,22 @@
+{
+ "skit": "iteration_2/72_videos/PP-Burrito-Base.mp4",
+ "frames": 179,
+ "fps": 24,
+ "curated_by": "curator-b2",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "BURRITO",
+ "cast": {
+  "pax": {"kind": "lead"},
+  "polly": {"kind": "lead"}
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {"kind": "flat", "desc": "a bedroom drawn on a plain pale grey background"}
+ },
+ "spans": [
+  {
+   "start": 0, "end": 179, "boundary": "start", "keep": false, "drop_reason": "camera_move", "camera": "zoom_in",
+   "notes": "One shot, but a slow steady zoom in from the first frame to the last: feature-matched scale 1.015 over f0-21, 1.031-1.035 per 45 frames, 1.141 over f0-178 (compare 0/178 shows every bed and curtain edge doubled). v4 called it static. Content: Polly lies on the bed under the duvet while Pax leans over the headboard side, hops down, rolls the duvet around Polly into a burrito, climbs back up and cuddles her with a heart. Kept out per D3; a candidate for a tagged camera-move group if one is ever made."
+  }
+ ]
+}

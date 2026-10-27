@@ -1,0 +1,115 @@
+{
+ "skit": "iteration_2/72_videos/PP-WithHer-Base.mp4",
+ "frames": 193,
+ "fps": 24,
+ "curated_by": "curator-07",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "WITH HER",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a plain pale grey room with a round dinner table draped in a white cloth"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 88,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "effect",
+   "camera": "static",
+   "notes": "life without her: Pax alone at a bare table, desaturated, with a heavy dark grey radial vignette over the whole picture"
+  },
+  {
+   "start": 88,
+   "end": 193,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with bowls of pasta, two lit candles and a vase of flowers on the table between them",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 88,
+     "end": 104,
+     "text": "Pax and Polly sit facing each other over their bowls, Polly smiling brightly while Pax eats"
+    },
+    {
+     "start": 104,
+     "end": 124,
+     "text": "Polly waves a flipper in the air with a fork in the other, talking with her eyes closed while Pax grins"
+    },
+    {
+     "start": 124,
+     "end": 148,
+     "text": "Pax laughs with his eyes squeezed shut and little tears at their corners while Polly giggles behind her flipper"
+    },
+    {
+     "start": 148,
+     "end": 156,
+     "text": "Pax opens his eyes and looks up, still laughing, while Polly giggles behind her flipper"
+    },
+    {
+     "start": 156,
+     "end": 166,
+     "text": "Pax turns his head aside and covers his beak with a flipper, giggling, while Polly keeps laughing"
+    },
+    {
+     "start": 166,
+     "end": 176,
+     "text": "Pax flaps a flipper toward Polly with his beak open while she giggles behind her flipper"
+    },
+    {
+     "start": 176,
+     "end": 193,
+     "text": "Pax blushes with rosy cheeks and smiles shyly across the table while Polly watches him with a flipper at her beak"
+    }
+   ],
+   "props": [
+    "bowls of pasta",
+    "forks",
+    "candles",
+    "vase of flowers",
+    "white tablecloth",
+    "wooden chairs"
+   ],
+   "prop_events": [],
+   "effects": [
+    "tears",
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "candle glow is in-world; the table hides them below the chest | verification pass 2 (verify2_report_0): Pax's laugh with squeezed eyes starts at f124 (not f130) and his eyes are open again f148-155 inside the 130-154 beat; the flipper-flap is f166-175 (beat 154-170 ends with his eyes open and flipper out); from f176 Pax only blushes and looks across with a closed beak, not a grin"
+  }
+ ]
+}

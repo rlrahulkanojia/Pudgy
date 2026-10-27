@@ -1,0 +1,237 @@
+{
+ "skit": "iteration_2/72_videos/PP-BringWater-Base.mp4",
+ "frames": 326,
+ "fps": 24,
+ "curated_by": "curator-05",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "BRING WATER",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a cosy bedroom with a yellow wooden bed, duck-shaped bedposts and peach lamps on two nightstands"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 43,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "setting": "s1",
+   "notes": "slow push-in over the whole shot (ORB on the lamp/nightstand: scale 1.000 -> 1.033, drift up-left, motion from ~f2 to f42). Pax reads, Polly dozes."
+  },
+  {
+   "start": 43,
+   "end": 67,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "setting": "s1",
+   "notes": "Polly close-up: slow push-in easing out (ORB on the bedpost: scale 1.000 -> 1.012; background frame diff 1.3 -> 0.03 at f65, 0.02 at f66, exactly 0.00 from f67). Re-checked after the lead's push-in correction: the kept span now starts at f67, the first frame with zero background change."
+  },
+  {
+   "start": 67,
+   "end": 98,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a duck-shaped bedpost and the headboard behind her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "partial",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 67,
+     "end": 98,
+     "text": "Polly lies tucked under the blanket and gazes up to the left with a worried brow, her beak moving as she speaks"
+    }
+   ],
+   "props": [
+    "bed",
+    "pillow",
+    "blanket",
+    "book"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked from f67 (bedpost ROI frame diff 0.00, ORB scale constant; compare 65/97 bedpost and headboard black). Pax is only the corner of his book and a sliver of fin at the left edge, so he is not listed."
+  },
+  {
+   "start": 98,
+   "end": 169,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a duck-shaped bedpost and a peach lamp behind him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "partial",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 98,
+     "end": 120,
+     "text": "Pax sits up in bed holding an open teal book and turns a page with his fin"
+    },
+    {
+     "start": 120,
+     "end": 143,
+     "text": "Pax reads on, his beak moving as he reads the page aloud"
+    },
+    {
+     "start": 143,
+     "end": 157,
+     "text": "Pax blinks slowly over the book, then looks down at the page again"
+    },
+    {
+     "start": 157,
+     "end": 169,
+     "text": "Pax turns his head to the right and looks over with raised brows, still holding the book"
+    }
+   ],
+   "props": [
+    "book",
+    "bed",
+    "blanket"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked (ORB on the bedpost/lamp: scale 1.0000, 0 px over the whole shot; compare 98/168 background black)."
+  },
+  {
+   "start": 169,
+   "end": 211,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "setting": "s1",
+   "notes": "Polly pleading close-up with a push-in through the whole shot (scale 1.000 -> 1.048, drift up-left; background diff 0.5-2.3 every frame)."
+  },
+  {
+   "start": 211,
+   "end": 326,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "wide",
+   "angle": "high angle",
+   "setting": "s1",
+   "view": "with the big bed seen from above at an angle, nightstands with lamps on both sides",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "exits",
+     "exits_at": 305,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 281,
+       "screen": "left"
+      }
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 211,
+     "end": 235,
+     "text": "Pax reads his book with half-closed eyes while Polly lies beside him smiling up at him with rosy cheeks"
+    },
+    {
+     "start": 235,
+     "end": 251,
+     "text": "Pax shuts the book with his eyes closed and a small smile while Polly watches"
+    },
+    {
+     "start": 251,
+     "end": 263,
+     "text": "Pax turns and sets the closed book down on the nightstand to the left"
+    },
+    {
+     "start": 263,
+     "end": 281,
+     "text": "Pax pushes back the blanket, sits on the edge of the bed and hops down to the floor"
+    },
+    {
+     "start": 281,
+     "end": 305,
+     "text": "Pax waddles away to the lower left and out of view while Polly stays on her pillow"
+    },
+    {
+     "start": 305,
+     "end": 326,
+     "text": "Polly, alone in bed, stretches both fins up and wiggles happily under the blanket"
+    }
+   ],
+   "props": [
+    "book",
+    "bed",
+    "blanket",
+    "nightstand",
+    "lamps"
+   ],
+   "prop_events": [
+    {
+     "prop": "book",
+     "event": "puts_down",
+     "frame": 257,
+     "by": "pax"
+    }
+   ],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "exits",
+   "notes": "camera locked (ORB on the left nightstand: scale 1.000, 0 px across f211-325; compare 211/325 bed black). Pax's last sliver leaves the left edge at f304."
+  }
+ ]
+}

@@ -1,0 +1,620 @@
+{
+ "skit": "iteration_2/72_videos/PP-Tasks-Base.mp4",
+ "frames": 535,
+ "fps": 24,
+ "curated_by": "curator-b2",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "TASKS",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "an upturned brown pot on his head"
+ },
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a living room drawn on a plain pale grey background"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "a dim room by an arched doorway, drawn on a plain grey wall"
+  },
+  "s3": {
+   "kind": "set",
+   "desc": "a dim kitchen with a curved turquoise counter of wooden drawers and a shelf of jars on the wall"
+  },
+  "s4": {
+   "kind": "flat",
+   "desc": "a dim kitchen corner with wooden cabinets edged in turquoise, drawn on a plain grey wall"
+  },
+  "s5": {
+   "kind": "set",
+   "desc": "a dim kitchen with tools scattered on the floor in front of a curved turquoise counter"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 38,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a cream sofa at the left and a glass coffee table in front holding a tipped-over mug in a brown spill",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "exits",
+     "exits_at": 37,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 16,
+       "screen": "right-center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 20,
+     "text": "Polly waddles slowly to the right behind the glass table, eyeing the spilled mug with a worried face"
+    },
+    {
+     "start": 20,
+     "end": 26,
+     "text": "Polly closes her eyes and lets out a sigh as she keeps waddling"
+    },
+    {
+     "start": 26,
+     "end": 38,
+     "text": "Polly turns to the right and hurries off until she is out of view"
+    }
+   ],
+   "props": [
+    "glass coffee table",
+    "mug",
+    "spill"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "exits",
+   "notes": "shot_review called this shot an insert with no lead; Polly is in it. Camera locked (sofa and table edges overlap in compare 0/62 and 87/94). Split from the next span only because Polly leaves and comes back. | verification pass 2 (verify3_report_0): beat 0-20 says Polly 'stands' behind the table: she waddles steadily to the right the whole time (feet alternate, centre moves from ~43% to ~65% of the width by f20), then keeps moving through the sigh and exits; a walk is left out; the tipped-over mug is a peach penguin-face mug (full-res crop f10): a generic penguin, not a lead, so it is allowed as a prop; compare 0/37: sofa and table black"
+  },
+  {
+   "start": 38,
+   "end": 95,
+   "boundary": "same_shot",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a cream sofa at the left and a glass coffee table in front holding a tipped-over mug in a brown spill",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "enters",
+     "enters_at": 50,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 60,
+       "screen": "center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 38,
+     "end": 50,
+     "text": "The sofa and the glass table with the spilled mug sit empty in the quiet room"
+    },
+    {
+     "start": 50,
+     "end": 62,
+     "text": "Polly waddles back in from the right holding a yellow cloth"
+    },
+    {
+     "start": 62,
+     "end": 82,
+     "text": "Polly leans over the glass table, lifts the tipped mug and wipes up the spill with the yellow cloth"
+    },
+    {
+     "start": 82,
+     "end": 95,
+     "text": "Polly holds the mug up beside the table and smiles while sparkles twinkle on the clean glass"
+    }
+   ],
+   "props": [
+    "yellow cloth",
+    "mug",
+    "glass coffee table"
+   ],
+   "prop_events": [],
+   "effects": [
+    "sparkles"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "enters",
+   "notes": "no lead f37-49 (12 frames, the room empty). The mug has a little face on it (orange, not a lead's colours). | verification 2026-10-26: beats [62,95) corrected"
+  },
+  {
+   "start": 95,
+   "end": 149,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a light switch on the wall, the ceiling light off, and a cream sofa seen through the arch",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 104,
+       "screen": "center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 95,
+     "end": 106,
+     "text": "Pax waddles in from the left through the arched doorway and stops"
+    },
+    {
+     "start": 106,
+     "end": 118,
+     "text": "Pax reaches out and flicks the light switch on the wall"
+    },
+    {
+     "start": 118,
+     "end": 128,
+     "text": "Pax lowers his flipper and looks around the dim room, puzzled"
+    },
+    {
+     "start": 128,
+     "end": 149,
+     "text": "Pax flicks the switch again and again with a stern frown"
+    }
+   ],
+   "props": [
+    "light switch"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "enters",
+   "notes": "Room is drawn dim (light off), so Pax's belly reads grey; as he enters the doorway light gives him a soft highlight. Wall, switch and bin checked static (phase correlation ~0 px over f95-148); the ORB track's per-frame jumps here were Pax. v4/shot_review suspected a pull-back: it is a fast zoom out at f149-153, dropped below."
+  },
+  {
+   "start": 149,
+   "end": 154,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "zoom_out",
+   "notes": "fast zoom out (scale 0.80-0.96 per frame) to a wide view of the room"
+  },
+  {
+   "start": 154,
+   "end": 177,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with an unlit bulb hanging from the ceiling and a turquoise kitchen counter at the right",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 154,
+     "end": 163,
+     "text": "Pax stands by the light switch and looks up at the unlit ceiling bulb with a flat face"
+    },
+    {
+     "start": 163,
+     "end": 170,
+     "text": "Pax huffs with his beak open, glaring up at the bulb"
+    },
+    {
+     "start": 170,
+     "end": 177,
+     "text": "Pax shuts his eyes and turns away toward the kitchen counter"
+    }
+   ],
+   "props": [
+    "ceiling bulb",
+    "light switch"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "23 static frames after the zoom out (f154 equals f155 position; motion stops at f154). Pax is small."
+  },
+  {
+   "start": 177,
+   "end": 270,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with a sink and tap on the counter and the ceiling light off",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 200,
+       "screen": "center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 177,
+     "end": 197,
+     "text": "Pax carries a wooden ladder and stands it up against the counter, his back turned"
+    },
+    {
+     "start": 197,
+     "end": 212,
+     "text": "Pax turns around and waddles left to a drawer in the counter"
+    },
+    {
+     "start": 212,
+     "end": 222,
+     "text": "Pax pulls the drawer open and reaches inside"
+    },
+    {
+     "start": 222,
+     "end": 232,
+     "text": "Pax watches as the drawer front breaks off and drops, spilling pliers, screws and a light bulb on the floor"
+    },
+    {
+     "start": 232,
+     "end": 242,
+     "text": "Pax stares at the broken drawer with his beak open in surprise"
+    },
+    {
+     "start": 242,
+     "end": 248,
+     "text": "Pax squeezes his eyes shut and winces"
+    },
+    {
+     "start": 248,
+     "end": 256,
+     "text": "Pax glares at the mess with flat, narrowed eyes"
+    },
+    {
+     "start": 256,
+     "end": 262,
+     "text": "Pax squeezes his eyes shut and flaps a flipper out in frustration"
+    },
+    {
+     "start": 262,
+     "end": 270,
+     "text": "Pax turns and stomps off to the right with a stern frown"
+    }
+   ],
+   "props": [
+    "wooden ladder",
+    "drawer",
+    "pliers",
+    "screws",
+    "light bulb"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "Shelf, bottle, jar and tap edges overlap in compare 177/269; the ORB jumps at f178-183 are Pax and the ladder. Room drawn dim."
+  },
+  {
+   "start": 270,
+   "end": 379,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s4",
+   "view": "with a wall cabinet above a low cabinet and the ceiling light off",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 285,
+       "screen": "left-center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 270,
+     "end": 292,
+     "text": "Pax waddles in from the left with a stern face and stops beside the kitchen cabinets"
+    },
+    {
+     "start": 292,
+     "end": 308,
+     "text": "Pax reaches up and pulls open the wall cabinet door, which swings out crooked on one hinge"
+    },
+    {
+     "start": 308,
+     "end": 344,
+     "text": "Pax holds the loose cabinet door up and stares at it with a flat, unimpressed look, a drill and red toolbox inside"
+    },
+    {
+     "start": 344,
+     "end": 356,
+     "text": "Pax lets go of the door, shuts his eyes and sighs, then looks up again"
+    },
+    {
+     "start": 356,
+     "end": 368,
+     "text": "Pax reaches up with both flippers to push the cabinet straight"
+    },
+    {
+     "start": 368,
+     "end": 379,
+     "text": "Pax squeezes his eyes shut and grabs his head as the wall cabinet tips forward and the drill, toolbox and a screwdriver slide out at him"
+    }
+   ],
+   "props": [
+    "wall cabinet",
+    "drill",
+    "red toolbox",
+    "screwdriver"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "Camera locked through the crash: the low cabinet's edges overlap in compare 270/366 and 360/378; only the wall cabinet tilts. Room drawn dim."
+  },
+  {
+   "start": 379,
+   "end": 408,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a light switch on the wall and a cream sofa seen through the arch",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 388,
+       "screen": "center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 379,
+     "end": 388,
+     "text": "Polly waddles in from the left through the doorway and stops in the dim room"
+    },
+    {
+     "start": 388,
+     "end": 397,
+     "text": "Polly reaches a flipper toward the light switch on the wall"
+    },
+    {
+     "start": 397,
+     "end": 408,
+     "text": "Polly stares ahead with wide eyes and her beak open in shock"
+    }
+   ],
+   "props": [
+    "light switch"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "enters",
+   "notes": "arch, wall and bin edges overlap in compare 380/400 (ORB jumps were Polly). Room drawn dim, Polly's belly reads grey."
+  },
+  {
+   "start": 408,
+   "end": 483,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s5",
+   "view": "with Polly seen from behind, close in the left foreground, and an upturned stool and a red toolbox on the floor by Pax",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "left",
+     "presence": "partial",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 408,
+     "end": 436,
+     "text": "Pax sits on the floor frowning as he works a screwdriver into an upturned wooden stool while Polly stands watching him"
+    },
+    {
+     "start": 436,
+     "end": 470,
+     "text": "Pax looks up at Polly with wide eyes, holding the screwdriver up"
+    },
+    {
+     "start": 470,
+     "end": 483,
+     "text": "Pax gives a nervous little smile as a sweat drop runs down his face"
+    }
+   ],
+   "props": [
+    "screwdriver",
+    "wooden stool",
+    "red toolbox",
+    "hammer"
+   ],
+   "prop_events": [],
+   "effects": [
+    "sweat drop"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "Over-the-shoulder: Polly's back and head fill the left foreground (partial), Pax sits in the middle distance. Counter in the background drawn soft-focus. Counter and toolbox edges overlap in compare 408/482."
+  },
+  {
+   "start": 483,
+   "end": 501,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "18 frames: Polly close, staring in dismay"
+  },
+  {
+   "start": 501,
+   "end": 535,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s5",
+   "view": "with Polly seen from behind, close in the left foreground, and an upturned stool and a red toolbox on the floor by Pax",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "left",
+     "presence": "partial",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 501,
+     "end": 506,
+     "text": "Pax sits behind the upturned stool holding up a screwdriver with a nervous smile while Polly stands watching"
+    },
+    {
+     "start": 506,
+     "end": 520,
+     "text": "Pax shuts his eyes in a sheepish open-beaked grin, still holding up the screwdriver, while Polly watches"
+    },
+    {
+     "start": 520,
+     "end": 531,
+     "text": "Pax keeps grinning with his eyes shut as a light bulb drops from above toward the floor beside him"
+    },
+    {
+     "start": 531,
+     "end": 535,
+     "text": "Pax opens his eyes wide and throws up a flipper as the bulb shatters beside him, while Polly lifts a flipper"
+    }
+   ],
+   "props": [
+    "screwdriver",
+    "wooden stool",
+    "red toolbox",
+    "light bulb"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "Same set-up as f408-483; counter and toolbox edges overlap in compare 501/534, only Polly's outline moves. | verification pass 2 (verify2_report_0): the falling object is a light bulb, not a lamp, and it is visible dropping from the top from f520 (inside the first beat); Pax's eyes are open (nervous look) f501-505, shut only from f506; he opens them and raises his flipper at f532, after the bulb shatters (f531)"
+  }
+ ]
+}

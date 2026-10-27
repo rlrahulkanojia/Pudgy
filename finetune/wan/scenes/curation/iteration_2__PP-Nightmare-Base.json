@@ -1,0 +1,106 @@
+{
+ "skit": "iteration_2/72_videos/PP-Nightmare-Base.mp4",
+ "frames": 160,
+ "fps": 24,
+ "curated_by": "curator-08",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "NIGHTMARE",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a dark bedroom with a big yellow bed, a nightstand with a lamp and a paper delivery bag on the floor"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 99,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "notes": "Polly asleep in bed, scrunches up and sobs with tears. Slow continuous push-in/tilt from f0: headboard region drifts 37 px (540 px frame) between f0 and f99, compare 0/107 shows doubled headboard and blanket edges."
+  },
+  {
+   "start": 99,
+   "end": 108,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "The push-in settles at f99; 9 static frames before the cut."
+  },
+  {
+   "start": 108,
+   "end": 160,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a carton of fries on the blanket",
+   "time": "night",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 108,
+     "end": 118,
+     "text": "Polly's scrunched, sobbing face relaxes into calm sleep, tears still on her cheeks, while Pax sits up beside her holding {ifin}"
+    },
+    {
+     "start": 118,
+     "end": 160,
+     "text": "Polly sleeps peacefully with her beak open while Pax sits still with a fry sticking out of his beak, blinking slowly"
+    }
+   ],
+   "props": [
+    "phone",
+    "carton of fries",
+    "delivery bag",
+    "lamp"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 108,
+     "by": "pax",
+     "is_ifin": true
+    }
+   ],
+   "effects": [
+    "tears"
+   ],
+   "overlays": [],
+   "in_world_text": [
+    "delivery bag print"
+   ],
+   "travel": "none",
+   "notes": "Night: the room is drawn in dim grey-blue night colours, with Pax lit in full colour by the phone; kept as time=night (judgement call, see report). Almost a held still after f126 (frame diff ~0.02; Pax only blinks). Phone: grey back, three lenses, little tuft on top = iFin. Static: compare 108/159. | verification pass 2 (verify2_report_4): beat 1 says Polly lowers her flipper: her flipper stays raised beside her head and actually lifts a little higher f108-121 (step-1 crop); it never lowers in the span; checked: the mug at the left frame edge shows only a sliver with a pale oval, nothing recognisable as a lead; phone is the iFin; night colouring kept as time=night"
+  }
+ ]
+}

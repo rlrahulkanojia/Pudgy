@@ -1,0 +1,42 @@
+{
+ "skit": "iteration_2/72_videos/PP-Aging-Base.mp4",
+ "frames": 210,
+ "fps": 24,
+ "curated_by": "curator-batch4",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "AGING",
+ "cast": {
+  "polly": {"kind": "lead"}
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {"kind": "set", "desc": "a wide snowy field under a pale sky with soft white clouds"}
+ },
+ "spans": [
+  {
+   "start": 0, "end": 50, "boundary": "start", "keep": true, "camera": "static",
+   "framing": "wide", "angle": "eye level", "setting": "s1",
+   "view": "with low snowy hills on the horizon behind her",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "polly", "screen": "center", "presence": "full", "outfit": []}
+   ],
+   "beats": [
+    {"start": 0, "end": 26, "text": "Polly sits alone in the snow, both flippers raised in front of her, looking down at {ifin}"},
+    {"start": 26, "end": 50, "text": "Polly sits still with the phone in her flippers, waiting, her beak settling into a small frown"}
+   ],
+   "props": ["phone"],
+   "prop_events": [{"prop": "phone", "event": "uses", "frame": 0, "by": "polly", "is_ifin": true}],
+   "effects": [], "overlays": [], "in_world_text": [], "travel": "none",
+   "notes": "compare f0/f49: horizon and snow drifts overlap exactly, camera locked. The phone is the iFin (pale grey back, three lenses, tuft on top). A thin dark line runs down the left edge of every frame of this skit (export border, not an overlay). Polly is small (~17% of the height)."
+  },
+  {
+   "start": 50, "end": 161, "boundary": "same_shot", "keep": false, "drop_reason": "effect", "camera": "static",
+   "notes": "time-lapse: day/night cross-dissolves (luma ramps from f50), snow piles up on Polly, and pine trees and bushes sprout and grow around her"
+  },
+  {
+   "start": 161, "end": 210, "boundary": "cut", "keep": false, "drop_reason": "effect", "camera": "push_in",
+   "notes": "time-lapse continues at night and day while the trees close over Polly, with a push-in into the branches; she is buried by ~f190 and only snowy trees remain"
+  }
+ ]
+}

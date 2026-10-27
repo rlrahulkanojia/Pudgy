@@ -1,0 +1,177 @@
+{
+ "skit": "iteration_2/72_videos/PP-NumbArm-Base.mp4",
+ "frames": 197,
+ "fps": 24,
+ "curated_by": "curator-03",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "NUMB ARM",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a bedroom with a big cream bed, a bedside table and a lamp, drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 37,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a duck-shaped bedpost and a bedside lamp behind the bed",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 21,
+     "text": "Polly snuggles against Pax with her head on his fin while he lies asleep on his back in bed"
+    },
+    {
+     "start": 21,
+     "end": 27,
+     "text": "Polly sits up beside him with a sleepy smile, uncovering his fin, now drawn as fuzzy grey static"
+    },
+    {
+     "start": 27,
+     "end": 37,
+     "text": "Pax opens his eyes and looks over at Polly as she gazes back at him"
+    }
+   ],
+   "props": [
+    "bed",
+    "pillow",
+    "bedside lamp"
+   ],
+   "prop_events": [],
+   "effects": [
+    "numb fin drawn as grey static"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "the numb-fin gag: from about f24 Pax's fin is drawn as grey static noise (a local in-world effect, not the whole picture)"
+  },
+  {
+   "start": 37,
+   "end": 119,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "notes": "closer view of Pax in bed: Polly slides off to the right, his static-noise fin lies limp, he tries to lift it and panics; slow continuous drift, every edge doubled in compare 37/118, 60/72, 60/84"
+  },
+  {
+   "start": 119,
+   "end": 197,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a duck-shaped bedpost and a bedside lamp behind the bed",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "enters",
+     "enters_at": 123,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 139,
+       "screen": "right-center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 119,
+     "end": 127,
+     "text": "Pax lies propped up on the bed, staring with worried eyes at his limp fin, drawn as fuzzy grey static"
+    },
+    {
+     "start": 127,
+     "end": 139,
+     "text": "Polly hurries in from the right and grabs Pax's numb fin as he turns to her with wide eyes"
+    },
+    {
+     "start": 139,
+     "end": 154,
+     "text": "Polly tugs and shakes the numb fin with a worried face while Pax leans back, sweating"
+    },
+    {
+     "start": 154,
+     "end": 162,
+     "text": "Polly raises her other flipper high over her head and brings it down to slap Pax's numb fin"
+    },
+    {
+     "start": 162,
+     "end": 171,
+     "text": "Pax jolts upright with wide eyes as his fin turns into bright stripes of test-pattern colours"
+    },
+    {
+     "start": 171,
+     "end": 182,
+     "text": "Pax stares ahead with wide eyes while Polly holds the striped fin and looks down at it"
+    },
+    {
+     "start": 182,
+     "end": 197,
+     "text": "Pax tips his head back with his eyes squeezed shut while Polly keeps holding the striped fin, looking worried"
+    }
+   ],
+   "props": [
+    "bed",
+    "pillow",
+    "bedside lamp"
+   ],
+   "prop_events": [],
+   "effects": [
+    "numb fin drawn as grey static",
+    "fin drawn as test-pattern colour bars",
+    "sweat drops"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "enters",
+   "notes": "Pax's numb fin is drawn as grey static, then (from about f165) as TV test-pattern colour bars; a local gag effect on the fin, kept and described. compare 119/196 locked | verification pass 2 (verify2_report_4): a big action is missing: f154-161 Polly raises her other flipper high over her head and at f162 brings it down onto Pax's numb fin; Pax jolts upright and the fin turns into colour bars at f164. The beats only say she tugs it and that the fin flickers; last beat (f171-197) says Pax leans back with his eyes squeezed shut: his eyes are wide open, staring ahead, f164-181; they close only from f182"
+  }
+ ]
+}

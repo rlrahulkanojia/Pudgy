@@ -1,0 +1,96 @@
+{
+ "skit": "iteration_1/30_videos/2D_PP_LiterallyAnything_Base.mp4",
+ "frames": 220,
+ "fps": 24,
+ "curated_by": "curator-b2",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "LITERALLY ANYTHING",
+ "cast": {
+  "pax": {"kind": "lead"},
+  "polly": {"kind": "lead"}
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {"kind": "set", "desc": "a snowy village in front of a round igloo house with a wooden door"},
+  "s2": {"kind": "flat", "desc": "a dining nook drawn on a plain pale grey background"}
+ },
+ "spans": [
+  {
+   "start": 0, "end": 12, "boundary": "start", "keep": false, "drop_reason": "too_short", "camera": "static",
+   "notes": "Pax bent under the raised hood of a red snow car; a 12-frame hold before the camera starts to move"
+  },
+  {
+   "start": 12, "end": 42, "boundary": "camera", "keep": false, "drop_reason": "camera_move", "camera": "zoom_in",
+   "notes": "slow zoom in (background scale 1.04 from f12 to f41) while Pax straightens up and wipes his brow"
+  },
+  {
+   "start": 42, "end": 46, "boundary": "transition", "keep": false, "drop_reason": "transition", "camera": "whip",
+   "notes": "sideways slide transition from the car to Polly; f46 is the first clean frame (f47 identical)"
+  },
+  {
+   "start": 46, "end": 80, "boundary": "after_transition", "keep": true, "camera": "static",
+   "framing": "medium", "angle": "eye level", "setting": "s1",
+   "view": "with round windows on the igloo behind her and snow on the ground",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "polly", "screen": "center", "presence": "full", "outfit": []}
+   ],
+   "beats": [
+    {"start": 46, "end": 51, "text": "Polly stands holding an open red toolbox in both flippers and stares ahead"},
+    {"start": 51, "end": 57, "text": "Polly lets the toolbox drop onto the snow and screws and bolts spill out around it"},
+    {"start": 57, "end": 64, "text": "Polly stares ahead with rosy cheeks, her flippers hanging loose at her sides"},
+    {"start": 64, "end": 80, "text": "Polly presses her flippers to her cheeks with her eyes closed and a dreamy open-beaked smile as a small heart rises above her head"}
+   ],
+   "props": ["red toolbox", "screws and bolts"],
+   "prop_events": [{"prop": "toolbox", "event": "drops", "frame": 52, "by": "polly"}],
+   "effects": ["heart", "blush marks"], "overlays": [], "in_world_text": [], "travel": "none",
+   "notes": "background checked static with feature matching (scale 1.000, shift 0 from f46 to f79)"
+  },
+  {
+   "start": 80, "end": 117, "boundary": "cut", "keep": false, "drop_reason": "lead_copy", "camera": "static",
+   "notes": "Pax driving with one flipper (car interior locked, town scrolls past the windows). A keychain with two little Polly figures and a name tag hangs from the steering column, and a Polly plush sits in the cup holder"
+  },
+  {
+   "start": 117, "end": 145, "boundary": "cut", "keep": false, "drop_reason": "lead_copy", "camera": "static",
+   "notes": "Polly in the passenger seat watching, hearts; a little Pax figure sits on the dashboard phone mount and the phone screen shows a photo of the two leads"
+  },
+  {
+   "start": 145, "end": 165, "boundary": "cut", "keep": false, "drop_reason": "too_short", "camera": "static",
+   "notes": "20 frames: Pax at the table drinking from a glass with his eyes closed, sparkles"
+  },
+  {
+   "start": 165, "end": 198, "boundary": "cut", "keep": true, "camera": "static",
+   "framing": "medium", "angle": "eye level", "setting": "s2",
+   "view": "with the edge of a round cream table in front of her and a wooden chair behind",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "polly", "screen": "center", "presence": "full", "outfit": []}
+   ],
+   "beats": [
+    {"start": 165, "end": 176, "text": "Polly leans her face on her flippers and gazes ahead with a dreamy open-beaked smile as hearts float up above her"},
+    {"start": 176, "end": 186, "text": "Polly squeezes her eyes shut happily, then looks out with heavy-lidded, lovestruck eyes"},
+    {"start": 186, "end": 198, "text": "Polly gazes ahead with wide shining eyes and a soft smile while more hearts drift up over her head"}
+   ],
+   "props": ["round table", "wooden chair"],
+   "prop_events": [], "effects": ["hearts", "blush marks"], "overlays": [], "in_world_text": [], "travel": "none",
+   "notes": ""
+  },
+  {
+   "start": 198, "end": 220, "boundary": "cut", "keep": true, "camera": "static",
+   "framing": "wide", "angle": "eye level", "setting": "s2",
+   "view": "with a round cream table on a pale turquoise pedestal between them and two wooden chairs",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "left", "presence": "full", "outfit": []},
+    {"id": "polly", "screen": "right", "presence": "full", "outfit": []}
+   ],
+   "beats": [
+    {"start": 198, "end": 215, "text": "Pax sputters and coughs with his eyes squeezed shut beside his glass of water while Polly rests her face on her flippers and gazes at him under floating hearts"},
+    {"start": 215, "end": 220, "text": "Pax jerks upright with wide eyes and lifts both flippers while Polly keeps gazing at him"}
+   ],
+   "props": ["glass of water", "round table", "wooden chairs"],
+   "prop_events": [], "effects": ["hearts", "water droplets"], "overlays": [], "in_world_text": [], "travel": "none",
+   "notes": "22 frames, only an f21 window"
+  }
+ ]
+}

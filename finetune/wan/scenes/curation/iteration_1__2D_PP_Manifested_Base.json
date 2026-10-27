@@ -1,0 +1,45 @@
+{
+ "skit": "iteration_1/30_videos/2D_PP_Manifested_Base.mp4",
+ "frames": 175,
+ "fps": 24,
+ "curated_by": "curator-03",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "MANIFESTED",
+ "cast": {},
+ "outfits": {},
+ "settings": {},
+ "spans": [
+  {
+   "start": 0, "end": 78, "boundary": "start", "keep": false, "drop_reason": "camera_move", "camera": "push_in",
+   "notes": "Pax waddles up to Polly reading on a couch, hops up and holds her fin; a slow continuous push in runs through the whole shot (compare 0/12, 30/54, 54/77: couch outline doubled and growing; couch ~300 px wide at f0, ~330 px at f77)"
+  },
+  {
+   "start": 78, "end": 98, "boundary": "cut", "keep": false, "drop_reason": "graphic_overlay", "camera": "static",
+   "notes": "black title card with text"
+  },
+  {
+   "start": 98, "end": 123, "boundary": "cut", "keep": false, "drop_reason": "camera_move", "camera": "pull_back",
+   "notes": "Polly in a navy hooded robe pouring salt into a heart among candles; camera moves back and up (hood shadow hides her face at the start)"
+  },
+  {
+   "start": 123, "end": 136, "boundary": "camera", "keep": false, "drop_reason": "too_short", "camera": "static",
+   "notes": "13 frames of Polly in the hooded robe reading a book between camera moves"
+  },
+  {
+   "start": 136, "end": 149, "boundary": "camera", "keep": false, "drop_reason": "camera_move", "camera": "pull_back",
+   "notes": "pull back to a wide view of the candle circle"
+  },
+  {
+   "start": 149, "end": 159, "boundary": "camera", "keep": false, "drop_reason": "too_short", "camera": "static",
+   "notes": "10 frames, wide view of Polly in the robe among candles and books"
+  },
+  {
+   "start": 159, "end": 161, "boundary": "cut", "keep": false, "drop_reason": "effect", "camera": "static",
+   "notes": "white flash frames"
+  },
+  {
+   "start": 161, "end": 175, "boundary": "after_transition", "keep": false, "drop_reason": "lead_copy", "camera": "static",
+   "notes": "a glowing ghostly Pax rises out of the salt heart (a magic copy of Pax); also only 14 frames"
+  }
+ ]
+}

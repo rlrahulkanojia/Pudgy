@@ -1,0 +1,159 @@
+{
+ "skit": "iteration_2/72_videos/PP-Thinking_Of_Herd-Base.mp4",
+ "frames": 290,
+ "fps": 24,
+ "curated_by": "curator-10",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "THINKING OF HER",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a bedroom with a bed with a curved yellow wooden headboard, drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 34,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "Pax asleep in bed under a dream bubble showing Pax and Polly hugging (lead copies); the bubble pops f30-33"
+  },
+  {
+   "start": 34,
+   "end": 42,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "8 locked frames of Pax waking as bubble fragments fade"
+  },
+  {
+   "start": 42,
+   "end": 48,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "notes": "quick reframe in to Pax in bed"
+  },
+  {
+   "start": 48,
+   "end": 76,
+   "boundary": "camera",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a pale blanket pulled up over him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 48,
+     "end": 52,
+     "text": "Pax lies tucked in bed and turns his face forward with a quick happy blink while {ifin} lies lit up on the blanket beside him"
+    },
+    {
+     "start": 52,
+     "end": 64,
+     "text": "Pax gazes straight ahead with wide eyes and an open-beaked smile while the screen of {ifin} stays lit"
+    },
+    {
+     "start": 64,
+     "end": 66,
+     "text": "Pax squeezes his eyes shut in a quick happy grin"
+    },
+    {
+     "start": 66,
+     "end": 76,
+     "text": "Pax turns his head to gaze off to the left with wide eyes as the screen of {ifin} goes dark"
+    }
+   ],
+   "props": [
+    "phone",
+    "bed",
+    "pillow",
+    "blanket"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 48,
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "alarm clock screen on the phone"
+   ],
+   "travel": "none",
+   "notes": "headboard edges identical f48-f75 (blanket edges move with Pax). The phone lies screen-up on the blanket showing an alarm until ~f67, then dark; pale grey frame and the little tuft are clearly visible, so iFin (lenses not visible, screen-up). prop event 'uses' = alarm ringing, nobody holds it | verification pass 2 (verify2_report_0): beat 48-62 says the phone 'lights up' (it shows the alarm screen from the first frame) and has a stray comma after {ifin}; Pax looks up only f48-49, blinks with a happy smile f50-51, then gazes straight ahead; beat 62-68: eyes shut only f64-65; f66 he has already turned his head to the left with open eyes"
+  },
+  {
+   "start": 76,
+   "end": 84,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pan_left",
+   "notes": "move to the side view of the bed and bedside table"
+  },
+  {
+   "start": 84,
+   "end": 128,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "Pax in bed beside a bedside table with framed photos of Polly (and a heart frame); he picks one up and hugs it. Lead copies throughout"
+  },
+  {
+   "start": 128,
+   "end": 169,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "Pax brushing his teeth under a thought bubble showing Pax and Polly at the seaside, hearts rising; lead copies throughout"
+  },
+  {
+   "start": 169,
+   "end": 186,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "Pax at the breakfast table holding a phone; only 17 frames before the text bubble appears"
+  },
+  {
+   "start": 186,
+   "end": 290,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "graphic_overlay",
+   "camera": "static",
+   "notes": "a chat bubble with text pops in at f186 and stays to the end (Pax reads, swoons and flops onto his breakfast)"
+  }
+ ]
+}

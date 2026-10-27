@@ -1,0 +1,257 @@
+{
+ "skit": "iteration_2/72_videos/2D_PP_Feed_Base.mp4",
+ "frames": 270,
+ "fps": 24,
+ "curated_by": "curator-08",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "FEED",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a dining corner drawn on a plain pale grey background, with a round cream table on a pale aqua pedestal and two wooden chairs"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 20,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "Insert: Polly's flipper lowers a striped ice cream tub onto the table next to a spoon; 20 frames, lead only as a flipper."
+  },
+  {
+   "start": 20,
+   "end": 79,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a striped tub of ice cream in the middle of the table",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 20,
+     "end": 33,
+     "text": "Polly lets go of the ice cream tub and clasps her flippers by her cheek with a happy grin while Pax holds up his spoon"
+    },
+    {
+     "start": 33,
+     "end": 46,
+     "text": "Pax leans over the table and pulls the lid off the tub while Polly waits with her eyes closed, smiling"
+    },
+    {
+     "start": 46,
+     "end": 64,
+     "text": "Pax and Polly dip their spoons into the tub and scoop up some ice cream"
+    },
+    {
+     "start": 64,
+     "end": 79,
+     "text": "Pax and Polly each lift a heaped spoon of ice cream and hold it out over the table"
+    }
+   ],
+   "props": [
+    "ice cream tub",
+    "tub lid",
+    "spoons"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "Ends at f78: a quick push-in runs f79-83."
+  },
+  {
+   "start": 79,
+   "end": 84,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "notes": "Quick push-in: table+shadow bbox 424 -> 481 px wide (540 px frame) between f78 and f84."
+  },
+  {
+   "start": 84,
+   "end": 244,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a striped tub of ice cream and its lid on the table",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 84,
+     "end": 92,
+     "text": "Pax eats the ice cream off his own spoon with his eyes closed while Polly holds her spoon out toward him"
+    },
+    {
+     "start": 92,
+     "end": 97,
+     "text": "Pax opens his eyes and keeps the spoon at his beak while Polly holds her spoon out toward him"
+    },
+    {
+     "start": 97,
+     "end": 107,
+     "text": "Polly's face flushes red and she flings her spoon up and away"
+    },
+    {
+     "start": 107,
+     "end": 114,
+     "text": "Polly turns her face away with her eyes squeezed shut while Pax looks over at her"
+    },
+    {
+     "start": 114,
+     "end": 138,
+     "text": "Polly sits with her flippers crossed and a flushed, scowling face while Pax holds his spoon and stares at her"
+    },
+    {
+     "start": 138,
+     "end": 146,
+     "text": "Pax blows hard on the ice cream on his spoon and the scoop flies off toward Polly"
+    },
+    {
+     "start": 146,
+     "end": 153,
+     "text": "Polly winces as the scoop splats onto her forehead, her flippers still crossed"
+    },
+    {
+     "start": 153,
+     "end": 200,
+     "text": "Pax stares at Polly with wide worried eyes and sweat drops while she sulks with ice cream stuck on her forehead"
+    },
+    {
+     "start": 200,
+     "end": 228,
+     "text": "Pax scoops more ice cream from the tub and holds the spoon out to Polly's beak while she keeps scowling"
+    },
+    {
+     "start": 228,
+     "end": 244,
+     "text": "Polly snatches the spoon out of Pax's flipper and turns away with it, scowling, while Pax stares"
+    }
+   ],
+   "props": [
+    "ice cream tub",
+    "tub lid",
+    "spoons"
+   ],
+   "prop_events": [],
+   "effects": [
+    "sweat drops",
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "Polly's angry flush is a soft red glow across her face (in-style). The thrown spoon leaves the picture at the top. Ends at f243: a quick pull-back runs f244-248. | verification pass 2 (verify2_report_1): Beat 84-97 says Pax eats with his eyes closed: his eyes are open from f92 to f97 (5 of 13 frames)."
+  },
+  {
+   "start": 244,
+   "end": 249,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pull_back",
+   "notes": "Quick pull-back: bbox 481 -> 419 px wide between f243 and f249."
+  },
+  {
+   "start": 249,
+   "end": 270,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "exits",
+     "exits_at": 264,
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 249,
+     "end": 258,
+     "text": "Polly hops down from her chair clutching the ice cream tub and spoon while Pax watches her blankly"
+    },
+    {
+     "start": 258,
+     "end": 270,
+     "text": "Polly slips out past the right edge while Pax scratches his head with a sheepish blush"
+    }
+   ],
+   "props": [
+    "ice cream tub",
+    "spoon"
+   ],
+   "prop_events": [],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "exits",
+   "notes": "Exactly 21 frames (f249 = first frame after the pull-back settles; bbox identical f249-f255). Polly is only a sliver at the right edge from f264 to the end."
+  }
+ ]
+}

@@ -1,0 +1,58 @@
+{
+ "skit": "iteration_2/72_videos/PP-NotMad-Base.mp4",
+ "frames": 221,
+ "fps": 24,
+ "curated_by": "curator-03",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "NOT MAD",
+ "cast": {
+  "pax": {"kind": "lead"},
+  "polly": {"kind": "lead"}
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {"kind": "set", "desc": "a snowy village street lined with igloo-domed shops under striped awnings"}
+ },
+ "spans": [
+  {
+   "start": 0, "end": 6, "boundary": "start", "keep": false, "drop_reason": "too_short", "camera": "static",
+   "notes": "6-frame wide opener on the street"
+  },
+  {
+   "start": 6, "end": 27, "boundary": "cut", "keep": false, "drop_reason": "camera_move", "camera": "push_in",
+   "notes": "Pax walks up and hugs Polly (seen from behind) against the sky; the background buildings shift (compare 6/32), camera settles around f24-26"
+  },
+  {
+   "start": 27, "end": 33, "boundary": "camera", "keep": false, "drop_reason": "too_short", "camera": "static",
+   "notes": "6 frames of the hug after the camera settles"
+  },
+  {
+   "start": 33, "end": 112, "boundary": "cut", "keep": false, "drop_reason": "camera_move", "camera": "push_in",
+   "notes": "reverse angle: Pax from behind hugging Polly, her face showing; slow continuous drift, every background edge doubled in compare 33/60, 60/90, 90/111"
+  },
+  {
+   "start": 112, "end": 221, "boundary": "cut", "keep": true, "camera": "static",
+   "framing": "medium wide", "angle": "eye level", "setting": "s1",
+   "view": "with a low railing and shop fronts behind them",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "center", "presence": "full", "outfit": [],
+     "moves": [{"frame": 124, "screen": "left-center"}]},
+    {"id": "polly", "screen": "right-center", "presence": "full", "outfit": []}
+   ],
+   "beats": [
+    {"start": 112, "end": 124, "text": "Pax hugs Polly tight while she stands stiffly with a red handbag hanging from her fin"},
+    {"start": 124, "end": 136, "text": "Pax lets go and steps back, frowning at Polly as she stares at him blankly"},
+    {"start": 136, "end": 148, "text": "Pax lifts Polly's limp fin out to the side and it drops straight back down"},
+    {"start": 148, "end": 164, "text": "Pax rubs his cheek with one fin and glances away, thinking"},
+    {"start": 164, "end": 182, "text": "Pax turns to Polly with a determined frown, then closes his eyes with a small smile"},
+    {"start": 182, "end": 196, "text": "Pax holds out an iced drink topped with whipped cream and a cookie toward Polly"},
+    {"start": 196, "end": 206, "text": "Polly reaches over and takes the drink from Pax"},
+    {"start": 206, "end": 221, "text": "Polly holds the drink and cookie close with a tiny smile while Pax smiles at her"}
+   ],
+   "props": ["red handbag", "iced drink", "cookie"], "prop_events": [], "effects": [], "overlays": [],
+   "in_world_text": ["shop sign logo", "logo on the drink cup"], "travel": "moves_within",
+   "notes": "compare 112/220: shops and railing overlap exactly. The cup and a shop sign carry an in-world coffee-shop logo (drawn in the scene, not overlaid)"
+  }
+ ]
+}

@@ -1,0 +1,137 @@
+{
+ "skit": "iteration_2/72_videos/PP-Separate-Base.mp4",
+ "frames": 164,
+ "fps": 24,
+ "curated_by": "curator-05",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "SEPARATE",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "a gaming headset with a microphone"
+ },
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a hallway drawn on a plain pale tiled wall, with a round window"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "a doorway drawn on a plain pale background"
+  },
+  "s3": {
+   "kind": "flat",
+   "desc": "a living room drawn on a plain pale background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 12,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "setting": "s1",
+   "notes": "12 frames: Pax in a gaming headset holding a controller."
+  },
+  {
+   "start": 12,
+   "end": 24,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "setting": "s1",
+   "notes": "12 frames: Polly in a magenta shower cap holding a bag of chips and a tumbler."
+  },
+  {
+   "start": 24,
+   "end": 62,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "setting": "s1",
+   "notes": "camera locked (wall ROI diff 0.01, 0 px). Pax (headset, controller) and Polly (shower cap, chips, tumbler) face off in the hallway. Dropped because a framed photo of penguins drawn like the leads (the same photo-on-a-stand prop as BackTogether's photo of Pax and Polly) stands between them in the background, soft-focus but visible throughout. Judgement call: the photo is ~10% of the width and blurred; reverse if a blurred background photo is acceptable."
+  },
+  {
+   "start": 62,
+   "end": 78,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "setting": "s1",
+   "notes": "16 frames: extreme close-up of their bellies bumping (lead_hidden too: only body curves; the blurred framed photo is behind)."
+  },
+  {
+   "start": 78,
+   "end": 127,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "setting": "s1",
+   "notes": "camera locked (wall ROI diff 0.00 after the heart passes). Pax and Polly hug and kiss (heart pops up), then walk apart off both sides. The same framed photo of the leads is visible behind them from ~f98 on (hidden behind their bodies only f78-97, 20 frames, too short to keep on its own)."
+  },
+  {
+   "start": 127,
+   "end": 149,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a wooden door swung open in front of an arched doorway",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 127,
+     "end": 140,
+     "text": "Pax stands half behind the open wooden door and raises his game controller up high with a sly grin"
+    },
+    {
+     "start": 140,
+     "end": 149,
+     "text": "Pax holds the controller out to the side and calls out with his beak wide open"
+    }
+   ],
+   "props": [
+    "game controller",
+    "door"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked (compare 127/148: door and arch black). 22 frames. | verification pass 2 (verify2_report_3): Single beat keeps the pose after it changed: Pax holds the controller up high only f129-139; from f140 he holds it out low to the side and shouts with his beak wide open and eyes wide. He also never 'peeks out' - he stands half behind the door the whole span"
+  },
+  {
+   "start": 149,
+   "end": 164,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "setting": "s3",
+   "notes": "15 frames: Polly on a sofa under a blanket in a shower cap and a teal face mask, holding a tablet, a heart floating up."
+  }
+ ]
+}

@@ -1,0 +1,468 @@
+{
+ "skit": "iteration_2/72_videos/PP-ActingTough-Base.mp4",
+ "frames": 298,
+ "fps": 24,
+ "curated_by": "curator-06",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "ACTING TOUGH",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  },
+  "x1": {
+   "kind": "extra",
+   "desc": "a mint-green penguin at a treadmill"
+  },
+  "x2": {
+   "kind": "extra",
+   "desc": "a tan penguin on an exercise bike"
+  },
+  "x3": {
+   "kind": "extra",
+   "desc": "a grey penguin with a purple mohawk"
+  },
+  "x4": {
+   "kind": "extra",
+   "desc": "a black-and-white penguin in a red cap"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a gym drawn on a plain pale grey background"
+  },
+  "s2": {
+   "kind": "set",
+   "desc": "a gym with a tiled pale wall, a gym poster and a round wall clock"
+  },
+  "s3": {
+   "kind": "flat",
+   "desc": "a living room drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 49,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "overhead",
+   "setting": "s1",
+   "view": "with a weight bench under a loaded barbell and a shaker bottle on the floor",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 6,
+     "text": "Pax lies on the bench gripping the barbell above his chest with a fierce, determined frown"
+    },
+    {
+     "start": 6,
+     "end": 20,
+     "text": "Pax squeezes his eyes shut and strains with his beak open as the bar dips toward his chest"
+    },
+    {
+     "start": 20,
+     "end": 49,
+     "text": "Pax keeps pushing against the barbell with his eyes squeezed shut, quivering while sweat drops pop off his head"
+    }
+   ],
+   "props": [
+    "barbell",
+    "weight bench",
+    "shaker bottle"
+   ],
+   "prop_events": [],
+   "effects": [
+    "sweat drops"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "top-down view of Pax lying on the bench (overhead); ORB similarity f0->f48 scale 1.0000"
+  },
+  {
+   "start": 49,
+   "end": 71,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "shake",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a treadmill, an exercise bike, a weight bench and a dumbbell on the floor",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "x1",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "x2",
+     "screen": "right",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 49,
+     "end": 57,
+     "text": "Pax lies on the weight bench pushing the barbell up above him while {x1} and {x2} exercise on either side"
+    },
+    {
+     "start": 57,
+     "end": 62,
+     "text": "Pax loses his grip and the barbell drops onto his neck, his eyes bulging wide"
+    },
+    {
+     "start": 62,
+     "end": 71,
+     "text": "Pax lies pinned under the bar with his eyes squeezed shut, straining"
+    }
+   ],
+   "props": [
+    "barbell",
+    "weight bench",
+    "treadmill",
+    "exercise bike"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "gym poster"
+   ],
+   "travel": "none",
+   "notes": "camera locked f49-f70 (ORB similarity f49->f70: scale 1.0000, 0.0 px); the pull back starts at f71. x3 and x4 show only as edge slivers in f69-70; not listed | verification 2026-10-26: impact shake f58-61 (2-3 px at 540w); locked runs are 9 frames each"
+  },
+  {
+   "start": 71,
+   "end": 78,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pull_back",
+   "notes": "pull back while the two gym friends run in: scale 0.998 at f71, 0.990 at f72, settles at f78 (f78->f111 scale 1.0000)"
+  },
+  {
+   "start": 78,
+   "end": 112,
+   "boundary": "camera",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a treadmill, an exercise bike, a weight bench and a dumbbell on the floor",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "x3",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "x1",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "x4",
+     "screen": "right",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "x2",
+     "screen": "right",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 78,
+     "end": 84,
+     "text": "{x3} and {x4} reach toward the bench as the barbell lifts off Pax and settles back on the rack"
+    },
+    {
+     "start": 84,
+     "end": 90,
+     "text": "Pax sits up on the bench and wipes his brow with a flipper"
+    },
+    {
+     "start": 90,
+     "end": 100,
+     "text": "Pax sits on the bench smiling with his eyes closed while {x3} and {x4} stand beside him"
+    },
+    {
+     "start": 100,
+     "end": 112,
+     "text": "Pax rubs the top of his head with a flipper, grinning sheepishly"
+    }
+   ],
+   "props": [
+    "barbell",
+    "weight bench",
+    "treadmill",
+    "exercise bike"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "gym poster"
+   ],
+   "travel": "none",
+   "notes": "camera settles at f78 (ORB similarity f78->f111: scale 1.0000, 0.1 px); x1 is mostly hidden behind x3"
+  },
+  {
+   "start": 112,
+   "end": 138,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a weight rack, a kettlebell and a shaker bottle beside the bench",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 112,
+     "end": 120,
+     "text": "Pax sits on the bench wiping his brow with a flipper, his eyes closed in a small smile"
+    },
+    {
+     "start": 120,
+     "end": 126,
+     "text": "Pax swings a flipper out to the side with his eyes still closed"
+    },
+    {
+     "start": 126,
+     "end": 134,
+     "text": "Pax leans back laughing with his beak open and his flippers spread"
+    },
+    {
+     "start": 134,
+     "end": 138,
+     "text": "Pax leans forward and grabs the shaker bottle beside the bench"
+    }
+   ],
+   "props": [
+    "weight bench",
+    "kettlebell",
+    "shaker bottle"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "gym poster"
+   ],
+   "travel": "none",
+   "notes": ""
+  },
+  {
+   "start": 138,
+   "end": 197,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a treadmill, an exercise bike, a weight bench and a dumbbell on the floor",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "exits",
+     "exits_at": 179,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 152,
+       "screen": "left-center"
+      },
+      {
+       "frame": 162,
+       "screen": "left"
+      }
+     ]
+    },
+    {
+     "id": "x3",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "x1",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "x4",
+     "screen": "right",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "x2",
+     "screen": "right",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 138,
+     "end": 146,
+     "text": "Pax hops down off the bench clutching the shaker bottle and lands on his feet"
+    },
+    {
+     "start": 146,
+     "end": 179,
+     "text": "Pax waddles away to the left past {x3}, hugging the bottle, until he is out of view"
+    },
+    {
+     "start": 179,
+     "end": 197,
+     "text": "{x3} and {x4} stand beside the empty bench while {x1} and {x2} stay on their machines"
+    }
+   ],
+   "props": [
+    "shaker bottle",
+    "weight bench",
+    "treadmill",
+    "exercise bike"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "gym poster"
+   ],
+   "travel": "exits",
+   "notes": "Pax visible f138-178 (41 of 59 frames); last 18 frames show only the side characters"
+  },
+  {
+   "start": 197,
+   "end": 298,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with a cream couch and a yellow shell-shaped cushion",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 197,
+     "end": 253,
+     "text": "Pax lies on his back across Polly's lap with a tear in his eye, waving a flipper in the air while Polly cradles his head"
+    },
+    {
+     "start": 253,
+     "end": 257,
+     "text": "Pax pops his eyes wide open and pulls his flippers to his chest"
+    },
+    {
+     "start": 257,
+     "end": 265,
+     "text": "Pax rolls over onto his side, burying his face against Polly"
+    },
+    {
+     "start": 265,
+     "end": 280,
+     "text": "Pax lies on his side across Polly's lap sobbing with his eyes squeezed shut while Polly rests a flipper on his head with worried brows"
+    },
+    {
+     "start": 280,
+     "end": 298,
+     "text": "Pax opens his teary eyes and looks up while Polly keeps a flipper on his head and holds her other flipper out to the side"
+    }
+   ],
+   "props": [
+    "couch"
+   ],
+   "prop_events": [],
+   "effects": [
+    "tears"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "verification pass 2 (verify2_report_2): motion_hint frames 255/275 are Pax rolling over: compare 197/281 shows couch and cushion edges black; the stability dip after f253 is Pax covering couch edges; beat 265-298 says Pax sobs 'with tears on his face' and Polly 'lifts a flipper': f265-279 his eyes are squeezed shut with no tear drops, tears only appear when he opens his eyes at ~f281; Polly rests one flipper on top of his head from f266"
+  }
+ ]
+}

@@ -1,0 +1,197 @@
+{
+ "skit": "iteration_1/30_videos/2D_PP_Disaster_Base.mp4",
+ "frames": 275,
+ "fps": 24,
+ "curated_by": "curator-00",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "DISASTER",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a living room with a cream couch against a plain pale wall"
+  },
+  "s2": {
+   "kind": "set",
+   "desc": "a dim living room lit only by two candles on a glass coffee table"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 24,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "push_in",
+   "notes": "exterior insert: igloo village in a snowstorm, no lead; slow push-in (ORB scale 1.046 by f23)"
+  },
+  {
+   "start": 24,
+   "end": 66,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "locked shot of Pax (beige hoodie, holding a teal TV remote) and Polly (purple hoodie) under a patchwork blanket on the couch, but the coffee table holds two mugs drawn with Pax's and Polly's faces (a navy-ish penguin-face mug and a rose penguin-face mug) in view the whole shot = copies of the leads. Dropped conservatively; flag to lead."
+  },
+  {
+   "start": 66,
+   "end": 91,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "push_in",
+   "notes": "exterior insert: igloo under a blazing sun (heat wave), no lead; slow push-in (ORB scale 1.036 by f90)"
+  },
+  {
+   "start": 91,
+   "end": 131,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a wall air conditioner hung with icicles, an electric fan, a round window onto a blazing sun and a glass coffee table with drinks in front",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 91,
+     "end": 106,
+     "text": "Polly pours lemonade from a glass jug into a glass on the table while Pax sits on the couch eating from a bowl with a spoon"
+    },
+    {
+     "start": 106,
+     "end": 121,
+     "text": "Polly sets the jug down and smiles at Pax while he keeps spooning from his bowl"
+    },
+    {
+     "start": 121,
+     "end": 131,
+     "text": "Polly picks up a glass of lemonade and holds it out toward Pax as he looks over at her"
+    }
+   ],
+   "props": [
+    "glass jug of lemonade",
+    "glasses",
+    "bowl and spoon",
+    "electric fan",
+    "air conditioner",
+    "glass coffee table"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "hard cuts at f91 and f131; locked (ORB 0.2 px / scale 1.0001; couch and table edges black in compare 91/130). Ice-cream tub on the table has a cone picture on it (packaging, not a lead)."
+  },
+  {
+   "start": 131,
+   "end": 148,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "push_in",
+   "notes": "exterior insert: dark igloo in the rain with a lightning flash at f140-141 (also an effect), no lead; slow push-in"
+  },
+  {
+   "start": 148,
+   "end": 194,
+   "boundary": "cut",
+   "keep": false,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with the cream couch behind them and playing cards scattered on the floor in front",
+   "time": "night",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 148,
+     "end": 158,
+     "text": "Pax and Polly sit on the floor facing each other holding playing cards while Polly turns her head toward Pax"
+    },
+    {
+     "start": 158,
+     "end": 165,
+     "text": "Pax closes his eyes and laughs while Polly holds up her cards"
+    },
+    {
+     "start": 165,
+     "end": 194,
+     "text": "Polly talks with her beak open and swings her free flipper while Pax listens with a wide smile, holding his cards up"
+    }
+   ],
+   "props": [
+    "playing cards",
+    "candles",
+    "glass coffee table"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "hard cuts at f148 and f194; locked (ORB 0.2 px; couch, candles and cards black in compare 148/193). Blackout scene: whole room dim grey, the leads softly shaded by candlelight (time night). Kept as an in-world lighting setup, not a colour-wash effect - flagged to lead. Round window at the top right shows rain. | verification pass 2 (verify2_report_1): verification2 2026-10-26: the playing cards on the floor (whole span) carry small pictures of the leads: a pink-backed penguin (Polly) on the cream card and a pink + blue penguin pair (Pax and Polly) on the red card; checked at full resolution f150/f175. Also a whole-room dim lighting setup (previously flagged).",
+   "drop_reason": "lead_copy"
+  },
+  {
+   "start": 194,
+   "end": 223,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "push_in",
+   "notes": "exterior insert: igloo under the northern lights (storyboard's UFO beat was replaced by an aurora), no lead; slow push-in (ORB scale 1.05 by f222)"
+  },
+  {
+   "start": 223,
+   "end": 275,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pull_back",
+   "notes": "Pax and Polly seen from outside through a round cross-barred window; slow pull-back (ORB scale 0.957 by f274), and the aurora reflection washes purple and green colour over both leads (also an effect)"
+  }
+ ]
+}

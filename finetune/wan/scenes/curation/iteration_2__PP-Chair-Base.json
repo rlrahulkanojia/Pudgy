@@ -1,0 +1,179 @@
+{
+ "skit": "iteration_2/72_videos/PP-Chair-Base.mp4",
+ "frames": 223,
+ "fps": 24,
+ "curated_by": "pilot (main session); corrected after curator-01 and verifier set 2",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "CHAIR",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a clothes shop drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 86,
+   "boundary": "start",
+   "keep": false,
+   "camera": "push_in",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with racks of hanging clothes behind them and a table of folded clothes in the corner",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 62,
+     "text": "Polly flips through the clothes hanging on the rack while Pax stands beside her holding several shopping bags, glancing around"
+    },
+    {
+     "start": 62,
+     "end": 86,
+     "text": "Polly pulls a top off the rack and holds it up to look at it while Pax closes his eyes with a tired smile"
+    }
+   ],
+   "props": [
+    "shopping bags",
+    "clothes"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "slow push-in through the whole shot: scale +0.3% per 10 frames, furniture edges doubled in compare 0/85 (found by curator-01; the pilot had wrongly kept it)",
+   "drop_reason": "camera_move"
+  },
+  {
+   "start": 86,
+   "end": 115,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 86,
+     "end": 115,
+     "text": "Pax, holding his shopping bags, opens his eyes and gazes ahead with shining, teary eyes and an open-beaked smile"
+    }
+   ],
+   "props": [
+    "shopping bags"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "keep12 is low here because Pax fills the frame and moves; the background is plain, camera locked | verification 2026-10-26: end 136 -> 115: the ARCTIZIA bag's printed Pax-style top-hat penguin comes into view f116-122"
+  },
+  {
+   "start": 115,
+   "end": 136,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "Pax-style top-hat penguin print on the ARCTIZIA bag f116-122, then Pax exits; f129-135 empty (verification 2026-10-26)"
+  },
+  {
+   "start": 136,
+   "end": 168,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "Pax carries in the ARCTIZIA bag with the Pax-style top-hat penguin print, visible f141-163 (verification 2026-10-26)"
+  },
+  {
+   "start": 168,
+   "end": 223,
+   "boundary": "same_shot",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a round padded yellow bench in front of shelves of folded clothes, and a table of folded clothes in the foreground",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 168,
+     "end": 180,
+     "text": "Pax turns around to face forward with his eyes closed, a small red purse hanging from his fin"
+    },
+    {
+     "start": 180,
+     "end": 196,
+     "text": "Pax hops backward up onto the padded bench and sits on its edge with his eyes closed"
+    },
+    {
+     "start": 196,
+     "end": 223,
+     "text": "Pax flops back across the bench with his eyes closed and a blissful smile, resting"
+    }
+   ],
+   "props": [
+    "shopping bags",
+    "red purse",
+    "padded bench"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "verification 2026-10-26: start 136 -> 168: bag print visible f141-163"
+  }
+ ]
+}

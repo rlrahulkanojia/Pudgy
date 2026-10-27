@@ -1,0 +1,25 @@
+{
+ "skit": "iteration_2/72_videos/PP-Jump-Base.mp4",
+ "frames": 197,
+ "fps": 24,
+ "curated_by": "curator-b2",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "JUMP",
+ "cast": {
+  "polly": {"kind": "lead"}
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {"kind": "flat", "desc": "an igloo ceiling of curved ice blocks seen from below"}
+ },
+ "spans": [
+  {
+   "start": 0, "end": 156, "boundary": "start", "keep": false, "drop_reason": "effect", "camera": "other",
+   "notes": "Fly-in effect for the whole shot: Polly starts as a small dark silhouette in front of a bright rotating light burst and grows toward the viewer with flippers spread (slow motion fall). She is drawn backlit the whole time (grey belly, dark plum body, rim light), not the normal flat Pudgy colours. Shot_review flagged it 'check'; v4 kept it as a push-in."
+  },
+  {
+   "start": 156, "end": 197, "boundary": "transition", "keep": false, "drop_reason": "transition", "camera": "other",
+   "notes": "Polly fills the picture as an extreme close-up while the whole image darkens into a fade to black (fully black from about f186)"
+  }
+ ]
+}

@@ -1,0 +1,344 @@
+{
+ "skit": "iteration_1/30_videos/2D_PP_TirePressure_Base.mp4",
+ "frames": 439,
+ "fps": 24,
+ "curated_by": "curator-07",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "TIRE PRESSURE",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "a black necktie"
+ },
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a snowy yard in front of a round ice-block igloo with a wooden door, with pine trees on the hills behind"
+  },
+  "s2": {
+   "kind": "set",
+   "desc": "the driver's seat of a red open-top car parked among snowy hills"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 26,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 18,
+     "text": "Polly glides the red car on skis up beside the igloo while Pax waits at the door holding his briefcase"
+    },
+    {
+     "start": 18,
+     "end": 26,
+     "text": "Polly stops the car and turns in her seat to climb out while Pax watches"
+    }
+   ],
+   "props": [
+    "red car on skis",
+    "briefcase"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "clouds drift slowly; igloo and trees locked. Polly sits in the car, lower body hidden by it"
+  },
+  {
+   "start": 26,
+   "end": 88,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "static, Polly walks in with bags, hands Pax the keys and kisses him (hearts). The keys hang on a keychain with a small Polly figure and a strap reading her name, visible in Polly's or Pax's flipper from about f40 to f87. Dropped conservatively as a lead copy; otherwise a good two-lead span"
+  },
+  {
+   "start": 88,
+   "end": 150,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with the dashboard and steering wheel in front of him and pine trees on the hills behind",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 88,
+     "end": 96,
+     "text": "Pax sits squeezed into the driver's seat and pulls the car door shut beside him"
+    },
+    {
+     "start": 96,
+     "end": 122,
+     "text": "Pax squirms with his eyes squeezed shut, pressed up against the steering wheel"
+    },
+    {
+     "start": 122,
+     "end": 140,
+     "text": "Pax leans over to his side and peers down beside the seat with a worried look"
+    },
+    {
+     "start": 140,
+     "end": 150,
+     "text": "Pax sits up, reaches back with a flipper and shoves the seat backward"
+    }
+   ],
+   "props": [
+    "red open-top car",
+    "steering wheel"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "lower body hidden by the car door | verification pass 2 (verify3_report_1): Beat 122-140 says Pax 'peers back over his shoulder at the seat behind him'. From f124 to f140 he actually leans over to his left side and looks down beside the seat with a worried face (his head is turned forward and down, away from the seat back). Meanwhile the seat slides back a little (f133-137).; In beat 140-150, Pax first sits up with his eyes closed (f142-143) and then reaches back over the"
+  },
+  {
+   "start": 150,
+   "end": 174,
+   "boundary": "cut",
+   "keep": false,
+   "camera": "static",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with the dashboard and steering wheel in front of him and pine trees on the hills behind",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 150,
+     "end": 157,
+     "text": "Pax leans back in the roomier seat with his flippers spread wide and a pleased look"
+    },
+    {
+     "start": 157,
+     "end": 174,
+     "text": "Pax turns to face the steering wheel and reaches down toward the ignition"
+    }
+   ],
+   "props": [
+    "red open-top car",
+    "steering wheel"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "jump cut at f150 (seat and Pax snap back), same camera. A speck-sized keychain charm shows by the ignition at f173 only | verification 2026-10-26: Polly keychain charm by the ignition f169-173, recognisable; remaining [150,169) is 19 frames",
+   "drop_reason": "lead_copy"
+  },
+  {
+   "start": 174,
+   "end": 190,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "insert: key in the ignition with a Polly keychain figure and a name strap (lead copy, in-world text); also too short"
+  },
+  {
+   "start": 190,
+   "end": 193,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "3 frames of Pax at the wheel before a pose jump at f193"
+  },
+  {
+   "start": 193,
+   "end": 233,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "verification pass 2 (verify2_report_5): Polly keychain charm (pink penguin figure with tuft and name strap) hangs by the steering-wheel hub, recognisable f193-217 and again f229-232; covered by Pax's flipper from f233. Same charm as [150,174) and [174,190)."
+  },
+  {
+   "start": 233,
+   "end": 274,
+   "boundary": "same_shot",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with the dashboard and steering wheel in front of him and pine trees on the hills behind",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 233,
+     "end": 250,
+     "text": "Pax stretches a flipper out and presses at the dashboard controls as the spray dies down"
+    },
+    {
+     "start": 250,
+     "end": 274,
+     "text": "Pax sits still and stares at the dashboard with wide eyes, his tie hanging down"
+    }
+   ],
+   "props": [
+    "steering wheel",
+    "windshield wipers"
+   ],
+   "prop_events": [],
+   "effects": [
+    "motion lines"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "pose jump at f193 (same camera). Washer spray and wind lines are drawn in-world; sky, hills and car body locked (no shake). The Polly keychain charm shows as a speck by the wheel hub around f194-f200 | verification pass 2 (verify2_report_5): lead_copy: the Polly keychain charm (pink penguin with tuft, eyes and a white name strap) hangs by the steering-wheel hub. It is clearly recognisable f193-217 (full-res crops), hidden by Pax's flipper f218-228, peeks again f229-232, and is covered from f233 to the end. This is the same charm that made [150,174) and [174,190) lead_copy. The curator's note calls it a speck, but under the 2026-10-26"
+  },
+  {
+   "start": 274,
+   "end": 314,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "dashboard insert with blinking warning lights (f274-f275 settle in)"
+  },
+  {
+   "start": 314,
+   "end": 360,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with the dashboard and steering wheel in front of him and pine trees on the hills behind",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 314,
+     "end": 320,
+     "text": "Pax grips the steering wheel and stares ahead"
+    },
+    {
+     "start": 320,
+     "end": 337,
+     "text": "Pax lets his head drop forward onto the steering wheel with his eyes shut"
+    },
+    {
+     "start": 337,
+     "end": 344,
+     "text": "Pax lifts his head and stares ahead blankly"
+    },
+    {
+     "start": 344,
+     "end": 352,
+     "text": "Pax turns away toward the back of his seat"
+    },
+    {
+     "start": 352,
+     "end": 360,
+     "text": "Pax turns back holding his black briefcase against his chest"
+    }
+   ],
+   "props": [
+    "steering wheel",
+    "briefcase"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": ""
+  },
+  {
+   "start": 360,
+   "end": 439,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "other",
+   "notes": "slow continuous drift / push over the whole shot (trees and horizon shift every frame); Pax climbs out, the car smokes and catches fire"
+  }
+ ]
+}

@@ -1,0 +1,202 @@
+{
+ "skit": "iteration_1/30_videos/2D_PP_Drinker_Base.mp4",
+ "frames": 239,
+ "fps": 24,
+ "curated_by": "curator-10",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "DRINKER",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a dining room drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 37,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a round cream table and a wooden chair",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 6,
+     "text": "Polly takes a tiny sip from a small glass of water with her eyes closed"
+    },
+    {
+     "start": 6,
+     "end": 16,
+     "text": "Polly lowers the glass and sets it down on the table next to her book"
+    },
+    {
+     "start": 16,
+     "end": 32,
+     "text": "Polly sits at the round table with her flippers resting by the closed book, glancing down at it"
+    },
+    {
+     "start": 32,
+     "end": 37,
+     "text": "Polly picks the book up off the table and starts to open it"
+    }
+   ],
+   "props": [
+    "small glass of water",
+    "book"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked through f36 (table and chair edges identical); the slow push-in starts at f37"
+  },
+  {
+   "start": 37,
+   "end": 145,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "zoom_in",
+   "notes": "slow push-in toward the glass for the whole stretch, with three dissolves inside it (montage: Polly reading, Polly with a plate of food, Polly with an iced coffee cup); never locked"
+  },
+  {
+   "start": 145,
+   "end": 203,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a round cream table holding two big water bottles",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 145,
+     "end": 152,
+     "text": "Pax lifts a big water bottle off the table up toward his beak"
+    },
+    {
+     "start": 152,
+     "end": 183,
+     "text": "Pax tips his head back with his eyes closed and chugs from the bottle"
+    },
+    {
+     "start": 183,
+     "end": 187,
+     "text": "Pax sets the bottle back down on the table"
+    },
+    {
+     "start": 187,
+     "end": 194,
+     "text": "Pax wipes his beak with his flipper as his eyes blink open"
+    },
+    {
+     "start": 194,
+     "end": 203,
+     "text": "Pax lowers his flipper and turns to look at the bottles standing beside him on the table"
+    }
+   ],
+   "props": [
+    "big water bottles"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked 145-202 (chair and table edges identical vs f160); f203 starts the quick pull-back | verification pass 2 (verify2_report_5): Beat 187-194 says Pax wipes his beak 'with his eyes squeezed shut': his eyes are shut only f183-188 and open from f189 (step-1).; Beat 194-203 says he 'sits back': he lowers the flipper and turns his head and body toward the bottles on his right, leaning slightly forward, not back.; Locked (chair and table black 145/170/190/202). The sticker bottle from 208-239 is not in this frame (checked the ri"
+  },
+  {
+   "start": 203,
+   "end": 208,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "zoom_out",
+   "notes": "fast pull-back from Pax to the wide view of the table; settles at f208"
+  },
+  {
+   "start": 208,
+   "end": 239,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a round cream table between them crowded with empty water bottles",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 208,
+     "end": 239,
+     "text": "Pax tips a huge water jug up to his beak and gulps from it while Polly sits across the table beside her small glass and iced coffee, blinking"
+    }
+   ],
+   "props": [
+    "water jug",
+    "water bottles",
+    "small glass of water",
+    "iced coffee cup with a straw"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "the storyboard's headache beat is not in the footage; Polly only sits and blinks | verification pass 2 (verify2_report_5): Water bottle at the centre of the table carries a printed sticker of Polly stacked on Pax, visible the whole span (full-res crop f220)."
+  }
+ ]
+}

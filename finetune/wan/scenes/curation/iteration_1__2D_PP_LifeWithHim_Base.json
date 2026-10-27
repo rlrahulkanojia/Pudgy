@@ -1,0 +1,369 @@
+{
+ "skit": "iteration_1/30_videos/2D_PP_LifeWithHim_Base.mp4",
+ "frames": 366,
+ "fps": 24,
+ "curated_by": "curator-05",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "LIFE WITH HIM",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a supermarket aisle of snack shelves drawn as a band across a plain pale background"
+  },
+  "s2": {
+   "kind": "set",
+   "desc": "a small red open-top car on a snowy country road, with snowy hills and pine trees under a peach-coloured sky"
+  },
+  "s3": {
+   "kind": "flat",
+   "desc": "a living room drawn on a plain pale background"
+  },
+  "s4": {
+   "kind": "set",
+   "desc": "a bedroom with a cream wooden bed and a bedside lamp"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 57,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with shelves of boxed snacks and candy behind her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 18,
+     "text": "Polly holds a shopping basket in one fin and looks closely at a small red candy packet in the other"
+    },
+    {
+     "start": 18,
+     "end": 26,
+     "text": "Polly reaches out and puts the candy packet back on the shelf"
+    },
+    {
+     "start": 26,
+     "end": 50,
+     "text": "Polly sways gently with her eyes closed and a small smile, one fin raised in the air"
+    },
+    {
+     "start": 50,
+     "end": 57,
+     "text": "Polly lowers her fin, opens her eyes and looks ahead with a slightly glum face"
+    }
+   ],
+   "props": [
+    "shopping basket",
+    "candy packet",
+    "snack shelves"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "snack packaging"
+   ],
+   "travel": "none",
+   "notes": "camera locked (compare 0/56: shelves all black). Same shelf background as the next shot, which is a hard cut at f57."
+  },
+  {
+   "start": 57,
+   "end": 106,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a shopping cart full of groceries between them and shelves of candy behind",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 57,
+     "end": 81,
+     "text": "Pax grabs candy packets off the shelf and tosses them into the cart while Polly bounces with her fins pressed to her cheeks"
+    },
+    {
+     "start": 81,
+     "end": 106,
+     "text": "Pax keeps scooping more candy packets into the cart while Polly hops in place, beaming wide-eyed"
+    }
+   ],
+   "props": [
+    "shopping cart",
+    "candy packets",
+    "snack shelves"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "snack packaging"
+   ],
+   "travel": "none",
+   "notes": "camera locked (compare 57/105: shelf edges black). The candy grab is a short animation loop repeated through the shot."
+  },
+  {
+   "start": 106,
+   "end": 156,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "effect",
+   "camera": "static",
+   "setting": "s4",
+   "notes": "dark grey vignette over the whole picture (storyboard: anxiety attack, vision blurring) from the cut at f106; Pax slides in from the left at ~f137 and wraps a blanket around Polly; the vignette turns into a light glow at f151 and its last faint trace is gone at f156 (diff 155 vs 160 still shows it at the corners)."
+  },
+  {
+   "start": 156,
+   "end": 176,
+   "boundary": "after_transition",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "setting": "s4",
+   "notes": "clean bedroom after the vignette, Pax hugging Polly under a blanket with a heart above them: 20 frames, one short of f21."
+  },
+  {
+   "start": 176,
+   "end": 219,
+   "boundary": "cut",
+   "keep": false,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with grocery bags on the seat beside her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 176,
+     "end": 219,
+     "text": "Polly drives alone with both fins on the wheel, bobbing her head from side to side with a calm face while the snowy scenery drifts slowly behind the car"
+    }
+   ],
+   "props": [
+    "car",
+    "steering wheel",
+    "grocery bags"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "The car and Polly are locked in place (compare 176/218: car edges black; ORB on the car body: scale 1.0000, 0 px). The scenery layer behind the car drifts slowly to suggest driving (clouds slide left, the pine tree creeps right ~10 px at 540 wide over 43 frames, the hill line tilts slightly); no pan or zoom of the frame. Kept as static with the drift described in the beat - judgement call. f219 is a hard cut on the same car background (profile missed it: only the characters change). | verification pass 2 (verify2_report_4): tracking/driving shot: the car and Polly are locked but the scenery layer behind them slides and shrinks the whole span (ORB on the left trees f176->f218: scale 0.951, ~20 px at 540 wide; compare 176/218 doubled tree and hill edges, a new tree enters at the right). Dropped like the tracking shot in Survival [0,18).",
+   "drop_reason": "camera_move"
+  },
+  {
+   "start": 219,
+   "end": 244,
+   "boundary": "cut",
+   "keep": false,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 219,
+     "end": 231,
+     "text": "Polly, holding a box of donuts in the passenger seat, feeds a donut into Pax's open beak as he drives"
+    },
+    {
+     "start": 231,
+     "end": 244,
+     "text": "Pax chews with crumbs on his face while Polly munches beside him with a happy closed-eye smile, the scenery drifting behind them"
+    }
+   ],
+   "props": [
+    "car",
+    "steering wheel",
+    "box of donuts",
+    "donut"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "donut box label"
+   ],
+   "travel": "none",
+   "notes": "car locked (compare 219/243: car edges black); the scenery layer behind drifts slowly as in the previous span. | verification pass 2 (verify2_report_4): tracking/driving shot: car and leads locked but the scenery layer behind slides and shrinks through the span (ORB on the left trees f219->f243: scale 0.970, ~11 px shift at 540 wide; compare 219/243 doubled tree and hill edges). Same as [176,219).",
+   "drop_reason": "camera_move"
+  },
+  {
+   "start": 244,
+   "end": 287,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with a cream sofa, a glass coffee table and the soft edge of a teal armchair in the foreground",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 244,
+     "end": 258,
+     "text": "Polly sits alone on the sofa holding open a teal book, reading quietly"
+    },
+    {
+     "start": 258,
+     "end": 271,
+     "text": "Polly lifts a page of the book with her fin and turns it over"
+    },
+    {
+     "start": 271,
+     "end": 287,
+     "text": "Polly keeps reading the open book on her lap, holding it with both fins"
+    }
+   ],
+   "props": [
+    "sofa",
+    "book",
+    "coffee table"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked (compare 244/286: only Polly's head changes). The armchair in the foreground is drawn soft, not a blur effect. | verification pass 2 (verify2_report_4): beats omit an action: Polly lifts and turns a page of the book f258-271 (page rises f259-265, flips over f266-270); the beats only say she reads quietly / rests her fin on the pages"
+  },
+  {
+   "start": 287,
+   "end": 366,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with a cream sofa, a bowl of snacks on a glass coffee table and the soft edge of a teal armchair in the foreground",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 287,
+     "end": 344,
+     "text": "Polly and Pax sit side by side on the sofa gripping game controllers, staring ahead as they press the buttons"
+    },
+    {
+     "start": 344,
+     "end": 351,
+     "text": "Pax closes his eyes with a grin and swings one fin out while Polly keeps playing"
+    },
+    {
+     "start": 351,
+     "end": 357,
+     "text": "Polly and Pax lower their controllers and turn toward each other"
+    },
+    {
+     "start": 357,
+     "end": 366,
+     "text": "Polly and Pax lean in and press their faces together, snuggling cheek to cheek"
+    }
+   ],
+   "props": [
+    "sofa",
+    "game controllers",
+    "bowl of snacks",
+    "coffee table"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked (compare 287/365: sofa and table black). The storyboard's speech bubbles are not drawn in this cut; no overlay anywhere in the span. Hard cut at f287 on the same room background."
+  }
+ ]
+}

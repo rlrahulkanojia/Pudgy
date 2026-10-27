@@ -1,0 +1,102 @@
+{
+ "skit": "iteration_2/72_videos/PP-Test-Base.mp4",
+ "frames": 253,
+ "fps": 24,
+ "curated_by": "curator-03",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "TEST",
+ "cast": {
+  "pax": {"kind": "lead"},
+  "polly": {"kind": "lead"}
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {"kind": "flat", "desc": "a home kitchen with an arched doorway, drawn on a plain pale grey background"},
+  "s2": {"kind": "flat", "desc": "a dining nook with a round table and wooden chairs, drawn on a plain pale grey background"}
+ },
+ "spans": [
+  {
+   "start": 0, "end": 19, "boundary": "start", "keep": false, "drop_reason": "camera_move", "camera": "other",
+   "notes": "opening drift: the background slides diagonally and settles at f19 (patch tracking on the arch and the counter)"
+  },
+  {
+   "start": 19, "end": 55, "boundary": "camera", "keep": true, "camera": "static",
+   "framing": "medium wide", "angle": "eye level", "setting": "s1",
+   "view": "with a cream couch seen through the arch behind them and a turquoise kitchen counter on the right",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "polly", "screen": "left-center", "presence": "full", "outfit": []},
+    {"id": "pax", "screen": "right-center", "presence": "full", "outfit": []}
+   ],
+   "beats": [
+    {"start": 19, "end": 28, "text": "Polly holds a red rose out toward Pax with a shy smile while he stands facing her with a stern frown"},
+    {"start": 28, "end": 35, "text": "Pax takes the rose from Polly's outstretched fin"},
+    {"start": 35, "end": 43, "text": "Pax leans back with his eyes squeezed shut and flings the rose away while Polly clasps her fins together"},
+    {"start": 43, "end": 55, "text": "Pax hops and lands with his eyes closed as the rose drops to the floor, while Polly watches with her fins at her chest"}
+   ],
+   "props": ["red rose", "kitchen counter", "couch"], "prop_events": [], "effects": ["blush marks"], "overlays": [],
+   "in_world_text": ["logo on a mug"], "travel": "none",
+   "notes": "arch and counter tracked: no shift f19-54 (compare 19/54 arch edges black)"
+  },
+  {
+   "start": 55, "end": 106, "boundary": "cut", "keep": false, "drop_reason": "camera_move", "camera": "other",
+   "notes": "Pax alone by a round table: slow pan (compare 56/77 doubled table edges), then a zoom out f78-92 revealing Polly beside him, then a small drift that settles at f106 (chair patch tracked)"
+  },
+  {
+   "start": 106, "end": 159, "boundary": "camera", "keep": true, "camera": "static",
+   "framing": "medium wide", "angle": "eye level", "setting": "s2", "view": "",
+   "time": "day", "size_change": true,
+   "characters": [
+    {"id": "pax", "screen": "left-center", "presence": "exits", "exits_at": 135, "outfit": [],
+     "moves": [{"frame": 126, "screen": "center"}]},
+    {"id": "polly", "screen": "center", "presence": "full", "outfit": [],
+     "moves": [{"frame": 116, "screen": "left-center"}]}
+   ],
+   "beats": [
+    {"start": 106, "end": 120, "text": "Pax spins all the way around on the spot with a fin raised while Polly reaches a fin out toward him"},
+    {"start": 120, "end": 135, "text": "Pax flips head over heels toward the front and slides away out of view to the right"},
+    {"start": 135, "end": 146, "text": "Polly lowers her fin and glances to the side with a puzzled look"},
+    {"start": 146, "end": 159, "text": "Polly stands alone by the table, blinking and looking around in confusion"}
+   ],
+   "props": ["round table", "wooden chairs"], "prop_events": [], "effects": [], "overlays": [],
+   "in_world_text": [], "travel": "exits",
+   "notes": "keep12 low from Pax's big flips; right chair tracked with zero shift f106-158 (compare 106/120, 120/158 chair edges black). size_change true: Pax tumbles toward the front of the picture"
+  },
+  {
+   "start": 159, "end": 174, "boundary": "cut", "keep": false, "drop_reason": "too_short", "camera": "static",
+   "notes": "15-frame close view of Polly with fins clasped, swaying happily"
+  },
+  {
+   "start": 174, "end": 178, "boundary": "camera", "keep": false, "drop_reason": "camera_move", "camera": "zoom_out",
+   "notes": "fast zoom out from Polly"
+  },
+  {
+   "start": 178, "end": 184, "boundary": "cut", "keep": false, "drop_reason": "camera_move", "camera": "other",
+   "notes": "new two-shot in the kitchen; background still sliding, settles at f184 (arch patch tracked)"
+  },
+  {
+   "start": 184, "end": 205, "boundary": "camera", "keep": true, "camera": "static",
+   "framing": "medium wide", "angle": "eye level", "setting": "s1",
+   "view": "with a cream couch seen through the arch behind them and a turquoise kitchen counter on the right",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "polly", "screen": "left-center", "presence": "full", "outfit": []},
+    {"id": "pax", "screen": "right-center", "presence": "full", "outfit": []}
+   ],
+   "beats": [
+    {"start": 184, "end": 205, "text": "Polly leans in toward Pax with her eyes closed and her fins stretched out as little hearts float up, while Pax holds her off with one fin, frowning"}
+   ],
+   "props": ["kitchen counter", "couch"], "prop_events": [], "effects": ["hearts", "blush marks"], "overlays": [],
+   "in_world_text": ["logo on a mug"], "travel": "none",
+   "notes": "ends at f205, before Pax pulls out the iFin (visible from f205) and shows its screen with a photo of Polly (f207-244)"
+  },
+  {
+   "start": 205, "end": 245, "boundary": "same_shot", "keep": false, "drop_reason": "lead_copy", "camera": "static",
+   "notes": "Pax pulls out the iFin (f205-206, back clearly iFin) and holds up its screen showing a lock-screen photo of Polly f207-244"
+  },
+  {
+   "start": 245, "end": 253, "boundary": "same_shot", "keep": false, "drop_reason": "too_short", "camera": "static",
+   "notes": "8 frames: Pax lowers the iFin and smiles with his eyes closed while Polly clasps her fins"
+  }
+ ]
+}

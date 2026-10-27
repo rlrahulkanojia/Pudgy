@@ -1,0 +1,340 @@
+{
+ "skit": "iteration_2/72_videos/PP-Cominghome-Base.mp4",
+ "frames": 275,
+ "fps": 24,
+ "curated_by": "curator-10",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "COMING HOME",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "a black necktie"
+ },
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a living room with a cream couch, a glass coffee table and an arched wooden front door, drawn on a plain pale grey background"
+  },
+  "s2": {
+   "kind": "set",
+   "desc": "an igloo house interior with curved ice-block walls"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 28,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "enters",
+     "enters_at": 6,
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 6,
+     "text": "Pax sits on the couch with his feet out, looking toward the closed front door"
+    },
+    {
+     "start": 6,
+     "end": 20,
+     "text": "Polly pushes the door open and stands in the doorway holding a small red purse, her eyes closed"
+    },
+    {
+     "start": 20,
+     "end": 28,
+     "text": "Polly opens her tired, drooping eyes while Pax looks over at her from the couch"
+    }
+   ],
+   "props": [
+    "couch",
+    "glass coffee table",
+    "front door",
+    "purse"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "enters",
+   "notes": "couch and table edges identical f0 vs f27"
+  },
+  {
+   "start": 28,
+   "end": 133,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a small white bench and an arched wooden front door",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 110,
+       "screen": "left-center"
+      }
+     ]
+    },
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "enters",
+     "enters_at": 30,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 44,
+       "screen": "center"
+      },
+      {
+       "frame": 72,
+       "screen": "right-center"
+      },
+      {
+       "frame": 110,
+       "screen": "left-center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 28,
+     "end": 44,
+     "text": "Polly stands by the open door holding a small red purse while Pax waddles in from the left toward her"
+    },
+    {
+     "start": 44,
+     "end": 68,
+     "text": "Pax takes the purse from Polly's flipper, leaning his face close to hers, and sets it on the bench behind them"
+    },
+    {
+     "start": 68,
+     "end": 78,
+     "text": "Pax steps around in front of Polly as the door swings shut behind him"
+    },
+    {
+     "start": 78,
+     "end": 86,
+     "text": "Pax leans in and presses his face against Polly's cheek"
+    },
+    {
+     "start": 86,
+     "end": 97,
+     "text": "Pax scoops Polly up into a tight hug, her feet lifted off the floor, both with eyes squeezed shut and blushing cheeks"
+    },
+    {
+     "start": 97,
+     "end": 133,
+     "text": "Pax holds Polly up in his flippers and shuffles to the left, both now looking ahead with open eyes and rosy cheeks"
+    }
+   ],
+   "props": [
+    "purse",
+    "bench",
+    "front door"
+   ],
+   "prop_events": [],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "v4 called this a slow pull-back; it is locked (wall, bench and door frame edges identical, also with low-threshold edges). The door swings shut around f74-80. The pair is partly cut off at the left edge in the last ~10 frames | verification 2026-10-26: beats [86,133) corrected"
+  },
+  {
+   "start": 133,
+   "end": 161,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right",
+     "presence": "enters",
+     "enters_at": 140,
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 133,
+     "end": 140,
+     "text": "Polly sits on the couch with her feet out, looking toward the closed front door"
+    },
+    {
+     "start": 140,
+     "end": 150,
+     "text": "Pax pushes the door open and stands in the doorway in a necktie, holding a black briefcase, his eyes closed"
+    },
+    {
+     "start": 150,
+     "end": 161,
+     "text": "Pax looks over at Polly with heavy, tired eyes while she watches him from the couch"
+    }
+   ],
+   "props": [
+    "couch",
+    "glass coffee table",
+    "front door",
+    "briefcase"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "enters",
+   "notes": "couch and table edges identical f133 vs f160"
+  },
+  {
+   "start": 161,
+   "end": 275,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a small white bench and an arched wooden front door",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ],
+     "moves": [
+      {
+       "frame": 250,
+       "screen": "left-center"
+      }
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "left",
+     "presence": "enters",
+     "enters_at": 172,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 186,
+       "screen": "left-center"
+      },
+      {
+       "frame": 262,
+       "screen": "left"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 161,
+     "end": 172,
+     "text": "Pax stands by the open door in his necktie with a black briefcase at his feet, his eyes drooping wearily"
+    },
+    {
+     "start": 172,
+     "end": 186,
+     "text": "Polly waddles in from the left with her flippers raised to her face in concern"
+    },
+    {
+     "start": 186,
+     "end": 218,
+     "text": "Polly reaches out a flipper to touch Pax's arm while he looks back at her"
+    },
+    {
+     "start": 218,
+     "end": 226,
+     "text": "Polly clasps her flippers together with blushing cheeks as Pax turns toward her"
+    },
+    {
+     "start": 226,
+     "end": 238,
+     "text": "Pax leans down and buries his face against Polly as she wraps him in a hug"
+    },
+    {
+     "start": 238,
+     "end": 250,
+     "text": "Pax and Polly hug tightly with their eyes shut, swaying together"
+    },
+    {
+     "start": 250,
+     "end": 275,
+     "text": "Pax and Polly open their eyes and keep hugging as they shuffle toward the left edge"
+    }
+   ],
+   "props": [
+    "briefcase",
+    "bench",
+    "front door"
+   ],
+   "prop_events": [],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "v4 called this a slow push-in; it is locked (bench and briefcase edges identical f165 vs f274). The door swings shut around f222-226. The pair is partly cut off at the left edge in the last ~12 frames | verification pass 2 (verify2_report_2): stability dip after f222 is the door swinging shut, bench edges stay put: locked; beat 238-275 'hug tightly with their eyes closed': eyes shut only f238-249; from f250 both have their eyes open (Pax gazing up, Polly teary) while they shuffle left; the end window [242,275) takes this beat; note: by f272-274 Polly is mostly out past the left edge and Pax half out; presence fields not changed (neithe"
+  }
+ ]
+}

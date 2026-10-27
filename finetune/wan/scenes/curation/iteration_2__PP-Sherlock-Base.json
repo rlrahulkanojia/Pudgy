@@ -1,0 +1,519 @@
+{
+ "skit": "iteration_2/72_videos/PP-Sherlock-Base.mp4",
+ "frames": 543,
+ "fps": 24,
+ "curated_by": "curator-01",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "SHERLOCK",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a bedroom with a yellow wooden bed, pale bedding, a duck-topped bedpost and a nightstand with a peach lamp, drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 64,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the duck-topped bedpost and the lamp behind him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 33,
+     "text": "Pax lies in bed with one flipper on the blanket edge, bobbing his head as he glances to the left with worried eyebrows"
+    },
+    {
+     "start": 33,
+     "end": 44,
+     "text": "Pax turns his face to the right and opens his beak, his eyes going wide"
+    },
+    {
+     "start": 44,
+     "end": 64,
+     "text": "Pax gazes to the right with wide worried eyes and his beak open, then holds still"
+    }
+   ],
+   "props": [
+    "blanket",
+    "bed"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "compare 0/63: bedpost, lamp and headboard black; global estimate identity | verification pass 2 (verify2_report_4): beat 1 says Pax's beak moves: at full resolution the beak stays closed f0-33 (only the head bobs in a ~7-frame rhythm); beat 2 says he tugs the blanket edge: the flipper only moves during the head turn (f33-43) and is pixel-still from f44; the whole figure is held still from ~f55 (frame diff < 0.2)"
+  },
+  {
+   "start": 64,
+   "end": 112,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the duck-topped bedpost and the lamp behind her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 64,
+     "end": 76,
+     "text": "Polly lies in bed and looks over to the left with wide eyes, holding {ifin}"
+    },
+    {
+     "start": 76,
+     "end": 98,
+     "text": "Polly raises one eyebrow and talks with a skeptical look, still holding the phone up"
+    },
+    {
+     "start": 98,
+     "end": 112,
+     "text": "Polly closes her eyes for a moment, then turns her head and looks down at the blanket over her"
+    }
+   ],
+   "props": [
+    "phone",
+    "blanket",
+    "bed"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 64,
+     "by": "polly",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "compare 64/111: background black; global estimate identity. Phone checked at full resolution: pale grey back, lenses, tuft = iFin"
+  },
+  {
+   "start": 112,
+   "end": 152,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "effect",
+   "camera": "push_in",
+   "notes": "noir close-up of Pax: the whole room dark with a bright band of light across his eyes (lighting effect), plus a slow push-in (~7%)"
+  },
+  {
+   "start": 152,
+   "end": 209,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the headboard, the duck-topped bedpost and the lamp behind them",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 152,
+     "end": 166,
+     "text": "Pax sits up beside Polly, eyeing her sideways with narrowed eyes while she holds {ifin}"
+    },
+    {
+     "start": 166,
+     "end": 176,
+     "text": "Pax swings a flipper across and knocks the phone out of Polly's flippers"
+    },
+    {
+     "start": 176,
+     "end": 184,
+     "text": "Polly squeezes her eyes shut as the phone flips up past her head"
+    },
+    {
+     "start": 184,
+     "end": 192,
+     "text": "Polly stares at Pax with wide eyes and an open beak while the phone flies off at the upper right"
+    },
+    {
+     "start": 192,
+     "end": 209,
+     "text": "Pax turns away from Polly and rolls onto his side, hauling the blanket over himself"
+    }
+   ],
+   "props": [
+    "phone",
+    "blanket",
+    "bed"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 152,
+     "by": "polly",
+     "is_ifin": true
+    },
+    {
+     "prop": "phone",
+     "event": "exits",
+     "frame": 190,
+     "by": "pax",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "compare 152/208: headboard, bedpost and lamp black (blanket edges move because Pax pulls it); global estimate identity. Storyboard says this is Pax imagining it, but it is drawn as normal full-frame footage (no thought bubble), so kept | verification pass 2 (verify2_report_4): beat 1 says Pax nods with his eyes closed: his eyes are open and narrowed, looking sideways at Polly, f152-165; beat 3 says the phone sails over the headboard and out at the left: it flips up past Polly's head f174-182 and exits at the UPPER RIGHT edge f186-190; Polly's eyes are squeezed shut f176-183 (not wide-eyed); she stares wide-eyed at Pax only from f184"
+  },
+  {
+   "start": 209,
+   "end": 230,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "close-up",
+   "angle": "high angle",
+   "setting": "s1",
+   "view": "with the pillow and the curve of the headboard around him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "partial",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 209,
+     "end": 215,
+     "text": "Pax twists over on the pillow, wrapping the blanket across himself"
+    },
+    {
+     "start": 215,
+     "end": 227,
+     "text": "Pax lies clutching the blanket to his chest with his eyes squeezed shut"
+    },
+    {
+     "start": 227,
+     "end": 230,
+     "text": "Pax keeps his eyes squeezed shut as the blanket starts to lift away from him"
+    }
+   ],
+   "props": [
+    "blanket",
+    "pillow"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "exactly 21 frames; compare 209/229: headboard and pillow edges black; global estimate 209->229 identity. f230 is the first frame of a fast pull-back (229->230 scale 0.94) | verification pass 2 (verify2_report_4): minor: in the last 3 frames (f227-229) the blanket starts lifting off Pax at the right, exposing his belly; the last beat says he lies clutching it. The span is exactly one 21-frame window, so every caption includes these frames"
+  },
+  {
+   "start": 230,
+   "end": 232,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pull_back",
+   "notes": "two-frame snap pull-back (the profile's cut candidates at f230/f231 are this move, not cuts)"
+  },
+  {
+   "start": 232,
+   "end": 249,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "17 frames: Pax lying on his side in bed with his flipper on the blanket, locked after the pull-back"
+  },
+  {
+   "start": 249,
+   "end": 278,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the duck-topped bedpost and the lamp behind her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 249,
+     "end": 262,
+     "text": "Polly lies buried under the blanket with only her head showing, her face turned down into the pillow"
+    },
+    {
+     "start": 262,
+     "end": 278,
+     "text": "Polly rolls toward the front under the blanket, pulling it snug around her, and rests with her eyes closed and a calm look"
+    }
+   ],
+   "props": [
+    "blanket",
+    "bed"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "compare 249/277: bedpost, lamp and headboard black; global estimate identity. Judgement: only Polly's head shows above the blanket, but it is clearly her (head, tuft, face), so kept rather than lead_hidden"
+  },
+  {
+   "start": 278,
+   "end": 297,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "19 frames: Pax sitting up on the mattress, then leaning forward"
+  },
+  {
+   "start": 297,
+   "end": 323,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_hidden",
+   "camera": "static",
+   "notes": "macro shot of the blanket edge and pillows with only the tips of Pax's flippers, then the blanket whipping past with motion lines; no lead body visible"
+  },
+  {
+   "start": 323,
+   "end": 341,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "18 frames: Pax standing on the bed tugging the blanket"
+  },
+  {
+   "start": 341,
+   "end": 363,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "wide",
+   "angle": "high angle",
+   "setting": "s1",
+   "view": "with the edge of the bed on the left, the nightstand and its lamp, and the corner of the room",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 348,
+       "screen": "right-center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 341,
+     "end": 348,
+     "text": "Polly is flung out of the bed and tumbles through the air past the nightstand"
+    },
+    {
+     "start": 348,
+     "end": 355,
+     "text": "Polly flies face-first into the corner of the room"
+    },
+    {
+     "start": 355,
+     "end": 363,
+     "text": "Polly slides down and lies slumped face-first against the wall on the floor"
+    }
+   ],
+   "props": [
+    "bed",
+    "nightstand"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "22 frames; compare 341/362: bed, nightstand and wall edges black; global estimate identity. Checked at full resolution: this is Polly herself, not a plush stand-in (storyboard suggested a plushie)"
+  },
+  {
+   "start": 363,
+   "end": 445,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "notes": "Pax peeks over the blanket, then wiggles content under it with a big smile; continuous slow push-in the whole shot (~0.1% scale per frame, +9% by f444, edges doubled in compare 363/444). No locked sub-span"
+  },
+  {
+   "start": 445,
+   "end": 458,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "effect",
+   "camera": "static",
+   "notes": "noir close-up of Pax again: dark room with a band of light across his eyes; 13 frames"
+  },
+  {
+   "start": 458,
+   "end": 467,
+   "boundary": "transition",
+   "keep": false,
+   "drop_reason": "transition",
+   "camera": "zoom_out",
+   "notes": "lighting dissolve from dark to bright (luma 93 -> 218 over f458-f461), two bright frames, then a snap zoom-out f464-f466 to the two-shot; f467 is the first locked frame (467->468 identity)"
+  },
+  {
+   "start": 467,
+   "end": 543,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the headboard, the duck-topped bedpost and the lamp behind them",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 467,
+     "end": 481,
+     "text": "Polly stares at Pax while he reaches over and weakly slaps {ifin}"
+    },
+    {
+     "start": 481,
+     "end": 491,
+     "text": "Pax pulls his flipper back and eyes Polly while she keeps hold of the phone"
+    },
+    {
+     "start": 491,
+     "end": 504,
+     "text": "Pax rolls away onto his side with his back to Polly, pulling the blanket up over himself"
+    },
+    {
+     "start": 504,
+     "end": 513,
+     "text": "Pax lies curled under the blanket while Polly looks at her phone"
+    },
+    {
+     "start": 513,
+     "end": 522,
+     "text": "Polly rolls onto her side away from Pax, dragging the blanket with her so it slides off him"
+    },
+    {
+     "start": 522,
+     "end": 533,
+     "text": "Pax lies uncovered on his side while Polly lies wrapped in the blanket with her phone"
+    },
+    {
+     "start": 533,
+     "end": 543,
+     "text": "Pax turns his head and looks back over his shoulder with a blank stare"
+    }
+   ],
+   "props": [
+    "phone",
+    "blanket",
+    "bed"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 467,
+     "by": "polly",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "compare 467/542: headboard, bedpost and lamp black; global estimate 467->500 and 500->542 identity"
+  }
+ ]
+}

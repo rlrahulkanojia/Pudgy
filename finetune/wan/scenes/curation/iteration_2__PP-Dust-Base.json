@@ -1,0 +1,377 @@
+{
+ "skit": "iteration_2/72_videos/PP-Dust-Base.mp4",
+ "frames": 400,
+ "fps": 24,
+ "curated_by": "curator-10",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "DUST",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "an empty space with a plain pale grey background"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "a kitchen with a long curved teal counter and an arched doorway, drawn on a plain pale grey background"
+  },
+  "s3": {
+   "kind": "flat",
+   "desc": "a dining room with a round cream table and wooden chairs, drawn on a plain pale grey background"
+  },
+  "s4": {
+   "kind": "flat",
+   "desc": "a living room with a cream couch and a round window, drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 23,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 9,
+     "text": "Pax stands hunched with his eyes squeezed shut, clutching a broom and a dustpan close to his body"
+    },
+    {
+     "start": 9,
+     "end": 23,
+     "text": "Pax springs upright and holds the dustpan and broom out wide on either side, glaring with a determined frown"
+    }
+   ],
+   "props": [
+    "broom",
+    "dustpan"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "plain background, so the lock is judged from Pax's shadow and props keeping their size (no zoom); only a small idle bob f10-f22 | verification 2026-10-26: snap push-in ~6% f9-11: shadow and feet move down ~27 px and grow; no locked run of 21+"
+  },
+  {
+   "start": 23,
+   "end": 52,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "notes": "over-the-shoulder view past Pax's dark silhouette pushing in to a dust pile by the counter; moving every frame; no lead after ~f31"
+  },
+  {
+   "start": 52,
+   "end": 100,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a small pile of dust on the floor",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 58,
+       "screen": "left-center"
+      },
+      {
+       "frame": 68,
+       "screen": "center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 52,
+     "end": 68,
+     "text": "Pax glares down at a small pile of dust and edges toward it, holding a dustpan and a broom"
+    },
+    {
+     "start": 68,
+     "end": 100,
+     "text": "Pax sets the dustpan beside the pile and sweeps the dust into it with short strokes of the broom, frowning"
+    }
+   ],
+   "props": [
+    "broom",
+    "dustpan",
+    "dust pile"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "counter and arch edges identical f52 vs f99"
+  },
+  {
+   "start": 100,
+   "end": 139,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_hidden",
+   "camera": "static",
+   "notes": "floor-level view of the dustpan and broom; only Pax's belly, flippers and feet, no face"
+  },
+  {
+   "start": 139,
+   "end": 163,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_hidden",
+   "camera": "static",
+   "notes": "same floor-level view after a small cut; only Pax's belly and feet"
+  },
+  {
+   "start": 163,
+   "end": 171,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "8-frame close view of Pax's face"
+  },
+  {
+   "start": 171,
+   "end": 186,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "effect",
+   "camera": "static",
+   "notes": "dramatic darkening of the whole picture with a light band across Pax's glaring eyes"
+  },
+  {
+   "start": 186,
+   "end": 256,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 220,
+       "screen": "left-center"
+      },
+      {
+       "frame": 244,
+       "screen": "left"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 186,
+     "end": 199,
+     "text": "Pax holds the full dustpan on the floor and flicks the broom at a few last specks of dust, frowning"
+    },
+    {
+     "start": 199,
+     "end": 256,
+     "text": "Pax shuffles backward to the left step by step, sweeping at the stubborn specks after each step"
+    }
+   ],
+   "props": [
+    "broom",
+    "dustpan"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "v4 called this a pan; counter and arch edges are identical f190/f202/f230/f255 - the counter only looks different because Pax stops covering it. Pax is partly cut off at the left edge from ~f246 | verification 2026-10-26: beat boundary moved 212 -> 199"
+  },
+  {
+   "start": 256,
+   "end": 304,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 260,
+       "screen": "right-center"
+      },
+      {
+       "frame": 272,
+       "screen": "center"
+      },
+      {
+       "frame": 294,
+       "screen": "left-center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 256,
+     "end": 280,
+     "text": "Pax shuffles backward past the round dining table, sweeping at the floor with a determined glare"
+    },
+    {
+     "start": 280,
+     "end": 304,
+     "text": "Pax keeps stepping backward to the left, brushing a few stubborn specks toward the full dustpan"
+    }
+   ],
+   "props": [
+    "broom",
+    "dustpan",
+    "dining table"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "table and chair edges identical f256 vs f298; hard cut at f304 (not flagged by profile)"
+  },
+  {
+   "start": 304,
+   "end": 352,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s4",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 308,
+       "screen": "right-center"
+      },
+      {
+       "frame": 320,
+       "screen": "center"
+      },
+      {
+       "frame": 342,
+       "screen": "left-center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 304,
+     "end": 322,
+     "text": "Polly sits on the couch holding {ifin}, while Pax steps backward past her, sweeping at the floor"
+    },
+    {
+     "start": 322,
+     "end": 352,
+     "text": "Pax keeps shuffling backward to the left, flicking the broom at the last specks, while Polly turns her head to watch him, puzzled"
+    }
+   ],
+   "props": [
+    "phone",
+    "broom",
+    "dustpan",
+    "couch"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 304,
+     "by": "polly",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "window and couch edges identical f304 vs f351. Polly's phone: pale grey back, three lenses, tuft on top = iFin"
+  },
+  {
+   "start": 352,
+   "end": 400,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "other",
+   "notes": "sunset view of an igloo; Pax is tiny, sweeping away along a path; every edge shifts (camera drift) and the lead is barely visible"
+  }
+ ]
+}

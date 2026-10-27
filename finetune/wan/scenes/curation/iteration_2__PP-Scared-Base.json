@@ -1,0 +1,243 @@
+{
+ "skit": "iteration_2/72_videos/PP-Scared-Base.mp4",
+ "frames": 378,
+ "fps": 24,
+ "curated_by": "curator-07",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "SCARED",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a living room with a cream sofa against a plain pale grey wall"
+  },
+  "s2": {
+   "kind": "set",
+   "desc": "a hallway with an arched doorway, an open wooden door and a light switch on the pale wall"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 23,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "notes": "slow push in from behind the television toward the couple on the sofa (sofa edges doubled first vs last)"
+  },
+  {
+   "start": 23,
+   "end": 41,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "shake",
+   "notes": "shake as both jolt at the noise; the foreground television jitters f23-f36"
+  },
+  {
+   "start": 41,
+   "end": 52,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pull_back",
+   "notes": "pull back revealing two doorways"
+  },
+  {
+   "start": 52,
+   "end": 62,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "10 static frames of the wide room"
+  },
+  {
+   "start": 62,
+   "end": 174,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the back of a teal television blurred in the foreground",
+   "time": "day",
+   "size_change": true,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 146,
+       "screen": "center"
+      },
+      {
+       "frame": 162,
+       "screen": "right"
+      }
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 62,
+     "end": 84,
+     "text": "Polly hugs a cushion with her eyes squeezed shut while Pax sits beside her on the sofa, looking at her"
+    },
+    {
+     "start": 84,
+     "end": 110,
+     "text": "Polly points a flipper off to the right while Pax watches her"
+    },
+    {
+     "start": 110,
+     "end": 132,
+     "text": "Pax puffs out his chest and nods with a determined frown"
+    },
+    {
+     "start": 132,
+     "end": 146,
+     "text": "Pax hops down off the sofa onto the floor in front of it"
+    },
+    {
+     "start": 146,
+     "end": 174,
+     "text": "Pax waddles off to the right in front of the sofa while Polly watches, clutching her cushion"
+    }
+   ],
+   "props": [
+    "sofa",
+    "cushion",
+    "television"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "Pax grows a little as he hops down in front of the sofa (size_change). He is half out at the right edge by f173 but never fully exits"
+  },
+  {
+   "start": 174,
+   "end": 235,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "effect",
+   "camera": "other",
+   "notes": "close-up of Pax walking in fear with sweat drops, under dramatic low-key lighting that turns his white belly grey; plain background, so the camera lock cannot be checked and Pax grows as he advances. Unsure, dropped"
+  },
+  {
+   "start": 235,
+   "end": 290,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "effect",
+   "camera": "static",
+   "notes": "static, lights off: a dark blue-grey wash over the whole picture recolours Pax (belly lavender-grey); Pax slides in at f238 and peeks half hidden behind the arch. Could be kept as [238,290) at night if dark-room lighting is acceptable; dropped conservatively"
+  },
+  {
+   "start": 290,
+   "end": 329,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pan_right",
+   "notes": "pan across the dark bedroom: bed, lamp, curtain blowing, a crab silhouette; no lead"
+  },
+  {
+   "start": 329,
+   "end": 337,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "dark doorway, Pax reaches for the light switch (also dark wash)"
+  },
+  {
+   "start": 337,
+   "end": 343,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "same doorway, lights on"
+  },
+  {
+   "start": 343,
+   "end": 353,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "zoom_in",
+   "notes": "quick zoom on a little flower crab on the bedroom floor (a side creature, not a lead)"
+  },
+  {
+   "start": 353,
+   "end": 378,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "exits",
+     "exits_at": 374,
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 353,
+     "end": 357,
+     "text": "Pax peeks out from behind the edge of the doorway"
+    },
+    {
+     "start": 357,
+     "end": 368,
+     "text": "Pax steps into the doorway with a relieved smile and gives a little wave"
+    },
+    {
+     "start": 368,
+     "end": 378,
+     "text": "Pax turns and waddles back out of view behind the wall, leaving the doorway empty"
+    }
+   ],
+   "props": [
+    "wooden door",
+    "light switch"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "exits",
+   "notes": "lights on; top-right wall region identical every frame"
+  }
+ ]
+}

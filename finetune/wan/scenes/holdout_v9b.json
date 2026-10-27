@@ -1,0 +1,14 @@
+{
+ "skits": [
+  "iteration_1/30_videos/2D_PP_BackToBed_Base.mp4",
+  "iteration_1/30_videos/2D_PP_TirePressure_Base.mp4",
+  "iteration_1/30_videos/2D_PP_Drinker_Base.mp4",
+  "iteration_2/72_videos/2D_PP_BackTogether_Base.mp4",
+  "iteration_2/72_videos/PP-MorningFart-Base.mp4",
+  "iteration_2/72_videos/PP-BubbleWrap-Base.mp4"
+ ],
+ "seed": 9,
+ "rule": "choose_holdout.py: 3 per iteration, kept time in the 25-75th percentile, >= 2 Tier-1 and >= 1 Tier-2 spans, greedy coverage of two-shot / one-character / flat / set / prop event",
+ "kept_frames": 926,
+ "of_total_kept": 14015
+}

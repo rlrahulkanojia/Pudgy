@@ -1,0 +1,439 @@
+{
+ "skit": "iteration_2/72_videos/PP-Award-Base.mp4",
+ "frames": 278,
+ "fps": 24,
+ "curated_by": "curator-01",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "AWARD",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  },
+  "x1": {
+   "kind": "extra",
+   "desc": "a crowd of grey, tan and dark red penguin spectators seen from behind"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a home with a long curved teal counter, drawn on a plain pale grey background"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "a prize ceremony with a pale three-step winner's podium, drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 20,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "Pax on a plain background shaking open a black trash bag; 20 frames"
+  },
+  {
+   "start": 20,
+   "end": 41,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with an open cabinet door in the counter and a bin inside it",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 20,
+     "end": 27,
+     "text": "Pax, seen from behind, fits a black trash bag into the bin inside the open cabinet"
+    },
+    {
+     "start": 27,
+     "end": 33,
+     "text": "Pax turns around to face forward with his eyes closed in a satisfied smile as sparkles pop over the bin"
+    },
+    {
+     "start": 33,
+     "end": 41,
+     "text": "Pax stands beside the sparkling bin with his flippers together, looking ahead"
+    }
+   ],
+   "props": [
+    "black trash bag",
+    "bin",
+    "cabinet"
+   ],
+   "prop_events": [],
+   "effects": [
+    "sparkles"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "exactly 21 frames; compare 20/40 and the global-motion estimate both show the counter locked (identity) until f40; the pull-back starts at f41"
+  },
+  {
+   "start": 41,
+   "end": 51,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pull_back",
+   "notes": "fast pull-back from Pax at the cabinet to the wide view revealing Polly in the archway (scale about 0.97 -> 0.90 per frame)"
+  },
+  {
+   "start": 51,
+   "end": 89,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a tall arched doorway on the left and the counter with its open cabinet on the right",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 51,
+     "end": 72,
+     "text": "Polly stands in the archway holding a basket of laundry and squints toward Pax while Pax stands quietly beside the sparkling bin"
+    },
+    {
+     "start": 72,
+     "end": 78,
+     "text": "Polly turns to the front and throws her flippers up, dropping the basket so the laundry spills on the floor"
+    },
+    {
+     "start": 78,
+     "end": 89,
+     "text": "Polly stands frozen with her beak open and her flippers raised while Pax stays by the cabinet"
+    }
+   ],
+   "props": [
+    "laundry basket",
+    "bin",
+    "cabinet"
+   ],
+   "prop_events": [],
+   "effects": [
+    "sparkles"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "compare 51/88: arch and counter edges black; global estimate 51->88 identity. f50->f51 is the last frame of the pull-back"
+  },
+  {
+   "start": 89,
+   "end": 121,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the bin sparkling inside the open cabinet beside him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 89,
+     "end": 95,
+     "text": "Pax stands beside the sparkling bin looking ahead with wide eyes, then closes them in a smile"
+    },
+    {
+     "start": 95,
+     "end": 112,
+     "text": "Pax turns his head to the left and glances sideways with blushing cheeks, his flippers folded in front of him"
+    },
+    {
+     "start": 112,
+     "end": 121,
+     "text": "Pax squeezes his eyes shut in a bashful, blushing smile, swaying gently"
+    }
+   ],
+   "props": [
+    "bin",
+    "cabinet"
+   ],
+   "prop_events": [],
+   "effects": [
+    "sparkles",
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "compare 89/120: counter edges black"
+  },
+  {
+   "start": 121,
+   "end": 151,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the edge of an arched doorway behind her and a tipped-over laundry basket on the floor",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 121,
+     "end": 131,
+     "text": "Polly stands frozen with her flippers raised beside her cheeks, staring wide-eyed with tears streaming down"
+    },
+    {
+     "start": 131,
+     "end": 151,
+     "text": "Polly squeezes her eyes shut and cries with her beak open, pressing her flippers to her chest and cheek and rocking on her feet"
+    }
+   ],
+   "props": [
+    "laundry basket",
+    "laundry"
+   ],
+   "prop_events": [],
+   "effects": [
+    "tears"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "compare 121/150: arch and basket edges black | verification pass 2 (verify2_report_0): tears already stream down Polly's cheeks from f121 (beat 121-131 omits them and beat 131-151 says tears well up only then); f131-151 she clasps her flippers at her chest and then holds one to her cheek with the other raised, crying with her beak open"
+  },
+  {
+   "start": 151,
+   "end": 172,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the bin inside the open cabinet beside him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 151,
+     "end": 154,
+     "text": "Pax stands with his flippers out at his sides, blushing and looking ahead with wide eyes"
+    },
+    {
+     "start": 154,
+     "end": 165,
+     "text": "Pax closes his eyes and clasps his flippers together under his beak with a gentle smile"
+    },
+    {
+     "start": 165,
+     "end": 172,
+     "text": "Pax bows forward with his flippers still clasped and his eyes closed"
+    }
+   ],
+   "props": [
+    "bin",
+    "cabinet"
+   ],
+   "prop_events": [],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "exactly 21 frames; compare 151/171: counter edges black | verification pass 2 (verify2_report_0): beat 151-157 says wide eyes; Pax's eyes close at f154 (open only f151-153); blush marks on Pax's cheeks f151-153 not in effects"
+  },
+  {
+   "start": 172,
+   "end": 222,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with the spectators' heads filling the bottom of the picture",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left",
+     "presence": "enters",
+     "enters_at": 172,
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "x1",
+     "screen": "center",
+     "presence": "partial",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 172,
+     "end": 194,
+     "text": "Pax throws his flippers up on the podium's top step, eyes closed and beaming, while Polly carries a gold trophy in from the left"
+    },
+    {
+     "start": 194,
+     "end": 203,
+     "text": "Pax covers his beak with his flippers, then hugs them to his chest with his eyes closed, while Polly holds up the trophy"
+    },
+    {
+     "start": 203,
+     "end": 208,
+     "text": "Polly hops up onto the top step beside Pax, holding the trophy out in front of her"
+    },
+    {
+     "start": 208,
+     "end": 213,
+     "text": "Polly holds the trophy out to Pax as he reaches for it with his eyes closed"
+    },
+    {
+     "start": 213,
+     "end": 222,
+     "text": "Pax opens his eyes and holds the trophy together with Polly, looking down at it"
+    }
+   ],
+   "props": [
+    "gold trophy",
+    "winner's podium"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "numbers on the podium steps",
+    "engraving on the trophy"
+   ],
+   "travel": "enters",
+   "notes": "compare 172/221: podium edges black; the crowd heads bob slightly. Polly is only partly in view at the left edge at f172-188. Crowd is clearly not a lookalike (seen from behind, grey/tan/dark red/sage) | verification pass 2 (verify3_report_1): Beat 194-204 says Pax 'lowers his flippers and smiles down at Polly'. In fact he covers his beak with both flippers (f194-195), then hugs them to his chest with his eyes closed, not looking at her.; Beat 204-222 says Polly 'leans in'; she hops up from the second step onto the top step beside Pax (f203-207, in the air with a shadow below).; Beat 204-222 keeps Pax's eyes closed to the end; he opens"
+  },
+  {
+   "start": 222,
+   "end": 278,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with the large number one step of the podium under him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 222,
+     "end": 227,
+     "text": "Pax takes the gold trophy from a flipper reaching in from the left"
+    },
+    {
+     "start": 227,
+     "end": 242,
+     "text": "Pax holds the trophy up with both flippers and gazes at it wide-eyed as confetti begins to fall"
+    },
+    {
+     "start": 242,
+     "end": 260,
+     "text": "Pax closes his eyes and wipes away tears with one flipper, holding the trophy with the other while confetti rains down"
+    },
+    {
+     "start": 260,
+     "end": 278,
+     "text": "Pax hugs the trophy to his chest with an open-beaked smile and blushing cheeks as the confetti keeps falling"
+    }
+   ],
+   "props": [
+    "gold trophy",
+    "winner's podium"
+   ],
+   "prop_events": [],
+   "effects": [
+    "confetti",
+    "tears",
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [
+    "number on the podium step",
+    "engraving on the trophy"
+   ],
+   "travel": "none",
+   "notes": "compare 222/277: podium edges black (the global estimator is confused here by Pax and the confetti, the podium itself does not move). Polly is only a flipper at the left edge f222-226, so she is not listed. Confetti is in-world (falls in the scene), treated as an in-style effect, not an overlay"
+  }
+ ]
+}

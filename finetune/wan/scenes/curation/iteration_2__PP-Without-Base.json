@@ -1,0 +1,63 @@
+{
+ "skit": "iteration_2/72_videos/PP-Without-Base.mp4",
+ "frames": 419,
+ "fps": 24,
+ "curated_by": "curator-09",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "WITHOUT",
+ "cast": {
+  "pax": {"kind": "lead"}
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {"kind": "set", "desc": "a bedroom with a yellow wooden bed, white pillows and a pale blanket"}
+ },
+ "spans": [
+  {
+   "start": 0, "end": 63, "boundary": "start", "keep": true, "camera": "static",
+   "framing": "medium close-up", "angle": "eye level", "setting": "s1",
+   "view": "with the yellow headboard and two pillows behind him",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "center", "presence": "partial", "outfit": []}
+   ],
+   "beats": [
+    {"start": 0, "end": 36, "text": "Pax sleeps tucked under the blanket with his head on the pillow, eyes closed and beak slightly open"},
+    {"start": 36, "end": 45, "text": "Pax opens his eyes one at a time, waking up"},
+    {"start": 45, "end": 57, "text": "Pax lies awake under the blanket, blinking slowly"},
+    {"start": 57, "end": 63, "text": "Pax turns his head to look to the side"}
+   ],
+   "props": ["bed", "pillows", "blanket"], "prop_events": [], "effects": [], "overlays": [],
+   "in_world_text": [], "travel": "none",
+   "notes": "Only clean stretch of the skit: no vignette yet (corner brightness constant 0-62), camera locked. Pax's body is under the blanket; head and flippers fully visible."
+  },
+  {
+   "start": 63, "end": 71, "boundary": "transition", "keep": false, "drop_reason": "camera_move", "camera": "pull_back",
+   "notes": "fast pull back from the close view to a wide view of the bed; the dark vignette starts fading in here"
+  },
+  {
+   "start": 71, "end": 88, "boundary": "after_transition", "keep": false, "drop_reason": "effect", "camera": "other",
+   "notes": "wide bed, Pax alone; dark vignette growing over the whole picture (corners 223 -> 183 luma); 17 frames anyway"
+  },
+  {
+   "start": 88, "end": 155, "boundary": "cut", "keep": false, "drop_reason": "effect", "camera": "static",
+   "notes": "Pax brushing his teeth at twin sinks with a frown; camera locked but a dark vignette darkens the edges and keeps growing (effect)"
+  },
+  {
+   "start": 155, "end": 227, "boundary": "cut", "keep": false, "drop_reason": "effect", "camera": "other",
+   "notes": "Pax slumped alone at a round table; dark vignette, plus push/pull camera moves (keep12 dips at 165-193)"
+  },
+  {
+   "start": 227, "end": 325, "boundary": "cut", "keep": false, "drop_reason": "effect", "camera": "static",
+   "notes": "Pax sweeping up a broken vase by a window strung with crime-scene tape; dark vignette over the whole shot, and a framed photo of Pax and Polly on a little stand (lead copy) in view"
+  },
+  {
+   "start": 325, "end": 364, "boundary": "cut", "keep": false, "drop_reason": "lead_copy", "camera": "static",
+   "notes": "insert of the framed photo of Pax and Polly held up close (lead copy; also vignette)"
+  },
+  {
+   "start": 364, "end": 419, "boundary": "cut", "keep": false, "drop_reason": "effect", "camera": "static",
+   "notes": "back to the taped-off room, Pax holding the photo; strongest vignette of the skit, plus the lead photo"
+  }
+ ]
+}

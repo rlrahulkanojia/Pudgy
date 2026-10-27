@@ -1,0 +1,243 @@
+{
+ "skit": "iteration_2/72_videos/PP-MovieSleep-Base.mp4",
+ "frames": 363,
+ "fps": 24,
+ "curated_by": "curator-batch4",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "MOVIE SLEEP",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a living room with a cream couch facing a television"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 158,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a fish-print blanket over the couch and the back of a teal television in the foreground",
+   "time": "evening",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 7,
+     "text": "Pax and Polly sit side by side on the couch and pull the fish-print blanket up to their chests"
+    },
+    {
+     "start": 7,
+     "end": 14,
+     "text": "Pax shuts his eyes with a smile and nestles under the blanket while Polly looks ahead"
+    },
+    {
+     "start": 14,
+     "end": 21,
+     "text": "Pax and Polly sit snug under the blanket, both looking ahead with open eyes"
+    },
+    {
+     "start": 21,
+     "end": 26,
+     "text": "Polly shuts her eyes with a smile while Pax looks ahead beside her"
+    },
+    {
+     "start": 26,
+     "end": 40,
+     "text": "Pax picks up a bag of chips on the left while Polly takes a striped popcorn box from the right"
+    },
+    {
+     "start": 40,
+     "end": 64,
+     "text": "Polly munches popcorn with her eyes shut while Pax holds his chip bag, watching ahead"
+    },
+    {
+     "start": 64,
+     "end": 78,
+     "text": "Pax leans to the left armrest and picks up a small teal remote while Polly holds her popcorn box, watching ahead"
+    },
+    {
+     "start": 78,
+     "end": 94,
+     "text": "Pax holds the remote pointed ahead while Polly dips into her popcorn box and eats"
+    },
+    {
+     "start": 94,
+     "end": 110,
+     "text": "Pax leans left and sets the remote back on the armrest while Polly stuffs popcorn into her beak"
+    },
+    {
+     "start": 110,
+     "end": 122,
+     "text": "Pax reaches into his chip bag while Polly holds her popcorn, watching ahead"
+    },
+    {
+     "start": 122,
+     "end": 140,
+     "text": "Pax eats chips from his bag with a flipper at his beak while Polly holds her popcorn, watching"
+    },
+    {
+     "start": 140,
+     "end": 158,
+     "text": "Pax and Polly sit still under the blanket, staring ahead with wide eyes"
+    }
+   ],
+   "props": [
+    "blanket",
+    "bag of chips",
+    "popcorn box",
+    "TV remote",
+    "television"
+   ],
+   "prop_events": [
+    {
+     "prop": "TV remote",
+     "event": "picks_up",
+     "frame": 72,
+     "by": "pax"
+    },
+    {
+     "prop": "TV remote",
+     "event": "puts_down",
+     "frame": 98,
+     "by": "pax"
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "packaging"
+   ],
+   "travel": "none",
+   "notes": "single locked shot (compare f8/f362 and f100/f250: couch outline, arms and remote overlap exactly). Split at f158 because Polly jumps from sitting to asleep between f157 and f158 with no in-between frames (time-skip jump cut in the same framing; d1 only 2.8 so the cut detector misses it). The grey-lavender wall and the glow around the TV read as evening | verification pass 2 (verify2_report_2): beat 10-26 says both have their eyes closed: they never are at the same time (Pax's eyes shut only f7-13, both open f14-20, Polly's shut f21-26 while Pax's are open); phrasing also near v8 'eyes closed in a happy smile'; beat 64-96 says Polly keeps eating popcorn: f64-82 she only holds the box with her eyes open, watching; she eats from ~f80; beat 96-118: Polly stops stuffing popcorn at ~f109 and"
+  },
+  {
+   "start": 158,
+   "end": 363,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a fish-print blanket over the couch and the back of a teal television in the foreground",
+   "time": "evening",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 232,
+       "screen": "center"
+      },
+      {
+       "frame": 310,
+       "screen": "left-center"
+      }
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 158,
+     "end": 186,
+     "text": "Polly lies slumped asleep against the right armrest, her popcorn box tipped over, while Pax holds his chip bag, staring ahead"
+    },
+    {
+     "start": 186,
+     "end": 214,
+     "text": "Pax keeps watching with his chip bag in his flippers while Polly sleeps on, limp against the armrest"
+    },
+    {
+     "start": 214,
+     "end": 232,
+     "text": "Pax munches a chip and turns toward the sleeping Polly, lowering his bag"
+    },
+    {
+     "start": 232,
+     "end": 270,
+     "text": "Pax leans over Polly and nudges her shoulder with his flipper while she stays limp and asleep"
+    },
+    {
+     "start": 270,
+     "end": 308,
+     "text": "Pax pats Polly on the head with one flipper, looking down at her"
+    },
+    {
+     "start": 308,
+     "end": 332,
+     "text": "Pax settles back beside the sleeping Polly with a resigned look and a slow blink"
+    },
+    {
+     "start": 332,
+     "end": 344,
+     "text": "Pax leans down toward the popcorn spilled on the blanket and scoops some up"
+    },
+    {
+     "start": 344,
+     "end": 363,
+     "text": "Pax munches the popcorn with a flipper at his beak and gazes ahead contentedly"
+    }
+   ],
+   "props": [
+    "blanket",
+    "bag of chips",
+    "popcorn box",
+    "TV remote",
+    "television"
+   ],
+   "prop_events": [
+    {
+     "prop": "popcorn box",
+     "event": "drops",
+     "frame": 158,
+     "by": "polly"
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "packaging"
+   ],
+   "travel": "none",
+   "notes": "same locked shot after the f158 jump cut"
+  }
+ ]
+}

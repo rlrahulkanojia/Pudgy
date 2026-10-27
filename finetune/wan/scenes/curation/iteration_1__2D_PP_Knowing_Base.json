@@ -1,0 +1,299 @@
+{
+ "skit": "iteration_1/30_videos/2D_PP_Knowing_Base.mp4",
+ "frames": 333,
+ "fps": 24,
+ "curated_by": "curator-07",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "KNOWING",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "an empty pale teal-grey space with a single arched wooden door on the left"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 17,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "graphic_overlay",
+   "camera": "static",
+   "notes": "door opens and a flipper pokes out (no lead before f9); a speech bubble showing a bow appears from f9. Also too short."
+  },
+  {
+   "start": 17,
+   "end": 25,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pull_back",
+   "notes": "pull back f17-f24 as Pax enters from the right; speech bubble on screen"
+  },
+  {
+   "start": 25,
+   "end": 35,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "graphic_overlay",
+   "camera": "static",
+   "notes": "speech bubble showing a bow until f34; also too short"
+  },
+  {
+   "start": 35,
+   "end": 90,
+   "boundary": "same_shot",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "exits",
+     "exits_at": 80,
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 35,
+     "end": 50,
+     "text": "Pax holds out a red bow and a flipper reaching from behind the half-open door takes it from him"
+    },
+    {
+     "start": 50,
+     "end": 63,
+     "text": "Pax stands beside the door with a happy smile, closing his eyes"
+    },
+    {
+     "start": 63,
+     "end": 80,
+     "text": "Pax turns and waddles off to the right until he is out of view while the door swings shut"
+    },
+    {
+     "start": 80,
+     "end": 90,
+     "text": "The closed door stands alone with nobody in front of it"
+    }
+   ],
+   "props": [
+    "red bow",
+    "wooden door"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "exits",
+   "notes": "only a flipper of Polly shows from behind the door, so she is not listed as a character; the bubble ends at f34"
+  },
+  {
+   "start": 90,
+   "end": 103,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "jump cut: Pax pops in at the door at f90 holding a red purse and an iFin-like phone with a tiny pink penguin charm on top (a small copy of Polly, lead_copy as well)"
+  },
+  {
+   "start": 103,
+   "end": 119,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "graphic_overlay",
+   "camera": "static",
+   "notes": "speech bubble showing a purse f103-f118"
+  },
+  {
+   "start": 119,
+   "end": 138,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "Pax hands the purse in; he still holds the phone with the pink penguin charm (lead_copy as well)"
+  },
+  {
+   "start": 138,
+   "end": 150,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "jump cut: Pax vanishes at f138; empty door opens, a flipper pokes out"
+  },
+  {
+   "start": 150,
+   "end": 173,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "graphic_overlay",
+   "camera": "static",
+   "notes": "speech bubble showing a coffee drink f150-f172; Pax waddles in from the right"
+  },
+  {
+   "start": 173,
+   "end": 222,
+   "boundary": "same_shot",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the door standing half open",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 173,
+     "end": 188,
+     "text": "Pax sprays whipped cream from a can onto a glass of iced coffee while a flipper reaches out from behind the door"
+    },
+    {
+     "start": 188,
+     "end": 206,
+     "text": "Pax holds the glass of coffee out and the flipper takes it in behind the door"
+    },
+    {
+     "start": 206,
+     "end": 214,
+     "text": "Pax lowers his empty flipper, still holding the whipped cream can in the other"
+    },
+    {
+     "start": 214,
+     "end": 219,
+     "text": "Pax smiles with his eyes closed, the can tucked at his side"
+    },
+    {
+     "start": 219,
+     "end": 222,
+     "text": "Pax opens his eyes as the flipper pokes out from behind the door again"
+    }
+   ],
+   "props": [
+    "glass of iced coffee with whipped cream",
+    "whipped cream can"
+   ],
+   "prop_events": [
+    {
+     "prop": "glass of iced coffee",
+     "event": "hands_over",
+     "frame": 200,
+     "by": "pax"
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "label on the whipped cream can"
+   ],
+   "travel": "none",
+   "notes": "only Polly's flipper shows, not listed as a character | verification pass 2 (verify2_report_2): pull-back starts at f222 (ORB f173->f221 0.1 px, f222 0.6 px, f224 14 px): end is right; beat 214-222 'smiles with his eyes closed': eyes shut f214-218 only; f219-221 his eyes are open as the flipper pokes out again; whipped cream can label (cream swirl, strawberries) checked at full res: no lead depiction; Pax does not hold the charm phone in this span"
+  },
+  {
+   "start": 222,
+   "end": 229,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pull_back",
+   "notes": "short pull back f222-f228 (floor line moves up)"
+  },
+  {
+   "start": 229,
+   "end": 308,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the door standing half open",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 229,
+     "end": 252,
+     "text": "Pax stands beside the half-open door, blinking at a flipper that sticks out from behind it"
+    },
+    {
+     "start": 252,
+     "end": 268,
+     "text": "Pax looks aside with a flipper raised to his chin, thinking"
+    },
+    {
+     "start": 268,
+     "end": 287,
+     "text": "Pax turns toward the door and scratches the back of his head"
+    },
+    {
+     "start": 287,
+     "end": 294,
+     "text": "Pax reaches a flipper toward the outstretched flipper, then lowers it"
+    },
+    {
+     "start": 294,
+     "end": 308,
+     "text": "Pax stands looking puzzled while the flipper wiggles toward him from behind the door"
+    }
+   ],
+   "props": [
+    "whipped cream can"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "only Polly's flipper shows, not listed as a character"
+  },
+  {
+   "start": 308,
+   "end": 318,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "notes": "push in f308-f317 as Polly pulls Pax in for a kiss"
+  },
+  {
+   "start": 318,
+   "end": 333,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "Polly kisses Pax at the door, hearts; only 15 frames"
+  }
+ ]
+}

@@ -1,0 +1,38 @@
+{
+ "skit": "iteration_1/30_videos/2D_PP_EatingStages_Base.mp4",
+ "frames": 305,
+ "fps": 24,
+ "curated_by": "curator-08",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "EATING STAGES",
+ "cast": {
+  "pax": {"kind": "lead"},
+  "polly": {"kind": "lead"}
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {"kind": "flat", "desc": "a dining corner drawn on a plain pale grey-teal background, with a round cream table and two wooden chairs"}
+ },
+ "spans": [
+  {
+   "start": 0, "end": 58, "boundary": "start", "keep": false, "drop_reason": "camera_move", "camera": "push_in",
+   "notes": "Stage 1 (noodle bowls, Polly takes a tiny bite and covers her beak). Slow continuous push-in across the whole [0,243) block: bbox of table+chairs+shadow grows 459->502 px wide (540 px frame) from f0 to f240, ~0.04%/frame, steady through the jump cuts at f58 and f141; compare 0/57 shows doubled table, chair and shadow edges."
+  },
+  {
+   "start": 58, "end": 141, "boundary": "cut", "keep": false, "drop_reason": "camera_move", "camera": "push_in",
+   "notes": "Stage 2 (sushi platters). Jump cut at f58 (same framing, new food). Same slow continuous push-in as [0,58)."
+  },
+  {
+   "start": 141, "end": 243, "boundary": "cut", "keep": false, "drop_reason": "camera_move", "camera": "push_in",
+   "notes": "Stage 3 (seaweed rolls held in fins, table empty). Jump cut at f141. Same slow continuous push-in, ends at the cut f243."
+  },
+  {
+   "start": 243, "end": 290, "boundary": "cut", "keep": false, "drop_reason": "camera_move", "camera": "push_in",
+   "notes": "Polly close-up: drains an upturned bowl (243-269), then sets it down with noodles and sauce on her face (270-289). Slow push-in again: compare 244/268 doubles chair legs and table edge; right edge of chair 431->441 px."
+  },
+  {
+   "start": 290, "end": 305, "boundary": "cut", "keep": false, "drop_reason": "too_short", "camera": "static",
+   "notes": "Wide return to both at the table, static but only 15 frames."
+  }
+ ]
+}

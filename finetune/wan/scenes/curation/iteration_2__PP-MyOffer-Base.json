@@ -1,0 +1,303 @@
+{
+ "skit": "iteration_2/72_videos/PP-MyOffer-Base.mp4",
+ "frames": 408,
+ "fps": 24,
+ "curated_by": "curator-11",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "MY OFFER",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a grocery store produce aisle drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 90,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "notes": "slow push-in on the two-shot for the whole shot (cooler edges doubled in compare 0/89, constant region diff 0.75 per frame)"
+  },
+  {
+   "start": 90,
+   "end": 137,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a cooler heaped with tomatoes, eggplants and cucumbers in front of him and a bag roll on a pole at the left",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 90,
+     "end": 112,
+     "text": "Pax stands behind the vegetable cooler with a flipper raised to his chin, glancing around thoughtfully"
+    },
+    {
+     "start": 112,
+     "end": 126,
+     "text": "Pax lifts his head and brightens into a hopeful little smile"
+    },
+    {
+     "start": 126,
+     "end": 137,
+     "text": "Pax reaches into the pile and holds a red tomato out to the right with his beak open in a pleased smile"
+    }
+   ],
+   "props": [
+    "tomatoes",
+    "vegetable cooler"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "Pax is shown from the belly up behind the cooler; compare 90 vs 136 locked"
+  },
+  {
+   "start": 137,
+   "end": 141,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "transition",
+   "camera": "whip",
+   "notes": "slide wipe from Pax to Polly"
+  },
+  {
+   "start": 141,
+   "end": 157,
+   "boundary": "after_transition",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "static 16 frames of Polly holding a tomato up"
+  },
+  {
+   "start": 157,
+   "end": 196,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pan_right",
+   "notes": "the view slides right and settles on Polly (cooler edges doubled in compare 156/194)"
+  },
+  {
+   "start": 196,
+   "end": 201,
+   "boundary": "transition",
+   "keep": false,
+   "drop_reason": "transition",
+   "camera": "whip",
+   "notes": "slide wipe from Polly to Pax"
+  },
+  {
+   "start": 201,
+   "end": 264,
+   "boundary": "after_transition",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a cooler heaped with tomatoes, eggplants and cucumbers in front of him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 201,
+     "end": 215,
+     "text": "Pax glances to the right with a small disappointed frown"
+    },
+    {
+     "start": 215,
+     "end": 233,
+     "text": "Pax turns forward and rummages through the pile of tomatoes with one flipper, looking worried"
+    },
+    {
+     "start": 233,
+     "end": 253,
+     "text": "Pax lifts a tomato in both flippers and inspects it closely with narrowed eyes"
+    },
+    {
+     "start": 253,
+     "end": 264,
+     "text": "Pax holds the tomato out to the right with a firm, determined look"
+    }
+   ],
+   "props": [
+    "tomatoes",
+    "vegetable cooler"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "compare 201 vs 263: cooler edges black | verification pass 2 (verify2_report_0): beat 215-233 says Pax digs with both flippers, frowning in concentration; he reaches into the pile with one flipper (f219-231) and his face is worried (raised brows), not a concentrating frown; beat 253-264 says wide hopeful eyes; f255-263 his brows are slanted in a firm, determined look"
+  },
+  {
+   "start": 264,
+   "end": 269,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "transition",
+   "camera": "whip",
+   "notes": "slide wipe from Pax to Polly"
+  },
+  {
+   "start": 269,
+   "end": 301,
+   "boundary": "after_transition",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a cooler heaped with tomatoes and eggplants in front of her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 269,
+     "end": 276,
+     "text": "Polly drops a tomato into the plastic bag at her side while a flipper from the left edge holds out another tomato"
+    },
+    {
+     "start": 276,
+     "end": 288,
+     "text": "Polly straightens up and stares at the offered tomato with a blank look"
+    },
+    {
+     "start": 288,
+     "end": 294,
+     "text": "Polly reaches out and takes the tomato from the flipper"
+    },
+    {
+     "start": 294,
+     "end": 301,
+     "text": "Polly holds the tomato up beside her face, studying it with her beak slightly open"
+    }
+   ],
+   "props": [
+    "tomatoes",
+    "plastic bag",
+    "vegetable cooler"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "only Pax's flipper is visible (left edge, f269-293), so Pax is not listed and not named in the beats. compare 269 vs 300: cooler edges black"
+  },
+  {
+   "start": 301,
+   "end": 341,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "notes": "slow push-in on Pax clasping his flippers as Polly's flipper holds a huge sparkling tomato in the foreground (constant region diff 2.1 per frame, everything grows in compare 301/340)"
+  },
+  {
+   "start": 341,
+   "end": 408,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a cooler heaped with tomatoes, eggplants and cucumbers in front of them and a bag roll on a pole at the left",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 341,
+     "end": 353,
+     "text": "Polly studies the tomato in her flipper while Pax clasps his flippers under his chin, watching her hopefully"
+    },
+    {
+     "start": 353,
+     "end": 375,
+     "text": "Polly drops the tomato into her bag and smiles with her eyes closed while Pax keeps watching her"
+    },
+    {
+     "start": 375,
+     "end": 391,
+     "text": "Pax closes his eyes in a huge happy smile while Polly turns to look at him"
+    },
+    {
+     "start": 391,
+     "end": 408,
+     "text": "Pax flaps his flippers up and down in a little happy dance with his beak open while Polly watches"
+    }
+   ],
+   "props": [
+    "tomatoes",
+    "plastic bag",
+    "vegetable cooler"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "region diff 0 for the whole span; compare 341 vs 407 locked"
+  }
+ ]
+}

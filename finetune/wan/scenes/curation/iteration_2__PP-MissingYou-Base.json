@@ -1,0 +1,169 @@
+{
+ "skit": "iteration_2/72_videos/PP-MissingYou-Base.mp4",
+ "frames": 154,
+ "fps": 24,
+ "curated_by": "curator-00",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "MISSING YOU",
+ "cast": {
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a cosy bedroom with a pale yellow wooden bed and pale bedding"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 60,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "notes": "slow eased push-in (ORB similarity: scale 1.00 -> 1.07, drift up-left) from f0, background still creeping until f59; background frame diff is 0.00 from f60 on"
+  },
+  {
+   "start": 60,
+   "end": 132,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a rounded yellow headboard, white pillows and a bedside table at the right",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 60,
+     "end": 67,
+     "text": "Polly sits up in bed with her eyes closed and a blushing smile, cuddling {ifin}"
+    },
+    {
+     "start": 67,
+     "end": 76,
+     "text": "Polly opens her eyes wide with her beak open in a happy gasp, still hugging {ifin}"
+    },
+    {
+     "start": 76,
+     "end": 92,
+     "text": "Polly holds {ifin} out in front of her and gazes at its screen with soft, hopeful eyes"
+    },
+    {
+     "start": 92,
+     "end": 109,
+     "text": "Polly frowns at the screen, her brows tilting up into a sad, let-down pout"
+    },
+    {
+     "start": 109,
+     "end": 117,
+     "text": "Polly squeezes her eyes shut and swings {ifin} back up beside her head"
+    },
+    {
+     "start": 117,
+     "end": 124,
+     "text": "Polly flings {ifin} off the bed and it tumbles down out of view at the lower right"
+    },
+    {
+     "start": 124,
+     "end": 132,
+     "text": "Polly squeezes her eyes shut and turns away to the left, pulling her flippers in"
+    }
+   ],
+   "props": [
+    "iFin phone",
+    "bed",
+    "pillows"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 60,
+     "by": "polly",
+     "is_ifin": true
+    },
+    {
+     "prop": "phone",
+     "event": "drops",
+     "frame": 117,
+     "by": "polly",
+     "is_ifin": true
+    },
+    {
+     "prop": "phone",
+     "event": "exits",
+     "frame": 123,
+     "by": "polly",
+     "is_ifin": true
+    }
+   ],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f60-131 (ORB: scale 1.0000, 0 px shift vs f60; compare 60/131 background all black). Phone is the iFin: pale grey back, lens bump, tuft on top. She throws it (event 'drops' = thrown off the bed at f117). | verification pass 2 (verify2_report_2): locked (ORB f60->f131 0.0 px; stability >=0.97); beat 124-132 'turns half away toward the right with her flippers drooping': f124-127 her flippers are flung out, and f128-131 she turns to face screen-left, pulling her flippers in front of her chest (full-res f125/f131). The window [109,130) takes this beat; phone has the iFin's grey tuft (no charm)"
+  },
+  {
+   "start": 132,
+   "end": 154,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a duck-shaped bedpost knob and a peach lampshade softly blurred behind her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "partial",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 132,
+     "end": 138,
+     "text": "Polly lies on her side on the pillow and sinks down with her eyes shut"
+    },
+    {
+     "start": 138,
+     "end": 154,
+     "text": "Polly opens her glossy eyes with her beak trembling open as tears start to stream down her face"
+    }
+   ],
+   "props": [
+    "pillow",
+    "bed"
+   ],
+   "prop_events": [],
+   "effects": [
+    "tears"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "22 frames, hard cut at f132; ORB 0 px / scale 1.0000 across the shot. Her tail end and feet are cut off at the right edge (partial). Background is drawn soft-focus (static, not a blur transition)."
+  }
+ ]
+}

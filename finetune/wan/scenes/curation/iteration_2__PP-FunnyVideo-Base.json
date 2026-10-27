@@ -1,0 +1,80 @@
+{
+ "skit": "iteration_2/72_videos/PP-FunnyVideo-Base.mp4",
+ "frames": 280,
+ "fps": 24,
+ "curated_by": "curator-b2",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "FUNNY VIDEO",
+ "cast": {
+  "pax": {"kind": "lead"},
+  "polly": {"kind": "lead"}
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {"kind": "flat", "desc": "a dining nook drawn on a plain pale grey background"}
+ },
+ "spans": [
+  {
+   "start": 0, "end": 52, "boundary": "start", "keep": true, "camera": "static",
+   "framing": "wide", "angle": "eye level", "setting": "s1",
+   "view": "with a round cream table set with plates of food between them and two wooden chairs",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "left", "presence": "full", "outfit": []},
+    {"id": "polly", "screen": "right", "presence": "full", "outfit": []}
+   ],
+   "beats": [
+    {"start": 0, "end": 14, "text": "Pax laughs with his eyes closed, looking down at {ifin}, while Polly bites a little sandwich with her eyes shut happily"},
+    {"start": 14, "end": 26, "text": "Pax grins down at the phone while Polly chews and glances over at him"},
+    {"start": 26, "end": 34, "text": "Pax reaches across the table and shows Polly {ifin}"},
+    {"start": 34, "end": 52, "text": "Polly lowers her sandwich and stares at the phone with a flat face while Pax holds it up, watching her"}
+   ],
+   "props": ["phone", "plates of food", "sandwich"],
+   "prop_events": [{"prop": "phone", "event": "uses", "frame": 0, "by": "pax", "is_ifin": true}],
+   "effects": [], "overlays": [], "in_world_text": [], "travel": "none",
+   "notes": "v4 called this a slow push-in; feature matching gives scale 0.9998 and shift 0.1 px over f0-51 and the table and chair edges overlap in compare 0/51, so the camera is locked. The phone screen shows a zooming planet video (no lead)."
+  },
+  {
+   "start": 52, "end": 89, "boundary": "cut", "keep": true, "camera": "static",
+   "framing": "medium close-up", "angle": "eye level", "setting": "s1",
+   "view": "with a plate of curly fries and sandwiches on the table in front of her and a wooden chair behind",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "polly", "screen": "center", "presence": "full", "outfit": []}
+   ],
+   "beats": [
+    {"start": 52, "end": 56, "text": "Polly stares at the back of {ifin}, held out to her from the left"},
+    {"start": 56, "end": 62, "text": "Polly blinks slowly with a flat, unimpressed face"},
+    {"start": 62, "end": 89, "text": "Polly keeps staring at the phone with wide, unmoving eyes and a blank, unimpressed beak"}
+   ],
+   "props": ["phone", "plate of food"],
+   "prop_events": [{"prop": "phone", "event": "uses", "frame": 52, "by": "pax", "is_ifin": true}],
+   "effects": [], "overlays": [], "in_world_text": [], "travel": "none",
+   "notes": "Only Pax's flipper is in the picture, holding the phone at the left edge, so Pax is not listed as a character. Back of the phone clearly shows the iFin (three lenses, tuft)."
+  },
+  {
+   "start": 89, "end": 106, "boundary": "cut", "keep": false, "drop_reason": "too_short", "camera": "static",
+   "notes": "17 frames: Pax holds up the phone, whose screen shows a video of a round penguin in Pax's colours"
+  },
+  {
+   "start": 106, "end": 156, "boundary": "cut", "keep": false, "drop_reason": "camera_move", "camera": "zoom_in",
+   "notes": "Polly close-up, slow zoom in for the whole shot (scale 1.074 over f106-155, steady per-frame drift)"
+  },
+  {
+   "start": 156, "end": 218, "boundary": "cut", "keep": false, "drop_reason": "lead_copy", "camera": "static",
+   "notes": "Pax laughing with tears and tapping, camera locked, but he holds the phone screen toward the viewer and it plays a video of a round penguin drawn in Pax's colours and style for the whole shot"
+  },
+  {
+   "start": 218, "end": 246, "boundary": "cut", "keep": false, "drop_reason": "camera_move", "camera": "zoom_in",
+   "notes": "Polly close-up: slow zoom in f218-240 (scale 1.039), then a fast zoom back out f241-245"
+  },
+  {
+   "start": 246, "end": 261, "boundary": "camera", "keep": false, "drop_reason": "too_short", "camera": "static",
+   "notes": "15 static frames of Polly chuckling behind her flipper after the zoom"
+  },
+  {
+   "start": 261, "end": 280, "boundary": "cut", "keep": false, "drop_reason": "too_short", "camera": "static",
+   "notes": "19 frames: Pax with the phone (screen video of a Pax-like penguin)"
+  }
+ ]
+}

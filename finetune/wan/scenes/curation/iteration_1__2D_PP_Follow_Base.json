@@ -1,0 +1,197 @@
+{
+ "skit": "iteration_1/30_videos/2D_PP_Follow_Base.mp4",
+ "frames": 208,
+ "fps": 24,
+ "curated_by": "curator-08",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "FOLLOW",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a kitchen drawn on a plain pale grey background, with a long low counter of peach cabinets under a pale aqua countertop"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "a bathroom corner drawn on a plain pale grey background, with a teal shower curtain hanging from a rail under a shower head"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 40,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "notes": "Couch: Pax sits holding a phone (grey back, small tuft, probably the iFin), hops up and drops down beside Polly. Slow push-in over the whole shot: bbox of couch+shadow 469->489 px wide (540 px frame) f0->f39."
+  },
+  {
+   "start": 40,
+   "end": 111,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a round window and a white wall cabinet above the counter",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 54,
+       "screen": "left-center"
+      }
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 52,
+       "screen": "right-center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 40,
+     "end": 56,
+     "text": "Pax waddles left toward the kitchen counter while Polly follows right behind him"
+    },
+    {
+     "start": 56,
+     "end": 76,
+     "text": "Pax opens a low cabinet door and leans in to look at the snacks inside while Polly waits behind him"
+    },
+    {
+     "start": 76,
+     "end": 92,
+     "text": "Pax pulls out a bag of chips and turns around, hugging it to his chest with a smile"
+    },
+    {
+     "start": 92,
+     "end": 111,
+     "text": "Polly wraps her flippers around Pax from behind with her eyes closed and rosy cheeks while he holds the chips"
+    }
+   ],
+   "props": [
+    "kitchen cabinet",
+    "bag of chips",
+    "snack boxes and cans"
+   ],
+   "prop_events": [],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [
+    "snack packaging"
+   ],
+   "travel": "moves_within",
+   "notes": "Polly is cut by the right edge for the first ~5 frames as they walk left. Background edges (window, wall cabinet, counter) overlap exactly in compare 40/60, 60/110, 40/110."
+  },
+  {
+   "start": 111,
+   "end": 150,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pull_back",
+   "notes": "Outside the igloo: Pax holds a pile of black trash bags, Polly helps with one flipper. Continuous pull-back from a close shot of Pax (fast between f127 and f131), then the igloo keeps drifting left to f149 (compare 133/149: doubled igloo and tree edges)."
+  },
+  {
+   "start": 150,
+   "end": 168,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "Pax showering, eyes closed, soap foam on his head; 18 frames."
+  },
+  {
+   "start": 168,
+   "end": 208,
+   "boundary": "cut",
+   "keep": false,
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a pale yellow bath mat on the floor and a bag of chips on the floor",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "enters",
+     "enters_at": 196,
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 168,
+     "end": 193,
+     "text": "Polly sits beside the shower curtain munching a chip and holding {ifin} while a dark penguin shadow stands still behind the curtain"
+    },
+    {
+     "start": 193,
+     "end": 208,
+     "text": "Pax pushes the curtain aside and peeks out with soap foam on his head as Polly holds the phone screen up to show him"
+    }
+   ],
+   "props": [
+    "shower curtain",
+    "chips",
+    "phone"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 193,
+     "by": "polly",
+     "is_ifin": true
+    }
+   ],
+   "effects": [
+    "water drops"
+   ],
+   "overlays": [],
+   "in_world_text": [
+    "phone screen",
+    "snack packaging"
+   ],
+   "travel": "enters",
+   "notes": "Pax is only a dark silhouette behind the curtain until f196, so he is listed as entering at f196 and the silhouette is not named. Phone: pale grey back, camera lenses, little tuft on top = iFin. Shower rail, head and mat edges overlap exactly in compare 168/207. | verification pass 2 (verify2_report_2): The phone Polly holds for the whole span has a small blue Pax-style penguin figure clinging to its top edge (not the iFin's grey tuft), visible in every frame (full res f170, f180, f190, f200): a lead copy under the 2026-10-26 rule, as in Vibing 118-179. Camera locked (shower rail and mat edges black 168/207).",
+   "drop_reason": "lead_copy"
+  }
+ ]
+}

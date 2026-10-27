@@ -1,0 +1,62 @@
+{
+ "skit": "iteration_2/72_videos/PP-MorningFart-Base.mp4",
+ "frames": 186,
+ "fps": 24,
+ "curated_by": "curator-00",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "MORNING FART",
+ "cast": {
+  "pax": {"kind": "lead"},
+  "polly": {"kind": "lead"}
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {"kind": "set", "desc": "a bedroom with a wide bed under a pale duvet and a rounded yellow headboard"}
+ },
+ "spans": [
+  {
+   "start": 0, "end": 91, "boundary": "start", "keep": true, "camera": "static",
+   "framing": "medium wide", "angle": "eye level", "setting": "s1",
+   "view": "with white pillows and a yellow bedside table at the right",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "left", "presence": "partial", "outfit": []},
+    {"id": "polly", "screen": "center", "presence": "full", "outfit": []}
+   ],
+   "beats": [
+    {"start": 0, "end": 12, "text": "Polly sleeps on her side under the duvet with her eyes closed while Pax lies turned away at the left, only the back of his head showing"},
+    {"start": 12, "end": 48, "text": "Polly rolls onto her back and stretches both flippers up in a wide yawn, her eyes still closed"},
+    {"start": 48, "end": 60, "text": "Polly drops her flippers back down and blinks her eyes open"},
+    {"start": 60, "end": 88, "text": "Polly rubs one eye with the tip of her flipper as she lies back on the pillow"},
+    {"start": 88, "end": 91, "text": "Polly lowers her flipper and starts to turn her head toward Pax"}
+   ],
+   "props": ["bed", "duvet", "pillows"], "prop_events": [], "effects": [], "overlays": [],
+   "in_world_text": [], "travel": "none",
+   "notes": "locked f0-90 (ORB 0 px / scale 1.0000 vs f0 at f40, f80, f88). Storyboard has Pax waking, but the animation shows Polly waking; Pax is only the back of his head under the duvet at the far left (listed as partial, the span is kept for Polly)."
+  },
+  {
+   "start": 91, "end": 112, "boundary": "camera", "keep": false, "drop_reason": "camera_move",
+   "camera": "pan_left",
+   "notes": "quick pan left toward Pax and back (picture shifts +100 px at f104, back to 0 by f111); background diff starts at 90->91 and is ~0 again at 111->112. The duvet ripple (the fart) starts inside this span."
+  },
+  {
+   "start": 112, "end": 186, "boundary": "camera", "keep": true, "camera": "static",
+   "framing": "medium wide", "angle": "eye level", "setting": "s1",
+   "view": "with white pillows and a yellow bedside table at the right",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "left", "presence": "partial", "outfit": []},
+    {"id": "polly", "screen": "center", "presence": "full", "outfit": []}
+   ],
+   "beats": [
+    {"start": 112, "end": 120, "text": "Polly stares with wide startled eyes and her flippers raised under her beak while the duvet ripples beside Pax"},
+    {"start": 120, "end": 128, "text": "Polly rolls back onto her side away from Pax, still wide-eyed"},
+    {"start": 128, "end": 160, "text": "Polly lies still on her side and peeks sideways with wide, startled eyes"},
+    {"start": 160, "end": 186, "text": "Polly closes her eyes and lies still with her beak slightly open and a flipper tucked under her chin"}
+   ],
+   "props": ["bed", "duvet", "pillows"], "prop_events": [], "effects": [], "overlays": [],
+   "in_world_text": [], "travel": "none",
+   "notes": "locked f112-185 (ORB 0 px vs f0 at f112, f116, f120, f140, f185). The wobbling duvet edge f112-119 is the fart gag, drawn in style. Pax stays the back of his head at the far left."
+  }
+ ]
+}

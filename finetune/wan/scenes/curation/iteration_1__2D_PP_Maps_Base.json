@@ -1,0 +1,122 @@
+{
+ "skit": "iteration_1/30_videos/2D_PP_Maps_Base.mp4",
+ "frames": 317,
+ "fps": 24,
+ "curated_by": "curator-b2",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "MAPS",
+ "cast": {
+  "pax": {"kind": "lead"},
+  "polly": {"kind": "lead"}
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {"kind": "set", "desc": "a snowy town square with a round fountain topped by a golden penguin statue, igloo houses and strings of bunting"},
+  "s2": {"kind": "set", "desc": "a snowy park with a wooden bench and a pine tree behind a railing"}
+ },
+ "spans": [
+  {
+   "start": 0, "end": 17, "boundary": "start", "keep": false, "drop_reason": "too_short", "camera": "static",
+   "notes": "Polly looks down at her phone by the fountain; static 17 frames, then the camera starts tracking her"
+  },
+  {
+   "start": 17, "end": 42, "boundary": "camera", "keep": false, "drop_reason": "camera_move", "camera": "pan_left",
+   "notes": "tracking pan while Polly waddles (background shifts up to 10 px/frame at 540 wide, frames 17-41; f42 is the first frame of the next hold)"
+  },
+  {
+   "start": 42, "end": 74, "boundary": "camera", "keep": false, "drop_reason": "lead_copy", "camera": "static",
+   "framing": "medium wide", "angle": "eye level", "setting": "s1",
+   "view": "with the fountain and a purple house behind her and a pine tree at the left",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "polly", "screen": "left-center", "presence": "full", "outfit": []}
+   ],
+   "beats": [
+    {"start": 42, "end": 48, "text": "Polly takes a last waddling step while looking down at {ifin}"},
+    {"start": 48, "end": 60, "text": "Polly stops and squints at the phone with a doubtful frown"},
+    {"start": 60, "end": 74, "text": "Polly looks up from the phone with wide, puzzled eyes, holding it against her chest"}
+   ],
+   "props": ["phone"],
+   "prop_events": [{"prop": "phone", "event": "uses", "frame": 42, "by": "polly", "is_ifin": true}],
+   "effects": [], "overlays": [], "in_world_text": [], "travel": "none",
+   "notes": "Camera locked (feature-matched shift 0 over f42-73). Dropped only because a small figure of Pax (a phone charm) clings to the top of Polly's iFin all through the span. Beats are written so the lead can flip keep to true if lead charms on the phone are allowed."
+  },
+  {
+   "start": 74, "end": 94, "boundary": "camera", "keep": false, "drop_reason": "camera_move", "camera": "pan_right",
+   "notes": "tracking pan, background shifts up to 12 px/frame"
+  },
+  {
+   "start": 94, "end": 122, "boundary": "camera", "keep": false, "drop_reason": "lead_copy", "camera": "static",
+   "framing": "medium wide", "angle": "eye level", "setting": "s1",
+   "view": "with the fountain and a purple house behind her and an igloo at the right",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "polly", "screen": "center", "presence": "full", "outfit": []}
+   ],
+   "beats": [
+    {"start": 94, "end": 112, "text": "Polly glances around with a blank, unsure look, holding {ifin}"},
+    {"start": 112, "end": 122, "text": "Polly turns around and faces the fountain behind her"}
+   ],
+   "props": ["phone"],
+   "prop_events": [{"prop": "phone", "event": "uses", "frame": 94, "by": "polly", "is_ifin": true}],
+   "effects": [], "overlays": [], "in_world_text": [], "travel": "none",
+   "notes": "Camera locked (shift 0 over f94-121). Dropped for the Pax charm on Polly's iFin, as above; beats written for a possible flip."
+  },
+  {
+   "start": 122, "end": 133, "boundary": "camera", "keep": false, "drop_reason": "camera_move", "camera": "pan_right",
+   "notes": "fast tracking pan, up to 15 px/frame"
+  },
+  {
+   "start": 133, "end": 176, "boundary": "camera", "keep": false, "drop_reason": "lead_copy", "camera": "static",
+   "framing": "medium wide", "angle": "eye level", "setting": "s1",
+   "view": "with the fountain at the left and a green igloo with a wooden door behind",
+   "time": "day", "size_change": true,
+   "characters": [
+    {"id": "polly", "screen": "center", "presence": "exits", "exits_at": 174, "outfit": [],
+     "moves": [{"frame": 158, "screen": "right-center"}]}
+   ],
+   "beats": [
+    {"start": 133, "end": 146, "text": "Polly waddles away from the viewer toward the igloo behind the fountain"},
+    {"start": 146, "end": 160, "text": "Polly turns to the right and looks down at {ifin}"},
+    {"start": 160, "end": 176, "text": "Polly waddles off to the right with the phone until she is out of view"}
+   ],
+   "props": ["phone"],
+   "prop_events": [{"prop": "phone", "event": "uses", "frame": 150, "by": "polly", "is_ifin": true}],
+   "effects": [], "overlays": [], "in_world_text": [], "travel": "exits",
+   "notes": "Camera locked (shift 0 over f133-175). The Pax charm on her iFin is visible in profile around f154-166, so dropped as lead_copy like the spans above; a split around it leaves pieces under 21 frames. Beats written for a possible flip."
+  },
+  {
+   "start": 176, "end": 210, "boundary": "cut", "keep": false, "drop_reason": "no_lead", "camera": "static",
+   "notes": "phone map screen insert: a winding route drawn in a fish shape, with a Polly-face location pin and a status bar"
+  },
+  {
+   "start": 210, "end": 241, "boundary": "cut", "keep": false, "drop_reason": "lead_copy", "camera": "static",
+   "framing": "medium", "angle": "eye level", "setting": "s2",
+   "view": "with the bench and the pine tree behind him",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "center", "presence": "full", "outfit": []}
+   ],
+   "beats": [
+    {"start": 210, "end": 226, "text": "Pax holds his flippers up to his chest and studies the screen of {ifin}"},
+    {"start": 226, "end": 241, "text": "Pax looks up from the phone and gazes off to the right with a calm, sure face"}
+   ],
+   "props": ["phone", "bench"],
+   "prop_events": [{"prop": "phone", "event": "uses", "frame": 210, "by": "pax", "is_ifin": true}],
+   "effects": [], "overlays": [], "in_world_text": [], "travel": "none",
+   "notes": "Camera locked (tree, posts and bench edges overlap in compare 210/235 and 235/240). Dropped because a small Polly figure (phone charm) clings to the top of Pax's iFin throughout. Beats written for a possible flip."
+  },
+  {
+   "start": 241, "end": 258, "boundary": "cut", "keep": false, "drop_reason": "too_short", "camera": "static",
+   "notes": "both leads by the houses: Pax puts his phone away and waves Polly on; 17 static frames before the tracking pan"
+  },
+  {
+   "start": 258, "end": 273, "boundary": "camera", "keep": false, "drop_reason": "camera_move", "camera": "pan_left",
+   "notes": "tracking pan as the two waddle off together"
+  },
+  {
+   "start": 273, "end": 317, "boundary": "cut", "keep": false, "drop_reason": "no_lead", "camera": "other",
+   "notes": "phone map screen insert: a straight route drawn across an island map with a Pax-face pin moving along it"
+  }
+ ]
+}

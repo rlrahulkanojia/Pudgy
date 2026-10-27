@@ -1,0 +1,272 @@
+{
+ "skit": "iteration_1/30_videos/2D_PP_PMActivities_Base.mp4",
+ "frames": 196,
+ "fps": 24,
+ "curated_by": "curator-10",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "PM ACTIVITIES",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "a pair of over-ear headphones"
+ },
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a dim bedroom with a big wooden bed and a lamp on the bedside table, against a plain grey wall"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 34,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with both of them tucked under a pale quilt",
+   "time": "night",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 8,
+     "text": "Polly sits up in bed looking at a phone in her flippers while Pax sleeps beside her with his beak open"
+    },
+    {
+     "start": 8,
+     "end": 34,
+     "text": "Polly giggles behind her flipper with her eyes shut, her face lit by the phone's glow, while Pax keeps sleeping"
+    }
+   ],
+   "props": [
+    "phone",
+    "bed",
+    "lamp"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 0,
+     "by": "polly",
+     "is_ifin": "unsure"
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "one locked shot for the whole skit; Polly's activity changes by jump cuts at f34, f72, f124, f172 (split as same_shot). Phone: grey back with three lenses but a small navy charm/tuft on top that does not match the iFin's grey tuft, so written as a phone, is_ifin unsure | verification pass 2 (verify2_report_4): the phone in Polly's flippers carries a small blue penguin charm on its top edge (blue round body, flipper, orange feet; full-res f0/f10/f25/f33), a figurine in Pax's look; dropped like span [34,72) under the 2026-10-26 lead-depiction rule."
+  },
+  {
+   "start": 34,
+   "end": 72,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "Polly in under-eye patches and a knitted headband topped by a little Pax-like penguin head (blue head, white face, orange beak) - treated as a copy of Pax. Judgement call"
+  },
+  {
+   "start": 72,
+   "end": 124,
+   "boundary": "same_shot",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with both of them tucked under a pale quilt",
+   "time": "night",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 72,
+     "end": 87,
+     "text": "Polly sits up reading a teal book lit by a little clip-on book light, blinking as she reads, while Pax sleeps beside her"
+    },
+    {
+     "start": 87,
+     "end": 92,
+     "text": "Polly flips a page of the book over while Pax keeps sleeping"
+    },
+    {
+     "start": 92,
+     "end": 106,
+     "text": "Polly reads the new page with a calm face while Pax sleeps beside her"
+    },
+    {
+     "start": 106,
+     "end": 124,
+     "text": "Polly stares at the page with wide eyes and her beak open in surprise while Pax keeps sleeping"
+    }
+   ],
+   "props": [
+    "book",
+    "book light",
+    "bed",
+    "lamp"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "verification pass 2 (verify2_report_4): beats omit an action: Polly turns a page f87-91 (page lifts f87, mid-turn f88, settles f90-91) between her blink f84-86 and the surprised stare from f106; no phone/charm in view in this span"
+  },
+  {
+   "start": 124,
+   "end": 172,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with crumpled tissues scattered on the quilt",
+   "time": "night",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 124,
+     "end": 150,
+     "text": "Polly lies back on her pillow wearing headphones, sobbing with tears streaming down her face as she clutches a phone"
+    },
+    {
+     "start": 150,
+     "end": 172,
+     "text": "Polly keeps crying with her eyes squeezed shut and her beak open while Pax sleeps peacefully beside her"
+    }
+   ],
+   "props": [
+    "phone",
+    "headphones",
+    "crumpled tissues",
+    "bed"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 124,
+     "by": "polly",
+     "is_ifin": "unsure"
+    }
+   ],
+   "effects": [
+    "tears"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "same phone as span 0 (navy charm on top), is_ifin unsure | verification pass 2 (verify2_report_4): the phone Polly clutches carries the small blue penguin charm (Pax's look) on its top edge through the whole span (full-res f126/f140/f160/f171); dropped like [0,34) and [34,72)."
+  },
+  {
+   "start": 172,
+   "end": 196,
+   "boundary": "same_shot",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with both of them tucked under a pale quilt",
+   "time": "night",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 172,
+     "end": 182,
+     "text": "Polly lies snuggled against Pax's head, gazing at him and then closing her eyes, while he sleeps"
+    },
+    {
+     "start": 182,
+     "end": 196,
+     "text": "Polly presses her beak to the top of Pax's head in a kiss as a small heart pops up above them"
+    }
+   ],
+   "props": [
+    "bed"
+   ],
+   "prop_events": [],
+   "effects": [
+    "hearts"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": ""
+  }
+ ]
+}

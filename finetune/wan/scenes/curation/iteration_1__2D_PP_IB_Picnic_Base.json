@@ -1,0 +1,118 @@
+{
+ "skit": "iteration_1/30_videos/2D_PP_IB_Picnic_Base.mp4",
+ "frames": 511,
+ "fps": 24,
+ "curated_by": "curator-03",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "IB PICNIC",
+ "cast": {
+  "pax": {"kind": "lead"},
+  "polly": {"kind": "lead"}
+ },
+ "outfits": {"o1": "a rose blindfold"},
+ "settings": {
+  "s1": {"kind": "set", "desc": "a snowy hilltop landscape under a bright sky with drifting white clouds"},
+  "s2": {"kind": "set", "desc": "a snowy picnic spot with a checkered blanket spread out under a bright sky"}
+ },
+ "spans": [
+  {
+   "start": 0, "end": 53, "boundary": "start", "keep": true, "camera": "static",
+   "framing": "medium wide", "angle": "eye level", "setting": "s1",
+   "view": "with the gentle curve of the snowy hill behind them",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "center", "presence": "full", "outfit": [],
+     "moves": [{"frame": 14, "screen": "left-center"}]},
+    {"id": "polly", "screen": "right", "presence": "full", "outfit": ["o1"],
+     "moves": [{"frame": 14, "screen": "right-center"}]}
+   ],
+   "beats": [
+    {"start": 0, "end": 26, "text": "Pax waddles a few steps to the left carrying a picnic basket while blindfolded Polly holds his fin and shuffles along beside him"},
+    {"start": 26, "end": 34, "text": "Pax stops and sets the picnic basket down on the snow while Polly waits beside him"},
+    {"start": 34, "end": 44, "text": "Pax pulls a rolled checkered blanket out of the basket and lifts it up"},
+    {"start": 44, "end": 53, "text": "Pax holds the rolled blanket in front of him and starts to unroll it next to Polly"}
+   ],
+   "props": ["picnic basket", "rolled checkered blanket"], "prop_events": [], "effects": [], "overlays": [],
+   "in_world_text": [], "travel": "moves_within",
+   "notes": "keep12 is low because the leads fill most of the edges and move; hill line and ice patches overlap exactly (compare 0/26, 0/52), only the clouds drift"
+  },
+  {
+   "start": 53, "end": 61, "boundary": "cut", "keep": false, "drop_reason": "too_short", "camera": "static",
+   "notes": "Pax holding the blanket up to his chest, then flinging it up; 8 frames before the blanket wipe"
+  },
+  {
+   "start": 61, "end": 77, "boundary": "transition", "keep": false, "drop_reason": "transition", "camera": "other",
+   "notes": "blanket wipe: the flung blanket sweeps across the picture into the picnic shot; last wipe edge visible at f76"
+  },
+  {
+   "start": 77, "end": 112, "boundary": "after_transition", "keep": true, "camera": "static",
+   "framing": "medium wide", "angle": "eye level", "setting": "s2",
+   "view": "with plates of sandwiches and cookies, a glass jug and two glasses of lemonade with straws in the foreground",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "polly", "screen": "center", "presence": "full", "outfit": ["o1"]}
+   ],
+   "beats": [
+    {"start": 77, "end": 89, "text": "Polly stands blindfolded with both fins raised behind her head, untying the blindfold"},
+    {"start": 89, "end": 95, "text": "Polly pulls the blindfold off her eyes with her eyes still closed"},
+    {"start": 95, "end": 104, "text": "Polly opens her eyes and stares at the food spread out in front of her, holding the blindfold in one fin"},
+    {"start": 104, "end": 112, "text": "Polly beams with blushing cheeks as little sparkles pop up around her head"}
+   ],
+   "props": ["blindfold", "plates of food", "glass jug", "glasses with straws"], "prop_events": [], "effects": ["sparkles", "blush marks"], "overlays": [],
+   "in_world_text": [], "travel": "none",
+   "notes": "tilt down starts at f112 (compare 109/111 locked, 110/112 doubled grid lines); clouds drift slightly"
+  },
+  {
+   "start": 112, "end": 147, "boundary": "camera", "keep": false, "drop_reason": "camera_move", "camera": "tilt_down",
+   "notes": "tilt down from Polly to the food and the open basket"
+  },
+  {
+   "start": 147, "end": 171, "boundary": "camera", "keep": false, "drop_reason": "no_lead", "camera": "static",
+   "notes": "food and basket insert; the basket holds the plush bouquet with small Pax and Polly plush figures (a lead copy too)"
+  },
+  {
+   "start": 171, "end": 187, "boundary": "transition", "keep": false, "drop_reason": "transition", "camera": "static",
+   "notes": "dissolve (match cut) from the full spread to the half-eaten spread"
+  },
+  {
+   "start": 187, "end": 195, "boundary": "after_transition", "keep": false, "drop_reason": "too_short", "camera": "static",
+   "notes": "half-eaten food insert, no lead, 8 frames"
+  },
+  {
+   "start": 195, "end": 221, "boundary": "camera", "keep": false, "drop_reason": "camera_move", "camera": "tilt_up",
+   "notes": "tilt up from the food to Pax and Polly sitting on the blanket"
+  },
+  {
+   "start": 221, "end": 275, "boundary": "camera", "keep": false, "drop_reason": "lead_copy", "camera": "other",
+   "notes": "Pax and Polly sitting on the blanket, but the plush bouquet with small Pax and Polly plush figures sits in the foreground the whole time; also a slow camera drift (compare 222/250, 221/274: blanket grid lines doubled)"
+  },
+  {
+   "start": 275, "end": 282, "boundary": "transition", "keep": false, "drop_reason": "transition", "camera": "other",
+   "notes": "dissolve to the Icebreakers card pack"
+  },
+  {
+   "start": 282, "end": 303, "boundary": "after_transition", "keep": false, "drop_reason": "ad_merch", "camera": "other",
+   "notes": "product shot of the Icebreakers card game; the top card flies at the viewer with blur"
+  },
+  {
+   "start": 303, "end": 318, "boundary": "transition", "keep": false, "drop_reason": "transition", "camera": "other",
+   "notes": "fade to black (f303-311), black, then fade in from black (f313-317)"
+  },
+  {
+   "start": 318, "end": 371, "boundary": "after_transition", "keep": false, "drop_reason": "camera_move", "camera": "push_in",
+   "notes": "sunset picnic on the cliff edge; slow camera drift across the whole shot (compare 319/345 and 345/368: cliff and blanket edges doubled)"
+  },
+  {
+   "start": 371, "end": 383, "boundary": "transition", "keep": false, "drop_reason": "transition", "camera": "other",
+   "notes": "dissolve from sunset to night"
+  },
+  {
+   "start": 383, "end": 439, "boundary": "after_transition", "keep": false, "drop_reason": "graphic_overlay", "camera": "static",
+   "notes": "night, the leads seen from behind as dark shapes; a text caption types on over the sky from about f386"
+  },
+  {
+   "start": 439, "end": 511, "boundary": "cut", "keep": false, "drop_reason": "ad_merch",
+   "camera": "static", "notes": "end card for the card game"
+  }
+ ]
+}

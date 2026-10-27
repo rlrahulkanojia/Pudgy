@@ -1,0 +1,88 @@
+{
+ "skit": "iteration_1/30_videos/2D_PP_Vibing_Base.mp4",
+ "frames": 179,
+ "fps": 24,
+ "curated_by": "curator-09",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "VIBING",
+ "cast": {
+  "pax": {"kind": "lead"},
+  "polly": {"kind": "lead"}
+ },
+ "outfits": {"o1": "a striped red, white and navy sweatband"},
+ "settings": {
+  "s1": {"kind": "flat", "desc": "a home gym drawn on a plain pale grey background"},
+  "s2": {"kind": "flat", "desc": "a room drawn on a plain pale grey background"}
+ },
+ "spans": [
+  {
+   "start": 0, "end": 22, "boundary": "start", "keep": false, "drop_reason": "camera_move", "camera": "zoom_in",
+   "notes": "Pax skipping rope on an exercise mat; slow continuous zoom in (the mat grows ~1 px/frame on each side)"
+  },
+  {
+   "start": 22, "end": 54, "boundary": "cut", "keep": true, "camera": "static",
+   "framing": "medium", "angle": "eye level", "setting": "s1",
+   "view": "with a red punching bag hanging from a ceiling hook",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "left-center", "presence": "full", "outfit": ["o1"]}
+   ],
+   "beats": [
+    {"start": 22, "end": 46, "text": "Pax throws a quick series of punches at the hanging punching bag, bouncing on his feet with a fierce frown"},
+    {"start": 46, "end": 50, "text": "Pax lunges with one huge punch that knocks the bag off its hook and out of view"},
+    {"start": 50, "end": 54, "text": "Pax stumbles forward after the punch with his eyes squeezed shut and his flippers flung out"}
+   ],
+   "props": ["punching bag"], "prop_events": [], "effects": ["sweat drops"], "overlays": [],
+   "in_world_text": [], "travel": "none",
+   "notes": "The ceiling hook stays exactly in place for the whole shot (camera locked). The big pose change at 47 (d1 spike) is the punch, not a cut."
+  },
+  {
+   "start": 54, "end": 89, "boundary": "cut", "keep": true, "camera": "static",
+   "framing": "close-up", "angle": "eye level", "setting": "s1", "view": "",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "center", "presence": "partial", "outfit": ["o1"]}
+   ],
+   "beats": [
+    {"start": 54, "end": 61, "text": "Pax grips a heavy barbell across his chest and glares ahead with a fierce frown as sweat drops appear"},
+    {"start": 61, "end": 80, "text": "Pax squeezes his eyes shut and trembles under the weight, bobbing up and down as he strains"},
+    {"start": 80, "end": 89, "text": "Pax keeps straining with his eyes squeezed shut while his cheeks flush red"}
+   ],
+   "props": ["barbell"], "prop_events": [], "effects": ["sweat drops", "blush marks"], "overlays": [],
+   "in_world_text": [], "travel": "none",
+   "notes": "Plain background, no fixed reference in view: the whole figure bobs 30-50 px as he trembles (storyboard: he shakes under the weight). Read as character motion, not camera shake. The jump at 61 is a pose change (he sinks and squints), same framing."
+  },
+  {
+   "start": 89, "end": 93, "boundary": "camera", "keep": false, "drop_reason": "camera_move", "camera": "zoom_out",
+   "notes": "fast zoom out from the close-up to a wide view of Pax on the mat"
+  },
+  {
+   "start": 93, "end": 108, "boundary": "camera", "keep": false, "drop_reason": "too_short", "camera": "static",
+   "notes": "Pax holding the barbell overhead on the mat (15 frames)"
+  },
+  {
+   "start": 108, "end": 118, "boundary": "camera", "keep": false, "drop_reason": "camera_move", "camera": "pan_right",
+   "notes": "whip pan right from Pax to Polly; 118 is the first settled frame"
+  },
+  {
+   "start": 118, "end": 179, "boundary": "camera", "keep": false, "drop_reason": "lead_copy", "camera": "static",
+   "framing": "medium wide", "angle": "eye level", "setting": "s2",
+   "view": "with a leafy potted plant on a little wooden stool",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "polly", "screen": "center", "presence": "full", "outfit": []}
+   ],
+   "beats": [
+    {"start": 118, "end": 138, "text": "Polly dances on the spot, tipping a watering can over the potted plant while holding a phone up in her other flipper"},
+    {"start": 138, "end": 162, "text": "Polly turns away and sways her hips, waving the watering can and the phone"},
+    {"start": 162, "end": 166, "text": "Polly spins round, swinging the watering can up over her head"},
+    {"start": 166, "end": 179, "text": "Polly keeps dancing, watering the plant again with her eyes closed and the phone held out to the side"}
+   ],
+   "props": ["watering can", "phone", "potted plant"],
+   "prop_events": [{"prop": "phone", "event": "uses", "frame": 118, "by": "polly", "is_ifin": "unsure"}],
+   "effects": ["water droplets"], "overlays": [], "in_world_text": ["music player app on the phone screen"],
+   "travel": "none",
+   "notes": "Camera locked 118-178 (measured: zero shift). Dropped because the phone carries a small figure of Pax (a little navy-and-white penguin charm clinging to its top edge, ~40 px at full res), a lead copy (D4), visible the whole span. The phone body is pale grey with a camera module like the iFin, but it has this charm instead of the iFin's little tuft: is_ifin unsure. Fields are filled in so the lead can flip keep if the charm is judged acceptable."
+  }
+ ]
+}

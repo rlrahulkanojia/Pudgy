@@ -1,0 +1,456 @@
+{
+ "skit": "iteration_2/72_videos/PP-GroundhogDay-Base.mp4",
+ "frames": 337,
+ "fps": 24,
+ "curated_by": "curator-08",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "GROUNDHOG DAY",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a bedroom drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 47,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a yellow bed with duck-topped bedposts and a nightstand with a peach lamp",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 12,
+       "screen": "left-center"
+      }
+     ]
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 11,
+     "text": "Polly waddles up to the bed where Pax lies asleep under the blanket with his beak open"
+    },
+    {
+     "start": 11,
+     "end": 40,
+     "text": "Polly gently shakes Pax by the shoulder while he stirs and squints one eye open"
+    },
+    {
+     "start": 40,
+     "end": 47,
+     "text": "Polly turns from the bed to face forward with a sweet smile while Pax groggily pokes a flipper out over the blanket"
+    }
+   ],
+   "props": [
+    "bed",
+    "blanket",
+    "lamp"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "Polly is cut by the left edge for the first few frames. Bed edges overlap exactly in compare 0/40. A pan starts at f47. | verification pass 2 (verify2_report_5): Beat 36-47 says Polly 'waddles off': she keeps shaking Pax until f39, then at f40-46 only turns on the spot to face forward (eyes closed in a smile f40-42, open f43+); her feet stay put. She only starts walking in the pan after f47."
+  },
+  {
+   "start": 47,
+   "end": 82,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pan_left",
+   "notes": "Pan (left and down) following Polly from the bed to the vanity; lamp edge moves from f47, settles at f82 (f82 = f83 = f84)."
+  },
+  {
+   "start": 82,
+   "end": 128,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a low white vanity table holding a purple handbag and a phone, and a nightstand with a peach lamp behind",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 82,
+     "end": 91,
+     "text": "Polly stands at the low vanity table, glancing over the things laid out on it"
+    },
+    {
+     "start": 91,
+     "end": 95,
+     "text": "Polly picks up a red hairbrush from the table"
+    },
+    {
+     "start": 95,
+     "end": 125,
+     "text": "Polly brushes the top of her head with the red hairbrush, her eyes wide open"
+    },
+    {
+     "start": 125,
+     "end": 128,
+     "text": "Polly lowers the hairbrush in front of her face and shuts her eyes"
+    }
+   ],
+   "props": [
+    "hairbrush",
+    "handbag",
+    "phone",
+    "vanity table"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "The handbag carries a tiny penguin keychain charm (about 3% of frame height) - kept as a prop, see report. Phone lies face up on the table, untouched here. Static: compare 82/127. A quick pull-back starts at f128. | verification pass 2 (verify2_report_5): Beat 94-128 says she brushes 'smiling': her face is neutral and wide-eyed while brushing (crops f110), and at f125-127 she lowers the brush in front of her face and shuts her eyes. The brush is picked up at f91-93, not before.; Handbag charm (f82, f300 full-res crop): a dark-headed penguin figurine with a blue bow and a rose sweater, neither Pax nor Polly, so it stays a prop as the curator decided"
+  },
+  {
+   "start": 128,
+   "end": 133,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pull_back",
+   "notes": "Quick pull-back from the vanity to the wide two-shot (v4 and the profile read it as a dissolve; the strip shows a continuous scale change). Static again from f133."
+  },
+  {
+   "start": 133,
+   "end": 179,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a low white vanity table in the foreground and a yellow bed, a nightstand and a peach lamp behind",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 133,
+     "end": 150,
+     "text": "Pax opens one eye in bed and lifts his head from the pillow while Polly holds the red hairbrush up to her face at the vanity"
+    },
+    {
+     "start": 150,
+     "end": 179,
+     "text": "Pax slowly props himself up on one flipper and peels back the blanket while Polly stands at the vanity with the brush"
+    }
+   ],
+   "props": [
+    "hairbrush",
+    "handbag",
+    "phone",
+    "vanity table",
+    "bed",
+    "blanket"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "Static: compare 133/178 (vanity, nightstand, bed edges black)."
+  },
+  {
+   "start": 179,
+   "end": 222,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a low white vanity table holding a purple handbag and a phone, and a nightstand with a peach lamp behind",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 179,
+     "end": 195,
+     "text": "Polly holds the red hairbrush up in front of her face, glancing off to the side"
+    },
+    {
+     "start": 195,
+     "end": 210,
+     "text": "Polly reaches over to her purple handbag and drops the hairbrush into it"
+    },
+    {
+     "start": 210,
+     "end": 218,
+     "text": "Polly rests a flipper on the closed handbag and looks down at it"
+    },
+    {
+     "start": 218,
+     "end": 222,
+     "text": "Polly blinks and lifts her gaze to look straight ahead"
+    }
+   ],
+   "props": [
+    "hairbrush",
+    "handbag",
+    "phone",
+    "vanity table"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "Same framing as [82,128). Static: left-strip bbox constant (table leg x=25, floor y=760). A quick pull-back starts at f222. | verification pass 2 (verify2_report_5): Beat 210-222 says Polly 'stares ahead blankly': from f210 to f217 she looks down at the handbag with her flipper on it, blinks at f219, and only looks ahead at f221. She also reaches a flipper to the bag from f195, before the brush goes in at f203-207."
+  },
+  {
+   "start": 222,
+   "end": 226,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pull_back",
+   "notes": "Quick pull-back to the wide two-shot, static again from f226."
+  },
+  {
+   "start": 226,
+   "end": 263,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a low white vanity table in the foreground and a yellow bed, a nightstand and a peach lamp behind",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 226,
+     "end": 240,
+     "text": "Pax opens one eye in bed and lifts his head from the pillow while Polly stares over at him from the vanity"
+    },
+    {
+     "start": 240,
+     "end": 263,
+     "text": "Polly raises a flipper toward Pax with an annoyed look while he props himself up and peels back the blanket"
+    }
+   ],
+   "props": [
+    "handbag",
+    "phone",
+    "vanity table",
+    "bed",
+    "blanket"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "Pax repeats the same wake-up animation as [133,179) (the skit's loop gag)."
+  },
+  {
+   "start": 263,
+   "end": 310,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a low white vanity table and a nightstand with a peach lamp behind",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 263,
+     "end": 277,
+     "text": "Polly stands at the vanity with a flipper on her hip and an annoyed frown"
+    },
+    {
+     "start": 277,
+     "end": 290,
+     "text": "Polly picks up {ifin} from the table and drops it into her purple handbag"
+    },
+    {
+     "start": 290,
+     "end": 310,
+     "text": "Polly lifts the handbag off the table and clutches it to her front, frowning"
+    }
+   ],
+   "props": [
+    "handbag",
+    "phone",
+    "vanity table"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "picks_up",
+     "frame": 280,
+     "by": "polly",
+     "is_ifin": true
+    },
+    {
+     "prop": "phone",
+     "event": "puts_away",
+     "frame": 287,
+     "by": "polly",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "Phone: grey case, black screen, little tuft at the top end, lenses on the back as she lifts it (f283) = iFin. Static: left-strip bbox constant (table leg x=25, floor y=760)."
+  },
+  {
+   "start": 310,
+   "end": 337,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a yellow bed with duck-topped bedposts and a nightstand with a peach lamp",
+   "time": "day",
+   "size_change": true,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 316,
+       "screen": "left-center"
+      },
+      {
+       "frame": 324,
+       "screen": "center"
+      },
+      {
+       "frame": 332,
+       "screen": "right-center"
+      }
+     ]
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 310,
+     "end": 320,
+     "text": "Polly waddles to the bedside clutching her handbag and grabs Pax's flipper as he sits up groggily"
+    },
+    {
+     "start": 320,
+     "end": 337,
+     "text": "Polly marches forward to the right, pulling a sleepy Pax out of bed behind her by the flipper"
+    }
+   ],
+   "props": [
+    "handbag",
+    "bed",
+    "blanket"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "Camera locked (compare 310/336: bed, lamp, nightstand edges black); keep12 is low because both leads move a lot. Polly walks down-screen toward the viewer and grows slightly, hence size_change. Polly is cut by the left edge at f310-312."
+  }
+ ]
+}

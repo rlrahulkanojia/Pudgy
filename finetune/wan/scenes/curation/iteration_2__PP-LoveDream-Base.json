@@ -1,0 +1,17 @@
+{
+ "skit": "iteration_2/72_videos/PP-LoveDream-Base.mp4",
+ "frames": 138,
+ "fps": 24,
+ "curated_by": "curator-11",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "LOVE DREAM",
+ "cast": {},
+ "outfits": {},
+ "settings": {},
+ "spans": [
+  {
+   "start": 0, "end": 138, "boundary": "start", "keep": false, "drop_reason": "lead_copy",
+   "camera": "static", "notes": "one static shot with no cuts: Pax sleeps on his back on a cloud in a dreamy sky, ringed by five or six cloud dream bubbles, each showing a vignette of Pax and Polly that slowly cross-dissolves into the next, for the whole skit. Many small copies of both leads in every frame: dropped"
+  }
+ ]
+}

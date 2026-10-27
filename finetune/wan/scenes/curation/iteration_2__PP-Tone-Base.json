@@ -1,0 +1,206 @@
+{
+ "skit": "iteration_2/72_videos/PP-Tone-Base.mp4",
+ "frames": 240,
+ "fps": 24,
+ "curated_by": "curator-00",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "TONE",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "a pale grey hockey jersey with bold striped sleeves and hem and a small penguin crest on the chest"
+ },
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a living room with a cream couch against a plain pale wall"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 125,
+   "boundary": "start",
+   "keep": false,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the couch at the left and a teal retro television on a yellow footstool in the foreground at the right",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ],
+     "moves": [
+      {
+       "frame": 112,
+       "screen": "left-center"
+      },
+      {
+       "frame": 120,
+       "screen": "left"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 26,
+     "text": "Pax, red-faced and scowling, waves a hockey stick up in the air beside the television"
+    },
+    {
+     "start": 26,
+     "end": 44,
+     "text": "Pax grips the stick across his body with both flippers and heaves it up over his head, his face flushed red"
+    },
+    {
+     "start": 44,
+     "end": 52,
+     "text": "Pax flings the stick down onto the floor in front of the television"
+    },
+    {
+     "start": 52,
+     "end": 64,
+     "text": "Pax stands glaring toward the television with his face flushed red"
+    },
+    {
+     "start": 64,
+     "end": 77,
+     "text": "Pax squeezes his eyes shut and yells with his beak open, his face still red"
+    },
+    {
+     "start": 77,
+     "end": 106,
+     "text": "Pax keeps scowling toward the television as the red fades from his face"
+    },
+    {
+     "start": 106,
+     "end": 125,
+     "text": "Pax hops backward toward the couch with his flippers held out, still frowning"
+    }
+   ],
+   "props": [
+    "hockey stick",
+    "television",
+    "couch"
+   ],
+   "prop_events": [
+    {
+     "prop": "hockey stick",
+     "event": "drops",
+     "frame": 48,
+     "by": "pax"
+    }
+   ],
+   "effects": [
+    "anger flush"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "locked (compare 0/124: couch, wall line and television edges black; ORB was unreliable here because Pax dominates the features). The couch's right end looks new at f124 only because Pax was covering it at f0. Jersey crest: a tiny waving penguin printed on the chest - read as a team mascot print on the outfit, not a copy of Pax (flagged to lead). | verification 2026-10-26: same jersey crest as [125,240): a printed small Pax on the chest",
+   "drop_reason": "lead_copy"
+  },
+  {
+   "start": 125,
+   "end": 240,
+   "boundary": "cut",
+   "keep": false,
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with yellow shell-shaped cushions on the couch and the back of a teal retro television in the foreground",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 125,
+     "end": 133,
+     "text": "Pax drops down onto the couch beside Polly with a bounce while she holds {ifin} and looks at it"
+    },
+    {
+     "start": 133,
+     "end": 165,
+     "text": "Pax throws his flippers out wide and shouts with a fierce scowl while Polly calmly looks at {ifin}"
+    },
+    {
+     "start": 165,
+     "end": 195,
+     "text": "Pax crosses his flippers and sulks with a deep frown while Polly glances over at him"
+    },
+    {
+     "start": 195,
+     "end": 205,
+     "text": "Polly speaks softly to Pax with a small open beak while he squeezes his eyes shut"
+    },
+    {
+     "start": 205,
+     "end": 215,
+     "text": "Pax opens his eyes wide and round as his frown melts away"
+    },
+    {
+     "start": 215,
+     "end": 232,
+     "text": "Pax turns toward Polly with blushing cheeks and a soft open beak, fidgeting with his flippers"
+    },
+    {
+     "start": 232,
+     "end": 240,
+     "text": "Polly closes her eyes in a calm little smile while Pax gazes at her, blushing"
+    }
+   ],
+   "props": [
+    "iFin phone",
+    "couch",
+    "television"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 125,
+     "by": "polly",
+     "is_ifin": true
+    }
+   ],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "hard cut at f125; locked (ORB 0 px vs f125 at f150, f180, f210, f239; couch edges black in compare 125/239). The television in the foreground is drawn soft-focus. Polly's phone is the iFin (grey back, lens bump, tuft). | verification 2026-10-26: Pax's jersey has a printed small blue Pudgy penguin (white belly, tuft, orange feet) on the chest",
+   "drop_reason": "lead_copy"
+  }
+ ]
+}

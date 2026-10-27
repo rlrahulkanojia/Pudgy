@@ -1,0 +1,77 @@
+{
+ "skit": "iteration_2/72_videos/PP-NotDone Yet-Base.mp4",
+ "frames": 186,
+ "fps": 24,
+ "curated_by": "curator-01",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "NOT DONE YET",
+ "cast": {
+  "pax": {"kind": "lead"},
+  "polly": {"kind": "lead"}
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {"kind": "flat", "desc": "a living room with a long cream couch, drawn on a plain pale grey background"}
+ },
+ "spans": [
+  {
+   "start": 0, "end": 41, "boundary": "start", "keep": false, "drop_reason": "camera_move", "camera": "other",
+   "notes": "tracking shot following Polly as she carries the snacks past the door; the background slides and the picture rocks a few degrees with each step"
+  },
+  {
+   "start": 41, "end": 46, "boundary": "camera", "keep": false, "drop_reason": "camera_move", "camera": "pull_back",
+   "notes": "fast pull-back to the wide view of the couch; f46 is the first locked frame (46->47 identity)"
+  },
+  {
+   "start": 46, "end": 69, "boundary": "camera", "keep": true, "camera": "static",
+   "framing": "wide", "angle": "eye level", "setting": "s1",
+   "view": "",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "left-center", "presence": "full", "outfit": []},
+    {"id": "polly", "screen": "right", "presence": "full", "outfit": []}
+   ],
+   "beats": [
+    {"start": 46, "end": 50, "text": "Polly stands beside the couch holding an armful of snacks and a blanket while Pax lies asleep on his back"},
+    {"start": 50, "end": 56, "text": "Polly lets the whole pile drop to the floor"},
+    {"start": 56, "end": 62, "text": "Polly stands still, staring at the sleeping Pax"},
+    {"start": 62, "end": 69, "text": "Polly leans toward the couch and reaches a flipper out to Pax while he keeps sleeping with a flipper dangling"}
+   ],
+   "props": ["couch", "snacks", "blanket"],
+   "prop_events": [{"prop": "snacks and blanket", "event": "drops", "frame": 51, "by": "polly"}],
+   "effects": [], "overlays": [], "in_world_text": [], "travel": "none",
+   "notes": "23 frames between the pull-back (ends f45) and a short pan (starts f69); compare 46/68: couch edges black, global estimate identity"
+  },
+  {
+   "start": 69, "end": 74, "boundary": "camera", "keep": false, "drop_reason": "camera_move", "camera": "pan_left",
+   "notes": "quick 5-frame reframe: the couch slides ~95 px (at 1080 wide) to the right"
+  },
+  {
+   "start": 74, "end": 102, "boundary": "camera", "keep": true, "camera": "static",
+   "framing": "wide", "angle": "eye level", "setting": "s1",
+   "view": "",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "left-center", "presence": "full", "outfit": []},
+    {"id": "polly", "screen": "right-center", "presence": "full", "outfit": [],
+     "moves": [{"frame": 80, "screen": "center"}]}
+   ],
+   "beats": [
+    {"start": 74, "end": 78, "text": "Polly reaches over the end of the couch toward the sleeping Pax"},
+    {"start": 78, "end": 92, "text": "Polly clambers onto the couch and sprawls on her belly across Pax, kicking her feet"},
+    {"start": 92, "end": 102, "text": "Polly sits up on the couch against Pax and presses her flippers to his face while he stays asleep"}
+   ],
+   "props": ["couch", "snacks"], "prop_events": [], "effects": [], "overlays": [],
+   "in_world_text": [], "travel": "moves_within",
+   "notes": "28 frames; compare 74/101: couch edges black, global estimate identity (73->74 still moving, 74->75 identity)"
+  },
+  {
+   "start": 102, "end": 152, "boundary": "cut", "keep": false, "drop_reason": "camera_move", "camera": "push_in",
+   "notes": "closer two-shot on the couch, Polly hugging and shaking the sleeping Pax; slow push-in with a reframe (scale +4% by f120, couch edges doubled in compare 102/151 and 128/151)"
+  },
+  {
+   "start": 152, "end": 186, "boundary": "cut", "keep": false, "drop_reason": "camera_move", "camera": "pull_back",
+   "notes": "close-up of Polly wailing with flippers flung wide, Pax's head at the left edge; the picture drifts and pulls back slowly (scale -3% over f168-185, the blurred foreground couch arm doubles in compare 166/185)"
+  }
+ ]
+}

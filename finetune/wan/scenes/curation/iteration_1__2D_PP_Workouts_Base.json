@@ -1,0 +1,400 @@
+{
+ "skit": "iteration_1/30_videos/2D_PP_Workouts_Base.mp4",
+ "frames": 286,
+ "fps": 24,
+ "curated_by": "curator-03",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "TOUGH WORKOUTS",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "a rose blindfold"
+ },
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a workout space drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 58,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "notes": "Polly squats on a mat while Pax kisses her each time she rises (little hearts); slow continuous push in: the mat outline grows and doubles in compare 0/24, 24/45, 45/57"
+  },
+  {
+   "start": 58,
+   "end": 81,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a workout mat on the floor",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 58,
+     "end": 64,
+     "text": "Pax crouches on the mat with his fins raised by his head as a square fish-print cushion flies over him"
+    },
+    {
+     "start": 64,
+     "end": 69,
+     "text": "Pax springs up with his fins spread wide while a teal book sails past above him"
+    },
+    {
+     "start": 69,
+     "end": 75,
+     "text": "Pax crouches again with a worried face and sweat drops as a hockey stick flies over his head"
+    },
+    {
+     "start": 75,
+     "end": 81,
+     "text": "Pax springs up again with his fins spread wide, then lands as a beach ball flies over him"
+    }
+   ],
+   "props": [
+    "workout mat",
+    "cushion",
+    "book",
+    "hockey stick",
+    "beach ball"
+   ],
+   "prop_events": [],
+   "effects": [
+    "sweat drops"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "keep12 low from the big flying objects; mat edges overlap exactly in compare 58/80; a fast zoom out starts at f81 | verification 2026-10-26: beats rewritten (objects, second jump)"
+  },
+  {
+   "start": 81,
+   "end": 85,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "zoom_out",
+   "notes": "fast zoom out revealing Polly throwing things"
+  },
+  {
+   "start": 85,
+   "end": 131,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a workout mat on the floor and a pile of books, tools and a ball beside Polly",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 85,
+     "end": 97,
+     "text": "Pax jumps up with flippers spread and drops into a squat on his mat while Polly flings a teal bottle over his head"
+    },
+    {
+     "start": 97,
+     "end": 106,
+     "text": "Pax stands panting with sweat drops while Polly holds a small yellow mug and giggles"
+    },
+    {
+     "start": 106,
+     "end": 121,
+     "text": "Pax turns aside and wipes his brow with a fin while Polly keeps giggling with her eyes closed"
+    },
+    {
+     "start": 121,
+     "end": 131,
+     "text": "Polly winds up and tosses the yellow mug over Pax's head as he throws up his flippers and ducks"
+    }
+   ],
+   "props": [
+    "workout mat",
+    "teal bottle",
+    "small yellow mug",
+    "books",
+    "pliers",
+    "screwdriver",
+    "ball"
+   ],
+   "prop_events": [],
+   "effects": [
+    "sweat drops"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "zoom settles by f85 (compare 85/100, 86/100, 85/130 locked; 84/100 still doubled) | verification pass 2 (verify3_report_0): beat 85-97 'Pax squats and bobs up' leaves out a jump and gets the order wrong: Pax jumps up with flippers spread f85-89 (head rises ~60 px at full res, feet off the mat), then drops into a squat f90-96; the 'small yellow object' is a small yellow mug (full-res crop f104); renaming is optional; teal bottle is a star/heart-print tumbler, no lead print. compare 85/130: mat, books and tools black"
+  },
+  {
+   "start": 131,
+   "end": 168,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a metal pull-up bar",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 131,
+     "end": 141,
+     "text": "Polly pulls herself up on the bar with her eyes squeezed shut and her knees tucked"
+    },
+    {
+     "start": 141,
+     "end": 147,
+     "text": "Polly lowers herself back down and opens her eyes"
+    },
+    {
+     "start": 147,
+     "end": 155,
+     "text": "Polly hangs from the bar at full stretch, looking ahead with wide eyes"
+    },
+    {
+     "start": 155,
+     "end": 168,
+     "text": "Polly giggles with her eyes closed and her beak open, still hanging from the bar"
+    }
+   ],
+   "props": [
+    "pull-up bar"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "keep12 low because Polly fills the frame and moves; the bar stays at the same rows f131-167 (measured) and her fins grip it at the same spots"
+  },
+  {
+   "start": 168,
+   "end": 200,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a metal pull-up bar on two posts",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 168,
+     "end": 183,
+     "text": "Polly hangs from the bar giggling with her eyes closed while Pax tickles her feet with a feather"
+    },
+    {
+     "start": 183,
+     "end": 190,
+     "text": "Polly opens her eyes and starts to pull herself up while Pax holds the feather out"
+    },
+    {
+     "start": 190,
+     "end": 200,
+     "text": "Polly pulls herself up over the bar with her eyes squeezed shut while Pax waits below with the feather"
+    }
+   ],
+   "props": [
+    "pull-up bar",
+    "feather"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": ""
+  },
+  {
+   "start": 200,
+   "end": 223,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a metal pull-up bar",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 200,
+     "end": 207,
+     "text": "Pax hangs from the bar and strains to pull himself up with his eyes squeezed shut"
+    },
+    {
+     "start": 207,
+     "end": 216,
+     "text": "Pax holds his chin above the bar with his knees tucked as sweat drops fly off him"
+    },
+    {
+     "start": 216,
+     "end": 223,
+     "text": "Pax lowers himself to hang at full stretch, staring ahead with wide, worried eyes"
+    }
+   ],
+   "props": [
+    "pull-up bar"
+   ],
+   "prop_events": [],
+   "effects": [
+    "sweat drops"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "bar measured at the same rows f200-222; it starts to shift at f223 as the foam roller swings in"
+  },
+  {
+   "start": 223,
+   "end": 227,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "tilt_down",
+   "notes": "the picture jumps (bar moves up ~15 px at analysis size) as a foam roller swings under Pax"
+  },
+  {
+   "start": 227,
+   "end": 247,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "20 frames of Pax hanging while a black foam roller swings under him"
+  },
+  {
+   "start": 247,
+   "end": 286,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a metal pull-up bar on two posts",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 247,
+     "end": 256,
+     "text": "Pax hangs from the pull-up bar while blindfolded Polly lifts a big black foam roller beside the bar stand"
+    },
+    {
+     "start": 256,
+     "end": 276,
+     "text": "Polly swings the foam roller from side to side below Pax while he pulls up and swings his legs"
+    },
+    {
+     "start": 276,
+     "end": 286,
+     "text": "Polly bumps into the bar stand and the bar tips sideways while Pax clings on, flailing one fin"
+    }
+   ],
+   "props": [
+    "pull-up bar",
+    "foam roller"
+   ],
+   "prop_events": [],
+   "effects": [
+    "sweat drops"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "left post stays exactly in place (compare 248/272, 272/285); the right post and bar tilt in-world at the end"
+  }
+ ]
+}

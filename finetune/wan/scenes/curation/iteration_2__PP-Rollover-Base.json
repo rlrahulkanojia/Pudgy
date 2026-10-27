@@ -1,0 +1,75 @@
+{
+ "skit": "iteration_2/72_videos/PP-Rollover-Base.mp4",
+ "frames": 222,
+ "fps": 24,
+ "curated_by": "curator-batch4",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "ROLLOVER",
+ "cast": {
+  "pax": {"kind": "lead"}, "polly": {"kind": "lead"}
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {"kind": "set", "desc": "a bedroom with a big yellow bed and duck-shaped bedposts"}
+ },
+ "spans": [
+  {
+   "start": 0, "end": 28, "boundary": "start", "keep": true, "camera": "static",
+   "framing": "medium wide", "angle": "eye level", "setting": "s1",
+   "view": "with soft pillows and a duck-shaped bedpost behind them",
+   "time": "night", "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "left-center", "presence": "full", "outfit": []},
+    {"id": "polly", "screen": "center", "presence": "full", "outfit": []}
+   ],
+   "beats": [
+    {"start": 0, "end": 8, "text": "Pax lies curled around the sleeping Polly with a flipper over her and lifts his head"},
+    {"start": 8, "end": 22, "text": "Pax raises his head above Polly and gazes down at her with wide, adoring eyes while she sleeps"},
+    {"start": 22, "end": 28, "text": "Pax closes his eyes and presses a kiss onto the top of Polly's head"}
+   ],
+   "props": ["bed", "pillows", "blanket"], "prop_events": [], "effects": [], "overlays": [],
+   "in_world_text": [], "travel": "none",
+   "notes": "compare f0/f27 and furniture fit: identity overlap 1.000, camera locked"
+  },
+  {
+   "start": 28, "end": 103, "boundary": "cut", "keep": true, "camera": "static",
+   "framing": "wide", "angle": "eye level", "setting": "s1",
+   "view": "with a bedside lamp on each side of the bed",
+   "time": "night", "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "left-center", "presence": "full", "outfit": []},
+    {"id": "polly", "screen": "right-center", "presence": "full", "outfit": []}
+   ],
+   "beats": [
+    {"start": 28, "end": 46, "text": "Pax spoons Polly from behind under the blanket, nuzzling the back of her head"},
+    {"start": 46, "end": 58, "text": "Pax smiles with his eyes closed and rolls over onto his other side, turning his back to Polly"},
+    {"start": 58, "end": 70, "text": "Polly turns to face up with her eyes still closed and starts to rise slowly out from under the blanket"},
+    {"start": 70, "end": 94, "text": "Polly floats upright above the bed, stiff and straight with her flippers stretched out and her eyes closed"},
+    {"start": 94, "end": 103, "text": "Polly glides down behind Pax and drapes herself over him in a hug"}
+   ],
+   "props": ["bed", "blanket", "bedside lamps"], "prop_events": [], "effects": [], "overlays": [],
+   "in_world_text": [], "travel": "none",
+   "notes": "compare f28/f102: bed, headboard and lamps overlap exactly. Polly's floating is drawn as character motion, with no glow or sparkle effect"
+  },
+  {
+   "start": 103, "end": 222, "boundary": "cut", "keep": true, "camera": "static",
+   "framing": "medium wide", "angle": "eye level", "setting": "s1",
+   "view": "with a duck-shaped bedpost behind them",
+   "time": "night", "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "left-center", "presence": "full", "outfit": []},
+    {"id": "polly", "screen": "center", "presence": "partial", "outfit": []}
+   ],
+   "beats": [
+    {"start": 103, "end": 113, "text": "Polly drapes herself over Pax from behind, her flipper settling around him"},
+    {"start": 113, "end": 128, "text": "Pax blinks his eyes open in surprise under Polly's hug"},
+    {"start": 128, "end": 140, "text": "Pax closes his eyes and nestles back into Polly's embrace"},
+    {"start": 140, "end": 208, "text": "Pax lies snuggled under Polly with his eyes closed and his beak open in a small happy O"},
+    {"start": 208, "end": 222, "text": "Pax closes his beak and rests peacefully with his eyes shut under Polly's hug"}
+   ],
+   "props": ["bed", "blanket"], "prop_events": [], "effects": [], "overlays": [],
+   "in_world_text": [], "travel": "none",
+   "notes": "compare f103/f221: bedside table, bedpost and pillows overlap exactly (fit identity 1.000). Only Polly's flipper and the top of her head show over Pax, so she is partial"
+  }
+ ]
+}

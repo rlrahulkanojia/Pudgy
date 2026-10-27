@@ -1,0 +1,79 @@
+{
+ "skit": "iteration_1/30_videos/2D_PP_Power_Base.mp4",
+ "frames": 272,
+ "fps": 24,
+ "curated_by": "curator-05",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "POWER",
+ "cast": {
+  "pax": {"kind": "lead"}
+ },
+ "outfits": {
+  "o1": "a black necktie"
+ },
+ "settings": {
+  "s1": {"kind": "set", "desc": "a snowy field below rolling snowy hills, with a snow-covered pine tree"},
+  "s2": {"kind": "flat", "desc": "a plain pale background"},
+  "s3": {"kind": "set", "desc": "the inside of an igloo living room"},
+  "s4": {"kind": "set", "desc": "the snowy yard in front of an ice-block igloo"}
+ },
+ "spans": [
+  {
+   "start": 0, "end": 23, "boundary": "start", "keep": false, "drop_reason": "lead_hidden", "camera": "static",
+   "setting": "s2", "notes": "extreme close-up of Polly's fins pulling on yellow cleaning gloves: only the fins are visible, no face; keep12 0.27 (fins fill the picture and move)."
+  },
+  {
+   "start": 23, "end": 40, "boundary": "cut", "keep": false, "drop_reason": "too_short", "camera": "static",
+   "setting": "s2", "notes": "17 frames: Polly in yellow gloves snaps on a fluffy headband. The headband carries a small Pax face (see 66-111)."
+  },
+  {
+   "start": 40, "end": 66, "boundary": "cut", "keep": false, "drop_reason": "camera_move", "camera": "pan_left",
+   "setting": "s3", "notes": "Polly carries a tower of black trash bags while the room slides behind her (compare 40/65: the doorway arch, sofa and cabinet move, Polly stays centred): a tracking pan. Also has the Pax-face headband (lead_copy)."
+  },
+  {
+   "start": 66, "end": 111, "boundary": "cut", "keep": false, "drop_reason": "lead_copy", "camera": "static",
+   "setting": "s4", "notes": "camera locked (compare 66/110: igloo and tree black), Polly flattening cardboard boxes and stacking them. Dropped because Polly's headband carries a small drawn Pax head (blue penguin face with tuft, checked at full resolution on f30): a copy of a lead on screen the whole span. Judgement call - reverse if the lead treats the ornament as a plain outfit."
+  },
+  {
+   "start": 111, "end": 136, "boundary": "cut", "keep": false, "drop_reason": "no_lead", "camera": "static",
+   "setting": "s4", "notes": "insert: a vacuum cleaner nozzle sweeping the snow, no penguin visible."
+  },
+  {
+   "start": 136, "end": 142, "boundary": "cut", "keep": false, "drop_reason": "camera_move", "camera": "pull_back",
+   "setting": "s4", "notes": "fast pull-back from the igloo wall to the wide yard (profile flagged f136/137/138 as cuts; it is one fast move)."
+  },
+  {
+   "start": 142, "end": 167, "boundary": "camera", "keep": false, "drop_reason": "lead_copy", "camera": "static",
+   "setting": "s4", "notes": "camera locked after the pull-back (compare 142/166: tree and ground black; the igloo itself wobbles). Polly, tiny, vacuums the snow wearing the Pax-face headband: dropped for consistency with 66-111 (the ornament is only a few pixels here). 25 frames."
+  },
+  {
+   "start": 167, "end": 188, "boundary": "cut", "keep": false, "drop_reason": "camera_move", "camera": "pull_back",
+   "setting": "s1", "notes": "Pax's sled-car glides in while the view pulls back and drifts; motion settles at f187 (compare 187/188: 119 changed edge px; 188/215 car and tree black). Kept span starts one frame later for margin."
+  },
+  {
+   "start": 188, "end": 216, "boundary": "camera", "keep": true, "camera": "static",
+   "framing": "wide", "angle": "eye level", "setting": "s1",
+   "view": "with a small red sled-car parked on the snow and soft clouds above",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "center", "presence": "full", "outfit": ["o1"],
+     "moves": [{"frame": 204, "screen": "right-center"}]}
+   ],
+   "beats": [
+    {"start": 188, "end": 199, "text": "Pax sits in the parked red sled-car and turns around to reach for a briefcase on the back seat"},
+    {"start": 199, "end": 206, "text": "Pax hops out of the car with the black briefcase and lands on the snow beside it"},
+    {"start": 206, "end": 216, "text": "Pax stands next to the car swinging the briefcase down to his side, smiling"}
+   ],
+   "props": ["sled-car", "briefcase"], "prop_events": [{"prop": "briefcase", "event": "picks_up", "frame": 198, "by": "pax"}], "effects": [], "overlays": [],
+   "in_world_text": [], "travel": "moves_within", "notes": "camera locked f187-215 (compare 188/215: car, tree and ground black; clouds drift in-world). Tree is drawn out of focus (static, not an effect)."
+  },
+  {
+   "start": 216, "end": 252, "boundary": "cut", "keep": false, "drop_reason": "lead_copy", "camera": "static",
+   "setting": "s4", "notes": "camera locked (compare 216/251). Polly, wrapped in a striped blanket hood, hugs a plush toy of Pax while Pax walks in from the right with his briefcase and tie. The plush is a clear copy of Pax."
+  },
+  {
+   "start": 252, "end": 272, "boundary": "cut", "keep": false, "drop_reason": "too_short", "camera": "static",
+   "setting": "s4", "notes": "20 frames: Polly in the blanket hood, baby-faced, reaching up for a hug while holding the Pax plush (also lead_copy)."
+  }
+ ]
+}

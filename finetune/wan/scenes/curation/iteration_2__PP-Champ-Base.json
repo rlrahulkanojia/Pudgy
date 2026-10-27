@@ -1,0 +1,327 @@
+{
+ "skit": "iteration_2/72_videos/PP-Champ-Base.mp4",
+ "frames": 462,
+ "fps": 24,
+ "curated_by": "curator-05",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "CHAMP",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "a periwinkle hockey jersey",
+  "o2": "a rose hockey jersey"
+ },
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "an outdoor ice rink with a small hockey goal, snowy hills and pine trees"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "an arcade drawn on a plain pale background"
+  },
+  "s3": {
+   "kind": "set",
+   "desc": "a snowy park under a bright sky, with snow-covered pine trees"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 28,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pan_right",
+   "setting": "s1",
+   "notes": "pan right across the rink (ORB on the rink markings: ~-190 px at 540 wide by f20, stops at f27/28)."
+  },
+  {
+   "start": 28,
+   "end": 80,
+   "boundary": "camera",
+   "keep": false,
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a red face-off circle painted on the ice",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ],
+     "moves": [
+      {
+       "frame": 38,
+       "screen": "left-center"
+      }
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "exits",
+     "exits_at": 48,
+     "outfit": [
+      "o2"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 28,
+     "end": 38,
+     "text": "Polly swings her hockey stick at the puck, misses and topples onto her belly while Pax watches from the left"
+    },
+    {
+     "start": 38,
+     "end": 48,
+     "text": "Polly slides away on her belly past the goal and out of view to the right"
+    },
+    {
+     "start": 48,
+     "end": 64,
+     "text": "Pax stands alone holding his stick near the puck, little musical notes bobbing above his head"
+    },
+    {
+     "start": 64,
+     "end": 80,
+     "text": "Pax flicks the puck with his stick and sends it sliding into the goal net"
+    }
+   ],
+   "props": [
+    "hockey sticks",
+    "puck",
+    "hockey goal"
+   ],
+   "prop_events": [],
+   "effects": [
+    "musical notes"
+   ],
+   "overlays": [],
+   "in_world_text": [
+    "jersey numbers"
+   ],
+   "travel": "exits",
+   "notes": "camera locked from f28 (ORB on the rink markings: translation constant within 0.5 px; compare 28/126 rink black). The static rink shot runs to f127; split at f80 because Polly leaves at f48 and skates back in at f80 (presence cannot express exit then re-entry). | verification 2026-10-26: jersey crests: a blue penguin crest on Pax's jersey and a pink one on Polly's (verifier set 1 spot check f40-f119)",
+   "drop_reason": "lead_copy"
+  },
+  {
+   "start": 80,
+   "end": 127,
+   "boundary": "same_shot",
+   "keep": false,
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a red face-off circle painted on the ice",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "enters",
+     "enters_at": 80,
+     "outfit": [
+      "o2"
+     ],
+     "moves": [
+      {
+       "frame": 100,
+       "screen": "center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 80,
+     "end": 101,
+     "text": "Polly skates back in from the right to the goal while Pax looks over and waves a fin toward her"
+    },
+    {
+     "start": 101,
+     "end": 127,
+     "text": "Polly thrusts her stick high in triumph with a beaming smile while Pax hugs his fins to his face with a bashful closed-eye grin"
+    }
+   ],
+   "props": [
+    "hockey sticks",
+    "puck",
+    "hockey goal"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "jersey numbers"
+   ],
+   "travel": "enters",
+   "notes": "same locked shot as the previous span (hard cut to the arcade at f127). | verification 2026-10-26: jersey crests as in [28,80)",
+   "drop_reason": "lead_copy"
+  },
+  {
+   "start": 127,
+   "end": 153,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "setting": "s2",
+   "notes": "Polly works a claw machine with Pax beside her. The machine is full of penguin plush toys including large plushes of Pax (top right of the cabinet) and a pink Polly-like plush with headphones; also a Pudgy Penguins logo sign on top."
+  },
+  {
+   "start": 153,
+   "end": 230,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "setting": "s2",
+   "notes": "inside the claw machine: the claw over a pile of penguin plushes, giant Pax plushes behind (no real lead; also no_lead)."
+  },
+  {
+   "start": 230,
+   "end": 251,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "setting": "s2",
+   "notes": "Pax beside the machine, bumping it; the Pax and Polly plushes are visible through the glass at the left (checked at full resolution on f240)."
+  },
+  {
+   "start": 251,
+   "end": 276,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "setting": "s2",
+   "notes": "inside the claw machine again: the Polly-like plush tumbles into the prize chute (no real lead)."
+  },
+  {
+   "start": 276,
+   "end": 316,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "setting": "s2",
+   "notes": "wide at the machine: Polly takes out and hugs the pink penguin plush with headphones (a Polly copy) next to the cabinet of Pax plushes."
+  },
+  {
+   "start": 316,
+   "end": 462,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with the two of them side by side on a rose wooden bench",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 316,
+     "end": 336,
+     "text": "Polly giggles with her eyes closed, holding a two-scoop cone, while Pax nibbles his mint cone with his eyes closed"
+    },
+    {
+     "start": 336,
+     "end": 352,
+     "text": "Polly keeps laughing with her eyes shut as the top scoop of her ice cream slides off her cone while Pax stares at it"
+    },
+    {
+     "start": 352,
+     "end": 364,
+     "text": "Pax lunges sideways and catches the falling scoop on top of his own cone"
+    },
+    {
+     "start": 364,
+     "end": 377,
+     "text": "Pax sits back holding the stacked cone with a sweat drop while Polly laughs with her eyes shut"
+    },
+    {
+     "start": 377,
+     "end": 390,
+     "text": "Pax reaches over and sets the scoop back on top of Polly's cone"
+    },
+    {
+     "start": 390,
+     "end": 399,
+     "text": "Polly gives her mended cone a flat, half-lidded stare while Pax looks back at her"
+    },
+    {
+     "start": 399,
+     "end": 407,
+     "text": "Pax rubs the side of his head with a flipper and smiles sheepishly with his eyes closed while Polly stares flatly"
+    },
+    {
+     "start": 407,
+     "end": 428,
+     "text": "Pax raises his flipper high and his mint scoop tips off his cone and drops onto the snow while Polly watches wide-eyed"
+    },
+    {
+     "start": 428,
+     "end": 446,
+     "text": "Pax holds his empty cone and stares wide-eyed while Polly looks at him in surprise"
+    },
+    {
+     "start": 446,
+     "end": 462,
+     "text": "Polly bursts out laughing with a fin over her beak while Pax chuckles with his eyes closed"
+    }
+   ],
+   "props": [
+    "ice cream cones",
+    "bench"
+   ],
+   "prop_events": [],
+   "effects": [
+    "sweat drop"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked (compare 316/461: bench and trees black; clouds drift in-world). The trees are drawn soft-focus (static). | verification pass 2 (verify2_report_0): beat 390-410 says Polly stares at her mended cone with wide eyes; f393-403 she gives it a flat, half-lidded look, closes her eyes f405-407 and only opens them wide from f409; beat 390-410 Pax: looks at Polly f391-397, rubs the side of his head f399-405, then raises the flipper high from f407 (the 410-428 beat starts late); beat 316-340: Pax's eyes open from f336 and he stares at Polly's slipping s"
+  }
+ ]
+}

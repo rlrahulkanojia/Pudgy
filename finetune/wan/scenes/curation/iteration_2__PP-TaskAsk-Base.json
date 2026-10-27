@@ -1,0 +1,296 @@
+{
+ "skit": "iteration_2/72_videos/PP-TaskAsk-Base.mp4",
+ "frames": 272,
+ "fps": 24,
+ "curated_by": "curator-11",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "TASK ASK",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a kitchen drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 57,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pan_right",
+   "notes": "Polly waddles across the room past Pax gaming on the couch (headphones on) while the view pans right to the kitchen counter; edges shift in compare 0/13 and 31/56"
+  },
+  {
+   "start": 57,
+   "end": 61,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "transition",
+   "camera": "static",
+   "notes": "fade in from dark to the cabinet view"
+  },
+  {
+   "start": 61,
+   "end": 95,
+   "boundary": "after_transition",
+   "keep": false,
+   "drop_reason": "effect",
+   "camera": "static",
+   "notes": "close-up of Polly glaring over the overflowing trash bin, seen from inside the cabinet. Rack focus: Polly goes from blurred to sharp and the trash blurs; the trash region keeps changing until about f77, leaving only ~17 settled frames. Dropped as a blur effect (could be a 21-frame keep from f74 if the lead wants it)"
+  },
+  {
+   "start": 95,
+   "end": 130,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a low counter with open cabinet doors and an overflowing trash bin beside her, and an archway to a living room with a cream couch behind her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 107,
+       "screen": "center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 95,
+     "end": 102,
+     "text": "Polly stands with her back turned, holding the cabinet doors under the counter open with both flippers"
+    },
+    {
+     "start": 102,
+     "end": 110,
+     "text": "Polly lets go of the doors and turns around to face forward, her eyes closed"
+    },
+    {
+     "start": 110,
+     "end": 122,
+     "text": "Polly rests a flipper on her hip and keeps her eyes shut with a weary look"
+    },
+    {
+     "start": 122,
+     "end": 130,
+     "text": "Polly opens her eyes and stares ahead with an annoyed, flat look"
+    }
+   ],
+   "props": [
+    "trash bin",
+    "cabinet doors",
+    "counter"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "compare 95 vs 129: counter, archway and couch locked; region diff 0 | verification pass 2 (verify2_report_4): beat 1 says Polly pulls open the cabinet doors: both doors are already open at f95 and do not move; she just holds them open, back turned, f95-101; her eyes close during the turn (~f103-104), before the hand-on-hip beat"
+  },
+  {
+   "start": 130,
+   "end": 141,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "over Polly's shoulder (only the back of her head at the right edge) toward the now empty couch; 11 frames"
+  },
+  {
+   "start": 141,
+   "end": 144,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "zoom_in",
+   "notes": "snap zoom onto the couch"
+  },
+  {
+   "start": 144,
+   "end": 158,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "empty couch with pizza slices, no character"
+  },
+  {
+   "start": 158,
+   "end": 207,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 158,
+     "end": 170,
+     "text": "Polly stares ahead with a puzzled little frown"
+    },
+    {
+     "start": 170,
+     "end": 188,
+     "text": "Polly blinks, then glances sideways with one brow raised in suspicion"
+    },
+    {
+     "start": 188,
+     "end": 207,
+     "text": "Polly shuts her eyes for a moment, then settles into a flat, annoyed stare"
+    }
+   ],
+   "props": [],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "keep12 low because Polly fills the picture; plain background, her outline keeps its size and the ground line stays put (compare 158 vs 206)"
+  },
+  {
+   "start": 207,
+   "end": 234,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a low counter with open cabinet doors and a trash bin beside her, and an archway to a living room behind her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 207,
+     "end": 212,
+     "text": "Polly stands beside the overflowing trash bin under the counter, looking ahead"
+    },
+    {
+     "start": 212,
+     "end": 218,
+     "text": "Polly is spun around as a fast blurred streak whooshes past her and the bin"
+    },
+    {
+     "start": 218,
+     "end": 234,
+     "text": "Polly wobbles dizzily with spiral eyes and her flippers out for balance, while the emptied trash bin beside her sparkles clean"
+    }
+   ],
+   "props": [
+    "trash bin",
+    "cabinet doors",
+    "counter"
+   ],
+   "prop_events": [],
+   "effects": [
+    "spiral dizzy eyes",
+    "sparkles",
+    "motion blur streak"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "Pax only appears as a motion-blurred streak (f207 at the left edge, f212-217 crossing), so he is not listed or named. compare 207 vs 233: counter and archway locked; the zoom out starts at f234"
+  },
+  {
+   "start": 234,
+   "end": 241,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "zoom_out",
+   "notes": "quick pull back to the wide two-shot, settles at f241"
+  },
+  {
+   "start": 241,
+   "end": 272,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with an archway onto a cream couch behind them and a low counter with an open cabinet and a trash bin at the right",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 241,
+     "end": 250,
+     "text": "Pax hugs a knotted black trash bag with worried brows while Polly holds her head with her eyes squeezed shut"
+    },
+    {
+     "start": 250,
+     "end": 272,
+     "text": "Pax keeps talking with an apologetic look, clutching the bag, while Polly stands with a flipper on her hip watching him"
+    }
+   ],
+   "props": [
+    "trash bag",
+    "trash bin",
+    "couch"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "region diff 0 from f241; compare 241 vs 271 locked"
+  }
+ ]
+}

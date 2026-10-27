@@ -1,0 +1,42 @@
+{
+ "skit": "iteration_2/72_videos/PP-WeightedBlanket-Base.mp4",
+ "frames": 173,
+ "fps": 24,
+ "curated_by": "curator-06",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "WEIGHTED BLANKET",
+ "cast": {
+  "pax": {"kind": "lead"},
+  "polly": {"kind": "lead"}
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {"kind": "flat", "desc": "a living room drawn on a plain pale grey background"}
+ },
+ "spans": [
+  {
+   "start": 0, "end": 144, "boundary": "start", "keep": false, "drop_reason": "camera_move", "camera": "push_in",
+   "notes": "slow continuous push-in over the whole wide shot (ORB similarity on wall+table: scale 1.013 by f20, 1.10 by f144, about 0.03% per frame; keep12 median 0.81 misses it). Polly walks in wrapped in a fish-print blanket with a snack bag, sets it on the table, lies down under the blanket and beckons; Pax leaps in from the upper left f130-144"
+  },
+  {
+   "start": 144, "end": 152, "boundary": "camera", "keep": false, "drop_reason": "camera_move", "camera": "push_in",
+   "notes": "fast push in as Pax lands on Polly; settles at f152"
+  },
+  {
+   "start": 152, "end": 173, "boundary": "camera", "keep": true, "drop_reason": "", "camera": "static",
+   "framing": "medium wide", "angle": "eye level", "setting": "s1",
+   "view": "with a cream couch and a glass coffee table holding a bag of chips",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "center", "presence": "full", "outfit": []},
+    {"id": "polly", "screen": "right-center", "presence": "full", "outfit": []}
+   ],
+   "beats": [
+    {"start": 152, "end": 173, "text": "Pax lies stretched out on top of Polly with his eyes closed in a smile while Polly sighs under her blanket, blushing with her eyes shut"}
+   ],
+   "props": ["fish-print blanket", "bag of chips", "couch", "coffee table"], "prop_events": [], "effects": ["blush"],
+   "overlays": [], "in_world_text": ["snack bag label"], "travel": "none",
+   "notes": "exactly 21 frames; ORB similarity f152->f172 scale 1.0002, 0.3-0.5 px (not monotonic, residual noise); compare 152/172 edges overlap. Polly's body is under the blanket but her head and face are clear"
+  }
+ ]
+}

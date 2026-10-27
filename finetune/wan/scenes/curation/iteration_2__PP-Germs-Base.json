@@ -1,0 +1,397 @@
+{
+ "skit": "iteration_2/72_videos/PP-Germs-Base.mp4",
+ "frames": 314,
+ "fps": 24,
+ "curated_by": "curator-07",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "GERMS",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "an empty space with a plain pale grey-teal background"
+  },
+  "s2": {
+   "kind": "set",
+   "desc": "a snowy park with a path along a curved metal fence, with snowy pine trees and pale hills behind"
+  },
+  "s3": {
+   "kind": "set",
+   "desc": "a snowy meadow beside a bed of red and yellow flowers, with pale icy hills behind"
+  },
+  "s4": {
+   "kind": "set",
+   "desc": "a cafe with a glass pastry case, a cash register and a magazine rack under a big green shop sign"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 29,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 8,
+     "text": "Pax blushes and talks with his beak open while Polly stands beside him with a flat look"
+    },
+    {
+     "start": 8,
+     "end": 19,
+     "text": "Pax lifts a flipper toward Polly while she holds a flipper across her chest, unimpressed"
+    },
+    {
+     "start": 19,
+     "end": 29,
+     "text": "Pax keeps a flipper raised toward Polly while she lowers her flippers and frowns at him"
+    }
+   ],
+   "props": [],
+   "prop_events": [],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "plain background: camera judged locked from the leads' constant size and the fixed shadows | verification 2026-10-26: end moved 33 -> 29: both floor shadows slide right f29-32 (camera starts moving before the cut)"
+  },
+  {
+   "start": 29,
+   "end": 33,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pan_right",
+   "notes": "floor shadows shift 0.6/1.6/5.0/10.8 px at 540w over f29-32 (verification 2026-10-26)"
+  },
+  {
+   "start": 33,
+   "end": 65,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "notes": "low-angle close-up of Polly dodging Pax's flipper; both her head and the flipper grow f33-f50 (push in or zoom, plain background so not provable), then a 15-frame loop. Unsure, dropped"
+  },
+  {
+   "start": 65,
+   "end": 119,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 80,
+       "screen": "left-center"
+      },
+      {
+       "frame": 92,
+       "screen": "center"
+      },
+      {
+       "frame": 104,
+       "screen": "right-center"
+      }
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "left",
+     "presence": "enters",
+     "enters_at": 76,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 104,
+       "screen": "left-center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 65,
+     "end": 77,
+     "text": "Pax waddles to the right along the metal fence, a flipper trailing over the bars behind him"
+    },
+    {
+     "start": 77,
+     "end": 119,
+     "text": "Polly waddles in from the left and follows close behind Pax as they both walk to the right along the fence"
+    }
+   ],
+   "props": [
+    "metal fence"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "crosses",
+   "notes": "fence and snow locked (compare); clouds drift. Pax starts and ends half cut by the picture edges"
+  },
+  {
+   "start": 119,
+   "end": 161,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 119,
+     "end": 131,
+     "text": "Pax bends over the flowerbed and plucks a red flower while Polly stands watching"
+    },
+    {
+     "start": 131,
+     "end": 145,
+     "text": "Pax holds the flower up to his beak and sniffs it as a cloud of tiny specks puffs off it"
+    },
+    {
+     "start": 145,
+     "end": 161,
+     "text": "Pax holds the flower out toward Polly, specks drifting off it, while she covers her beak with a flipper and leans away"
+    }
+   ],
+   "props": [
+    "red flower",
+    "flowerbed"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "the specks (pollen or germs) are drawn in the scene"
+  },
+  {
+   "start": 161,
+   "end": 182,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_hidden",
+   "camera": "static",
+   "notes": "extreme close-up insert of Pax's flipper holding banknotes and coins; only a flipper and belly visible"
+  },
+  {
+   "start": 182,
+   "end": 245,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s4",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 182,
+     "end": 200,
+     "text": "Pax stands holding a wad of cash against his chest and starts flicking the bills, while Polly stands beside him with a flat look"
+    },
+    {
+     "start": 200,
+     "end": 206,
+     "text": "Pax thumbs through the bills with his eyes shut in a smug smile"
+    },
+    {
+     "start": 206,
+     "end": 221,
+     "text": "Pax tips his head back and keeps counting the bills, looking up with a smug grin, then shuts his eyes"
+    },
+    {
+     "start": 221,
+     "end": 245,
+     "text": "Pax lowers his head and looks straight ahead with raised brows and an open beak, holding the cash, while Polly keeps staring unimpressed"
+    }
+   ],
+   "props": [
+    "banknotes and coins",
+    "glass pastry case",
+    "cash register",
+    "magazine rack"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "shop sign",
+    "magazine covers"
+   ],
+   "travel": "none",
+   "notes": "verification pass 2 (verify3_report_0): beat 182-198 'Pax looks down at a wad of cash': Pax looks straight ahead the whole time (full-res crops f184-196) and starts flicking the bills at ~f196; beat 198-222 'smiling with his eyes closed': eyes are closed only f200-205 and f217-221; from f205-217 he tips his head back and looks up with eyes open and a smug grin while counting; beat 222-245 'glances at Polly': Pax looks straight ahead wit"
+  },
+  {
+   "start": 245,
+   "end": 289,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 245,
+     "end": 256,
+     "text": "Pax scratches behind his back with one flipper, glancing to the side"
+    },
+    {
+     "start": 256,
+     "end": 280,
+     "text": "Pax whistles with a pursed beak, glancing up to the side, as musical notes float up beside his head"
+    },
+    {
+     "start": 280,
+     "end": 289,
+     "text": "Pax raises the flipper to his beak and sniffs it with his eyes shut"
+    }
+   ],
+   "props": [],
+   "prop_events": [],
+   "effects": [
+    "musical notes"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "plain background; the shadow ellipse overlaps exactly first vs last, camera locked | verification 2026-10-26: beat [256,280) corrected"
+  },
+  {
+   "start": 289,
+   "end": 314,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 289,
+     "end": 300,
+     "text": "Pax sniffs his flipper with his eyes shut while Polly watches him with narrowed eyes"
+    },
+    {
+     "start": 300,
+     "end": 314,
+     "text": "Pax opens his eyes, flipper still at his beak, while Polly leans away from him with a flipper raised and a disgusted frown"
+    }
+   ],
+   "props": [],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "cut from the solo shot at f289 (wider framing, Polly added) | verification pass 2 (verify3_report_0): beat 300-314 leaves out Polly's motion: f298-302 she leans away from Pax (outline shifts right about 30 px at full res) and raises a flipper to her chest, then holds that pose; the beat has her only glaring; compare 289/313: feet and floor shadows black"
+  }
+ ]
+}

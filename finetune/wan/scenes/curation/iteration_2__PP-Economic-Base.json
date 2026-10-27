@@ -1,0 +1,294 @@
+{
+ "skit": "iteration_2/72_videos/PP-Economic-Base.mp4",
+ "frames": 494,
+ "fps": 24,
+ "curated_by": "curator-batch4",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "ECONOMIC",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a long store aisle lined with tall cream shelving units"
+  },
+  "s2": {
+   "kind": "set",
+   "desc": "a toy store aisle with shelves of boxed toys"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 117,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pan_left",
+   "notes": "Polly browses, Pax runs in from the right and takes her flipper. The view drifts the whole shot: compare f0/f116 shows the shelving units doubled (pillar ~40 px apart at 360 wide), and every 6-frame step shifts the shelves ~20 px at full res. v4 and shot_review called it static"
+  },
+  {
+   "start": 117,
+   "end": 178,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with shelving units on both sides receding into the distance",
+   "time": "day",
+   "size_change": true,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 117,
+     "end": 121,
+     "text": "Pax smiles with his eyes closed, holding Polly's flipper, while she looks at him"
+    },
+    {
+     "start": 121,
+     "end": 133,
+     "text": "Pax grins and kicks up one foot, tugging Polly by the flipper as she leans away facing the other way"
+    },
+    {
+     "start": 133,
+     "end": 145,
+     "text": "Pax clasps Polly's flipper in both of his as the two start gliding toward the front side by side"
+    },
+    {
+     "start": 145,
+     "end": 162,
+     "text": "Pax lifts Polly's flipper to his beak and kisses it with his eyes closed as they glide closer and grow larger"
+    },
+    {
+     "start": 162,
+     "end": 178,
+     "text": "Pax kisses Polly's flipper again while she eyes him with one brow raised, both still growing larger"
+    }
+   ],
+   "props": [],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "compare f117/f177: all shelving edges overlap exactly, camera locked; Pax and Polly approach the viewer and grow from ~12% to ~25% of the height (size_change). They glide more than step | verification pass 2 (verify2_report_3): Beat [117,137): they already hold flippers at f117 (no grab), Pax smiles with closed eyes f117-120, then f121-133 grins and kicks up a foot, tugging Polly, who is twisted away facing the other way; their size stays constant until ~f136 (Polly 50 px tall at 270 wide), so nobody 'tugs her along' down the aisle; Beats [137,178): Pax kisses Polly's flipper three times with eyes closed (f145-149, f157-"
+  },
+  {
+   "start": 178,
+   "end": 250,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "Pax and Polly hold flippers by a shelf of handbags while a wire bin of Pudgy Penguin plush toys fills the foreground; it includes a pink Polly plush (white face, blush, headphones, overalls) at the bottom right, so this is a lead copy, and also merch placement"
+  },
+  {
+   "start": 250,
+   "end": 264,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "14 frames: Polly on a plain background, Pax's flipper at the left edge"
+  },
+  {
+   "start": 264,
+   "end": 267,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "whip",
+   "notes": "the picture slides from Polly to Pax"
+  },
+  {
+   "start": 267,
+   "end": 279,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "12 frames: Pax on a plain background holding Polly's flipper at the right edge"
+  },
+  {
+   "start": 279,
+   "end": 286,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "whip",
+   "notes": "the picture slides back from Pax to Polly"
+  },
+  {
+   "start": 286,
+   "end": 300,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "14 frames: Polly squints suspiciously and slides out to the right"
+  },
+  {
+   "start": 300,
+   "end": 371,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with stacked boxes of toy cars on a counter on the left",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right",
+     "presence": "enters",
+     "enters_at": 300,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 312,
+       "screen": "left-center"
+      }
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "enters",
+     "enters_at": 303,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 316,
+       "screen": "right-center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 300,
+     "end": 316,
+     "text": "Pax waddles in from the right, pulling Polly along by the flipper, and stops beside the toy car boxes"
+    },
+    {
+     "start": 316,
+     "end": 336,
+     "text": "Pax gazes over at the toy cars while Polly gives him a sideways, suspicious squint"
+    },
+    {
+     "start": 336,
+     "end": 356,
+     "text": "Pax glances around with wide eyes, still holding Polly's flipper, while she keeps squinting at him"
+    },
+    {
+     "start": 356,
+     "end": 371,
+     "text": "Pax reaches over with his free flipper and lifts a boxed toy car off the stack"
+    }
+   ],
+   "props": [
+    "boxed toy cars"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "packaging"
+   ],
+   "travel": "enters",
+   "notes": "compare f300/f370: counter, boxes and shelving edges overlap exactly. Pax is partly cut by the right edge at f300"
+  },
+  {
+   "start": 371,
+   "end": 413,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with shelves of toys softly blurred behind him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 371,
+     "end": 383,
+     "text": "Pax holds a grey toy car box in one flipper while his other flipper stretches out to the right edge"
+    },
+    {
+     "start": 383,
+     "end": 392,
+     "text": "Pax turns the box around to show the toy car picture, smiling with both eyes closed"
+    },
+    {
+     "start": 392,
+     "end": 413,
+     "text": "Pax admires the toy car picture on the box with wide, delighted eyes, blinking happily"
+    }
+   ],
+   "props": [
+    "boxed toy car"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "packaging"
+   ],
+   "travel": "none",
+   "notes": "feet edge fit vs f371: identity overlap 0.91-1.0 up to f412 and 0.585 at f413, where the pull-back starts. The pink thing at the right edge is the end of what Pax holds (Polly's flipper or the plush), too small to read | verification pass 2 (verify2_report_3): Beat [383,392): Pax closes BOTH eyes in a smile (f384-387), not a wink; note: the pink tip at the right edge is the flipper of the Polly plush Pax holds (seen in the 416+ wide shot); only a flipper tip, not recognisable as Polly, so not lead_copy. Camera: left/right/top background integer-shift (0,0) up to f412"
+  },
+  {
+   "start": 413,
+   "end": 416,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pull_back",
+   "notes": "fast pull-back to a wide view"
+  },
+  {
+   "start": 416,
+   "end": 494,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "Pax holds the toy car box and a pink Polly plush (headphones, overalls) dangling from his other flipper, a lead copy; Polly passes behind him pushing a heaped cart (f461-491)"
+  }
+ ]
+}

@@ -1,0 +1,267 @@
+{
+ "skit": "iteration_2/72_videos/PP-Aura-Base.mp4",
+ "frames": 234,
+ "fps": 24,
+ "curated_by": "curator-06",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "AURA",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "an igloo kitchen with curved ice-block walls and mint-green counters"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "a kitchen drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 77,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a porthole window, a hanging fish ornament, a steaming pot on the stove and a carrot and green onions on the counter",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 56,
+       "screen": "center"
+      }
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 20,
+     "text": "Polly reaches toward the steaming pot on the stove while Pax stands at the counter with his back turned"
+    },
+    {
+     "start": 20,
+     "end": 26,
+     "text": "Polly grabs the handles of the pot with both flippers"
+    },
+    {
+     "start": 26,
+     "end": 32,
+     "text": "Polly snaps her flippers back from the hot handles, wincing with her eyes squeezed shut"
+    },
+    {
+     "start": 32,
+     "end": 46,
+     "text": "Polly holds her stinging flippers against her chest, wincing, while Pax turns around to look at her"
+    },
+    {
+     "start": 46,
+     "end": 60,
+     "text": "Pax waddles over behind Polly toward the stove"
+    },
+    {
+     "start": 60,
+     "end": 77,
+     "text": "Polly clasps her flippers together with worried brows while Pax stands just behind her, peering at the pot"
+    }
+   ],
+   "props": [
+    "cooking pot",
+    "stove"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "v4 called this a slow pull-back; phase correlation of the hood and floor regions shows 0.0 px shift f0->f76, so the camera is locked"
+  },
+  {
+   "start": 77,
+   "end": 97,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "static 20 frames: Pax leans over the steaming pot, Polly a sliver at the left edge; the pull back starts at f97"
+  },
+  {
+   "start": 97,
+   "end": 113,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pull_back",
+   "notes": "pull back from Pax at the pot to a two-shot as he lifts the pot; settles at f113"
+  },
+  {
+   "start": 113,
+   "end": 198,
+   "boundary": "camera",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a stovetop on the counter, a steaming pot and a wooden spoon",
+   "time": "day",
+   "size_change": true,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 113,
+     "end": 122,
+     "text": "Pax, smiling with his eyes closed, lowers the steaming pot onto the left burner in front of Polly"
+    },
+    {
+     "start": 122,
+     "end": 130,
+     "text": "Pax leans over the pot looking at Polly while she lifts a flipper to her beak, staring at him"
+    },
+    {
+     "start": 130,
+     "end": 138,
+     "text": "Pax straightens up with a calm closed-eye smile while Polly clasps her flippers at her chest"
+    },
+    {
+     "start": 138,
+     "end": 161,
+     "text": "Polly gazes at Pax with her flippers at her chest as little hearts float above her head, while he stands beside her"
+    },
+    {
+     "start": 161,
+     "end": 173,
+     "text": "Polly leans over and nuzzles Pax's cheek with a blush"
+    },
+    {
+     "start": 173,
+     "end": 181,
+     "text": "Pax turns around to face away while Polly settles back with a happy smile"
+    },
+    {
+     "start": 181,
+     "end": 190,
+     "text": "Pax walks off toward the back with his back turned, getting smaller, while Polly watches him go"
+    },
+    {
+     "start": 190,
+     "end": 198,
+     "text": "Polly picks up the wooden spoon and stirs the pot while Pax keeps walking away"
+    }
+   ],
+   "props": [
+    "cooking pot",
+    "wooden spoon",
+    "stovetop"
+   ],
+   "prop_events": [],
+   "effects": [
+    "hearts",
+    "blush"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "the counter hides both characters below the belly | verification pass 2 (verify2_report_3): size_change missed: Pax turns his back (f173-181) and then walks away into the background - his silhouette shrinks ~23% (f181 -> f197) and his lower body and shadow come into view above the counter. The compiled caption says 'the characters stay the same size'; Beats [173,198) leave out the walk-away; Pax's eyes are open f122-129 (leaning over the pot) and closed in a calm smile f129-137, slightly"
+  },
+  {
+   "start": 198,
+   "end": 234,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a stone chimney hood, a shelf of bottles, a gooseneck tap and a dish cabinet of plates and bowls",
+   "time": "day",
+   "size_change": true,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 212,
+       "screen": "center"
+      }
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 198,
+     "end": 205,
+     "text": "Pax waddles forward with teary eyes, holding his flippers against his chest, while Polly stands at the counter with her back turned"
+    },
+    {
+     "start": 205,
+     "end": 220,
+     "text": "Pax raises his sore flippers to his beak and blows on them, tears running down his cheeks"
+    },
+    {
+     "start": 220,
+     "end": 234,
+     "text": "Pax squeezes his eyes shut and wails with his beak open, hugging his flippers to his body"
+    }
+   ],
+   "props": [],
+   "prop_events": [],
+   "effects": [
+    "tears"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "Pax walks toward the viewer and grows; Polly is seen from behind the whole span"
+  }
+ ]
+}

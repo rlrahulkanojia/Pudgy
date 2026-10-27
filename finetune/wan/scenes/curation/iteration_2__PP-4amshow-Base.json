@@ -1,0 +1,52 @@
+{
+ "skit": "iteration_2/72_videos/PP-4amshow-Base.mp4",
+ "frames": 215,
+ "fps": 24,
+ "curated_by": "curator-01",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "4AM SHOW",
+ "cast": {
+  "pax": {"kind": "lead"},
+  "polly": {"kind": "lead"}
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {"kind": "flat", "desc": "a dim bedroom with a golden wooden bed, a duck-topped bedpost and pale bedding, drawn on a plain grey background"},
+  "s2": {"kind": "flat", "desc": "a dim room with a pale icy floor, a small round yellow lamp and an open laptop on the floor, drawn on a plain grey background"}
+ },
+ "spans": [
+  {
+   "start": 0, "end": 55, "boundary": "start", "keep": false, "drop_reason": "camera_move", "camera": "push_in",
+   "framing": "medium", "angle": "high angle", "setting": "s1", "view": "", "time": "night", "size_change": false,
+   "characters": [{"id": "pax", "screen": "center", "presence": "full", "outfit": []}],
+   "beats": [
+    {"start": 0, "end": 20, "text": "Pax reclines against the pillow in bed with heavy-lidded eyes and a weary little smile"},
+    {"start": 20, "end": 55, "text": "Pax blinks slowly and nods along, his eyes drooping"}
+   ],
+   "notes": "SLOW PUSH-IN, judgement call: the whole shot drifts in continuously (global scale +0.1% per 6 frames, +2.0% and ~20 px by f54; bedpost and headboard edges doubled red/green in compare 0/54). Beats written so the span can be flipped to keep if slow drift is accepted (the example PP-Chair [0,86) has the same kind of drift, +4%, and was kept)"
+  },
+  {
+   "start": 55, "end": 139, "boundary": "cut", "keep": false, "drop_reason": "camera_move", "camera": "push_in",
+   "framing": "medium", "angle": "eye level", "setting": "s2", "view": "", "time": "night", "size_change": false,
+   "characters": [{"id": "polly", "screen": "center", "presence": "full", "outfit": []}],
+   "beats": [
+    {"start": 55, "end": 79, "text": "Polly hunches over a microphone with her eyes squeezed shut, belting out a song"},
+    {"start": 79, "end": 95, "text": "Polly turns sideways and rocks back, still singing into the microphone"},
+    {"start": 95, "end": 107, "text": "Polly faces the front and sings with her beak wide open"},
+    {"start": 107, "end": 139, "text": "Polly flings one flipper out wide and belts with her beak stretched open and her eyes shut"}
+   ],
+   "notes": "SLOW PUSH-IN, judgement call: continuous drift, global scale +2.5% and ~25 px by f138 (laptop and lamp edges doubled in compare 55/138). Beats written so the span can be flipped if slow drift is accepted. No overlay, no phone (a laptop)"
+  },
+  {
+   "start": 139, "end": 215, "boundary": "cut", "keep": false, "drop_reason": "camera_move", "camera": "push_in",
+   "framing": "medium", "angle": "high angle", "setting": "s1", "view": "", "time": "night", "size_change": false,
+   "characters": [{"id": "pax", "screen": "center", "presence": "full", "outfit": []}],
+   "beats": [
+    {"start": 139, "end": 187, "text": "Pax lies back against the pillow propping his cheek on a flipper, his eyes drooping"},
+    {"start": 187, "end": 203, "text": "Pax lets his eyes fall shut and dozes off"},
+    {"start": 203, "end": 215, "text": "Pax snaps his eyes open with a startled little jolt"}
+   ],
+   "notes": "SLOW PUSH-IN, judgement call: continuous drift, global scale +3.1% and ~33 px by f214 (bedpost and headboard doubled in compare 139/214). Beats written so the span can be flipped if slow drift is accepted"
+  }
+ ]
+}

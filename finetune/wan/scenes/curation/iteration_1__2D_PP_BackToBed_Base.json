@@ -1,0 +1,343 @@
+{
+ "skit": "iteration_1/30_videos/2D_PP_BackToBed_Base.mp4",
+ "frames": 264,
+ "fps": 24,
+ "curated_by": "curator-09",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "BACK TO BED",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "a black necktie"
+ },
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "an igloo entryway with pale curved ice-block walls, an arched wooden front door and a round window"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "a bedroom drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 51,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a small side table and a potted plant by the round window",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "exits",
+     "exits_at": 50,
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 18,
+     "text": "Polly hands a small striped lunch bag to Pax, who stands beside her holding a black briefcase"
+    },
+    {
+     "start": 18,
+     "end": 27,
+     "text": "Pax takes the lunch bag and smiles at Polly with his eyes closed"
+    },
+    {
+     "start": 27,
+     "end": 39,
+     "text": "Pax leans in and kisses Polly as a little heart floats up above them"
+    },
+    {
+     "start": 39,
+     "end": 51,
+     "text": "Pax turns away, opens the door and waddles out through it while Polly watches him go"
+    }
+   ],
+   "props": [
+    "briefcase",
+    "lunch bag",
+    "framed photo"
+   ],
+   "prop_events": [],
+   "effects": [
+    "heart"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "exits",
+   "notes": "Camera locked, action clean, but the framed photo on the side table (left, by the window) shows Pax and Polly: a lead copy (D4), visible the whole shot. Small (about 70x90 px of 1080x1920). Dropped conservatively; the fields are filled in so the lead can flip keep if small background photos are judged acceptable."
+  },
+  {
+   "start": 51,
+   "end": 144,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a large yellow-framed bed with white sheets, a nightstand with a lamp, and a round window on the wall",
+   "time": "day",
+   "size_change": true,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "enters",
+     "enters_at": 52,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 64,
+       "screen": "left-center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 51,
+     "end": 66,
+     "text": "Polly flies in from the upper right, sailing belly-down through the air, and flops down onto the bed"
+    },
+    {
+     "start": 66,
+     "end": 78,
+     "text": "Polly lies sprawled on her belly on the blanket, shuffling a little"
+    },
+    {
+     "start": 78,
+     "end": 84,
+     "text": "Polly rolls over onto her back with a happy closed-eye smile"
+    },
+    {
+     "start": 84,
+     "end": 92,
+     "text": "Polly tips over onto her side on the blanket"
+    },
+    {
+     "start": 92,
+     "end": 104,
+     "text": "Polly rolls herself up in the blanket, leaving only the back of her head and her feet poking out"
+    },
+    {
+     "start": 104,
+     "end": 122,
+     "text": "Polly pokes her head out of the rolled-up blanket and sits wrapped in it, rocking a little"
+    },
+    {
+     "start": 122,
+     "end": 130,
+     "text": "Polly reaches out and picks up the tablet from the nightstand"
+    },
+    {
+     "start": 130,
+     "end": 144,
+     "text": "Polly sits still wrapped in the blanket, holding the tablet up and staring at it"
+    }
+   ],
+   "props": [
+    "bed",
+    "blanket",
+    "tablet",
+    "lamp"
+   ],
+   "prop_events": [
+    {
+     "prop": "tablet",
+     "event": "picks_up",
+     "frame": 123,
+     "by": "polly"
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "enters",
+   "notes": "Frames 131-143 are identical (Polly holds still). | verification pass 2 (verify2_report_2): size_change missed: Polly dives in from the upper right very large (f53-57, she is near the viewer) and shrinks to about 40% of that size as she lands on the bed at f63-65; the compiled caption currently claims 'the character stays the same size'; beat 92-104 'until only her feet stick out': the back of her head also shows at the top end of the roll (f94-103); photo-frame lead_copy of span 0-51 is"
+  },
+  {
+   "start": 144,
+   "end": 162,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "effect",
+   "camera": "static",
+   "notes": "time-lapse: the whole room darkens in two steps (144-147, 158-161) and the window goes from day to sunset to night"
+  },
+  {
+   "start": 162,
+   "end": 181,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "night, Polly frozen in bed with the tablet (identical frames); 19 frames before Pax starts to appear at the right edge"
+  },
+  {
+   "start": 181,
+   "end": 186,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "Pax's edge slides in at the right; the pan starts at 186"
+  },
+  {
+   "start": 186,
+   "end": 195,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pan_right",
+   "notes": "pan right of about 140 px (full res) as Pax walks in; 195 is the first settled frame"
+  },
+  {
+   "start": 195,
+   "end": 226,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a large yellow-framed bed, a nightstand with a lamp, and a round window showing a crescent moon",
+   "time": "night",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 195,
+     "end": 207,
+     "text": "Pax stands at the foot of the bed holding his briefcase and looks over at Polly, who sits wrapped in the blanket with the tablet"
+    },
+    {
+     "start": 207,
+     "end": 215,
+     "text": "Pax closes his eyes in a wide grin and crouches down"
+    },
+    {
+     "start": 215,
+     "end": 226,
+     "text": "Pax springs up and leaps through the air toward Polly with his briefcase swinging behind him"
+    }
+   ],
+   "props": [
+    "briefcase",
+    "tablet",
+    "bed"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "The night scene is drawn with a steady darker grey tint over the whole room (night lighting, not changing in this span)."
+  },
+  {
+   "start": 226,
+   "end": 264,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with the head of the yellow bed, the nightstand lamp and a round window showing a crescent moon",
+   "time": "night",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 226,
+     "end": 231,
+     "text": "Pax drops out of the air and lands belly-down across Polly's lap"
+    },
+    {
+     "start": 231,
+     "end": 247,
+     "text": "Pax lies belly-down across Polly's lap, facing away, while Polly keeps looking at the tablet"
+    },
+    {
+     "start": 247,
+     "end": 252,
+     "text": "Polly lowers the tablet and looks down at Pax"
+    },
+    {
+     "start": 252,
+     "end": 264,
+     "text": "Polly nestles her head down onto Pax with her eyes shut and a soft smile as a heart floats up"
+    }
+   ],
+   "props": [
+    "tablet",
+    "briefcase",
+    "bed"
+   ],
+   "prop_events": [],
+   "effects": [
+    "hearts"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "Pax's face is not seen after he lands (he lies facing away); Polly is fully visible throughout. | verification pass 2 (verify2_report_2_manual): beat 252-264 'closes her eyes in a shy blushing smile as small hearts float up': no blush marks in any frame (full-res f250-258); she nestles her head down onto Pax with eyes shut and a flipper on his back while one heart floats up and fades. 'effects' lists blush marks wrongly. (Low impact today: this beat falls outside the only window [226,259).); beats 226-246: Pax lands and lies across Polly's"
+  }
+ ]
+}

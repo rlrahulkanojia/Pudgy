@@ -1,0 +1,369 @@
+{
+ "skit": "iteration_2/72_videos/PP-Piggyback-Base.mp4",
+ "frames": 384,
+ "fps": 24,
+ "curated_by": "curator-08",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "PIGGYBACK",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "a pair of lavender headphones with star-shaped ear cups",
+  "o2": "a purple clothespin pinching her beak shut"
+ },
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a supermarket freezer aisle with glass-door freezers full of ice cream tubs"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "a work corner drawn on a plain pale grey background, with a low aqua desk"
+  },
+  "s3": {
+   "kind": "set",
+   "desc": "a snowy igloo village under a bright sky with snowy pine trees"
+  },
+  "s4": {
+   "kind": "set",
+   "desc": "an igloo living room with a cream couch, a round window and a glass coffee table"
+  },
+  "s5": {
+   "kind": "set",
+   "desc": "a bathroom with a pale aqua tiled floor and a towel hanging on a rail"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 87,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": true,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 18,
+       "screen": "center"
+      }
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "enters",
+     "enters_at": 13,
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 12,
+     "text": "Pax stands in the freezer aisle holding a shopping basket, looking ahead"
+    },
+    {
+     "start": 12,
+     "end": 22,
+     "text": "Pax steps toward the freezer and turns, revealing Polly clinging to his back"
+    },
+    {
+     "start": 22,
+     "end": 42,
+     "text": "Pax reaches into the open freezer and pulls out a tub of chocolate ice cream while Polly hangs on his back"
+    },
+    {
+     "start": 42,
+     "end": 80,
+     "text": "Pax holds the ice cream tub up with a smile while Polly peers blankly over his shoulder"
+    },
+    {
+     "start": 80,
+     "end": 87,
+     "text": "Pax lowers the tub into his shopping basket"
+    }
+   ],
+   "props": [
+    "shopping basket",
+    "ice cream tub",
+    "freezers"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "product labels"
+   ],
+   "travel": "moves_within",
+   "notes": "Polly is hidden behind Pax until he turns (first visible f12-13), so she is listed as entering. Pax steps toward the freezer and slightly toward the viewer, hence size_change. Static: compare 0/86 (shelves and freezer frame black)."
+  },
+  {
+   "start": 87,
+   "end": 187,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a laptop and a cardboard box on the desk",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 87,
+     "end": 132,
+     "text": "Pax types on a laptop at the low desk while Polly clings to his back, staring blankly ahead"
+    },
+    {
+     "start": 132,
+     "end": 148,
+     "text": "Polly raises a flipper to her beak while Pax glances up from the laptop with a quick happy blink and an open-beaked smile"
+    },
+    {
+     "start": 148,
+     "end": 162,
+     "text": "Polly flicks her flipper out to the side while Pax looks back at the laptop"
+    },
+    {
+     "start": 162,
+     "end": 187,
+     "text": "Polly rests her chin on top of Pax's head and closes her eyes contentedly while he types"
+    }
+   ],
+   "props": [
+    "laptop",
+    "cardboard box",
+    "desk",
+    "chair"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "Static: compare 87/186. Around f145-158 Polly seems to pick at her beak and flick a tiny speck away; written neutrally. | verification pass 2 (verify2_report_0): beat 130-150 says Pax smiles with his eyes closed; his eyes are open f126-137 and f141-150, closed only f138-140 (a quick happy blink), then he looks up with an open-beaked smile f141-146; Polly raises her flipper to her beak at f132-134, not f130"
+  },
+  {
+   "start": 187,
+   "end": 263,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with a red car with its hood open, an igloo, a toolbox and an oil puddle on the snow",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 187,
+     "end": 200,
+     "text": "Pax hunches over the open hood of the red car while Polly clings to his back holding a wrench"
+    },
+    {
+     "start": 200,
+     "end": 220,
+     "text": "Pax straightens up and looks back over his shoulder with a sweat drop while Polly holds the wrench"
+    },
+    {
+     "start": 220,
+     "end": 232,
+     "text": "Polly passes the wrench down into Pax's flipper"
+    },
+    {
+     "start": 232,
+     "end": 248,
+     "text": "Polly pats Pax on the head while he closes his eyes with a happy smile"
+    },
+    {
+     "start": 248,
+     "end": 257,
+     "text": "Pax opens his eyes and blushes bashfully while Polly keeps her flipper on his head"
+    },
+    {
+     "start": 257,
+     "end": 263,
+     "text": "Polly closes her eyes in a blushing smile while Pax stays blushing under her flipper"
+    }
+   ],
+   "props": [
+    "red car",
+    "wrench",
+    "toolbox"
+   ],
+   "prop_events": [],
+   "effects": [
+    "sweat drops",
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "Static: compare 187/262 (igloo, car, toolbox edges black). | verification pass 2 (verify2_report_0): beat 232-250: Pax's eyes open (with blush) from f248, not f250; beat 250-263 says Polly smiles down at him; from f257 Polly closes her eyes in a blushing smile"
+  },
+  {
+   "start": 263,
+   "end": 332,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s4",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 263,
+     "end": 296,
+     "text": "Pax presses the buttons of a game controller with a focused frown while Polly, perched on his back, points over his head"
+    },
+    {
+     "start": 296,
+     "end": 310,
+     "text": "Pax looks up with a wide-eyed smile while Polly rests on his back"
+    },
+    {
+     "start": 310,
+     "end": 332,
+     "text": "Pax throws one flipper up in a cheer while Polly wraps her flippers around his head"
+    }
+   ],
+   "props": [
+    "game controller",
+    "couch"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "Setting looks like the registry igloo living room (cream couch, round window, glass table in the foreground). Static: compare 263/331."
+  },
+  {
+   "start": 332,
+   "end": 384,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s5",
+   "view": "with a white toilet and a toilet roll holder on the wall",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": [
+      "o2"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 332,
+     "end": 366,
+     "text": "Polly unrolls toilet paper around her flipper while Pax sits on the toilet in front of her staring at {ifin}"
+    },
+    {
+     "start": 366,
+     "end": 384,
+     "text": "Polly bunches up the toilet paper and holds it out to Pax while he keeps looking at the phone"
+    }
+   ],
+   "props": [
+    "toilet",
+    "toilet paper",
+    "phone",
+    "towel"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 332,
+     "by": "pax",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "Phone: pale grey back, three lenses, little tuft on top = iFin. Static: compare 332/383."
+  }
+ ]
+}

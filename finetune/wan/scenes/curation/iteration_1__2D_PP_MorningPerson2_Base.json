@@ -1,0 +1,81 @@
+{
+ "skit": "iteration_1/30_videos/2D_PP_MorningPerson2_Base.mp4",
+ "frames": 188,
+ "fps": 24,
+ "curated_by": "curator-09",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "MORNING PERSON",
+ "cast": {
+  "pax": {"kind": "lead"}
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {"kind": "set", "desc": "a bedroom with a yellow wooden bed, fluffy white pillows and a lamp on the nightstand"}
+ },
+ "spans": [
+  {
+   "start": 0, "end": 40, "boundary": "start", "keep": true, "camera": "static",
+   "framing": "close-up", "angle": "eye level", "setting": "s1",
+   "view": "with a white pillow behind his head and the blanket pulled up to his chest",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "center", "presence": "partial", "outfit": []}
+   ],
+   "beats": [
+    {"start": 0, "end": 26, "text": "Pax lies with his head on the pillow, gazing straight ahead with a soft smile and rosy cheeks, and blinks once"},
+    {"start": 26, "end": 40, "text": "Pax keeps gazing ahead calmly, smiling, without moving"}
+   ],
+   "props": ["pillow", "blanket"], "prop_events": [], "effects": ["blush marks"], "overlays": [],
+   "in_world_text": [], "travel": "none",
+   "notes": "Almost a still image (one blink at 21-22, a slight settle 17-26). The lamp behind him is drawn soft and out of focus."
+  },
+  {
+   "start": 40, "end": 51, "boundary": "cut", "keep": false, "drop_reason": "too_short", "camera": "static",
+   "notes": "Polly asleep under the blanket wearing a dotted sleep mask (11 frames)"
+  },
+  {
+   "start": 51, "end": 82, "boundary": "cut", "keep": true, "camera": "static",
+   "framing": "medium close-up", "angle": "eye level", "setting": "s1",
+   "view": "with the yellow headboard, a duck-shaped bedpost and a lamp behind him",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "center", "presence": "partial", "outfit": []}
+   ],
+   "beats": [
+    {"start": 51, "end": 63, "text": "Pax sits up in bed with his flippers resting on the blanket in front of him, glancing to the side"},
+    {"start": 63, "end": 82, "text": "Pax blinks and keeps sitting still, waiting patiently with his eyes turned to the side"}
+   ],
+   "props": ["blanket"], "prop_events": [], "effects": [], "overlays": [],
+   "in_world_text": [], "travel": "none",
+   "notes": "Nearly a still image; one blink around 65."
+  },
+  {
+   "start": 82, "end": 92, "boundary": "cut", "keep": false, "drop_reason": "too_short", "camera": "static",
+   "notes": "Polly asleep with the sleep mask pushed up (10 frames)"
+  },
+  {
+   "start": 92, "end": 105, "boundary": "cut", "keep": false, "drop_reason": "too_short", "camera": "static",
+   "notes": "Pax pulling a white shirt on over his head (13 frames)"
+  },
+  {
+   "start": 105, "end": 111, "boundary": "cut", "keep": false, "drop_reason": "too_short", "camera": "static",
+   "notes": "Polly sprawled on the bed, mask beside her (6 frames)"
+  },
+  {
+   "start": 111, "end": 122, "boundary": "cut", "keep": false, "drop_reason": "too_short", "camera": "static",
+   "notes": "Pax brushing his teeth in the bathroom doorway (11 frames)"
+  },
+  {
+   "start": 122, "end": 137, "boundary": "cut", "keep": false, "drop_reason": "too_short", "camera": "static",
+   "notes": "Polly cuddling a heap of pillows (15 frames)"
+  },
+  {
+   "start": 137, "end": 147, "boundary": "cut", "keep": false, "drop_reason": "too_short", "camera": "static",
+   "notes": "Pax peeking round the bedroom door (10 frames)"
+  },
+  {
+   "start": 147, "end": 188, "boundary": "cut", "keep": false, "drop_reason": "camera_move", "camera": "zoom_in",
+   "notes": "Polly upside down asleep on the bed, mouth open, mask on the sheet: slow continuous zoom/drift for the whole shot (background shifts ~1 px/frame, accelerating after 169; first-vs-last edges doubled)"
+  }
+ ]
+}

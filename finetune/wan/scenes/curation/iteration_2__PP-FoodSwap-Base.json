@@ -1,0 +1,354 @@
+{
+ "skit": "iteration_2/72_videos/PP-FoodSwap-Base.mp4",
+ "frames": 305,
+ "fps": 24,
+ "curated_by": "curator-09",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "FOOD SWAP",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a dining room drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 50,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a low round wooden table and a hanging picture of a bonsai tree on the wall",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "partial",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 31,
+     "text": "Polly twirls noodles around her fork in her ramen bowl, blinking as she stirs"
+    },
+    {
+     "start": 31,
+     "end": 50,
+     "text": "Polly lifts a forkful of noodles and looks up across the table with wide curious eyes, her beak open"
+    }
+   ],
+   "props": [
+    "ramen bowl",
+    "fork",
+    "round table"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": ""
+  },
+  {
+   "start": 50,
+   "end": 89,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a low round wooden table, a hanging bonsai picture and a big leafy potted plant behind him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "partial",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 50,
+     "end": 65,
+     "text": "Pax holds a seaweed hand roll in both flippers and munches on it with his cheeks full"
+    },
+    {
+     "start": 65,
+     "end": 72,
+     "text": "Pax closes his eyes as he chews a big mouthful"
+    },
+    {
+     "start": 72,
+     "end": 89,
+     "text": "Pax opens his eyes and keeps chewing, staring straight ahead with the hand roll at his beak"
+    }
+   ],
+   "props": [
+    "seaweed hand rolls",
+    "serving tray",
+    "round table"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "Background picture and plant are drawn slightly out of focus (static)."
+  },
+  {
+   "start": 89,
+   "end": 136,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a low round wooden table and a hanging picture of a bonsai tree on the wall",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "partial",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 89,
+     "end": 101,
+     "text": "Polly holds a forkful of noodles out to the side, looking across the table with her beak open"
+    },
+    {
+     "start": 101,
+     "end": 113,
+     "text": "Polly looks disappointed and lowers the fork back down to her bowl"
+    },
+    {
+     "start": 113,
+     "end": 125,
+     "text": "Polly closes her eyes for a moment and scrapes the noodles off the fork back into the bowl"
+    },
+    {
+     "start": 125,
+     "end": 136,
+     "text": "Polly stares down at her ramen with sad, drooping brows"
+    }
+   ],
+   "props": [
+    "ramen bowl",
+    "fork",
+    "round table"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": ""
+  },
+  {
+   "start": 136,
+   "end": 164,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a low round wooden table and two small stools, a hanging bonsai picture and a leafy plant in a rose pot",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 136,
+     "end": 164,
+     "text": "Pax keeps munching his hand roll while Polly sits still over her ramen bowl with sad, drooping brows"
+    }
+   ],
+   "props": [
+    "ramen bowl",
+    "seaweed hand rolls",
+    "serving tray",
+    "round table",
+    "stools"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "Very little motion: Pax's beak and Polly's fork only."
+  },
+  {
+   "start": 164,
+   "end": 237,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a low round wooden table, a hanging bonsai picture and a big leafy potted plant behind him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "partial",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 164,
+     "end": 200,
+     "text": "Pax munches on his seaweed hand roll, holding it at his beak and staring ahead with a stern frown"
+    },
+    {
+     "start": 200,
+     "end": 206,
+     "text": "Pax squeezes his eyes shut as he chews another mouthful of the hand roll"
+    },
+    {
+     "start": 206,
+     "end": 212,
+     "text": "Pax opens his eyes and keeps chewing with raised, worried brows"
+    },
+    {
+     "start": 212,
+     "end": 222,
+     "text": "Pax pulls the hand roll away from his beak and holds it out to the side"
+    },
+    {
+     "start": 222,
+     "end": 237,
+     "text": "Pax keeps holding the hand roll out and talks with raised, uncertain brows"
+    }
+   ],
+   "props": [
+    "seaweed hand rolls",
+    "serving tray",
+    "round table"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "Background picture and plant are drawn slightly out of focus (static). | verification pass 2 (verify3_report_1): Beat 200-212 says Pax's eyes are squeezed shut, but they are shut only f203-205. Over f206-212 they are open, with raised, worried brows.; Beat 164-200: 'full cheeks' is not visible. From f170 Pax chews with a stern frown.; Camera locked: phase correlation on the table and stool, the plant and the top-left wall gives at most 0.04 px. Compare f164 vs f200 and f236 shows black edges. The pink shape"
+  },
+  {
+   "start": 237,
+   "end": 305,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a low round wooden table and two small stools, a hanging bonsai picture and a leafy plant in a rose pot",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 237,
+     "end": 245,
+     "text": "Pax holds a hand roll out toward Polly while she looks over at it from her ramen bowl"
+    },
+    {
+     "start": 245,
+     "end": 259,
+     "text": "Polly blinks, then gazes over at Pax's hand roll with shining eyes and rosy cheeks as little sparkles pop up beside her"
+    },
+    {
+     "start": 259,
+     "end": 266,
+     "text": "Polly keeps looking at the hand roll, then closes her eyes in a happy grin"
+    },
+    {
+     "start": 266,
+     "end": 272,
+     "text": "Polly swaps the dishes, pulling the tray of hand rolls to her side and sliding her ramen bowl across to Pax"
+    },
+    {
+     "start": 272,
+     "end": 289,
+     "text": "Polly waves her flippers up in delight while Pax, still holding his hand roll, watches her"
+    },
+    {
+     "start": 289,
+     "end": 305,
+     "text": "Polly picks up a hand roll from the tray and munches it happily with her eyes closed while Pax watches"
+    }
+   ],
+   "props": [
+    "ramen bowl",
+    "seaweed hand rolls",
+    "serving tray",
+    "round table",
+    "stools"
+   ],
+   "prop_events": [],
+   "effects": [
+    "sparkles",
+    "motion lines",
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "verification 2026-10-26: beats [245,266) corrected"
+  }
+ ]
+}

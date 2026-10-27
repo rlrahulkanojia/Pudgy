@@ -1,0 +1,98 @@
+{
+ "skit": "iteration_2/72_videos/PP-ChillGF-Base.mp4",
+ "frames": 324,
+ "fps": 24,
+ "curated_by": "curator-03",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "CHILL GF",
+ "cast": {
+  "pax": {"kind": "lead"}
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {"kind": "flat", "desc": "a living room with a cream couch and a glass coffee table, drawn on a plain pale grey background"},
+  "s2": {"kind": "flat", "desc": "a bathroom vanity with a basin sink and a mirror, drawn on a plain pale grey background"},
+  "s3": {"kind": "set", "desc": "a bathroom with a white toilet and a toilet paper holder on a plain pale grey wall above a teal tiled floor"}
+ },
+ "spans": [
+  {
+   "start": 0, "end": 50, "boundary": "start", "keep": true, "camera": "static",
+   "framing": "medium wide", "angle": "eye level", "setting": "s1",
+   "view": "with a throw pillow on the couch and the coffee table in the foreground",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "right-center", "presence": "full", "outfit": [],
+     "moves": [{"frame": 24, "screen": "center"}]}
+   ],
+   "beats": [
+    {"start": 0, "end": 12, "text": "Pax lounges on his back across the couch, looking up at {ifin}"},
+    {"start": 12, "end": 21, "text": "Pax rolls up to sit on the couch, knocking the throw pillow crooked"},
+    {"start": 21, "end": 28, "text": "Pax hops down off the couch and lands on the floor with his fins spread"},
+    {"start": 28, "end": 36, "text": "Pax steadies himself with his fins out and his eyes closed"},
+    {"start": 36, "end": 50, "text": "Pax turns a little to the left and looks down at {ifin} in his fin"}
+   ],
+   "props": ["phone", "couch", "throw pillow", "glass coffee table"],
+   "prop_events": [{"prop": "phone", "event": "uses", "frame": 0, "by": "pax", "is_ifin": true}],
+   "effects": [], "overlays": [],
+   "in_world_text": [], "travel": "moves_within",
+   "notes": "phone checked at full resolution (f2, f45): pale grey back, three-lens cluster, little tuft on top = iFin"
+  },
+  {
+   "start": 50, "end": 105, "boundary": "cut", "keep": false, "drop_reason": "no_lead", "camera": "static",
+   "notes": "pillow insert: only Polly's fins reach in to fluff and chop the pillow; sparkles at the end"
+  },
+  {
+   "start": 105, "end": 150, "boundary": "cut", "keep": true, "camera": "static",
+   "framing": "medium wide", "angle": "eye level", "setting": "s2",
+   "view": "with a hand towel hanging from a rail under the counter",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "left-center", "presence": "full", "outfit": [],
+     "moves": [{"frame": 143, "screen": "center"}]}
+   ],
+   "beats": [
+    {"start": 105, "end": 135, "text": "Pax stands at the vanity and rubs his fins dry on the hand towel hanging from the rail, rumpling it"},
+    {"start": 135, "end": 150, "text": "Pax lets go of the crooked towel, turns and waddles a few steps to the right"}
+   ],
+   "props": ["hand towel", "sink", "mirror"], "prop_events": [], "effects": [], "overlays": [],
+   "in_world_text": [], "travel": "moves_within",
+   "notes": "keep12 dips at the end only because the cut at f150 falls inside the 12-frame look-ahead; compare 105/149 locked"
+  },
+  {
+   "start": 150, "end": 199, "boundary": "cut", "keep": false, "drop_reason": "no_lead", "camera": "static",
+   "notes": "towel insert: only Polly's fins straighten the towel; sparkles"
+  },
+  {
+   "start": 199, "end": 240, "boundary": "cut", "keep": true, "camera": "static",
+   "framing": "medium wide", "angle": "eye level", "setting": "s3",
+   "view": "with a towel on a rail behind the toilet",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "center", "presence": "full", "outfit": []}
+   ],
+   "beats": [
+    {"start": 199, "end": 205, "text": "Pax sits on the toilet with his eyes fixed on {ifin}"},
+    {"start": 205, "end": 220, "text": "Pax reaches back and yanks a long strip of toilet paper off the roll without looking up from {ifin}"},
+    {"start": 220, "end": 232, "text": "Pax pulls even more paper loose in big loops that pile over his lap and onto the floor"},
+    {"start": 232, "end": 240, "text": "Pax keeps his eyes on the phone while a long strip of paper hangs from the roll to the floor"}
+   ],
+   "props": ["phone", "toilet", "toilet paper roll", "towel"],
+   "prop_events": [{"prop": "phone", "event": "uses", "frame": 199, "by": "pax", "is_ifin": true}],
+   "effects": [], "overlays": [],
+   "in_world_text": [], "travel": "none",
+   "notes": "phone checked at full resolution (f210): iFin"
+  },
+  {
+   "start": 240, "end": 299, "boundary": "cut", "keep": false, "drop_reason": "no_lead", "camera": "static",
+   "notes": "toilet paper roll insert: only Polly's fins roll the paper back and fold a paper dove; sparkles"
+  },
+  {
+   "start": 299, "end": 305, "boundary": "camera", "keep": false, "drop_reason": "camera_move", "camera": "zoom_out",
+   "notes": "fast zoom out from the roll to Polly and Pax in the bathroom"
+  },
+  {
+   "start": 305, "end": 324, "boundary": "camera", "keep": false, "drop_reason": "too_short", "camera": "static",
+   "notes": "19 static frames: Polly stands calmly on the left while Pax sits on the toilet with the iFin"
+  }
+ ]
+}

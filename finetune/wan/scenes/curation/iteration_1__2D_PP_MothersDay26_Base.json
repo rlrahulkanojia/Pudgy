@@ -1,0 +1,89 @@
+{
+ "skit": "iteration_1/30_videos/2D_PP_MothersDay26_Base.mp4",
+ "frames": 412,
+ "fps": 24,
+ "curated_by": "curator-10",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "MOTHER'S DAY '26",
+ "cast": {
+  "pax": {"kind": "lead"},
+  "polly": {"kind": "lead"}
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {"kind": "set", "desc": "a snowy neighbourhood with an igloo house at the top of a flight of ice steps, under a grey cloudy sky"},
+  "s2": {"kind": "set", "desc": "a snowy street beside a curving icy road"}
+ },
+ "spans": [
+  {
+   "start": 0, "end": 35, "boundary": "start", "keep": true, "drop_reason": "", "camera": "static",
+   "framing": "wide", "angle": "eye level", "setting": "s1",
+   "view": "with an icy road running across the foreground",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "right", "presence": "enters", "enters_at": 3, "outfit": [],
+     "moves": [{"frame": 16, "screen": "center"}]},
+    {"id": "polly", "screen": "right", "presence": "enters", "enters_at": 2, "outfit": [],
+     "moves": [{"frame": 16, "screen": "center"}]}
+   ],
+   "beats": [
+    {"start": 0, "end": 20, "text": "Pax rides in the passenger seat of a red sled car that glides in from the right, with Polly driving, half hidden behind him"},
+    {"start": 20, "end": 28, "text": "Pax sits in the stopped car below the igloo steps, blinking happily"},
+    {"start": 28, "end": 35, "text": "Pax turns his head away to look up toward the igloo house"}
+   ],
+   "props": ["red sled car"], "prop_events": [], "effects": [], "overlays": [],
+   "in_world_text": [], "travel": "enters",
+   "notes": "locked (hillside and igloo edges identical f0-f34). Both leads are small; Polly is mostly hidden behind Pax and the windscreen (pink head visible). The igloo is Polly's mum's house but the mum is not in this shot"
+  },
+  {
+   "start": 35, "end": 96, "boundary": "cut", "keep": false, "drop_reason": "lookalike", "camera": "static",
+   "notes": "igloo door; empty until f47, then Polly's mum (a Polly lookalike with a pearl necklace) opens it and peeks out. No lead"
+  },
+  {
+   "start": 96, "end": 136, "boundary": "cut", "keep": true, "drop_reason": "", "camera": "static",
+   "framing": "medium", "angle": "eye level", "setting": "s2",
+   "view": "with the front of a red sled car parked at the left",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "polly", "screen": "left-center", "presence": "full", "outfit": [],
+     "moves": [{"frame": 105, "screen": "center"}]}
+   ],
+   "beats": [
+    {"start": 96, "end": 106, "text": "Polly steps away from the red sled car, pushing its door shut behind her with one flipper"},
+    {"start": 106, "end": 112, "text": "Polly squeezes her eyes shut and lets her flippers drop to her sides"},
+    {"start": 112, "end": 136, "text": "Polly clasps her flippers to her chest and gazes up to the right with wide, teary eyes"}
+   ],
+   "props": ["red sled car"], "prop_events": [], "effects": ["tears"], "overlays": [],
+   "in_world_text": [], "travel": "moves_within",
+   "notes": "road lines identical f96-f135; the camera starts to pan right at f136"
+  },
+  {
+   "start": 136, "end": 159, "boundary": "camera", "keep": false, "drop_reason": "camera_move", "camera": "pan_right",
+   "notes": "pans right with Polly as she walks away from the car"
+  },
+  {
+   "start": 159, "end": 243, "boundary": "cut", "keep": false, "drop_reason": "lookalike", "camera": "other",
+   "notes": "Polly turns into a baby Polly climbing the igloo steps to her mum (Polly + pearl necklace) and they hug; lookalike throughout, keep12 low"
+  },
+  {
+   "start": 243, "end": 275, "boundary": "cut", "keep": false, "drop_reason": "camera_move", "camera": "push_in",
+   "notes": "Pax standing by the sled car; slow continuous drift/push-in from the first frame (house edges shift every frame), never locked"
+  },
+  {
+   "start": 275, "end": 287, "boundary": "transition", "keep": false, "drop_reason": "transition", "camera": "other",
+   "notes": "dissolve to the sunny wide view of the igloo"
+  },
+  {
+   "start": 287, "end": 362, "boundary": "after_transition", "keep": false, "drop_reason": "lookalike", "camera": "other",
+   "notes": "Polly and her mum hug at the door while Pax walks up the steps, then (cut at f323) Pax hands the mum a bouquet; the mum lookalike is in every frame"
+  },
+  {
+   "start": 362, "end": 366, "boundary": "transition", "keep": false, "drop_reason": "transition", "camera": "other",
+   "notes": "heart-shaped wipe into the end card"
+  },
+  {
+   "start": 366, "end": 412, "boundary": "after_transition", "keep": false, "drop_reason": "graphic_overlay", "camera": "static",
+   "notes": "Mother's Day end card with title text and drawn Pax, Polly and mum"
+  }
+ ]
+}

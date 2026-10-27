@@ -1,0 +1,31 @@
+{
+ "skit": "iteration_1/30_videos/2D_PP_Universe_Base.mp4",
+ "frames": 316,
+ "fps": 24,
+ "curated_by": "curator-01",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "UNIVERSE",
+ "cast": {},
+ "outfits": {},
+ "settings": {},
+ "spans": [
+  {"start": 0, "end": 96, "boundary": "start", "keep": false, "drop_reason": "camera_move", "camera": "push_in",
+   "notes": "Pax and Polly on a bench under a starry night sky (on-style), but the camera pushes in slowly and continuously from f0 to the dissolve (global scale +0.8% by f16, +2.2% by f40, +3.9% by f88, and the picture also shifts ~48 px down between f70 and f92; doubled background edges in compare 0/16, 0/40, 0/88, 70/92). No locked sub-span found"},
+  {"start": 96, "end": 108, "boundary": "transition", "keep": false, "drop_reason": "transition", "camera": "other",
+   "notes": "dissolve from the bench to the underwater scene"},
+  {"start": 108, "end": 168, "boundary": "after_transition", "keep": false, "drop_reason": "off_style", "camera": "pan_right",
+   "notes": "underwater fantasy: Pax and Polly drawn as seahorses (lead copies) meet, a heart appears; the background also slides ~340 px left over the shot (pan)"},
+  {"start": 168, "end": 178, "boundary": "transition", "keep": false, "drop_reason": "transition", "camera": "other",
+   "notes": "dissolve to the coral and kelp"},
+  {"start": 178, "end": 217, "boundary": "after_transition", "keep": false, "drop_reason": "off_style", "camera": "static",
+   "notes": "underwater fantasy: a coral and a kelp with faces (lead stand-ins), no lead"},
+  {"start": 217, "end": 228, "boundary": "transition", "keep": false, "drop_reason": "transition", "camera": "other",
+   "notes": "dissolve to the flower"},
+  {"start": 228, "end": 264, "boundary": "after_transition", "keep": false, "drop_reason": "no_lead", "camera": "static",
+   "notes": "a flower on a grassy bank and a butterfly landing on it; no lead"},
+  {"start": 264, "end": 274, "boundary": "transition", "keep": false, "drop_reason": "transition", "camera": "other",
+   "notes": "dissolve to the sunset"},
+  {"start": 274, "end": 316, "boundary": "after_transition", "keep": false, "drop_reason": "no_lead", "camera": "static",
+   "notes": "sunset over the sea and a beach; no lead"}
+ ]
+}

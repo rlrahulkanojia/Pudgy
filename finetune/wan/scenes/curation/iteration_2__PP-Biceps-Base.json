@@ -1,0 +1,47 @@
+{
+ "skit": "iteration_2/72_videos/PP-Biceps-Base.mp4",
+ "frames": 168,
+ "fps": 24,
+ "curated_by": "curator-07",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "BICEP",
+ "cast": {
+  "pax": {"kind": "lead"},
+  "polly": {"kind": "lead"}
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {"kind": "set", "desc": "a bathroom with round ice-block washbasins on a cream counter against a plain pale wall"}
+ },
+ "spans": [
+  {
+   "start": 0, "end": 75, "boundary": "start", "keep": true, "camera": "static",
+   "framing": "medium wide", "angle": "eye level", "setting": "s1",
+   "view": "with the two of them standing behind neighbouring washbasins", "time": "day",
+   "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "left", "presence": "full", "outfit": []},
+    {"id": "polly", "screen": "right", "presence": "full", "outfit": [],
+     "moves": [{"frame": 64, "screen": "right-center"}]}
+   ],
+   "beats": [
+    {"start": 0, "end": 52, "text": "Pax brushes the tuft on his head with a red hairbrush while Polly rinses her toothbrush under the running tap at the next basin"},
+    {"start": 52, "end": 62, "text": "Polly lifts her toothbrush and sets it down on the counter"},
+    {"start": 62, "end": 75, "text": "Polly leans across and touches Pax's flipper while he turns his head to look at her, hairbrush raised"}
+   ],
+   "props": ["red hairbrush", "toothbrush", "washbasins"], "prop_events": [], "effects": [], "overlays": [],
+   "in_world_text": [], "travel": "none",
+   "notes": "the counter hides them below the chest"
+  },
+  {
+   "start": 75, "end": 99, "boundary": "cut", "keep": false, "drop_reason": "lead_hidden",
+   "camera": "static",
+   "notes": "extreme close-up insert: Polly's flipper pokes Pax's flipper; only flippers visible"
+  },
+  {
+   "start": 99, "end": 168, "boundary": "cut", "keep": false, "drop_reason": "camera_move",
+   "camera": "push_in",
+   "notes": "slow continuous push in over the whole shot (basin grows every frame); Polly swoons at Pax with hearts while he holds the hairbrush"
+  }
+ ]
+}

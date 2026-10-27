@@ -1,0 +1,111 @@
+{
+ "skit": "iteration_2/72_videos/2D_PP_Posters_Base.mp4",
+ "frames": 405,
+ "fps": 24,
+ "curated_by": "curator-11",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "POSTERS",
+ "cast": {
+  "pax": {"kind": "lead"}
+ },
+ "outfits": {
+  "o1": "a navy and white striped scarf"
+ },
+ "settings": {
+  "s1": {"kind": "set", "desc": "a cosy igloo room with pale ice-block walls"},
+  "s2": {"kind": "set", "desc": "a snowy field outside an ice-block igloo under grey storm clouds"}
+ },
+ "spans": [
+  {
+   "start": 0, "end": 66, "boundary": "start", "keep": false, "drop_reason": "lead_copy",
+   "camera": "zoom_out", "notes": "full-frame missing poster with Polly's portrait and text; the poster shrinks as the view pulls back"
+  },
+  {
+   "start": 66, "end": 113, "boundary": "cut", "keep": false, "drop_reason": "lead_copy",
+   "camera": "static", "notes": "printer desk insert: stacks of missing posters with Polly's portrait fill the frame; only Pax's flipper reaches in at the end"
+  },
+  {
+   "start": 113, "end": 139, "boundary": "cut", "keep": false, "drop_reason": "lead_copy",
+   "camera": "static", "notes": "static, Pax at the printer desk, but the top poster of the stack he holds shows Polly's portrait (small but recognisable) the whole shot"
+  },
+  {
+   "start": 139, "end": 170, "boundary": "cut", "keep": true, "camera": "static",
+   "framing": "medium", "angle": "eye level", "setting": "s1",
+   "view": "with a round porthole window and a small side table on the left and an arched wooden door on the right",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "center", "presence": "full", "outfit": ["o1"]}
+   ],
+   "beats": [
+    {"start": 139, "end": 146, "text": "Pax stands with a striped scarf draped over his shoulders, frowning with a determined look"},
+    {"start": 146, "end": 157, "text": "Pax closes his eyes and lifts the scarf ends up around his neck"},
+    {"start": 157, "end": 170, "text": "Pax tucks the scarf snugly around his neck and rests a flipper on his chest, eyes closed and brows sad"}
+   ],
+   "props": ["scarf", "door", "porthole window"], "prop_events": [], "effects": [], "overlays": [],
+   "in_world_text": [], "travel": "none",
+   "notes": "compare 139 vs 169: walls and door locked. Region diff shows the pan begins at f170"
+  },
+  {
+   "start": 170, "end": 193, "boundary": "camera", "keep": false, "drop_reason": "camera_move",
+   "camera": "pan_left", "notes": "pans left from the door to the porthole window and side table"
+  },
+  {
+   "start": 193, "end": 212, "boundary": "camera", "keep": false, "drop_reason": "too_short",
+   "camera": "static", "notes": "static 19 frames: Pax picks a stack of posters off the side table; a poster showing Polly's portrait is visible at f205-209 (lead copy as well)"
+  },
+  {
+   "start": 212, "end": 228, "boundary": "camera", "keep": false, "drop_reason": "camera_move",
+   "camera": "pan_right", "notes": "pans right back to the door as Pax waddles to it"
+  },
+  {
+   "start": 228, "end": 262, "boundary": "camera", "keep": true, "camera": "static",
+   "framing": "medium", "angle": "eye level", "setting": "s1",
+   "view": "with an arched wooden door opening onto a snowstorm",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "center", "presence": "full", "outfit": ["o1"],
+     "moves": [{"frame": 247, "screen": "right-center"}, {"frame": 253, "screen": "right"}]}
+   ],
+   "beats": [
+    {"start": 228, "end": 233, "text": "Pax pulls the door open by its knob, holding a stack of papers under his other flipper"},
+    {"start": 233, "end": 244, "text": "Pax squints into a gust of wind that blows his scarf back and sends leaves swirling in through the doorway"},
+    {"start": 244, "end": 262, "text": "Pax turns and pushes out through the doorway to the right, his scarf streaming in the wind as the door swings wide"}
+   ],
+   "props": ["door", "stack of papers", "leaves"], "prop_events": [], "effects": ["wind lines", "blowing leaves"], "overlays": [],
+   "in_world_text": [], "travel": "moves_within",
+   "notes": "region diff 0 on the walls from f228; compare 228 vs 261 walls black. The papers under his flipper show only their plain backs. Pax is half out of the picture at the right edge in the last frames"
+  },
+  {
+   "start": 262, "end": 317, "boundary": "cut", "keep": false, "drop_reason": "camera_move",
+   "camera": "pan_right", "notes": "outside: the view tracks Pax as he leans into the wind (igloo and snow drifts slide left, doubled edges in compare 262/330); camera stops at f316"
+  },
+  {
+   "start": 317, "end": 341, "boundary": "camera", "keep": true, "camera": "static",
+   "framing": "medium wide", "angle": "eye level", "setting": "s2",
+   "view": "with the igloo's arched doorway behind him and snowy pine trees in the distance",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "center", "presence": "full", "outfit": ["o1"]}
+   ],
+   "beats": [
+    {"start": 317, "end": 328, "text": "Pax braces against the wind with his scarf streaming behind him while loose sheets of paper fly off the stack under his flipper"},
+    {"start": 328, "end": 341, "text": "Pax hops up on his toes and reaches a flipper toward a sheet of paper blowing past over his head"}
+   ],
+   "props": ["stack of papers", "igloo"], "prop_events": [], "effects": ["wind lines"], "overlays": [],
+   "in_world_text": [], "travel": "none",
+   "notes": "compare 317 vs 340: igloo edges black; only the clouds drift. The flying sheets show blank backs; the first sheet with Polly's portrait appears at f341, so the span ends there"
+  },
+  {
+   "start": 341, "end": 357, "boundary": "same_shot", "keep": false, "drop_reason": "lead_copy",
+   "camera": "static", "notes": "still static, but posters printed with Polly's portrait now fly around Pax"
+  },
+  {
+   "start": 357, "end": 402, "boundary": "camera", "keep": false, "drop_reason": "camera_move",
+   "camera": "other", "notes": "the view pulls back and shifts while dozens of Polly posters whirl past and one flies into the lens (also lead_copy)"
+  },
+  {
+   "start": 402, "end": 405, "boundary": "camera", "keep": false, "drop_reason": "lead_copy",
+   "camera": "static", "notes": "full-frame missing poster of Polly with text, 3 frames"
+  }
+ ]
+}

@@ -1,0 +1,169 @@
+{
+ "skit": "iteration_2/72_videos/PP-WakingUp-Base.mp4",
+ "frames": 146,
+ "fps": 24,
+ "curated_by": "curator-batch4",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "WAKING UP",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a bedroom with a yellow bed and a nightstand with a peach lamp"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 38,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "notes": "Pax asleep in bed. Slow push-in that eases out: headboard fit vs f59 gives scale 1.016 at f20, 1.009 at f30, 1.005 at f34, 1.003 at f37, 1.000 from f38 (identity overlap 0.29 -> 0.92). compare f0/f59 shows the whole bed doubled. shot_review and keep12 (steady run [0,61]) called it static"
+  },
+  {
+   "start": 38,
+   "end": 61,
+   "boundary": "camera",
+   "keep": false,
+   "camera": "push_in",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with fluffy pillows and a duck-shaped bedpost",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 38,
+     "end": 50,
+     "text": "Pax lies asleep under the blanket with his eyes closed and his beak open in a snore"
+    },
+    {
+     "start": 50,
+     "end": 58,
+     "text": "Pax snaps his eyes wide open and stares straight up, startled"
+    },
+    {
+     "start": 58,
+     "end": 61,
+     "text": "Pax squeezes his eyes shut and starts to push himself up out of bed"
+    }
+   ],
+   "props": [
+    "bed",
+    "blanket",
+    "lamp"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "headboard and lamp fit f38 vs f59/f60: identity 0.914-0.920 = best fit (no scale or shift); compare f38/f60 edges overlap. The footboard bobs 2-4 px up and down while the headboard holds still, read as bed animation, not camera. Only 23 frames (one f21 window). Pax is ~16% of the height | verification 2026-10-26: push-in continues to f50 (+~1%) then snaps back f50-53; static only f53-60",
+   "drop_reason": "camera_move"
+  },
+  {
+   "start": 61,
+   "end": 88,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pan_right",
+   "notes": "Pax leaps out of bed and lands beside it while the view slides right to follow him (bed shifts ~23 px per frame at f61-67, easing to 6 px at f87); compare f70/f83 shows the bedpost and lamp doubled"
+  },
+  {
+   "start": 88,
+   "end": 89,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "static",
+   "notes": "verification pass 2 (verify2_report_0): last frame of the pan right (bed and lamp 2 px off the locked position); merge into the preceding camera_move span so it becomes [61,89)"
+  },
+  {
+   "start": 89,
+   "end": 125,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the foot of the bed in front of him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 115,
+       "screen": "right-center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 89,
+     "end": 94,
+     "text": "Pax leans over the bed with his eyes squeezed shut, then straightens up beside it"
+    },
+    {
+     "start": 94,
+     "end": 113,
+     "text": "Pax stands at the bedside smoothing the blanket flat with quick strokes of one flipper, glancing ahead"
+    },
+    {
+     "start": 113,
+     "end": 118,
+     "text": "Pax turns to face forward and squeezes his eyes shut"
+    },
+    {
+     "start": 118,
+     "end": 125,
+     "text": "Pax rubs both eyes hard with his flippers"
+    }
+   ],
+   "props": [
+    "bed",
+    "blanket"
+   ],
+   "prop_events": [],
+   "effects": [
+    "motion lines"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "bedpost, lamp and footboard fit f88-f145: identity overlap 0.997-1.000 from f88 on (compare f88/f145). Ends at f125, where Polly first shows | verification pass 2 (verify2_report_0): the pan-right before this span is still easing out at f88: phase correlation on the headboard, lamp and footboard gives f87 -9.5 px, f88 -2.15 px, f89 onward 0.00 px vs f89/f124 (three separate ROIs agree). Lock starts at f89."
+  },
+  {
+   "start": 125,
+   "end": 146,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "other",
+   "camera": "static",
+   "notes": "Pax lowers his flippers and stands up straight with wide eyes, while the top of Polly's head rises up from the bottom-right edge (only the dome and tuft visible). Dropped because Polly is only a sliver: listing her would caption her as a full penguin coming in, and leaving her out would be false. Conservative drop of a 21-frame piece"
+  }
+ ]
+}

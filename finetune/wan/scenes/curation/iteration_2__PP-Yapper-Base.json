@@ -1,0 +1,367 @@
+{
+ "skit": "iteration_2/72_videos/PP-Yapper-Base.mp4",
+ "frames": 391,
+ "fps": 24,
+ "curated_by": "curator-09",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "YAPPER",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a room drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 33,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "Polly talking across the table, Pax only a flipper in the foreground holding the iFin (blurred). The phone screen shows a picture of a blue penguin in a navy suit (a Pax picture) until it scrolls away at ~16; the clean rest (17-32) is 16 frames, too short."
+  },
+  {
+   "start": 33,
+   "end": 89,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a big cream table in front of him and a wooden chair behind him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "partial",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 33,
+     "end": 40,
+     "text": "Pax puts down {ifin}, laying it flat on the table"
+    },
+    {
+     "start": 40,
+     "end": 57,
+     "text": "Pax talks with his beak open, waving one flipper as he explains"
+    },
+    {
+     "start": 57,
+     "end": 75,
+     "text": "Pax closes his eyes and keeps talking, gesturing with both flippers"
+    },
+    {
+     "start": 75,
+     "end": 89,
+     "text": "Pax opens his eyes and rests his flippers on the table, looking across it"
+    }
+   ],
+   "props": [
+    "phone",
+    "table",
+    "chair"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "puts_down",
+     "frame": 37,
+     "by": "pax",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "The phone is the iFin: pale grey back, camera module with three lenses, little tuft on top (seen at 33-36). Phone and table pixels identical 42-88 (camera locked)."
+  },
+  {
+   "start": 89,
+   "end": 113,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a big cream table in front of her and a wooden chair behind her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "partial",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 89,
+     "end": 98,
+     "text": "Polly lifts up a big teal book with a happy closed-eye smile"
+    },
+    {
+     "start": 98,
+     "end": 102,
+     "text": "Polly drops the book open onto the table"
+    },
+    {
+     "start": 102,
+     "end": 113,
+     "text": "Polly talks eagerly over the open book with her beak open and bright eyes"
+    }
+   ],
+   "props": [
+    "book",
+    "table",
+    "chair"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "doodles and handwriting in the book"
+   ],
+   "travel": "none",
+   "notes": "Book pages checked at full res (f112): doodles and a shell picture, no lead pictures. Chair edges identical 89-112."
+  },
+  {
+   "start": 113,
+   "end": 140,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a big cream table in front of him, a wooden chair behind him, and {ifin}, lying on the table",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "partial",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 113,
+     "end": 119,
+     "text": "Pax opens his eyes from a closed-eye smile and sits up a little behind the table"
+    },
+    {
+     "start": 119,
+     "end": 140,
+     "text": "Pax nods along with a polite, open-beaked smile, blinking once, then holds still"
+    }
+   ],
+   "props": [
+    "phone",
+    "table",
+    "chair"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "Phone and table identical 113-139. | verification pass 2 (verify3_report_0): beat 113-118 'Pax smiles ... with his eyes closed': eyes are closed only at f113; open from f114 while he sits up and shifts slightly right (f113-115); beat 118-140: beak opens from f119; blink f131-132; Pax is frozen f128-139 apart from the blink. 'nods along' is only the small head bob f119-127, which is acceptable; phone is an iFin (grey body with tuft visible at full res). compare 113/139: tab"
+  },
+  {
+   "start": 140,
+   "end": 206,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a big cream table in front of her and a wooden chair behind her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "partial",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 140,
+     "end": 160,
+     "text": "Polly holds up an open scrapbook and talks, pointing at its pages with her other flipper"
+    },
+    {
+     "start": 160,
+     "end": 180,
+     "text": "Polly lets a long folded paper strip drop out of the book and unfold down to the table"
+    },
+    {
+     "start": 180,
+     "end": 206,
+     "text": "Polly keeps talking happily with her eyes closed, holding up the book with the strip dangling"
+    }
+   ],
+   "props": [
+    "scrapbook",
+    "folded paper strip"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "handwriting in the scrapbook"
+   ],
+   "travel": "none",
+   "notes": "Camera locked (chair edges identical). Dropped because the open scrapbook page facing us has a small photo of Polly with a yellow penguin (a lead copy, ~60x80 px at full res), visible the whole span. Fields filled so the lead can flip keep if small pictures are judged acceptable."
+  },
+  {
+   "start": 206,
+   "end": 247,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a big cream table in front of him, a wooden chair behind him, and {ifin}, lying on the table",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "partial",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 206,
+     "end": 238,
+     "text": "Pax leans on the table with one flipper, nodding along, his beak opening and closing as he talks"
+    },
+    {
+     "start": 238,
+     "end": 243,
+     "text": "Pax squeezes his eyes shut with a strained smile and lifts his other flipper"
+    },
+    {
+     "start": 243,
+     "end": 247,
+     "text": "Pax opens his eyes wide with his beak open, his other flipper raised beside him"
+    }
+   ],
+   "props": [
+    "phone",
+    "table",
+    "chair"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "Phone and table identical 206-246. Cut at 247 missed by the detector (d1 15.5). | verification pass 2 (verify2_report_3): Camera: motion_hint flags f230-236 are Pax's head; phone and chair regions integer-shift (0,0) at every checked frame. Locked; Beat [206,236): Pax's beak keeps opening and closing (open with red inside at f214-222, f230-237): he is talking back, not only smiling and listening; Beat [236,247): eyes squeeze shut f238-242 while he lifts his other flipper; eyes open wide with beak open f243-246, flipp"
+  },
+  {
+   "start": 247,
+   "end": 267,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "other",
+   "notes": "chalkboard easel slides in from the left and Polly rises into view; the board has three pinned photos of Polly (lead copies); 20 frames anyway"
+  },
+  {
+   "start": 267,
+   "end": 323,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a big cream table in front of him, a wooden chair behind him, and {ifin}, lying on the table",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "partial",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 267,
+     "end": 303,
+     "text": "Pax props his head up on both flippers with heavy, drooping eyelids, blinking slowly"
+    },
+    {
+     "start": 303,
+     "end": 311,
+     "text": "Pax jerks his head up and opens his eyes wide"
+    },
+    {
+     "start": 311,
+     "end": 323,
+     "text": "Pax sits up with his flippers on the table, nodding along with wide eyes"
+    }
+   ],
+   "props": [
+    "phone",
+    "table",
+    "chair"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "Phone and table identical 267-321."
+  },
+  {
+   "start": 323,
+   "end": 357,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "Polly pointing at the chalkboard with a stick; the board holds three photos of Polly (beach chair, park bench, close selfie): lead copies"
+  },
+  {
+   "start": 357,
+   "end": 391,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "notes": "Pax aged with a long white beard (outfit), a tear running down; slow push in for the whole shot (the phone on the table grows steadily, table edge doubled in compare)"
+  }
+ ]
+}

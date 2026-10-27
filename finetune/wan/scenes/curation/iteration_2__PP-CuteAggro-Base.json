@@ -1,0 +1,126 @@
+{
+ "skit": "iteration_2/72_videos/PP-CuteAggro-Base.mp4",
+ "frames": 233,
+ "fps": 24,
+ "curated_by": "curator-05",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "CUTE AGGRO",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a snowy park under a bright sky, with snow-covered pine trees"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 233,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the two of them side by side on a rose wooden bench",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 12,
+     "text": "Pax looks over at Polly while she gazes off to the side and blinks"
+    },
+    {
+     "start": 12,
+     "end": 30,
+     "text": "Pax shuffles along the bench closer to Polly and slips one flipper behind her back as she glances at him"
+    },
+    {
+     "start": 30,
+     "end": 48,
+     "text": "Pax reaches across with his other flipper and takes hold of Polly's flipper, leaning toward her"
+    },
+    {
+     "start": 48,
+     "end": 90,
+     "text": "Pax holds Polly's fin up to his beak, both with their eyes closed and rosy cheeks, as little hearts float above them"
+    },
+    {
+     "start": 90,
+     "end": 111,
+     "text": "Pax hugs Polly close and presses a kiss to her cheek while hearts drift up"
+    },
+    {
+     "start": 111,
+     "end": 125,
+     "text": "Pax and Polly sit back upright with blushing cheeks and closed eyes, Polly wiggling with her flippers at her cheeks"
+    },
+    {
+     "start": 125,
+     "end": 134,
+     "text": "Pax opens his eyes and glances up happily while Polly keeps wiggling with her flippers at her cheeks"
+    },
+    {
+     "start": 134,
+     "end": 156,
+     "text": "Pax closes his eyes again and lifts a flipper to his cheek while Polly sways bashfully with her flippers at her face"
+    },
+    {
+     "start": 156,
+     "end": 180,
+     "text": "Polly lunges at Pax and squeezes his cheeks hard with both fins while he squints and flings a fin out"
+    },
+    {
+     "start": 180,
+     "end": 201,
+     "text": "Polly presses her face against Pax's cheek, still squishing him, while he blushes with his eyes closed"
+    },
+    {
+     "start": 201,
+     "end": 216,
+     "text": "Polly grabs Pax's fin and hugs it tight against her chest while he smiles with his eyes closed"
+    },
+    {
+     "start": 216,
+     "end": 233,
+     "text": "Polly chomps down on Pax's fin and Pax's eyes pop wide with his beak open in shock"
+    }
+   ],
+   "props": [
+    "bench"
+   ],
+   "prop_events": [],
+   "effects": [
+    "hearts",
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "one continuous shot, camera locked (ORB on bench/trees: scale 1.0000, < 0.05 px over the whole skit; compare 0/232 bench and trees black, only clouds drift). Trees drawn soft-focus (static). | verification pass 2 (verify2_report_3): Beat [0,30): Pax shuffles along the bench toward Polly (body centre moves ~70 px at full res, f4-24) and slips one flipper behind her back (tip visible behind her from f20); Polly looks away to the right f0-8, blinks f10-12, then looks at Pax - 'sits gazing ... while she looks ahead' misses the move; Beat [30,48): what happens here is Pax reaching across with his other flipper and taking hold of P"
+  }
+ ]
+}

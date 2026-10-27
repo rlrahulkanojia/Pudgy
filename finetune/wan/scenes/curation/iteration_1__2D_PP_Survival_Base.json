@@ -1,0 +1,187 @@
+{
+ "skit": "iteration_1/30_videos/2D_PP_Survival_Base.mp4",
+ "frames": 340,
+ "fps": 24,
+ "curated_by": "curator-11",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "SURVIVAL",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a snowy town street with pastel round-roofed igloo buildings"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 18,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "other",
+   "notes": "tracking shot: Pax and Polly waddle in place while the street, crossing and a bus scroll past behind them; also only 18 frames"
+  },
+  {
+   "start": 18,
+   "end": 45,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a pale sidewalk and road stripes in front of them and an ice castle in the distance",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 33,
+       "screen": "center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 18,
+     "end": 24,
+     "text": "Polly chats happily with her eyes closed, holding a red shell purse, while Pax stands at her side watching her"
+    },
+    {
+     "start": 24,
+     "end": 29,
+     "text": "Pax squeezes his eyes shut and grabs Polly by her purse, yanking her back"
+    },
+    {
+     "start": 29,
+     "end": 33,
+     "text": "Pax and Polly are hidden for a moment as a sled bus speeds past in a blur in front of them"
+    },
+    {
+     "start": 33,
+     "end": 37,
+     "text": "Pax and Polly tumble backward together onto the pavement"
+    },
+    {
+     "start": 37,
+     "end": 45,
+     "text": "Pax and Polly sit side by side on the pavement, staring ahead with wide startled eyes"
+    }
+   ],
+   "props": [
+    "shell-shaped purse",
+    "sled bus"
+   ],
+   "prop_events": [],
+   "effects": [
+    "motion blur on the passing bus"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "compare 18 vs 44: buildings and sidewalk edges overlap exactly. The bus covers both leads for f29-32 only (4 frames) | verification pass 2 (verify2_report_4): beat 4 says Polly topples back beside Pax: Pax falls backward too (f33-36, lying back with his eyes squeezed shut), and they then sit together staring wide-eyed f37-44; Pax's fall is missing and the beat holds two actions; checked: camera locked (ORB on the buildings f18->f20..f44: 0.0 px, scale 1.0000, including f32-37 after the bus passes); the bus hides both leads only f29-31"
+  },
+  {
+   "start": 45,
+   "end": 141,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pan_right",
+   "notes": "mall escalator: the camera tracks right the whole shot (shop signs and plant slide left, doubled edges in compare 45/54 and 118/140)"
+  },
+  {
+   "start": 141,
+   "end": 231,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "static igloo chess scene with both leads, but every chess piece is a tiny penguin figurine in the leads' colours (the storyboard art note asks for this): pawns drawn as small Pax and Polly statues, on the board and then scattered on the floor for the whole shot. Judged a lead copy; dropped to be safe"
+  },
+  {
+   "start": 231,
+   "end": 281,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "Polly from behind at a sunset iceberg, holding a phone up to photograph the sun (screen side only, iFin unsure); a small Pax plush keychain hangs from her backpack, face visible the whole shot. No Pax",
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 231,
+     "by": "polly",
+     "is_ifin": "unsure"
+    }
+   ]
+  },
+  {
+   "start": 281,
+   "end": 298,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "static 17 frames of Polly on the cliff edge with the iFin; camera starts drifting at f298",
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 281,
+     "by": "polly",
+     "is_ifin": true
+    }
+   ]
+  },
+  {
+   "start": 298,
+   "end": 327,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "zoom_out",
+   "notes": "slow drift f298-316 (cliff edges shift), then a fast zoom out f317-326 to reveal the orca; Pax enters at f312 and grabs Polly's backpack",
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 298,
+     "by": "polly",
+     "is_ifin": true
+    }
+   ]
+  },
+  {
+   "start": 327,
+   "end": 340,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "static wide of the tiny leads on the cliff and the orca below; 13 frames"
+  }
+ ]
+}

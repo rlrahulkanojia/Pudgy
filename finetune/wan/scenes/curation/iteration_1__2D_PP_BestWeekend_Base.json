@@ -1,0 +1,243 @@
+{
+ "skit": "iteration_1/30_videos/2D_PP_BestWeekend_Base.mp4",
+ "frames": 352,
+ "fps": 24,
+ "curated_by": "curator-b2",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "BEST WEEKEND",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a breakfast kitchen drawn on a plain pale grey background"
+  },
+  "s2": {
+   "kind": "set",
+   "desc": "a sunny outdoor farmers market, at a stall under a striped cream and yellow awning stacked with jars of jam"
+  },
+  "s3": {
+   "kind": "flat",
+   "desc": "a living room drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 85,
+   "boundary": "start",
+   "keep": false,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a shiny turquoise counter in front holding two little penguin-face mugs, a croissant on a plate and jars, and a round table with wooden chairs behind them",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 18,
+     "text": "Pax pours coffee from a French press into a mug on the counter while Polly lifts a waffle from her baking tray with a spatula"
+    },
+    {
+     "start": 18,
+     "end": 55,
+     "text": "Pax sets the French press down on the counter and stands smiling while Polly places waffles on the plates on the table behind him"
+    },
+    {
+     "start": 55,
+     "end": 85,
+     "text": "Pax raises a red and white spray can and shakes it beside his face, eyes shut and grinning, while Polly holds up her spatula"
+    }
+   ],
+   "props": [
+    "French press",
+    "mugs",
+    "spray can of cream",
+    "baking tray",
+    "spatula",
+    "waffles",
+    "croissant"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "Pax stands behind the counter (lower body hidden by it). The two mugs on the counter have penguin faces (one in Pax's colours, one in Polly's): small props, not drawn as characters; kept, but flagged to the lead as a possible lead_copy call. | Lead review 2026-10-26: dropped - two penguin-face mugs in Pax's and Polly's colours are recognisable depictions of the leads (same rule as Intentional's face mugs).",
+   "drop_reason": "lead_copy"
+  },
+  {
+   "start": 85,
+   "end": 188,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with pots of lavender and leafy trees behind the stall and snowy ground in front",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 85,
+     "end": 116,
+     "text": "Polly nibbles a slice of jam bread, closing her eyes as she chews, while Pax stands beside her holding paper grocery bags and little hearts drift up"
+    },
+    {
+     "start": 116,
+     "end": 138,
+     "text": "Polly holds the jam bread out toward Pax and smiles with her eyes shut while he eyes it and a small heart floats up"
+    },
+    {
+     "start": 138,
+     "end": 152,
+     "text": "Pax leans over and takes a bite of the jam bread from Polly's flipper"
+    },
+    {
+     "start": 152,
+     "end": 169,
+     "text": "Pax straightens up and chews with wide eyes while Polly watches him and a small heart floats up above him"
+    },
+    {
+     "start": 169,
+     "end": 188,
+     "text": "Pax smiles with his eyes closed and his beak open while Polly beams back at him with her eyes shut"
+    }
+   ],
+   "props": [
+    "jam bread",
+    "tote bag of greens",
+    "paper bags of bread and vegetables",
+    "jars of jam"
+   ],
+   "prop_events": [],
+   "effects": [
+    "hearts"
+   ],
+   "overlays": [],
+   "in_world_text": [
+    "print on the tote bag",
+    "jam jar labels"
+   ],
+   "travel": "none",
+   "notes": "verification pass 2 (verify2_report_0): beat 152-188 says Pax nods with his eyes closed and a delighted smile for the whole range; f152-168 his eyes are open (wide, chewing, looking up) and they close only from f169-170; Polly's eyes also close from f168; beat 116-138: Polly holds the bread out at her side from f114 and smiles with her eyes closed f123-130 while a heart floats up (not described)"
+  },
+  {
+   "start": 188,
+   "end": 295,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with a cream sofa behind Pax and a round window high on the wall",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "partial",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 188,
+     "end": 232,
+     "text": "Pax sweeps a small pile of dust toward a dustpan with his broom while Polly wipes the round window behind him with a yellow cloth"
+    },
+    {
+     "start": 232,
+     "end": 258,
+     "text": "Polly waves at Pax through the round window while Pax stops sweeping and looks up at her"
+    },
+    {
+     "start": 258,
+     "end": 274,
+     "text": "Polly raises a flipper to her beak and blows Pax a kiss through the window"
+    },
+    {
+     "start": 274,
+     "end": 283,
+     "text": "Polly waves as a small red heart pops up beside her while Pax blinks up at her"
+    },
+    {
+     "start": 283,
+     "end": 295,
+     "text": "Pax blushes with rosy cheeks and a bashful grin, a flipper on his chest, while Polly keeps waving and smiling"
+    }
+   ],
+   "props": [
+    "broom",
+    "dustpan",
+    "yellow cloth",
+    "round window"
+   ],
+   "prop_events": [],
+   "effects": [
+    "heart",
+    "blush marks",
+    "motion lines"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "Polly is outside, seen through the round window (head and chest only)."
+  },
+  {
+   "start": 295,
+   "end": 352,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "notes": "slow push-in for the whole shot (couch, table and foreground edges all doubled in compare 295/315 and 330/351); night couch scene under a blanket, penguin-face mugs on the table"
+  }
+ ]
+}

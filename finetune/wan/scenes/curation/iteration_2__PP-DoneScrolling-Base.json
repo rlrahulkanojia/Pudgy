@@ -1,0 +1,44 @@
+{
+ "skit": "iteration_2/72_videos/PP-DoneScrolling-Base.mp4",
+ "frames": 166,
+ "fps": 24,
+ "curated_by": "curator-10",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "DONE SCROLLING",
+ "cast": {
+  "pax": {"kind": "lead"},
+  "polly": {"kind": "lead"}
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {"kind": "flat", "desc": "a living room with a cream couch, drawn on a plain pale grey background"}
+ },
+ "spans": [
+  {
+   "start": 0, "end": 116, "boundary": "start", "keep": false, "drop_reason": "camera_move", "camera": "push_in",
+   "notes": "wide shot of both on the couch scrolling phones, then Pax tosses his phone away and they lean together; slow push-in from f0 (couch and table edges shift every frame, f0 vs f24 already doubled). Both phones are pale grey with a lens module, probably the iFin (unsure; tuft not readable)"
+  },
+  {
+   "start": 116, "end": 166, "boundary": "cut", "keep": true, "drop_reason": "", "camera": "static",
+   "framing": "medium close-up", "angle": "eye level", "setting": "s1",
+   "view": "with a checkered fish-print blanket over them and a bucket of popcorn and a tumbler in the foreground",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "left-center", "presence": "full", "outfit": []},
+    {"id": "polly", "screen": "right-center", "presence": "full", "outfit": []}
+   ],
+   "beats": [
+    {"start": 116, "end": 124, "text": "Polly rests her head against Pax with a contented closed-eye smile while Pax looks ahead, wide awake"},
+    {"start": 124, "end": 134, "text": "Pax stares ahead with a little tear by his eye as Polly opens her eyes beside him"},
+    {"start": 134, "end": 148, "text": "Pax closes his eyes in a blissful smile and leans into Polly while she gazes ahead"},
+    {"start": 148, "end": 156, "text": "Pax opens his eyes and glances around while Polly closes hers with a soft smile"},
+    {"start": 156, "end": 166, "text": "Pax brings a TV remote up from his side and both of them smile ahead with blushing cheeks"}
+   ],
+   "props": ["checkered blanket", "popcorn", "tumbler", "TV remote"],
+   "prop_events": [{"prop": "TV remote", "event": "picks_up", "frame": 156, "by": "pax"}],
+   "effects": ["tears", "blush marks"], "overlays": [],
+   "in_world_text": [], "travel": "none",
+   "notes": "blanket and popcorn edges identical f116 vs f165. Pax no longer wears the headphones he has in the wide shot. The object at the end is a TV remote (buttons), not a phone. Popcorn and tumbler in the foreground are soft-focus"
+  }
+ ]
+}

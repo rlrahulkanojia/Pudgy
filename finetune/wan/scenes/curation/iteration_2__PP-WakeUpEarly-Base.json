@@ -1,0 +1,63 @@
+{
+ "skit": "iteration_2/72_videos/PP-WakeUpEarly-Base.mp4",
+ "frames": 159,
+ "fps": 24,
+ "curated_by": "curator-batch4",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "WAKING UP (WakeUpEarly)",
+ "cast": {
+  "pax": {"kind": "lead"}, "polly": {"kind": "lead"}
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {"kind": "set", "desc": "a bedroom with a big yellow bed between two nightstands with lamps"}
+ },
+ "spans": [
+  {
+   "start": 0, "end": 54, "boundary": "start", "keep": false, "drop_reason": "camera_move", "camera": "push_in",
+   "notes": "Pax and Polly asleep, Polly's flipper flung across Pax. Slow push-in from ~f13 to the end of the shot: bed edges fit f0 to f20/30/53 at scale 1.004/1.010/1.015 (overlap 1.0 vs 0.76/0.62/0.30 unscaled), and compare f0/f53 shows the whole bed outline doubled. keep12 (median 0.99) missed it. The locked head f0-f12 is under 21 frames"
+  },
+  {
+   "start": 54, "end": 106, "boundary": "cut", "keep": true, "camera": "static",
+   "framing": "wide", "angle": "eye level", "setting": "s1",
+   "view": "with a digital alarm clock on the left nightstand",
+   "time": "morning", "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "left-center", "presence": "full", "outfit": []},
+    {"id": "polly", "screen": "right-center", "presence": "full", "outfit": []}
+   ],
+   "beats": [
+    {"start": 54, "end": 60, "text": "Pax and Polly lie asleep side by side under the blanket with their beaks open"},
+    {"start": 60, "end": 66, "text": "Pax pops up to sit straight in bed as the alarm clock jiggles, and Polly sits up beside him"},
+    {"start": 66, "end": 88, "text": "Pax and Polly sit up in bed blinking sleepily while Polly rubs one eye with her flipper"},
+    {"start": 88, "end": 98, "text": "Pax leans over to the left toward the alarm clock while Polly holds the edge of the blanket"},
+    {"start": 98, "end": 106, "text": "Pax and Polly sink back down and pull the blanket up over themselves"}
+   ],
+   "props": ["alarm clock", "blanket", "bedside lamps"], "prop_events": [], "effects": [], "overlays": [],
+   "in_world_text": ["clock screen"], "travel": "none",
+   "notes": "lamp edge fit f54 vs f75/100/117: identity overlap 1.000, camera locked; compare f54/f105 shows bed and nightstands black. The leads are tiny (~8% of the height). Clock digits are in-world text, not transcribed. Whether Pax actually switches the alarm off is hidden behind the bedpost, so the beat only says he leans toward it"
+  },
+  {
+   "start": 106, "end": 118, "boundary": "same_shot", "keep": false, "drop_reason": "lead_hidden", "camera": "static",
+   "notes": "Pax and Polly are completely under the blanket, which heaves as they snuggle; only flipper tips show"
+  },
+  {
+   "start": 118, "end": 159, "boundary": "cut", "keep": true, "camera": "static",
+   "framing": "wide", "angle": "eye level", "setting": "s1",
+   "view": "with a digital alarm clock on the left nightstand",
+   "time": "morning", "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "left-center", "presence": "full", "outfit": []},
+    {"id": "polly", "screen": "right-center", "presence": "full", "outfit": []}
+   ],
+   "beats": [
+    {"start": 118, "end": 142, "text": "Pax and Polly lie asleep side by side under the blanket, flippers resting on the edge, eyes closed"},
+    {"start": 142, "end": 150, "text": "Pax opens his beak in a snore and flops a flipper out while Polly rolls toward him"},
+    {"start": 150, "end": 159, "text": "Polly sleeps with one flipper flung across Pax, both of them with their beaks hanging open"}
+   ],
+   "props": ["alarm clock", "blanket", "bedside lamps"], "prop_events": [], "effects": [], "overlays": [],
+   "in_world_text": ["clock screen"], "travel": "none",
+   "notes": "headboard and footboard edge fit f118 vs f119-f158: identity overlap 1.000, camera locked (compare f118/f158). Same framing as the pushed-in end of the first shot, but locked here. Polly has a drool drop at her beak from ~f150"
+  }
+ ]
+}

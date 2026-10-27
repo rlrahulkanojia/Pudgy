@@ -1,0 +1,302 @@
+{
+ "skit": "iteration_2/72_videos/PP-Savings-Base.mp4",
+ "frames": 259,
+ "fps": 24,
+ "curated_by": "curator-07",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "SAVINGS",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "the front seat of an open-top car parked on a village street, with blurred colourful igloo shops behind"
+  },
+  "s2": {
+   "kind": "set",
+   "desc": "a restaurant room with low round wooden tables, a hanging bonsai scroll on the pale wall and a potted bonsai tree"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 44,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a star-print cup in the cup holder beside the gear stick",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 10,
+     "text": "Polly pulls her seatbelt across her chest and buckles it"
+    },
+    {
+     "start": 10,
+     "end": 26,
+     "text": "Polly sits buckled in the passenger seat, glancing to the side"
+    },
+    {
+     "start": 26,
+     "end": 32,
+     "text": "Polly shuts her eyes and grins with her beak open"
+    },
+    {
+     "start": 32,
+     "end": 36,
+     "text": "Polly opens her eyes and glances up to the side"
+    },
+    {
+     "start": 36,
+     "end": 44,
+     "text": "Polly stares ahead with wide eyes, one flipper resting on her seatbelt"
+    }
+   ],
+   "props": [
+    "seatbelt",
+    "star-print cup",
+    "gear stick"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "car parked: sky and blurred buildings locked. A small flower keychain hangs at the bottom edge | verification pass 2 (verify2_report_2): beat 27-36 'closes her eyes in a happy smile' (near-copy of the v8 clause): eyes are shut only f26-31; f32-35 she opens them and glances up to the side; beat 36-44 'flippers in her lap': one flipper rests on the seatbelt at her chest, the other at her side; she stares ahead wide-eyed; both beats are in the end window [23,44); flower keychain and star/heart cup checked at full res: no lead depictio"
+  },
+  {
+   "start": 44,
+   "end": 119,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the steering wheel in front of him and a star-print cup beside the gear stick",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 44,
+     "end": 47,
+     "text": "Pax clicks his seatbelt shut across his chest in the driver's seat"
+    },
+    {
+     "start": 47,
+     "end": 56,
+     "text": "Pax sits buckled in the driver's seat with his beak open, looking ahead"
+    },
+    {
+     "start": 56,
+     "end": 64,
+     "text": "Pax leans forward and takes hold of the steering wheel"
+    },
+    {
+     "start": 64,
+     "end": 91,
+     "text": "Pax grips the steering wheel with both flippers and looks ahead"
+    },
+    {
+     "start": 91,
+     "end": 105,
+     "text": "Pax turns his head to the side toward the front of the car, still gripping the wheel"
+    },
+    {
+     "start": 105,
+     "end": 119,
+     "text": "Pax faces away toward the windshield so only the back of his head shows, still gripping the wheel"
+    }
+   ],
+   "props": [
+    "seatbelt",
+    "steering wheel",
+    "star-print cup",
+    "gear stick"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "background locked until f118; from f119 it starts to scroll (car drives off), split there | verification pass 2 (verify2_report_2): street behind stays still until f118 (sky-region diff 0.0 vs f44 through f118, starts at f119): end at 119 is right; beat 44-60 keeps 'fastening his seatbelt' for 16 frames: it clicks shut by f46; he then sits talking (beak open) and at f56-63 reaches for the wheel; beat 90-119 'looks away over his shoulder': he turns his head to profile toward the front of the car f91-104, then faces fully away ("
+  },
+  {
+   "start": 119,
+   "end": 175,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "other",
+   "notes": "the car drives: the car interior stays fixed but the street behind scrolls past (camera travels with the car). Pax at the wheel, slumping forward"
+  },
+  {
+   "start": 175,
+   "end": 200,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a platter of sushi and a dipping bowl on the table in front of him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 175,
+     "end": 200,
+     "text": "Pax sits at the low table and quickly pops pieces of sushi from the platter into his beak, one after another"
+    }
+   ],
+   "props": [
+    "sushi platter",
+    "dipping bowl",
+    "soy sauce bottle"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "Pax's lower body hidden by the table"
+  },
+  {
+   "start": 200,
+   "end": 230,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a platter of sushi on the table in front of her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 200,
+     "end": 206,
+     "text": "Polly chews with a flipper held to her beak"
+    },
+    {
+     "start": 206,
+     "end": 218,
+     "text": "Polly picks up a piece of sushi from the platter and lifts it to her beak"
+    },
+    {
+     "start": 218,
+     "end": 230,
+     "text": "Polly chews contentedly, eyes shut and smiling"
+    }
+   ],
+   "props": [
+    "sushi platter",
+    "soy sauce bottle"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": ""
+  },
+  {
+   "start": 230,
+   "end": 237,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pull_back",
+   "notes": "fast pull back f230-f236 from Polly to a wide two-shot"
+  },
+  {
+   "start": 237,
+   "end": 259,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with platters of sushi on the table between them",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 237,
+     "end": 259,
+     "text": "Pax eats sushi from the platter while Polly sits across the low table from him, smiling"
+    }
+   ],
+   "props": [
+    "sushi platters",
+    "potted bonsai tree"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "settled after the pull back; 22 frames"
+  }
+ ]
+}

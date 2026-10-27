@@ -1,0 +1,220 @@
+{
+ "skit": "iteration_2/72_videos/PP-LittleSpoon-Base.mp4",
+ "frames": 196,
+ "fps": 24,
+ "curated_by": "curator-05",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "LITTLE SPOON",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a dim bedroom with a mustard headboard, a duck-shaped bedpost and a peach lamp"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 28,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with her head on a pillow under a pale blanket",
+   "time": "night",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 6,
+     "text": "Polly lies on her side under the blanket and opens her eyes"
+    },
+    {
+     "start": 6,
+     "end": 28,
+     "text": "Polly lifts her head and looks up to the left with rosy cheeks, her beak moving as she speaks"
+    }
+   ],
+   "props": [
+    "bed",
+    "pillow",
+    "blanket"
+   ],
+   "prop_events": [],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked (bedpost/lamp ROI: scale 1.0002, 0.2 px). Whole skit is drawn dim (night); no colour wash, the dimness is the lighting of the set."
+  },
+  {
+   "start": 28,
+   "end": 58,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with his head on a pillow under a pale blanket",
+   "time": "night",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 28,
+     "end": 38,
+     "text": "Pax rocks upright on the pillow with one fin raised, squeezing his eyes shut for a moment"
+    },
+    {
+     "start": 38,
+     "end": 58,
+     "text": "Pax looks up to the right with wide shining eyes, holding his fin raised, his beak moving"
+    }
+   ],
+   "props": [
+    "bed",
+    "pillow",
+    "blanket"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "hard cut at f28 (profile); camera locked (bedpost/lamp ROI: 0 px, scale 1.000). | verification pass 2 (verify2_report_5): Beat 28-38 says Pax nods 'with his eyes squeezed shut': his eyes are open f28-31 and f36+ and shut only at f33-35 (step-1 crops). He rocks from a tilted lie to upright with the fin raised."
+  },
+  {
+   "start": 58,
+   "end": 148,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a crumpled pale blanket pulled over the bed",
+   "time": "night",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 58,
+     "end": 65,
+     "text": "Polly gazes up from the pillow with wide eyes and rosy cheeks"
+    },
+    {
+     "start": 65,
+     "end": 70,
+     "text": "Polly shuts her eyes, smiling, and nestles her head down into the pillow"
+    },
+    {
+     "start": 70,
+     "end": 84,
+     "text": "Polly rolls over to turn her back, tucking herself under the blanket"
+    },
+    {
+     "start": 84,
+     "end": 136,
+     "text": "Polly lies curled with her back turned, wriggling a little as she settles"
+    },
+    {
+     "start": 136,
+     "end": 148,
+     "text": "Polly rolls her head back over her shoulder and stares with wide puzzled eyes"
+    }
+   ],
+   "props": [
+    "bed",
+    "pillow",
+    "blanket"
+   ],
+   "prop_events": [],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked (compare 58/147: bedpost black; ORB 0 px from f76 on, the small early ORB wobble is her head crossing the ROI). shot_review flagged 'lead hidden under blanket': her back, head tuft and fin stay above the blanket the whole time (f84-136 seen from behind), so kept - judgement call. | verification pass 2 (verify2_report_5): Beat 58-70 says Polly 'smiles with her eyes closed' from f58: her eyes are wide open with rosy cheeks f58-64 and close only from f65 (step-1 crops).; Lead visibility (the curator's judgement call): f82-136 shows only Polly's pink back and head-top above the blanket, no face. This is more than a sliver, so I keep it, but a 33-frame window [91,124) or a 21-frame window inside f84-136 is back-only."
+  },
+  {
+   "start": 148,
+   "end": 196,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a crumpled pale blanket pulled over the bed",
+   "time": "night",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 148,
+     "end": 172,
+     "text": "Pax lies curled on his side with his round back turned, shifting under the blanket"
+    },
+    {
+     "start": 172,
+     "end": 196,
+     "text": "Pax pokes his feet out from under the blanket and wiggles them, still facing away"
+    }
+   ],
+   "props": [
+    "bed",
+    "pillow",
+    "blanket"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked (compare 148/195: bedpost black; the ORB drift in the lamp ROI is Pax's back moving across it). Pax is seen only from behind (no face) for the whole span - kept as he is clearly visible; drop if back-only views are unwanted."
+  }
+ ]
+}

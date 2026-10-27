@@ -1,0 +1,171 @@
+{
+ "skit": "iteration_2/72_videos/PP-MissedHim-Base.mp4",
+ "frames": 221,
+ "fps": 24,
+ "curated_by": "curator-08",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "MISSED HIM",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "a black necktie"
+ },
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "an igloo room with pale ice-brick walls"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 126,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "lead_hidden",
+   "camera": "static",
+   "notes": "Exterior, icy winding road through snow: a red car drives in from the bottom right and away into the distance, stops, Pax looks back, reverse lights come on, the car backs up. Camera locked (tree region shift 0 for f1-125) but Pax is only the back of his head above the car seat, and from ~f30 on a speck about 4% of the frame high. Licence plate text on the car. Judged too little of the lead to caption him."
+  },
+  {
+   "start": 126,
+   "end": 153,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pull_back",
+   "notes": "Pull-back that reveals the road was seen through a round igloo window, with Polly in the foreground watching; the window frame and side table keep drifting until the cut (compare 141/152 doubled). A phone lies on the side table."
+  },
+  {
+   "start": 153,
+   "end": 200,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a round window over a small white side table and an arched wooden door",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right",
+     "presence": "enters",
+     "enters_at": 163,
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 153,
+     "end": 163,
+     "text": "Polly stands at the round window with her back turned, peering outside with her flippers raised to her beak"
+    },
+    {
+     "start": 163,
+     "end": 178,
+     "text": "Pax pushes the wooden door open and steps inside, holding the door with one flipper, while Polly keeps looking out"
+    },
+    {
+     "start": 178,
+     "end": 190,
+     "text": "Polly turns around from the window, clasps her flippers at her chest and closes her eyes in a happy smile"
+    },
+    {
+     "start": 190,
+     "end": 200,
+     "text": "Pax stretches his free flipper toward Polly with worried brows while she spreads her flippers wide"
+    }
+   ],
+   "props": [
+    "wooden door",
+    "side table",
+    "phone"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "enters",
+   "notes": "Static: compare 153/199 (window, table edges black; the door moves because it opens). A phone lies on the side table, untouched. | verification pass 2 (verify3_report_1): Beat 193-200 says Pax 'smiles at her from the doorway'. Pax does not smile: he keeps one flipper on the door, stretches the other out toward Polly from about f190, and has raised, worried brows the whole time.; Beat 178-193 says Polly is 'beaming at Pax'. She faces front with wide eyes, clasping her flippers at her chest, then closes her eyes in a happy smile (f188-190).; Camera locked: phase corr"
+  },
+  {
+   "start": 200,
+   "end": 221,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a round window, a small white side table and an arched wooden door",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 206,
+       "screen": "left-center"
+      }
+     ]
+    },
+    {
+     "id": "pax",
+     "screen": "right",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ],
+     "moves": [
+      {
+       "frame": 206,
+       "screen": "right-center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 200,
+     "end": 208,
+     "text": "Polly hurries in from the left while Pax hurries over from the right, both with their flippers open"
+    },
+    {
+     "start": 208,
+     "end": 221,
+     "text": "Pax and Polly hug each other tightly with their eyes closed and happy smiles"
+    }
+   ],
+   "props": [
+    "wooden door",
+    "side table"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "Exactly 21 frames. Static: compare 200/220 (window rim and door edges black); keep12 is low because the leads move a lot. Polly is cut by the left edge at f200-201."
+  }
+ ]
+}

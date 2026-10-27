@@ -1,0 +1,367 @@
+{
+ "skit": "iteration_1/30_videos/2D_PP_LifeWithHer_Base.mp4",
+ "frames": 359,
+ "fps": 24,
+ "curated_by": "curator-03",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "LIFE WITH HER",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a dining corner with a round table and a wooden chair, drawn on a plain pale grey background"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "a living room with a cream couch, drawn on a plain pale grey background"
+  },
+  "s3": {
+   "kind": "set",
+   "desc": "a park with a wooden bench in front of snowy pine trees under a pale sky"
+  },
+  "s4": {
+   "kind": "flat",
+   "desc": "a fast food counter drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 105,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a plate on the table in front of him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 22,
+     "text": "Pax sits at the table and slices the sandwich on his plate in half with a knife"
+    },
+    {
+     "start": 22,
+     "end": 32,
+     "text": "Pax lays the knife down beside his plate and blinks, looking ahead"
+    },
+    {
+     "start": 32,
+     "end": 46,
+     "text": "Pax picks up one sandwich half and lifts it to his beak, his eyes wide open"
+    },
+    {
+     "start": 46,
+     "end": 54,
+     "text": "Pax closes his eyes and bites into the sandwich as a fin edges in from the right"
+    },
+    {
+     "start": 54,
+     "end": 66,
+     "text": "Pax chews with his eyes closed while the fin reaches toward his plate"
+    },
+    {
+     "start": 66,
+     "end": 75,
+     "text": "Pax opens his eyes while the fin takes the other sandwich half off his plate and pulls it away to the right"
+    },
+    {
+     "start": 75,
+     "end": 87,
+     "text": "Pax holds his sandwich half at his beak and chews, looking ahead with wide eyes"
+    },
+    {
+     "start": 87,
+     "end": 105,
+     "text": "Pax chews his sandwich with his eyes shut and his beak open"
+    }
+   ],
+   "props": [
+    "sandwich",
+    "plate",
+    "knife"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "only Polly's fin reaches in (f54-76), so Polly is not listed as a character | verification pass 2 (verify3_report_1): Beat 54-76 keeps Pax's eyes closed, but he opens them at f66, before the fin takes the second sandwich half (f67-74).; Beat 76-105 says Pax opens his eyes and smiles; his eyes are already open from f66, and from f87 to the end he chews with his eyes shut and his beak open.; Beat 32-54 says he chews with his eyes closed, but they are wide open f32-45 while he lifts the sandwich and only close at f4"
+  },
+  {
+   "start": 105,
+   "end": 176,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 105,
+     "end": 127,
+     "text": "Pax sits on the couch hugging a striped popcorn bucket and scoops up some popcorn with his fin"
+    },
+    {
+     "start": 127,
+     "end": 141,
+     "text": "Pax lifts the popcorn to his beak and munches it"
+    },
+    {
+     "start": 141,
+     "end": 159,
+     "text": "Pax chews while a fin reaches in from the left, grabs a handful of popcorn from his bucket and pulls back out of view"
+    },
+    {
+     "start": 159,
+     "end": 167,
+     "text": "Pax glances to the left with wide eyes"
+    },
+    {
+     "start": 167,
+     "end": 176,
+     "text": "Pax closes his eyes in a soft, contented smile, holding the bucket"
+    }
+   ],
+   "props": [
+    "popcorn bucket"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "only Polly's fin reaches in (f141-159), so Polly is not listed as a character"
+  },
+  {
+   "start": 176,
+   "end": 238,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 176,
+     "end": 188,
+     "text": "Pax sits on the bench licking a scoop of green ice cream on a cone"
+    },
+    {
+     "start": 188,
+     "end": 208,
+     "text": "Pax keeps licking the ice cream with his eyes closed and a contented smile"
+    },
+    {
+     "start": 208,
+     "end": 226,
+     "text": "Pax opens his eyes in surprise while fins reach in from the right, take his green cone and put a red ice cream cone in his fin"
+    },
+    {
+     "start": 226,
+     "end": 238,
+     "text": "Pax holds the red ice cream cone, looking at it, then smiles with his eyes closed"
+    }
+   ],
+   "props": [
+    "ice cream cones"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "only Polly's fins reach in (f208-228), so Polly is not listed as a character; clouds drift slightly"
+  },
+  {
+   "start": 238,
+   "end": 307,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s4",
+   "view": "with a paper bag and a burger box on the counter",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 238,
+     "end": 250,
+     "text": "Pax sits behind the counter, pulls a few fries from a striped bucket and pops them in his beak"
+    },
+    {
+     "start": 250,
+     "end": 256,
+     "text": "Pax chews with the fries sticking out of his beak, looking ahead"
+    },
+    {
+     "start": 256,
+     "end": 266,
+     "text": "Pax reaches into the bucket and picks out another fry, the fries still hanging from his beak"
+    },
+    {
+     "start": 266,
+     "end": 282,
+     "text": "Pax holds still with a fry in his flipper while a fin reaches in from the right and plucks a fry from his bucket"
+    },
+    {
+     "start": 282,
+     "end": 292,
+     "text": "Pax holds still as the fin reaches up, pulls the fries out of his beak and slips away to the right"
+    },
+    {
+     "start": 292,
+     "end": 307,
+     "text": "Pax blinks, then stares ahead with wide eyes, holding a fry in his flipper"
+    }
+   ],
+   "props": [
+    "bucket of fries",
+    "paper bag",
+    "burger box"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "only Polly's fin reaches in (f268-292), so Polly is not listed as a character; a fast zoom out starts at f307 | verification pass 2 (verify3_report_1): Beat 250-268 says Pax only chews and looks ahead, but from f256 to f266 he reaches into the bucket and picks out another fry, which he then holds for the rest of the span.; Beat 268-283: the fin takes one fry from the bucket (f276-280), not 'a few'. The fin first appears at f266.; Beat 292-307 says 'a fry in his fin'; it is his flipper (the fin in this span is the other character's).; Camera locke"
+  },
+  {
+   "start": 307,
+   "end": 311,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "zoom_out",
+   "notes": "fast 4-frame zoom out revealing Polly next to Pax"
+  },
+  {
+   "start": 311,
+   "end": 359,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s4",
+   "view": "with a paper bag and a burger box on the long counter",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 340,
+       "screen": "right-center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 311,
+     "end": 324,
+     "text": "Polly munches fries with her eyes closed and a happy smile while Pax holds a fry and watches her"
+    },
+    {
+     "start": 324,
+     "end": 329,
+     "text": "Pax nibbles his fry with his eyes closed while Polly keeps munching"
+    },
+    {
+     "start": 329,
+     "end": 338,
+     "text": "Polly opens her eyes and looks over at Pax with blushing cheeks"
+    },
+    {
+     "start": 338,
+     "end": 347,
+     "text": "Polly leans across toward Pax, bringing her face up to his cheek"
+    },
+    {
+     "start": 347,
+     "end": 359,
+     "text": "Polly kisses Pax on the cheek as they both blush and a little red heart pops up above them"
+    }
+   ],
+   "props": [
+    "bucket of fries",
+    "paper bag",
+    "burger box"
+   ],
+   "prop_events": [],
+   "effects": [
+    "heart",
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "verification pass 2 (verify2_report_1): motion_hint frames f321/f341 are false alarms (character motion): counter, paper bag and burger box edges overlap exactly in compare 311/341 and 311/358; ECC on the counter front cc 1.0000, shift 0.02 px.; Beat 311-329 says Pax 'holds a fry and watches her': f324-328 he pops a fry into his beak with his eyes closed."
+  }
+ ]
+}

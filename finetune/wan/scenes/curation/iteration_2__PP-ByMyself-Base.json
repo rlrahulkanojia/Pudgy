@@ -1,0 +1,560 @@
+{
+ "skit": "iteration_2/72_videos/PP-ByMyself-Base.mp4",
+ "frames": 440,
+ "fps": 24,
+ "curated_by": "curator-06",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "BY MYSELF",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a room with pale ice-block walls and a round porthole window looking out on the snow"
+  },
+  "s2": {
+   "kind": "set",
+   "desc": "a garden store aisle with shelves of teal pots and sacks of soil"
+  },
+  "s3": {
+   "kind": "flat",
+   "desc": "a garden store drawn on a plain pale grey background"
+  },
+  "s4": {
+   "kind": "set",
+   "desc": "the snowy yard of an igloo among snowy pine trees"
+  },
+  "s5": {
+   "kind": "set",
+   "desc": "a landscaped garden with a pond beside an igloo in the snow"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 64,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a small white stool under the window",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 29,
+     "text": "Polly stands by the porthole window tapping a flipper against her beak with a thoughtful look"
+    },
+    {
+     "start": 29,
+     "end": 41,
+     "text": "Polly lifts her head and opens her beak wide-eyed, her flipper still at her beak"
+    },
+    {
+     "start": 41,
+     "end": 46,
+     "text": "Polly drops her flippers and plants them on her hips"
+    },
+    {
+     "start": 46,
+     "end": 64,
+     "text": "Polly bobs her head with her flippers on her hips, eyes shut and smiling contentedly"
+    }
+   ],
+   "props": [],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "verification pass 2 (verify2_report_3): Beat [0,40): Polly's eyes do not move f0-28 (only the flipper taps; 'glancing around' is false), and at f29-41 she lifts her head and opens her beak wide-eyed with the flipper still at her beak - an expression change the beat leaves out; Beat [40,46): she drops her flippers and plants them on her hips by f43; eyes close at f45"
+  },
+  {
+   "start": 64,
+   "end": 109,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a shopping cart loaded with soil sacks between them",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 64,
+     "end": 84,
+     "text": "Polly points at the sacks on the shelf while Pax, with his back turned, reaches up toward them"
+    },
+    {
+     "start": 84,
+     "end": 99,
+     "text": "Pax turns hugging a heavy soil sack to his chest with his eyes squeezed shut while Polly clasps her flippers"
+    },
+    {
+     "start": 99,
+     "end": 109,
+     "text": "Pax heaves the sack down onto the pile in the cart while Polly watches"
+    }
+   ],
+   "props": [
+    "soil sacks",
+    "shopping cart"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": ""
+  },
+  {
+   "start": 109,
+   "end": 136,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with a shelf cabinet of teal pots and a cart full of leafy plants",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 109,
+     "end": 124,
+     "text": "Pax hugs a big empty clay pot with his eyes squeezed shut and pushes it into the cart"
+    },
+    {
+     "start": 124,
+     "end": 136,
+     "text": "Pax opens his eyes and holds the pot steady in the cart, looking at it"
+    }
+   ],
+   "props": [
+    "clay pot",
+    "shopping cart",
+    "plants"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "shelf-only phase correlation 0 px f109->f135; the plant leaves sway | verification pass 2 (verify2_report_3): The pot Pax hugs and pushes into the cart is an EMPTY terracotta pot (open dark top at full res f109/f130); the purple flowers are a separate plant already in the cart behind it. 'a heavy clay pot of flowers' misnames the object; Camera: motion_hint flag at f125 is the plants/Pax; integer-shift search on the shelf regions at full res gives (0,0) for every frame 110-135, so locked"
+  },
+  {
+   "start": 136,
+   "end": 144,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pull_back",
+   "notes": "fast pull back revealing Polly on the cart"
+  },
+  {
+   "start": 144,
+   "end": 171,
+   "boundary": "camera",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with a shelf cabinet of teal pots behind a cart piled with plants",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 162,
+       "screen": "left-center"
+      }
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 162,
+       "screen": "right-center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 144,
+     "end": 158,
+     "text": "Polly sits on top of the loaded cart holding a small potted sprout while Pax stands behind the cart handle"
+    },
+    {
+     "start": 158,
+     "end": 171,
+     "text": "Pax pushes the cart to the right with Polly riding on it among the plants"
+    }
+   ],
+   "props": [
+    "shopping cart",
+    "plants",
+    "potted sprout"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "compare 144/170: cabinet edges overlap exactly"
+  },
+  {
+   "start": 171,
+   "end": 219,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "other",
+   "notes": "driving shot: car fixed in frame while bushes and igloos scroll past (tracking), with a swing to the side f204-216"
+  },
+  {
+   "start": 219,
+   "end": 220,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "verification pass 2 (verify2_report_3): 1 frame: first frame of the shot still shows snow-drift lines along the bottom that disappear at f220"
+  },
+  {
+   "start": 220,
+   "end": 258,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s4",
+   "view": "with a red car piled with plants parked by the igloo and a stack of soil sacks on the snow",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 220,
+     "end": 232,
+     "text": "Pax hugs a soil sack to his chest with his eyes closed in a contented smile"
+    },
+    {
+     "start": 232,
+     "end": 239,
+     "text": "Pax heaves the sack up over his head"
+    },
+    {
+     "start": 239,
+     "end": 244,
+     "text": "Pax tosses the sack down onto the stack on the snow"
+    },
+    {
+     "start": 244,
+     "end": 258,
+     "text": "Pax wipes his brow with a flipper, one eye shut, beside the stacked sacks"
+    }
+   ],
+   "props": [
+    "soil sacks",
+    "car"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "clouds drift; ground and igloo locked (compare 219/257) | verification pass 2 (verify2_report_3): f219 (first frame after the cut) still carries snow-drift outlines along the bottom of the picture (y ~580-930 at 540 wide) that vanish at f220: a one-frame pop at the start of every window cut from this span. Beats and camera otherwise fine (compare 220/257 clean)"
+  },
+  {
+   "start": 258,
+   "end": 275,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "jump cut (same set-up): Pax pours soil from a sack, 17 frames"
+  },
+  {
+   "start": 275,
+   "end": 302,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s4",
+   "view": "with a big patch of brown soil spread on the snow, empty sacks and a red car parked by the igloo",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 275,
+     "end": 302,
+     "text": "Pax sits on the edge of the soil patch working a rake back and forth with sweat drops on his head"
+    }
+   ],
+   "props": [
+    "rake",
+    "soil",
+    "soil sacks"
+   ],
+   "prop_events": [],
+   "effects": [
+    "sweat drops"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "compare 275/301 clean"
+  },
+  {
+   "start": 302,
+   "end": 307,
+   "boundary": "transition",
+   "keep": false,
+   "drop_reason": "transition",
+   "camera": "whip",
+   "notes": "slide transition to Polly's soil castle"
+  },
+  {
+   "start": 307,
+   "end": 323,
+   "boundary": "after_transition",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "Polly shapes a little castle out of the soil, 16 frames"
+  },
+  {
+   "start": 323,
+   "end": 378,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s5",
+   "view": "with a little stone bridge, a stone lantern and a red car parked in the snow behind",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 323,
+     "end": 349,
+     "text": "Polly reads a book on a striped lounge chair while Pax frowns, patting a round shrub into shape"
+    },
+    {
+     "start": 349,
+     "end": 366,
+     "text": "Pax closes his eyes in a proud smile while Polly glances up from her book"
+    },
+    {
+     "start": 366,
+     "end": 378,
+     "text": "Polly sets the book down on the chair while Pax stands smiling beside the shrub"
+    }
+   ],
+   "props": [
+    "lounge chair",
+    "book",
+    "shrub"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "clouds drift; garden locked (compare 323/377, phase correlation 0 px)"
+  },
+  {
+   "start": 378,
+   "end": 399,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s5",
+   "view": "with a striped lounge chair, a stack of books and a potted plant",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 378,
+     "end": 384,
+     "text": "Polly sits on the lounge chair and turns to face forward"
+    },
+    {
+     "start": 384,
+     "end": 399,
+     "text": "Polly clasps her flippers in front of her chest, beaming with her beak open"
+    }
+   ],
+   "props": [
+    "lounge chair",
+    "books"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "exactly 21 frames; the pull back starts at f399. Background drawn soft-focus"
+  },
+  {
+   "start": 399,
+   "end": 413,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pull_back",
+   "notes": "fast pull back from Polly to the whole garden, settles at f413"
+  },
+  {
+   "start": 413,
+   "end": 440,
+   "boundary": "camera",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s5",
+   "view": "with a little stone bridge, a stone lantern and a red car parked in the snow behind",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 413,
+     "end": 440,
+     "text": "Polly sits still on the lounge chair watching while Pax bends deep over the round shrub with his back turned"
+    }
+   ],
+   "props": [
+    "lounge chair",
+    "books",
+    "shrub"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "held final frame; Pax shows only his back over the bush, Polly clear"
+  }
+ ]
+}

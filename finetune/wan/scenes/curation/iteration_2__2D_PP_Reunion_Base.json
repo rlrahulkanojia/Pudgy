@@ -1,0 +1,204 @@
+{
+ "skit": "iteration_2/72_videos/2D_PP_Reunion_Base.mp4",
+ "frames": 250,
+ "fps": 24,
+ "curated_by": "curator-b2",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "REUNION",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "sticking plasters on his head and cheek and a bandage on one flipper",
+  "o2": "sticking plasters on her head and arm"
+ },
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a sunny lawn in front of an ice cream shop with a green door and round hanging lamps, softly blurred"
+  },
+  "s2": {
+   "kind": "set",
+   "desc": "a sunny park lawn with round cafe tables and striped parasols below a rose-coloured hill with a round arch"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 69,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pan_right",
+   "notes": "Pax on a crutch at the park cafe; the camera tracks sideways the whole shot (background shifts 6-15 px/frame at 540 wide, with a jolt around f41-44 and f57-58)"
+  },
+  {
+   "start": 69,
+   "end": 100,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a round turquoise table in the foreground",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [
+      "o2"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 69,
+     "end": 84,
+     "text": "Polly stands holding two ice cream cones against her chest and looks down with a soft, wistful face"
+    },
+    {
+     "start": 84,
+     "end": 96,
+     "text": "Polly turns her head to face ahead and opens her beak with a hopeful look"
+    },
+    {
+     "start": 96,
+     "end": 100,
+     "text": "Polly tears up and spreads her flippers a little, a cone in each"
+    }
+   ],
+   "props": [
+    "two ice cream cones"
+   ],
+   "prop_events": [],
+   "effects": [
+    "tears"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "shop facade feature-matched static over f69-99 (v4 called the whole shot a push-in; the move only starts at f100). Background is drawn soft-focus."
+  },
+  {
+   "start": 100,
+   "end": 113,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pan_left",
+   "notes": "camera follows Polly as she turns and waddles off to the left licking a cone"
+  },
+  {
+   "start": 113,
+   "end": 250,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with little round stools on the grass behind them",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ],
+     "moves": [
+      {
+       "frame": 121,
+       "screen": "left-center"
+      }
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "enters",
+     "enters_at": 114,
+     "outfit": [
+      "o2"
+     ],
+     "moves": [
+      {
+       "frame": 125,
+       "screen": "right-center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 113,
+     "end": 121,
+     "text": "Pax hobbles in from the left on his crutch while Polly waddles in from the right holding out two ice cream cones"
+    },
+    {
+     "start": 121,
+     "end": 128,
+     "text": "Polly hands Pax a green ice cream cone and he takes it in his bandaged flipper"
+    },
+    {
+     "start": 128,
+     "end": 153,
+     "text": "Polly throws her flippers around Pax and hugs him tight, both with their eyes closed, cheek to cheek"
+    },
+    {
+     "start": 153,
+     "end": 162,
+     "text": "Polly lets go and steps back while Pax holds his cone"
+    },
+    {
+     "start": 162,
+     "end": 187,
+     "text": "Pax wipes a tear from his eye with his flipper, eyes squeezed shut, while Polly watches him with a worried face"
+    },
+    {
+     "start": 187,
+     "end": 206,
+     "text": "Pax lowers his flipper and looks at Polly with wide eyes while she looks back, holding her cone"
+    },
+    {
+     "start": 206,
+     "end": 232,
+     "text": "Pax and Polly stand holding their ice cream cones and gaze at each other"
+    },
+    {
+     "start": 232,
+     "end": 244,
+     "text": "Polly leans in with her eyes closed and clinks her ice cream cone against the cone in Pax's flipper"
+    },
+    {
+     "start": 244,
+     "end": 250,
+     "text": "Polly straightens up and the two stand holding their cones, looking at each other"
+    }
+   ],
+   "props": [
+    "crutch",
+    "ice cream cones"
+   ],
+   "prop_events": [],
+   "effects": [
+    "tears"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "enters",
+   "notes": "compare 113/249: parasols, hill and tables overlap exactly; Pax is cut by the left edge for the first few frames | verification 2026-10-26: beat [162,187) corrected (the tear is Pax's)"
+  }
+ ]
+}

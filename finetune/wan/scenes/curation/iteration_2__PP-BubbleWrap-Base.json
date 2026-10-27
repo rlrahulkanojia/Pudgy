@@ -1,0 +1,209 @@
+{
+ "skit": "iteration_2/72_videos/PP-BubbleWrap-Base.mp4",
+ "frames": 194,
+ "fps": 24,
+ "curated_by": "curator-06",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "BUBBLE WRAP",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "an igloo interior with curved ice-block walls"
+  },
+  "s2": {
+   "kind": "set",
+   "desc": "the snowy yard outside an igloo"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 55,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a wooden door in the wall and a green duffel bag on the floor",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 12,
+     "text": "Polly leans against Pax's back with tears in her eyes, digging her feet in, while Pax holds a hockey stick and looks toward the door"
+    },
+    {
+     "start": 12,
+     "end": 30,
+     "text": "Pax reaches out a flipper and pulls the door open onto the snowy daylight while Polly hangs on to him"
+    },
+    {
+     "start": 30,
+     "end": 45,
+     "text": "Pax stands at the open door while Polly keeps clinging to his back, teary-eyed"
+    },
+    {
+     "start": 45,
+     "end": 55,
+     "text": "Pax grabs the strap of the green duffel bag at his side while Polly stays pressed against his back"
+    }
+   ],
+   "props": [
+    "hockey stick",
+    "duffel bag",
+    "door"
+   ],
+   "prop_events": [],
+   "effects": [
+    "tears"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "keep12 low from the door swinging open; phase correlation on the wall shows 0 px shift, compare 0/54 clean | verification 2026-10-26: beat [45,55) corrected"
+  },
+  {
+   "start": 55,
+   "end": 140,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with the round doorway of the igloo and its open wooden door",
+   "time": "day",
+   "size_change": true,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right",
+     "presence": "exits",
+     "exits_at": 100,
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "left",
+     "presence": "exits",
+     "exits_at": 137,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 120,
+       "screen": "center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 55,
+     "end": 62,
+     "text": "Pax waddles off to the right with his hockey stick while Polly steps out of the doorway behind him"
+    },
+    {
+     "start": 62,
+     "end": 73,
+     "text": "Polly waves a flipper after Pax with teary, worried eyes while he waddles away along the right edge"
+    },
+    {
+     "start": 73,
+     "end": 87,
+     "text": "Polly lowers her flippers to her sides and stands watching with a worried look as Pax nears the right edge"
+    },
+    {
+     "start": 87,
+     "end": 92,
+     "text": "Polly closes her eyes and turns toward the open door"
+    },
+    {
+     "start": 92,
+     "end": 102,
+     "text": "Polly waddles back inside through the open doorway"
+    },
+    {
+     "start": 102,
+     "end": 112,
+     "text": "The open doorway of the igloo stays empty for a moment"
+    },
+    {
+     "start": 112,
+     "end": 124,
+     "text": "Polly hurries back out of the doorway hugging a bundle of bubble wrap and carrying a dark helmet"
+    },
+    {
+     "start": 124,
+     "end": 140,
+     "text": "Polly waddles toward the front right with her load, growing larger until she passes out of view"
+    }
+   ],
+   "props": [
+    "hockey stick",
+    "bubble wrap",
+    "helmet",
+    "door"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "exits",
+   "notes": "Pax is large and cropped at the right edge, gone by f100. Polly goes inside at f102 and comes back out at f112 (no lead f102-111, 10 frames), then leaves past the right edge by f137. Lead visible 71 of 85 frames. Phase correlation on the igloo wall: 0 px shift f55->f139 | verification pass 2 (verify3_report_1): Beat 62-84 says Polly keeps waving until f84, but she lowers her flippers at f73-74 (eyes closed) and from f75 to f86 stands with her flippers at her sides, watching with a worried face. Beat 84-92 then says she 'lowers her flipper' a second time.; Polly's eyes are teary (tear drops) over f55-72; the beat says only 'worried frown'.; The motion hint is a false positive (Pax is large and close in th"
+  },
+  {
+   "start": 140,
+   "end": 157,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_hidden",
+   "camera": "static",
+   "notes": "insert: Pax's bubble-wrapped belly with tape, Polly's flipper sticking on a fragile label; only his chin visible. 17 frames"
+  },
+  {
+   "start": 157,
+   "end": 164,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pull_back",
+   "notes": "fast pull back from the label to the wide shot; settles at f164"
+  },
+  {
+   "start": 164,
+   "end": 194,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "lead_hidden",
+   "camera": "static",
+   "notes": "static wide (compare 172/193 clean, clouds drift): Polly with clasped flippers beside Pax wrapped head to toe in bubble wrap under a navy helmet, holding the hockey stick and bag. None of Pax's colour shows; the first-pass review read him as a third penguin. Outfit hides who he is -> dropped conservatively, although Polly is clear"
+  }
+ ]
+}

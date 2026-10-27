@@ -1,0 +1,359 @@
+{
+ "skit": "iteration_2/72_videos/2D_PP_BackTogether_Base.mp4",
+ "frames": 300,
+ "fps": 24,
+ "curated_by": "curator-05",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "BACK TOGETHER",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "a small adhesive bandage on the cheek",
+  "o2": "a small adhesive bandage on the fin"
+ },
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a cosy bedroom with a cream and yellow bed"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "a bedroom drawn on a plain pale background"
+  },
+  "s3": {
+   "kind": "flat",
+   "desc": "a bathroom drawn on a plain pale background"
+  },
+  "s4": {
+   "kind": "flat",
+   "desc": "a dining nook drawn on a plain pale background"
+  },
+  "s5": {
+   "kind": "set",
+   "desc": "a tiled room with a round window looking out on snow"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 43,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with his head on a pillow and a blanket pulled up to his chin",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "partial",
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 9,
+     "text": "Pax lies tucked in bed under the blanket with his eyes closed"
+    },
+    {
+     "start": 9,
+     "end": 33,
+     "text": "Pax opens his eyes and gazes upward, blinking sleepily"
+    },
+    {
+     "start": 33,
+     "end": 43,
+     "text": "Pax turns his head to the right on the pillow to look beside him"
+    }
+   ],
+   "props": [
+    "bed",
+    "pillow",
+    "blanket"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked (compare 0/42: headboard and pillow black). A fast pull-back starts at f43 (42->43: 16204 changed edge px); v4 called it a dissolve, it is a zoom."
+  },
+  {
+   "start": 43,
+   "end": 51,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pull_back",
+   "setting": "s2",
+   "notes": "fast pull-back from Pax's close-up to the wide two-shot of the bed; settles on f51 (50->51 still 19365 changed px, 51->52 580)."
+  },
+  {
+   "start": 51,
+   "end": 96,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a big yellow bed between two nightstands with peach lamps",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [
+      "o2"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 51,
+     "end": 72,
+     "text": "Polly stretches both fins up over the pillow with a big yawn, eyes shut, while Pax lies beside her with his eyes open"
+    },
+    {
+     "start": 72,
+     "end": 86,
+     "text": "Polly lowers her fins onto the blanket and opens her eyes, lying still beside Pax"
+    },
+    {
+     "start": 86,
+     "end": 96,
+     "text": "Pax and Polly close their eyes and smile with rosy cheeks, snuggled under the blanket"
+    }
+   ],
+   "props": [
+    "bed",
+    "pillows",
+    "blanket",
+    "lamps"
+   ],
+   "prop_events": [],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f51-95 (compare 51/95: bed, lamps and nightstands black). Both leads are under the blanket up to the chest; listed as full since nothing is outside the picture. | verification pass 2 (verify3_report_0): beat 51-72 'Polly stretches one fin up': she stretches both fins up and out over the pillows f51-69 (full-res crop f60); bedpost finials (cream duck-like knobs) and seashell lamp bases checked: not leads. compare 51/95: bed, lamps and nightstands black"
+  },
+  {
+   "start": 96,
+   "end": 160,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with two round tiled washbasins on a long counter",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": [
+      "o2"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 96,
+     "end": 112,
+     "text": "Pax scrubs his teeth with foam on his beak while Polly rinses her toothbrush under the running tap"
+    },
+    {
+     "start": 112,
+     "end": 129,
+     "text": "Polly lays her toothbrush on the counter and cups water from the tap while Pax keeps brushing"
+    },
+    {
+     "start": 129,
+     "end": 141,
+     "text": "Polly flicks water droplets at Pax with her fin, and he squeezes his eyes shut"
+    },
+    {
+     "start": 141,
+     "end": 151,
+     "text": "Pax laughs, lifting his toothbrush up to the top of his head, while Polly scoops more water from the tap"
+    },
+    {
+     "start": 151,
+     "end": 160,
+     "text": "Polly flicks another splash of water at Pax and both laugh with their eyes closed"
+    }
+   ],
+   "props": [
+    "washbasins",
+    "toothbrushes",
+    "tap",
+    "toothpaste foam"
+   ],
+   "prop_events": [
+    {
+     "prop": "toothbrush",
+     "event": "puts_down",
+     "frame": 113,
+     "by": "polly"
+    }
+   ],
+   "effects": [
+    "water droplets"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked (compare 96/159: basins and counter black). Both are hidden below the waist by the counter (inside the picture, so presence full)."
+  },
+  {
+   "start": 160,
+   "end": 197,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s4",
+   "view": "with a wooden chair and a round cream table holding a plate of rice and fried cutlets",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ],
+     "moves": [
+      {
+       "frame": 169,
+       "screen": "center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 160,
+     "end": 169,
+     "text": "Pax hops up into the wooden chair at the table, in front of a plate of rice and fried cutlets"
+    },
+    {
+     "start": 169,
+     "end": 179,
+     "text": "Pax sits with his fins spread and wiggles happily with his eyes closed"
+    },
+    {
+     "start": 179,
+     "end": 191,
+     "text": "Pax watches wide-eyed as a fin with a fork reaches in from the right and drops a piece of fried food onto his plate"
+    },
+    {
+     "start": 191,
+     "end": 197,
+     "text": "Pax stares at his plate with his beak open in surprise as the fork pulls away"
+    }
+   ],
+   "props": [
+    "table",
+    "chair",
+    "plate of food",
+    "fork"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "camera locked f160-197 (compare 160/197: chair and table black); a pull-back starts 197->198. Only Polly's fin and fork reach in at the right edge (f179-196), so Polly is not listed; the beat says 'a fin'. Pax is cut off at the right edge in f160-166 as he climbs in."
+  },
+  {
+   "start": 197,
+   "end": 213,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pull_back",
+   "setting": "s4",
+   "notes": "pull-back reveals Polly across the table; motion fades out by f213 (212->213: 3097 changed px, 213->214: 604)."
+  },
+  {
+   "start": 213,
+   "end": 230,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "setting": "s4",
+   "notes": "17 frames: wide two-shot of Pax and Polly eating at the round table after the pull-back."
+  },
+  {
+   "start": 230,
+   "end": 252,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "setting": "s5",
+   "notes": "wide view of a tiled wall with a round window (Pax and Polly tiny outside it) and a stand holding a framed photo of Pax and Polly."
+  },
+  {
+   "start": 252,
+   "end": 262,
+   "boundary": "transition",
+   "keep": false,
+   "drop_reason": "transition",
+   "camera": "static",
+   "setting": "s5",
+   "notes": "cross-dissolve to the closer view of the window and the stand."
+  },
+  {
+   "start": 262,
+   "end": 300,
+   "boundary": "after_transition",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "setting": "s5",
+   "notes": "slow push-in with a focus shift (compare 266/299: every edge doubled, blur moves from the photo to the window) onto a framed photo of Pax and Polly (lead_copy too) beside a vase of flowers; Pax and Polly hold fins outside the window."
+  }
+ ]
+}

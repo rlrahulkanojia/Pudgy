@@ -1,0 +1,57 @@
+{
+ "skit": "iteration_2/72_videos/PP-NaturalState-Base.mp4",
+ "frames": 152,
+ "fps": 24,
+ "curated_by": "curator-08",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "NATURAL STATE",
+ "cast": {
+  "pax": {"kind": "lead"},
+  "polly": {"kind": "lead"}
+ },
+ "outfits": {
+  "o1": "a cream towel wrapped up around her head",
+  "o2": "small star, cloud and leaf patches on her face"
+ },
+ "settings": {
+  "s1": {"kind": "flat", "desc": "a dining nook drawn on a plain pale grey background, with a round cream table and a wooden chair"}
+ },
+ "spans": [
+  {
+   "start": 0, "end": 81, "boundary": "start", "keep": true, "camera": "static",
+   "framing": "medium close-up", "angle": "eye level", "setting": "s1",
+   "view": "with a plate of seaweed-wrapped rice balls and a glass of green iced drink with a straw on the table",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "center", "presence": "full", "outfit": []}
+   ],
+   "beats": [
+    {"start": 0, "end": 38, "text": "Pax leans his cheek on one flipper with a blushing smile and slowly closes his eyes as little red hearts float up above his head"},
+    {"start": 38, "end": 81, "text": "Pax opens his eyes and grins dreamily with his beak open, blinking, as more hearts drift up"}
+   ],
+   "props": ["plate of rice balls", "glass with straw"], "prop_events": [], "effects": ["hearts", "blush marks"], "overlays": [],
+   "in_world_text": [], "travel": "none",
+   "notes": "Static: compare 0/80 (431 changed edge px, all on Pax's face and the hearts)."
+  },
+  {
+   "start": 81, "end": 152, "boundary": "cut", "keep": true, "camera": "static",
+   "framing": "medium close-up", "angle": "eye level", "setting": "s1",
+   "view": "with a plate of salmon sushi and a glass of green iced drink with a straw on the table",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "polly", "screen": "center", "presence": "full", "outfit": ["o1", "o2"]}
+   ],
+   "beats": [
+    {"start": 81, "end": 92, "text": "Polly stuffs a piece of salmon sushi into her beak with her flipper"},
+    {"start": 92, "end": 107, "text": "Polly chews slowly with heavy-lidded eyes and dark circles under them"},
+    {"start": 107, "end": 116, "text": "Polly wipes her beak with her flipper, her eyes squeezed shut"},
+    {"start": 116, "end": 125, "text": "Polly lowers her flipper and stares wide-eyed with her beak hanging open"},
+    {"start": 125, "end": 140, "text": "Polly chews again with drooping eyes, glancing to the side"},
+    {"start": 140, "end": 152, "text": "Polly raises one brow and gives a flat, unimpressed stare"}
+   ],
+   "props": ["plate of sushi", "glass with straw"], "prop_events": [], "effects": [], "overlays": [],
+   "in_world_text": [], "travel": "none",
+   "notes": "Polly's natural-state look: towel head wrap, eye bags, small sticker patches on her cheeks (listed as outfits); her face and body stay clearly Polly. Static: compare 81/151 (table, glass, plate edges black)."
+  }
+ ]
+}

@@ -1,0 +1,354 @@
+{
+ "skit": "iteration_2/72_videos/PP-AngerSigns-Base.mp4",
+ "frames": 325,
+ "fps": 24,
+ "curated_by": "curator-batch4",
+ "curated_at": "2026-10-26",
+ "storyboard_title": "ANGER SIGNS",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a supermarket drawn on a plain pale grey background"
+  },
+  "s2": {
+   "kind": "set",
+   "desc": "a bright supermarket by a fish counter and a chilled display case"
+  },
+  "s3": {
+   "kind": "set",
+   "desc": "a supermarket frozen food aisle lined with glass freezers"
+  },
+  "s4": {
+   "kind": "set",
+   "desc": "a supermarket snack aisle with shelves of chip bags"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 48,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a shopping cart piled high with groceries in front of him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 28,
+     "text": "Pax leans his flippers on the handle of a loaded shopping cart, gazing ahead with one brow raised in worry"
+    },
+    {
+     "start": 28,
+     "end": 48,
+     "text": "Pax blinks slowly and keeps gazing ahead with raised, anxious brows"
+    }
+   ],
+   "props": [
+    "shopping cart",
+    "groceries"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "Pax is seen from the chest up behind the cart; the groceries in the foreground are softly blurred. Scale fit on the cart region f0 to f12/24/36/47 = 1.000 +- 0.002, camera locked | verification pass 2 (verify2_report_5): Camera locked: the motion_hint shake (f2, f16, f26) is Pax bobbing. Phase correlation on the cart/groceries region f0-f47 stays within 0.6 px at 540 wide, while Pax's head region bobs up to 4 px.; Beat 0-28 says 'glancing sideways': Pax looks straight ahead at the viewer the whole time with one brow raised (face crops f0-f27); he never looks sideways."
+  },
+  {
+   "start": 48,
+   "end": 98,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a glass case of fish under a red-framed sign and a cooler of drinks behind them",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left",
+     "presence": "exits",
+     "exits_at": 97,
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 48,
+     "end": 70,
+     "text": "Polly waddles toward the cart clutching a big bag of ice to her chest with an angry glare while Pax watches from behind it"
+    },
+    {
+     "start": 70,
+     "end": 80,
+     "text": "Polly heaves the bag of ice up and tosses it into the cart in front of Pax"
+    },
+    {
+     "start": 80,
+     "end": 98,
+     "text": "Polly turns away with a scowl and waddles off to the left until she is out of view"
+    }
+   ],
+   "props": [
+    "bag of ice",
+    "shopping cart"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "shop sign",
+    "packaging"
+   ],
+   "travel": "exits",
+   "notes": "compare f48/f97: counters, sign and cooler edges overlap exactly. The ice bag and the fish sign carry printed words (in-world text, not transcribed) | verification pass 2 (verify2_report_5): Camera locked: the motion_hint frame f84 is the cart and Pax jolting when the ice bag lands. Shelves, sign and fish case edges stay black in compare 48/72/84/86/97.; Beat 48-70 leaves out that Polly walks: she waddles from the far left to the cart (about 190 px at 1080 wide) while clutching the bag, squeezing her eyes at f69 as she heaves."
+  },
+  {
+   "start": 98,
+   "end": 141,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pan_left",
+   "notes": "Polly pushes her cart fast; the view tracks with her and the shelves and display tables slide past (speed shot)"
+  },
+  {
+   "start": 141,
+   "end": 159,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "18 frames: Pax and Polly side by side at a freezer, Pax reaching toward her"
+  },
+  {
+   "start": 159,
+   "end": 163,
+   "boundary": "transition",
+   "keep": false,
+   "drop_reason": "transition",
+   "camera": "other",
+   "notes": "smear frames: Polly jumps to a new spot in a flash and the view re-frames onto the freezer (f160 shows a double image); freezer-frame fit settles at f163"
+  },
+  {
+   "start": 163,
+   "end": 222,
+   "boundary": "after_transition",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with an open glass freezer full of ice cream tubs on the left",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 163,
+     "end": 171,
+     "text": "Polly stands at the freezer with her eyes shut in a pout while Pax lifts a flipper toward her from behind"
+    },
+    {
+     "start": 171,
+     "end": 191,
+     "text": "Polly reaches into the freezer and pulls out a brown tub of ice cream while Pax waves a flipper behind her"
+    },
+    {
+     "start": 191,
+     "end": 222,
+     "text": "Polly hugs the tub to her chest with an angry squint while Pax stands beside her, watching"
+    }
+   ],
+   "props": [
+    "glass freezer",
+    "tub of ice cream"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "freezer-frame edge fit vs f221: identity overlap 0.99-1.00 from f163 on (f162 is shifted 16 px, so it stays in the transition). compare f162/f221 shows doubled freezer edges only because f162 is still moving"
+  },
+  {
+   "start": 222,
+   "end": 294,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s4",
+   "view": "with a shopping cart piled with groceries on the left",
+   "time": "day",
+   "size_change": true,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "enters",
+     "enters_at": 239,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 274,
+       "screen": "right-center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 222,
+     "end": 242,
+     "text": "Pax stands by the cart holding up a bag of chips in each flipper, looking from one to the other"
+    },
+    {
+     "start": 242,
+     "end": 258,
+     "text": "Polly waddles in from the right and stops beside Pax while he keeps comparing the two bags"
+    },
+    {
+     "start": 258,
+     "end": 272,
+     "text": "Polly turns her back and scoops an armful of yellow chip bags off the shelf while Pax holds out his bags"
+    },
+    {
+     "start": 272,
+     "end": 294,
+     "text": "Polly turns around clutching the pile of chip bags and stomps toward the cart with a scowl"
+    }
+   ],
+   "props": [
+    "bags of chips",
+    "shopping cart"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "packaging"
+   ],
+   "travel": "enters",
+   "notes": "top-shelf edge fit: frames f222-f293 identical to each other (identity overlap 1.0 frame to frame); the camera pans f294-f299 | verification pass 2 (verify2_report_5): size_change missed: from f276 to f293 Polly carries the chip bags forward and down-screen toward the viewer, growing about 15% (height in px: about 95 at f258, about 110 at f291). Camera locked (shelf edges black at 222/258/280/293)."
+  },
+  {
+   "start": 294,
+   "end": 300,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pan_left",
+   "notes": "quick pan: the shelves slide right 5-23 px per frame (full res) while Polly flings the chip bags into the cart"
+  },
+  {
+   "start": 300,
+   "end": 325,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s4",
+   "view": "with a shopping cart piled with groceries on the left",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "exits",
+     "exits_at": 322,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 312,
+       "screen": "right"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 300,
+     "end": 307,
+     "text": "Polly lets the pile of chip bags tumble into the cart and shuts her eyes with a satisfied huff"
+    },
+    {
+     "start": 307,
+     "end": 325,
+     "text": "Polly turns and waddles off to the right while Pax stands still beside the cart heaped with chips"
+    }
+   ],
+   "props": [
+    "bags of chips",
+    "shopping cart"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "packaging"
+   ],
+   "travel": "exits",
+   "notes": "compare f300/f324: shelves and cart edges overlap exactly. Only 25 frames (one f21 window)"
+  }
+ ]
+}
