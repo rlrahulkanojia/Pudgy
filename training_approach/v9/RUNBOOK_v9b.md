@@ -394,3 +394,8 @@ bash finetune/wan/v9b_box.sh archive
   - **Step 4, cache (07:05–07:35, 30 min):** `verify_cache_v8` 535/535 ok, 0 bad; shape check all `ok` (scene f21 160 · f33 72 · f49 82 · f81 34 at (106, 60); replay f13–f57, 187 at (128, 128)).
   - **Step 5, evalprep (07:35–07:36):** 15 Tier-1 windows, 8 Tier-2 jobs, 15 latent files under `eval_v9b/scenes/cache/f33`.
   - **Step 6, smoke (07:36–07:49):** heaviest bucket `replay_f57` (61,440 tokens), **BLOCKS_TO_SWAP 24**: `SMOKE OK`, 0 mapping-OOM lines, 0 OOM, avr_loss 0.000552, **57.3 s/it** (v9c: 63–64), peak 77,967 MiB.
+- **27 Oct, 07:49–08:47 UTC: Steps 7–8 started.**
+  - **Step 7, baseline (07:49–08:08, 19 min):** `base reuse check: max relative loss difference 0.00e+00 over 6 clips`, so the v9c base regression rows were **reused** and only the scene set was scored (holdout/scene acc 0.400, margin −0.0013, loss 0.01161, n = 15). `v8merged_k2.json` written.
+  - **Step 8, train:** started 08:07:50 UTC at BLOCKS_TO_SWAP 24 (trainer pid 21110, monitor pid 21111; sync loop pid 9054). Progress bar from ~08:14.
+    - steps 5→10: 14:40 → 32:05, **≈ 209 s per optimizer step** (tqdm 192 s/it at step 10; v9c 487 s); **ETA = 400 × 209 s ≈ 23.2 h** of training, plus the step-200 pause;
+    - avr_loss 0.0061–0.0073 over steps 1–10 (v9c's scale was 0.002; scene clips differ); 0 mapping-OOM lines; the monitor is mirroring to Azure `v9b/`.
