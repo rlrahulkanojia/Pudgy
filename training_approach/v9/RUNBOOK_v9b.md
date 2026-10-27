@@ -390,3 +390,7 @@ bash finetune/wan/v9b_box.sh archive
     - rsync: 2.66 GB in 9 min 48 s (4.5 MB/s); `sha256sum -c v9b_handover_all.tar.sha256` OK;
     - extracted to `/workspace`: **all 571 `SHA256SUMS` OK**;
     - links made, `eval_for_v9b.tar` extracted; merged base md5 `ec333748284410bb341f431b88f5026f` ✓; `data_v9b/manifest.json` present; **535 clips** ✓; the archive's `HANDOVER_v9b.md` is identical to the repo's.
+- **27 Oct, 07:05–07:49 UTC: Steps 4–6 OK.** From 07:26 the steps run back to back through `/workspace/logs_v9b/run_chain_v9b.sh`, which checks each "must see", stops at the first failure and ends after the step-200 Tier-1 check, so the GPU never waits for a person (log: `logs_v9b/chain.log`).
+  - **Step 4, cache (07:05–07:35, 30 min):** `verify_cache_v8` 535/535 ok, 0 bad; shape check all `ok` (scene f21 160 · f33 72 · f49 82 · f81 34 at (106, 60); replay f13–f57, 187 at (128, 128)).
+  - **Step 5, evalprep (07:35–07:36):** 15 Tier-1 windows, 8 Tier-2 jobs, 15 latent files under `eval_v9b/scenes/cache/f33`.
+  - **Step 6, smoke (07:36–07:49):** heaviest bucket `replay_f57` (61,440 tokens), **BLOCKS_TO_SWAP 24**: `SMOKE OK`, 0 mapping-OOM lines, 0 OOM, avr_loss 0.000552, **57.3 s/it** (v9c: 63–64), peak 77,967 MiB.
