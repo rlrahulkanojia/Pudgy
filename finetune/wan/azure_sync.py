@@ -58,7 +58,7 @@ def pull(cc, prefixes, dest, skip):
     print(f"{len(blobs)} blobs under {prefixes} -> {dest} ({n / 1e9:.2f} GB downloaded)")
 
 
-def push(cc, prefix, files, tree, exclude):
+def push(cc, prefix, files, tree, exclude, force=False):
     items = []
     if tree:
         root = Path(tree)
@@ -70,7 +70,9 @@ def push(cc, prefix, files, tree, exclude):
         if f.is_file():
             items.append((f, f"{prefix}/{f.name}"))
     have = {b.name: b.size for b in cc.list_blobs(name_starts_with=f"{prefix}/")}
-    todo = [(f, b) for f, b in items if have.get(b) != f.stat().st_size]
+    # Size-idempotent: a same-size edit (a checksum file, a re-saved checkpoint) is skipped
+    # unless --force.
+    todo = items if force else [(f, b) for f, b in items if have.get(b) != f.stat().st_size]
 
     def up(t):
         f, b = t
@@ -95,13 +97,14 @@ def main():
     ps = sp.add_parser("push"); ps.add_argument("files", nargs="*")
     ps.add_argument("--prefix", required=True); ps.add_argument("--tree")
     ps.add_argument("--exclude", nargs="*", default=[])
+    ps.add_argument("--force", action="store_true", help="upload even when the blob size matches")
     ls = sp.add_parser("ls"); ls.add_argument("prefix")
     a = ap.parse_args()
     cc = container()
     if a.cmd == "pull":
         pull(cc, a.prefixes, a.dest, a.skip)
     elif a.cmd == "push":
-        push(cc, a.prefix.rstrip("/"), a.files, a.tree, a.exclude)
+        push(cc, a.prefix.rstrip("/"), a.files, a.tree, a.exclude, a.force)
     else:
         for b in cc.list_blobs(name_starts_with=a.prefix):
             print(f"{b.size / 1e6:10.1f} MB  {b.name}")

@@ -367,6 +367,11 @@ bash finetune/wan/v9b_box.sh archive
     - The end-to-end Azure download test was stopped for this reason.
     - Instead, a single archive, `/workspace/handover_v9b/v9b_handover_all.tar` (code, eval tar, merged base, golden LoRAs, set, `SHA256SUMS`), is the primary route to the new machine, by rsync over SSH or the old box's Jupyter. It was test-extracted on the old box: all 571 checksums OK. Azure is the fallback.
   - **GitHub (27 Oct, user request):** the work is committed to branch `v9b-handover` (`main` was the checked-out default, so per policy a branch was cut) and pushed to `rlrahulkanojia/Pudgy`.
-    - Two commits: the phone track (v9c report, v9c2 research and tooling, the approved `registry.toml`), then v9b-1 (curation, prep, captions, eval, box scripts, runbook, handover).
+    - Three commits: the phone track (v9c report, v9c2 research and tooling, the approved `registry.toml`), then v9b-1 (curation, prep, captions, eval, box scripts, runbook, handover), then the `azure_sync --force` fix.
     - The new machine clones that branch for code and docs (HANDOVER_v9b §4 Step 1). Data comes from the handover archive or Azure.
     - The registry was committed with the approved content (md5 `3757…250e`) without touching the working file: the v9c2 jobs still read the old one until their write at ~07:50, which makes the working tree match the commit.
+  - **Azure upload trap found and fixed (06:45 UTC).**
+    - `azure_sync.py push` skips any blob whose size already matches. `SHA256SUMS` and `v9b_handover_all.tar.sha256` (same length after a hash changed) had gone stale on Azure.
+    - Found with `finetune/wan/azure_verify_md5.py`, which compares Content-MD5. Both files were re-uploaded and now match.
+    - Every other handover blob matches by content: all 566 set files, the code bundle and the doc. The eval tar and the merged base have no stored MD5; each was uploaded once and is in `SHA256SUMS`.
+    - `azure_sync.py push` gained an opt-in `--force`; the default behaviour is unchanged.

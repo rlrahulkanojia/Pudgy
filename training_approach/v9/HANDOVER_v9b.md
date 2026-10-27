@@ -326,6 +326,7 @@ and §0.1. Send the user a short summary with sample videos.
 | edit `registry.toml`, captions or curation | the set is final and verified; any change means a rebuild and re-verification (RUNBOOK_v9b §5). The registry is shared with the phone track, which owns it |
 | run a second GPU job next to the trainer | it uses the whole 80 GB |
 | drop `HF_HUB_OFFLINE=1` in eval | the box steps set it; without it, transformers calls home |
+| trust `azure_sync.py push`'s size check after editing a file in place | it skips any blob whose size already matches, so a same-size edit never uploads (27 Oct: `SHA256SUMS` went stale this way). Use `push --force` for files you edit in place, and `finetune/wan/azure_verify_md5.py PREFIX=PATH` to compare by content |
 
 ## 7. The old box (phone track) and merging later
 
@@ -337,8 +338,9 @@ and §0.1. Send the user a short summary with sample videos.
   `HANDOVER_v9b.md`, the v9b rows of `Training_Approach_v9.md` (§0.1, §4, status line), `REPORT_v9b.md`, and
   `finetune/wan/{eval_v9b,scenes}/`, `prep_v9b.py`, `train_pudgy_v9b.sh` and `v9b_box.sh` if a fix
   is needed. Log each fix in the runbook.
-- Git: on 27 Oct the old box's work was committed to branch **`v9b-handover`** and pushed, in two
-  commits: the phone track (v9c report, v9c2 research and tooling, the approved registry) and v9b-1.
+- Git: on 27 Oct the old box's work was committed to branch **`v9b-handover`** and pushed, in three
+  commits: the phone track (v9c report, v9c2 research and tooling, the approved registry), v9b-1, and
+  the `azure_sync --force` fix.
   `main` is unchanged. Commit further v9b work on that branch, and push or merge when the user asks.
 
 ## 8. Inventory
