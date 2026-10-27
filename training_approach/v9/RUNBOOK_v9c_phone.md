@@ -20,6 +20,7 @@ phone with a black screen, three camera lenses on the back and a little tuft on 
 | **Inputs (Azure `pudgy`)** | `raw/iteration_3–6`, `v8/base/pudgy-v7-fixed-combined.safetensors`, `v8/weights/…/step00000550`, `v2/weights/curated/*GOLDEN_ep40*` (all present, checked 2026-10-24) |
 | **Outputs (Azure)** | `v9c/weights/`, `v9c/base/`, `v9c/eval/`, `v9c/logs/`, `processed/v9c_phone_<N>/` |
 | **Time** | setup ~1 h · prep ~0.5–1 h · cache ~1 h · baseline ~1 h · **train ~20 h** · eval ~4 h |
+| **Measured (1× A100-SXM4 80GB, 26 Oct)** | prep ~1 min with `PREP_WORKERS=16` · baseline 3 h · **train 27 h** (487 s/step) · Tier 1 ~90 min per config · Tier 2 ~16.5 min per clip (phone suite 4.4 h) |
 
 ---
 

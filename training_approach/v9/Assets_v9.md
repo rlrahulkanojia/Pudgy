@@ -342,7 +342,7 @@ Implemented for the phone in `finetune/wan/eval_v9/`, and run on v8merged first 
 | `raw/iteration_6/CHANGELOG.md`, `raw/README.md` | ✅ |
 | PRP_PHONE = iFin | ✅ confirmed by the client |
 | registry, `prep_v9.py`, train + eval scripts, `v9_box.sh`, runbook | ✅ on branch `v9/phone-stage`; prep built locally end to end |
-| **v9c-phone run** | **ready.** Needs a GPU box; [runbook](RUNBOOK_v9c_phone.md) |
+| **v9c-phone run** | ✅ 2026-10-26: trained 200 steps; gate PASS, winner step 200 (phone loss 0.613×, binding 0/4, held-out motion acc 0.75 → 0.58); generated clips ≈ v8merged. [Report](../../docs/training_reports/v9/REPORT_v9c_phone.md); `textcall`/`leak` pending |
 | client: re-export the 11 Polly phone clips + 2 old files | to send (not blocking: windows are used meanwhile) |
 | client (optional): character-layer exports of skit shots (§5.5) | to decide |
 | v9b: plate floor annotations, `composite_plates.py`, skit mining | after the phone stage |

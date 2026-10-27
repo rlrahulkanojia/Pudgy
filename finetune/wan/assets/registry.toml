@@ -27,7 +27,7 @@ kind = "prop"
 client_ids = ["PRP_PHONE", "Prp_iFin"]
 name = "the iFin phone"
 # No "blue"/"pink" (character colour anchors): the body is pale blue-grey, written "pale grey".
-phrase = "the iFin phone, a small pale grey phone with a black screen, three camera lenses on the back and a little tuft on top"
+phrase = "the iFin phone, a small pale grey phone with three camera lenses on the back and a little tuft on top"
 refs_dir = "raw/iteration_6/Samples/PROPS/PHONE/PRP_PHONE"
 refs_glob = "PRP_PHONE_*.png"
 # One back, one front, one edge view: never used in training or keyframes, kept for eval.
@@ -51,13 +51,13 @@ animated_frames = 64
 [[assets.phone.actions]]
 folder = "PRP_PHONE_TEXTING_SITTING"
 label = "phone_texting_sitting"
-action = "sitting on the ground with its legs stretched out in front, holding {phrase}, up in front of its chest in one flipper and tapping at it with the other, the screen turned toward itself, head still and eyes on the phone"
+action = "sitting on the ground with its legs stretched out in front, holding {phrase}, up in front of its chest in one flipper and tapping at it with the other, holding it with its back toward the viewer, head still and eyes on the phone"
 label_text = "texting on a phone, seated"
 
 [[assets.phone.actions]]
 folder = "PRP_PHONE_TEXTING_STANDING"
 label = "phone_texting_standing"
-action = "standing and holding {phrase}, up in front of its chest in one flipper, tapping at it with the other, the screen turned toward itself, head still and eyes on the phone"
+action = "standing and holding {phrase}, up in front of its chest in one flipper, tapping at it with the other, holding it with its back toward the viewer, head still and eyes on the phone"
 label_text = "texting on a phone, standing"
 
 # --------------------------------------------------------------------------------------

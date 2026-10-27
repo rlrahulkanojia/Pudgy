@@ -88,7 +88,9 @@ merge)
 prep)
   if [ -s "$DATA_LINK/manifest.json" ]; then log "already built: $(readlink -f "$DATA_LINK")"; exit 0; fi
   "$PY" "$FW/assets/registry.py" lint --data "$W/Data"
-  "$PY" "$FW/prep_v9.py" --workers "$(nproc)" --out "$W/Data/processed" 2>&1 | tee "$LOGS/prep.log"
+  # Cap the decode threads: at --workers $(nproc) on a 128-core box, 128 concurrent ffmpeg
+  # 6.1 decodes (~32 threads each) deadlocked inside ffmpeg in the replay preflight.
+  "$PY" "$FW/prep_v9.py" --workers "${PREP_WORKERS:-16}" --out "$W/Data/processed" 2>&1 | tee "$LOGS/prep.log"
   SET=$(ls -d "$W/Data/processed"/v9c_phone_[0-9]* | tail -1)
   ln -sfn "$SET" "$DATA_LINK"
   log "training set: $SET -> $DATA_LINK"
@@ -129,7 +131,8 @@ smoke)
 import sys, re
 src, dst = sys.argv[1], sys.argv[2]
 text = open(src).read()
-head, *blocks = text.split("[[datasets]]")
+# Split on the table header at line start only: prep_v9's header comment mentions "[[datasets]]".
+head, *blocks = re.split(r"(?m)^\[\[datasets\]\]", text)
 top = max(blocks, key=lambda b: int(re.search(r"target_frames = \[(\d+)\]", b).group(1)))
 open(dst, "w").write(head + "[[datasets]]" + top)
 print("smoke bucket:", re.search(r"target_frames = \[(\d+)\]", top).group(1))
