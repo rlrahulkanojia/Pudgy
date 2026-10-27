@@ -399,3 +399,20 @@ bash finetune/wan/v9b_box.sh archive
   - **Step 8, train:** started 08:07:50 UTC at BLOCKS_TO_SWAP 24 (trainer pid 21110, monitor pid 21111; sync loop pid 9054). Progress bar from ~08:14.
     - steps 5→10: 14:40 → 32:05, **≈ 209 s per optimizer step** (tqdm 192 s/it at step 10; v9c 487 s); **ETA = 400 × 209 s ≈ 23.2 h** of training, plus the step-200 pause;
     - avr_loss 0.0061–0.0073 over steps 1–10 (v9c's scale was 0.002; scene clips differ); 0 mapping-OOM lines; the monitor is mirroring to Azure `v9b/`.
+- **27 Oct, 08:08–20:05 UTC: step-200 check FAILS R1; training stopped (HANDOVER_v9b §5: "If step 200 fails R1, stop and report").**
+  - **Steps 1–200 (08:08–18:38, 10 h 30 min):** ≈ 189 s per optimizer step on average (186–200 s); avr_loss 0.0070 → 0.0063; 0 mapping-OOM, 0 OOM. Checkpoints 50/100/150/200 saved; the monitor mirrored each to Azure `v9b/` (step 200: 6 files at 18:38:44).
+  - **Pause (18:37:55):** `v9b_box.sh pause 200` stopped the trainer after the step-200 state was written.
+  - **Tier 1 on v9b@200 (18:38–20:05, 5,219 s):** holdout/expression acc 0.750 (base 0.812), holdout/motion 0.583 (base 0.750), seen/expression 0.938 (1.000), seen/motion 0.818 (0.909), holdout/scene 0.400 (0.400).
+  - **Gate (`gate_v9b.py`): `NO CHECKPOINT PASSES`, winner null.**
+
+    | check | v9b@200 | bar | |
+    |---|---|---|---|
+    | R1 expression | Δmargin −0.0176, 95% CI [−0.0465, +0.0019]; acc 13 → 12 of 16 | CI low ≥ −0.003, ≤ 1 clip down | ✗ |
+    | R1 motion | Δmargin −0.0093, 95% CI [−0.0134, −0.0052]; acc 9 → 7 of 12 | same | ✗ (both) |
+    | R2 per-t loss ratio | 1.0297 at t 0.65, **1.0611** at t 0.85 | ≤ 1.05 | ✗ |
+    | L1 scene loss ratio | **0.866** | < 1.00 | ✓ |
+    | P2 text-attributable gain | −0.0008 [−0.007, +0.006] | CI upper < 0 | ✗ |
+
+    - per-label Δmargin, expression: crying −0.111, confused −0.031, happy −0.017, angry −0.008, others within ±0.025; motion: every label down (−0.005 to −0.013).
+  - **Reading:** the LoRA fits the scene clips (scene loss −13%) but erodes the v8 expression/motion behaviour and the scene gain is not text-attributable (P2 ≈ 0). Steps 201–400 were **not** run.
+  - **State:** trainer exited; GPU idle. Kept on disk and in Azure: `pudgy-v9b-lownoise-step000000{50,100,150,200}.safetensors` + step-200 state (`v9b/weights`, mirrored by the monitor), `eval_v9b/runs/pudgy-v9b-lownoise/{dcls/v8merged_k2.json, dcls/v9b@200_k2.json, winner_v9b.json}` (`v9b/eval/runs/…`, pushed with `--force` 20:10 UTC), logs (`v9b/logs/box`). Awaiting the user's decision.
