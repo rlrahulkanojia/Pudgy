@@ -12,7 +12,7 @@ moved it to its own GPU so the old box can keep working on the phone (v9c2) at t
 
 ## 0. In short
 
-**Where things come from:** code and docs from GitHub (branch `v9b-handover`); data and weights
+**Where things come from:** code and docs from GitHub (`main`); data and weights
 from the handover archive on the old box, or from Azure (§3).
 
 Everything up to the GPU steps is **done and verified on the old box**:
@@ -109,7 +109,7 @@ bundle**, because it holds secrets. Get it from the user or copy it from the old
 
 | # | item | Azure | goes to | check |
 |---|---|---|---|---|
-| 1 | Code and docs: the repo with the approved registry and this file | **GitHub `rlrahulkanojia/Pudgy`, branch `v9b-handover`** (fallback: `v9b/handover/Pudgy_code_2026-10-27.tar.gz`) | `/workspace/Pudgy` | registry md5 |
+| 1 | Code and docs: the repo with the approved registry and this file | **GitHub `rlrahulkanojia/Pudgy`, branch `main`** (fallback: `v9b/handover/Pudgy_code_2026-10-27.tar.gz`) | `/workspace/Pudgy` | registry md5 |
 | 2 | Merged v8 base (1.5 GB) | `v9b/base/pudgy-v8-merged.safetensors` | `/workspace/wan_output/v8_merged/` | md5 `ec333748284410bb341f431b88f5026f` |
 | 3 | Golden LoRAs (the high-noise one runs every generation) | `v2/weights/curated/lora_highnoise_GOLDEN_ep40.safetensors`, `…lownoise…` | `/workspace/restore/…`, linked into `/workspace/wan_output/v2_golden/` | present |
 | 4 | Training set | `processed/v9b_535/` (566 files) | `/workspace/Data/processed/v9b_535`, linked as `/workspace/data_v9b` | `SHA256SUMS` |
@@ -134,7 +134,7 @@ Each step ends with what you must see. Log every step, with UTC time and numbers
 ### Step 1. Code and secrets
 ```bash
 cd /workspace
-git clone -b v9b-handover https://github.com/rlrahulkanojia/Pudgy.git /workspace/Pudgy
+git clone https://github.com/rlrahulkanojia/Pudgy.git /workspace/Pudgy      # main
 git -C /workspace/Pudgy log --oneline -3
 md5sum /workspace/Pudgy/finetune/wan/assets/registry.toml    # 3757257814f5588603317d747f2e250e
 cp <the .env from the user / old box> /workspace/Pudgy/.env  # git-ignored; never commit it
@@ -338,10 +338,10 @@ and §0.1. Send the user a short summary with sample videos.
   `HANDOVER_v9b.md`, the v9b rows of `Training_Approach_v9.md` (§0.1, §4, status line), `REPORT_v9b.md`, and
   `finetune/wan/{eval_v9b,scenes}/`, `prep_v9b.py`, `train_pudgy_v9b.sh` and `v9b_box.sh` if a fix
   is needed. Log each fix in the runbook.
-- Git: on 27 Oct the old box's work was committed to branch **`v9b-handover`** and pushed, in three
-  commits: the phone track (v9c report, v9c2 research and tooling, the approved registry), v9b-1, and
-  the `azure_sync --force` fix.
-  `main` is unchanged. Commit further v9b work on that branch, and push or merge when the user asks.
+- Git: on 27 Oct the old box's work was committed in three commits: the phone track (v9c report,
+  v9c2 research and tooling, the approved registry), v9b-1, and the `azure_sync --force` fix.
+  They were made on branch `v9b-handover` and fast-forwarded into **`main`** at the user's
+  request; both branches point at the same commit. Work on `main`, and push when the user asks.
 
 ## 8. Inventory
 

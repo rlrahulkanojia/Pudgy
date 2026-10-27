@@ -375,3 +375,4 @@ bash finetune/wan/v9b_box.sh archive
     - Found with `finetune/wan/azure_verify_md5.py`, which compares Content-MD5. Both files were re-uploaded and now match.
     - Every other handover blob matches by content: all 566 set files, the code bundle and the doc. The eval tar and the merged base have no stored MD5; each was uploaded once and is in `SHA256SUMS`.
     - `azure_sync.py push` gained an opt-in `--force`; the default behaviour is unchanged.
+  - **Merged into `main` (user request, 27 Oct).** `origin/main` was still `ab559fb`, so `main` was fast-forwarded to `cdc8dda`; `v9b-handover` points at the same commit. The handover now clones `main`.
