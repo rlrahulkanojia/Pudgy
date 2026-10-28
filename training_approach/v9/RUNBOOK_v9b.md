@@ -417,3 +417,15 @@ bash finetune/wan/v9b_box.sh archive
   - **Reading:** the LoRA fits the scene clips (scene loss −13%) but erodes the v8 expression/motion behaviour and the scene gain is not text-attributable (P2 ≈ 0). Steps 201–400 were **not** run.
   - **State:** trainer exited; GPU idle. Kept on disk and in Azure: `pudgy-v9b-lownoise-step000000{50,100,150,200}.safetensors` + step-200 state (`v9b/weights`, mirrored by the monitor), `eval_v9b/runs/pudgy-v9b-lownoise/{dcls/v8merged_k2.json, dcls/v9b@200_k2.json, winner_v9b.json}` (`v9b/eval/runs/…`, pushed with `--force` 20:10 UTC), logs (`v9b/logs/box`). Awaiting the user's decision.
 - **28 Oct, 06:36 UTC: Tier 1 on v9b@100 started (user request),** to see whether an earlier checkpoint passes before the regression. `v9b_box.sh tier1 100` (output `logs_v9b/tier1_100_step.out`; gate appended to `logs_v9b/tier1.log`). The GPU was idle from 20:05 UTC.
+- **28 Oct, 06:36–08:01 UTC: v9b@100 also FAILS (5,107 s).** `NO CHECKPOINT PASSES`, winner null.
+  - Tier 1: holdout/expression acc 0.688 (base 0.812), holdout/motion 0.500 (base 0.750), seen/expression 1.000, seen/motion 0.909, holdout/scene 0.467 (base 0.400).
+
+    | check | v9b@100 | v9b@200 | bar |
+    |---|---|---|---|
+    | R1 expression | −0.0182 [−0.0445, −0.0010]; acc 13 → 11 ✗ | −0.0176 [−0.0465, +0.0019]; 13 → 12 ✗ | CI low ≥ −0.003, ≤ 1 clip down |
+    | R1 motion | −0.0075 [−0.0111, −0.0042]; acc 9 → 6 ✗ | −0.0093 [−0.0134, −0.0052]; 9 → 7 ✗ | same |
+    | R2 per-t (0.65, 0.85) | 1.0383, **1.0659** ✗ | 1.0297, **1.0611** ✗ | ≤ 1.05 |
+    | L1 scene loss ratio | 0.881 ✓ | 0.866 ✓ | < 1.00 |
+    | P2 gain | −0.0008 [−0.0063, +0.0051] ✗ | −0.0008 [−0.007, +0.006] ✗ | CI upper < 0 |
+
+  - **Reading:** the regression is already full size at step 100 (motion accuracy is even lower than at 200), so it is not over-training in the second half; an earlier stop of this recipe does not rescue it. Results pushed to Azure `v9b/eval/runs/…` with `--force` (08:03 UTC). GPU idle again.
