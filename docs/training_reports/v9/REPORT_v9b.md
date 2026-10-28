@@ -118,8 +118,9 @@ evaluation windows and 8 suite jobs are built and on Azure, ready for a later st
 | Tier 1 + gate on v9b@200 | 18:38–20:05 | 87 min (5,219 s) |
 | idle, waiting for a decision | 20:05–06:36 | 10 h 31 min |
 | Tier 1 + gate on v9b@100 (user request) | 28 Oct 06:36–08:01 | 85 min (5,107 s) |
+| report, archive (`v9b_box.sh archive`, every size check matching), machine stopped (user request) | 08:01–≈ 10:15 | ≈ 2 h 15 min |
 
-**≈ 25.3 h on the box, ≈ 14.4 h of it with the GPU busy.** Steps 4–8 and the step-200 check ran
+**≈ 27.5 h on the box, ≈ 14.4 h of it with the GPU busy.** Steps 4–8 and the step-200 check ran
 back to back from a script (`logs_v9b/run_chain_v9b.sh`), so the GPU didn't wait between steps.
 
 ---

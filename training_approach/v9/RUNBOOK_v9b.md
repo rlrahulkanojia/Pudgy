@@ -429,3 +429,9 @@ bash finetune/wan/v9b_box.sh archive
     | P2 gain | −0.0008 [−0.0063, +0.0051] ✗ | −0.0008 [−0.007, +0.006] ✗ | CI upper < 0 |
 
   - **Reading:** the regression is already full size at step 100 (motion accuracy is even lower than at 200), so it is not over-training in the second half; an earlier stop of this recipe does not rescue it. Results pushed to Azure `v9b/eval/runs/…` with `--force` (08:03 UTC). GPU idle again.
+- **28 Oct, 08:01–10:15 UTC: report, archive, machine stopped (user request).**
+  - `docs/training_reports/v9/REPORT_v9b.md` written; `Training_Approach_v9.md` status line, §0.1 and §4 updated.
+  - Step-200 training state (5 files, 884 MB) pushed to `v9b/weights/pudgy-v9b-lownoise/…-step00000200-state/` (the monitor mirrors only `.safetensors`).
+  - `v9b_box.sh archive` 10:05:49–10:05:57: every size check matching (weights 4/4, run logs 6/6, box logs 24/24, eval 41/41, `processed/v9b_535` 567/567, work trees). It uploaded 1 file under `processed/v9b_535` that was missing or a different size on Azure; no file in the local set changed after its checksum verification (none newer than 27 Oct 20:05).
+  - The local commits are not pushed to GitHub (user's rule); a git bundle of `origin/main..main` is on Azure at `v9b/work/git/v9b-1_main.bundle`.
+  - Instance C.57924132 stopped with `vastai stop instance` (disk kept, storage still billed). The sync loop and monitor stop with it.
