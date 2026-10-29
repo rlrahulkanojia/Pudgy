@@ -154,6 +154,7 @@ n = 4–7 clips with 2 noise draws, so the pattern is consistent but noisy.
 | V1c | Tier 1 with E@40 | seen clips strong, held-out ×0.99: overfitting at 40 steps |
 | V2 | Generation with E, scored by ID1 | 5/6 vs 5/6 (no effect; smoke E) |
 | **E5** | Both experts, new wording, 150 steps | **ID1 0/24 vs Rb 1/24; held-out phone loss ×0.899; name binding 3/4 held-out; P1/P2 PASS** (job 015, see RESEARCH_asset_memory) |
+| **Pivotal** | Cross-attention k/v LoRA (80 modules, rank 16) on frozen E5, both experts, preservation ×1 on 37% replay, 150 steps | **Gate PASS at both noise levels**. Low-noise: R1 Δmargin ±0.0001, R2 ×1.000, P1 ×0.890 (E5 ×0.899), P2 −0.186 CI [−0.288, −0.084]. High-noise: R2 ×1.000. v8 captions move by a median 0.02–0.04%; the phone gains ~1% over E5 (held-out = seen ×0.990, no overfit gap). ID1: pending |
 
 V1a also shows a risk: a 22% change of the phrase rows moves phone-clip loss by only 0.4% at
 t ∈ {0.65, 0.85}. The frozen model is barely text-sensitive on phone clips there, so V1c may show
@@ -231,8 +232,10 @@ Tier-2 `leak` (done): no phone appears in v8 prompts for either model (CLIP phon
 - **Finding: the original GPU-bf16 text caches have occasional large per-token errors.** Against fp32, the median
   difference is 2.6%, but some captions reach 16%, concentrated in a few rows that are off by up to 3.8× their norm
   (e.g. `polly_happy_QF2_L__peach_f21`, rows 46/48/60). v9c (and likely v8) trained with these. Generation encodes
-  prompts with `--fp8_t5`, coarser still. **Worth an inference arm later:** T5 in bf16 or fp32 at inference vs fp8,
-  scored by ID1, since the text drives the phone's turn.
+  prompts with `--fp8_t5`, coarser still. **Tested (job 020, 2026-10-29):** old wording on v9c@200, T5 in fp32 vs fp8:
+  13/24 vs 12/24 flips, 23/24 identical outcomes (McNemar p = 1.0). **Text-encoder precision doesn't affect the
+  phone's turn**: the words do, not the encoding noise. Generation keeps `--fp8_t5`, and the fp32-trained E5 vs fp8
+  inference mismatch is immaterial for ID1.
 
 ---
 
