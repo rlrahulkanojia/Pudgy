@@ -1,17 +1,23 @@
 #!/usr/bin/env python3
 """musubi wan_generate_video.py with two optional in-memory hooks (musubi itself is unchanged).
 
-  --asset <E.safetensors> [--asset-offset]
+  --asset <E.safetensors> [--asset-offset] [--asset-phrase "<text>"]
         Learned asset embedding (asset_embed_v9.py): every encoded prompt containing the registry
         phrase gets E in place of (offset: added to) the phrase rows. Negative prompts and prompts
-        without the phrase are untouched.
+        without the phrase are untouched. --asset-phrase pins the phrase E was trained on (e.g. the
+        pre-2026-10-27 wording) instead of reading the live registry; E's row count must equal its
+        token span.
   --x0-probe <dir>
         At the last high-noise step (t >= --timestep_boundary), records the model's clean-video
         estimate x0 = x_t - sigma * v and decodes it next to the final clip, as
         <dir>/probe_<k>.mp4 (k = generation order, i.e. the order of the prompts file). Answers
         "is the phone already turned when the low-noise expert takes over?" (RESEARCH_v9c_fixes E1a).
 
-    python gen_asset_v9.py [--asset E [--asset-offset]] [--x0-probe DIR] -- <wan_generate_video args>
+  --t5-fp32
+        Encode prompts with T5 in fp32 (drop --fp8_t5 from the musubi args too). The v9c2 training cache is
+        fp32-computed; GPU bf16/fp8 T5 has occasional large per-token errors (RESEARCH_v9c_fixes 6b).
+
+    python gen_asset_v9.py [--asset E [--asset-offset]] [--x0-probe DIR] [--t5-fp32] -- <wan_generate_video args>
 """
 import os
 import subprocess
@@ -53,7 +59,8 @@ def main():
         E = load_file(asset)["E"].float()
         offset = "--asset-offset" in own
         tok = A.tokenizer()
-        ph_ids = A.token_ids(tok, A.phrase())[:-1]
+        ph_ids = A.token_ids(tok, opt(own, "--asset-phrase") or A.phrase())[:-1]
+        assert not offset or E.shape[0] == len(ph_ids), f"E has {E.shape[0]} rows, phrase spans {len(ph_ids)} tokens"
         orig_call = T.T5EncoderModel.__call__
 
         def call(self, texts, device):
@@ -68,6 +75,12 @@ def main():
 
         T.T5EncoderModel.__call__ = call
 
+    if "--t5-fp32" in own:
+        assert "--fp8_t5" not in rest, "--t5-fp32 needs --fp8_t5 removed from the musubi args"
+        from musubi_tuner.wan.configs import WAN_CONFIGS
+        for cfg in WAN_CONFIGS.values():
+            cfg.t5_dtype = torch.float32
+        print("[t5] prompts encoded in fp32", flush=True)
     sys.argv = [str(MUSUBI / "src/musubi_tuner/wan_generate_video.py"), *rest]
     import musubi_tuner.wan_generate_video as G
 

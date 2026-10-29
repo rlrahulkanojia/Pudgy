@@ -52,7 +52,8 @@ def lora_config(name):
                same as v8@550 (checked by `v9_box.sh baseline`).
     v8@550     the same sum as two files, as v8 shipped it.
     v9c@<S>    the base + the v9c task vector at step S (or final).
-    file:<p>   the base + any v9-style task vector.
+    file:<p>   the base + any v9-style task vector (low-noise expert only).
+    pivotal:<p> a LoRA trained through BOTH experts (two-expert mode): low = base + p, high = golden + p.
     Anything else falls through to eval_v8 (golden, v7fixed, ...).
     """
     hi = [(C8.GOLD_HIGH, 1.0)]
@@ -60,6 +61,9 @@ def lora_config(name):
         return [(V8_MERGED, 1.0)], hi
     if name.startswith("v9c@"):
         return [(V8_MERGED, 1.0), (ckpt(name[4:]), 1.0)], hi
+    if name.startswith("pivotal:"):
+        p = Path(name[len("pivotal:"):])
+        return [(V8_MERGED, 1.0), (p, 1.0)], hi + [(p, 1.0)]
     if name.startswith("file:"):
         return [(V8_MERGED, 1.0), (Path(name[5:]), 1.0)], hi
     return C8.lora_config(name)

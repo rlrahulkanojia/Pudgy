@@ -78,9 +78,11 @@ def arms(asset):
                 lambda j: {**j, "prompt": no_screen_words(j["prompt"])}, [], []),
         "E2b": ("v9c@200", "guidance 3.5 / 3.5 (official Wan2.2 I2V default; suites used 5.0 low-noise)",
                 None, ["--guidance_scale", "3.5", "--guidance_scale_high_noise", "3.5"], []),
-        "V2":  ("v8merged", "asset embedding E (V1b, 40 steps, offset) on v8merged, both experts",
-                None, [], ["--asset", asset or "", "--asset-offset"]),
-        "C0b": ("v8merged", "control for V2: v8merged, default settings", None, [], []),
+        "V2":  ("v8merged", "asset embedding E (V1b, 40 steps, offset, old-phrase rows) on v8merged, OLD wording",
+                lambda j: {**j, "prompt": old_wording(j["prompt"])}, [],
+                ["--asset", asset or "", "--asset-offset", "--asset-phrase", REG_PHRASE_OLD]),
+        "C0b": ("v8merged", "control for V2: v8merged, OLD wording, no embedding",
+                lambda j: {**j, "prompt": old_wording(j["prompt"])}, [], []),
         "E2d": ("v9c@200", "first+last frame: the start frame also pinned as the end frame",
                 lambda j: {**j, "end": j["start"]}, [], []),
         "E1b": ("v9c@200", "timestep boundary 0.95 (6 high-noise steps instead of 9)",
@@ -93,14 +95,31 @@ def arms(asset):
                   lambda j: {**j, "prompt": new_wording(j["prompt"])}, [], []),
         "C0old": ("v9c@200", "control: old registry wording on v9c@200",
                   lambda j: {**j, "prompt": old_wording(j["prompt"])}, [], []),
+        # T5 precision at inference (RESEARCH_v9c_fixes 6b): the old wording, where the control flips 12/24,
+        # with the text encoder in fp32 instead of fp8 (fp32 = the accurate reference and the precision of the
+        # v9c2 training cache; GPU bf16 has per-token errors up to 3.8x); control C0old (same everything else)
+        "C0oldT5": ("v9c@200", "old wording, T5 fp32 at inference (no --fp8_t5); control C0old",
+                    lambda j: {**j, "prompt": old_wording(j["prompt"])}, ["!drop:--fp8_t5"], ["--t5-fp32"]),
+        # pivotal stage 2: cross-attn k/v LoRA (both experts) on top of the frozen E5 embedding; control Rb / E5
+        "PV":    ("pivotal:" + os.environ.get("PIVOTAL_LORA", ""), "pivotal LoRA (both experts) + frozen E + new wording",
+                  lambda j: {**j, "prompt": new_wording(j["prompt"])}, [],
+                  ["--asset", asset or "", "--asset-offset", "--asset-phrase", REG_PHRASE_NEW]),
+        # E5: the asset embedding trained through both experts on the new wording; its control is
+        # Rb (base v8merged) or R (base v9c@200), whichever base E5 was trained on (E5_CONFIG)
+        "E5":    (os.environ.get("E5_CONFIG", "v8merged"), "asset embedding E5 (both experts, offset) + new wording",
+                  lambda j: {**j, "prompt": new_wording(j["prompt"])}, [],
+                  ["--asset", asset or "", "--asset-offset", "--asset-phrase", REG_PHRASE_NEW]),
     }
 
 
-def reuse_identical(adir, jobs):
+REUSE = {"C0old": [C.RESULTS / "suites/phone/v9c@200", OUT / "screen/C0"],
+         "C0b": [C.RESULTS / "suites/phone/v8merged"]}
+
+
+def reuse_identical(adir, jobs, srcs):
     """Copy already-generated clips with byte-identical settings and prompt (same config, seed,
     frames, start, wording) into the arm dir, so gen_v8.run skips them."""
     adir.mkdir(parents=True, exist_ok=True)
-    srcs = [C.RESULTS / "suites/phone/v9c@200", OUT / "screen/C0"]
     n = 0
     for src in srcs:
         jf = next(iter(src.glob("jobs_*.json")), None)
@@ -143,9 +162,13 @@ def wrapped(extra, wrapper_args):
     """Route gen_v8's musubi call through gen_asset_v9.py and append extra musubi args."""
     orig = gen_v8.subprocess.run
 
+    drop = {x[len("!drop:"):] for x in extra if x.startswith("!drop:")}     # e.g. "!drop:--fp8_t5"
+    add = [x for x in extra if not x.startswith("!drop:")]
+
     def run(cmd, *a, **kw):
         assert cmd[1] == "src/musubi_tuner/wan_generate_video.py"
-        cmd = [cmd[0], str(HERE / "gen_asset_v9.py"), *wrapper_args, "--", *cmd[2:], *extra]
+        assert all(d in cmd for d in drop), f"cannot drop {drop - set(cmd)}: not in the musubi command"
+        cmd = [cmd[0], str(HERE / "gen_asset_v9.py"), *wrapper_args, "--", *[c for c in cmd[2:] if c not in drop], *add]
         return orig(cmd, *a, **kw)
 
     gen_v8.subprocess.run = run
@@ -159,8 +182,8 @@ def run_arm(name, spec, tier, frames, log):
     config, desc, fn, extra, wargs = spec
     jobs = [fn(j) if fn else j for j in jobs_for(tier, frames)]
     adir = OUT / tier / name
-    if name == "C0old":
-        print(f"   reused {reuse_identical(adir, jobs)} identical control clips", flush=True)
+    if name in REUSE:
+        print(f"   reused {reuse_identical(adir, jobs, REUSE[name])} identical control clips", flush=True)
     want = {j["tag"]: adir / f"{j['tag']}.mp4" for j in jobs}
     pending = [j for j in jobs if not want[j["tag"]].exists()]
     wargs = [x for w in wargs for x in (["--x0-probe", str(adir / "probe")] if w == "--x0-probe" else [w])]
@@ -197,8 +220,10 @@ def main():
     a = ap.parse_args()
     A = arms(a.asset)
     names = a.arms or list(A)
-    if "V2" in names and not a.asset:
-        sys.exit("arm V2 needs --asset")
+    if {"V2", "E5", "PV"} & set(names) and not a.asset:
+        sys.exit("arms V2, E5 and PV need --asset")
+    if "PV" in names and not Path(os.environ.get("PIVOTAL_LORA", "")).is_file():
+        sys.exit("arm PV needs PIVOTAL_LORA=<lora .safetensors>")
     frames = a.frames or (21 if a.tier == "screen" else 41)
     OUT.mkdir(parents=True, exist_ok=True)
     log = OUT / "arms.log"
