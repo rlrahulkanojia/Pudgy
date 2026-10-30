@@ -4,6 +4,8 @@
 persistent) · **Status** training complete, Tier 1 + gate complete, Tier 2 complete (`phone`,
 `textcall`, `leak`). Updated 2026-10-26 19:30 UTC; §3.3 corrected after a full-resolution review
 (see [`RESEARCH_v9c_fixes.md`](../../../training_approach/v9/RESEARCH_v9c_fixes.md), corrections C1–C3).
+**Superseded 2026-10-30 by v9c2:** the v9c LoRA is no longer used. The phone setup is v8merged + the new
+registry wording + the learned phone embedding E5 (flips 0/24, v8 untouched). See §8.
 Plan: [`Training_Approach_v9.md`](../../../training_approach/v9/Training_Approach_v9.md) ·
 assets: [`Assets_v9.md`](../../../training_approach/v9/Assets_v9.md) ·
 runbook: [`RUNBOOK_v9c_phone.md`](../../../training_approach/v9/RUNBOOK_v9c_phone.md) ·
@@ -198,3 +200,19 @@ Root-cause research and the v9c2 plan: [`RESEARCH_v9c_fixes.md`](../../../traini
    saves ~10 h of a 27 h run.
 5. **Binding by text is not happening at this scale** (n = 4, 0–1/4). Keep relying on reference
    pixels for the look (the "one name, one look" rule), and treat `textcall` as informational.
+
+---
+
+## 8. Outcome: v9c2 (2026-10-27 → 30)
+
+| setup | phone turns round (8 starts × 3 seeds) | notes |
+|---|---|---|
+| v9c@200 or v8merged, old wording | 12/24 | this report's state |
+| new registry wording, no training | 1/24 | the words caused the turn (11 fixed, 0 broken, p = 9.8×10⁻⁴) |
+| **+ phone embedding E5 (adopted)** | **0/24** | held-out phone loss ×0.899, name binding 3/4, steadier texting, v8 prompts unchanged |
+| + pivotal LoRA | 0/24 | gate PASS at both noise levels, generation ≈ E5; kept unused |
+
+The finding 5 above no longer holds with the embedding: the name now out-scores generic objects on 3 of 4
+held-out clips. Details: [`RESEARCH_v9c_fixes.md`](../../../training_approach/v9/RESEARCH_v9c_fixes.md) §4/§6c,
+[`RESEARCH_asset_memory.md`](../../../training_approach/v9/RESEARCH_asset_memory.md). Code: branch
+`v9c2-phone-embedding`. Artifacts: Azure `pudgy/v9c2/`.

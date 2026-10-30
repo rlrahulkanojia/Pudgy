@@ -56,3 +56,18 @@ gate, and the winner is **step 200** (lowest held-out phone loss, 0.613×). In g
 phone turns round to show its screen in 5/8 clips, the same as v8merged. `textcall`: the name draws a
 generic screen-out smartphone. `leak`: no phone in v8 prompts. Full report:
 [`REPORT_v9c_phone.md`](../../docs/training_reports/v9/REPORT_v9c_phone.md).
+
+## 3. v9c2 (2026-10-27 → 30): what changed and the numbers behind it
+
+| # | Measured | Meant | Done |
+|---|---|---|---|
+| 1 | Removing the screen words from the phrase and clause: flips **12/24 → 1/24** (11 fixed, 0 broken, exact McNemar p = 9.8×10⁻⁴), on both v9c@200 and v8merged | The words caused the turn | Registry wording changed 2026-10-27 |
+| 2 | Decoding the model's clean-video estimate at the expert switch matched the final clip **12/12** | The turn is set in the high-noise phase, which v9c never trained | Phone training now goes through both experts |
+| 3 | **`processed/v9c_phone_475`, recaptioned → `data_v9c2`**: 380 phone captions from the new registry (each checked against the old one plus the two text changes); clips and latents unchanged | Training must use the inference wording | `recaption_v9.py` |
+| 4 | Text cache rebuilt on CPU: emulated-bf16 T5 drifted 3–7%; **fp32** matches a fresh encode to 1.7×10⁻³. The old GPU-bf16 cache had per-token errors up to 3.8× | — | `te_cache_cpu_fp32_v9.py`; T5 precision at inference tested: fp32 = fp8 for the turn (13/24 vs 12/24) |
+| 5 | **E5** phone embedding (25×4096, both experts, 150 steps, 264 phone clips): flips **0/24**, held-out phone loss **×0.899**, name binding **3/4** held-out (v9c 0/4), steadier texting | It generalises, ties the name to the phone, and can't touch v8 prompts | **Adopted** |
+| 6 | Pivotal LoRA on frozen E5 (cross-attn k/v, preservation loss): gate PASS at both noise levels, flips 0/24, generation ≈ E5 | No visible gain for extra complexity | Kept on Azure, unused |
+| 7 | Musubi trains on every latent in a cache directory, whatever the jsonl lists | Replay clips in E5's first smoke run gave an embedding-free step | Phone-only cache dirs per group |
+
+Full story, corrections and the introspection: [`RESEARCH_v9c_fixes.md`](RESEARCH_v9c_fixes.md),
+[`RESEARCH_asset_memory.md`](RESEARCH_asset_memory.md).
