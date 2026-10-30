@@ -127,6 +127,8 @@ Two modes, both implemented (`finetune/wan/asset_embed_v9.py`):
 | **E5: both experts, new wording, 150 steps** (2026-10-28) | **ID1 0/24 vs base 1/24** (1 fixed, 0 broken); steadier texting (drift 11–15 → 1.5–2.4 where the base wandered; flicker unchanged) |
 | E5 checkpoint curve (job 015) | held-out phone loss ×0.989 → ×0.967 → ×0.921 → ×0.909 → ×0.908 → **×0.899** (steps 25–150), seen ×0.77: held-out keeps improving, no reversal |
 | E5 step 150 vs base, same wording | **name binding on held-out 3/4** (base 1/4, v9c 0/4), margin +0.106; P1 ×0.899 PASS; P2 −0.178, CI [−0.279, −0.077] PASS. v8 prompts unchanged by construction |
+| Pivotal stage 2 (k/v LoRA on frozen E5, both experts, preservation) | gate PASS at both noise levels (R2 ×1.000); P1 ×0.890; ID1 0/24; generated quality ≈ E5 |
+| **Adopted** | **E5** (`pudgy-v9c2-asset-dual-step00000150.asset.safetensors`), loaded with `eval_v9/gen_asset_v9.py --asset <E> --asset-offset` on v8merged (low) + golden (high) |
 
 ---
 
