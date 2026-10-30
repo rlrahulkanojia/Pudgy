@@ -150,9 +150,12 @@ n = 4–7 clips with 2 noise draws, so the pattern is consistent but noisy.
 | V0 | Span found in 380/380 phone captions and 0 others; cache rows = tokens; splice exact | ✅ PASS |
 | V1a | `offset` E = 0 reproduces the base | ✅ PASS: 0.0 difference on all 40 clip × caption losses |
 | V1a | `replace` from the mean phrase rows (22% row distance) | ✅ ×1.0002 mean, max 0.4%: functionally the base |
-| V1b | Embedding-only training, 40 steps, short clips | running |
-| V1c | Tier 1 with E@40: held-out phone loss < base? | after V1b |
-| V2 | Generation with E, scored by ID1 | after V1 |
+| V1b | Embedding-only training, 40 steps, short clips | ✅ |
+| V1c | Tier 1 with E@40 | seen clips strong, held-out ×0.99: overfitting at 40 steps |
+| V2 | Generation with E, scored by ID1 | 5/6 vs 5/6 (no effect; smoke E) |
+| **E5** | Both experts, new wording, 150 steps | **ID1 0/24 vs Rb 1/24; held-out phone loss ×0.899; name binding 3/4 held-out; P1/P2 PASS** (job 015, see RESEARCH_asset_memory) |
+| **Pivotal** | Cross-attention k/v LoRA (80 modules, rank 16) on frozen E5, both experts, preservation ×1 on 37% replay, 150 steps | **Gate PASS at both noise levels**. Low-noise: R1 Δmargin ±0.0001, R2 ×1.000, P1 ×0.890 (E5 ×0.899), P2 −0.186 CI [−0.288, −0.084]. High-noise: R2 ×1.000. v8 captions move by a median 0.02–0.04%; the phone gains ~1% over E5 (held-out = seen ×0.990, no overfit gap). **ID1 0/24** (= E5). Generated quality ≈ E5 on every paired metric (back-face min/steadiness, motion, drift, jumps: ~12/12 wins); flicker 20/4 for pivotal but tiny (0.026 vs 0.027) |
+| **Decision (2026-10-30)** | Phone setup = **v8merged + new registry wording + E5 embedding** (step 150, offset; both experts) | E5 and pivotal are equivalent in generation, and E5 is simpler: no LoRA, a 25×4096 file, v8 prompts unchanged *by construction*. The pivotal LoRA is kept (Azure `v9c2/weights/pudgy-v9c2-pivotal`) for when more varied phone footage arrives (A1) |
 
 V1a also shows a risk: a 22% change of the phrase rows moves phone-clip loss by only 0.4% at
 t ∈ {0.65, 0.85}. The frozen model is barely text-sensitive on phone clips there, so V1c may show
@@ -215,6 +218,75 @@ Tier-2 `leak` (done): no phone appears in v8 prompts for either model (CLIP phon
    35% replay, preservation λ = 1, 150 steps, gated by R1/R2/P1/P2/ID1.
 4. **High-noise LoRA**: only if E1a shows the turn is already set at the switch and 1–3 fail.
 5. Entrance clips (A1) and layered exports (A3) feed the next pass.
+
+---
+
+## 6b. Data pipeline for v9c2 (2026-10-27)
+
+- **Captions recompiled** from the updated registry (`finetune/wan/recaption_v9.py`): 380 phone captions in
+  `/workspace/data_v9c2/`, each checked two ways (prep's own compiler = old caption with exactly the two
+  text changes). The 95 replay captions are unchanged. Same clips and latents as v9c.
+- **Text cache rebuilt on CPU** (`/workspace/wan_cache/latents_v9c2`, then span-annotated in `latents_v9c2_emb`,
+  25-token phrase, V0 pass). This CPU has no native bf16: emulated-bf16 T5 drifted 3–7% from the GPU cache, so
+  the cache is computed in **fp32** and stored in bf16 (same file format). New files equal a fresh fp32 encode to
+  1.7×10⁻³ (bf16 storage).
+- **Finding: the original GPU-bf16 text caches have occasional large per-token errors.** Against fp32, the median
+  difference is 2.6%, but some captions reach 16%, concentrated in a few rows that are off by up to 3.8× their norm
+  (e.g. `polly_happy_QF2_L__peach_f21`, rows 46/48/60). v9c (and likely v8) trained with these. Generation encodes
+  prompts with `--fp8_t5`, coarser still. **Tested (job 020, 2026-10-29):** old wording on v9c@200, T5 in fp32 vs fp8:
+  13/24 vs 12/24 flips, 23/24 identical outcomes (McNemar p = 1.0). **Text-encoder precision doesn't affect the
+  phone's turn**: the words do, not the encoding noise. Generation keeps `--fp8_t5`, and the fp32-trained E5 vs fp8
+  inference mismatch is immaterial for ID1.
+
+---
+
+## 6c. Introspection (2026-10-28): what was re-checked, what was fixed, what remains open
+
+**Verified against data**
+- **The wording fix:** confirm tier, 8 starts × 3 seeds, paired on seed and start. Old → new wording: **11 fixed, 0 broken**,
+  exact McNemar **p = 9.8×10⁻⁴**, on both v9c@200 and v8merged. Causal: only the text changed.
+  - Not an artifact of the metric: the frozen-frame fraction is unchanged (0.013 → 0.014).
+  - Motion energy is 18% lower with the new wording, and part of the old wording's motion *is* the flip.
+  - The largest single-frame jumps (up to 22× the median) are pre-existing: a last-frame scale shift on Pax QF2_R that also
+    appears with the old wording, and a pose turn on Polly QF2_R where the phone keeps its back.
+- **The probe maths:** x̂₀ = x_t − σ·v is exact for flow matching (x_t = (1−σ)x₀ + σε, v = ε − x₀). With CFG it's the guided
+  estimate, i.e. the one that drives sampling. It agreed with the final clip in 12/12 at the 0.9 handover and 5/6 at 0.95,
+  so the turn settles between t = 0.95 and 0.9.
+- **The two-expert merge** (CPU, real weights): exact to fp16 storage. The expert routing in the smoke test (4 of 12 samples
+  high-noise) matches the predicted P(t ≥ 0.9) ≈ 0.28.
+
+**Found and fixed before running**
+1. **The preservation loss would have broken block swap.** In training mode the offloader moves blocks during a forward pass
+   and relies on the *backward* pass to move them back. The extra no-grad base pass has no backward, so the next pass would have
+   started with blocks in the wrong place. Fix: the base pass now runs between `switch_block_swap_for_inference()` and
+   `switch_block_swap_for_training()`, musubi's own switch around sample generation. Each call drains in-flight transfers and
+   resets block placement.
+2. **The gate didn't score the high-noise expert.** The pivotal LoRA changes it, and that's where layout and motion are decided.
+   Fix: `dcls_asset_v9.py --expert high` (t 0.95/0.92) and an R2 gate on it. R1 is reported only there, since label margins at
+   t ≥ 0.9 are weak by construction.
+3. **R2 pooled expression and motion,** hiding the motion regression (×1.041 pooled vs ×1.079 motion). Now it's per kind.
+4. **The percentile bootstrap is too narrow at n = 4–16** (lenient R1/P2). Now the wider of the bootstrap and the Student-t interval.
+5. **There was no held-out checkpoint selection for E5,** although V1c showed overfitting (seen margin +0.136, held-out ×0.99).
+   New job 015 scores every E5 checkpoint (held-out and seen) and selects on held-out phone loss. It's used only if that's < 1.00.
+6. **The T5-precision arm** compared fp8 with bf16, which itself has per-token errors up to 3.8×. Now it compares fp8 with
+   fp32 (`--t5-fp32`), the accurate reference and the precision of the v9c2 training cache.
+7. **The E5 smoke failure** (replay clips in the cache dir → a step with no embedding gradient) was caught by the smoke gate
+   and fixed with phone-only cache dirs.
+8. **The classifier index held stale phone captions** (compiled 2026-10-24, before the wording change). E5's first Tier 1
+   swapped E into 0 captions and returned the base's numbers exactly. `dcls_asset_v9.py` now recompiles phone candidates
+   from the live registry with the index builder's own call. It checks each one equals the stored caption with only the
+   known revisions applied (8/8), and asserts the splice count equals the phone-clip count.
+
+**Open caveats (not fixable without more data or compute)**
+- **ID1 only measures orientation and presence.** It doesn't check the tuft, the lenses or motion quality, so a visual review
+  of each winner is still needed. A crop-similarity identity metric would be the next tool.
+- **Held-out phone evidence is 4 clips (QF2_R),** so the P1 and checkpoint selection are noisy. More held-out phone footage
+  would fix it (client asks A1/A3).
+- **The pivotal LoRA is shared by both experts** (musubi's two-expert mode). That's valid parameter sharing, but separate
+  per-expert LoRAs would be the more flexible design if this one underfits.
+- **E5 trains on fp32-computed text, and generation encodes in fp8.** If job 020 shows T5 precision matters, the E5 and pivotal
+  ID1 arms should be re-run with `--t5-fp32`.
+- **Text-called phones** (the phone appearing without being in frame 0) remain impossible to train without entrance clips (A1).
 
 ---
 

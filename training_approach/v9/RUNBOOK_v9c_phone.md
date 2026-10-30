@@ -11,7 +11,10 @@ model, merged into one base file. It learns the iFin phone from the client's 36 
 clips (32 trained, 4 held out), while 20% of every batch replays v8's data so nothing
 earlier is lost. One phrase names the phone everywhere: *"the iFin phone, a small pale grey
 phone with a black screen, three camera lenses on the back and a little tuft on top"*
-(`finetune/wan/assets/registry.toml`).
+(`finetune/wan/assets/registry.toml`). *This is the wording the v9c run used. On 2026-10-27 the registry
+dropped "with a black screen" (and the texting clause's "the screen turned toward itself"), which fixed the
+phone turning round; see [`RESEARCH_v9c_fixes.md`](RESEARCH_v9c_fixes.md). The v9c2 phone setup (embedding
+E5) is in [`README.md`](README.md).*
 
 | | |
 |---|---|

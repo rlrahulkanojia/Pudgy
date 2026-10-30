@@ -94,7 +94,8 @@ Two modes, both implemented (`finetune/wan/asset_embed_v9.py`):
   so an E trained through the low-noise expert alone acts *untrained* on the high-noise steps. Either
   train it through both (musubi `--dit_high_noise`, plus a ~30-line patch so v8merged merges into the
   low-noise expert and the golden LoRA into the high-noise one; musubi's dual mode merges
-  `--base_weights` into one expert only), or splice it only on low-noise steps (a generator patch).
+  `--base_weights` into one expert only; now implemented as `--base-weights-high`), or splice it
+  only on low-noise steps (a generator patch).
   V2 tests "E on both" first, since that's what the T5 hook does.
 - **Prompts that combine the phone with other actions are untested.** E is trained only on
   texting poses; "walking while holding the iFin phone" may carry texting stillness with it. There
@@ -110,7 +111,8 @@ Two modes, both implemented (`finetune/wan/asset_embed_v9.py`):
 | Setup | E only (DiT and v8merged frozen), 29 rows; `replace` initialised from the E2c phrase if E2c wins, otherwise `offset`; lr 5e-3 (the text rows' element std is 0.088, so Adam moves each element ≤ 6% of that per step, gentler than standard textual inversion); 150 steps; through both experts once the merge patch exists |
 | Cost | ≈ 6 h training (short clips; replay samples carry no E gradient and can be dropped) + Tier 1 on phone clips only (v8 rows unchanged by construction) + ID1 confirm tier (24 clips at 41 frames ≈ 6.6 h) |
 | Read | **ID1** defect rate vs base (the decider); P1 held-out phone loss; P2 holds by construction |
-| Patches | done: `asset_embed_v9.py` (cache spans, in-memory trainer patch), `eval_v9/dcls_asset_v9.py` (Tier 1), `eval_v9/gen_asset_v9.py` (generation via a T5 hook). To do: the dual-expert merge patch |
+| Patches | done: `asset_embed_v9.py` (cache spans, in-memory trainer patch, **`--base-weights-high`** two-expert merge, per-expert sample counts saved with each checkpoint), `eval_v9/dcls_asset_v9.py` (Tier 1), `eval_v9/gen_asset_v9.py` (generation via a T5 hook, `--asset-phrase` pin, x₀ probe), `train_asset_v9.sh` (two-expert launcher, `SMOKE=1` for a 4-step check) |
+| Two-expert merge check | CPU, on the real high-noise expert + golden LoRA (rank 16, α 32): 400/400 targeted weights changed, result = W + (up·down)·α/rank to fp16 storage precision (max error 3–7×10⁻⁵), the same rounding as musubi's own `--base_weights` merge. **Still to verify on the GPU (smoke):** memory at swap 32 with both experts resident, step time, and that both experts receive samples (expected ~28% high noise: with shift 5, P(t ≥ 0.9) = 1 − Φ(logit(0.643)) ≈ 0.28) |
 
 ### Validation status (2026-10-26)
 
@@ -119,9 +121,14 @@ Two modes, both implemented (`finetune/wan/asset_embed_v9.py`):
 | V0: phrase spans and an exact splice | ✅ 380/380 phone captions, 0 others; cache rows = tokens; splice bit-exact |
 | V1a: `offset` E = 0 vs base | ✅ 0.0 difference on all 40 clip × caption losses |
 | V1a: `replace` init vs base | ✅ ×1.0002 mean, max 0.4% |
-| V1b: embedding-only training, 40 steps | running |
-| V1c: Tier 1 with the trained E | after V1b |
-| V2: generation + ID1 | next |
+| V1b: embedding-only training, 40 steps (low-noise expert, old phrase) | ✅ trained; E moved steadily, finite |
+| V1c: Tier 1 with E@40 | seen clips: name wins 4/4 (margin +0.136); held-out ×0.99 only: overfitting at 40 steps |
+| V2: generation + ID1 (old wording, 6 clips) | 5/6 vs control 5/6: no effect (smoke E, low-noise only) |
+| **E5: both experts, new wording, 150 steps** (2026-10-28) | **ID1 0/24 vs base 1/24** (1 fixed, 0 broken); steadier texting (drift 11–15 → 1.5–2.4 where the base wandered; flicker unchanged) |
+| E5 checkpoint curve (job 015) | held-out phone loss ×0.989 → ×0.967 → ×0.921 → ×0.909 → ×0.908 → **×0.899** (steps 25–150), seen ×0.77: held-out keeps improving, no reversal |
+| E5 step 150 vs base, same wording | **name binding on held-out 3/4** (base 1/4, v9c 0/4), margin +0.106; P1 ×0.899 PASS; P2 −0.178, CI [−0.279, −0.077] PASS. v8 prompts unchanged by construction |
+| Pivotal stage 2 (k/v LoRA on frozen E5, both experts, preservation) | gate PASS at both noise levels (R2 ×1.000); P1 ×0.890; ID1 0/24; generated quality ≈ E5 |
+| **Adopted** | **E5** (`pudgy-v9c2-asset-dual-step00000150.asset.safetensors`), loaded with `eval_v9/gen_asset_v9.py --asset <E> --asset-offset` on v8merged (low) + golden (high) |
 
 ---
 

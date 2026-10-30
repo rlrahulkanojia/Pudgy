@@ -84,7 +84,8 @@ compiler and keyframe composer will. TOML, not YAML: Python reads it with no ext
 kind = "prop"
 client_ids = ["PRP_PHONE", "Prp_iFin"]          # confirmed 2026-10-24
 name = "the iFin phone"
-phrase = "the iFin phone, a small pale grey phone with a black screen, three camera lenses on the back and a little tuft on top"
+phrase = "the iFin phone, a small pale grey phone with three camera lenses on the back and a little tuft on top"
+#   (until 2026-10-27: "... grey phone with a black screen, three camera lenses ..."; see RESEARCH_v9c_fixes F2)
 refs_dir = "raw/iteration_6/Samples/PROPS/PHONE/PRP_PHONE"
 holdout_views = ["PRP_PHONE_05", "PRP_PHONE_14", "PRP_PHONE_20"]   # one back, one front, one edge
 [assets.phone.clips]
@@ -93,7 +94,7 @@ animated_frames = 64                             # frames 64-73 are a hold
 [[assets.phone.actions]]
 folder = "PRP_PHONE_TEXTING_STANDING"
 label = "phone_texting_standing"
-action = "standing and holding {phrase}, up in front of its chest in one flipper, tapping at it with the other, the screen turned toward itself, head still and eyes on the phone"
+action = "standing and holding {phrase}, up in front of its chest in one flipper, tapping at it with the other, holding it with its back toward the viewer, head still and eyes on the phone"
 label_text = "texting on a phone, standing"
 ```
 
@@ -152,11 +153,15 @@ The template is v8's, with the prop's action clause from the registry
 
 > A 2D cartoon animation in the Pudgy Penguins style, with thick clean black outlines and
 > flat pastel colors, showing Pax, a short round blue penguin, standing and holding the
-> iFin phone, a small pale grey phone with a black screen, three camera lenses on the back
-> and a little tuft on top, up in front of its chest in one flipper, tapping at it with the
-> other, the screen turned toward itself, head still and eyes on the phone; texting on a
-> phone, standing; static close-up shot, eye level, facing the camera directly, front
-> view; plain white studio background.
+> iFin phone, a small pale grey phone with three camera lenses on the back and a little tuft
+> on top, up in front of its chest in one flipper, tapping at it with the other, holding it
+> with its back toward the viewer, head still and eyes on the phone; texting on a phone,
+> standing; static close-up shot, eye level, facing the camera directly, front view; plain
+> white studio background.
+
+(Registry wording since 2026-10-27. The earlier "with a black screen" and "the screen turned toward
+itself" made the model turn the phone to show a screen: 12/24 test clips, vs 1/24 after the change.
+A phrase names what is always true of the asset; states such as a lit screen go in the shot's action words.)
 
 v8's "static … shot" wording is kept for this stage, so the phone is the only new variable.
 The camera-clause fix (v9 §1.3 #5) moves to v9a.
@@ -342,7 +347,8 @@ Implemented for the phone in `finetune/wan/eval_v9/`, and run on v8merged first 
 | `raw/iteration_6/CHANGELOG.md`, `raw/README.md` | ✅ |
 | PRP_PHONE = iFin | ✅ confirmed by the client |
 | registry, `prep_v9.py`, train + eval scripts, `v9_box.sh`, runbook | ✅ on branch `v9/phone-stage`; prep built locally end to end |
-| **v9c-phone run** | ✅ 2026-10-26: trained 200 steps; gate PASS, winner step 200 (phone loss 0.613×, binding 0/4, held-out motion acc 0.75 → 0.58); generated clips ≈ v8merged. [Report](../../docs/training_reports/v9/REPORT_v9c_phone.md); `textcall`/`leak` pending |
+| **v9c-phone run** | ✅ 2026-10-26: trained 200 steps; gate PASS, winner step 200 (phone loss 0.613×, binding 0/4, held-out motion acc 0.75 → 0.58); generated clips ≈ v8merged. [Report](../../docs/training_reports/v9/REPORT_v9c_phone.md); superseded by v9c2 |
+| **v9c2 phone** | ✅ 2026-10-30: registry wording fixed (flips 12/24 → 1/24); **learned phone embedding E5 adopted** (0/24 flips, steadier texting, name binding 3/4 held-out, v8 unchanged by construction); pivotal LoRA passed every gate but ≈ E5, kept unused. [RESEARCH_v9c_fixes](RESEARCH_v9c_fixes.md) §4/§6c, [RESEARCH_asset_memory](RESEARCH_asset_memory.md) |
 | client: re-export the 11 Polly phone clips + 2 old files | to send (not blocking: windows are used meanwhile) |
 | client (optional): character-layer exports of skit shots (§5.5) | to decide |
 | v9b: plate floor annotations, `composite_plates.py`, skit mining | after the phone stage |
