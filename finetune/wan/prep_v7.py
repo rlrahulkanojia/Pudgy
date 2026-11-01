@@ -254,9 +254,15 @@ QUARTER = {
 FRONT = "facing the camera directly, front view"
 
 # Tokens that carry no angle information. Every label name is noise for angle parsing.
-NOISE = ({"PAX", "POLLY", "EXPRESSION", "MOTION", "SURPRISED"}
+NOISE = ({"PAX", "POLLY", "EXPRESSION", "MOTION", "INTERACTION", "SURPRISED"}
          | {n.upper() for n in MOTION} | {n.upper() for n in EXPRESSIONS}
-         | {"SURPRISE"})
+         | {"SURPRISE", "BLUSHING", "HUGGING"})
+
+# A token that starts an angle. NOISE can only list labels we already know about, and every
+# delivery adds more - iteration_5 brought BLUSHING, INTERACTION and HUGGING, and all 26 of
+# its new clips parsed as None because of it. So rather than trusting NOISE to be complete,
+# parse_angle skips leading tokens until it finds one that looks like an angle.
+ANGLE_HEAD = re.compile(r"^(FRONT|FR|SIDE|RIGHT|LEFT|QF)")
 
 
 def parse_angle(stem):
@@ -265,8 +271,17 @@ def parse_angle(stem):
     The deliveries use FIVE angle vocabularies now: FRONT/FR, SIDE_L/Right, QF_L, QF1_L,
     QF_L2. Normalise them all here - nothing under raw/ is ever renamed, so this is the
     only place the client's inconsistency is absorbed.
+
+    Two iteration_5 defects are absorbed here too, both by name:
+      * `INTERACTION_HUGGING__QF3_L.mov` has a DOUBLED underscore where its siblings have
+        one. Splitting on `[_-]+` rather than `[_-]` collapses the run.
+      * `INTERACTION` / `HUGGING` / `BLUSHING` are label tokens the parser had never seen,
+        so the angle was no longer at toks[0]. ANGLE_HEAD skips any unknown leading label.
     """
-    toks = [t for t in re.split(r"[_\-]", stem.upper()) if t and t not in NOISE]
+    toks = [t for t in re.split(r"[_\-]+", stem.upper()) if t and t not in NOISE]
+    # The angle is the first token that looks like one - not necessarily toks[0].
+    while toks and not ANGLE_HEAD.match(toks[0]):
+        toks.pop(0)
     if not toks:
         return None, None
     if toks[0] in ("FRONT", "FR"):
