@@ -14,7 +14,7 @@ each with its own measurement before any training starts.
 | **Supersedes** | [v8](../v8/Training_Approach_v8.md) — results in [`REPORT_v8.md`](../../docs/training_reports/v8/REPORT_v8.md) |
 | **Assets** | [`Assets_v9.md`](Assets_v9.md): asset registry, props and set plates in training and inference |
 | **Run it** | [`RUNBOOK_v9c_phone.md`](RUNBOOK_v9c_phone.md): `finetune/wan/v9_box.sh`, step by step, on a fresh GPU box |
-| **Status** | **v9c-phone trained** (2026-10-26): gate passed, winner step 200; the phone still turns to show its screen in 5/8 clips, as in v8; motion accuracy regressed; `leak` clean ([report](../../docs/training_reports/v9/REPORT_v9c_phone.md)). The redesign is v9c2, embedding-first ([RESEARCH_v9c_fixes](RESEARCH_v9c_fixes.md) rev. 2). **v9b-1**: curated, set built and verified (`processed/v9b_535`, approved phone phrase), ready to train; **moved to a separate GPU machine on 2026-10-27** ([HANDOVER_v9b](HANDOVER_v9b.md)), so this box keeps the phone track. v9a is still blocked on Round 5 Tier A (iteration_6 has no new fast motion) |
+| **Status** | **v9c-phone trained** (2026-10-26): gate passed, winner step 200; the phone still turns to show its screen in 5/8 clips, as in v8; motion accuracy regressed; `leak` clean ([report](../../docs/training_reports/v9/REPORT_v9c_phone.md)). The redesign is v9c2, embedding-first ([RESEARCH_v9c_fixes](RESEARCH_v9c_fixes.md) rev. 2). **v9b-1 failed its gate** (2026-10-28, separate GPU machine per [HANDOVER_v9b](HANDOVER_v9b.md)): stopped at step 200 of 400; scene loss −13% (L1 ✓), but R1 (held-out motion 9 → 7/12, expressions 13 → 12/16), R2 (1.061 at t = 0.85) and P2 (≈ 0) fail at steps 100 and 200, so the stage is not kept ([report](../../docs/training_reports/v9/REPORT_v9b.md)). v9a is still blocked on Round 5 Tier A (iteration_6 has no new fast motion) |
 
 ---
 
@@ -63,6 +63,13 @@ v9b is next. The skits are pulled and audited
 re-checked on 2026-10-26 against the footage, the v9c findings (RESEARCH_v9c_fixes rev. 2)
 and the code on the box. That re-check changed the base, the buckets, and the curation and
 caption rules below.
+
+**Result 2026-10-28: v9b-1 failed the gate and is not kept** ([`REPORT_v9b.md`](../../docs/training_reports/v9/REPORT_v9b.md)).
+It ran as planned below (`processed/v9b_535`, rank 32, low-noise only) and was stopped at step 200 of 400
+when the step-200 check failed R1. At steps 100 and 200: held-out scene loss 0.881× / 0.866× base (L1 ✓);
+held-out motion 9 → 6 / 7 of 12 and expressions 13 → 11 / 12 of 16 (R1 ✗); R2 1.066 / 1.061 at t = 0.85 (✗);
+text-attributable gain −0.0008, CI spans zero (P2 ✗). 35% replay did not protect motion. Next step: the user's decision
+(options in the report, §7).
 
 ### What the footage is (measured)
 
@@ -404,7 +411,7 @@ clip** at 1024² (27 h for 200 steps, against the 15 h estimated), with block sw
 
 Estimates:
 - v9a ≈ 70 h;
-- v9b ≈ 60–90 h, plus ≈ 25 h for the high-noise run and ≈ 20 h of eval (§0.1);
+- v9b ≈ 60–90 h, plus ≈ 25 h for the high-noise run and ≈ 20 h of eval (§0.1). **Measured in v9b-1:** 187 s per optimiser step (≈ 23 s per clip, `BLOCKS_TO_SWAP=24`), so 400 steps ≈ 21 h; Tier 1 ≈ 85–87 min per checkpoint;
 - v9c ≈ 20 h per stage at 150 steps.
 
 Verify each with a 20-step smoke test before committing.

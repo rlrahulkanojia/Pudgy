@@ -4,6 +4,10 @@ Parallel training env for the v2 base migration — **separate from** the CogVid
 setup (`setup_gpu_env.sh`, `../train_cogvideox_*`). Built for an **A100 80 GB**,
 which lifts the v1 blocker (A14B was tight/fp8-only on the old 40 GB card).
 
+> **Production (Oct 2026):** the client's long-form videos, story edits and skit remakes, made with the
+> v8 model — code [`longform_client/`](longform_client/README.md), report
+> [`docs/training_reports/longform_client/`](../../docs/training_reports/longform_client/REPORT_longform_client.md).
+
 > **Latest: v8** — one joint LoRA on a golden-merged base, evaluated by likelihood on a
 > held-out angle. Plan: [`training_approach/v8/Training_Approach_v8.md`](../../training_approach/v8/Training_Approach_v8.md).
 >

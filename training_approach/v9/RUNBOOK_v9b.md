@@ -376,3 +376,62 @@ bash finetune/wan/v9b_box.sh archive
     - Every other handover blob matches by content: all 566 set files, the code bundle and the doc. The eval tar and the merged base have no stored MD5; each was uploaded once and is in `SHA256SUMS`.
     - `azure_sync.py push` gained an opt-in `--force`; the default behaviour is unchanged.
   - **Merged into `main` (user request, 27 Oct).** `origin/main` was still `ab559fb`, so `main` was fast-forwarded to `cdc8dda`; `v9b-handover` points at the same commit. The handover now clones `main`.
+
+### New machine (Vast C.57924132, A100-SXM4 80GB)
+
+- **27 Oct, 06:45–07:05 UTC: set up and verified (HANDOVER_v9b §4 Steps 1–3).**
+  - **Machine:** A100-SXM4-80GB, driver 580.173.02 (CUDA 13.0), ~1 TB RAM, 250 GB disk on `/workspace` (not a volume; Azure is the backup).
+  - **Step 1:** cloned `main` at `01c5289`; `registry.toml` md5 `3757257814f5588603317d747f2e250e` ✓; `.env` from the user, git-ignored, mode 600.
+  - **Step 2 (06:50–06:54):** `v9_box.sh setup` OK in 3 min.
+    - musubi-tuner v0.3.4 (tag), `musubi-v0.3.4-resume-step.patch` applied;
+    - torch **2.14.1+cu130**: the script matches the wheel to the driver, which reports CUDA 13.0. Earlier boxes ran cu126/cu128; A100 (sm_80) is covered by all of them. diffusers 0.32.1 · transformers 4.57.6 · accelerate 1.6.0 · bitsandbytes 0.50.2;
+    - all four weight files present (DiT low/high fp16 28.6 GB each, VAE, T5); HF downloaded 65 GB in ~3 min.
+  - **Step 3 (06:54–07:04):** the archive came from the old box over SSH (read-only: only `v9b_handover_all.tar` and its `.sha256`).
+    - rsync: 2.66 GB in 9 min 48 s (4.5 MB/s); `sha256sum -c v9b_handover_all.tar.sha256` OK;
+    - extracted to `/workspace`: **all 571 `SHA256SUMS` OK**;
+    - links made, `eval_for_v9b.tar` extracted; merged base md5 `ec333748284410bb341f431b88f5026f` ✓; `data_v9b/manifest.json` present; **535 clips** ✓; the archive's `HANDOVER_v9b.md` is identical to the repo's.
+- **27 Oct, 07:05–07:49 UTC: Steps 4–6 OK.** From 07:26 the steps run back to back through `/workspace/logs_v9b/run_chain_v9b.sh`, which checks each "must see", stops at the first failure and ends after the step-200 Tier-1 check, so the GPU never waits for a person (log: `logs_v9b/chain.log`).
+  - **Step 4, cache (07:05–07:35, 30 min):** `verify_cache_v8` 535/535 ok, 0 bad; shape check all `ok` (scene f21 160 · f33 72 · f49 82 · f81 34 at (106, 60); replay f13–f57, 187 at (128, 128)).
+  - **Step 5, evalprep (07:35–07:36):** 15 Tier-1 windows, 8 Tier-2 jobs, 15 latent files under `eval_v9b/scenes/cache/f33`.
+  - **Step 6, smoke (07:36–07:49):** heaviest bucket `replay_f57` (61,440 tokens), **BLOCKS_TO_SWAP 24**: `SMOKE OK`, 0 mapping-OOM lines, 0 OOM, avr_loss 0.000552, **57.3 s/it** (v9c: 63–64), peak 77,967 MiB.
+- **27 Oct, 07:49–08:47 UTC: Steps 7–8 started.**
+  - **Step 7, baseline (07:49–08:08, 19 min):** `base reuse check: max relative loss difference 0.00e+00 over 6 clips`, so the v9c base regression rows were **reused** and only the scene set was scored (holdout/scene acc 0.400, margin −0.0013, loss 0.01161, n = 15). `v8merged_k2.json` written.
+  - **Step 8, train:** started 08:07:50 UTC at BLOCKS_TO_SWAP 24 (trainer pid 21110, monitor pid 21111; sync loop pid 9054). Progress bar from ~08:14.
+    - steps 5→10: 14:40 → 32:05, **≈ 209 s per optimizer step** (tqdm 192 s/it at step 10; v9c 487 s); **ETA = 400 × 209 s ≈ 23.2 h** of training, plus the step-200 pause;
+    - avr_loss 0.0061–0.0073 over steps 1–10 (v9c's scale was 0.002; scene clips differ); 0 mapping-OOM lines; the monitor is mirroring to Azure `v9b/`.
+- **27 Oct, 08:08–20:05 UTC: step-200 check FAILS R1; training stopped (HANDOVER_v9b §5: "If step 200 fails R1, stop and report").**
+  - **Steps 1–200 (08:08–18:38, 10 h 30 min):** ≈ 189 s per optimizer step on average (186–200 s); avr_loss 0.0070 → 0.0063; 0 mapping-OOM, 0 OOM. Checkpoints 50/100/150/200 saved; the monitor mirrored each to Azure `v9b/` (step 200: 6 files at 18:38:44).
+  - **Pause (18:37:55):** `v9b_box.sh pause 200` stopped the trainer after the step-200 state was written.
+  - **Tier 1 on v9b@200 (18:38–20:05, 5,219 s):** holdout/expression acc 0.750 (base 0.812), holdout/motion 0.583 (base 0.750), seen/expression 0.938 (1.000), seen/motion 0.818 (0.909), holdout/scene 0.400 (0.400).
+  - **Gate (`gate_v9b.py`): `NO CHECKPOINT PASSES`, winner null.**
+
+    | check | v9b@200 | bar | |
+    |---|---|---|---|
+    | R1 expression | Δmargin −0.0176, 95% CI [−0.0465, +0.0019]; acc 13 → 12 of 16 | CI low ≥ −0.003, ≤ 1 clip down | ✗ |
+    | R1 motion | Δmargin −0.0093, 95% CI [−0.0134, −0.0052]; acc 9 → 7 of 12 | same | ✗ (both) |
+    | R2 per-t loss ratio | 1.0297 at t 0.65, **1.0611** at t 0.85 | ≤ 1.05 | ✗ |
+    | L1 scene loss ratio | **0.866** | < 1.00 | ✓ |
+    | P2 text-attributable gain | −0.0008 [−0.007, +0.006] | CI upper < 0 | ✗ |
+
+    - per-label Δmargin, expression: crying −0.111, confused −0.031, happy −0.017, angry −0.008, others within ±0.025; motion: every label down (−0.005 to −0.013).
+  - **Reading:** the LoRA fits the scene clips (scene loss −13%) but erodes the v8 expression/motion behaviour and the scene gain is not text-attributable (P2 ≈ 0). Steps 201–400 were **not** run.
+  - **State:** trainer exited; GPU idle. Kept on disk and in Azure: `pudgy-v9b-lownoise-step000000{50,100,150,200}.safetensors` + step-200 state (`v9b/weights`, mirrored by the monitor), `eval_v9b/runs/pudgy-v9b-lownoise/{dcls/v8merged_k2.json, dcls/v9b@200_k2.json, winner_v9b.json}` (`v9b/eval/runs/…`, pushed with `--force` 20:10 UTC), logs (`v9b/logs/box`). Awaiting the user's decision.
+- **28 Oct, 06:36 UTC: Tier 1 on v9b@100 started (user request),** to see whether an earlier checkpoint passes before the regression. `v9b_box.sh tier1 100` (output `logs_v9b/tier1_100_step.out`; gate appended to `logs_v9b/tier1.log`). The GPU was idle from 20:05 UTC.
+- **28 Oct, 06:36–08:01 UTC: v9b@100 also FAILS (5,107 s).** `NO CHECKPOINT PASSES`, winner null.
+  - Tier 1: holdout/expression acc 0.688 (base 0.812), holdout/motion 0.500 (base 0.750), seen/expression 1.000, seen/motion 0.909, holdout/scene 0.467 (base 0.400).
+
+    | check | v9b@100 | v9b@200 | bar |
+    |---|---|---|---|
+    | R1 expression | −0.0182 [−0.0445, −0.0010]; acc 13 → 11 ✗ | −0.0176 [−0.0465, +0.0019]; 13 → 12 ✗ | CI low ≥ −0.003, ≤ 1 clip down |
+    | R1 motion | −0.0075 [−0.0111, −0.0042]; acc 9 → 6 ✗ | −0.0093 [−0.0134, −0.0052]; 9 → 7 ✗ | same |
+    | R2 per-t (0.65, 0.85) | 1.0383, **1.0659** ✗ | 1.0297, **1.0611** ✗ | ≤ 1.05 |
+    | L1 scene loss ratio | 0.881 ✓ | 0.866 ✓ | < 1.00 |
+    | P2 gain | −0.0008 [−0.0063, +0.0051] ✗ | −0.0008 [−0.007, +0.006] ✗ | CI upper < 0 |
+
+  - **Reading:** the regression is already full size at step 100 (motion accuracy is even lower than at 200), so it is not over-training in the second half; an earlier stop of this recipe does not rescue it. Results pushed to Azure `v9b/eval/runs/…` with `--force` (08:03 UTC). GPU idle again.
+- **28 Oct, 08:01–10:15 UTC: report, archive, machine stopped (user request).**
+  - `docs/training_reports/v9/REPORT_v9b.md` written; `Training_Approach_v9.md` status line, §0.1 and §4 updated.
+  - Step-200 training state (5 files, 884 MB) pushed to `v9b/weights/pudgy-v9b-lownoise/…-step00000200-state/` (the monitor mirrors only `.safetensors`).
+  - `v9b_box.sh archive` 10:05:49–10:05:57: every size check matching (weights 4/4, run logs 6/6, box logs 24/24, eval 41/41, `processed/v9b_535` 567/567, work trees). It uploaded 1 file under `processed/v9b_535` that was missing or a different size on Azure; no file in the local set changed after its checksum verification (none newer than 27 Oct 20:05).
+  - The local commits are not pushed to GitHub (user's rule); a git bundle of `origin/main..main` is on Azure at `v9b/work/git/v9b-1_main.bundle`.
+  - Instance C.57924132 stopped with `vastai stop instance` (disk kept, storage still billed). The sync loop and monitor stop with it.
