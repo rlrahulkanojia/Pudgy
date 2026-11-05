@@ -18,9 +18,10 @@ import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-FIELDS = ("size_change", "travel", "props", "characters", "framing", "angle", "time", "view", "camera", "effects", "prop_events")
+FIELDS = ("size_change", "travel", "props", "characters", "framing", "angle", "time", "view", "camera", "effects", "prop_events",
+          "setting", "in_world_text", "overlays")   # v10: the last three, so a "keep" flip can supply a full span
 KNOWN = {"beats", "new_start", "new_end", "new_dropped_span", "new_dropped_spans", "drop_reason", "notes", "boundary",
-         *FIELDS}
+         "add_settings", "add_cast", "add_outfits", *FIELDS}   # add_*: v10, file-level entries a "keep" may need
 
 
 def main():
@@ -43,11 +44,41 @@ def main():
             if extra:
                 manual.append((rp.name, r, f"unknown fix keys {sorted(extra)}")); continue
             tag = f"verification pass 2 ({rp.stem}): "
+            if r["verdict"] == "keep":
+                # v10: flip a dropped span to kept (a ruling made it keepable, e.g. a
+                # full-picture dream or a loose figurine). The span must already carry, or the
+                # fix must supply, every kept-span field; curate_check.py validates afterwards.
+                # A flipped span may need file-level entries that no kept span used before
+                # (verifier-v10-15, Partysize dream: a new setting, and Polly in cast). New ids
+                # only; an existing id is never overwritten.
+                for key, table in (("add_settings", "settings"), ("add_cast", "cast"), ("add_outfits", "outfits")):
+                    for k, v in (fx.get(key) or {}).items():
+                        d.setdefault(table, {}).setdefault(k, v)
+                sp["keep"] = True
+                sp["drop_reason"] = ""
+                for k in FIELDS:
+                    if k in fx:
+                        sp[k] = fx[k]
+                if "beats" in fx:
+                    sp["beats"] = fx["beats"]
+                sp["notes"] = (sp.get("notes", "") + " | " + tag + "flipped to kept: " + "; ".join(r.get("issues", []))[:400]).strip(" |")
+                n_applied += 1
+                print(f"{'(dry) ' if dry else ''}keep {r['out']} [{r['start']},{r['end']})")
+                if not dry:
+                    f.write_text(json.dumps(d, indent=1))
+                continue
             if r["verdict"] == "drop":
                 sp["keep"] = False
                 sp["drop_reason"] = fx.get("drop_reason") or "other"
                 if fx.get("camera"):
                     sp["camera"] = fx["camera"]
+                if "beats" in fx:
+                    sp["beats"] = fx["beats"]
+                # v10: only camera_move / lookalike drops stay "filled" (validated as if kept,
+                # CURATION_v10.md). Any other drop keeps its old beats under another key, for
+                # the record, so the validator does not check them as a flip candidate.
+                if sp.get("beats") and sp["drop_reason"] not in ("camera_move", "lookalike"):
+                    sp["beats_dropped"] = sp.pop("beats")
                 sp["notes"] = (sp.get("notes", "") + " | " + tag + (fx.get("notes") or "; ".join(r.get("issues", [])))[:400]).strip(" |")
             else:
                 for k in FIELDS:

@@ -1,0 +1,254 @@
+{
+ "pilot": [
+  "iteration_7/293_videos/2D_PP_Sync_Base.mp4",
+  "iteration_7/293_videos/PP-FastText-Base.mp4",
+  "iteration_7/293_videos/PP_Call_me_anytime_9x16_base.mov"
+ ],
+ "batches": [
+  [
+   "iteration_7/293_videos/2D_PP_QuickMiss_Base.mp4",
+   "iteration_7/293_videos/PP-Helpless-Base.mp4",
+   "iteration_7/293_videos/PP-IceTray-Base.mp4",
+   "iteration_7/293_videos/PP-Parking-Base.mp4",
+   "iteration_7/293_videos/PP_MorningTikTok_Base.mp4"
+  ],
+  [
+   "iteration_7/293_videos/PP-Ambulance-Base.mp4",
+   "iteration_7/293_videos/PP-Scenic-Base.mp4",
+   "iteration_7/293_videos/PP_Bright_9x16_base.mov",
+   "iteration_7/293_videos/PP_Cups_v12_9x16_Base.mp4",
+   "iteration_7/293_videos/PP_Photogenic_Base.mp4",
+   "iteration_7/293_videos/PP_Rough_9x16_base.mov"
+  ],
+  [
+   "iteration_7/293_videos/PP-Brainrot-Base_1.mp4",
+   "iteration_7/293_videos/PP-HowManyTimes-Base.mp4",
+   "iteration_7/293_videos/PP-Unboxing-Base.mp4",
+   "iteration_7/293_videos/PP_Affection_9x16_BASE.mp4",
+   "iteration_7/293_videos/PP_Bill_v15_9x16 base.mp4",
+   "iteration_7/293_videos/PP_Cute_9x16_base_v2.mov"
+  ],
+  [
+   "iteration_7/293_videos/2D_PP_Solution_Base.mp4",
+   "iteration_7/293_videos/PP- AngerSupport-Base.mp4",
+   "iteration_7/293_videos/PP-Dramatic-Base.mp4",
+   "iteration_7/293_videos/PP-Help-Base.mp4",
+   "iteration_7/293_videos/PP-RoadTrip-Base.mp4",
+   "iteration_7/293_videos/PP_Coexisting_v14_9x16 base.mp4"
+  ],
+  [
+   "iteration_7/293_videos/PP-Anxious-Base.mp4",
+   "iteration_7/293_videos/PP-GFMoods-Base.mp4",
+   "iteration_7/293_videos/PP_BestSleep_BASE_1.mp4",
+   "iteration_7/293_videos/PP_QUALITYTIME_BASE.mp4",
+   "iteration_7/293_videos/PP_RespondAsap_v9_9x16 base.mp4",
+   "iteration_7/293_videos/PP_Shared_Base.mov"
+  ],
+  [
+   "iteration_7/293_videos/2D_PP_Eepy_Base.mp4",
+   "iteration_7/293_videos/PP-Partysize-Base.mp4",
+   "iteration_7/293_videos/PP-Poses-Base.mp4",
+   "iteration_7/293_videos/PP_10MM_9x16_BASE.mp4",
+   "iteration_7/293_videos/pp_WFH_Base.mp4"
+  ],
+  [
+   "iteration_7/293_videos/PP-ActsOfService-Base.mp4",
+   "iteration_7/293_videos/PP-Dude-Base.mp4",
+   "iteration_7/293_videos/PP-LastDollar-Base.mp4",
+   "iteration_7/293_videos/PP-MemoryBox-Base.mp4",
+   "iteration_7/293_videos/PP-NY26-Base.mp4",
+   "iteration_7/293_videos/PP_Thoughts_BASE.mp4"
+  ],
+  [
+   "iteration_7/293_videos/2D_PP_BlanketMonster_Base.mp4",
+   "iteration_7/293_videos/PP-Attractive-Base.mp4",
+   "iteration_7/293_videos/PP-Bouquet-Base_2.mp4",
+   "iteration_7/293_videos/PP_Cooking_9x16_base_v2.mov",
+   "iteration_7/293_videos/pp_SAMEROOM_BASE.mp4",
+   "iteration_7/293_videos/PP_Toothbrush 9x16_Base.mp4"
+  ],
+  [
+   "iteration_7/293_videos/2D_PP_OCD_Base.mp4",
+   "iteration_7/293_videos/PP- FoodAnswer-Base.mp4",
+   "iteration_7/293_videos/PP-Carry-Base.mp4",
+   "iteration_7/293_videos/PP-FavoritePerson-Base.mp4",
+   "iteration_7/293_videos/PP-Relocate-Base.mp4",
+   "iteration_7/293_videos/PP-ThisIsUs-Base.mp4"
+  ],
+  [
+   "iteration_7/293_videos/2D_PP_Finally_Base.mp4",
+   "iteration_7/293_videos/2D_PP_Unhelpful_Base.mp4",
+   "iteration_7/293_videos/PP-Cupboard-Base.mp4",
+   "iteration_7/293_videos/PP-ID-Base.mp4",
+   "iteration_7/293_videos/PP-Togetheness-Base.mp4",
+   "iteration_7/293_videos/PP-Volume-Base.mp4"
+  ],
+  [
+   "iteration_7/293_videos/2D_PP_WrongOrder_Base.mp4",
+   "iteration_7/293_videos/PP-BeachActivities-Base_V2.mp4",
+   "iteration_7/293_videos/PP-BestGifts-Base.mp4",
+   "iteration_7/293_videos/PP-CoffeeAlarm-Base.mp4",
+   "iteration_7/293_videos/PP-GentleOne-Base.mp4",
+   "iteration_7/293_videos/PP_Prepared_Base.mp4"
+  ],
+  [
+   "iteration_7/293_videos/PP-TurningInBed-Base.mp4",
+   "iteration_7/293_videos/PP-WakeUpText-Base.mp4",
+   "iteration_7/293_videos/PP_Folding_Base.mp4",
+   "iteration_7/293_videos/PP_Heart_Anim_V10 9x16 Base.mp4",
+   "iteration_7/293_videos/PP_Random_v6 9x16 base.mp4",
+   "iteration_7/293_videos/PP_Waiting_Base.mov"
+  ],
+  [
+   "iteration_7/293_videos/2D_PP_Loudness_Base.mp4",
+   "iteration_7/293_videos/2D_PP_Wallet_Base.mp4",
+   "iteration_7/293_videos/PP-Gasp-Base.mp4",
+   "iteration_7/293_videos/PP-VentFan-Base.mp4",
+   "iteration_7/293_videos/PP_Bromance_BASE.mp4",
+   "iteration_7/293_videos/PP_Daylight_Base.mp4"
+  ],
+  [
+   "iteration_7/293_videos/2D_PP_HerAnything_Base.mp4",
+   "iteration_7/293_videos/PP-Purse-Base.mp4",
+   "iteration_7/293_videos/PP-SleepingEarly -Base.mp4",
+   "iteration_7/293_videos/PP-XMas25-Base.mp4",
+   "iteration_7/293_videos/PP_Blanket_9x16_base.mov",
+   "iteration_7/293_videos/PP_HowTo_Animation_v5.mp4"
+  ],
+  [
+   "iteration_7/293_videos/2D_PP_Closeness_Base.mp4",
+   "iteration_7/293_videos/2D_PP_TextUpdates_Base.mp4",
+   "iteration_7/293_videos/PP-Hectic-Base.mp4",
+   "iteration_7/293_videos/PP-Highlighter-Base.mp4",
+   "iteration_7/293_videos/PP-MoveIn-Base.mp4",
+   "iteration_7/293_videos/PP_Fog_Base.mp4"
+  ],
+  [
+   "iteration_7/293_videos/2D_PP_SleepFight_Base.mp4",
+   "iteration_7/293_videos/PP-BFPockets-Base.mp4",
+   "iteration_7/293_videos/PP-Catch-Base.mp4",
+   "iteration_7/293_videos/PP_Blossom_base.mp4",
+   "iteration_7/293_videos/PP_CuteFit-BASE.mp4",
+   "iteration_7/293_videos/PP_Hot_and_Cold_9x16_base.mov"
+  ],
+  [
+   "iteration_7/293_videos/PP-Arm-Base.mp4",
+   "iteration_7/293_videos/PP-PoopBreak-Base.mp4",
+   "iteration_7/293_videos/PP-Updates-Base.mp4",
+   "iteration_7/293_videos/PP_ALREADYSEENIT_BASE_NOBOOM.mp4",
+   "iteration_7/293_videos/PP_Slow_9x16 Base.mp4",
+   "iteration_7/293_videos/PP_Wash_BASE.mp4"
+  ],
+  [
+   "iteration_7/293_videos/2D_PP_PlushHug_Base.mp4",
+   "iteration_7/293_videos/PP-Fixer-Base.mp4",
+   "iteration_7/293_videos/PP-Snooze-Base.mp4",
+   "iteration_7/293_videos/PP-SweetTalk-Base.mp4",
+   "iteration_7/293_videos/PP_Hype_base.mp4",
+   "iteration_7/293_videos/PP_Tetris_v8_9x16_Base.mp4"
+  ],
+  [
+   "iteration_7/293_videos/PP- DrivingPartner -Base.mp4",
+   "iteration_7/293_videos/PP-Favor-Base.mp4",
+   "iteration_7/293_videos/PP-Pookie-Base.mp4",
+   "iteration_7/293_videos/PP-ShowerTraining -Base.mp4",
+   "iteration_7/293_videos/PP_Folders_v16_9x16 base.mp4"
+  ],
+  [
+   "iteration_7/293_videos/2D_PP_IKnow_Base.mp4",
+   "iteration_7/293_videos/2D_PP_Seat_Base.mp4",
+   "iteration_7/293_videos/PP-Detail-Base.mp4",
+   "iteration_7/293_videos/PP-Glare_Long-Base.mp4",
+   "iteration_7/293_videos/PP-Lottery-Base.mp4",
+   "iteration_7/293_videos/PP-Raccon-Base.mp4"
+  ],
+  [
+   "iteration_7/293_videos/2D_PP_Security_Base.mp4",
+   "iteration_7/293_videos/PP-Easter-Base.mp4",
+   "iteration_7/293_videos/PP-Rolodex-Base.mp4",
+   "iteration_7/293_videos/PP-Tasty-9x16-Base.mp4",
+   "iteration_7/293_videos/PP_Homecooked_Base.mp4",
+   "iteration_7/293_videos/PP_Ready_BASE.mp4"
+  ],
+  [
+   "iteration_7/293_videos/PP-Checks-Base.mp4",
+   "iteration_7/293_videos/PP-Clumsy-Base.mp4",
+   "iteration_7/293_videos/PP-GoldenRetriever-Base.mp4",
+   "iteration_7/293_videos/PP-MidnightMenu-Base.mp4",
+   "iteration_7/293_videos/PP-Wall-Base.mp4",
+   "iteration_7/293_videos/PP_Clutter_v17_9x16 base.mp4"
+  ],
+  [
+   "iteration_7/293_videos/2D_PP_SleepDrug_Base.mp4",
+   "iteration_7/293_videos/PP-Attitude-Base.mp4",
+   "iteration_7/293_videos/PP-WhichOne-Base.mp4",
+   "iteration_7/293_videos/PP_LastBite_Base.mp4",
+   "iteration_7/293_videos/PP_shorts_Upset_9x16_base.mov",
+   "iteration_7/293_videos/PP_SkinCare_BASE.mp4"
+  ],
+  [
+   "iteration_7/293_videos/2D_PP_Flirt_Base.mp4",
+   "iteration_7/293_videos/2D_PP_Slowdown_Base.mp4",
+   "iteration_7/293_videos/PP-5Mins-Base.mp4",
+   "iteration_7/293_videos/PP-Drained-Base.mp4",
+   "iteration_7/293_videos/PP-Inflation-Base.mp4",
+   "iteration_7/293_videos/PP_CANCELPLANS_BASE.mp4"
+  ],
+  [
+   "iteration_7/293_videos/2D_PP_Galaxy_Base.mp4",
+   "iteration_7/293_videos/PP-Leftovers-Base.mp4",
+   "iteration_7/293_videos/PP-Uncrustables-Base.mp4",
+   "iteration_7/293_videos/PP_Charging_v9_9x16 base.mp4",
+   "iteration_7/293_videos/PP_Sleepless_Base.mp4",
+   "iteration_7/293_videos/PP_touch_P&B_Base.mp4"
+  ],
+  [
+   "iteration_7/293_videos/2D_PP_CarGear_Base.mp4",
+   "iteration_7/293_videos/PP- MultiTask-Base.mp4",
+   "iteration_7/293_videos/PP- Traffic-Base.mp4",
+   "iteration_7/293_videos/PP-BadDay-Base.mp4",
+   "iteration_7/293_videos/PP-Bite-Base.mp4",
+   "iteration_7/293_videos/PP_BeforeBed 9x16_BASE_1.mp4"
+  ],
+  [
+   "iteration_7/293_videos/2D_PP_Experiment_Base.mp4",
+   "iteration_7/293_videos/2D_PP_GFEffect_Base.mp4",
+   "iteration_7/293_videos/PP- BigPiece--Base.mp4",
+   "iteration_7/293_videos/PP-Accident-Base.mp4",
+   "iteration_7/293_videos/PP-Hidden-Base.mp4",
+   "iteration_7/293_videos/PP_Temple_Base.mp4"
+  ],
+  [
+   "iteration_7/293_videos/PP-Dishwasher-Base.mp4",
+   "iteration_7/293_videos/PP-Foot-Base.mp4",
+   "iteration_7/293_videos/PP-Muscle-Base.mp4",
+   "iteration_7/293_videos/PP-Question-Base.mp4",
+   "iteration_7/293_videos/PP_Apologies_BASE.mov",
+   "iteration_7/293_videos/PP_delivered-BASE.mp4"
+  ],
+  [
+   "iteration_7/293_videos/2D_PP_HealthyWalk_Base.mp4",
+   "iteration_7/293_videos/2D_PP_Unhealthy_Base.mp4",
+   "iteration_7/293_videos/PP-DYLI -Base.mp4",
+   "iteration_7/293_videos/PP-PostWorkout-Base.mp4",
+   "iteration_7/293_videos/PP_Bubble_v10 9x16 Base.mp4",
+   "iteration_7/293_videos/PP_Vacation_Base.mp4"
+  ],
+  [
+   "iteration_7/293_videos/2D_PP_LoveIsland_Base.mp4",
+   "iteration_7/293_videos/2D_PP_Scrambled_Base.mp4",
+   "iteration_7/293_videos/PP-Cutesy-Base.mp4",
+   "iteration_7/293_videos/PP-Google-Base.mp4",
+   "iteration_7/293_videos/PP-Sniff-Base.mp4",
+   "iteration_7/293_videos/PP_FoodPic_Base.mp4"
+  ],
+  [
+   "iteration_7/293_videos/PP-ADHDers-Base.mp4",
+   "iteration_7/293_videos/PP-EmojiText-Base.mp4",
+   "iteration_7/293_videos/PP-Leave-Base.mp4",
+   "iteration_7/293_videos/PP-MenInLove_base.mp4",
+   "iteration_7/293_videos/PP-WorkingInBed-Base.mp4",
+   "iteration_7/293_videos/PP_Space_Base.mp4"
+  ]
+ ]
+}

@@ -1,0 +1,1340 @@
+{
+ "skits": [
+  {
+   "skit": "iteration_7/293_videos/2D_PP_BlanketMonster_Base.mp4",
+   "frames": 307,
+   "fps": 24.0,
+   "out": "curation/iteration_7__2D_PP_BlanketMonster_Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/2D_PP_CarGear_Base.mp4",
+   "frames": 289,
+   "fps": 24.0,
+   "out": "curation/iteration_7__2D_PP_CarGear_Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/2D_PP_Closeness_Base.mp4",
+   "frames": 198,
+   "fps": 24.0,
+   "out": "curation/iteration_7__2D_PP_Closeness_Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/2D_PP_Eepy_Base.mp4",
+   "frames": 242,
+   "fps": 24.0,
+   "out": "curation/iteration_7__2D_PP_Eepy_Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/2D_PP_Experiment_Base.mp4",
+   "frames": 340,
+   "fps": 24.0,
+   "out": "curation/iteration_7__2D_PP_Experiment_Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/2D_PP_Finally_Base.mp4",
+   "frames": 251,
+   "fps": 24.0,
+   "out": "curation/iteration_7__2D_PP_Finally_Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/2D_PP_Flirt_Base.mp4",
+   "frames": 212,
+   "fps": 24.0,
+   "out": "curation/iteration_7__2D_PP_Flirt_Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/2D_PP_Galaxy_Base.mp4",
+   "frames": 289,
+   "fps": 24.0,
+   "out": "curation/iteration_7__2D_PP_Galaxy_Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/2D_PP_GFEffect_Base.mp4",
+   "frames": 360,
+   "fps": 24.0,
+   "out": "curation/iteration_7__2D_PP_GFEffect_Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/2D_PP_HealthyWalk_Base.mp4",
+   "frames": 162,
+   "fps": 24.0,
+   "out": "curation/iteration_7__2D_PP_HealthyWalk_Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/2D_PP_HerAnything_Base.mp4",
+   "frames": 280,
+   "fps": 24.0,
+   "out": "curation/iteration_7__2D_PP_HerAnything_Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/2D_PP_IKnow_Base.mp4",
+   "frames": 332,
+   "fps": 24.0,
+   "out": "curation/iteration_7__2D_PP_IKnow_Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/2D_PP_Loudness_Base.mp4",
+   "frames": 321,
+   "fps": 24.0,
+   "out": "curation/iteration_7__2D_PP_Loudness_Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/2D_PP_LoveIsland_Base.mp4",
+   "frames": 352,
+   "fps": 24.0,
+   "out": "curation/iteration_7__2D_PP_LoveIsland_Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/2D_PP_OCD_Base.mp4",
+   "frames": 309,
+   "fps": 24.0,
+   "out": "curation/iteration_7__2D_PP_OCD_Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/2D_PP_PlushHug_Base.mp4",
+   "frames": 328,
+   "fps": 24.0,
+   "out": "curation/iteration_7__2D_PP_PlushHug_Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/2D_PP_QuickMiss_Base.mp4",
+   "frames": 256,
+   "fps": 24.0,
+   "out": "curation/iteration_7__2D_PP_QuickMiss_Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/2D_PP_Scrambled_Base.mp4",
+   "frames": 349,
+   "fps": 24.0,
+   "out": "curation/iteration_7__2D_PP_Scrambled_Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/2D_PP_Seat_Base.mp4",
+   "frames": 171,
+   "fps": 24.0,
+   "out": "curation/iteration_7__2D_PP_Seat_Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/2D_PP_Security_Base.mp4",
+   "frames": 199,
+   "fps": 24.0,
+   "out": "curation/iteration_7__2D_PP_Security_Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/2D_PP_SleepDrug_Base.mp4",
+   "frames": 203,
+   "fps": 24.0,
+   "out": "curation/iteration_7__2D_PP_SleepDrug_Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/2D_PP_SleepFight_Base.mp4",
+   "frames": 170,
+   "fps": 24.0,
+   "out": "curation/iteration_7__2D_PP_SleepFight_Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/2D_PP_Slowdown_Base.mp4",
+   "frames": 288,
+   "fps": 24.0,
+   "out": "curation/iteration_7__2D_PP_Slowdown_Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/2D_PP_Solution_Base.mp4",
+   "frames": 193,
+   "fps": 24.0,
+   "out": "curation/iteration_7__2D_PP_Solution_Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/2D_PP_Sync_Base.mp4",
+   "frames": 168,
+   "fps": 24.0,
+   "out": "curation/iteration_7__2D_PP_Sync_Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/2D_PP_TextUpdates_Base.mp4",
+   "frames": 280,
+   "fps": 24.0,
+   "out": "curation/iteration_7__2D_PP_TextUpdates_Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/2D_PP_Unhealthy_Base.mp4",
+   "frames": 200,
+   "fps": 24.0,
+   "out": "curation/iteration_7__2D_PP_Unhealthy_Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/2D_PP_Unhelpful_Base.mp4",
+   "frames": 316,
+   "fps": 24.0,
+   "out": "curation/iteration_7__2D_PP_Unhelpful_Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/2D_PP_Wallet_Base.mp4",
+   "frames": 212,
+   "fps": 24.0,
+   "out": "curation/iteration_7__2D_PP_Wallet_Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/2D_PP_WrongOrder_Base.mp4",
+   "frames": 273,
+   "fps": 24.0,
+   "out": "curation/iteration_7__2D_PP_WrongOrder_Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP- AngerSupport-Base.mp4",
+   "frames": 143,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-_AngerSupport-Base.json",
+   "instagram": "DJaqOB0psXp"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP- BigPiece--Base.mp4",
+   "frames": 210,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-_BigPiece--Base.json",
+   "instagram": "DKOH76eRRP_"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP- DrivingPartner -Base.mp4",
+   "frames": 246,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-_DrivingPartner_-Base.json",
+   "instagram": "DJfx-vsJR3t"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP- FoodAnswer-Base.mp4",
+   "frames": 408,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-_FoodAnswer-Base.json",
+   "instagram": "DHAJAjzPIXm"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP- MultiTask-Base.mp4",
+   "frames": 231,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-_MultiTask-Base.json",
+   "instagram": "DKI-76DR_Nn"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP- Traffic-Base.mp4",
+   "frames": 194,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-_Traffic-Base.json",
+   "instagram": "DIu715RR4BU"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-5Mins-Base.mp4",
+   "frames": 369,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-5Mins-Base.json",
+   "instagram": "DGzYUDLRlCt"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Accident-Base.mp4",
+   "frames": 145,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Accident-Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-ActsOfService-Base.mp4",
+   "frames": 145,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-ActsOfService-Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-ADHDers-Base.mp4",
+   "frames": 350,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-ADHDers-Base.json",
+   "instagram": "DFMh-3pRmQe"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Ambulance-Base.mp4",
+   "frames": 153,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Ambulance-Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Anxious-Base.mp4",
+   "frames": 264,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Anxious-Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Arm-Base.mp4",
+   "frames": 192,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Arm-Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Attitude-Base.mp4",
+   "frames": 159,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Attitude-Base.json",
+   "instagram": "DKD2QDaxJbT"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Attractive-Base.mp4",
+   "frames": 267,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Attractive-Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-BadDay-Base.mp4",
+   "frames": 364,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-BadDay-Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-BeachActivities-Base_V2.mp4",
+   "frames": 172,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-BeachActivities-Base_V2.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-BestGifts-Base.mp4",
+   "frames": 249,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-BestGifts-Base.json",
+   "instagram": "DI0Age2pG_t"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-BFPockets-Base.mp4",
+   "frames": 268,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-BFPockets-Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Bite-Base.mp4",
+   "frames": 339,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Bite-Base.json",
+   "instagram": "DFJyDfoRJLb"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Bouquet-Base_2.mp4",
+   "frames": 413,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Bouquet-Base_2.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Brainrot-Base_1.mp4",
+   "frames": 434,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Brainrot-Base_1.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Carry-Base.mp4",
+   "frames": 185,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Carry-Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Catch-Base.mp4",
+   "frames": 255,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Catch-Base.json",
+   "instagram": "DJYEXIVJPVz"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Checks-Base.mp4",
+   "frames": 138,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Checks-Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Clumsy-Base.mp4",
+   "frames": 283,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Clumsy-Base.json",
+   "instagram": "DFO9oo6x3Tz"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-CoffeeAlarm-Base.mp4",
+   "frames": 318,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-CoffeeAlarm-Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Cupboard-Base.mp4",
+   "frames": 270,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Cupboard-Base.json",
+   "instagram": "DHNBLSFRspV"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Cutesy-Base.mp4",
+   "frames": 200,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Cutesy-Base.json",
+   "instagram": "DHho8lsxx7Q"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Detail-Base.mp4",
+   "frames": 250,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Detail-Base.json",
+   "instagram": "DHUu6eMPbzV"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Dishwasher-Base.mp4",
+   "frames": 357,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Dishwasher-Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Drained-Base.mp4",
+   "frames": 147,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Drained-Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Dramatic-Base.mp4",
+   "frames": 303,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Dramatic-Base.json",
+   "instagram": "DGMwAADR31r"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Dude-Base.mp4",
+   "frames": 417,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Dude-Base.json",
+   "instagram": "DJsqLUnJfbO"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-DYLI -Base.mp4",
+   "frames": 218,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-DYLI_-Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Easter-Base.mp4",
+   "frames": 282,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Easter-Base.json",
+   "instagram": "DIpiRthtrvZ"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-EmojiText-Base.mp4",
+   "frames": 200,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-EmojiText-Base.json",
+   "instagram": "DHH3Jt_P_1I"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-FastText-Base.mp4",
+   "frames": 296,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-FastText-Base.json",
+   "instagram": "DIDGHthRSp-"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Favor-Base.mp4",
+   "frames": 385,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Favor-Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-FavoritePerson-Base.mp4",
+   "frames": 126,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-FavoritePerson-Base.json",
+   "instagram": "DIVK5KrRGS6"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Fixer-Base.mp4",
+   "frames": 234,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Fixer-Base.json",
+   "instagram": "DF6wjpaRTVd"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Foot-Base.mp4",
+   "frames": 155,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Foot-Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Gasp-Base.mp4",
+   "frames": 144,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Gasp-Base.json",
+   "instagram": "DJk7XZdJ_Qj"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-GentleOne-Base.mp4",
+   "frames": 398,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-GentleOne-Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-GFMoods-Base.mp4",
+   "frames": 305,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-GFMoods-Base.json",
+   "instagram": "DIIR8fqRJNV"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Glare_Long-Base.mp4",
+   "frames": 169,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Glare_Long-Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-GoldenRetriever-Base.mp4",
+   "frames": 246,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-GoldenRetriever-Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Google-Base.mp4",
+   "frames": 218,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Google-Base.json",
+   "instagram": "DG7GqIkRKXD"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Hectic-Base.mp4",
+   "frames": 226,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Hectic-Base.json",
+   "instagram": "DJQWOoipZCY"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Help-Base.mp4",
+   "frames": 262,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Help-Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Helpless-Base.mp4",
+   "frames": 531,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Helpless-Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Hidden-Base.mp4",
+   "frames": 298,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Hidden-Base.json",
+   "instagram": "DGAQKX_RRP5"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Highlighter-Base.mp4",
+   "frames": 134,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Highlighter-Base.json",
+   "instagram": "DI5J10vJHXc"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-HowManyTimes-Base.mp4",
+   "frames": 204,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-HowManyTimes-Base.json",
+   "instagram": "DI-TodAp1YT"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-IceTray-Base.mp4",
+   "frames": 301,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-IceTray-Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-ID-Base.mp4",
+   "frames": 173,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-ID-Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Inflation-Base.mp4",
+   "frames": 338,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Inflation-Base.json",
+   "instagram": "DGFQR5vsUcV"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-LastDollar-Base.mp4",
+   "frames": 178,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-LastDollar-Base.json",
+   "instagram": "DJ28kpEp26x"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Leave-Base.mp4",
+   "frames": 160,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Leave-Base.json",
+   "instagram": "DJ0Zof9JisB"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Leftovers-Base.mp4",
+   "frames": 339,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Leftovers-Base.json",
+   "instagram": "DFeZOh8xrks"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Lottery-Base.mp4",
+   "frames": 274,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Lottery-Base.json",
+   "instagram": "DFjjvPrxJ64"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-MemoryBox-Base.mp4",
+   "frames": 267,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-MemoryBox-Base.json",
+   "instagram": "DHue-tivV3j"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-MenInLove_base.mp4",
+   "frames": 294,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-MenInLove_base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-MidnightMenu-Base.mp4",
+   "frames": 180,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-MidnightMenu-Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-MoveIn-Base.mp4",
+   "frames": 390,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-MoveIn-Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Muscle-Base.mp4",
+   "frames": 220,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Muscle-Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-NY26-Base.mp4",
+   "frames": 306,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-NY26-Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Parking-Base.mp4",
+   "frames": 208,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Parking-Base.json",
+   "instagram": "DFUHGabRVAk"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Partysize-Base.mp4",
+   "frames": 306,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Partysize-Base.json",
+   "instagram": "DFwmIHcRM6C"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Pookie-Base.mp4",
+   "frames": 186,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Pookie-Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-PoopBreak-Base.mp4",
+   "frames": 102,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-PoopBreak-Base.json",
+   "instagram": "DJDfuXWxGEi"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Poses-Base.mp4",
+   "frames": 420,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Poses-Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-PostWorkout-Base.mp4",
+   "frames": 289,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-PostWorkout-Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Purse-Base.mp4",
+   "frames": 227,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Purse-Base.json",
+   "instagram": "DFow9m9xtNc"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Question-Base.mp4",
+   "frames": 200,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Question-Base.json",
+   "instagram": "DJNwGr-JNoJ"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Raccon-Base.mp4",
+   "frames": 382,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Raccon-Base.json",
+   "instagram": "DGmkXL6RlIw"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Relocate-Base.mp4",
+   "frames": 273,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Relocate-Base.json",
+   "instagram": "DHCtSREPffs"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-RoadTrip-Base.mp4",
+   "frames": 231,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-RoadTrip-Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Rolodex-Base.mp4",
+   "frames": 333,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Rolodex-Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Scenic-Base.mp4",
+   "frames": 203,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Scenic-Base.json",
+   "instagram": "DF4JturRNg2"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-ShowerTraining -Base.mp4",
+   "frames": 276,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-ShowerTraining_-Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-SleepingEarly -Base.mp4",
+   "frames": 130,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-SleepingEarly_-Base.json",
+   "instagram": "DJ8GI6uJtCh"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Sniff-Base.mp4",
+   "frames": 161,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Sniff-Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Snooze-Base.mp4",
+   "frames": 129,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Snooze-Base.json",
+   "instagram": "DIP9cJPJ8QC"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-SweetTalk-Base.mp4",
+   "frames": 193,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-SweetTalk-Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Tasty-9x16-Base.mp4",
+   "frames": 141,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Tasty-9x16-Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-ThisIsUs-Base.mp4",
+   "frames": 247,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-ThisIsUs-Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Togetheness-Base.mp4",
+   "frames": 164,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Togetheness-Base.json",
+   "instagram": "DIc1qYoR1sA"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-TurningInBed-Base.mp4",
+   "frames": 168,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-TurningInBed-Base.json",
+   "instagram": "DH980zLxf0Z"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Unboxing-Base.mp4",
+   "frames": 302,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Unboxing-Base.json",
+   "instagram": "DGUi7h4R30g"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Uncrustables-Base.mp4",
+   "frames": 366,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Uncrustables-Base.json",
+   "instagram": "DGcMPXNR6cG"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Updates-Base.mp4",
+   "frames": 325,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Updates-Base.json",
+   "instagram": "DH4x-DvxyPP"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-VentFan-Base.mp4",
+   "frames": 282,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-VentFan-Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Volume-Base.mp4",
+   "frames": 401,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Volume-Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-WakeUpText-Base.mp4",
+   "frames": 172,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-WakeUpText-Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Wall-Base.mp4",
+   "frames": 334,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-Wall-Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-WhichOne-Base.mp4",
+   "frames": 371,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-WhichOne-Base.json",
+   "instagram": "DHZ-xMQRxbo"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-WorkingInBed-Base.mp4",
+   "frames": 218,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-WorkingInBed-Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-XMas25-Base.mp4",
+   "frames": 392,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP-XMas25-Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_10MM_9x16_BASE.mp4",
+   "frames": 266,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_10MM_9x16_BASE.json",
+   "instagram": "CzP2dpSrG5g"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_Affection_9x16_BASE.mp4",
+   "frames": 262,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_Affection_9x16_BASE.json",
+   "instagram": "C08GCc1L7Ol"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_ALREADYSEENIT_BASE_NOBOOM.mp4",
+   "frames": 278,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_ALREADYSEENIT_BASE_NOBOOM.json",
+   "instagram": "CvbO_dju2qi"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_Apologies_BASE.mov",
+   "frames": 344,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_Apologies_BASE.json",
+   "instagram": "C62g5-nsRa3"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_BeforeBed 9x16_BASE_1.mp4",
+   "frames": 136,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_BeforeBed_9x16_BASE_1.json",
+   "instagram": "C_mX41ORS2_"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_BestSleep_BASE_1.mp4",
+   "frames": 425,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_BestSleep_BASE_1.json",
+   "instagram": "C9qwov9RdUJ"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_Bill_v15_9x16 base.mp4",
+   "frames": 211,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_Bill_v15_9x16_base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_Blanket_9x16_base.mov",
+   "frames": 198,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_Blanket_9x16_base.json",
+   "instagram": "Czkjix6Ly4Z"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_Blossom_base.mp4",
+   "frames": 328,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_Blossom_base.json",
+   "instagram": "C8GVt-yRYdO"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_Bright_9x16_base.mov",
+   "frames": 209,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_Bright_9x16_base.json",
+   "instagram": "C2f71g8yxet"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_Bromance_BASE.mp4",
+   "frames": 393,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_Bromance_BASE.json",
+   "instagram": "C1D0ROzrOFt"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_Bubble_v10 9x16 Base.mp4",
+   "frames": 356,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_Bubble_v10_9x16_Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_Call_me_anytime_9x16_base.mov",
+   "frames": 255,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_Call_me_anytime_9x16_base.json",
+   "instagram": "CzaQ2wzsF_Z"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_CANCELPLANS_BASE.mp4",
+   "frames": 208,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_CANCELPLANS_BASE.json",
+   "instagram": "C6fU4xfsCZF"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_Charging_v9_9x16 base.mp4",
+   "frames": 221,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_Charging_v9_9x16_base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_Clutter_v17_9x16 base.mp4",
+   "frames": 374,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_Clutter_v17_9x16_base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_Coexisting_v14_9x16 base.mp4",
+   "frames": 428,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_Coexisting_v14_9x16_base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_Cooking_9x16_base_v2.mov",
+   "frames": 170,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_Cooking_9x16_base_v2.json",
+   "instagram": "C1dwoNFOxjP"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_Cups_v12_9x16_Base.mp4",
+   "frames": 302,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_Cups_v12_9x16_Base.json",
+   "instagram": "C4R0bRrry_0"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_Cute_9x16_base_v2.mov",
+   "frames": 160,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_Cute_9x16_base_v2.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_CuteFit-BASE.mp4",
+   "frames": 389,
+   "fps": 29.97,
+   "out": "curation/iteration_7__PP_CuteFit-BASE.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_Daylight_Base.mp4",
+   "frames": 208,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_Daylight_Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_delivered-BASE.mp4",
+   "frames": 293,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_delivered-BASE.json",
+   "instagram": "Cyw8sJMRLQP"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_Fog_Base.mp4",
+   "frames": 324,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_Fog_Base.json",
+   "instagram": "DFCM1nJRDVH"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_Folders_v16_9x16 base.mp4",
+   "frames": 329,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_Folders_v16_9x16_base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_Folding_Base.mp4",
+   "frames": 321,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_Folding_Base.json",
+   "instagram": "C-mCAvrxJsu"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_FoodPic_Base.mp4",
+   "frames": 293,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_FoodPic_Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_Heart_Anim_V10 9x16 Base.mp4",
+   "frames": 274,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_Heart_Anim_V10_9x16_Base.json",
+   "instagram": "C5mr0MZxIpN"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_Homecooked_Base.mp4",
+   "frames": 224,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_Homecooked_Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_Hot_and_Cold_9x16_base.mov",
+   "frames": 165,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_Hot_and_Cold_9x16_base.json",
+   "instagram": "C0dMrCyLT9-"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_HowTo_Animation_v5.mp4",
+   "frames": 322,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_HowTo_Animation_v5.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_Hype_base.mp4",
+   "frames": 386,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_Hype_base.json",
+   "instagram": "C7qBEpeRzCv"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_LastBite_Base.mp4",
+   "frames": 335,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_LastBite_Base.json",
+   "instagram": "CyZ0QOzLKJ9"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_MorningTikTok_Base.mp4",
+   "frames": 170,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_MorningTikTok_Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_Photogenic_Base.mp4",
+   "frames": 442,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_Photogenic_Base.json",
+   "instagram": "C3ooFisLZbU"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_Prepared_Base.mp4",
+   "frames": 169,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_Prepared_Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_QUALITYTIME_BASE.mp4",
+   "frames": 195,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_QUALITYTIME_BASE.json",
+   "instagram": "CxPICKpxAFW"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_Random_v6 9x16 base.mp4",
+   "frames": 249,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_Random_v6_9x16_base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_Ready_BASE.mp4",
+   "frames": 379,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_Ready_BASE.json",
+   "instagram": "C7A0CvYsRgv"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_RespondAsap_v9_9x16 base.mp4",
+   "frames": 228,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_RespondAsap_v9_9x16_base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_Rough_9x16_base.mov",
+   "frames": 259,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_Rough_9x16_base.json",
+   "instagram": "C8a8IF7xvlZ"
+  },
+  {
+   "skit": "iteration_7/293_videos/pp_SAMEROOM_BASE.mp4",
+   "frames": 163,
+   "fps": 24.0,
+   "out": "curation/iteration_7__pp_SAMEROOM_BASE.json",
+   "instagram": "CvLyO7ZuTB3"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_Shared_Base.mov",
+   "frames": 143,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_Shared_Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_shorts_Upset_9x16_base.mov",
+   "frames": 216,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_shorts_Upset_9x16_base.json",
+   "instagram": "Cy90DHPLGnH"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_SkinCare_BASE.mp4",
+   "frames": 289,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_SkinCare_BASE.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_Sleepless_Base.mp4",
+   "frames": 147,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_Sleepless_Base.json",
+   "instagram": "C-brDoRRRZS"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_Slow_9x16 Base.mp4",
+   "frames": 389,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_Slow_9x16_Base.json",
+   "instagram": "C-OzVO-Rz4G"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_Space_Base.mp4",
+   "frames": 350,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_Space_Base.json",
+   "instagram": "C6ke7GpMmpb"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_Temple_Base.mp4",
+   "frames": 207,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_Temple_Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_Tetris_v8_9x16_Base.mp4",
+   "frames": 278,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_Tetris_v8_9x16_Base.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_Thoughts_BASE.mp4",
+   "frames": 248,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_Thoughts_BASE.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_Toothbrush 9x16_Base.mp4",
+   "frames": 255,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_Toothbrush_9x16_Base.json",
+   "instagram": "C6ILFXTMeMx"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_touch_P&B_Base.mp4",
+   "frames": 200,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_touch_P&B_Base.json",
+   "instagram": "C3RdWLELKP-"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_Vacation_Base.mp4",
+   "frames": 349,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_Vacation_Base.json",
+   "instagram": "C7VZqJAMxdP"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_Waiting_Base.mov",
+   "frames": 394,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_Waiting_Base.json",
+   "instagram": "C9Yvb82xx8s"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_Wash_BASE.mp4",
+   "frames": 238,
+   "fps": 24.0,
+   "out": "curation/iteration_7__PP_Wash_BASE.json",
+   "instagram": ""
+  },
+  {
+   "skit": "iteration_7/293_videos/pp_WFH_Base.mp4",
+   "frames": 191,
+   "fps": 24.0,
+   "out": "curation/iteration_7__pp_WFH_Base.json",
+   "instagram": "Ct20_FhO5Z1"
+  }
+ ],
+ "skipped": [
+  {
+   "skit": "iteration_7/293_videos/PP-Germs-Base.mp4",
+   "reason": "294-frame re-edit of iteration_2 PP-Germs-Base.mp4 (314 f, curated in v9b)"
+  },
+  {
+   "skit": "iteration_7/293_videos/2D_PP_MothersDay26_Base.mp4",
+   "reason": "393-frame re-edit of iteration_1 2D_PP_MothersDay26_Base.mp4 (412 f, curated in v9b)"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-VoiceMessage-Base_B.mp4",
+   "reason": "same picture as iteration_2 PP-VoiceMessage-Base_A.mp4 (curated in v9b); audio-only variant"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_Cute_9x16_base.mov",
+   "reason": "older version of PP_Cute_9x16_base_v2.mov (same length; v2 curated)"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_Await_Base.mp4",
+   "reason": "near-identical picture to PP_Sleepless_Base.mp4 (147 f each, ~30 dB PSNR every frame)"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_Sleepless_Base_Short.mp4",
+   "reason": "49-frame cut of PP_Sleepless_Base.mp4"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP_Heart_Alt 9x16 Base.mp4",
+   "reason": "alternate of PP_Heart_Anim_V10 9x16 Base.mp4 (same length; V10 curated)"
+  },
+  {
+   "skit": "iteration_7/293_videos/PP-Bored-Base_audiov4.mp4",
+   "reason": "same picture as iteration_2 PP-Bored-Base_audiov5.mp4 (curated in v9b); audio-only variant"
+  }
+ ]
+}

@@ -9,6 +9,7 @@ the pictures to do that at frame accuracy. They only advise: the curator decides
     $PY curate_tools.py profile SKIT                # signals + candidate boundaries -> text + PNG plot
     $PY curate_tools.py strip SKIT A B [--step 2]   # frames A..B-1, numbered, as a grid PNG
     $PY curate_tools.py compare SKIT F1 F2          # two frames side by side + edge overlay
+    $PY curate_tools.py motion SKIT A B [--step 4 --band 0.05 0.35]   # camera scale/shift vs frame A
 
 SKIT is a path relative to the Data root (e.g. iteration_2/72_videos/PP-Chair-Base.mp4) or
 absolute. Frame numbers are 0-based decode order with passthrough timing (every real frame,
@@ -40,6 +41,10 @@ from PIL import Image, ImageDraw, ImageFont
 DATA = Path(os.environ.get("PUDGY_DATA", "/workspace/Data"))
 RAW = DATA / "raw"
 WORK = Path(os.environ.get("V9B_WORK", str(DATA / "processed/v9b_work")))
+# Off the GPU box (PUDGY_DATA set, e.g. the laptop's Data tree), the default would write work
+# images into Data/processed, which holds only training sets. curator-v10-20 hit this once.
+if "PUDGY_DATA" in os.environ and "V9B_WORK" not in os.environ:
+    sys.exit("set V9B_WORK to a scratch directory: with PUDGY_DATA set, the default would write into Data/processed")
 PW, PH = 270, 480          # analysis size (1080x1920 / 4)
 
 
@@ -72,10 +77,15 @@ def decode(path, w, h, fmt="gray"):
 
 def font(size):
     for f in ("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
-              "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"):
+              "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+              "/System/Library/Fonts/Supplemental/Arial Bold.ttf",     # macOS (v10 curation runs locally)
+              "/System/Library/Fonts/Helvetica.ttc"):
         if Path(f).exists():
             return ImageFont.truetype(f, size)
-    return ImageFont.load_default()
+    try:
+        return ImageFont.load_default(size)                          # Pillow >= 10.1: a scalable default
+    except TypeError:
+        return ImageFont.load_default()
 
 
 # ---------------------------------------------------------------------------------------
@@ -247,6 +257,39 @@ def compare(path, f1, f2, dest=None):
     return dest, both, only
 
 
+def motion(path, a, b, step, y0, y1, x0=0.0, x1=1.0):
+    """Camera motion over [a, b): an affine ECC fit of the background band [y0, y1) x [x0, x1)
+    (fractions of the picture) between frame a and every `step`-th frame after it, so slow
+    drift accumulates instead of hiding under a per-step tolerance (curator-v10-01's method:
+    it settled every FastText push-in that keep12 called LOOK). A locked camera stays at scale
+    1.000 and ~0 px. Pick a band with background texture and no character in it."""
+    F = decode(path, PW, PH)
+    b = min(b, len(F))
+    mask = np.zeros((PH, PW), np.uint8)
+    mask[int(y0 * PH):int(y1 * PH), int(x0 * PW):int(x1 * PW)] = 255
+    ref = F[a].astype(np.float32)
+    # Texture in the band, in both directions. On a plain or one-directional band ECC can
+    # converge to the identity (scale 1.0000, cc 1.000) without matching anything
+    # (curator-v10-08, ActsOfService; curator-v10-17, sofa bases), so a "locked" reading
+    # there proves nothing.
+    band = ref[mask > 0].reshape(-1, int(x1 * PW) - int(x0 * PW))
+    gx = np.abs(np.diff(band, axis=1)) > 8
+    gy = np.abs(np.diff(band, axis=0)) > 8
+    texture = {"x": round(float(gx.mean()), 4), "y": round(float(gy.mean()), 4)}
+    out = [{"texture": texture}]
+    for k in range(a + step, b, step):
+        M = np.eye(2, 3, dtype=np.float32)
+        try:
+            cc, M = cv2.findTransformECC(ref, F[k].astype(np.float32), M, cv2.MOTION_AFFINE,
+                                         (cv2.TERM_CRITERIA_EPS | cv2.TERM_CRITERIA_COUNT, 200, 1e-6), mask, 5)
+        except cv2.error:
+            out.append({"frame": k, "fit": False}); continue
+        s = float(np.sqrt(abs(np.linalg.det(M[:, :2]))))
+        out.append({"frame": k, "fit": True, "scale": round(s, 4), "tx": round(float(M[0, 2]) * 1080 / PW, 1),
+                    "ty": round(float(M[1, 2]) * 1080 / PW, 1), "cc": round(float(cc), 3)})
+    return out, len(F)
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sp = ap.add_subparsers(dest="cmd", required=True)
@@ -256,6 +299,11 @@ def main():
     s.add_argument("--cols", type=int, default=8); s.add_argument("--out", type=Path)
     c = sp.add_parser("compare"); c.add_argument("skit"); c.add_argument("f1", type=int); c.add_argument("f2", type=int)
     c.add_argument("--out", type=Path)
+    m = sp.add_parser("motion"); m.add_argument("skit"); m.add_argument("start", type=int); m.add_argument("end", type=int)
+    m.add_argument("--step", type=int, default=4)
+    m.add_argument("--band", type=float, nargs=2, default=(0.05, 0.35), metavar=("Y0", "Y1"),
+                   help="background rows as fractions of the height (default the top 5-35%%)")
+    m.add_argument("--cols", type=float, nargs=2, default=(0.0, 1.0), metavar=("X0", "X1"))
     a = ap.parse_args()
     path = skit_path(a.skit)
     if not path.exists():
@@ -280,6 +328,20 @@ def main():
     elif a.cmd == "strip":
         dest, n = strip(path, a.start, a.end, a.step, a.width, a.cols, a.out)
         print(f"{dest}  (skit has {n} frames)")
+    elif a.cmd == "motion":
+        res, n = motion(path, a.start, a.end, a.step, *a.band, *a.cols)
+        print(f"{path.name}: camera vs frame {a.start}, band y {a.band[0]:.2f}-{a.band[1]:.2f} "
+              f"x {a.cols[0]:.2f}-{a.cols[1]:.2f}  (locked = scale 1.000, tx/ty ~0 px at 1080 wide; cc = fit quality)\n"
+              f"  trust a row only at cc >= 0.95. Low cc = a character is in the band, pick another band; "
+              f"'no fit' = a plain ground with no texture: judge by eye (character size, shadow, compare)")
+        tx_ = res[0]["texture"]
+        weak = min(tx_["x"], tx_["y"]) < 0.01
+        print(f"  band texture: edges across {tx_['x']:.2%}, edges down {tx_['y']:.2%}"
+              + ("   ** TOO LITTLE TEXTURE (one or both directions): a 1.0000 / cc 1.000 reading here proves "
+                 "NOTHING. Pick a textured band or judge with compare **" if weak else ""))
+        for r in res[1:]:
+            print(f"  f{r['frame']:<5} " + (f"scale {r['scale']:.4f}  tx {r['tx']:+7.1f}  ty {r['ty']:+7.1f}  cc {r['cc']:.3f}"
+                                           if r["fit"] else "no fit (too little texture in the band?)"))
     else:
         dest, both, only = compare(path, a.f1, a.f2, a.out)
         print(f"{dest}  static edge px {both}, changed edge px {only}  "

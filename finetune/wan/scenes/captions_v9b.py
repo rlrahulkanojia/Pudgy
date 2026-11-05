@@ -34,6 +34,15 @@ LEAD_NAMES = {"pax": "Pax", "polly": "Polly"}
 # when nobody walks toward or away from the camera, so it is dropped when size_change.
 CAMERA_CLAUSE = "fixed camera, locked-off shot"
 SAME_SIZE = "the characters stay the same size"
+# v10, decision U3 (Training_Approach_v10.md section 7): a filled camera_move span
+# (CURATION_v10.md) names its move here in place of the fixed-camera clause. Static spans
+# compile exactly as in v9b. "the characters stay the same size" is never claimed for a
+# move: a push or zoom changes their size on screen.
+MOVE_CLAUSES = {"push_in": "the camera pushes in", "pull_back": "the camera pulls back",   # no speed word: some ease or speed up (curator-v10-32, Space)
+                "zoom_in": "the camera zooms in", "zoom_out": "the camera zooms out",
+                "pan_left": "the camera pans left", "pan_right": "the camera pans right",
+                "tilt_up": "the camera tilts up", "tilt_down": "the camera tilts down",
+                "shake": "the camera shakes", "whip": "a quick whip pan", "rotate": "the camera rotates"}
 SCREEN_WORDS = {"left": "on the left", "right": "on the right", "center": "in the middle",
                 "left-center": "left of center", "right-center": "right of center"}
 
@@ -126,7 +135,9 @@ def then(s):
     if s.lower().startswith(("then ", "meanwhile", "at the same time", "at last", "finally")):
         return sentence(s)
     first = s.split()[0]
-    keep = first.rstrip(",'s") in LEAD_NAMES.values() or first.isupper()
+    # An acronym keeps its capitals; the article "A" ("A flipper reaches in", curator-v10-27)
+    # is a one-letter isupper() word and must be lowered like any other.
+    keep = first.rstrip(",'s") in LEAD_NAMES.values() or (first.isupper() and len(first) > 1)
     return "Then " + (s if keep else s[0].lower() + s[1:])
 
 
@@ -154,7 +165,12 @@ def compile_window(d, sp, a=None, b=None):
     acts = [resolve_refs(bt["text"], d["cast"], d["outfits"]) for bt in beats]
     action = ". ".join(sentence(x) if i == 0 else then(x) for i, x in enumerate(acts)) + "."
     same = SAME_SIZE if len(chars) > 1 else SAME_SIZE.replace("characters stay", "character stays")
-    cam = f"{sp['framing']} shot, {sp['angle']}, {CAMERA_CLAUSE}" + ("" if sp["size_change"] else f", {same}")
+    if sp.get("camera", "static") == "static":
+        cam = f"{sp['framing']} shot, {sp['angle']}, {CAMERA_CLAUSE}" + ("" if sp["size_change"] else f", {same}")
+    elif sp["camera"] in MOVE_CLAUSES:
+        cam = f"{sp['framing']} shot, {sp['angle']}, {MOVE_CLAUSES[sp['camera']]}"
+    else:
+        raise ValueError(f"camera {sp['camera']!r} has no caption clause (only static and MOVE_CLAUSES compile)")
     cap = f"{P.STYLE}{who}, {where}. {action} {sentence(cam)}."
     # The iFin phone: the registry phrase on first mention, its short name after that
     # (Assets_v9 section 2, "one name, one look").
@@ -171,15 +187,29 @@ def kept_spans(d):
     return [sp for sp in d["spans"] if sp.get("keep")]
 
 
+def filled_spans(d):
+    """Dropped spans that carry full fields for a later flip (CURATION_v10.md: camera moves
+    for U3, lookalikes for U5)."""
+    return [sp for sp in d["spans"] if not sp.get("keep") and sp.get("beats")]
+
+
 def main():
     import signal
     signal.signal(signal.SIGPIPE, signal.SIG_DFL)      # quiet when piped into head
-    for f in sys.argv[1:]:
+    dropped = "--include-dropped" in sys.argv            # also preview filled dropped spans
+    for f in [a for a in sys.argv[1:] if not a.startswith("--")]:
         d = json.loads(Path(f).read_text())
         print(f"== {d['skit']}")
         for sp in kept_spans(d):
             print(f"\n[{sp['start']},{sp['end']}) {sp['end'] - sp['start']}f")
             print(compile_window(d, sp))
+        if dropped:
+            for sp in filled_spans(d):
+                print(f"\n[{sp['start']},{sp['end']}) {sp['end'] - sp['start']}f  DROPPED ({sp['drop_reason']}), filled")
+                try:
+                    print(compile_window(d, sp))
+                except (KeyError, ValueError) as e:
+                    print(f"  cannot compile: {e!r}")
 
 
 if __name__ == "__main__":

@@ -148,12 +148,24 @@ def check(path):
                 E(f"{tag}: drop_reason {sp.get('drop_reason')!r} not in {sorted(DROP_REASONS)}")
             if sp.get("drop_reason") == "other" and not sp.get("notes"):
                 E(f"{tag}: drop_reason 'other' needs notes")
-            continue
-        # ---- kept spans ----
+            if not sp.get("beats"):
+                continue
+            # A dropped span with beats is filled for a later flip (CURATION_v10.md: camera
+            # moves for U3, lookalikes for U5). It must be as valid as a kept span, except
+            # for the one reason it was dropped.
+            hedge = sp.get("drop_reason")
+            tag += f" (dropped as {hedge}, filled)"
+        else:
+            hedge = None
+        # ---- kept spans, and filled dropped spans ----
         if s1 - s0 < MIN_FRAMES:
             E(f"{tag}: kept span is {s1 - s0} frames, below f{MIN_FRAMES} (drop it as too_short)")
-        if cam != "static":
+        if cam != "static" and hedge != "camera_move":
             E(f"{tag}: kept span must be camera 'static' (D3), got {cam!r}")
+        if hedge == "camera_move" and cam == "static":
+            # a warning: v9b's verify pass dropped some spans as camera_move without
+            # changing the field (LifeWithHim); new curation should name the move
+            W(f"{tag}: dropped as camera_move but camera is 'static' (name the move)")
         if b in ("transition",):
             E(f"{tag}: a transition span cannot be kept")
         if sp.get("framing") not in FRAMINGS:
@@ -171,7 +183,7 @@ def check(path):
             E(f"{tag}: view uses a camera word {sorted(words(view) & CAMERA_WORDS)}")
         if not isinstance(sp.get("size_change"), bool):
             E(f"{tag}: size_change must be true/false (does a character grow/shrink by moving toward/away from the camera?)")
-        if sp.get("overlays"):
+        if sp.get("overlays") and hedge != "graphic_overlay":
             E(f"{tag}: kept span has overlays {sp['overlays']} (drop or split around them)")
         chars = sp.get("characters", [])
         ids = [c.get("id") for c in chars]
@@ -183,7 +195,7 @@ def check(path):
             cid = c.get("id")
             if cid not in cast:
                 E(f"{tag}: character {cid!r} not in cast"); continue
-            if cast[cid].get("lookalike"):
+            if cast[cid].get("lookalike") and hedge != "lookalike":
                 E(f"{tag}: kept span contains lookalike {cid} (D4: drop)")
             if c.get("screen") not in SCREEN:
                 E(f"{tag}: {cid} screen {c.get('screen')!r} not in {sorted(SCREEN)}")
@@ -252,7 +264,7 @@ def check(path):
 def summary(files):
     kept = drop = 0
     kept_f = 0
-    reasons = {}
+    reasons, filled = {}, {}
     for f in files:
         d = json.loads(Path(f).read_text())
         for sp in d["spans"]:
@@ -260,9 +272,14 @@ def summary(files):
                 kept += 1; kept_f += sp["end"] - sp["start"]
             else:
                 drop += 1
-                reasons[sp.get("drop_reason")] = reasons.get(sp.get("drop_reason"), 0) + sp["end"] - sp["start"]
+                r = sp.get("drop_reason")
+                reasons[r] = reasons.get(r, 0) + sp["end"] - sp["start"]
+                if sp.get("beats"):
+                    filled[r] = filled.get(r, 0) + sp["end"] - sp["start"]
     print(f"\n{len(files)} files: {kept} kept spans ({kept_f / 24 / 60:.1f} min), {drop} dropped spans")
     print("dropped frames by reason:", {k: v for k, v in sorted(reasons.items(), key=lambda x: -x[1])})
+    if filled:
+        print("  of which filled for a later flip:", {k: v for k, v in sorted(filled.items(), key=lambda x: -x[1])})
 
 
 def main():
