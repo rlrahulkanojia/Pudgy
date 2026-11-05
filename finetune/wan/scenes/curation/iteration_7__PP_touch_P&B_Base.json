@@ -1,0 +1,95 @@
+{
+ "skit": "iteration_7/293_videos/PP_touch_P&B_Base.mp4",
+ "frames": 200,
+ "fps": 24,
+ "curated_by": "curator-v10-26",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a dim bedroom drawn on a plain grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 200,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a big padded teal headboard, rumpled grey covers and a bedside lamp on a nightstand",
+   "time": "night",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 103,
+     "text": "Pax sits up in bed holding a glowing tablet and reaches his other flipper across to pat the covers by the sleeping Polly"
+    },
+    {
+     "start": 103,
+     "end": 110,
+     "text": "Pax draws his flipper back to the tablet and blinks"
+    },
+    {
+     "start": 110,
+     "end": 130,
+     "text": "Pax holds the glowing tablet in both flippers while Polly sleeps on her side beside him"
+    },
+    {
+     "start": 130,
+     "end": 178,
+     "text": "Pax keeps holding the tablet while a lump rises in the covers between them and shifts about"
+    },
+    {
+     "start": 178,
+     "end": 194,
+     "text": "Pax leans forward with wide eyes, his face lit by the glow of the tablet"
+    },
+    {
+     "start": 194,
+     "end": 200,
+     "text": "Pax blinks, sits back and stretches his flipper out toward Polly again"
+    }
+   ],
+   "props": [
+    "tablet",
+    "bed",
+    "bedside lamp"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "one locked shot, the whole skit: ECC on the lamp band (y 0.38-0.52, x 0-0.12) scale 1.0000, <=0.4 px, cc 1.000 (one outlier row f100 at cc 0.967); compare 0/100, 0/150 and 0/199 keep the lamp, headboard, pillows, bed edge and the sleeping Polly's edges black, only Pax and the cover folds change. Polly stays asleep on her side the whole skit. The tablet's screen faces Pax; its glow on his chest and face is local light. A lump rises in the covers between them from f130 and wriggles until ~f178 (whose foot is not shown). Steady dim night palette: time night. Top third plain wall, bottom fifth covers and bed side: no overlay"
+  }
+ ]
+}

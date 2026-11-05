@@ -1,0 +1,199 @@
+{
+ "skit": "iteration_7/293_videos/PP_Prepared_Base.mp4",
+ "frames": 169,
+ "fps": 24.0,
+ "curated_by": "curator-v10-12",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "round aviator goggles",
+  "o2": "a red parachute backpack"
+ },
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "an empty space with a plain pale grey background"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "a pale open sky"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 72,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "medium wide",
+   "angle": "high angle",
+   "setting": "s1",
+   "view": "with stacks of books, open books, a laptop, two mugs, papers and tickets scattered on the floor around her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 33,
+     "text": "Polly sits on the floor among piles of books with an open book in her lap, looking ahead with a worried brow"
+    },
+    {
+     "start": 33,
+     "end": 42,
+     "text": "Polly lifts the open book and props it on the stack of books beside her"
+    },
+    {
+     "start": 42,
+     "end": 72,
+     "text": "Polly rests a flipper against her chin and frowns in thought, glancing to the side"
+    }
+   ],
+   "props": [
+    "books",
+    "laptop",
+    "mugs",
+    "papers",
+    "tickets",
+    "sticky notes",
+    "highlighter"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "book cover title",
+    "tickets"
+   ],
+   "travel": "none",
+   "notes": "slow push-in from f0 to f71: ECC on the book bands (y 0.25-0.42 and y 0.75-0.95) scale climbs steadily 1.003 at f8 to 1.032 at f72, ty -31 px; compare 0/80 every book edge doubled. Static from f72 (f72-f80 identical in ECC). The orange mug with a cream penguin face is a generic prop, not Pax or Polly. Tickets and the book title carry invented Pudgy-world place names (in-world text). No caption or watermark (top third and bottom fifth checked every 12 frames) | verification pass 2 (verify_v10_report_v09): beat 1: Polly is not reading - f0-32 she holds the open book in her lap but looks up and ahead with a worried brow"
+  },
+  {
+   "start": 72,
+   "end": 81,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "9 locked frames after the push-in: Polly thinking with a flipper at her chin"
+  },
+  {
+   "start": 81,
+   "end": 90,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "tilt_down",
+   "notes": "verification pass 2 (verify_v10_report_v09): 9 frames: a cloud streak rises out of the top edge (24-35 px/frame) as the view follows the falling Pax; also camera_move"
+  },
+  {
+   "start": 90,
+   "end": 112,
+   "boundary": "camera",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "close-up",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "partial",
+     "outfit": [
+      "o1",
+      "o2"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 90,
+     "end": 112,
+     "text": "Pax holds a red book up close in front of him and reads it intently, blinking once"
+    }
+   ],
+   "props": [
+    "red book"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "book cover title"
+   ],
+   "travel": "none",
+   "notes": "plain sky gradient, so ECC has no fit; compare 81/111: Pax, goggles, straps and book edges black (only his eyes and a small shift of the book change); Pax fills the picture, cut off at the top, left and right edges. The book cover shows a small cream penguin under a parachute (generic, not a lead) and a title (in-world text, not transcribed). No overlay | verification pass 2 (verify_v10_report_v09): camera: the shot opens with the view still descending with the falling Pax - a pale cloud streak in the top fifth rises 24-35 px per frame and slides out of the top edge f81-89 (same motion as the tilt_down in [112,169)); from f90 the sky is a plain gradient and compare decides (Pax's edges overlap 90/111). Start the kept span at f90 (22 frames)"
+  },
+  {
+   "start": 112,
+   "end": 169,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "tilt_down",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a small red propeller plane above him and long streaks of white cloud",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [
+      "o1",
+      "o2"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 112,
+     "end": 141,
+     "text": "Pax drops through the sky reading his red book, thin speed lines streaking past, while a small red plane flies off above him"
+    },
+    {
+     "start": 141,
+     "end": 169,
+     "text": "Pax keeps falling and reading as a long cloud streak rises up behind him and the plane flies toward the upper left corner"
+    }
+   ],
+   "props": [
+    "red book",
+    "propeller plane"
+   ],
+   "prop_events": [],
+   "effects": [
+    "motion lines"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "the view descends with Pax through the whole shot: the cloud streak at the bottom rises about 0.4 of the frame height over 54 frames while the plane climbs out toward the upper left; Pax drifts down and right more slowly. Plain sky, so ECC has no fit; compare 112/168 has no edge in common. Faint vertical speed lines in the sky. Skit ends on this shot. No overlay | verification pass 2 (verify_v10_report_v09): beat 2: the plane does not shrink - its red body stays 228x156 px (f112, f154, f168) while it climbs toward the upper left; the cloud streak rises up to his level by f160-168, it does not pass him; effects: thin vertical speed lines streak through the sky the whole shot (allowed motion lines), not listed or described"
+  }
+ ]
+}

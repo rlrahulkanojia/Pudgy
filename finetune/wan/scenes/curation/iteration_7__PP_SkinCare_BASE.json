@@ -1,0 +1,22 @@
+{
+ "skit": "iteration_7/293_videos/PP_SkinCare_BASE.mp4",
+ "frames": 289,
+ "fps": 24.0,
+ "curated_by": "curator-v10-24",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {},
+ "outfits": {},
+ "settings": {},
+ "spans": [
+  {
+   "start": 0,
+   "end": 289,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "off_style",
+   "camera": "other",
+   "notes": "OLD_DESIGN: both penguins have bright yellow beaks and feet (~RGB 240,208,48) throughout, drawn flat (judged on the characters, as in Bromance). Content: the rose penguin washes and pats her face at a sink with a soap pump and tap (to ~f97), then the blue penguin at the same sink splashes his face (~f97-188), a gradual change ~f184-192 to the blue penguin standing alone with a sparkle (to f235), and a cut at f235/236 to both standing side by side while a used sheet mask lies at the rose one's feet. One reason for the whole run, so one span"
+  }
+ ]
+}

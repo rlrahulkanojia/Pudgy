@@ -1,0 +1,214 @@
+{
+ "skit": "iteration_7/293_videos/PP-Leave-Base.mp4",
+ "frames": 160,
+ "fps": 24.0,
+ "curated_by": "curator-v10-32",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a bedroom drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 21,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a low stool in front and a yellow nightstand and bed behind",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 8,
+     "text": "Pax slides a silver laptop down into an open black briefcase sitting on a low stool"
+    },
+    {
+     "start": 8,
+     "end": 16,
+     "text": "Pax presses the laptop flat inside the briefcase with a flipper, glancing off to the right"
+    },
+    {
+     "start": 16,
+     "end": 21,
+     "text": "Pax swings the briefcase lid down and shuts it"
+    }
+   ],
+   "props": [
+    "laptop",
+    "black briefcase",
+    "low stool"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "locked f0-20 (nightstand band 0.4 px cc 0.998); the move starts at f21. The bed and nightstand are drawn softly blurred behind the characters throughout the skit (a drawn depth of field, not a whole-picture effect). The cream knob on the bed post is a chick-head finial, not a lead. Character colours are the current design (orange beak and feet, flat cel shading). No caption or watermark. | verification pass 2 (verify_v10_report_v26): beat 2 [8,16): Pax is not looking down at the laptop; his pupils look off to the right the whole span; locked f0-20 (bed patch dx 0 dy 0, raw diff <=0.46); the pull-back starts at f21 (bed patch -19 px); exactly 21 frames; feet hue ~15-26 deg (salmon): current design"
+  },
+  {
+   "start": 21,
+   "end": 39,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "pull back and pan right f21-38 revealing Polly, who comes in from the right; settled at f39 (bed band 0 px from f39). 18 frames, so too_short."
+  },
+  {
+   "start": 39,
+   "end": 70,
+   "boundary": "camera",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a closed briefcase on a low stool and a yellow bed and nightstand behind",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 39,
+     "end": 48,
+     "text": "Polly holds a black necktie out to Pax, who turns and looks at it"
+    },
+    {
+     "start": 48,
+     "end": 60,
+     "text": "Pax reaches out and takes hold of the tie while Polly still holds it"
+    },
+    {
+     "start": 60,
+     "end": 70,
+     "text": "Pax lifts the tie up toward his neck while Polly lets go and clasps her flippers in front of her"
+    }
+   ],
+   "props": [
+    "black necktie",
+    "black briefcase",
+    "low stool"
+   ],
+   "prop_events": [
+    {
+     "prop": "black necktie",
+     "event": "hands_over",
+     "frame": 60,
+     "by": "polly"
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "locked f39-69 (bed band 0 px, cc 1.000). The tie is a handed prop here, not yet worn."
+  },
+  {
+   "start": 70,
+   "end": 99,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a closed briefcase on a low stool and a yellow nightstand behind",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 70,
+     "end": 77,
+     "text": "Pax swings a black necktie around his neck"
+    },
+    {
+     "start": 77,
+     "end": 85,
+     "text": "Pax pulls the tie knot snug at his chest and briefly closes his eyes"
+    },
+    {
+     "start": 85,
+     "end": 99,
+     "text": "Pax holds the knot with both flippers and stares ahead with one brow raised and his beak slightly open"
+    }
+   ],
+   "props": [
+    "black necktie",
+    "black briefcase"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "locked f70-98 (bed band 0 px cc 1.000, table band 0 px; compare 70/98 background black). The tie goes on at f70-76, only 6 frames before 23 with it, so it is left off outfit and the beats say when it goes on."
+  },
+  {
+   "start": 99,
+   "end": 138,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "other",
+   "camera": "push_in",
+   "notes": "inset-panel margin: the picture is drawn smaller than the frame, leaving a lighter border 52 px at the top and 26 px at the right (RGB 215,231,237 around 210,229,233) f99-137, until a slow push-in (from about f105, scale 1.06 by f137) fills the frame at f138. Polly alone, teary, hugging herself."
+  },
+  {
+   "start": 138,
+   "end": 160,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "push_in",
+   "notes": "the push-in continues and speeds up f138-148 (11 frames), then a static rest f149-159 (11 frames) while Polly sobs with her flippers to her face; each part is under 21 frames."
+  }
+ ]
+}

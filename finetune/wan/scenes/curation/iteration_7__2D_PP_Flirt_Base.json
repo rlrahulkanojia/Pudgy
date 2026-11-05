@@ -1,0 +1,203 @@
+{
+ "skit": "iteration_7/293_videos/2D_PP_Flirt_Base.mp4",
+ "frames": 212,
+ "fps": 24.0,
+ "curated_by": "curator-v10-25",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a shop drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 33,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "push_in",
+   "notes": "Pax stands in a shop aisle holding a phone with a tiny Polly-look pink penguin charm on top of it, visible f0-32 (crop f0/f20/f32). Also a slow push-in through the whole shot (ECC on the shelf bands x 0-0.3 and x 0.72-1.0: scale 1.004 at f4 -> 1.029 at f32, cc 0.96-1.00), so camera_move is not the only reason"
+  },
+  {
+   "start": 33,
+   "end": 55,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with tall shelves of purses, a bow-trimmed hat and glassware around him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "enters",
+     "enters_at": 34,
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 33,
+     "end": 41,
+     "text": "Pax pokes a flipper out from behind the edge of a tall shelf, then leans his head out around it"
+    },
+    {
+     "start": 41,
+     "end": 55,
+     "text": "Pax peeks around the shelf edge and stares out with wide eyes, one flipper resting on his belly"
+    }
+   ],
+   "props": [
+    "shelves",
+    "purses",
+    "hat with a bow",
+    "glass goblets"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "enters",
+   "notes": "camera locked: ECC on the left shelf band (x 0-0.3, full height) scale 1.0000, 0 px, cc 1.000 f36-54; compare 33/54 keeps every shelf edge black. f33 shows only the shelves; a flipper tip shows from f34, his head from f40. No overlay in the top third or bottom fifth; no lead depiction on the shelves"
+  },
+  {
+   "start": 55,
+   "end": 132,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "pan_right",
+   "notes": "Polly browses a cosmetics shelf (GLAM-labelled pouches) while a large blurred Pax shape in the foreground slides out to the left. Polly's purse carries a Pax-face keychain charm, seen from behind as a small round charm f55-82 and face-on f83-131; her phone (f97-115) has a Pax-look penguin charm on top. Also a steady camera move through the whole shot (ECC on the top-shelf band y 0.12-0.34, x 0.55-1.0: tx -6 px at f59 -> -84 px at f131, scale 1.000 -> 1.022, cc 1.000), so camera_move is not the only reason. Not split at f83: no hard cut, and the f55-82 part has the same charm and the blurred foreground lead"
+  },
+  {
+   "start": 132,
+   "end": 175,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with tall shelves of purses, a bow-trimmed hat and glassware around him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "exits",
+     "exits_at": 168,
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 132,
+     "end": 137,
+     "text": "Pax peeks out from behind the edge of a tall shelf, staring wide-eyed off to the side"
+    },
+    {
+     "start": 137,
+     "end": 141,
+     "text": "Pax squeezes his eyes shut for a moment while still peeking around the shelf"
+    },
+    {
+     "start": 141,
+     "end": 152,
+     "text": "Pax opens his eyes wide with raised brows and parts his beak, still peeking out"
+    },
+    {
+     "start": 152,
+     "end": 163,
+     "text": "Pax narrows his eyes into a sly look while peeking out from behind the shelf"
+    },
+    {
+     "start": 163,
+     "end": 175,
+     "text": "Pax closes his eyes and slips back behind the shelf, his flipper vanishing last, leaving only the shelves"
+    }
+   ],
+   "props": [
+    "shelves",
+    "purses",
+    "hat with a bow",
+    "glass goblets"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "exits",
+   "notes": "same set-up as f33-54; camera locked: ECC on the left shelf band (x 0-0.3, full height) scale 1.0000, 0 px, cc 1.000 f136-172; compare 132/174 keeps every shelf edge black. Pax gone from f168 (only a sliver at f167); f168-174 empty shelves. No overlay | verification pass 2 (verify_v10_report_v20): beat 4 (f152-163): Pax does not lean out further; his head stays at the same place behind the shelf edge f152-162 (beak closes f153, sly half-lidded look). 'as he leans out' claims a motion that is not there; checked: camera locked (left shelf band and top-right band 1.0000/0 px cc 1.000, compare 132/174 black); no charm or depiction on the shelves at full resolution; eyes shut f137-139, beak open"
+  },
+  {
+   "start": 175,
+   "end": 206,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with rows of white shelving units stretching back behind him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 175,
+     "end": 183,
+     "text": "Pax turns to face forward, frowning with narrowed eyes"
+    },
+    {
+     "start": 183,
+     "end": 194,
+     "text": "Pax stands still in the aisle with a sulky frown and narrowed eyes"
+    },
+    {
+     "start": 194,
+     "end": 206,
+     "text": "Pax squeezes his eyes shut, tilts his head and opens his beak a little"
+    }
+   ],
+   "props": [
+    "shelves"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: ECC on both shelf bands (y 0.22-0.70, x 0-0.3 and x 0.7-1.0) scale 1.0000, 0 px, cc 1.000 f176-205; a fast push-in starts at f206 (scale 1.010 at f206, 1.067 at f207). compare 175/205 keeps every shelf edge black. No phone in this shot. The far shelves are drawn soft-focus (background only; Pax is sharp). No overlay"
+  },
+  {
+   "start": 206,
+   "end": 212,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "push_in",
+   "notes": "6 frames: a fast push-in from f206 while Polly pops up beside Pax blushing, with a big flame-like glow behind her (f207-211)"
+  }
+ ]
+}

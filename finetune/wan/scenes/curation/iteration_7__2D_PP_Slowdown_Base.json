@@ -1,0 +1,131 @@
+{
+ "skit": "iteration_7/293_videos/2D_PP_Slowdown_Base.mp4",
+ "frames": 288,
+ "fps": 24.0,
+ "curated_by": "curator-v10-25",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {"kind": "lead"},
+  "polly": {"kind": "lead"}
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {"kind": "set", "desc": "a snowy clearing with snow-dusted pine trees"}
+ },
+ "spans": [
+  {
+   "start": 0, "end": 22, "boundary": "start", "keep": true,
+   "camera": "static", "framing": "medium wide", "angle": "eye level",
+   "setting": "s1",
+   "view": "with a small red rose bush in front of them and leafy bushes with pale roses in the foreground",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "left-center", "presence": "full", "outfit": []},
+    {"id": "polly", "screen": "right-center", "presence": "full", "outfit": []}
+   ],
+   "beats": [
+    {"start": 0, "end": 8, "text": "Pax bends down over the small rose bush in front of him while Polly stands beside him watching"},
+    {"start": 8, "end": 16, "text": "Pax plucks a red rose from the bush while Polly closes her eyes, then lifts her flippers to her cheeks"},
+    {"start": 16, "end": 22, "text": "Pax straightens up holding out the red rose while Polly turns away and waddles off to the right"}
+   ],
+   "props": ["rose bush", "red rose"],
+   "prop_events": [], "effects": [], "overlays": [], "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "camera locked f0-21: ECC on the foreground bush band (y 0.78-0.98) scale 1.0000, 0 px, cc 1.000 to f21 (step 1); the pan starts at f22 (-3.4 px). compare 0/21 keeps the bush and tree edges black. No overlay in the top third or bottom fifth"
+  },
+  {
+   "start": 22, "end": 39, "boundary": "camera", "keep": false, "drop_reason": "too_short",
+   "camera": "pan_right",
+   "notes": "17-frame pan right following Polly as she walks away from Pax (bush band tx -3 px at f22, -14 at f23, -32 at f24; -160 px by f37 on the tree band); ends at f38"
+  },
+  {
+   "start": 39, "end": 54, "boundary": "camera", "keep": false, "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "15 static frames after the pan (tree band x 0-0.3 and bush band 0 px vs f39 through f53): Polly stops and looks up as an orange butterfly flutters in"
+  },
+  {
+   "start": 54, "end": 82, "boundary": "cut", "keep": true,
+   "camera": "static", "framing": "medium", "angle": "eye level",
+   "setting": "s1",
+   "view": "with purple crocuses poking out of the snow around her",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "polly", "screen": "center", "presence": "full", "outfit": []}
+   ],
+   "beats": [
+    {"start": 54, "end": 59, "text": "Polly stands in the snow and looks up at an orange butterfly fluttering in from the right"},
+    {"start": 59, "end": 74, "text": "Polly clasps her flippers under her beak and gazes up at the butterfly fluttering by the pine tree"},
+    {"start": 74, "end": 82, "text": "Polly lowers her flippers and keeps watching the butterfly with wide, shining eyes"}
+   ],
+   "props": ["orange butterfly", "crocuses"],
+   "prop_events": [], "effects": [], "overlays": [], "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f54-81: ECC on the bottom band (y 0.80-1.0) scale 1.0000, 0 px, cc 1.000 to f81 (step 1); a push-in starts at f82. compare 54/81 keeps the trees, crocuses and bush black. The butterfly is treated as a prop (an animal, no identity risk). No overlay"
+  },
+  {
+   "start": 82, "end": 117, "boundary": "camera", "keep": false, "drop_reason": "camera_move",
+   "camera": "push_in", "framing": "medium", "angle": "eye level",
+   "setting": "s1",
+   "view": "with purple crocuses poking out of the snow around her",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "polly", "screen": "center", "presence": "full", "outfit": []}
+   ],
+   "beats": [
+    {"start": 82, "end": 96, "text": "Polly stretches a flipper out toward the orange butterfly fluttering beside the pine tree"},
+    {"start": 96, "end": 117, "text": "Polly raises the flipper high and the butterfly flutters at its tip while she watches it, beak open"}
+   ],
+   "props": ["orange butterfly", "crocuses"],
+   "prop_events": [], "effects": [], "overlays": [], "in_world_text": [],
+   "travel": "none",
+   "notes": "steady push-in with a slight downward drift from f82 to the cut: ECC on the bottom band (y 0.80-1.0) scale 1.004 at f82 -> 1.088 at f114, ty -9 -> -151 px, cc 0.92-0.99; compare 82/116 doubles the crocus and bush edges. Polly and the trees stay sharp. Filled for U3"
+  },
+  {
+   "start": 117, "end": 190, "boundary": "cut", "keep": false, "drop_reason": "effect",
+   "camera": "push_in",
+   "notes": "rack focus inside a push-in: f117-147 Pax (small, in the background holding the rose) and the trees are drawn soft-focus behind a sharp Polly reaching for the butterfly; f148-150 the focus shifts; f150-189 Polly is heavily blurred and Pax sharp (Laplacian variance on Polly 760 -> 20, on Pax 13-88 -> 1040). A lead drawn out of focus is not the normal flat look, so effect, per the reason order over camera_move. Also a steady push-in the whole shot (bottom band scale 1.007 at f123 -> 1.104 at f189, cc 0.995-1.000)"
+  },
+  {
+   "start": 190, "end": 223, "boundary": "cut", "keep": false, "drop_reason": "camera_move",
+   "camera": "push_in", "framing": "medium", "angle": "eye level",
+   "setting": "s1",
+   "view": "with a red rose bush beside him",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "center", "presence": "full", "outfit": []}
+   ],
+   "beats": [
+    {"start": 190, "end": 205, "text": "Pax holds a red rose against his chest with both flippers, gazing ahead with teary eyes"},
+    {"start": 205, "end": 223, "text": "Pax keeps clutching the rose to his chest, his brows drawn up in a sad, worried look"}
+   ],
+   "props": ["red rose", "rose bush"],
+   "prop_events": [], "effects": ["tears"], "overlays": [], "in_world_text": [],
+   "travel": "none",
+   "notes": "slow push-in the whole shot: ECC on the tree band (y 0.05-0.45, x 0-0.25) scale 1.007 at f193 -> 1.047 at f220, ty -4 -> -45 px, cc 0.98-1.00; compare 190/222 doubles every tree edge. The trees behind are drawn soft-focus (background only); Pax is sharp. Filled for U3"
+  },
+  {
+   "start": 223, "end": 288, "boundary": "cut", "keep": true,
+   "camera": "static", "framing": "medium wide", "angle": "eye level",
+   "setting": "s1",
+   "view": "with a leafy bush and a clump of tall magenta flowers in the foreground",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "left", "presence": "full", "outfit": [], "moves": [{"frame": 249, "screen": "left-center"}]},
+    {"id": "polly", "screen": "right-center", "presence": "full", "outfit": []}
+   ],
+   "beats": [
+    {"start": 223, "end": 242, "text": "Pax edges toward Polly clutching a red rose, teary-eyed, while she holds up a flipper with an orange butterfly perched on it"},
+    {"start": 242, "end": 248, "text": "Pax closes his eyes and sniffs the rose while Polly watches the butterfly on her raised flipper"},
+    {"start": 248, "end": 262, "text": "Pax steps up beside Polly and tucks the rose against the side of her head as the butterfly flutters away"},
+    {"start": 262, "end": 268, "text": "Pax lowers his flipper, leaving the rose tucked by Polly's head, and looks at her with worried brows"},
+    {"start": 268, "end": 280, "text": "Polly lifts a flipper to touch the rose on her head and blushes, her beak open"},
+    {"start": 280, "end": 288, "text": "Polly smiles with her eyes closed and blushing cheeks while Pax watches her with worried brows"}
+   ],
+   "props": ["red rose", "orange butterfly"],
+   "prop_events": [], "effects": ["tears", "blush marks"], "overlays": [], "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "camera locked: ECC on the foreground bush band (y 0.78-1.0) scale 1.0000, 0 px, cc 1.000 every 4th frame to f287; compare 223/287 keeps the bushes, trees and cloud black. The rose passes from Pax (f223-257) to Polly's head (f258-287), so it is a prop, not an outfit; the beats say when. No overlay"
+  }
+ ]
+}

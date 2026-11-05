@@ -1,0 +1,122 @@
+{
+ "skit": "iteration_7/293_videos/PP-Updates-Base.mp4",
+ "frames": 325,
+ "fps": 24.0,
+ "curated_by": "curator-v10-18",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a dim bedroom with a bed and a nightstand, drawn on a plain grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 44,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "graphic_overlay",
+   "camera": "push_in",
+   "overlays": [
+    "chat bubble"
+   ],
+   "notes": "a rose chat-message bubble with text pops in at the top of the picture at f10 and stays to the end of the shot (f10-43); f0-9 are clean but only 10 frames. Pax sits at a sushi bar counter with plates of sushi, soy sauce and a phone, picks up the phone and reads it. Slow push-in through the whole shot (ECC on the counter band: scale 1.010 at f10, 1.023 f20, 1.036 f30, 1.047 f40)"
+  },
+  {
+   "start": 44,
+   "end": 110,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "graphic_overlay",
+   "camera": "push_in",
+   "overlays": [
+    "chat bubble"
+   ],
+   "notes": "chat-message bubble with text at the top from f56 to the end of the shot (f56-109); f44-55 clean but only 12 frames. Pax sits on a cream sofa behind a tray of sushi, eats and then holds a phone. Slow push-in through the whole shot (ECC on the floor band: scale 1.020 at f60 to 1.079 at f108)"
+  },
+  {
+   "start": 110,
+   "end": 172,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "graphic_overlay",
+   "camera": "push_in",
+   "overlays": [
+    "chat bubble"
+   ],
+   "notes": "chat-message bubbles with text at the top from f115 to the end of the shot (a second reply bubble from ~f150); f110-114 show only the shower curtain, no lead. Pax peeks out from behind a shower curtain next to a bathroom sink and reads a phone. Push-in through the shot (ECC scale 1.037 at f125 to 1.155 at f170, low cc because Pax moves through the band)"
+  },
+  {
+   "start": 172,
+   "end": 214,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "graphic_overlay",
+   "camera": "push_in",
+   "overlays": [
+    "chat bubble"
+   ],
+   "notes": "chat-message bubble with text at the top from f181 to the end of the shot (f181-213); f172-180 clean but only 9 frames. Pax lies in bed in a lamplit room, typing on a phone. Slow push-in through the shot (ECC scale 1.012 at f182 to 1.049 at f212)"
+  },
+  {
+   "start": 214,
+   "end": 241,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "medium wide",
+   "angle": "high angle",
+   "setting": "s1",
+   "view": "with a lamp and a phone on the nightstand",
+   "time": "night",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 214,
+     "end": 241,
+     "text": "Pax sleeps soundly on his side under the covers, his head on the pillow and his eyes closed"
+    }
+   ],
+   "props": [
+    "bed",
+    "lamp",
+    "phone"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "slow steady push-in from the cut: ECC on the nightstand band (cols 0-35%) scale 1.0044, 1.0082, 1.0133, 1.0173, 1.0218 every 6 frames from f214, no static run; compare 214/240 shows doubled bed edges. Night: the whole room is drawn in dim greyed colours. Clean of bubbles until f240 (equalised top third / bottom fifth scan every 4 frames). The phone lies face down on the nightstand showing a grey back with a lens cluster and a small tuft, likely the iFin but small and dim: not named in the beat"
+  },
+  {
+   "start": 241,
+   "end": 325,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "graphic_overlay",
+   "camera": "push_in",
+   "overlays": [
+    "chat bubble"
+   ],
+   "notes": "a chat-message bubble with text pops in at the top at f241, a second one with a heart from ~f262, both to the end (f241-324). Pax keeps sleeping and smiles with blush marks. The push-in continues to the end (ECC scale 1.025 at f250 to 1.078 at f322 vs f214)"
+  }
+ ]
+}

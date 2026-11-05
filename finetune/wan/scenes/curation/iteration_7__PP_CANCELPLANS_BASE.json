@@ -1,0 +1,326 @@
+{
+ "skit": "iteration_7/293_videos/PP_CANCELPLANS_BASE.mp4",
+ "frames": 208,
+ "fps": 24.0,
+ "curated_by": "curator-v10-25",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "a navy baseball cap with a white igloo logo",
+  "o2": "a navy-and-white striped scarf",
+  "o3": "a pearl necklace",
+  "o4": "a pale shell-shaped bow on her head"
+ },
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "an igloo hallway by its round-topped ice door"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "a living room drawn on a plain pale grey background"
+  },
+  "s3": {
+   "kind": "flat",
+   "desc": "a living room drawn on a plain slate-grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 41,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": null,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with faint ice-brick lines on the curved wall",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [
+      "o1",
+      "o2"
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": [
+      "o3",
+      "o4"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 13,
+     "text": "Pax holds the edge of the open front door while Polly stands beside him holding a coral shell-shaped purse"
+    },
+    {
+     "start": 13,
+     "end": 22,
+     "text": "Pax pushes the door shut and holds his flipper out toward it while Polly watches"
+    },
+    {
+     "start": 22,
+     "end": 41,
+     "text": "Pax unwinds his striped scarf so its end hangs down his chest while Polly stands still beside him"
+    }
+   ],
+   "props": [
+    "ice door",
+    "coral shell-shaped purse"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "Client 2026-11-05: pearl necklace = Polly dressed up (Q3, U5), flipped to kept. | U5: pearl necklace. The pink penguin wears a pearl necklace and a shell-shaped bow (the curator ruling's marker for Polly's mum), but she plays Polly's part: Pax's partner, and the only pink penguin in the skit (the same character, without the bow and with her neck under the blanket, cuddles Pax on the sofa from f93). Filled as polly with the necklace and bow as outfits; the client decides. Camera locked: raw difference on the floor band (y 0.75-1.0) 0.00 vs f0 every 2nd frame, phase correlation on the wall band constant (+0.0, +0.5) at f0-12 and f24-40 (the door swings through it f14-22). No overlay in the top third or bottom fifth; the purse has no charm"
+  },
+  {
+   "start": 41,
+   "end": 68,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with azure curtains hanging from a rod over a round window",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 41,
+     "end": 49,
+     "text": "Pax, seen from behind, pulls the azure curtains shut over the round window as the room grows dim"
+    },
+    {
+     "start": 49,
+     "end": 68,
+     "text": "Pax stands still with his back turned, facing the closed curtains in the dim room"
+    }
+   ],
+   "props": [
+    "curtains",
+    "curtain rod",
+    "round window"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: compare 41/67 keeps the curtain-rod end knobs, Pax's body outline and his shadow black; ECC and raw differences fail here only because the curtains swing shut and the whole room darkens with them (background RGB 212,231,236 -> 186,197,211 over f41-49). The dimming is in-world (Pax closes the curtains), described in a beat, not an effect (curator ruling). Pax wears no cap or scarf in this shot. Window shows snowy igloos outside f41-45. No overlay"
+  },
+  {
+   "start": 68,
+   "end": 93,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "insert of the glass coffee table: a pink flipper and a blue flipper reach in and set down plates of food beside an iced drink; no lead beyond the flippers"
+  },
+  {
+   "start": 93,
+   "end": 120,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with the room dim, a cream sofa, a glass coffee table with snacks and an iced drink, and the back of a television in the foreground",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 93,
+     "end": 101,
+     "text": "Pax and Polly sit side by side on the sofa and pull a checkered blanket up to their chins"
+    },
+    {
+     "start": 101,
+     "end": 120,
+     "text": "Pax and Polly snuggle under the blanket with their flippers resting on top, gazing ahead"
+    }
+   ],
+   "props": [
+    "checkered blanket",
+    "sofa",
+    "coffee table",
+    "snacks",
+    "iced drink",
+    "television"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: raw difference on the television and footstool band (y 0.8-1.0) 0.00-0.04 vs f93 every 2nd frame; compare 93/119 keeps the sofa, table and television edges black. The television faces away (its back only). Polly shows no necklace or bow here (neck under the blanket). Leads under a blanket with heads and faces visible are kept (curator ruling). No overlay"
+  },
+  {
+   "start": 120,
+   "end": 147,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "off_style",
+   "camera": "static",
+   "notes": "television insert with Pax's flipper on the remote: screen dark f120-128 (no_lead), then from f129 it shows 3D-rendered footage of a penguin in a karate suit with glowing blades in a cave (3D footage on a screen is off_style per the reason order). Not split: both parts would be under 21 frames"
+  },
+  {
+   "start": 147,
+   "end": 181,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with the room dim and a checkered blanket over his lap",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "partial",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 147,
+     "end": 153,
+     "text": "Pax sits under the blanket holding the remote and stares ahead with wide eyes while Polly rests beside him with her eyes closed"
+    },
+    {
+     "start": 153,
+     "end": 172,
+     "text": "Pax closes his eyes with a content smile and hugs the remote to his chest, leaning against Polly"
+    },
+    {
+     "start": 172,
+     "end": 181,
+     "text": "Pax opens one eye and peeks sideways with a sly look, still leaning on Polly"
+    }
+   ],
+   "props": [
+    "remote",
+    "checkered blanket"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: raw difference on the blanket corner (x 0-0.3, y 0.85-1.0) 0.00-0.04 vs f147 every frame to f180; the wall above is plain, so the corner decides. Polly is only a sliver of her head and cheek at the right edge the whole shot. A 4-frame fast pull-back starts at f181. No overlay | verification pass 2 (verify_v10_report_v17): camera locked f147-180 (blanket corner, sofa-back line and drink straw d1 ~0.00, phase 0 px); pull-back starts f181; no overlay; Polly 'on the right' judged true enough: she is not a sliver but about a quarter of the frame width (half her head with the tuft and one eye, cheek and side) for the whole shot, recognisable as Polly, no necklace or bow; screen right + presence partial kept; beat 1: Poll"
+  },
+  {
+   "start": 181,
+   "end": 185,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "4-frame fast pull-back from Pax's close view to the wide sofa view (frame diff 35.5 at f184, still from f185)"
+  },
+  {
+   "start": 185,
+   "end": 208,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with the room dim, a cream sofa, a glass coffee table with snacks and an iced drink, and the top of a television in the foreground",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 185,
+     "end": 208,
+     "text": "Polly sleeps on Pax's shoulder under the blanket with drool dripping from her beak while Pax holds the remote and glances at her"
+    }
+   ],
+   "props": [
+    "remote",
+    "checkered blanket",
+    "sofa",
+    "coffee table",
+    "snacks",
+    "iced drink",
+    "television"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked from f185 (frame diff f185->f186 0.00); ECC on the bottom band (y 0.8-1.0) scale 1.0000, 0 px, cc 1.000 every 2nd frame to f207; compare 185/207 keeps the sofa, table and television edges black. Skit ends on this shot. No overlay"
+  }
+ ]
+}

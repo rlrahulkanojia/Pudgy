@@ -1,0 +1,244 @@
+{
+ "skit": "iteration_7/293_videos/PP_Toothbrush 9x16_Base.mp4",
+ "frames": 255,
+ "fps": 24.0,
+ "curated_by": "curator-v10-09",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a bathroom with a sink, drawn on a plain pale grey background"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "a bathroom with round washbasins on ice-brick stands, drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 67,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a faucet, two small igloo-shaped taps and a glass of water on the counter in front of her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 12,
+     "text": "Polly brushes her teeth at the sink with her eyes closed and a calm smile"
+    },
+    {
+     "start": 12,
+     "end": 20,
+     "text": "Polly sets her toothbrush down by the faucet and looks ahead"
+    },
+    {
+     "start": 20,
+     "end": 27,
+     "text": "Polly spits a thin stream of water down from her beak into the sink"
+    },
+    {
+     "start": 27,
+     "end": 45,
+     "text": "Polly lifts the glass and gulps water from it with her eyes closed, then lowers it"
+    },
+    {
+     "start": 45,
+     "end": 61,
+     "text": "Polly stands at the sink with her beak shut, staring ahead, then glances down"
+    },
+    {
+     "start": 61,
+     "end": 67,
+     "text": "Polly spits another stream of water down into the sink"
+    }
+   ],
+   "props": [
+    "toothbrush",
+    "glass",
+    "faucet"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: compare 0/66 keeps the faucet, taps, glass and counter line black (ECC bands all touch Polly's flipper, cc < 0.95, not used). keep12 is low from her arm and the water. No overlays or watermark"
+  },
+  {
+   "start": 67,
+   "end": 99,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "insert: a toothbrush drops into a cup on the counter by an igloo-shaped tap, with a sparkle"
+  },
+  {
+   "start": 99,
+   "end": 111,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "12 frames: Pax brushes his teeth at the sink, drooling foam (first of four ever-closer cut-ins)"
+  },
+  {
+   "start": 111,
+   "end": 123,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "12 frames: closer cut of Pax scrubbing his beak with the toothbrush"
+  },
+  {
+   "start": 123,
+   "end": 135,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "12 frames: close-up of Pax scrubbing hard, drool dripping (profile cut at f134/135; the angle changes at f135)"
+  },
+  {
+   "start": 135,
+   "end": 141,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "6 frames: Pax scrubs with his eyes squeezed shut, foam flying"
+  },
+  {
+   "start": 141,
+   "end": 196,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a faucet and two small igloo-shaped taps on the counter in front of him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 141,
+     "end": 149,
+     "text": "Pax stands at the sink with his flippers on the counter, looking ahead, a frayed toothbrush by the tap"
+    },
+    {
+     "start": 149,
+     "end": 161,
+     "text": "Pax bends down and ducks his beak under the running tap, splashing water everywhere"
+    },
+    {
+     "start": 161,
+     "end": 179,
+     "text": "Pax straightens up and gargles with his head tilted back and his eyes closed"
+    },
+    {
+     "start": 179,
+     "end": 189,
+     "text": "Pax lowers his head and spits a stream of water down into the sink"
+    },
+    {
+     "start": 189,
+     "end": 196,
+     "text": "Pax stands at the sink looking ahead with wide, blank eyes"
+    }
+   ],
+   "props": [
+    "toothbrush",
+    "faucet"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: compare 141/195 keeps the faucet, taps and counter line black; keep12 is low from Pax bending and the splashing water"
+  },
+  {
+   "start": 196,
+   "end": 228,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "other",
+   "notes": "insert: a frayed toothbrush drops into the cup beside the clean one, then three quick punch-ins on the cup f211-214"
+  },
+  {
+   "start": 228,
+   "end": 255,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a cup of toothbrushes and a squeezed toothpaste tube on the basins in the foreground",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 228,
+     "end": 255,
+     "text": "Polly stands still behind her washbasin, staring ahead with a worried, unimpressed look and her beak slightly open"
+    }
+   ],
+   "props": [
+    "washbasins",
+    "toothbrushes",
+    "toothpaste tube"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: ECC on the right basin scale 1.0000, 0 px at cc 1.000 f234-252; compare 228/254 differs only at Polly's brows and eyes. A near-still hold (mean frame difference under 0.15). A sliver of a second character's flipper shows at the left edge (likely Pax at the neighbouring basin, not identifiable): not listed. Skit ends on this shot | verification pass 2 (verify_v10_report_v05): screen: Polly is in the middle at f228 (body x 0.13-0.79, centre 0.46; head centre 0.49), not left of center"
+  }
+ ]
+}

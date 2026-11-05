@@ -1,0 +1,57 @@
+{
+ "skit": "iteration_7/293_videos/PP-MidnightMenu-Base.mp4",
+ "frames": 180,
+ "fps": 24.0,
+ "curated_by": "curator-v10-23",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {"kind": "lead"},
+  "polly": {"kind": "lead"}
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {"kind": "flat", "desc": "a bedroom with a wooden bed with duck-topped bedposts, drawn on a plain grey background"}
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 60,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "medium wide",
+   "angle": "high angle",
+   "setting": "s1",
+   "view": "with a fish-shaped lamp and a mug on the nightstand, the room dim",
+   "time": "night",
+   "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "left-center", "presence": "partial", "outfit": []},
+    {"id": "polly", "screen": "right-center", "presence": "partial", "outfit": []}
+   ],
+   "beats": [
+    {"start": 0, "end": 20, "text": "Pax lies under the blanket staring at a phone held close to his face, its glow lighting him, while Polly lies propped up beside him"},
+    {"start": 20, "end": 46, "text": "Polly narrows her eyes into a glare at Pax while he keeps staring at the glowing phone"},
+    {"start": 46, "end": 60, "text": "Polly glares as her face flushes red with anger, while Pax keeps his eyes on the phone"}
+   ],
+   "props": ["bed", "blanket", "phone", "lamp", "mug"],
+   "prop_events": [],
+   "effects": ["anger flush"],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "slow push-in through the whole shot: motion on the bed and blanket (y0.55-0.85) scale 1.005 at f4 -> 1.062 at f56 (cc 0.95-0.97), lamp band agrees; compare 0/59 every bed edge doubled. Steady night tint over the whole shot (luma ~152, no flicker); the only light change is the phone glow on Pax's face (local light). The phone back faces out (lenses visible), its screen faces Pax; the insert that follows shows it is the iFin, but it is not identifiable here, so 'a phone'. The mug on the nightstand has a penguin face printed in the mug's own orange colour, neither Pax nor Polly (read as a prop; if read as a lead depiction this becomes lead_copy). No caption or watermark"
+  },
+  {
+   "start": 60,
+   "end": 180,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "phone-screen insert: Pax's flipper scrolls a food-delivery app on the iFin (tuft on top) and moves to the checkout screen; only his flipper and a sliver of his body are visible. The app names a KFC parody restaurant (also ad_merch-like UI text). No lead face visible"
+  }
+ ]
+}

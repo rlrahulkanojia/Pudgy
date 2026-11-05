@@ -1,0 +1,334 @@
+{
+ "skit": "iteration_7/293_videos/PP-Arm-Base.mp4",
+ "frames": 192,
+ "fps": 24.0,
+ "curated_by": "curator-v10-18",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a bedroom with a double bed between two nightstands, drawn on a plain pale grey background"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "a sitting area with a cream sofa, drawn on a plain pale grey background"
+  },
+  "s3": {
+   "kind": "set",
+   "desc": "an igloo house with pale ice-brick walls"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 45,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with lamps, a water bottle, a starry tumbler and plane tickets on the nightstands",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 29,
+     "text": "Pax lies tucked under the covers with his head on the pillow, glancing around with wide eyes"
+    },
+    {
+     "start": 29,
+     "end": 34,
+     "text": "Pax closes his eyes and raises one flipper up beside his face"
+    },
+    {
+     "start": 34,
+     "end": 45,
+     "text": "Pax rests with his eyes shut and a small smile, his flipper stretched across the empty pillow beside him"
+    }
+   ],
+   "props": [
+    "bed",
+    "nightstands",
+    "lamps",
+    "water bottle",
+    "tumbler",
+    "plane tickets"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "plane tickets"
+   ],
+   "travel": "none",
+   "notes": "camera locked (motion on the bed-foot band: scale 1.0000, 0 px, cc 1.000 every 4 frames; compare 0/44 bed edges overlap). No caption or watermark (equalised top third / bottom fifth scan). Tumbler charms (a rose bottle charm and a flower) are not penguins. Framing judged by how large the lead is drawn (a whole penguin of this size would be ~20-25% of the height), not by the visible part | verification pass 2 (verify_v10_report_v01): beat 1 [29,34): Pax's flippers already rest on top of the covers from f0 (both visible over the covers' edge); nothing comes out from under the covers. He raises one flipper beside his face (f29-30) and stretches it across the pillow from f31"
+  },
+  {
+   "start": 45,
+   "end": 96,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a bag of crisps, a small yellow penguin plush and an iced coffee on the seat",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "exits",
+     "exits_at": 85,
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 45,
+     "end": 56,
+     "text": "Polly sits on the sofa under a checkered blanket, holding {ifin} up in both flippers and staring at it"
+    },
+    {
+     "start": 56,
+     "end": 62,
+     "text": "Polly stretches one flipper out to her side, blinking at the phone in her other flipper"
+    },
+    {
+     "start": 62,
+     "end": 76,
+     "text": "Polly frowns at the phone with her other flipper still held out"
+    },
+    {
+     "start": 76,
+     "end": 86,
+     "text": "Polly springs up out of the blanket and leaps off the sofa to the left, flinging the phone into the air"
+    },
+    {
+     "start": 86,
+     "end": 96,
+     "text": "The blanket slides off the sofa onto the floor and the phone lands on the empty seat"
+    }
+   ],
+   "props": [
+    "phone",
+    "checkered blanket",
+    "bag of crisps",
+    "penguin plush",
+    "iced coffee",
+    "sofa"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 45,
+     "by": "polly",
+     "is_ifin": true
+    },
+    {
+     "prop": "phone",
+     "event": "drops",
+     "frame": 79,
+     "by": "polly",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "snack bag label",
+    "coffee cup logo"
+   ],
+   "travel": "exits",
+   "notes": "camera locked: compare 45/95 sofa, cup and arm edges overlap exactly; ECC on the sofa-arm band wanders (+-2 px, one bad row at f73-77) because the band is nearly textureless and the blanket swings into it. Polly is gone from f85 (a flipper tip at the left edge on f85, nothing from f86); f86-95 show only the empty sofa (10 of 51 frames). Phone: pale grey back, three lenses, tuft = iFin. The plush is a small yellow penguin in a brown beanie and a navy sweater with a lowercase a on it, neither lead, lying loose on the seat as a toy (not shown as boxed merch): prop. The coffee cup's round logo is a crowned white penguin face (a Pudgy-world parody mark, no real brand name legible) and the crisp bag reads an invented name: in-world, not ad_merch. No caption or watermark. Framing judged by how large the lead is drawn (a whole penguin of this size would be ~20-25% of the height), not by the visible part"
+  },
+  {
+   "start": 96,
+   "end": 104,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pan_left",
+   "notes": "8 frames, also lead_copy: a framed photo of four penguins incl. Pax- and Polly-looking ones stands on the table under the round window, visible f96-103. Camera locked f96-99 while Polly runs in from the right, then a fast pan left from f100 following her (continues in the next span). Split here, not at a cut, so the camera-move part after the photo leaves can be flipped by U3"
+  },
+  {
+   "start": 104,
+   "end": 127,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pan_left",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with kitchen counters and a stove, then a bathroom sink with a mirror",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 104,
+     "end": 108,
+     "text": "Polly bursts through an ice wall into the kitchen as chunks of ice fly around her"
+    },
+    {
+     "start": 108,
+     "end": 119,
+     "text": "Polly runs left past the kitchen counters and the stove with her flippers stretched out"
+    },
+    {
+     "start": 119,
+     "end": 122,
+     "text": "Polly crashes through another ice wall into the bathroom, scattering ice chunks"
+    },
+    {
+     "start": 122,
+     "end": 127,
+     "text": "Polly runs left past the bathroom sink and mirror with her flippers out"
+    }
+   ],
+   "props": [
+    "kitchen counters",
+    "stove",
+    "hanging fish",
+    "bathroom sink",
+    "mirror",
+    "ice chunks"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "takeaway bag logo",
+    "soap bottle label"
+   ],
+   "travel": "none",
+   "notes": "fast tracking pan left (~100 px per frame at 1080 wide: wall pillars sweep left to right across the picture) following Polly as she smashes through the walls of kitchen and bathroom; no static run. Polly stays near the middle. Props checked: a Pudgino's takeaway bag with a mustached chef-penguin logo, two penguin-face mugs in yellow and coral (neither lead's colour, treated as props, f115-118). No caption or watermark. The bathroom mirror f119-126 shows only shine lines, no reflection of Polly; the soap bottle's label is generic (not a real brand)"
+  },
+  {
+   "start": 127,
+   "end": 132,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "shake",
+   "notes": "5-frame impact shake as Polly bursts in through the right wall: ECC vs f127 on the headboard band jumps to (+14,-11), (+13,+15), (+9,+15), (+10,+3) px f128-131, then holds at (+8.5,+10.4) from f132. Pax lies with his flipper out; Polly appears at the right edge on f130-131 with flying ice chunks"
+  },
+  {
+   "start": 132,
+   "end": 192,
+   "boundary": "camera",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with lamps, a water bottle, a starry tumbler and plane tickets on the nightstands",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 133,
+       "screen": "center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 132,
+     "end": 136,
+     "text": "Polly leaps in from the right and lands on the bed beside Pax as chunks of ice scatter over the covers"
+    },
+    {
+     "start": 136,
+     "end": 144,
+     "text": "Polly sits up close beside Pax and frowns up at him while he lies with his eyes closed, smiling"
+    },
+    {
+     "start": 144,
+     "end": 155,
+     "text": "Pax opens his eyes and looks over at Polly while she stares back at him"
+    },
+    {
+     "start": 155,
+     "end": 161,
+     "text": "Pax closes his eyes with a calm smile while Polly gazes at him with her beak open"
+    },
+    {
+     "start": 161,
+     "end": 172,
+     "text": "Polly squeezes her eyes shut in a big open-beaked smile while Pax opens his eyes and looks at her"
+    },
+    {
+     "start": 172,
+     "end": 192,
+     "text": "Polly turns, hugs Pax and presses her beak to his cheek while he blushes with his eyes closed"
+    }
+   ],
+   "props": [
+    "bed",
+    "nightstands",
+    "lamps",
+    "water bottle",
+    "tumbler",
+    "plane tickets",
+    "ice chunks"
+   ],
+   "prop_events": [],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [
+    "plane tickets"
+   ],
+   "travel": "none",
+   "notes": "camera locked after the impact shake: ECC vs f132 on the left headboard band within 0.3 px, scale 1.0000, cc >= 0.999 every frame to f191 (compare 127/191 shows the shake offset, not drift). No caption or watermark. Framing judged by how large the lead is drawn (a whole penguin of this size would be ~20-25% of the height), not by the visible part"
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+{
+ "skit": "iteration_7/293_videos/PP_Blanket_9x16_base.mov",
+ "frames": 198,
+ "fps": 24.0,
+ "curated_by": "curator-v10-15",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {},
+ "outfits": {},
+ "settings": {},
+ "spans": [
+  {
+   "start": 0, "end": 198, "boundary": "start", "keep": false, "drop_reason": "off_style",
+   "camera": "static",
+   "notes": "OLD_DESIGN: older Pudgy look throughout: yellow feet, pale periwinkle Pax and pale rose Polly, glossy shaded bed and bedside tables, seen from high above. One locked shot, no cuts (profile keep12 median 0.95): Pax and Polly lie in bed tugging the blanket back and forth, a heart pops between them ~f130-140, and Polly ends with the whole blanket while Pax sits uncovered. A paper sign with a hand-lettered quote and a pen is pinned on the wall above the bed the whole time (in-world, but large text in the top third)"
+  }
+ ]
+}

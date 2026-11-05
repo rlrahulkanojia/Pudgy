@@ -1,0 +1,90 @@
+{
+ "skit": "iteration_7/293_videos/PP-BFPockets-Base.mp4",
+ "frames": 268,
+ "fps": 24.0,
+ "curated_by": "curator-v10-17",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a bare igloo room with pale ice-brick walls"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 30,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a small wooden side table and a rounded ice door on either side of him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 8,
+     "text": "Pax pushes the open igloo door shut with one flipper while a small mint green key dangles from his other flipper"
+    },
+    {
+     "start": 8,
+     "end": 20,
+     "text": "Pax keeps one flipper pressed on the closed door and gazes ahead, holding the key at his side"
+    },
+    {
+     "start": 20,
+     "end": 30,
+     "text": "Pax twists toward the side table and holds the key just above its top"
+    }
+   ],
+   "props": [
+    "key",
+    "side table",
+    "door"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: ECC on the wall band (y 0.05-0.35) scale 1.0000, 0 px, cc 1.000 at f6-27; compare 0/29 wall, table and shadow edges overlap exactly (only Pax and the door change). Through the open door f0-6 a snowy hill with trees shows; it closes by f8. Table is still empty here (the Polly portrait appears only from f160). No overlay in top third or bottom fifth | verification pass 2 (verify_v10_report_v14): beat 2 (f20-30): Pax never lets go of the key inside the span: f22-29 he holds it just above the table top, and it is only lowered onto the table in the insert after the cut (f30-35). 'sets the key down' claims something outside the range"
+  },
+  {
+   "start": 30,
+   "end": 202,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "insert on the table top: only Pax's flipper reaches in from the right to empty his pockets (key, wallet, passport, candy, a fishing rod, a bowling ball, a jar, a fish). From f160 a gold-framed portrait of Polly stands on the table as well (also lead_copy)"
+  },
+  {
+   "start": 202,
+   "end": 268,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "wide shot of Pax beside the loaded table; the gold-framed portrait of Polly stands on the table in every frame f202-267. Snap pull-back at f212 (f212 intermediate), Polly walks in from the left f212-213 and the fish drops to the floor; f202-211 alone would be too_short (10 frames)"
+  }
+ ]
+}

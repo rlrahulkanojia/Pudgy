@@ -1,0 +1,121 @@
+{
+ "skit": "iteration_7/293_videos/2D_PP_Finally_Base.mp4",
+ "frames": 251,
+ "fps": 24.0,
+ "curated_by": "curator-v10-11",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a living room with a cream sofa drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 20,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "push_in",
+   "notes": "20 frames: wide of Pax in headphones on the cream sofa playing a game controller, with a slow steady push-in (sofa-arm region changes ~0.5 grey levels per frame, f1-19). The phone with the small Polly figurine charm lies on the sofa beside him (also lead_copy)"
+  },
+  {
+   "start": 20,
+   "end": 30,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "10 frames: insert of the phone buzzing on the sofa cushion, a pink penguin figurine in Polly's look (tuft, rose cheeks) clinging over its top edge (also lead_copy); no lead"
+  },
+  {
+   "start": 30,
+   "end": 142,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "push_in",
+   "notes": "Pax in headphones plays a game controller on the sofa, blinks, sways with his eyes shut f112-121, then frowns with worried brows. Eased push-in f30 to ~f117 (sofa-arm region diff 1.4 per frame falling to 0 by f117; compare 30/141 shows doubled sofa edges, ECC scale ~1.12), then locked f117-141 (compare 110/136 background edges black). Lead copy all through: the phone lying on the sofa beside him carries the small Polly figurine charm on its top edge (~35 px at full res, f30-141), and its lock screen lights up with a Polly photo f137-141. lead_copy outranks camera_move, so not filled. The locked tail before the lock screen lights (f117-136) is 20 frames anyway"
+  },
+  {
+   "start": 142,
+   "end": 152,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "10 frames: insert of the buzzing phone, lock screen with a Polly photo and a notification, Polly figurine charm on top (also lead_copy); no lead"
+  },
+  {
+   "start": 152,
+   "end": 161,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "9 frames: Pax flings the controller and headphones away and leaps up, with a fast pull-back from the near view to the wide sofa view (from ~f155, settles at f161: sofa-arm region diff 2.4 at f161, 0.02 at f162)"
+  },
+  {
+   "start": 161,
+   "end": 185,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "24 locked frames (sofa-arm region diff 0.00-0.02 f162-184): Pax lands on the sofa, looks at the phone, picks it up (~f169) and hugs it to his cheek, blushing. Lead copy: the lit lock screen shows a Polly photo while the phone lies on the sofa (f161-168), and the Polly figurine charm on the phone's top edge shows in his flippers f170-184 (full-res crops f176, f182). Phone back is pale grey with lenses and the iFin's grey tuft"
+  },
+  {
+   "start": 185,
+   "end": 195,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "jump cut on the same locked background (Pax pops to a new place): 10 frames of Pax standing on the floor in front of the sofa holding the charm phone up, a small heart above it"
+  },
+  {
+   "start": 195,
+   "end": 206,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "jump cut, same background: 11 frames of Pax lying on his back on the sofa holding the charm phone up, hearts floating above"
+  },
+  {
+   "start": 206,
+   "end": 215,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "jump cut, same background: 9 frames of Pax peeking over the back of the sofa from behind, holding the charm phone to his face"
+  },
+  {
+   "start": 215,
+   "end": 238,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "phone-screen insert: the phone fills the picture, lock screen with a Polly photo and a notification from Polly with her avatar, the Polly figurine charm over the top edge (also lead_copy); only Pax's flipper at the side"
+  },
+  {
+   "start": 238,
+   "end": 251,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "13 frames: back to the locked sofa view, Pax behind the sofa with the phone pops up waving it, then turns into a burst of hearts f246-250 that fills the picture (also effect)"
+  }
+ ]
+}

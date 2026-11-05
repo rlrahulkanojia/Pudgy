@@ -1,0 +1,177 @@
+{
+ "skit": "iteration_7/293_videos/PP-Sniff-Base.mp4",
+ "frames": 161,
+ "fps": 24.0,
+ "curated_by": "curator-v10-31",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a room drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 50,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a laundry basket full of clothes on one side and a stack of folded clothes on the other",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 18,
+     "text": "Polly sits between a laundry basket and a stack of folded clothes, folding a red shirt in her flippers"
+    },
+    {
+     "start": 18,
+     "end": 30,
+     "text": "Polly lays the folded red shirt on top of the stack beside her"
+    },
+    {
+     "start": 30,
+     "end": 50,
+     "text": "Polly reaches into the laundry basket, pulls out a light teal T-shirt and holds it up against her front"
+    }
+   ],
+   "props": [
+    "laundry basket",
+    "folded clothes",
+    "red shirt",
+    "light teal T-shirt"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f0-49: folded-stack band 1.0001, 0 px at cc 1.000 every frame to f49 (texture 2.9%/16.7%), basket band 1.000 to f40 (then Polly's flipper enters it). The push-in starts at f50. The whole skit carries 4 px pure-black columns at the left and right picture edges (export pillarbox, as flagged in PP-Foot); kept like the other curators did, flagged for the global ruling. No caption or watermark"
+  },
+  {
+   "start": 50,
+   "end": 55,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "push_in",
+   "notes": "fast push-in burst f50-54 (stack band scale +24% in 5 frames), easing into the slow push-in that follows"
+  },
+  {
+   "start": 55,
+   "end": 119,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a laundry basket full of clothes on one side and a stack of folded clothes on the other",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 55,
+     "end": 83,
+     "text": "Polly holds a light teal T-shirt up against her front by its shoulders, blinking and smiling"
+    },
+    {
+     "start": 83,
+     "end": 105,
+     "text": "Polly lifts the T-shirt to her cheek and hugs it, tilting her head with her eyes closed"
+    },
+    {
+     "start": 105,
+     "end": 119,
+     "text": "Polly presses the T-shirt over her beak with both flippers and breathes it in with her eyes closed"
+    }
+   ],
+   "props": [
+    "laundry basket",
+    "folded clothes",
+    "light teal T-shirt"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "slow steady push-in: stack band scale +0.12% per frame (1.0045 at f60 to 1.077 at f116 vs f56, cc 0.98-1.00); compare 53/119 basket and stack edges doubled. Polly holds the T-shirt against herself; she never puts it on (no outfit). At f119 the move turns into a pan right. Otherwise keepable: no overlay (pillarbox columns as noted on span 0) | verification pass 2 (verify_v10_report_v18): beat 1: Polly looks straight ahead, not down at the T-shirt, f55-82; camera checked: global fit with Polly masked climbs steadily from 1.000 at f56 to 1.074 at f116, zoom centre (0.49, 0.52), so this is a pure push_in; the pan begins at f119"
+  },
+  {
+   "start": 119,
+   "end": 143,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "other",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a stack of folded clothes beside her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [],
+   "props": [
+    "folded clothes",
+    "light teal T-shirt",
+    "laundry basket"
+   ],
+   "prop_events": [],
+   "effects": [
+    "hearts"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "pan right following Polly as she topples onto the clothes (stack band tx -74 px by f126; basket slides out at the left), with a slight pull-back (basket band scale 0.92 by f143); the move stops at f143. Compound move: pan_right is the main component, the pull-back is small but real (unsure). Otherwise keepable: no overlay | verification pass 2 (verify_v10_report_v18): camera: compound move. A global fit with Polly masked gives a pan right (tx -110 px by f133) and, at the same time, a steady pull-back (scale 0.994 f121, 0.981 f125, 0.970 f129, 0.958 f133, about 0.3% per frame, faster than the push-ins kept as moves in this batch). The stack template agrees (scale 0.96 and -147 px by f133). Under the Compound moves ruling that is camera other, unfilled"
+  },
+  {
+   "start": 143,
+   "end": 161,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "18 locked frames to the end: Polly lies on the toppled clothes with the T-shirt over her face, a heart floating above"
+  }
+ ]
+}

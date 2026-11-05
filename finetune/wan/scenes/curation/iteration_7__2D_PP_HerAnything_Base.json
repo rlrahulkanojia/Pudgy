@@ -1,0 +1,388 @@
+{
+ "skit": "iteration_7/293_videos/2D_PP_HerAnything_Base.mp4",
+ "frames": 280,
+ "fps": 24.0,
+ "curated_by": "curator-v10-15",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "a cream towel wrapped around her head"
+ },
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a snowy garden beside an igloo, with snowy pine trees and a red car on skis"
+  },
+  "s2": {
+   "kind": "set",
+   "desc": "a bedroom with a padded yellow headboard against a grey wall"
+  },
+  "s3": {
+   "kind": "flat",
+   "desc": "a kitchen drawn on a plain pale grey background"
+  },
+  "s4": {
+   "kind": "flat",
+   "desc": "an empty space with a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 26,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "lead_hidden",
+   "camera": "static",
+   "notes": "Polly digs inside the hole: f0-17 only the shovel and flying dirt are visible, she pops up with the shovel only at f18-25 (lead visible 8 of 26 frames). Camera locked (ECC scale 1.000 f2-20)"
+  },
+  {
+   "start": 26,
+   "end": 28,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "2-frame fast pull-back from the dirt patch to the wide garden view (also a camera_move)"
+  },
+  {
+   "start": 28,
+   "end": 53,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a dug-up patch of dirt, two potted seedlings, a bucket, garden tools and stacked green sacks in the snow",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 28,
+     "end": 42,
+     "text": "Polly digs in the hole with her shovel, flinging dirt, while Pax stands beside the hole hugging a green sack, small hearts floating by his head"
+    },
+    {
+     "start": 42,
+     "end": 48,
+     "text": "Polly plants the shovel upright in the dirt and smiles with her eyes closed while Pax keeps holding the sack"
+    },
+    {
+     "start": 48,
+     "end": 53,
+     "text": "Pax sets the sack down on the ground while Polly rests in the hole and opens her eyes to look at him"
+    }
+   ],
+   "props": [
+    "shovel",
+    "green sack",
+    "potted seedlings",
+    "bucket",
+    "garden tools"
+   ],
+   "prop_events": [
+    {
+     "prop": "green sack",
+     "event": "puts_down",
+     "frame": 49,
+     "by": "pax"
+    }
+   ],
+   "effects": [
+    "hearts"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f28-52: ECC scale 1.000 tx +0.1 cc 1.000 on the cloud-free foreground band (sacks, bucket, tools; y0.78-1.0) and on the car/trees band (y0.20-0.34, x0.55-1.0); compare 28/52 background edges overlap; push-in starts f53. No overlay in top third or bottom fifth"
+  },
+  {
+   "start": 53,
+   "end": 72,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "push_in",
+   "notes": "quick push-in f53-56 (ECC scale 1.009, 1.047, 1.111, 1.157, settles 1.168 at f57), then 15 static frames f57-71 of Pax and Polly at the hole; both parts too short"
+  },
+  {
+   "start": 72,
+   "end": 112,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a bedpost topped by a little duck figure and a lamp with a peach shade beside the bed",
+   "time": "night",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 72,
+     "end": 97,
+     "text": "Polly sits up in bed under the covers reading a teal book lit by a small clip-on reading light"
+    },
+    {
+     "start": 97,
+     "end": 112,
+     "text": "Polly raises a flipper to her cheek and giggles over the book with her eyes squeezed shut and her beak open"
+    }
+   ],
+   "props": [
+    "book",
+    "clip-on reading light",
+    "bed"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f72-111 (ECC scale 1.000 cc 1.000 on the wall/bedpost band; compare 72/111 bedpost and lamp edges overlap). f112 starts the pan to Pax. time: reading in bed by lamp light, read as night"
+  },
+  {
+   "start": 112,
+   "end": 116,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pan_left",
+   "notes": "4-frame whip pan from Polly to Pax lying beside her (also a camera_move); compare 111/112 shows the bedpost already shifted, f116 locked again"
+  },
+  {
+   "start": 116,
+   "end": 140,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with pillows behind him",
+   "time": "night",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 116,
+     "end": 120,
+     "text": "Pax lies tucked under the covers, gazing sideways toward the right edge with a soft smile"
+    },
+    {
+     "start": 120,
+     "end": 140,
+     "text": "Pax raises both flippers to his cheeks and keeps gazing to the side, blushing, as small hearts drift up over his head"
+    }
+   ],
+   "props": [
+    "bed",
+    "pillows",
+    "blanket"
+   ],
+   "prop_events": [],
+   "effects": [
+    "hearts",
+    "blush"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f116-139: compare 116/139 and 120/131 headboard and pillow edges overlap exactly (only the blanket over Pax moves); ECC on this band is unreliable (low cc, plain wall). Polly is only a strip of her side at the right edge the whole span (a sliver), so she is not listed in characters"
+  },
+  {
+   "start": 140,
+   "end": 158,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "18 frames: Polly, with a towel wrapped on her head, reaches into an open fridge with her back to the viewer"
+  },
+  {
+   "start": 158,
+   "end": 178,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "20 frames: Pax stands alone on the plain background, blinks and looks to the side"
+  },
+  {
+   "start": 178,
+   "end": 191,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "13 static frames of Polly reaching into the fridge (ECC on the fridge-top band scale 1.000 cc 1.000 f179-190); the camera starts moving at f191"
+  },
+  {
+   "start": 191,
+   "end": 225,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pan_right",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with a cream retro fridge at the left",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    },
+    {
+     "id": "pax",
+     "screen": "right",
+     "presence": "enters",
+     "enters_at": 210,
+     "outfit": []
+    }
+   ],
+   "beats": [],
+   "props": [
+    "fridge",
+    "snacks",
+    "soda bottle",
+    "bag of chips",
+    "ice cream tub"
+   ],
+   "prop_events": [],
+   "effects": [
+    "hearts",
+    "blush"
+   ],
+   "overlays": [],
+   "in_world_text": [
+    "snack packaging"
+   ],
+   "travel": "moves_within",
+   "notes": "the view follows Polly to the right: the fridge's freezer handle shifts ~90 px left f191-197 (ECC on the fridge-top band, cc 0.98-1.0), holds roughly f197-207, then the fridge slides out of the left edge f208-218 while Polly stays at ~0.3 of the width; Pax, standing still, slides in from the right edge at the same rate. Plain ground otherwise, no texture. Only reason: camera_move | verification pass 2 (verify_v10_report_v10): split move, all pieces too_short: pan_right f191-198 (8 f), rest f199-207 (9 f, fridge door swings shut), pan_right f208-224 (17 f, fridge exits left, Pax slides in from right). Measured on the fridge side edge at full res. Not fillable under U3. Clear the filled fields (beats etc.): curate_check rejects a filled too_short span with a moving camera."
+  },
+  {
+   "start": 225,
+   "end": 280,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s4",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left",
+     "presence": "exits",
+     "exits_at": 254,
+     "outfit": [
+      "o1"
+     ],
+     "moves": [
+      {
+       "frame": 236,
+       "screen": "center"
+      },
+      {
+       "frame": 245,
+       "screen": "right"
+      }
+     ]
+    },
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 225,
+     "end": 236,
+     "text": "Polly waddles to the right hugging her snacks and soda bottle in front of Pax, who stands behind her blushing as hearts float up"
+    },
+    {
+     "start": 236,
+     "end": 254,
+     "text": "Polly walks on past Pax and out of the picture at the right while Pax gazes after her with a little white heart on his chest"
+    },
+    {
+     "start": 254,
+     "end": 257,
+     "text": "Pax flings his flippers out to the sides with his eyes squeezed shut and his beak open"
+    },
+    {
+     "start": 257,
+     "end": 280,
+     "text": "Pax topples onto his back and lies flat with his flippers spread out while a heart floats up above him"
+    }
+   ],
+   "props": [
+    "snacks",
+    "soda bottle",
+    "bag of chips",
+    "ice cream tub"
+   ],
+   "prop_events": [],
+   "effects": [
+    "hearts",
+    "blush"
+   ],
+   "overlays": [],
+   "in_world_text": [
+    "snack packaging"
+   ],
+   "travel": "crosses",
+   "notes": "hard cut at f225 to a closer framing on the same plain background. Plain ground, so camera judged from Pax: his right edge sits at the same column f225-232 and f248-254 and his left edge at the same column f236-254 while Polly walks across; f264-279 is a held drawing. Snack packaging has a brand word and an ice-cream face, no penguin. No overlay in top third or bottom fifth | verification pass 2 (verify_v10_report_v10): Polly exits at f254, not f252: her turban edge is still in the picture at f252-253 and her shadow at f253 (shadow row 0.83 empty from f251, body sliver visible to f253); beat 3 starts at f254: Pax keeps his flipper on his chest f252-254 and flings his flippers out at f255"
+  }
+ ]
+}

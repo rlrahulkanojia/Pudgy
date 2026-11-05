@@ -1,0 +1,307 @@
+{
+ "skit": "iteration_7/293_videos/PP-CoffeeAlarm-Base.mp4",
+ "frames": 318,
+ "fps": 24.0,
+ "curated_by": "curator-v10-12",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a dim bedroom"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "a dark empty room"
+  },
+  "s3": {
+   "kind": "set",
+   "desc": "a dim kitchen lit by candles"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 26,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with an arched doorway, an open wooden door and the foot of a bed at the left edge",
+   "time": "night",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 26,
+     "text": "Pax peeks out from behind the open door, edging forward a little and glancing around with wary eyes"
+    }
+   ],
+   "props": [
+    "door"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: ECC on the bed-foot band (x 0-0.30, y 0.45-0.90) and the wall band (y 0-0.35) scale 1.0000, 0 px, cc 1.000; compare 0/25 door and wall edges black. The whole skit is drawn dim grey (night lighting of the set, steady; not a colour wash). No caption or watermark (top third and bottom fifth checked every 12 frames)"
+  },
+  {
+   "start": 26,
+   "end": 55,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a wooden bed, a bedside table with a lamp and a small duck figure on the bedpost",
+   "time": "night",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 26,
+     "end": 55,
+     "text": "Polly lies asleep in bed under the blanket with her head on the pillow, eyes closed and beak hanging open"
+    }
+   ],
+   "props": [
+    "bed",
+    "blanket",
+    "bedside lamp"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: ECC on the bed band (y 0.60-1.0) and the lamp band (x 0.5-1.0, y 0-0.4) scale 1.0000, 0 px, cc 1.000; compare 26/54 almost all edges black (only her beak moves). The duck on the bedpost is a prop. No overlay"
+  },
+  {
+   "start": 55,
+   "end": 92,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a round pedestal table lit by a beam of light shining down from above",
+   "time": "night",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 55,
+     "end": 65,
+     "text": "Pax, behind the table, flips a page of the big open book lying in front of him"
+    },
+    {
+     "start": 65,
+     "end": 92,
+     "text": "Pax looks straight ahead over the open book with a determined frown, blinking once"
+    }
+   ],
+   "props": [
+    "big open book",
+    "round table"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: ECC on the pedestal and shadow band (y 0.72-0.90) scale 1.0000, 0 px, cc 1.000 every 3 frames; compare 55/91 table edges black. The light beam is part of the drawn set (steady, not changing); kept, see report. The book's pages show small sketches, no lead | verification pass 2 (verify_v10_report_v14): beat 1 (f65-92): Pax does not look down at the book; from f66 his pupils look straight out over the book (f66, f70, f82, f90), with a squeezed blink f76-79"
+  },
+  {
+   "start": 92,
+   "end": 115,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "effect",
+   "camera": "static",
+   "notes": "Pax lights candles on the kitchen counter with a match, but the picture has a radial vignette: a soft dark arc cuts across the upper right and a large blurred out-of-focus shape covers the upper left, f92-114"
+  },
+  {
+   "start": 115,
+   "end": 147,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with lit candles, glass bottles and a spoon on the teal counter, and a small wooden table and chair behind him",
+   "time": "night",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "partial",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 115,
+     "end": 131,
+     "text": "Pax stands at the counter and shakes a small bottle next to a bowl with a focused frown"
+    },
+    {
+     "start": 131,
+     "end": 147,
+     "text": "Pax holds the bowl steady with one flipper and grinds what is inside with a pestle, frowning in concentration"
+    }
+   ],
+   "props": [
+    "bowl",
+    "pestle",
+    "small bottle",
+    "candles",
+    "glass bottles",
+    "spoon"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: ECC on candle-free bands (back chair x 0-0.22, y 0.33-0.50; counter corner x 0.6-1.0, y 0.8-1.0) scale 1.0000, 0.1 px, cc 1.000 every 4 frames (a counter band with the flickering candles had read a false 9 px); compare 115/146 counter edge, bottles, spoon and chair black (no doubling). Pax is cut by the counter (body below it hidden), so partial. The counter is lit teal by the candles while the room stays grey: steady set lighting, no vignette arc visible here (unlike f92-114). No overlay | verification pass 2 (verify_v10_report_v14): beat 0: the bottle is shaken beside the bowl's left rim (f118-130), never over it; Pax still holds it at f129-130, so the change is at f131; beat 1: Pax never picks the bowl up: it stays on the counter (shadow under it f133-146) while one flipper steadies it and the other grinds the contents with a pale pestle (f133-142); props: add the pestle"
+  },
+  {
+   "start": 147,
+   "end": 164,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "17 frames: Pax pours coffee from a brown bottle into a glass on the counter"
+  },
+  {
+   "start": 164,
+   "end": 219,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "three object inserts with only Pax's flipper at the edge: milk poured into the glass of coffee (f164-186), whipped cream piped on top (f187-203), chocolate sprinkles shaken from a bowl (f204-218). Hard cuts at f187 and f204; f187-218 also carry a heavy radial vignette, and the last two are under 21 frames"
+  },
+  {
+   "start": 219,
+   "end": 258,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "the dim bedroom doorway again: only Pax's flipper reaches in from behind the door holding out the iced coffee with whipped cream, f222-257 (f219-221 empty doorway); Pax himself stays hidden behind the door (flipper-only shot = no_lead per the curator rulings)"
+  },
+  {
+   "start": 258,
+   "end": 292,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a wooden bed, a bedside table with a lamp and a small duck figure on the bedpost",
+   "time": "night",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 258,
+     "end": 263,
+     "text": "Polly sleeps in bed under the blanket with her eyes closed and her beak open, drooling a little"
+    },
+    {
+     "start": 263,
+     "end": 287,
+     "text": "Polly keeps sleeping on the pillow with her eyes closed and her beak closed in a small pucker"
+    },
+    {
+     "start": 287,
+     "end": 292,
+     "text": "Polly starts to lift her head off the pillow, her eyes still closed"
+    }
+   ],
+   "props": [
+    "bed",
+    "blanket",
+    "bedside lamp"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f258-291: ECC on the bed-foot band (y 0.65-1.0) scale 1.0000, 0 px, cc 1.000 to f291, lamp band likewise; compare 258/291 bed and lamp edges black. The camera starts to pan at f292 (2 px, then 7, 14 ...). No overlay | verification pass 2 (verify_v10_report_v14): beat 0 (f258-276): the beak is open (with drool) only f258-262; from f263 it is closed in a small pucker; beat 1 (f276-292): Polly does not lift her head until f287: f263-286 are near pixel-identical (compare 270/286), the head rises f287-291. 'as if sniffing' is intent, not visible"
+  },
+  {
+   "start": 292,
+   "end": 310,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pan_right",
+   "notes": "18 frames: the view slides right (bed band tx -2, -7, -14 ... about 8 px per frame) as Polly sits up wide-eyed and reaches toward the bedside table; settles at f310"
+  },
+  {
+   "start": 310,
+   "end": 318,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "8 locked frames to the end: Polly sitting up in bed by the lamp"
+  }
+ ]
+}

@@ -1,0 +1,268 @@
+{
+ "skit": "iteration_7/293_videos/PP-MemoryBox-Base.mp4",
+ "frames": 267,
+ "fps": 24.0,
+ "curated_by": "curator-v10-08",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a sunny beach scene with turquoise water and smooth ice rocks on the sand"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "a room drawn on a plain pale grey background"
+  },
+  "s3": {
+   "kind": "set",
+   "desc": "a picnic spot on an icy clifftop above the sea"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 11,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "push_in",
+   "notes": "11 frames of push-in at the start of the beach shot (ECC on the lower sand band scale 1.008 at f3, 1.022 at f9; full-res pixel changes stop after f11). Also a camera_move"
+  },
+  {
+   "start": 11,
+   "end": 47,
+   "boundary": "camera",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the sun and fluffy clouds in the sky behind them",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 11,
+     "end": 21,
+     "text": "Pax holds up a lilac seashell while Polly lowers her raised flipper with her eyes closed"
+    },
+    {
+     "start": 21,
+     "end": 37,
+     "text": "Pax holds the seashell out to Polly and she takes it in both flippers"
+    },
+    {
+     "start": 37,
+     "end": 47,
+     "text": "Polly holds the seashell to her chest, smiling at it, while Pax stands with his eyes closed and a proud smile"
+    }
+   ],
+   "props": [
+    "seashell"
+   ],
+   "prop_events": [
+    {
+     "prop": "seashell",
+     "event": "hands_over",
+     "frame": 25,
+     "by": "pax"
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f11-46: lower sand band ECC constant from f12 (scale 1.0257 vs f0 = the end of the push-in), full-res pixel changes 0 from f12; compare 11/46 rocks and shoreline black. Waves and clouds animate. No caption or watermark"
+  },
+  {
+   "start": 47,
+   "end": 91,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a desk holding a rounded computer monitor and keyboard, a shell-backed stool and a tall stack of papers",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 47,
+     "end": 55,
+     "text": "Pax stands beside Polly's stool holding a small bouquet of orange flowers while Polly sits at the computer desk"
+    },
+    {
+     "start": 55,
+     "end": 67,
+     "text": "Pax holds the bouquet up to Polly and she reaches out and takes it"
+    },
+    {
+     "start": 67,
+     "end": 78,
+     "text": "Polly holds the bouquet up to her beak and sniffs it, blinking, while Pax closes his eyes and blushes beside her"
+    },
+    {
+     "start": 78,
+     "end": 91,
+     "text": "Polly smells the bouquet with her eyes closed and a smile while Pax stands beside her blushing with his eyes shut"
+    }
+   ],
+   "props": [
+    "bouquet of flowers",
+    "computer",
+    "stool",
+    "stack of papers"
+   ],
+   "prop_events": [
+    {
+     "prop": "bouquet of flowers",
+     "event": "hands_over",
+     "frame": 61,
+     "by": "pax"
+    }
+   ],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [
+    "computer screen",
+    "sticky notes"
+   ],
+   "travel": "none",
+   "notes": "camera locked: compare 47/90 shows black edges on the monitor, desk, papers and stool; full-res monitor region 0 changed pixels f47-90 (ECC on the top band wobbles within 0.5% only because Polly's head is in it). No caption or watermark | verification pass 2 (verify_v10_report_v07): beat [67,91): Polly's eyes are open f67-71 and f76-77 (closed only f72-75 and from f78); Pax's eyes are still open f67-68"
+  },
+  {
+   "start": 91,
+   "end": 136,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with a coral picnic blanket, a picnic basket and a flask, and the sea and a low sun behind them",
+   "time": "sunset",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 91,
+     "end": 101,
+     "text": "Pax sits on the blanket holding a black instant-photo gadget up at arm's length for a selfie while Polly leans in and winks"
+    },
+    {
+     "start": 101,
+     "end": 113,
+     "text": "Pax keeps the gadget raised as a small paper print slides out of its top, Polly leaning against him"
+    },
+    {
+     "start": 113,
+     "end": 123,
+     "text": "Pax lowers the gadget to his lap and Polly takes the print from it"
+    },
+    {
+     "start": 123,
+     "end": 136,
+     "text": "Polly holds up the blank print and peers at it with rosy cheeks and raised brows while Pax leans close, looking at it too"
+    }
+   ],
+   "props": [
+    "instant-photo gadget",
+    "photo print",
+    "picnic blanket",
+    "picnic basket",
+    "flask"
+   ],
+   "prop_events": [
+    {
+     "prop": "photo print",
+     "event": "hands_over",
+     "frame": 117,
+     "by": "pax"
+    }
+   ],
+   "effects": [
+    "sparkle",
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: lower cliff band ECC scale 1.0000, 0 px through f135; compare 91/135 cliff, blanket and basket black. Only the clouds drift (the top band ECC reads +0.9 px/frame sideways from them). The print stays blank (zoomed f133), so no lead depiction. A small flash sparkle at f95-97. No caption or watermark | verification pass 2 (verify_v10_report_v07): beat [123,136): Pax is not smiling; he leans in looking at the print with wide eyes and an open beak, and Polly peers at it with raised, puzzled brows"
+  },
+  {
+   "start": 136,
+   "end": 168,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "Polly flops on a bed then sits up holding a small box: static only f136-154 (19 frames), then a push-in f155-167 (lower bed band ECC scale 1.006 at f157, 1.024 at f166). Neither part reaches 21 frames"
+  },
+  {
+   "start": 168,
+   "end": 267,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "insert: an open memory box labelled with the leads' names seen from above; only Polly's flipper reaches in to drop in a shell, flowers, letters, a small penguin plush and photos. The photos show Pax and Polly (also lead_copy) and the label is in-world text"
+  }
+ ]
+}

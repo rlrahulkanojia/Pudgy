@@ -1,0 +1,31 @@
+{
+ "skit": "iteration_7/293_videos/pp_WFH_Base.mp4",
+ "frames": 191,
+ "fps": 24.0,
+ "curated_by": "curator-v10-07",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {},
+ "outfits": {},
+ "settings": {},
+ "spans": [
+  {
+   "start": 0,
+   "end": 95,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "off_style",
+   "camera": "push_in",
+   "notes": "OLD_DESIGN: older Pudgy design throughout the skit: the blue penguin has a yellow beak and yellow feet, a paler periwinkle body, and the desk chair and bed are glossy with shaded highlights. Shot: the penguin sleeps in bed under a cream blanket with a black sleep mask pushed up, drooling. f0-4 a wider view with a printed text poster above the headboard, jump-in at f5 settling by f8, then a very slow push-in (ECC scale 1.0007 at f18 -> 1.0060 at f90, cc >= 0.99). Not split at f5: nothing in the shot could be kept"
+  },
+  {
+   "start": 95,
+   "end": 191,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "off_style",
+   "camera": "static",
+   "notes": "OLD_DESIGN: older Pudgy design throughout the skit: the blue penguin has a yellow beak and yellow feet, a paler periwinkle body, and the desk chair and bed are glossy with shaded highlights. Shot: the penguin seen from behind sits on a glossy chair at a desk in a video call on a laptop (a grid of other penguin faces on the screen) holding a mug. Camera locked (ECC on the top band scale 1.0000, 0 px, cc 1.000 away from his head); skit ends on this shot"
+  }
+ ]
+}

@@ -1,0 +1,760 @@
+{
+ "skit": "iteration_7/293_videos/PP-Helpless-Base.mp4",
+ "frames": 531,
+ "fps": 24.0,
+ "curated_by": "curator-v10-02",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "a navy ice bag on her head",
+  "o2": "a navy ice bag on his head"
+ },
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a kitchen with a curved turquoise counter and peach cupboard doors"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "a bedroom drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 41,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a mixing bowl, a paper bag, a measuring jug of milk, a bowl of chocolate chips and a muffin tray on the counter",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 7,
+     "text": "Polly, with flushed cheeks and droopy eyes, tilts a red can over the mixing bowl on the counter"
+    },
+    {
+     "start": 7,
+     "end": 20,
+     "text": "Polly squeezes her eyes shut as white powder pours from the can into the bowl"
+    },
+    {
+     "start": 20,
+     "end": 28,
+     "text": "Polly opens her eyes and lifts the can away from the bowl with a weary frown"
+    },
+    {
+     "start": 28,
+     "end": 41,
+     "text": "Polly sets the can down beside the bowl and gazes ahead, flushed, with sweat drops by her face"
+    }
+   ],
+   "props": [
+    "red can",
+    "mixing bowl",
+    "measuring jug",
+    "paper bag",
+    "muffin tray"
+   ],
+   "prop_events": [],
+   "effects": [
+    "sweat drops"
+   ],
+   "overlays": [],
+   "in_world_text": [
+    "can label"
+   ],
+   "travel": "none",
+   "notes": "camera locked f0-40 (ECC on the counter-back band x0-0.4: scale 1.000, 0 px); background drawn soft-focus. No overlay (top third and bottom fifth checked). Polly looks ill: flushed cheeks, sweat drops"
+  },
+  {
+   "start": 41,
+   "end": 51,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "pull-back f41-50 from Polly's close shot to the wider kitchen with Pax (ECC scale 0.996 at f41 falling to 0.85 by f45; locked again from f51). Also a camera_move"
+  },
+  {
+   "start": 51,
+   "end": 122,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a soft-focus arched shelf behind them and a mixing bowl, a jug, a bowl of chocolate chips and a muffin tray on the counter",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 103,
+       "screen": "center"
+      }
+     ]
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 100,
+       "screen": "left-center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 51,
+     "end": 70,
+     "text": "Polly stands at the counter with flushed cheeks and droopy eyes while Pax stands beside her, watching her"
+    },
+    {
+     "start": 70,
+     "end": 90,
+     "text": "Pax reaches over and presses a flipper to Polly's forehead as she squints"
+    },
+    {
+     "start": 90,
+     "end": 97,
+     "text": "Pax pulls his flipper back and looks at Polly with worried eyes"
+    },
+    {
+     "start": 97,
+     "end": 104,
+     "text": "Pax slips around behind Polly to stand on her other side"
+    },
+    {
+     "start": 104,
+     "end": 122,
+     "text": "Pax wraps a flipper around Polly's shoulders and walks her along to the right while she keeps her eyes closed"
+    }
+   ],
+   "props": [
+    "mixing bowl",
+    "measuring jug",
+    "muffin tray"
+   ],
+   "prop_events": [],
+   "effects": [
+    "sweat drops"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "locked f51-121 (ECC on the shelf band x0.45-1: scale 1.000, 0 px vs f59); background soft-focus. Pax and Polly swap sides f97-103 | verification pass 2 (verify_v10_report_v02): beat [104,122): they do not just stand and hug: Pax walks Polly to the right with his flipper round her (Pax x 0.23 -> 0.44, Polly 0.42 -> 0.68 between f104 and f121); locked confirmed (cupboard band y0.62-0.85 ECC 1.0000 cc 1.000 f53-121)"
+  },
+  {
+   "start": 122,
+   "end": 168,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a bed with duck-topped bedposts, a yellow nightstand and a lamp with a rose shade",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "exits",
+     "outfit": [],
+     "exits_at": 160
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 122,
+     "end": 137,
+     "text": "Pax, seen from behind, leans over and tucks the blanket around Polly as she lies in bed looking up at him"
+    },
+    {
+     "start": 137,
+     "end": 144,
+     "text": "Pax turns to face forward and steps back from the bed, glancing at Polly"
+    },
+    {
+     "start": 144,
+     "end": 160,
+     "text": "Pax waddles off to the left while Polly lies back with her eyes closed"
+    },
+    {
+     "start": 160,
+     "end": 168,
+     "text": "Polly lies alone in bed with her eyes closed, flushed and sweating"
+    }
+   ],
+   "props": [
+    "bed",
+    "nightstand",
+    "lamp",
+    "ice bag"
+   ],
+   "prop_events": [],
+   "effects": [
+    "sweat drops"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "exits",
+   "notes": "locked: ECC on the nightstand-drawer band y0.68-0.88 x0.76-0.98 scale 1.000, <=0.1 px f122-167; compare 122/143 nightstand and headboard edges black (a wider band that took in the lamp and blanket edge gave a false drift). Bedposts are topped by little duck figures (props). Pax's last sliver at f159"
+  },
+  {
+   "start": 168,
+   "end": 196,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a mixing bowl, a red can and a paper bag on the counter in front of him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 168,
+     "end": 176,
+     "text": "Pax stands behind the counter beside the mixing bowl and glances upward with a blank stare"
+    },
+    {
+     "start": 176,
+     "end": 196,
+     "text": "Pax raises a flipper to his chin and frowns, his eyes darting to the side as he thinks"
+    }
+   ],
+   "props": [
+    "mixing bowl",
+    "red can",
+    "paper bag"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "can label"
+   ],
+   "travel": "none",
+   "notes": "locked (ECC on the counter-back band: scale 1.000, <=1 px; compare 168/195 edges black)"
+  },
+  {
+   "start": 196,
+   "end": 217,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a bedpost topped by a duck figure and a lamp with a rose shade on the yellow nightstand",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 196,
+     "end": 213,
+     "text": "Polly lies in bed with her eyes closed, cheeks flushed and sweat drops beside her face"
+    },
+    {
+     "start": 213,
+     "end": 217,
+     "text": "Polly opens her eyes and looks wearily to the left"
+    }
+   ],
+   "props": [
+    "bed",
+    "nightstand",
+    "lamp",
+    "ice bag"
+   ],
+   "prop_events": [],
+   "effects": [
+    "sweat drops"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "locked f196-216 on the nightstand band (ECC scale 1.000, 0 px); the pull-back starts at f217, so this span is exactly 21 frames"
+  },
+  {
+   "start": 217,
+   "end": 235,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "fast pull-back f217-226 from Polly to the wide bedroom (ECC on the nightstand: scale 0.973 at f217, still 1.014 vs the settled frame at f226), then a small settle bounce f229-234 (nightstand drawer band vs f280: up to 4.4 px and scale 1.0024, back to 0 px from f235). Also a camera_move"
+  },
+  {
+   "start": 235,
+   "end": 281,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a bed with duck-topped bedposts, a yellow nightstand and a lamp with a rose shade",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "exits",
+     "outfit": [],
+     "exits_at": 275
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 235,
+     "end": 258,
+     "text": "Pax stands by the end of the bed holding up a wooden spoon and a small metal spoon, beak open, while Polly watches him"
+    },
+    {
+     "start": 258,
+     "end": 264,
+     "text": "Pax swings the wooden spoon out to his side and closes his eyes with a smile"
+    },
+    {
+     "start": 264,
+     "end": 275,
+     "text": "Pax waddles off to the left with his eyes closed while Polly lies on her pillow"
+    },
+    {
+     "start": 275,
+     "end": 281,
+     "text": "Polly lies alone in bed with her eyes closed and flushed cheeks"
+    }
+   ],
+   "props": [
+    "wooden spoon",
+    "metal spoon",
+    "bed",
+    "nightstand",
+    "lamp",
+    "ice bag"
+   ],
+   "prop_events": [],
+   "effects": [
+    "sweat drops"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "exits",
+   "notes": "locked f235-280 (ECC on the nightstand-drawer band y0.60-0.72 x0.75-0.98 vs f280: scale 1.000, <=0.5 px f235-278). Started at f235, after the settle bounce of the pull-back. Pax's last sliver at f274 | verification pass 2 (verify_v10_report_v02): framing: Pax measures 18.9% of the picture height (rows 907-1270 of 1920 at f240): under ~20% is wide (Wallet [0,64) at 18.6% is curated wide); locked confirmed (nightstand band rawdiff 0.01 vs f260 from f227; ECC <=0.3 px f235-279); beats ok (Polly's eyes open f235-265, closed f268+)"
+  },
+  {
+   "start": 281,
+   "end": 297,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "hard cut at f281 (profile missed it: same flat background): Pax stands at the end of the bed holding a hand mixer and a whisk, 16 frames"
+  },
+  {
+   "start": 297,
+   "end": 306,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "whip",
+   "notes": "fast whip from Pax across to Polly in bed f297-305, locked again from f306. Also a camera_move"
+  },
+  {
+   "start": 306,
+   "end": 318,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "Polly in bed after the whip, 12 static frames (ECC on the nightstand: locked f306-317)"
+  },
+  {
+   "start": 318,
+   "end": 344,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with the foot of the bed and its ball-topped bedposts behind him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "exits",
+     "outfit": [],
+     "exits_at": 343
+    }
+   ],
+   "beats": [
+    {
+     "start": 318,
+     "end": 329,
+     "text": "Pax holds a hand mixer up to his face and peers at it, a whisk in his other flipper"
+    },
+    {
+     "start": 329,
+     "end": 334,
+     "text": "Pax swings the hand mixer out to his side and shuts his eyes with a pleased smile"
+    },
+    {
+     "start": 334,
+     "end": 344,
+     "text": "Pax waddles off to the left with his eyes closed, the whisk raised in his flipper"
+    }
+   ],
+   "props": [
+    "hand mixer",
+    "whisk",
+    "bed"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "exits",
+   "notes": "locked: compare 318/343 bed and bedpost edges black (ECC fails here because Pax and the whisk fill the band). Same set-up as f281-296. Only a sliver of Pax's flipper at f343 | verification pass 2 (verify_v10_report_v02): view: this shot shows the foot of the bed, whose posts are topped by yellow balls; the duck figures are on the headboard and are not in the picture; locked confirmed (bed band raw pixel difference 0.00 vs f343 outside the whisk)"
+  },
+  {
+   "start": 344,
+   "end": 381,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a yellow nightstand and a lamp with a rose shade beside the bed",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 344,
+     "end": 349,
+     "text": "Polly lies in bed and peers up with tired, watery eyes"
+    },
+    {
+     "start": 349,
+     "end": 381,
+     "text": "Polly closes her eyes and lies still on the pillow, cheeks flushed, sweat drops beside her face"
+    }
+   ],
+   "props": [
+    "bed",
+    "nightstand",
+    "lamp",
+    "ice bag"
+   ],
+   "prop_events": [],
+   "effects": [
+    "sweat drops"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "locked (ECC on the headboard band x0.8-1: scale 1.000, 0 px f344-380; compare 344/380 nightstand edges black)"
+  },
+  {
+   "start": 381,
+   "end": 398,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "Pax at the end of the bed holding a red cake-mix box and a milk carton, smiling, 17 frames"
+  },
+  {
+   "start": 398,
+   "end": 404,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "Polly in bed, 6 frames"
+  },
+  {
+   "start": 404,
+   "end": 418,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "Polly in bed in a dark grey wash with radiating speed lines (shock effect over the whole picture, also an effect drop), 14 frames"
+  },
+  {
+   "start": 418,
+   "end": 442,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a bed with duck-topped bedposts, a yellow nightstand and a lamp with a rose shade",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 418,
+     "end": 426,
+     "text": "Pax stands by the bed holding a red box and a milk carton while Polly lies under the blanket looking at him"
+    },
+    {
+     "start": 426,
+     "end": 432,
+     "text": "Polly pushes off the blanket and sits up on the bed"
+    },
+    {
+     "start": 432,
+     "end": 442,
+     "text": "Polly sits upright on the bed facing forward with a flat, heavy-lidded stare and flushed cheeks while Pax holds up the box and the carton"
+    }
+   ],
+   "props": [
+    "red box",
+    "milk carton",
+    "bed",
+    "nightstand",
+    "lamp",
+    "ice bag"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "locked (compare 418/441 nightstand, lamp and bedpost edges black; ECC on the nightstand: scale 1.000, <=1 px except where Polly enters the band at f430). The box shows a cake-mix picture, no character | verification pass 2 (verify_v10_report_v02): beat [432,442): Polly's eyes are small and flat-topped (a deadpan, heavy-lidded stare) and she faces forward, not staring at Pax with wide eyes; framing: Pax measures 18.9% of the picture height (f420): wide, not medium wide; locked confirmed (compare 418/441 nightstand, lamp, bedpost edges black; band rawdiff 0.05)"
+  },
+  {
+   "start": 442,
+   "end": 459,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "Pax holding the box and carton, Polly's flipper reaches in from the right, Pax hops into the bed and out of view f450-455, empty bed f455-458; 17 frames"
+  },
+  {
+   "start": 459,
+   "end": 509,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a yellow nightstand and a lamp with a rose shade beside the bed",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "exits",
+     "outfit": [],
+     "exits_at": 500
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": [
+      "o2"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 459,
+     "end": 470,
+     "text": "Polly, seen from behind, stands at the bedside and reaches a flipper toward Pax, who lies in bed looking at her"
+    },
+    {
+     "start": 470,
+     "end": 480,
+     "text": "Polly bends down and picks up a red box and a milk carton from the floor"
+    },
+    {
+     "start": 480,
+     "end": 486,
+     "text": "Polly straightens up holding the box and the carton, her eyes closed"
+    },
+    {
+     "start": 486,
+     "end": 500,
+     "text": "Polly waddles off to the left with the box and the carton while Pax watches from the bed"
+    },
+    {
+     "start": 500,
+     "end": 509,
+     "text": "Pax lies alone in bed with rosy cheeks, gazing ahead"
+    }
+   ],
+   "props": [
+    "red box",
+    "milk carton",
+    "bed",
+    "nightstand",
+    "lamp",
+    "ice bag"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "exits",
+   "notes": "locked (ECC on the nightstand band: scale 1.000, 0 px f459-504). Pax and Polly have swapped places: Pax now lies in bed with the ice bag. Polly's last sliver at f499"
+  },
+  {
+   "start": 509,
+   "end": 531,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a mixing bowl, a measuring jug, a paper bag and a muffin tray on the counter",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 521,
+       "screen": "right-center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 509,
+     "end": 531,
+     "text": "Polly shuffles left behind the counter holding a red box and a milk carton, flushed and sweating with a weary frown"
+    }
+   ],
+   "props": [
+    "red box",
+    "milk carton",
+    "mixing bowl",
+    "measuring jug",
+    "muffin tray"
+   ],
+   "prop_events": [],
+   "effects": [
+    "sweat drops"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "locked (compare 509/530 counter, bowl and cupboard edges black; ECC on the counter band scale ~1.000). Polly's head is cut by the right edge f509-515. Skit ends on this shot"
+  }
+ ]
+}

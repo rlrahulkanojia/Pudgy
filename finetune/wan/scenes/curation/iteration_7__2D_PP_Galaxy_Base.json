@@ -1,0 +1,236 @@
+{
+ "skit": "iteration_7/293_videos/2D_PP_Galaxy_Base.mp4",
+ "frames": 289,
+ "fps": 24,
+ "curated_by": "curator-v10-26",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a living room with a cream sofa drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 45,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "wide: Pax on the cream sofa plays on the iFin, which carries a small pink Polly figurine charm (pink penguin with orange feet and a head tuft, full-res crop f10), then lays it on the sofa f30-36; Polly stands in front. Charm visible throughout (same Polly charm other curators drop as lead_copy in PlushHug, Finally, Arm)"
+  },
+  {
+   "start": 45,
+   "end": 98,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "medium of Pax on the sofa with the phone and its Polly figurine charm lying beside him (full-res crop f60, visible f45-97)"
+  },
+  {
+   "start": 98,
+   "end": 141,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the end of the sofa and its yellow scallop-shell armrest beside her and the rim of a glass coffee table in front",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 98,
+     "end": 111,
+     "text": "Polly stands with her flippers clasped under her beak, gazing up wide-eyed and moving her beak as she talks"
+    },
+    {
+     "start": 111,
+     "end": 127,
+     "text": "Polly squeezes her eyes tightly shut, her flippers still clasped under her beak"
+    },
+    {
+     "start": 127,
+     "end": 141,
+     "text": "Polly opens her eyes, now brimming with tears, and looks up pleadingly with her beak open"
+    }
+   ],
+   "props": [
+    "sofa",
+    "glass coffee table"
+   ],
+   "prop_events": [],
+   "effects": [
+    "tears"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "cuts at f98 and f141 confirmed step-1. Locked: ECC on the coffee-table band (y 0.80-0.99) scale 1.0000, 0.1 px, cc 1.000 every 6 frames; compare 98/140 keeps sofa arm and table edges black (6103 static vs 260 changed px). The phone with the charm lies at the other end of the sofa, out of the picture. Top third plain wall, bottom fifth table rim: no overlay"
+  },
+  {
+   "start": 141,
+   "end": 167,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "wide again: Pax on the sofa beside the phone with the Polly figurine charm (visible at the sofa's left end f141-166), Polly standing in front"
+  },
+  {
+   "start": 167,
+   "end": 172,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "push_in",
+   "notes": "5-frame push-in and shift right as Pax hops off the sofa (ECC on the table band: scale 1.000 at f166 to 1.191 at f172, tx -217 px); the charm phone still shows at the left edge until f171 (also lead_copy)"
+  },
+  {
+   "start": 172,
+   "end": 208,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the cream sofa behind them and a glass coffee table in the foreground",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 172,
+     "end": 178,
+     "text": "Pax lands from a hop in front of the sofa and crouches with his eyes squeezed shut"
+    },
+    {
+     "start": 178,
+     "end": 202,
+     "text": "Pax straightens up and looks at Polly with one flipper raised while she stands with clasped flippers and teary, worried eyes"
+    },
+    {
+     "start": 202,
+     "end": 208,
+     "text": "Polly lowers her clasped flippers to her chest and glances up nervously while Pax watches her"
+    }
+   ],
+   "props": [
+    "sofa",
+    "glass coffee table"
+   ],
+   "prop_events": [],
+   "effects": [
+    "tears"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "locked after the push-in: ECC on the coffee-table band against f141 holds scale 1.1909, tx -216.7, ty -257.9 px at cc 1.000 from f172 to f207 (step 1 confirms f172 is the first settled frame); compare 172/207 keeps sofa and table edges black. The charm phone is out of the picture from f172 (left-edge crops f168-175). Cut to an extreme close-up of Pax's eye at f208. Top third plain wall, bottom fifth table: no overlay"
+  },
+  {
+   "start": 208,
+   "end": 227,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "push_in",
+   "notes": "19 frames: extreme close-up on Pax's eye (abstract tufted shapes and a tiny pupil), then a push-in into the pupil from ~f219 as a galaxy grows out of it"
+  },
+  {
+   "start": 227,
+   "end": 259,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "off_style",
+   "camera": "static",
+   "notes": "a glowing painted space galaxy (spiral arms, planets, a sun, stars) that bursts out of Pax's pupil and fills the picture, a different rendering from the flat Pudgy look; no lead either"
+  },
+  {
+   "start": 259,
+   "end": 289,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the end of the sofa and its yellow scallop-shell armrest beside her and the rim of a glass coffee table in front",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 259,
+     "end": 266,
+     "text": "Polly fidgets with her flippers and squeezes her teary eyes shut"
+    },
+    {
+     "start": 266,
+     "end": 278,
+     "text": "Polly opens her eyes and looks up with her beak open, swinging her flippers out to her sides"
+    },
+    {
+     "start": 278,
+     "end": 289,
+     "text": "Polly lifts a flipper to her cheek and blushes, gazing up wide-eyed with her beak open"
+    }
+   ],
+   "props": [
+    "sofa",
+    "glass coffee table"
+   ],
+   "prop_events": [],
+   "effects": [
+    "tears",
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "same set-up as f98-140. Locked: compare 259/288 keeps the sofa arm, table rim and floor-shadow edges black (Polly herself sways and turns); the ECC bands here are either plain (no fit) or catch Polly (cc < 0.95), so compare decides. Top third plain wall, bottom fifth table rim: no overlay | verification pass 2 (verify_v10_report_v19): beat 3: Polly is not beaming. f278-288 she holds a flipper to her cheek and blushes with round wide eyes and a small open beak, no smile shape"
+  }
+ ]
+}

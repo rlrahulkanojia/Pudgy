@@ -1,0 +1,151 @@
+{
+ "skit": "iteration_7/293_videos/PP-ID-Base.mp4",
+ "frames": 173,
+ "fps": 24.0,
+ "curated_by": "curator-v10-11",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "a baggy cream collared shirt with a black tie"
+ },
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "an ID photo corner drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 17,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "17 frames: exterior of an ice-block office building with a sign over the door (in-world text), snowmobiles parked in front; only a tiny penguin figure in the doorway (also no_lead)"
+  },
+  {
+   "start": 17,
+   "end": 74,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a teal backdrop screen on a stand behind him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 17,
+     "end": 36,
+     "text": "Pax stands stiffly in front of the teal backdrop, glancing about with a worried look and fidgeting his flippers"
+    },
+    {
+     "start": 36,
+     "end": 48,
+     "text": "Pax puffs himself up and stares straight ahead with his flippers held out at his sides"
+    },
+    {
+     "start": 48,
+     "end": 58,
+     "text": "Pax opens his beak a little and shuffles his flippers at his sides"
+    },
+    {
+     "start": 58,
+     "end": 74,
+     "text": "Pax tugs at his tie with both flippers, straightening it"
+    }
+   ],
+   "props": [
+    "teal photo backdrop on a stand"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: ECC on the backdrop band (y 0.25-0.45, x 0-0.30) scale 1.0000, 0 px, cc 1.000 except f41-57 where Pax's flipper enters the band; backdrop-pole and backdrop-top regions diff <= 0.01 vs f17 on every frame. Pax wears an oversized cream shirt and a black tie (outfit). No caption or watermark"
+  },
+  {
+   "start": 74,
+   "end": 109,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "reverse view: a black-and-white penguin clerk in a green shirt, striped tie and name badge sits at a desk behind a camera on a stand, a flipper by a red button, and blinks; no lead"
+  },
+  {
+   "start": 109,
+   "end": 140,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a teal backdrop screen on a stand behind him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 109,
+     "end": 129,
+     "text": "Pax stands in front of the teal backdrop with both flippers raised at his chest, wringing them as he looks ahead"
+    },
+    {
+     "start": 129,
+     "end": 140,
+     "text": "Pax blinks and flings one flipper out to the side, holding a pose with his beak open in a smile"
+    }
+   ],
+   "props": [
+    "teal photo backdrop on a stand"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: ECC on the backdrop band (y 0.25-0.45, x 0-0.30) scale 1.0000, 0 px, cc 1.000 every 3rd frame f112-139. The flipper wringing is a 12-frame loop (f121 is pixel-identical to f109 and the cycle repeats up to ~f128). Eyes shut f133 (blink). The white camera flash starts at f140"
+  },
+  {
+   "start": 140,
+   "end": 173,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "white camera flash f140-143 (effect), then an ID card insert slides in and settles (f143-162, locked f163-172): the card shows a photo of Pax in his shirt and tie (lead_copy) and printed text; no lead"
+  }
+ ]
+}

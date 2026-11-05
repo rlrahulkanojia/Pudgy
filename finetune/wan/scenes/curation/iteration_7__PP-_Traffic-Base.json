@@ -1,0 +1,290 @@
+{
+ "skit": "iteration_7/293_videos/PP- Traffic-Base.mp4",
+ "frames": 194,
+ "fps": 24.0,
+ "curated_by": "curator-v10-27",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "polly": {
+   "kind": "lead"
+  },
+  "x1": {
+   "kind": "extra",
+   "desc": "a brown penguin with a light teal shoulder bag"
+  }
+ },
+ "outfits": {
+  "o1": "a red bow on her head"
+ },
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a caf\u00e9 with an ice counter, a pastry case and a menu board, drawn in soft faded colours"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "a bedroom drawn on a plain pale grey background"
+  },
+  "s3": {
+   "kind": "flat",
+   "desc": "a dressing corner drawn on a plain pale grey background"
+  },
+  "s4": {
+   "kind": "set",
+   "desc": "an igloo room with curved ice-block walls and a wooden door"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 46,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the caf\u00e9 sign and a pick-up sign behind them",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left",
+     "presence": "enters",
+     "enters_at": 1,
+     "outfit": [
+      "o1"
+     ]
+    },
+    {
+     "id": "x1",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 8,
+     "text": "Polly walks in from the left with a red shell-shaped purse while {x1} stands holding {ifin}, smiling down at it"
+    },
+    {
+     "start": 8,
+     "end": 24,
+     "text": "Polly stops beside {x1} with a sweat drop on her head and clutches her purse strap, blushing and frowning, while he turns to look at her"
+    },
+    {
+     "start": 24,
+     "end": 29,
+     "text": "Polly shuts her eyes with a sweat drop and lets her purse swing from her flipper"
+    },
+    {
+     "start": 29,
+     "end": 46,
+     "text": "Polly flings a flipper out to the side and talks, blushing with a sweat drop, while {x1} holds his phone and talks back to her"
+    }
+   ],
+   "props": [
+    "red shell-shaped purse",
+    "phone",
+    "shoulder bag"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 0,
+     "by": "x1",
+     "is_ifin": true
+    }
+   ],
+   "effects": [
+    "sweat drop",
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [
+    "caf\u00e9 sign",
+    "menu board",
+    "pick-up sign"
+   ],
+   "travel": "enters",
+   "notes": "camera locked (motion on the caf\u00e9-sign band y0.02-0.30: scale 1.0000, 0 px, cc 1.000 to f45; compare 0/45: sign, counter and till edges black). The caf\u00e9 is the invented Huddlebucks; its round logo is a generic crowned penguin, neither lead. The background is drawn faded the whole shot (a style choice, not an effect). The brown penguin's phone has a pale grey back, three lenses and a tuft: the iFin. Polly shows only as a sliver at the left edge at f0. No overlay | verification pass 2 (verify_v10_report_v26): beat 4 [29,46): the brown penguin talks too - his beak opens and closes f26-45 while he looks at Polly; 'watches her' alone misses it; camera locked (motion y0.02-0.30: 1.0000 / 0 px / cc 1.000 every 2nd frame; compare 0/45 background black); iFin confirmed on a crop (pale grey back, three lenses, tuft); faded cafe background: only the cafe set is drawn pale; Polly, the brown penguin and the plain"
+  },
+  {
+   "start": 46,
+   "end": 83,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a bedside table holding a peach lamp and a little yellow chick figure",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 46,
+     "end": 66,
+     "text": "Polly sits on the bed wrapped head to toe in a peach fish-print blanket, frowning sadly"
+    },
+    {
+     "start": 66,
+     "end": 71,
+     "text": "Polly squeezes her eyes shut as tears well up under the blanket hood"
+    },
+    {
+     "start": 71,
+     "end": 83,
+     "text": "Polly cries with her beak open and tears running down her cheeks, still bundled in the blanket"
+    }
+   ],
+   "props": [
+    "blanket",
+    "bed",
+    "lamp"
+   ],
+   "prop_events": [],
+   "effects": [
+    "tears"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked (lamp and bedpost patches matched at dx 0, dy 0, score 1.000 every 3rd frame f46-82; compare 46/82: bed, lamp and table edges black). Polly's head and face show under the blanket the whole time. The yellow figure on the table is a chick, not a lead. No overlay"
+  },
+  {
+   "start": 83,
+   "end": 119,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with a vanity table covered in perfume bottles, makeup and a string of pearls",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 83,
+     "end": 92,
+     "text": "Polly sits on a round pouf dabbing a makeup brush on her cheek and holding up a hand mirror, tears on her face"
+    },
+    {
+     "start": 92,
+     "end": 105,
+     "text": "Polly keeps brushing her cheek with her eyes shut and tears streaming down"
+    },
+    {
+     "start": 105,
+     "end": 119,
+     "text": "Polly opens her teary eyes and goes on dabbing her cheek with the brush, holding up the hand mirror"
+    }
+   ],
+   "props": [
+    "makeup brush",
+    "hand mirror",
+    "perfume bottles",
+    "makeup",
+    "pouf"
+   ],
+   "prop_events": [],
+   "effects": [
+    "tears"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked (arch and vanity-table patches matched at dx 0, dy 0, score 1.000 every 3rd frame f83-116; compare 83/118: arch and table edges black). The pearls lie on the table and are not worn. The hand mirror's face points away from the viewer: no reflection shown. No overlay | verification pass 2 (verify_v10_report_v26): beat 2 [92,106): Polly's eyes are fully shut f92-104 (closed lines), not half shut; beat 3: her eyes are open again from f105, not f106; 'looking into the hand mirror' is not shown (her gaze is ahead, the mirror back faces the viewer); camera locked (motion on the table band y0.62-0.90 x0.5-1.0: 1.0000 / 0 px / cc 1.000; compare 83/118 black); a faint lighter seam (RGB 215,231,237 vs 210,229,233)"
+  },
+  {
+   "start": 119,
+   "end": 156,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "Polly seen from behind at a tall standing mirror; her reflection fills the mirror the whole shot (f119-155)"
+  },
+  {
+   "start": 156,
+   "end": 194,
+   "boundary": "cut",
+   "keep": false,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s4",
+   "view": "with an open doorway showing snow outside",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ],
+     "moves": [
+      {
+       "frame": 184,
+       "screen": "left-center"
+      }
+     ]
+    }
+   ],
+   "props": [
+    "wooden door",
+    "red shell-shaped purse"
+   ],
+   "prop_events": [],
+   "effects": [
+    "tears"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "camera locked (doorway patch matched at dx 0, dy 0, score >= 0.998 every 2nd frame f156-192; compare 156/193: door, doorway and wall-block edges black). motion on the top wall band has too little texture, so the patch track and compare decide. No overlay | verification pass 2 (verify_v10_report_v26): inset-panel margin: the igloo set is drawn smaller than the frame, leaving a lighter border (RGB 215,231,237 around 210,229,233) on the left (37 px, lower third), right (37 px, lower quarter) and bottom (~140 px) f156-193. Three edges, so not the one-edge seam the ruling keeps. Camera otherwise locked (door patch and compare 156/193 black); beats were fine.",
+   "drop_reason": "other",
+   "beats_dropped": [
+    {
+     "start": 156,
+     "end": 173,
+     "text": "Polly stands with her flipper on the handle of the open door, eyes shut and tears on her cheeks, a purse on her other flipper"
+    },
+    {
+     "start": 173,
+     "end": 181,
+     "text": "Polly lets go of the door and turns toward the doorway, tipping her head up as she cries"
+    },
+    {
+     "start": 181,
+     "end": 194,
+     "text": "Polly shuffles slowly toward the doorway with her head raised and her eyes shut, crying"
+    }
+   ]
+  }
+ ]
+}

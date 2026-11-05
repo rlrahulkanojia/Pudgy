@@ -1,0 +1,313 @@
+{
+ "skit": "iteration_7/293_videos/PP-Brainrot-Base_1.mp4",
+ "frames": 434,
+ "fps": 24.0,
+ "curated_by": "curator-v10-04",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a simple room drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 65,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a long cream sofa with yellow scallop-shell cushions on its arms",
+   "time": "day",
+   "size_change": false,
+   "props": [
+    "phone",
+    "sofa"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 0,
+     "by": "polly",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "locked: motion on the sofa band (y 0.42-0.85, x 0-0.35) scale 1.0000, 0 px at cc 1.000 to f64; compare 0/64 background edges black. Phone has the pale grey back, three lenses and tuft = iFin. No overlay in the top third or bottom fifth | verification pass 2 (verify_v10_report_v12): beat 2: no smile is drawn; Polly's beak stays closed and neutral f18-64 (raised eyebrows only), so 'and a small smile' is removed",
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 18,
+     "text": "Polly sits at the end of the sofa holding {ifin} up by her face, glancing at it and opening her beak for a moment"
+    },
+    {
+     "start": 18,
+     "end": 65,
+     "text": "Polly keeps her eyes on the phone with raised eyebrows, sitting still"
+    }
+   ]
+  },
+  {
+   "start": 65,
+   "end": 130,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a long cream sofa with yellow scallop-shell cushions on its arms",
+   "time": "day",
+   "size_change": false,
+   "props": [
+    "phone",
+    "sofa"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 65,
+     "by": "pax",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "locked: motion on the free right part of the sofa (y 0.42-0.85, x 0.72-1.0) scale 0.9998-1.0000, <=1.5 px at cc 1.000; compare 65/129 sofa edges black. A first band that overlapped Pax read a fake 12-frame drift from his rocking loop. Mirror of shot 1 (sofa arm now on the left) | verification pass 2 (verify_v10_report_v12): beat 2: Pax's eyes close at f95 as written, but no smile is drawn (closed beak only); 'contented smile' becomes 'contented look'",
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 65,
+     "end": 95,
+     "text": "Pax sits at the end of the sofa hugging {ifin} to his chest and glances sideways with heavy-lidded eyes"
+    },
+    {
+     "start": 95,
+     "end": 130,
+     "text": "Pax closes his eyes with a contented look and keeps hugging the phone, bobbing very slightly"
+    }
+   ]
+  },
+  {
+   "start": 130,
+   "end": 183,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a long cream sofa with yellow scallop-shell cushions on its arms",
+   "time": "day",
+   "size_change": false,
+   "props": [
+    "phone",
+    "sofa"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 130,
+     "by": "pax",
+     "is_ifin": true
+    },
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 130,
+     "by": "polly",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "hard cut at f130 (not on the same flat background as shot 2: wider). Locked f130-182: sofa arms (x 0-0.14 and 0.86-1.0, y 0.5-0.78) scale 1.0000 at cc 1.000 to f182; compare 130/182 sofa edges black. A slow push-in starts at f183 (span 4). Both phones are iFins (tuft, three lenses) | verification pass 2 (verify_v10_report_v12): beat 1: Polly does not smile f130-162 (neutral closed beak, eyes on her phone); 'smiles down at her phone' becomes 'looks at her phone' (also brings the beat under 25 words); camera checked at the f183 boundary: full-res translation fits on both sofa arms stay within 0.05 px through f182 and diverge from f183, so the kept span ends at the right frame",
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 130,
+     "end": 157,
+     "text": "Pax opens his eyes and looks at {ifin} held upright in his flippers while Polly, at the sofa's other end, looks at her phone"
+    },
+    {
+     "start": 157,
+     "end": 163,
+     "text": "Pax turns his phone sideways and grips it in both flippers while Polly keeps looking at her phone"
+    },
+    {
+     "start": 163,
+     "end": 183,
+     "text": "Pax stares at the sideways phone while Polly lifts her eyebrows and glances aside, her beak slightly open"
+    }
+   ]
+  },
+  {
+   "start": 183,
+   "end": 233,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a long cream sofa with yellow scallop-shell cushions on its arms",
+   "time": "day",
+   "size_change": false,
+   "props": [
+    "phone",
+    "sofa"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 183,
+     "by": "pax",
+     "is_ifin": true
+    },
+    {
+     "prop": "phone",
+     "event": "puts_down",
+     "frame": 207,
+     "by": "polly",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "slow push-in with an upward drift from f183 to the end of the shot: sofa-base band (y 0.63-0.76) scale 1.004 at f203, 1.016 at f213, 1.038 at f224, 1.072 at f231, ty to -70 px (cc >= 0.95 on most rows); arms band first moves at f183-184. No static run after f183. Otherwise keepable (U3) | verification pass 2 (verify_v10_report_v12): beat 2: Pax slides too. f205-207 both leads scoot toward each other: Pax's body centre goes from x 0.28 to 0.41 of the width while Polly goes from 0.72 to 0.64 (sofa arms fixed, so this is not the camera). The beat claimed only Polly slides. Split into the phone-lowering (f200-205) and the scoot together (f205-209); camera confirmed push_in: ease-in from f183 (arms diverge +/-0.1 px at f184, +/-1.",
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 206,
+       "screen": "left-center"
+      }
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 207,
+       "screen": "right-center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 183,
+     "end": 200,
+     "text": "Pax keeps staring at his sideways phone while Polly holds {ifin} up and glances aside with raised eyebrows"
+    },
+    {
+     "start": 200,
+     "end": 205,
+     "text": "Polly lowers her phone toward her lap while Pax keeps staring at his sideways phone"
+    },
+    {
+     "start": 205,
+     "end": 209,
+     "text": "Pax and Polly scoot toward each other along the sofa until Polly, turned toward him, is pressed against Pax's side"
+    },
+    {
+     "start": 209,
+     "end": 233,
+     "text": "Polly rests her head against Pax and peers at his phone with him, her own phone left on the cushion, while Pax keeps staring at it"
+    }
+   ]
+  },
+  {
+   "start": 233,
+   "end": 341,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "off_style",
+   "camera": "other",
+   "notes": "phone-screen insert: a phone held sideways fills the middle of the picture, showing 3D game footage (a GO! title, then 3D gameplay of the Pudgy Party game); only Pax's flipper tips show under the phone. Also no_lead (phone-screen insert) and ad_merch (game promo). The phone drifts and tilts through the shot. off_style used per the reason order"
+  },
+  {
+   "start": 341,
+   "end": 344,
+   "boundary": "transition",
+   "keep": false,
+   "drop_reason": "transition",
+   "camera": "other",
+   "notes": "radial blur/whip transition f341-343 from the phone shot into the end card"
+  },
+  {
+   "start": 344,
+   "end": 434,
+   "boundary": "after_transition",
+   "keep": false,
+   "drop_reason": "off_style",
+   "camera": "static",
+   "notes": "3D-rendered end card for the Pudgy Party game: title text over 3D characters, including a 3D Pax-like penguin. Also graphic_overlay (title text), ad_merch and lead_copy; off_style used per the reason order. Runs to the end of the skit"
+  }
+ ]
+}

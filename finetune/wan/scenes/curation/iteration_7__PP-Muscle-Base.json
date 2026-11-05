@@ -1,0 +1,126 @@
+{
+ "skit": "iteration_7/293_videos/PP-Muscle-Base.mp4",
+ "frames": 220,
+ "fps": 24.0,
+ "curated_by": "curator-v10-29",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 220,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a round café table between them and two wooden chairs",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 15,
+     "text": "Pax and Polly sit at the café table, both sipping their iced drinks through straws with their eyes closed"
+    },
+    {
+     "start": 15,
+     "end": 33,
+     "text": "Pax opens his eyes and glances sideways at Polly while still sipping, as she keeps drinking"
+    },
+    {
+     "start": 33,
+     "end": 48,
+     "text": "Pax sets his cup down on the table and sits up watching Polly, who keeps sipping with her eyes closed"
+    },
+    {
+     "start": 48,
+     "end": 72,
+     "text": "Pax turns toward Polly and taps her arm with his flipper while she sips and then opens her eyes"
+    },
+    {
+     "start": 72,
+     "end": 96,
+     "text": "Polly turns toward Pax with her straw still in her beak while he looks back at her with a frown"
+    },
+    {
+     "start": 96,
+     "end": 125,
+     "text": "Pax turns to face forward and raises his flipper, flexing it like a bicep"
+    },
+    {
+     "start": 125,
+     "end": 154,
+     "text": "Pax holds the flex and glances at Polly while she stares at his raised flipper"
+    },
+    {
+     "start": 154,
+     "end": 184,
+     "text": "Polly reaches out and squeezes Pax's flexed flipper with her own while he watches her"
+    },
+    {
+     "start": 184,
+     "end": 190,
+     "text": "Polly pulls her flipper back and turns to face forward"
+    },
+    {
+     "start": 190,
+     "end": 208,
+     "text": "Polly sips her drink and glances wide-eyed at Pax while he sits back and looks at her"
+    },
+    {
+     "start": 208,
+     "end": 220,
+     "text": "Pax lifts his cup and sips with his eyes closed while Polly stares ahead with blushing cheeks"
+    }
+   ],
+   "props": [
+    "iced drinks",
+    "straws",
+    "round café table",
+    "wooden chairs"
+   ],
+   "prop_events": [],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [
+    "cup logo"
+   ],
+   "travel": "none",
+   "notes": "one continuous locked shot, no cuts: compare f0/f219 table, pedestal and Pax's chair edges black; only Polly's chair shifts with her (it is why motion on the table band y 0.64-0.80 reads tx +70 px at cc 0.95 from f90 while the table itself does not move; rows f6-84 read 1.000 at cc 0.99-1.00). Pax's cup carries a green round logo parodying a coffee-chain siren (a crowned white penguin, tiny text under it): treated as an invented Pudgy-world logo like Huddlebucks, not a real brand and not a lead depiction; flagged. No caption or watermark (top third and bottom fifth plain throughout). The whole skit carries 4 px pure-black columns at the left and right picture edges (export pillarbox, ~1.8 px after prep's 480-wide scale); kept as other curators kept PP-Favor and PP-BFPockets with the same bars, flagged for a global ruling."
+  }
+ ]
+}

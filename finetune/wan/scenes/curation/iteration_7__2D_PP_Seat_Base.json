@@ -1,0 +1,323 @@
+{
+ "skit": "iteration_7/293_videos/2D_PP_Seat_Base.mp4",
+ "frames": 171,
+ "fps": 24.0,
+ "curated_by": "curator-v10-21",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  },
+  "x1": {
+   "kind": "extra",
+   "desc": "a tan penguin in a red polo shirt"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a living room drawn on a plain pale grey background"
+  },
+  "s2": {
+   "kind": "set",
+   "desc": "a diner with red booth seats, a checkered wall trim and a hanging lamp"
+  },
+  "s3": {
+   "kind": "set",
+   "desc": "an amusement park high up on a roller coaster track, under a pale sky with wispy clouds"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 44,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a cream sofa with a yellow scallop-shell armrest",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "enters",
+     "enters_at": 14,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 21,
+       "screen": "center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 14,
+     "text": "Pax sits on a cream sofa holding a teal remote out to his side, looking ahead"
+    },
+    {
+     "start": 14,
+     "end": 21,
+     "text": "Polly leaps in from the right and drops onto the sofa beside Pax"
+    },
+    {
+     "start": 21,
+     "end": 37,
+     "text": "Polly hugs Pax's flipper and nuzzles against him with her eyes closed while Pax smiles with his eyes closed"
+    },
+    {
+     "start": 37,
+     "end": 44,
+     "text": "Pax opens his eyes while Polly keeps snuggling against his side"
+    }
+   ],
+   "props": [
+    "sofa",
+    "remote"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "enters",
+   "notes": "camera locked f0-43 (bottom sofa-leg band pixel diff <=0.05 throughout; compare 0/43 sofa and armrest edges overlap; the sofa squashes slightly as Polly lands). No overlay"
+  },
+  {
+   "start": 44,
+   "end": 88,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a table in front of them and a checkered floor",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "enters",
+     "enters_at": 53,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 62,
+       "screen": "center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 44,
+     "end": 53,
+     "text": "Pax sits alone in a red diner booth reading a menu held in his flipper"
+    },
+    {
+     "start": 53,
+     "end": 62,
+     "text": "Polly slides into the booth from the right with her flippers out, then breaks into a big closed-eye smile"
+    },
+    {
+     "start": 62,
+     "end": 76,
+     "text": "Polly hugs Pax and presses her cheek to his while Pax keeps reading the menu"
+    },
+    {
+     "start": 76,
+     "end": 80,
+     "text": "Pax blinks while Polly nuzzles his cheek with her eyes closed"
+    },
+    {
+     "start": 80,
+     "end": 88,
+     "text": "Pax opens his eyes and reads the menu again while Polly stays snuggled against him"
+    }
+   ],
+   "props": [
+    "menu",
+    "booth table",
+    "salt shaker",
+    "napkin holder"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "menu"
+   ],
+   "travel": "enters",
+   "notes": "camera locked (checkered floor and lamp bands pixel-identical f44-87; compare 44/87 booth, lamp and floor edges overlap). No overlay | verification pass 2 (verify_v10_report_v23): beat 2 [53,62): Polly's eyes are open f54-57 (she looks at Pax); the closed-eye smile only starts at f58; beat 4 [76,80): Pax's eyes are shut only f77-78 (a blink), not a held closed-eye smile"
+  },
+  {
+   "start": 88,
+   "end": 121,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with the front of a yellow roller coaster car around them",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 88,
+     "end": 98,
+     "text": "Pax and Polly sit squeezed together in a yellow roller coaster car, Pax gripping the safety bar"
+    },
+    {
+     "start": 98,
+     "end": 107,
+     "text": "Polly nuzzles her cheek against Pax with her eyes closed while Pax grips the safety bar and blinks"
+    },
+    {
+     "start": 107,
+     "end": 114,
+     "text": "Polly climbs up over Pax, pressing a flipper to his face and then onto his head while he stares wide-eyed"
+    },
+    {
+     "start": 114,
+     "end": 121,
+     "text": "Polly hugs Pax's head from above with a happy closed-eye smile while Pax squeezes his eyes shut, then frowns"
+    }
+   ],
+   "props": [
+    "roller coaster car",
+    "safety bar"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f88-120 (cloud band pixel-identical; compare 88/120 cloud, track and car edges overlap). The pull-back starts at f121 | verification pass 2 (verify_v10_report_v23): beat 2 [98,107): Pax's beak is closed throughout; he looks ahead f98-103, blinks f104-105 and only looks at Polly f106-107 ('beak open' is false; his beak opens at f110, in beat 3); beat 3 [107,114): Polly's flipper presses Pax's face f107-111 before reaching his head f112-113; Pax stares wide-eyed, beak open at f110; beat 4 [114,121): Pax's eyes are squeezed shut f114-118 but open with a frown f1"
+  },
+  {
+   "start": 121,
+   "end": 133,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "quick pull-back f121-125 to a wider view that brings in the ride attendant at the right, then a sub-pixel ease-out f126-132 (cloud and track-corner bands still changing 0.03-0.07, still from f133). 12 frames"
+  },
+  {
+   "start": 133,
+   "end": 156,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with a yellow roller coaster car on the track",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "x1",
+     "screen": "right",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 140,
+       "screen": "right-center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 133,
+     "end": 140,
+     "text": "{x1} lifts Polly off Pax and plops her down in the seat beside him"
+    },
+    {
+     "start": 140,
+     "end": 148,
+     "text": "{x1} pushes the safety bar down with a stern look while Pax and Polly sit side by side"
+    },
+    {
+     "start": 148,
+     "end": 156,
+     "text": "{x1} steps back and raises a flipper while Pax and Polly sit blushing, staring ahead"
+    }
+   ],
+   "props": [
+    "roller coaster car",
+    "safety bar"
+   ],
+   "prop_events": [],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f133-155 (cloud and bottom-corner track bands pixel-identical; the kept span starts after the pull-back's ease-out). The attendant is a tan penguin, clearly neither lead: kept as an extra. A camera shake starts at f156"
+  },
+  {
+   "start": 156,
+   "end": 171,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "shake",
+   "notes": "camera shake f156-159 (clouds and track jolt a few px and return at f160), then 11 locked frames f160-170 in which the car rolls away down the track and out of the picture, leaving the attendant alone (no lead visible from f168). Skit ends here"
+  }
+ ]
+}

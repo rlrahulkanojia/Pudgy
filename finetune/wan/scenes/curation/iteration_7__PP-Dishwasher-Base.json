@@ -1,0 +1,383 @@
+{
+ "skit": "iteration_7/293_videos/PP-Dishwasher-Base.mp4",
+ "frames": 357,
+ "fps": 24.0,
+ "curated_by": "curator-v10-29",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a kitchen drawn on a plain pale grey background"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "a living room drawn on a plain pale grey background"
+  },
+  "s3": {
+   "kind": "flat",
+   "desc": "a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 21,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a dish rack of plates and mugs in front of her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 21,
+     "text": "Polly sips from a light teal mug held in both flippers, her wide eyes peeking over its rim"
+    }
+   ],
+   "props": [
+    "mug",
+    "dish rack"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "steady push-in through the whole shot: motion on the dish-rack band y 0.80-0.98 (texture 16%/8%) scale 1.012 (f4) -> 1.048 (f20), ty -14 -> -48 px, cc 0.96-0.999. Exactly 21 frames; camera_move is the only reason, so filled (U3)."
+  },
+  {
+   "start": 21,
+   "end": 82,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "two flipper-only inserts: f21-34 a flipper sets the mug into a dish rack (14 frames), cut at f35, f35-81 a flipper sets the mug into the dishwasher rack, sparkles f79-81. No lead body visible; one reason, one run."
+  },
+  {
+   "start": 82,
+   "end": 88,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "fast pull-back from the rack insert to the wide kitchen shot f82-87 (vs f87, f88 is still at scale 0.978; f88 onward constant)."
+  },
+  {
+   "start": 88,
+   "end": 145,
+   "boundary": "camera",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a dishwasher set into a mint-green kitchen counter and an arched wooden door in the back",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 88,
+     "end": 92,
+     "text": "Polly stands beside the open dishwasher of sparkling clean dishes, her flippers clasped under her chin"
+    },
+    {
+     "start": 92,
+     "end": 102,
+     "text": "Polly sets her flippers on her hips and lifts her chin proudly, closing her eyes, her cheeks blushing"
+    },
+    {
+     "start": 102,
+     "end": 112,
+     "text": "Polly opens her eyes with a wide open-beaked smile, flippers still on her hips, then turns her head toward the sparkling dishes"
+    },
+    {
+     "start": 112,
+     "end": 120,
+     "text": "Polly bends forward and pushes the rack of clean dishes back into the dishwasher"
+    },
+    {
+     "start": 120,
+     "end": 128,
+     "text": "Polly swings the dishwasher door shut and holds on to its handle"
+    },
+    {
+     "start": 128,
+     "end": 134,
+     "text": "Polly straightens up beside the closed dishwasher and blinks"
+    },
+    {
+     "start": 134,
+     "end": 145,
+     "text": "Polly reaches out a flipper and rests it on the handle of the closed dishwasher door, lifting one foot behind her"
+    }
+   ],
+   "props": [
+    "dishwasher",
+    "clean dishes"
+   ],
+   "prop_events": [],
+   "effects": [
+    "sparkles",
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: compare f88/f144 counter and cabinet edges overlap exactly; motion vs f88 on the cabinet band reads 1.0000 at cc 1.000 f104-116 (other rows on its repeated drawer lines fit falsely). The door behind Polly is only hidden by her body early on. | verification pass 2 (verify_v10_report_v27): beat 102-112: Polly does not look down at the dishes; f102-108 she opens her eyes with a wide open-beaked smile looking ahead, and f109-111 turns her head toward the dishwasher; beat 134-145: she also lifts one foot behind her while resting her flipper on the door (f134-144); camera confirmed locked: raw pixel diff on the counter/cabinet region x 0-0.13 y 0.48-0.80 is 0.0-0.6 (none > 30) for every"
+  },
+  {
+   "start": 145,
+   "end": 170,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "other",
+   "notes": "Pax carrying a stack of dirty dishes: tracking pan left (the arched door slides right behind him) f145-~160, a short rest ~f161-165, then a quick pull-back f166-169. Each move is under 21 frames, so the run is too_short (no single move clause is true for it). Locked from f170 (compare f170/f200 static edges 5046 vs 1795 for f169)."
+  },
+  {
+   "start": 170,
+   "end": 184,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "verification pass 2 (verify_v10_report_v27): 14 locked frames of Pax tossing his stack of dirty dishes into the open dishwasher rack; ends at the jump cut f183->f184 where Pax pops behind the rack on the same background"
+  },
+  {
+   "start": 184,
+   "end": 229,
+   "boundary": "same_shot",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with an open dishwasher set into a mint-green kitchen counter and an arched wooden door in the back",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 184,
+     "end": 190,
+     "text": "Pax stands behind the open dishwasher and drops a spoon from his flipper into the rack"
+    },
+    {
+     "start": 190,
+     "end": 200,
+     "text": "Pax reaches to the counter, picks up a stained white cup and drops it into the rack"
+    },
+    {
+     "start": 200,
+     "end": 214,
+     "text": "Pax reaches to the counter again, picks up a small shaker and drops it into the rack"
+    },
+    {
+     "start": 214,
+     "end": 222,
+     "text": "Pax grabs the purple spray bottle off the counter and drops it into the dishwasher"
+    },
+    {
+     "start": 222,
+     "end": 229,
+     "text": "Pax stands beside the loaded dishwasher with the counter now cleared, lowering his flipper"
+    }
+   ],
+   "props": [
+    "dishwasher",
+    "dirty dishes",
+    "glasses",
+    "spoon",
+    "cup",
+    "shaker",
+    "spray bottle"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: motion vs f168 on the cabinet band y 0.55-0.80 x 0-0.15 reads a constant scale 0.959 / tx +41 / ty +49 at cc 0.998-0.999 from f172 to f228 (f174-178 dip below 0.95 while dishes fly over the counter); compare f170/f200 counter edges overlap. Pax pops from in front of the dishwasher to behind its door between f183 and f184 (same shot, background unchanged). | verification pass 2 (verify_v10_report_v27): jump cut inside the span: between f183 and f184 Pax pops with no in-between frames from in front of the dishwasher (blue bbox x 0.51-0.84, cx 0.68, h 0.26) to behind the open rack by the counter (x 0.46-0.68, cx 0.57, h 0.22) on an identical background (counter pixel diff 0.31 -> 0.27, none > 30). A new held position after a pop is a same_shot split, so [170,184) (14 frames) becomes too_short and"
+  },
+  {
+   "start": 229,
+   "end": 256,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a low glass coffee table beside him and a cream armchair behind it",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 229,
+     "end": 238,
+     "text": "Pax stands beside the glass coffee table, looking down at the TV remote lying on it"
+    },
+    {
+     "start": 238,
+     "end": 243,
+     "text": "Pax picks the TV remote up off the table"
+    },
+    {
+     "start": 243,
+     "end": 250,
+     "text": "Pax holds the remote in front of his chest with both flippers and closes his eyes for a moment"
+    },
+    {
+     "start": 250,
+     "end": 256,
+     "text": "Pax raises the remote and tosses it up and away out of the picture"
+    }
+   ],
+   "props": [
+    "TV remote",
+    "glass coffee table",
+    "mug",
+    "wristwatch",
+    "armchair"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: motion on the table/armchair band y 0.40-0.62 x 0.60-1.00 reads 1.0000 / 0 px at cc 1.000 f231-255; compare f229/f255 furniture edges black. The small orange mug on the table has a cartoon face; it is not a lead."
+  },
+  {
+   "start": 256,
+   "end": 277,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "insert of the loaded dishwasher rack: the TV remote, a wristwatch and an orange mug with a cartoon face drop in. No lead."
+  },
+  {
+   "start": 277,
+   "end": 319,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 277,
+     "end": 287,
+     "text": "Pax sips from a juice box through its straw with his eyes closed, then opens them"
+    },
+    {
+     "start": 287,
+     "end": 297,
+     "text": "Pax lifts the juice box higher and keeps drinking, his eyes turned upward"
+    },
+    {
+     "start": 297,
+     "end": 311,
+     "text": "Pax lowers the juice box and swings it around behind his back"
+    },
+    {
+     "start": 311,
+     "end": 319,
+     "text": "Pax flings the juice box away to the left and holds his flipper out after it"
+    }
+   ],
+   "props": [
+    "juice box"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "juice box label"
+   ],
+   "travel": "moves_within",
+   "notes": "plain ground with only a faint horizon line: motion reports TOO LITTLE TEXTURE. compare f277/f318: Pax the same size, horizon at the same height; he drifts slightly left with small steps (a pan over this plain ground could not be seen; judged static per the near-plain-ground ruling)."
+  },
+  {
+   "start": 319,
+   "end": 335,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "16-frame insert of the dishwasher rack; the juice box drops in. No lead either."
+  },
+  {
+   "start": 335,
+   "end": 357,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "cut to a rack close-up that pulls back fast f335-337 to the wide kitchen shot, then 19 static frames f338-356 of Pax pushing the rack in, shutting the door and waving with his eyes closed. Both parts under 21 frames."
+  }
+ ]
+}

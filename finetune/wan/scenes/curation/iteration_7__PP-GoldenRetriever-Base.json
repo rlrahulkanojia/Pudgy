@@ -1,0 +1,316 @@
+{
+ "skit": "iteration_7/293_videos/PP-GoldenRetriever-Base.mp4",
+ "frames": 246,
+ "fps": 24.0,
+ "curated_by": "curator-v10-23",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  },
+  "x1": {
+   "kind": "extra",
+   "desc": "a pale mint-green penguin"
+  },
+  "x2": {
+   "kind": "extra",
+   "desc": "a light brown penguin"
+  },
+  "x3": {
+   "kind": "extra",
+   "desc": "a dark grey penguin"
+  },
+  "x4": {
+   "kind": "extra",
+   "desc": "a black-and-white penguin"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a supermarket with fridges, shelves of milk cartons and a fish counter"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 27,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a stack of orange boxes on a pallet and a shopping cart in the foreground",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "x2",
+     "screen": "left-center",
+     "presence": "partial",
+     "outfit": []
+    },
+    {
+     "id": "x1",
+     "screen": "left",
+     "presence": "partial",
+     "outfit": []
+    },
+    {
+     "id": "x3",
+     "screen": "right",
+     "presence": "partial",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 12,
+     "text": "{x2} pushes a shopping cart to the left while Polly, scowling and holding a box, steps out from behind him"
+    },
+    {
+     "start": 12,
+     "end": 20,
+     "text": "Polly walks to the right carrying the box with a scowl while {x2} pushes the cart away to the left"
+    },
+    {
+     "start": 20,
+     "end": 27,
+     "text": "Polly turns to face forward and stands scowling with the box while {x3} stacks boxes and {x1} browses a shelf"
+    }
+   ],
+   "props": [
+    "box",
+    "shopping cart",
+    "stack of boxes",
+    "milk cartons"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "shop sign",
+    "packaging"
+   ],
+   "travel": "moves_within",
+   "notes": "steady slow push-in: motion on the shop sign and fridges (y0.28-0.40, x0.45-1.0) scale 1.005 at f2 -> 1.033 at f16 (cc >= 0.98), and 1.0027 -> 1.0137 over f21-26 (cc >= 0.99). Polly is partly behind {x2} f0-4, fully visible after. The sign reads an invented Pudgy-world shop name (in-world, not a real brand). The box Polly carries is a generic product box (no lead print, no brand). No caption or watermark | verification pass 2 (verify_v10_report_v20): beat 2 (f12-27): Polly walks right only f12-19; from f20 she turns to face forward and stands still, scowling, holding the box (feet together f21-26); {x2} keeps pushing the cart off to the left through f26 and is the largest figure in the picture, but beat 2 does not name him; camera confirmed: one steady push-in f0-26 (scale +0.25%/frame on the sign/fridge band at cc >= 0.98, chained fits from f"
+  },
+  {
+   "start": 27,
+   "end": 31,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "push_in",
+   "notes": "4-frame fast push-in tail toward Polly (scale jumps 1.014 -> 1.024 at f27, then a snap f28-30)"
+  },
+  {
+   "start": 31,
+   "end": 113,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "effect",
+   "camera": "static",
+   "notes": "dark vignette over the whole picture around Polly f31-112 (whole-picture effect). Polly stands holding the box, scowling, and turns side to side. The camera is also still settling at f31-32"
+  },
+  {
+   "start": 113,
+   "end": 121,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "8 frames: the vignette fades out f113-114, Polly squints f115-116, then a quick pull-back to the wide view f117-120 (top-band frame difference settles at f121)"
+  },
+  {
+   "start": 121,
+   "end": 187,
+   "boundary": "camera",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a stack of orange boxes on a pallet and the handle of a shopping cart in the foreground",
+   "time": "day",
+   "size_change": true,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "x1",
+     "screen": "left",
+     "presence": "exits",
+     "exits_at": 133,
+     "outfit": []
+    },
+    {
+     "id": "x3",
+     "screen": "right",
+     "presence": "exits",
+     "exits_at": 134,
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 121,
+     "end": 134,
+     "text": "Polly stands holding a box and smiling with sparkles around her, while {x1} and {x3} step out of view at the edges"
+    },
+    {
+     "start": 134,
+     "end": 139,
+     "text": "Polly holds the box to her chest and closes her eyes with a happy smile as the sparkles fade"
+    },
+    {
+     "start": 139,
+     "end": 152,
+     "text": "Polly hops up off the floor clutching the box to her chest with her eyes shut, then lands"
+    },
+    {
+     "start": 152,
+     "end": 159,
+     "text": "Polly stands holding the box with a happy smile, then opens her eyes"
+    },
+    {
+     "start": 159,
+     "end": 187,
+     "text": "Polly walks toward the front carrying the box and smiling, growing larger as she comes closer"
+    }
+   ],
+   "props": [
+    "box",
+    "shopping cart",
+    "stack of boxes",
+    "milk cartons"
+   ],
+   "prop_events": [],
+   "effects": [
+    "sparkles"
+   ],
+   "overlays": [],
+   "in_world_text": [
+    "shop sign",
+    "packaging"
+   ],
+   "travel": "moves_within",
+   "notes": "camera locked: motion on the shelves, fridges and sign (y0.22-0.40) 0.0 px at cc 1.000 f121-181; compare 121/186 every background edge overlaps. {x1} (left edge) and {x3} (right edge, back turned) are partial slivers until they leave. No caption or watermark | verification pass 2 (verify_v10_report_v20): missed jump: Polly crouches at f138 and hops up off the floor f139-151 (feet off the ground, shadow left behind), landing at f152; beat 2 says she only hugs the box; sparkles fade out by f138-139, so 'sparkles twinkling' is false for most of beat 2; her eyes open again at f157 and she starts walking at f159, not f151; checked: f121 already at rest (top/bottom band diff to f122 = 0; the pull-back e"
+  },
+  {
+   "start": 187,
+   "end": 233,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a food counter and a menu board behind, and a stack of orange boxes in the foreground",
+   "time": "day",
+   "size_change": true,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 203,
+       "screen": "center"
+      }
+     ]
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "x4",
+     "screen": "left",
+     "presence": "exits",
+     "exits_at": 203,
+     "outfit": []
+    },
+    {
+     "id": "x2",
+     "screen": "right",
+     "presence": "exits",
+     "exits_at": 226,
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 187,
+     "end": 203,
+     "text": "Polly walks away to Pax's cart with her back turned, carrying the box and growing smaller, while {x4} steps out of view on the left"
+    },
+    {
+     "start": 203,
+     "end": 211,
+     "text": "Polly turns and drops the box into the cart while Pax holds the handle and watches"
+    },
+    {
+     "start": 211,
+     "end": 221,
+     "text": "Polly pats the boxes in the cart and talks while Pax stands holding the handle"
+    },
+    {
+     "start": 221,
+     "end": 233,
+     "text": "Polly clasps her flippers to her cheeks, blushing with her eyes closed, while Pax looks at her"
+    }
+   ],
+   "props": [
+    "box",
+    "shopping cart",
+    "stack of boxes",
+    "milk cartons"
+   ],
+   "prop_events": [],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [
+    "menu board",
+    "packaging"
+   ],
+   "travel": "moves_within",
+   "notes": "camera locked: compare 187/232 menu board, doors and shelf edges overlap exactly; motion on the menu band within 1.7 px at cc 1.000 (that band is near-plain, so compare decides). The menu board shows food pictures and prices with invented item names, no store name or logo (in-world, not ad_merch). {x2} is seen from behind beyond the shelf until f225. No caption or watermark | verification pass 2 (verify_v10_report_v20): size_change: Polly walks away from the viewer to the cart f187-203: her feet rise from y 0.69 to ~0.65 and her drawn width shrinks from ~0.24 to ~0.19 of the frame (about 20%), while Pax stays the same size; beat 1 should say she walks away and grows smaller; checked: locked (menu band and bottom counters 1.0000/0 px, compare 187/232); menu board shows invented dishes and prices only, snack bags c"
+  },
+  {
+   "start": 233,
+   "end": 246,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "13 frames: closer shot, Polly kisses Pax's cheek behind the cart and Pax winks"
+  }
+ ]
+}

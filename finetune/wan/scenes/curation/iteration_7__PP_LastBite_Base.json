@@ -1,0 +1,22 @@
+{
+ "skit": "iteration_7/293_videos/PP_LastBite_Base.mp4",
+ "frames": 335,
+ "fps": 24.0,
+ "curated_by": "curator-v10-24",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {},
+ "outfits": {},
+ "settings": {},
+ "spans": [
+  {
+   "start": 0,
+   "end": 335,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "off_style",
+   "camera": "other",
+   "notes": "OLD_DESIGN: the earlier Pudgy look throughout the skit: bright yellow beaks and feet (~RGB 240,208,48), paler periwinkle and rose bodies, on a painted sky-and-sea backdrop. Shots: [0,51) wide view of the two penguins sitting on an ice floe in the sea sharing an ice-cream cone; [51,220) closer view on the floe, the cone passes between them and the blue penguin ends up eating it; [220,264) close view of the rose penguin's face, starting blurred and sharpening (focus pull) with a slight push-in, worried then eyes closed; [264,335) the wide floe view again. One reason for the whole run, so one span (no part could be kept). No caption or watermark seen on the step-6 strip"
+  }
+ ]
+}

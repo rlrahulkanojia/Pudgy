@@ -1,0 +1,33 @@
+{
+ "skit": "iteration_7/293_videos/PP_ALREADYSEENIT_BASE_NOBOOM.mp4",
+ "frames": 278,
+ "fps": 24.0,
+ "curated_by": "curator-v10-18",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {},
+ "outfits": {},
+ "settings": {},
+ "spans": [
+  {
+   "start": 0,
+   "end": 226,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "off_style",
+   "camera": "static",
+   "overlays": [],
+   "notes": "OLD_DESIGN: the earlier Pudgy look throughout: bright yellow feet and beaks, paler rose and periwinkle bodies, glossy shaded furniture with white highlights (round table and chair, door, ice-brick bed). Identity of the two penguins (an earlier-design Polly and Pax) is unplaced, but the drop stands on style. Five shots on a plain pale background, hard cuts at f58, f72, f93, f142: [0,58) the Polly-like penguin sits at a round table under a wall clock looking at a phone, then gets up and walks off right; [58,72) she stands with her back to us at a closed door; [72,93) wide: she comes through the door holding a phone; [93,142) over her shoulder she holds a phone out toward the Pax-like penguin sitting on a bed with his own phone; [142,226) she stands in front of the open door frowning, holding the phone. Camera not checked shot by shot (no span here could be kept). No meme caption or watermark seen"
+  },
+  {
+   "start": 226,
+   "end": 278,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "overlays": [],
+   "notes": "f226-239: the picture abruptly empties to the plain pale background with only a tiny yellow speck in the middle (the removed BOOM effect of this NOBOOM version, presumably); f240-277: pure black (every pixel 0) to the end"
+  }
+ ]
+}

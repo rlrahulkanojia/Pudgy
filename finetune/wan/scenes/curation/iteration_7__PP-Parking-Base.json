@@ -1,0 +1,200 @@
+{
+ "skit": "iteration_7/293_videos/PP-Parking-Base.mp4",
+ "frames": 208,
+ "fps": 24.0,
+ "curated_by": "curator-v10-02",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a red convertible car in front of snowy teal hills"
+  },
+  "s2": {
+   "kind": "set",
+   "desc": "a snowy cliff-top parking area with a warning sign on a pole"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 65,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a curved windscreen in front of her and a brown leather seat beside her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 10,
+     "text": "Polly sits at the steering wheel of the red car, glancing to the side and blinking"
+    },
+    {
+     "start": 10,
+     "end": 26,
+     "text": "Polly grips the wheel and stares straight ahead with a blank face"
+    },
+    {
+     "start": 26,
+     "end": 31,
+     "text": "Polly shuts her eyes and blushes with a small satisfied smile"
+    },
+    {
+     "start": 31,
+     "end": 65,
+     "text": "Polly grins with rosy cheeks, blinking and glancing around, both flippers on the wheel"
+    }
+   ],
+   "props": [
+    "red car",
+    "steering wheel"
+   ],
+   "prop_events": [],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "locked: ECC on the car-body band y0.8-1.0 and on the pine tree (x0.8-1.0) scale 1.000, <=0.3 px f0-64; hills identical f0/f32/f64 (mean abs diff <1 on the sky/hill band). The car is standing still: no scenery scroll. No overlay"
+  },
+  {
+   "start": 65,
+   "end": 136,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a curved windscreen in front of him and a brown leather seat beside him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 65,
+     "end": 70,
+     "text": "Pax sits in the red car behind the windscreen, staring ahead"
+    },
+    {
+     "start": 70,
+     "end": 98,
+     "text": "Pax twists round in his seat to look back over his shoulder"
+    },
+    {
+     "start": 98,
+     "end": 104,
+     "text": "Pax turns back to face forward with wide eyes"
+    },
+    {
+     "start": 104,
+     "end": 136,
+     "text": "Pax throws both flippers up with an open-beaked smile while sparkles twinkle above his head"
+    }
+   ],
+   "props": [
+    "red car"
+   ],
+   "prop_events": [],
+   "effects": [
+    "sparkles"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "locked (ECC on the car-body band y0.78-1.0: scale 1.000, 0 px f65-135; compare 65/135 car and snow edges black). Clouds in the sky drift slightly; not used for the fit"
+  },
+  {
+   "start": 136,
+   "end": 208,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with the red car tipped nose-first over the cliff edge beside them, a row of parked snow-cars behind and an icy cliff face below",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 136,
+     "end": 170,
+     "text": "Polly bounces beside the car, eyes closed, flinging her flippers up proudly while Pax watches with his flippers clasped"
+    },
+    {
+     "start": 170,
+     "end": 184,
+     "text": "Polly lowers her flippers and looks at Pax as he hops and lifts a flipper with his eyes closed"
+    },
+    {
+     "start": 184,
+     "end": 196,
+     "text": "Polly turns toward Pax and reaches a flipper out to him while he shuffles beside her"
+    },
+    {
+     "start": 196,
+     "end": 208,
+     "text": "Pax raises a flipper and waves it while Polly stands smiling beside the car"
+    }
+   ],
+   "props": [
+    "red car",
+    "warning sign",
+    "parked snow-cars"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "warning sign"
+   ],
+   "travel": "none",
+   "notes": "locked (ECC on the sign-and-cars band y0.30-0.42, x0.3-1: scale 1.000, 0 px f136-207; clouds and falling snow bits on the cliff avoided). The parked snow-cars are empty. Skit ends on this shot | verification pass 2 (verify_v10_report_v06): screen sides are one step off: Polly's body spans x 0.46-0.60 of the width (centre 0.53) for the whole span, so she is in the middle, not left of center; Pax spans x 0.64-0.76 (centre 0.70), right of center, not in the middle; camera locked: sign-and-parked-cars band 1.0000 / 0 px cc 1.000 every 6 frames; compare 136/207 sign, cars and cliff black. The tipped car rocks ~3 px (in-world), not a came"
+  }
+ ]
+}

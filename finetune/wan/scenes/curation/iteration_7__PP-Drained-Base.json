@@ -1,0 +1,147 @@
+{
+ "skit": "iteration_7/293_videos/PP-Drained-Base.mp4",
+ "frames": 147,
+ "fps": 24.0,
+ "curated_by": "curator-v10-25",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "an igloo entryway with a wooden front door"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 84,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the door standing open onto snowy pines and a small white bench against the ice-brick wall",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "exits",
+     "exits_at": 61,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 28,
+       "screen": "left"
+      }
+     ]
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "enters",
+     "enters_at": 35,
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 14,
+     "text": "Polly steps in through the open door carrying a red handbag, her eyes closed"
+    },
+    {
+     "start": 14,
+     "end": 24,
+     "text": "Polly sets the red handbag down on the little bench beside the door"
+    },
+    {
+     "start": 24,
+     "end": 36,
+     "text": "Polly waddles off to the left with her eyes closed, leaving the door open behind her"
+    },
+    {
+     "start": 36,
+     "end": 44,
+     "text": "Pax steps in through the doorway wearing a black necktie while Polly keeps waddling left"
+    },
+    {
+     "start": 44,
+     "end": 53,
+     "text": "Pax tosses a set of keys onto the bench beside the handbag while Polly waddles out on the left"
+    },
+    {
+     "start": 53,
+     "end": 66,
+     "text": "Pax tugs at the knot of his black necktie with both flippers"
+    },
+    {
+     "start": 66,
+     "end": 76,
+     "text": "Pax closes his eyes and slips the loosened necktie forward off his neck into his flippers"
+    },
+    {
+     "start": 76,
+     "end": 84,
+     "text": "Pax shuffles a step to the left with his eyes closed, holding the necktie against his chest in both flippers"
+    }
+   ],
+   "props": [
+    "red handbag",
+    "bench",
+    "keys",
+    "necktie",
+    "wooden door"
+   ],
+   "prop_events": [
+    {
+     "prop": "red handbag",
+     "event": "puts_down",
+     "frame": 18,
+     "by": "polly"
+    },
+    {
+     "prop": "keys",
+     "event": "drops",
+     "frame": 46,
+     "by": "pax"
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "crosses",
+   "notes": "slow push-in through the whole shot: phase correlation on the ice-brick wall band (y 0-0.32) drifts steadily up ~0.6 px per frame (-50 px by f81, dx ~0); the door's brown mask (full res) widens steadily from 154 to 163 px with its left edge fixed and its top rising from y 702 to 682 (f0 -> f83, every 6th frame); compare 0/83 shows doubled door and wall edges. ECC on the door-top band fails (characters cross it). No static run. The necktie comes off f66-76, fewer than 21 frames before the end, so it is not listed in outfit; the beats say when (curator ruling on outfits taken off mid-shot). The handbag has no charm. No overlay in the top third or bottom fifth. Filled for U3 | verification pass 2 (verify_v10_report_v17): camera confirmed push_in from f0 (wall band phase drift -3.7 px at f6 to -50 px at f78, steady; compare 0/83 doubled door and wall edges); no overlay; fields otherwise hold; beat 7 (66-76): Pax does not pull the tie over his head; the loop comes forward off his neck f68-72 into his flippers; eyes close at f69; beat 8 (76-84): Pax does not walk off; he shuffles about 100 px left (vs the door's fixe"
+  },
+  {
+   "start": 84,
+   "end": 133,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "high view of a dim bedroom in a drained blue-grey palette: Polly in a yellow hoodie and headphones lies in bed with a tablet, dark rings under her eyes; plush toys on the bed include a Polly-look pink penguin plush in navy overalls and earmuffs (clear in the f133-146 close-up). Pax walks in from the right f96 and his colour drains to grey f120-132 (also effect)"
+  },
+  {
+   "start": 133,
+   "end": 147,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "14 frames: close view of the hooded Polly in bed staring at the tablet, the Polly-look plush beside her (also lead_copy)"
+  }
+ ]
+}

@@ -1,0 +1,77 @@
+{
+ "skit": "iteration_7/293_videos/PP-Cutesy-Base.mp4",
+ "frames": 200,
+ "fps": 24.0,
+ "curated_by": "curator-v10-31",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {"kind": "lead"},
+  "polly": {"kind": "lead"}
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {"kind": "flat", "desc": "a living room drawn on a plain pale grey background"}
+ },
+ "spans": [
+  {
+   "start": 0, "end": 55, "boundary": "start", "keep": true, "drop_reason": "",
+   "camera": "static", "framing": "medium wide", "angle": "eye level", "setting": "s1",
+   "view": "with a cream sofa",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "polly", "screen": "left-center", "presence": "full", "outfit": []},
+    {"id": "pax", "screen": "right-center", "presence": "full", "outfit": []}
+   ],
+   "beats": [
+    {"start": 0, "end": 44, "text": "Pax lies along the sofa snuggled against Polly with his eyes closed and blushing cheeks, while Polly holds him and little hearts float up"},
+    {"start": 44, "end": 55, "text": "Polly pulls out {ifin} and raises it high in one flipper while Pax stays snuggled against her with his eyes closed"}
+   ],
+   "props": ["sofa", "phone"],
+   "prop_events": [{"prop": "phone", "event": "takes_out", "frame": 45, "by": "polly", "is_ifin": true}],
+   "effects": ["hearts", "blush marks"],
+   "overlays": [], "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: sofa-front band 1.000, <=0.2 px at cc 1.000 (texture 2.6%/4.2%); compare 0/54 sofa edges overlap (the higher band's drift was Pax's feet). Phone: pale grey back, three lenses, tuft on top = iFin. No overlay"
+  },
+  {
+   "start": 55, "end": 98, "boundary": "cut", "keep": false, "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "phone point of view: the iFin's camera screen with its UI shows Pax and Polly taking selfies (lead on a screen = lead_copy)"
+  },
+  {
+   "start": 98, "end": 122, "boundary": "cut", "keep": false, "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "Pax and Polly sitting on the sofa, Polly lowering the phone: 5 locked frames f98-102, a pull-back f103-114 that reveals a door and a glass table, then 7 locked frames in which Pax hops off the sofa. No piece reaches 21 frames"
+  },
+  {
+   "start": 122, "end": 167, "boundary": "cut", "keep": true, "drop_reason": "",
+   "camera": "static", "framing": "medium", "angle": "eye level", "setting": "s1",
+   "view": "with the arm of a cream sofa beside him",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "center", "presence": "full", "outfit": []}
+   ],
+   "beats": [
+    {"start": 122, "end": 127, "text": "Pax drops down beside the sofa and lands on his feet with a frown"},
+    {"start": 127, "end": 141, "text": "Pax hops up and down beside the sofa with his flippers raised like fists and a fierce frown"},
+    {"start": 141, "end": 156, "text": "Pax lunges forward and throws punches to the right with his eyes squeezed shut"},
+    {"start": 156, "end": 167, "text": "Pax raises his flippers like fists again and stands frowning with a determined look"}
+   ],
+   "props": ["sofa"],
+   "prop_events": [], "effects": [], "overlays": [], "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: compare 122/127 and 127/166 sofa edges overlap exactly (keep12 is low because Pax fills the picture and moves; the motion band touched Pax). A cut to a new angle of the sofa at f167. No overlay"
+  },
+  {
+   "start": 167, "end": 181, "boundary": "cut", "keep": false, "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "14 frames: a new angle on the sofa arm, Pax bends forward and leans his face against it"
+  },
+  {
+   "start": 181, "end": 200, "boundary": "cut", "keep": false, "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "19 frames to the end: Polly bounces on the sofa with the phone while Pax stands in front of it"
+  }
+ ]
+}

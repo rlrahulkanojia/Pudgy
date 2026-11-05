@@ -1,0 +1,379 @@
+{
+ "skit": "iteration_7/293_videos/PP-Wall-Base.mp4",
+ "frames": 334,
+ "fps": 24.0,
+ "curated_by": "curator-v10-23",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a snowy landscape with a long ice ledge, rolling hills and pine trees"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 41,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pan_right",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 15,
+     "text": "Polly and Pax walk side by side along the top of the ice ledge, Polly waving one flipper as she talks"
+    },
+    {
+     "start": 15,
+     "end": 28,
+     "text": "Polly lowers her flipper and walks on beside Pax, who smiles with his eyes closed"
+    },
+    {
+     "start": 28,
+     "end": 41,
+     "text": "Pax and Polly keep walking side by side, both looking ahead"
+    }
+   ],
+   "props": [],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "tracking shot: the ledge slides left at a steady 12.7 px/frame (phase correlation on the ledge face y0.66-0.80, response >= 0.96, dy 0) while Pax and Polly walk in place at the same size and screen position (compare 0/34). The whole skit has a 4-px black column at the left edge (x0-3, every frame; a render border, not drawn content). No caption or watermark | verification pass 2 (verify_v10_report_v23): PILLARBOX: 4-px pure-black columns at BOTH edges in every frame (x0-3 max 4, x1076-1079 max 19; the file's note mentions only the left one). Per the ruling the span stays as it is, with notes starting PILLARBOX: (prep crops them); otherwise ok: ledge band -12.5 px/frame f1-40, dy 0 (pure pan_right, tracking); the diagonal move starts f41. Beats and fields match"
+  },
+  {
+   "start": 41,
+   "end": 64,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "other",
+   "notes": "diagonal move right and down (ledge face dx -8, dy -6 px/frame f41-55, then dx -21, dy -15 f56-63 as Pax jumps), so no single move clause is true; not filled. Content: Pax and Polly stop at the end of the ledge, Pax hops off (f48-63) and lands on the snow below while Polly stays on top"
+  },
+  {
+   "start": 64,
+   "end": 178,
+   "boundary": "camera",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the ice ledge on the left",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left",
+     "presence": "exits",
+     "exits_at": 166,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 132,
+       "screen": "right-center"
+      }
+     ]
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "exits",
+     "exits_at": 176,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 152,
+       "screen": "right"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 64,
+     "end": 77,
+     "text": "Pax, just landed on the snow below the ledge, turns to face forward while Polly stands on top of the ledge"
+    },
+    {
+     "start": 77,
+     "end": 107,
+     "text": "Polly shuffles at the edge of the ledge looking down nervously while Pax stands below looking up at her"
+    },
+    {
+     "start": 107,
+     "end": 128,
+     "text": "Pax turns his back and reaches up toward Polly with a flipper while she hesitates at the edge"
+    },
+    {
+     "start": 128,
+     "end": 135,
+     "text": "Polly leaps off the ledge into Pax's arms"
+    },
+    {
+     "start": 135,
+     "end": 150,
+     "text": "Pax catches Polly and they hug, spinning around with their eyes closed and happy smiles"
+    },
+    {
+     "start": 150,
+     "end": 178,
+     "text": "Pax carries Polly in a hug off to the right and out of view"
+    }
+   ],
+   "props": [
+    "shovel"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "exits",
+   "notes": "camera locked: phase correlation on the ledge face is exactly 0 from f64 (f64 = f65 = ...); compare 65/111, 111/125, 127/142 and 65/177 show the hill line and every ledge edge overlapping (only the clouds drift slightly, so cloud bands were not used). ECC bands at y0.6-0.8 read false motion here because Pax stands in them. Polly leaves the picture f166 (carried), Pax's last sliver f175. No caption or watermark | the last 2 frames (f176-177) show the empty ledge after both have left. The shovel (props) is hidden behind Pax until about f108, so it is not in view | verification pass 2 (verify_v10_report_v23): PILLARBOX: 4-px pure-black columns at BOTH edges in every frame (x0-3 max 4, x1076-1079 max 19; the file's note mentions only the left one). Per the ruling the span stays as it is, with notes starting PILLARBOX: (prep crops them); otherwise ok: f64 is the first settled frame (f65-f64 = 0 px); ledge region diff <=0.11 vs f64 except Polly's leap f128-132; compare 64/177 edges black. Beats match"
+  },
+  {
+   "start": 178,
+   "end": 204,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pan_right",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 178,
+     "end": 198,
+     "text": "Polly walks alone along the top of the ice ledge, glancing around as she goes"
+    },
+    {
+     "start": 198,
+     "end": 204,
+     "text": "Polly raises a flipper up to her beak as she walks"
+    }
+   ],
+   "props": [],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "hard cut at f178 (missed by profile: same snowy background). Tracking shot: the ledge slides left at a steady 18.7 px/frame f179-204 (phase correlation on the ledge face y0.70-0.86, response >= 0.94, dy 0) while Polly walks in place at the same size (compare 178/204). f204 is the first frame of the rest. No caption or watermark | verification pass 2 (verify_v10_report_v23): PILLARBOX: 4-px pure-black columns at BOTH edges in every frame (x0-3 max 4, x1076-1079 max 19; the file's note mentions only the left one). Per the ruling the span stays as it is, with notes starting PILLARBOX: (prep crops them); otherwise ok: hard cut f178; ledge -18.5 px/frame f179-204, dy 0 (pan_right); f204 first rest frame"
+  },
+  {
+   "start": 204,
+   "end": 216,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "other",
+   "notes": "12 frames: a 5-frame rest (f204-208, Polly stops with a flipper at her beak) then a 7-frame diagonal move right and down (f209-215) as she reaches the end of the ledge; settled from f216"
+  },
+  {
+   "start": 216,
+   "end": 238,
+   "boundary": "camera",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a shovel stuck in the snow below the ledge",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 216,
+     "end": 231,
+     "text": "Polly stands at the end of the ice ledge with a flipper at her beak, glancing around nervously"
+    },
+    {
+     "start": 231,
+     "end": 235,
+     "text": "Polly lowers her flippers and crouches at the edge"
+    },
+    {
+     "start": 235,
+     "end": 238,
+     "text": "Polly springs up off the ledge with her eyes shut"
+    }
+   ],
+   "props": [
+    "shovel"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: motion on the ledge face (y0.68-0.85) 0.0 px at cc 1.000 f216-237, first moved frame f238; compare 216/237 ledge, shovel and hill edges overlap. A y0.6-0.8 band read +/-1.6 px f231-236 only because Polly's shadow is in it. 22 frames. No caption or watermark | verification pass 2 (verify_v10_report_v23): PILLARBOX: 4-px pure-black columns at BOTH edges in every frame (x0-3 max 4, x1076-1079 max 19; the file's note mentions only the left one). Per the ruling the span stays as it is, with notes starting PILLARBOX: (prep crops them); otherwise ok: f216 first settled frame, 0 px to f237, f238 moves. Beats match"
+  },
+  {
+   "start": 238,
+   "end": 248,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "other",
+   "notes": "10 frames: the view follows Polly as she flies off the ledge and drops toward the snow"
+  },
+  {
+   "start": 248,
+   "end": 271,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the ice ledge behind her and a snowy pine bush on the right",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 248,
+     "end": 257,
+     "text": "Polly lands in a crouch on the snow with her eyes squeezed shut and one flipper thrown out"
+    },
+    {
+     "start": 257,
+     "end": 271,
+     "text": "Polly straightens up and looks around with wide eyes, flippers held out at her sides"
+    }
+   ],
+   "props": [],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: phase correlation on the ledge (y0.30-0.62, x0-0.25) 0 px f249-270 (response 1.00); compare 248/270 ledge, hills and bush overlap exactly. The f258-260 wobble seen on a sky band is Polly standing up inside it. No caption or watermark | verification pass 2 (verify_v10_report_v23): PILLARBOX: 4-px pure-black columns at BOTH edges in every frame (x0-3 max 4, x1076-1079 max 19; the file's note mentions only the left one). Per the ruling the span stays as it is, with notes starting PILLARBOX: (prep crops them); otherwise ok: cut f248 clean, ledge x0-0.25 0 px f249-270, pull-back from f271. Beats match"
+  },
+  {
+   "start": 271,
+   "end": 277,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "6-frame pull-back with a shift (ledge dx +12..+14, dy +14..+18 px/frame; Polly drawn smaller after it); settled from f277"
+  },
+  {
+   "start": 277,
+   "end": 334,
+   "boundary": "camera",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the ice ledge behind her and a snowy pine bush on the right",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 277,
+     "end": 284,
+     "text": "Polly stands on the snow and glances from side to side"
+    },
+    {
+     "start": 284,
+     "end": 300,
+     "text": "Polly fidgets with her flippers pressed together in front of her chest"
+    },
+    {
+     "start": 300,
+     "end": 315,
+     "text": "Polly lets her flippers drop and stands looking ahead with a pleased little smile"
+    },
+    {
+     "start": 315,
+     "end": 334,
+     "text": "Polly skips off toward the right with her eyes closed and a happy smile, flippers swinging"
+    }
+   ],
+   "props": [
+    "shovel"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "camera locked: motion on the ledge (y0.30-0.62, x0-0.25) 0.0 px at cc 1.000 f277-333; compare 277/333 ledge, hill line and bush overlap exactly (the shovel is revealed behind Polly as she moves off). Sky-band readings at f323-333 are Polly hopping into the band. Polly is still in the picture at the last frame. No caption or watermark | verification pass 2 (verify_v10_report_v23): PILLARBOX: 4-px pure-black columns at BOTH edges in every frame (x0-3 max 4, x1076-1079 max 19; the file's note mentions only the left one). Per the ruling the span stays as it is, with notes starting PILLARBOX: (prep crops them); otherwise ok: 0 px f277-333 (f276 already settled); Polly still in picture at the end. Beats match"
+  }
+ ]
+}

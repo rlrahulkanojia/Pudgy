@@ -1,0 +1,135 @@
+{
+ "skit": "iteration_7/293_videos/PP_RespondAsap_v9_9x16 base.mp4",
+ "frames": 228,
+ "fps": 24.0,
+ "curated_by": "curator-v10-06",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a snowy landscape of rolling hills under a pale sky with soft white clouds"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 63,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "other",
+   "notes": "tracking shot with a sliding scenery layer, no static run: Pax waddles in place carrying armfuls of grocery bags while the hills, clouds and a snow-capped tree slide past behind him (frame-to-frame diff on the left hills band 0.2-0.9 on every frame f1-62; compare 4/40 doubled hill line, the tree leaves at the right); he drops the bags f45-54 and the groceries spill, the scenery keeps sliding and a pine tree enters at the right f60. Not filled: no caption clause fits a tracking slide (same handling as the v9b tracking shots and curator-v10-20's driving shots). Groceries are invented packaging (fish-icon cans, a ketchup bottle, a bag of chips, apples): no real brand. No overlay"
+  },
+  {
+   "start": 63,
+   "end": 89,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "other",
+   "notes": "Pax takes out the iFin; its incoming-call screen shows Polly's photo (pink penguin with her crest, clear at full res f66) f63-71, then he holds it to his ear with his eyes closed. The scenery layer keeps drifting and scaling (hills band scale 1.00 -> 1.20 f66-86, compare 66/88 doubled hill and tree edges while Pax stays put), so also a camera move"
+  },
+  {
+   "start": 89,
+   "end": 120,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pull_back",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a red car on skis on the slope below him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 105,
+       "screen": "left"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 89,
+     "end": 110,
+     "text": "Pax leans forward and trudges up the snowy slope, hauling a red car on skis behind him by a rope over his shoulder"
+    },
+    {
+     "start": 110,
+     "end": 120,
+     "text": "Pax stops and stands upright holding the rope, the car resting on the snow behind him"
+    }
+   ],
+   "props": [
+    "red car on skis",
+    "rope"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "steady pull-back from the first frame of the shot: Pax and the car shrink (sky band scale 0.968 at f92 -> 0.943 at f119 vs f112, ~0.8% per frame, cc 1.000; snow-streak band diff ~0.5 on every frame f90-119, 0.03 at f120). Stops at f119: f120 repeats f119. No overlay, no lead copy (the phone is not out yet)"
+  },
+  {
+   "start": 120,
+   "end": 130,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "10 locked frames (snow-streak band diff 0.00 except a 1-frame blip at f124; compare 120/129: hill lines black, only the clouds drift): Pax lets the rope drop in a coil and takes out the iFin, whose call screen shows Polly's photo from f127 (also lead_copy)"
+  },
+  {
+   "start": 130,
+   "end": 153,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "push_in",
+   "notes": "the iFin's call screen shows Polly's photo f127-137 as Pax holds it out, then he puts it to his ear with his eyes closed while the car-sled slides away down the slope. Also a push-in f130-152 (snow-streak band diff 0.3-0.5 every frame; sky band scale 1.007 -> 1.11 by f148). Without the screen frames only f138-152 (15 frames) remain: not fillable"
+  },
+  {
+   "start": 153,
+   "end": 164,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "shake",
+   "notes": "a 3-frame jolt f153-155 (snow-streak band diff 1.2-2.4) as a dust puff bursts where the car went, then 8 locked frames f156-163 of Pax on the phone with his eyes closed"
+  },
+  {
+   "start": 164,
+   "end": 196,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "other",
+   "notes": "compound move, no static run: the view tracks Pax as he waddles along a yellow diving board over a pool (rim band diff 4-14 on every frame f165-187; the pool rim slides and changes its curve), the board springs under him f188-190, and the view tilts up after his leap f191-196 (ladder band diff 14-22, the rim drops toward the bottom). Not filled: no single caption clause is true for it ('other' does not compile). Content: Pax on the phone at his ear walks the board, bounces and dives. No overlay, no lead copy (screen not visible)"
+  },
+  {
+   "start": 196,
+   "end": 228,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "camera locked from f196 (ladder band diff <= 0.04 f197-227; the diving board corner settles until f199). Pax hangs frozen mid-dive above the pool, pulls out the iFin f209 whose call screen shows Polly's photo f210-215, then holds it to his ear with his eyes closed to the end. Every 21-frame window in this 32-frame span covers f207-216, so none is free of the Polly screen. Skit ends on this shot"
+  }
+ ]
+}

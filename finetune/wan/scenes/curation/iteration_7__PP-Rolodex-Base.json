@@ -1,0 +1,382 @@
+{
+ "skit": "iteration_7/293_videos/PP-Rolodex-Base.mp4",
+ "frames": 333,
+ "fps": 24.0,
+ "curated_by": "curator-v10-22",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 76,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right",
+     "presence": "enters",
+     "enters_at": 3,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 9,
+       "screen": "center"
+      }
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "partial",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 9,
+       "screen": "left"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 12,
+     "text": "Polly walks backward to the left, pulling Pax in from the right by his flipper"
+    },
+    {
+     "start": 12,
+     "end": 26,
+     "text": "Pax lets go and twirls with his flippers spread, landing in a pose with a wink while Polly reaches toward him from the left edge"
+    },
+    {
+     "start": 26,
+     "end": 48,
+     "text": "Pax stands smiling with rosy cheeks while Polly, half out of view at the left edge, holds a flipper out toward him"
+    },
+    {
+     "start": 48,
+     "end": 76,
+     "text": "Polly closes her eyes and rests a flipper against her cheek while Pax turns his head to look at her"
+    }
+   ],
+   "props": [],
+   "prop_events": [],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "plain ground (RGB about 210,225,235) with no background marks, so a pan could not be seen; per the plain-ground ruling compare decides, and the shadows keep one size (foreground bottom row 1334-1337 f0-75, Pax 506 px tall f27-45), so no zoom. f0-11 both leads slide left as Polly walks backward drawing Pax in, as drawn. Polly is fully in view f0-8, then cut off at the left edge for the rest of the span (presence partial). A push-in starts at f76 (shadow row 1340, 1353, 1419...). No overlay (top and bottom bands clean every frame)"
+  },
+  {
+   "start": 76,
+   "end": 81,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "push_in",
+   "notes": "fast push-in on Pax: shadow bottom row 1340 (f76), 1353, 1419, 1510, 1539, settled 1546 from f81; Pax 516 -> 796 px tall. 5 frames, so too_short ranks before camera_move"
+  },
+  {
+   "start": 81,
+   "end": 109,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "left",
+     "presence": "enters",
+     "enters_at": 106,
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 81,
+     "end": 106,
+     "text": "Pax stands with his flippers folded across his chest and a sulky frown, eyes narrowed to the side"
+    },
+    {
+     "start": 106,
+     "end": 109,
+     "text": "Polly leans in from the left beside Pax, smiling with her eyes closed"
+    }
+   ],
+   "props": [],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f81-108: Pax and shadow box identical every frame f81-105 (x326-823, y652-1448; shadow row 1546). Pax holds one sulky pose; Polly peeks in at the left edge from f106. Hard cut at f109: both leads jump about 150 px right in one frame at the same size (compare 108/109). No overlay"
+  },
+  {
+   "start": 109,
+   "end": 164,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 109,
+     "end": 113,
+     "text": "Polly snuggles against Pax's side, both smiling with their eyes closed"
+    },
+    {
+     "start": 113,
+     "end": 133,
+     "text": "Polly glances sideways at Pax with a sheepish look while he stares straight ahead with wide eyes"
+    },
+    {
+     "start": 133,
+     "end": 146,
+     "text": "Polly turns to Pax and kisses his cheek, wrapping a flipper around him, while he squints one eye shut"
+    },
+    {
+     "start": 146,
+     "end": 164,
+     "text": "Polly squeezes Pax in a tight hug with her eyes closed while he looks ahead with a worried, embarrassed face"
+    }
+   ],
+   "props": [],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f109-163: the shared shadow keeps its left end x23 and bottom row 1547 every frame; leads' boxes are constant through the holds (f114-129, f150-162). profile's f147 flag is an animation pop as Polly's hug pose changes, not a reframe (shadow box unchanged). A pull-back starts at f164. No overlay"
+  },
+  {
+   "start": 164,
+   "end": 177,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "fast pull-back while Pax hops out of the hug and turns: shadow bottom row 1538 (f164) down to 1342 by f177, then steady. 13 frames, so too_short ranks before camera_move"
+  },
+  {
+   "start": 177,
+   "end": 218,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 210,
+       "screen": "center"
+      }
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "exits",
+     "exits_at": 204,
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 177,
+     "end": 191,
+     "text": "Polly hugs Pax's arm and nuzzles against him while he stands with rosy cheeks and a nervous look"
+    },
+    {
+     "start": 191,
+     "end": 204,
+     "text": "Polly lets go and walks off to the right, pointing back at Pax, while he holds his flippers out in surprise"
+    },
+    {
+     "start": 204,
+     "end": 211,
+     "text": "Pax stands alone with his flippers out, then folds them across his chest"
+    },
+    {
+     "start": 211,
+     "end": 218,
+     "text": "Pax stands with his flippers crossed and his eyes shut in a huffy pout"
+    }
+   ],
+   "props": [],
+   "prop_events": [],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f177-312 (shadow bottom row 1341-1342 every frame, Pax box constant through each hold). Split at f218 with same_shot because Polly leaves (last sliver f203, gone f204) and comes back at f230 in the same take. No overlay"
+  },
+  {
+   "start": 218,
+   "end": 313,
+   "boundary": "same_shot",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 246,
+       "screen": "left-center"
+      }
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "enters",
+     "enters_at": 230,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 246,
+       "screen": "right-center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 218,
+     "end": 230,
+     "text": "Pax stands alone with his flippers folded and his eyes squeezed shut, pouting"
+    },
+    {
+     "start": 230,
+     "end": 242,
+     "text": "Polly peeks back in from the right with her flippers clasped under her chin while Pax keeps pouting"
+    },
+    {
+     "start": 242,
+     "end": 246,
+     "text": "Polly hops over to stand right beside Pax"
+    },
+    {
+     "start": 246,
+     "end": 261,
+     "text": "Polly leans against Pax with her flippers clasped, looking up at him, while he glances down at her with a worried face"
+    },
+    {
+     "start": 261,
+     "end": 270,
+     "text": "Pax turns to Polly and kisses her cheek while she closes her eyes"
+    },
+    {
+     "start": 270,
+     "end": 285,
+     "text": "Pax wraps a flipper around Polly as she blushes and smiles up at him"
+    },
+    {
+     "start": 285,
+     "end": 304,
+     "text": "Pax and Polly stand facing each other, holding each other's flippers"
+    },
+    {
+     "start": 304,
+     "end": 313,
+     "text": "Pax and Polly pull each other into a tight hug, both smiling with closed eyes"
+    }
+   ],
+   "props": [],
+   "prop_events": [],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "same locked take as [177,218). Polly re-enters at the right edge at f230. A push-in starts at f313 (shadow row 1345, 1373, 1500...). No overlay"
+  },
+  {
+   "start": 313,
+   "end": 333,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "push_in",
+   "notes": "push-in f313-316 (shadow bottom row 1345 -> 1565), then a 16-frame hold of the hug with a heart popping above them; 20 frames in all, too_short"
+  }
+ ]
+}

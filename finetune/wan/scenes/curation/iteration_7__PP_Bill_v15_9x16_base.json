@@ -1,0 +1,234 @@
+{
+ "skit": "iteration_7/293_videos/PP_Bill_v15_9x16 base.mp4",
+ "frames": 211,
+ "fps": 24.0,
+ "curated_by": "curator-v10-04",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a restaurant drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 63,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "angle": "eye level",
+   "setting": "s1",
+   "time": "day",
+   "size_change": false,
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "framing": "medium wide",
+   "view": "with a table under a long white tablecloth and a plate of sandwiches in front of him",
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 6,
+     "text": "Pax sits on a mint chair at the table with his flippers flung out wide, eyeing the sandwiches"
+    },
+    {
+     "start": 6,
+     "end": 16,
+     "text": "Pax reaches over to the plate and picks up half a sandwich"
+    },
+    {
+     "start": 16,
+     "end": 24,
+     "text": "Pax lifts the sandwich to his beak and takes a bite"
+    },
+    {
+     "start": 24,
+     "end": 50,
+     "text": "Pax munches the sandwich with his eyes closed and a happy smile"
+    },
+    {
+     "start": 50,
+     "end": 63,
+     "text": "Pax opens his eyes and keeps nibbling the sandwich held in both flippers"
+    }
+   ],
+   "props": [
+    "table",
+    "sandwiches",
+    "chair"
+   ],
+   "notes": "locked: tablecloth band (y 0.55-0.75, x 0-0.4) scale 1.0000, <=0.3 px at cc >= 0.999 f16-f62 and f1-f14 (f15, f18-19 rows dip while Pax's flipper reaches the plate); compare 0/62 table and chair edges black. A pan starts at f63. No overlay in the top third or bottom fifth"
+  },
+  {
+   "start": 63,
+   "end": 88,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pan_left",
+   "angle": "eye level",
+   "setting": "s1",
+   "time": "day",
+   "size_change": false,
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "framing": "medium wide",
+   "view": "with a long table under a white tablecloth set with sandwiches and a platter of sushi rolls",
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "exits",
+     "exits_at": 70,
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "left",
+     "presence": "enters",
+     "enters_at": 69,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 78,
+       "screen": "left-center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 63,
+     "end": 70,
+     "text": "Pax keeps nibbling his sandwich at his end of the table"
+    },
+    {
+     "start": 70,
+     "end": 78,
+     "text": "Polly sits at the other end of the table and reaches toward a platter of sushi rolls"
+    },
+    {
+     "start": 78,
+     "end": 83,
+     "text": "Polly pops a piece of food into her beak, eyes open"
+    },
+    {
+     "start": 83,
+     "end": 88,
+     "text": "Polly chews the bite with her eyes closed and a smile"
+    }
+   ],
+   "props": [
+    "table",
+    "sandwiches",
+    "sushi platter",
+    "chair"
+   ],
+   "notes": "pan left along the table from Pax to Polly f63-f71 (tablecloth band: scale 1.006 and 1 px at f63, 38 px at f65; Pax leaves at the right edge f70, Polly comes in on the left f69), then a slow push and drift until it settles at f88 (band vs f76: scale 1.011 at f79 to 1.019 at f91 relative; vs f85: still moving to f88, constant from f88). Otherwise keepable (U3)"
+  },
+  {
+   "start": 88,
+   "end": 149,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "lookalike",
+   "camera": "static",
+   "notes": "a Polly-like waiter: a pink-bodied penguin (pink flipper tips, white face) with a brown bowl-cut hairdo and an orange shirt with a white triangle print pushes a dessert cart in from the left and leaves again, visible f105-131 (shirt-colour count at the left edge drops to the constant cart value at f132). Polly sits at the table at the same time, so it is clearly someone else: an unfilled lookalike drop under the 2026-11-04 ruling (like Polly's mum). Rest of the shot: Polly eats sushi with her eyes closed, glances at the cart, takes a bite. Camera locked f88-148 (table-edge band y 0.55-0.8, x 0.8-1.0: scale 1.0000 +-0.0003, <=1 px at cc 1.000). Without the waiter only f88-104 and f132-148 remain (17 frames each), so the whole shot is one span"
+  },
+  {
+   "start": 149,
+   "end": 211,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "angle": "eye level",
+   "setting": "s1",
+   "time": "day",
+   "size_change": false,
+   "prop_events": [],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "framing": "wide",
+   "view": "with a round table of sushi and sandwiches between two dessert carts piled with cakes, pancakes and sundaes",
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 149,
+     "end": 164,
+     "text": "Polly glances across and then turns toward the food while Pax leans in and reaches toward the plates in front of him"
+    },
+    {
+     "start": 164,
+     "end": 173,
+     "text": "Polly takes a bite from her fork with her eyes closed while Pax sits back holding a bite of food at his chest"
+    },
+    {
+     "start": 173,
+     "end": 183,
+     "text": "Polly stretches her fork across the table toward the platter while Pax keeps holding his food"
+    },
+    {
+     "start": 183,
+     "end": 191,
+     "text": "Polly brings the forkful back to her beak while Pax lifts his food toward his face"
+    },
+    {
+     "start": 191,
+     "end": 211,
+     "text": "Polly nibbles from her fork with rosy blushing cheeks while Pax munches the food held in both flippers"
+    }
+   ],
+   "props": [
+    "table",
+    "dessert carts",
+    "cakes",
+    "fork",
+    "chairs"
+   ],
+   "notes": "locked: compare 149/210 keeps both carts, the table and the chairs black. No waiter or lookalike in this shot; no overlay in the top third or bottom fifth. Skit ends on this shot"
+  }
+ ]
+}

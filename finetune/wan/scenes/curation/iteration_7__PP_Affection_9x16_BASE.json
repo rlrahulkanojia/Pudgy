@@ -1,0 +1,49 @@
+{
+ "skit": "iteration_7/293_videos/PP_Affection_9x16_BASE.mp4",
+ "frames": 262,
+ "fps": 24.0,
+ "curated_by": "curator-v10-04",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {},
+ "outfits": {},
+ "settings": {},
+ "spans": [
+  {
+   "start": 0,
+   "end": 78,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "off_style",
+   "camera": "static",
+   "notes": "OLD_DESIGN: older Pudgy design throughout the skit: yellow feet and yellow beaks, paler rose and periwinkle bodies, glossy shaded light-teal furniture with highlights. Shot: the pink and the blue penguin stand cuddled together on a plain pale background, a heart pops up above them, then the blue one hugs the pink one. No overlay seen"
+  },
+  {
+   "start": 78,
+   "end": 118,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "off_style",
+   "camera": "static",
+   "notes": "OLD_DESIGN: older Pudgy design throughout the skit: yellow feet and yellow beaks, paler rose and periwinkle bodies, glossy shaded light-teal furniture with highlights. Shot: the blue penguin stands alone, then the pink one bursts in from the side and hugs him from the front (f105+)"
+  },
+  {
+   "start": 118,
+   "end": 177,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "off_style",
+   "camera": "static",
+   "notes": "OLD_DESIGN: older Pudgy design throughout the skit: yellow feet and yellow beaks, paler rose and periwinkle bodies, glossy shaded light-teal furniture with highlights. Shot: the blue penguin reads a red book on a glossy light-teal sofa; the pink one leaps on him (f163+), knocking the book into the air. Hard cut at f118 confirmed on the strip"
+  },
+  {
+   "start": 177,
+   "end": 262,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "off_style",
+   "camera": "static",
+   "notes": "OLD_DESIGN: older Pudgy design throughout the skit: yellow feet and yellow beaks, paler rose and periwinkle bodies, glossy shaded light-teal furniture with highlights. Shot: the blue penguin dozes at a glossy light-teal desk with a laptop (zzz), the pink one peeks in, hugs him from behind with hearts. Hard cut at f177 confirmed on the strip; runs to the end"
+  }
+ ]
+}

@@ -1,0 +1,342 @@
+{
+ "skit": "iteration_7/293_videos/PP- BigPiece--Base.mp4",
+ "frames": 210,
+ "fps": 24.0,
+ "curated_by": "curator-v10-28",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a kitchen with a curved cyan counter and a wall shelf"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "a dining room drawn on a plain pale grey background"
+  },
+  "s3": {
+   "kind": "flat",
+   "desc": "a living room drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 39,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a glass jar on the shelf behind her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 6,
+     "text": "Polly pushes a cake server down into a tall layered fruit cake on the counter"
+    },
+    {
+     "start": 6,
+     "end": 18,
+     "text": "Polly pushes the server down through the cake until only its handle sticks out at the side, then lifts it back up"
+    },
+    {
+     "start": 18,
+     "end": 30,
+     "text": "Polly pushes the server down into the top of the cake again, looking ahead"
+    },
+    {
+     "start": 30,
+     "end": 39,
+     "text": "Polly presses her flipper down on top of the cake, then lowers it to rest against the cake's side"
+    }
+   ],
+   "props": [
+    "layered fruit cake",
+    "cake server",
+    "plates",
+    "glass jar"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "motion on the shelf and wall (y 0-0.20) scale 1.0000, 0 px, cc 1.000; compare 0/38 shelf, jar, counter and plate edges black. A blurred lamp shade hangs in the top-left corner. No overlay | verification pass 2 (verify_v10_report_v20): beat 2 (f6-18): Polly does not pull the server out; she pushes it down through the cake (f5-14 the blade is behind the cake with only the handle sticking out at mid-height on the right), then lifts it back to the top f15-17; beat 4 (f30-39): the server is never drawn back out; it vanishes under her flipper at f32 and she lowers the flipper to rest against the cake's side f33-38, looking ahead, not"
+  },
+  {
+   "start": 39,
+   "end": 76,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a cyan counter in front of her and a round table and chairs behind her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 39,
+     "end": 50,
+     "text": "Polly rests her chin on her clasped flippers behind two slices of cake, one large and one small"
+    },
+    {
+     "start": 50,
+     "end": 58,
+     "text": "Polly lowers her flippers with a worried frown, then raises one flipper to her chin"
+    },
+    {
+     "start": 58,
+     "end": 68,
+     "text": "Polly keeps her flipper at her chin and frowns, then closes her eyes for a moment"
+    },
+    {
+     "start": 68,
+     "end": 76,
+     "text": "Polly looks ahead with raised brows and a sly little smile, her flipper still at her chin"
+    }
+   ],
+   "props": [
+    "slices of cake",
+    "plates",
+    "forks"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "compare 39/75: table, chairs, counter stripes, cakes and forks black; the motion band (y 0.12-0.35) had Polly's head in it. No overlay | verification pass 2 (verify_v10_report_v20): beat 2 (f50-58): she lowers her flippers f50-51 but already raises one flipper to her chin f51-56; 'frowns from one slice to the other' claims a gaze shift that is not visible (solid dot eyes, worried brows); beat 3 (f58-68): the flipper is already at her chin from f56; eyes are open and frowning f58-61, closed only f62-66, open again f67; 'thinking it over' is intent; beat 4 (f68-76): no visible"
+  },
+  {
+   "start": 76,
+   "end": 117,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with a cream armchair",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 94,
+       "screen": "right-center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 76,
+     "end": 88,
+     "text": "Polly walks up to Pax's armchair carrying a plate of cake in each flipper while Pax sits watching her"
+    },
+    {
+     "start": 88,
+     "end": 103,
+     "text": "Polly holds one plate out toward Pax"
+    },
+    {
+     "start": 103,
+     "end": 109,
+     "text": "Pax takes the plate of cake from Polly"
+    },
+    {
+     "start": 109,
+     "end": 117,
+     "text": "Pax holds the cake with a contented smile while Polly smiles beside him with her own plate"
+    }
+   ],
+   "props": [
+    "slices of cake",
+    "plates",
+    "armchair"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "keep12 is low because Polly walks across the frame; compare 76/116 armchair edges black and the diff map blank off the characters (plain ground otherwise). No overlay"
+  },
+  {
+   "start": 117,
+   "end": 142,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "Pax eats a chocolate bar at his desk while Polly eats beside him; a framed photo of Polly stands on the desk and the laptop screen shows Polly and Pax, visible the whole shot"
+  },
+  {
+   "start": 142,
+   "end": 166,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a round cream table, wooden chairs and an open pizza box",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 142,
+     "end": 153,
+     "text": "Pax bites into a slice of pizza while Polly holds her own slice up to her beak across the table"
+    },
+    {
+     "start": 153,
+     "end": 166,
+     "text": "Pax chews with his eyes closed and lifts his slice again while Polly nibbles hers"
+    }
+   ],
+   "props": [
+    "pizza slices",
+    "pizza box",
+    "round table",
+    "wooden chairs"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "24 frames. motion on the table and chairs (y 0.60-0.80) scale 1.0000, 0.1 px, cc 1.000; compare 142/165 table, box, chairs and shadow black. No overlay"
+  },
+  {
+   "start": 166,
+   "end": 210,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with a wooden door, a cream sofa and a glass coffee table",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "exits",
+     "exits_at": 201,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 186,
+       "screen": "right"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 166,
+     "end": 174,
+     "text": "Polly bends down and picks up a small box while Pax stands with his flippers on a big cardboard box, watching her"
+    },
+    {
+     "start": 174,
+     "end": 183,
+     "text": "Polly stands holding the small box while Pax grips the big box and squeezes his eyes shut"
+    },
+    {
+     "start": 183,
+     "end": 191,
+     "text": "Polly walks off to the right with the small box while Pax keeps his eyes squeezed shut"
+    },
+    {
+     "start": 191,
+     "end": 201,
+     "text": "Polly leaves the picture on the right as Pax opens his eyes and looks ahead"
+    },
+    {
+     "start": 201,
+     "end": 210,
+     "text": "Pax stands alone behind the big box, glancing to the side"
+    }
+   ],
+   "props": [
+    "cardboard boxes",
+    "sofa",
+    "coffee table"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "box labels"
+   ],
+   "travel": "exits",
+   "notes": "keep12 is low because Polly walks out; motion on the door and wall lamp (y 0.15-0.36, x 0.30-0.95) and on the coffee table (y 0.70-1.00) both scale 1.0000, 0 px, cc 1.000 (step 2); compare 166/209 door, lamp, sofa and table black. Polly's last sliver is at the right edge on f200. No overlay | verification pass 2 (verify_v10_report_v20): beat 2 (f174-190): Pax's eyes are open f174-177 and squeezed only f178-190; Polly stands holding the box f174-182 and only starts walking right at ~f183; beat 3: Pax's eyes open at f191, not f190; checked: locked (door/lamp band and coffee-table band 1.0000/0 px cc 1.000, compare 166/209); box labels in-world, not transcribed; yellow scallop behind Pax is a sofa cushion"
+  }
+ ]
+}

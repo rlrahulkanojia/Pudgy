@@ -1,0 +1,529 @@
+{
+ "skit": "iteration_7/293_videos/2D_PP_GFEffect_Base.mp4",
+ "frames": 360,
+ "fps": 24.0,
+ "curated_by": "curator-v10-28",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  },
+  "x1": {
+   "kind": "extra",
+   "desc": "a grey penguin in a striped scarf with a walking cane"
+  }
+ },
+ "outfits": {
+  "o1": "a black tie"
+ },
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a grocery store aisle lined with glass-door freezers"
+  },
+  "s2": {
+   "kind": "set",
+   "desc": "an office with cubicles and a water cooler"
+  },
+  "s3": {
+   "kind": "set",
+   "desc": "a snowy town street lined with colourful igloo shops"
+  },
+  "s4": {
+   "kind": "set",
+   "desc": "a bedroom with a large yellow wooden bed"
+  },
+  "s5": {
+   "kind": "set",
+   "desc": "a snowy park with fir trees"
+  },
+  "s6": {
+   "kind": "set",
+   "desc": "a toy store with shelves of boxed toy cars"
+  },
+  "s7": {
+   "kind": "flat",
+   "desc": "a living room drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 51,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with more freezers along the back wall",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 12,
+     "text": "Pax stands at an open glass freezer holding a shopping basket at his side and reaches inside"
+    },
+    {
+     "start": 12,
+     "end": 20,
+     "text": "Pax pulls a box of frozen shrimp out of the freezer"
+    },
+    {
+     "start": 20,
+     "end": 33,
+     "text": "Pax holds the box up in one flipper and studies it"
+    },
+    {
+     "start": 33,
+     "end": 40,
+     "text": "Pax lowers the box into his basket"
+    },
+    {
+     "start": 40,
+     "end": 51,
+     "text": "Pax stands holding the basket in front of him with both flippers, looking ahead"
+    }
+   ],
+   "props": [
+    "shopping basket",
+    "box of frozen shrimp",
+    "glass-door freezer"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "motion on the freezer (y 0.25-0.60, x 0-0.30 and x 0.78-1.00) scale 0.999-1.001, under 2 px, cc 0.99-1.00, constant after f10 (sub-pixel jitter, no drift); compare 0/50 freezer and back-wall edges black. Product labels are icons only. No overlay"
+  },
+  {
+   "start": 51,
+   "end": 119,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a computer desk and a swivel chair in the cubicle",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right",
+     "presence": "enters",
+     "enters_at": 51,
+     "outfit": [
+      "o1"
+     ],
+     "moves": [
+      {
+       "frame": 63,
+       "screen": "right-center"
+      },
+      {
+       "frame": 93,
+       "screen": "center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 51,
+     "end": 65,
+     "text": "Pax walks in from the right carrying a black briefcase"
+    },
+    {
+     "start": 65,
+     "end": 89,
+     "text": "Pax keeps waddling left past the cubicles with one flipper raised in a wave, briefly squinting his eyes shut happily"
+    },
+    {
+     "start": 89,
+     "end": 107,
+     "text": "Pax turns and walks into the cubicle toward his desk"
+    },
+    {
+     "start": 107,
+     "end": 119,
+     "text": "Pax stands at his desk with his back turned, still holding the briefcase"
+    }
+   ],
+   "props": [
+    "briefcase",
+    "water cooler",
+    "computer",
+    "swivel chair"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "enters",
+   "notes": "Pax's edge and briefcase are already at the right edge on f51, fully in by ~f63. motion on the water cooler and cubicle (y 0.40-0.60, x 0-0.45) scale 1.0000, 0 px, cc 1.000 until Pax walks into the band at f87; compare 51/118 cooler, desks and partitions black. No overlay | verification pass 2 (verify_v10_report_v18): beat 2: Pax does not stop; he keeps waddling left the whole time he waves (tie position moves steadily left f65-96), and his beak stays closed, a happy eye-squint only around f87"
+  },
+  {
+   "start": 119,
+   "end": 178,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with a cloudy sky above the rooftops",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "enters",
+     "enters_at": 121,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 147,
+       "screen": "left-center"
+      }
+     ]
+    },
+    {
+     "id": "x1",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 119,
+     "end": 125,
+     "text": "{x1} slowly pulls a cart of groceries along as a paper bag tumbles off onto the ground"
+    },
+    {
+     "start": 125,
+     "end": 137,
+     "text": "Pax hurries in from the left toward the fallen bag"
+    },
+    {
+     "start": 137,
+     "end": 147,
+     "text": "Pax bends down and picks up the bag"
+    },
+    {
+     "start": 147,
+     "end": 165,
+     "text": "Pax lifts the bag and sets it back on the cart"
+    },
+    {
+     "start": 165,
+     "end": 178,
+     "text": "Pax turns and raises a flipper to {x1}, who smiles back with closed eyes"
+    }
+   ],
+   "props": [
+    "grocery cart",
+    "paper bag",
+    "walking cane"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "caf\u00e9 sign"
+   ],
+   "travel": "enters",
+   "notes": "motion on the shopfronts (y 0.30-0.40, full width) scale 1.0000, 0 px, cc 1.000 throughout; floor lines identical in crops f119/135/150/165/177. {x1} walks slowly right pulling the cart. The green caf\u00e9 sign is a blurred Pudgy-world cup logo, not legible. Top third is sky and clouds, no overlay | verification pass 2 (verify_v10_report_v18): effects: no sweat drops anywhere in the span (checked every 2nd frame above both heads; the cyan shapes near {x1}'s head are background cafe furniture), and no beat mentions them"
+  },
+  {
+   "start": 178,
+   "end": 234,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with shopfronts and a striped awning behind him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 178,
+     "end": 196,
+     "text": "Pax stands on the street, turned slightly to the side, waving a flipper"
+    },
+    {
+     "start": 196,
+     "end": 206,
+     "text": "Pax lowers his flipper to his side"
+    },
+    {
+     "start": 206,
+     "end": 234,
+     "text": "Pax stands still, looking off to the side and blinking calmly"
+    }
+   ],
+   "props": [],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "caf\u00e9 sign"
+   ],
+   "travel": "none",
+   "notes": "compare 178/233: awning, shop and floor edges black, diff map blank on the background; motion on the shopfronts (y 0.25-0.35) 1.000 to f190, then a 0.7% / 6 px reading once Pax's tuft and flipper enter the band. No overlay"
+  },
+  {
+   "start": 234,
+   "end": 270,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "high angle",
+   "setting": "s4",
+   "view": "with a bedside lamp and a duck-shaped bedpost",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "enters",
+     "enters_at": 236,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 242,
+       "screen": "center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 234,
+     "end": 238,
+     "text": "Pax sits up in bed reading an open teal book"
+    },
+    {
+     "start": 238,
+     "end": 242,
+     "text": "Polly leaps in from the right and dives onto Pax's lap"
+    },
+    {
+     "start": 242,
+     "end": 256,
+     "text": "Polly snuggles against Pax's chest while he holds the book up out of the way, looking surprised"
+    },
+    {
+     "start": 256,
+     "end": 270,
+     "text": "Pax lets the book go and hugs Polly back, both of them with eyes closed and blushing"
+    }
+   ],
+   "props": [
+    "book",
+    "bed",
+    "bedside lamp"
+   ],
+   "prop_events": [],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "enters",
+   "notes": "motion on the bedpost and lamp (y 0.25-0.40, x 0.60-1.00) back to 1.0000/0 px at cc 1.000 once the book leaves the band (f258+); compare 234/269 bed, lamp and bedpost edges black. The bedpost knob is a duck head and the lamp base an animal shape, neither a penguin. No overlay"
+  },
+  {
+   "start": 270,
+   "end": 301,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s5",
+   "view": "with a wooden bench under a cloudy sky",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 270,
+     "end": 278,
+     "text": "Polly tugs at Pax's flipper with her eyes squeezed shut and her beak open in a whine while Pax looks at her, puzzled"
+    },
+    {
+     "start": 278,
+     "end": 301,
+     "text": "Polly nibbles the tip of Pax's flipper with her eyes closed while Pax laughs with his eyes shut, his other flipper flung out"
+    }
+   ],
+   "props": [
+    "wooden bench"
+   ],
+   "prop_events": [],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "compare 270/300: bench, fir trees and snow marks black; the clouds are soft and carry no edges, and the diff map is blank off the characters (motion band y 0.33-0.45 had the characters in it). No overlay"
+  },
+  {
+   "start": 301,
+   "end": 329,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s6",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 301,
+     "end": 305,
+     "text": "Pax pulls a boxed toy car off the shelf while Polly stands beside him watching"
+    },
+    {
+     "start": 305,
+     "end": 309,
+     "text": "Pax turns toward Polly holding the box, smiling"
+    },
+    {
+     "start": 309,
+     "end": 329,
+     "text": "Pax holds the box out to show Polly, who clasps her flippers together and beams"
+    }
+   ],
+   "props": [
+    "boxed toy car",
+    "shelves"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "motion on the shelves (y 0.30-0.50, x 0-0.30) scale 0.997, ~1 px, constant from f309 (cc 0.97, Pax's flipper at the edge of the band); compare 301/328 shelf and box edges black. Toy boxes carry blank labels, no brand. No overlay"
+  },
+  {
+   "start": 329,
+   "end": 360,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s7",
+   "view": "with a cream sofa and an open book on the floor",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "partial",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 329,
+     "end": 344,
+     "text": "Polly lies on top of Pax under a checkered blanket, kissing his face again and again as hearts float up"
+    },
+    {
+     "start": 344,
+     "end": 360,
+     "text": "Pax lies back on the sofa with kiss marks all over his face while Polly keeps nuzzling his cheek"
+    }
+   ],
+   "props": [
+    "checkered blanket",
+    "sofa",
+    "book"
+   ],
+   "prop_events": [],
+   "effects": [
+    "hearts",
+    "kiss marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "keep12 is low because the leads and blanket fill the frame and move; motion on the book on the floor (y 0.84-0.92, x 0.25-0.65) scale 1.0001, 0.3 px, cc 1.000 throughout; compare 329/359 book and sofa edges black. Both heads and faces visible above the blanket. No overlay"
+  }
+ ]
+}

@@ -1,0 +1,312 @@
+{
+ "skit": "iteration_7/293_videos/PP_Apologies_BASE.mov",
+ "frames": 344,
+ "fps": 24.0,
+ "curated_by": "curator-v10-29",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "a pair of black headphones"
+ },
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 52,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "other",
+   "notes": "combined move from the first frame: the camera pans left (the armchair with Pax in headphones slides in from the left edge f6-36) while pulling back (Polly's width 352 -> 307 px f0-33, her height 573 -> 444 px by f51). It settles at f52 (armchair-base template from f79 matches at 0 px / scale 1.00 from f52). No single move clause is true for a pan plus pull-back, so left unfilled (as the vehicle-tracking ruling does for camera other)."
+  },
+  {
+   "start": 52,
+   "end": 80,
+   "boundary": "camera",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a cream armchair with yellow cushions",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 52,
+     "end": 60,
+     "text": "Polly taps Pax on the shoulder with her flipper, her eyes closed, while he sits in the armchair frowning down at {ifin}"
+    },
+    {
+     "start": 60,
+     "end": 68,
+     "text": "Pax turns his head toward Polly with one brow raised while she keeps her flipper on his shoulder, eyes closed"
+    },
+    {
+     "start": 68,
+     "end": 80,
+     "text": "Polly lowers her flipper and looks at Pax with a hurt frown while he frowns back at her over his phone"
+    }
+   ],
+   "props": [
+    "armchair",
+    "phone",
+    "headphones"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 52,
+     "by": "pax",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: armchair-base template (x 0-0.3, y 0.66-0.78) from f79 matches at 0 px, scale 1.00, cc 1.000 every frame f52-79; compare f52/f79 armchair edges black (static edge px 2293 vs 1033 at f51). Phone: pale grey back with lenses and a small tuft on top = iFin. No caption or watermark. | verification pass 2 (verify_v10_report_v27): beats: Pax frowns down at the phone only f52-59; from f60 he turns his head toward Polly with one brow raised, and f70-79 he frowns sideways at her. 'Frowning at the iFin' through f67 and 'keeps staring at his phone' f67-80 are false; camera locked from f52: armchair band x 0-0.17 y 0.62-0.78 reads 1.0000 / 0 px at cc 1.000 every frame f53-79; f51 still moving (pixel diff 17). Phone confirmed iFin"
+  },
+  {
+   "start": 80,
+   "end": 103,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "partial",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 80,
+     "end": 103,
+     "text": "Polly looks off to the left with drooping brows and a small hurt frown, holding still"
+    }
+   ],
+   "props": [],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "slow steady push-in on Polly's face: motion on y 0.25-0.50 scale 1.003 (f82) climbing evenly to 1.035 (f102), tx/ty drifting -2 -> -36 px, cc 0.99-0.999. The band is mostly Polly herself (the ground is plain), but the even, monotonic scale climb is a camera push, not her animation. 23 frames; camera_move is the only reason, so filled (U3)."
+  },
+  {
+   "start": 103,
+   "end": 163,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a cream armchair with yellow cushions",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 103,
+     "end": 119,
+     "text": "Pax scowls sideways at Polly over {ifin} while she stands beside the armchair looking over at him"
+    },
+    {
+     "start": 119,
+     "end": 129,
+     "text": "Pax closes his eyes and lets out a sigh, his phone resting in his flippers"
+    },
+    {
+     "start": 129,
+     "end": 137,
+     "text": "Pax opens his eyes and reaches a flipper out behind Polly with a sheepish look"
+    },
+    {
+     "start": 137,
+     "end": 163,
+     "text": "Pax pulls Polly into a side hug and they lean together with blushing cheeks, Polly closing her eyes"
+    }
+   ],
+   "props": [
+    "armchair",
+    "phone",
+    "headphones"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 103,
+     "by": "pax",
+     "is_ifin": true
+    }
+   ],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "same framing as f52-79: the f79 armchair-base template matches at 0 px, scale 1.00, cc 1.000 every 3 frames f103-160. Profile's keep12 dip near f129-136 is Pax reaching and Polly leaning in. No caption or watermark."
+  },
+  {
+   "start": 163,
+   "end": 212,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "other",
+   "notes": "Pax holding a rose bouquet, an iced drink, a gift card, a red handbag and an I'M SORRY sign, petals floating: the view first pushes in slightly (sign template scale 1.04 -> 1.08 f164-176), then pans right while pulling back (sign x +128 -> -74 px, scale 1.08 -> 1.00 f176-204, Pax's shadow edge 237 -> 59 px) as Polly comes in from the right with her flippers crossed; settles by f212 (feet template 0 px from f212). One continuous mixed move with no single clause; left unfilled."
+  },
+  {
+   "start": 212,
+   "end": 277,
+   "boundary": "camera",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": true,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 212,
+     "end": 239,
+     "text": "Polly stands with her flippers folded and her eyes shut, turning her face away, while Pax holds up his gifts and a wooden sign beside her"
+    },
+    {
+     "start": 239,
+     "end": 246,
+     "text": "Polly turns and steps toward the right edge, reaching a flipper out of the picture"
+    },
+    {
+     "start": 246,
+     "end": 257,
+     "text": "Polly pulls a yellow suitcase in from the right and sets it down in front of Pax, smiling with her eyes closed"
+    },
+    {
+     "start": 257,
+     "end": 263,
+     "text": "Polly rests a flipper on the suitcase handle and looks at Pax with worried brows while he gazes back at her"
+    },
+    {
+     "start": 263,
+     "end": 277,
+     "text": "Polly walks forward and to the right, pulling the suitcase along and glancing back at Pax, as a postcard slips from his gifts"
+    }
+   ],
+   "props": [
+    "rose bouquet",
+    "iced drink",
+    "gift card",
+    "red handbag",
+    "wooden sign",
+    "yellow suitcase",
+    "postcard"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "wooden sign",
+    "gift card label",
+    "cup logo"
+   ],
+   "travel": "moves_within",
+   "notes": "camera locked: Pax's feet/shadow template (f276) matches at 0 px, scale 1.00, cc 0.98-1.000 f212-278 (cc 0.88 at f260 while the suitcase passes in front); the push-in and blur begin at f279-280, so the span ends at f277. The sign's words and the gift card are in-world text (not transcribed). The drink carries the same green crowned-penguin siren parody as PP-Muscle (treated as an invented Pudgy-world logo). The suitcase charm is a black-headed penguin in sunglasses and a striped shirt, neither lead: a prop. Pax wears no headphones here. No caption or watermark. | verification pass 2 (verify_v10_report_v27): size_change: Polly walks toward the viewer and to the right f263-277, pulling the suitcase with her: her feet drop from y 1339 to 1381-1389 and she is drawn ~15% larger (compare f258/f276: Pax, sign and bouquet edges black, Polly and the suitcase shifted and grown; suitcase template +191 px right by f276). 'the character stays the same size' is false; beat 257-277: Polly does not just hold the sui"
+  },
+  {
+   "start": 277,
+   "end": 300,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "effect",
+   "camera": "push_in",
+   "notes": "push-in on Pax as he tilts the sign, with a depth-of-field blur that turns the suitcase and Polly soft and out of focus (clear from f284); Polly leaves on the right. The partial lens blur is a picture effect and outranks camera_move. Ends at the cut to the postcard (f300)."
+  },
+  {
+   "start": 300,
+   "end": 344,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "other",
+   "notes": "insert of a travel postcard (invented Pudgy-world resort name, a snowy map picture) dropping and settling on the plain ground; no lead."
+  }
+ ]
+}

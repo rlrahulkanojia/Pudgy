@@ -1,0 +1,325 @@
+{
+ "skit": "iteration_7/293_videos/PP_Homecooked_Base.mp4",
+ "frames": 224,
+ "fps": 24.0,
+ "curated_by": "curator-v10-22",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a kitchen drawn on a plain pale grey background"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "a dining corner drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 72,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "insert of the kitchen sink piled with dirty dishes, with only a flipper reaching in (Polly's f0-16, Pax's f24-32); the pile changes by three dissolves (f16-27, f41-46, f59-69). No lead anywhere, so the whole run is one no_lead span (the dissolves sit inside a run that could never be kept)"
+  },
+  {
+   "start": 72,
+   "end": 103,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a curved teal counter, a sink full of dishes, a brick range hood and a shelf of bottles behind them",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 72,
+     "end": 80,
+     "text": "Polly points back toward the counter with one flipper while Pax stands beside her looking at her"
+    },
+    {
+     "start": 80,
+     "end": 88,
+     "text": "Polly turns to Pax with a worried frown while he looks back at her"
+    },
+    {
+     "start": 88,
+     "end": 94,
+     "text": "Pax closes his eyes and lays a flipper on his chest with a calm little smile while Polly watches him"
+    },
+    {
+     "start": 94,
+     "end": 103,
+     "text": "Polly raises a flipper to her head in dismay while Pax keeps his eyes closed and his flipper on his chest"
+    }
+   ],
+   "props": [
+    "sink",
+    "dirty dishes"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f72-102 (motion on the hood band y0.05-0.30 x0-0.30 vs f72: scale 1.0000, 0 px, cc 1.000 every 3 frames; compare 72/100: counter, hood and shelf edges black). The wider band y0.20-0.42 read up to 1.013 because the leads' heads enter it. Dissolve to the table starts at f103. No overlay, no lead depiction on the shelf or sink"
+  },
+  {
+   "start": 103,
+   "end": 110,
+   "boundary": "transition",
+   "keep": false,
+   "drop_reason": "transition",
+   "camera": "static",
+   "notes": "dissolve from the kitchen to the dining table, f103-109 (ghost of the range hood still faint at f109; f110 clean)"
+  },
+  {
+   "start": 110,
+   "end": 135,
+   "boundary": "after_transition",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a round cream table set with plates of food and wooden chairs",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 110,
+     "end": 117,
+     "text": "Pax holds a plate of stacked food high on one flipper behind the table while Polly sits with her back turned, fork and spoon raised"
+    },
+    {
+     "start": 117,
+     "end": 135,
+     "text": "Pax lowers the plate to his chest and holds it there, blinking once, while Polly waits in her chair with her fork and spoon up"
+    }
+   ],
+   "props": [
+    "plate of food",
+    "fork",
+    "spoon",
+    "table",
+    "chairs"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f110-134 (table band y0.62-0.80 vs f110: scale 1.0000, <=0.1 px, cc 1.000). Polly is seen from behind in the foreground chair; Pax's lower body is behind the table. Hard cut at f135. No overlay | verification pass 2 (verify_v10_report_v16): Polly holds a fork and a spoon, not a knife (full-res crop f112): beat 1 and props corrected; beat 2 said Pax smiles with his eyes closed: his eyes are open f117-135 except a blink at f127-128; the plate is high only f110-116 and comes down f117-120: beat boundary moved from 122 to 117"
+  },
+  {
+   "start": 135,
+   "end": 167,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a round cream table set with sushi, a sandwich and a burger, and wooden chairs",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 135,
+     "end": 145,
+     "text": "Polly lifts a piece of sushi on her fork while Pax, across the table, winks and smiles"
+    },
+    {
+     "start": 145,
+     "end": 152,
+     "text": "Polly pops the sushi into her beak with her eyes closed"
+    },
+    {
+     "start": 152,
+     "end": 167,
+     "text": "Polly chews happily with her eyes closed and her fork raised while Pax keeps winking at her across the table"
+    }
+   ],
+   "props": [
+    "sushi",
+    "sandwich",
+    "burger",
+    "fork",
+    "table",
+    "chairs"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f135-166 (table band vs f135: scale 0.9998-1.0000, <=1.5 px drift from a flipper in the band, cc 1.000; compare 135/166: table and chair edges black). Hard cut at f167. No overlay | verification pass 2 (verify_v10_report_v16): beat 3 [152,167) said Pax sits with his eyes shut: he holds a one-eyed wink through the whole span (step 1 f135-166, left eye open, right eye closed)"
+  },
+  {
+   "start": 167,
+   "end": 195,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a round cream table set with stacks of pancakes and steaming mugs, and wooden chairs",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 167,
+     "end": 184,
+     "text": "Polly holds up a steaming lilac mug shaped like a penguin face and smiles across the table at Pax, who sits with his back turned holding a coral mug"
+    },
+    {
+     "start": 184,
+     "end": 195,
+     "text": "Polly closes her eyes in a happy smile, still holding up her mug, while Pax sits facing her"
+    }
+   ],
+   "props": [
+    "lilac penguin-face mug",
+    "coral mug",
+    "pancakes",
+    "table",
+    "chairs"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "reverse angle over Pax's back. Camera locked f167-194 (table band y0.62-0.80 vs f167: scale 0.9992-1.0002, <=4 px from Pax's flipper in the band, cc 1.000; compare 167/194: table and chair edges black). Polly's mug is lilac with a white penguin face and an orange beak: a generic penguin-face mug in another colour, a prop under the curators' ruling (first pass had it as lead_copy). Steam from the mugs is local and in-world. No overlay"
+  },
+  {
+   "start": 195,
+   "end": 224,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a round cream table set with bowls and plates of food, and wooden chairs",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 195,
+     "end": 205,
+     "text": "Pax holds a spoonful of food up to Polly's beak while she looks at it"
+    },
+    {
+     "start": 205,
+     "end": 218,
+     "text": "Polly takes the bite from Pax's spoon with her eyes closed"
+    },
+    {
+     "start": 218,
+     "end": 224,
+     "text": "Pax pulls the spoon back while Polly chews contentedly with her eyes closed"
+    }
+   ],
+   "props": [
+    "spoon",
+    "bowls",
+    "plates of food",
+    "table",
+    "chairs"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f195-223 (table band vs f195: scale 0.9995-1.0001, <=2.9 px from the leads' flippers in the band, cc >= 0.999; compare 195/223: table and chair edges black). Bowls are plain. No overlay"
+  }
+ ]
+}

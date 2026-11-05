@@ -1,0 +1,161 @@
+{
+ "skit": "iteration_7/293_videos/2D_PP_TextUpdates_Base.mp4",
+ "frames": 280,
+ "fps": 24.0,
+ "curated_by": "curator-v10-16",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a gym with pale tiled walls"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 31,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a weight bench under a barbell rack, a kettlebell and a dumbbell on the floor, a gym poster and a wall clock",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 4,
+     "text": "Pax lies back on the weight bench with his eyes closed and pushes the barbell up onto the rack"
+    },
+    {
+     "start": 4,
+     "end": 14,
+     "text": "Pax lies under the racked barbell with his flippers still on the bar, then starts to sit up"
+    },
+    {
+     "start": 14,
+     "end": 22,
+     "text": "Pax sits up on the bench and swings a flipper out to the side with his eyes closed"
+    },
+    {
+     "start": 22,
+     "end": 31,
+     "text": "Pax sits on the end of the bench with his eyes open, resting his flippers at his sides"
+    }
+   ],
+   "props": [
+    "barbell",
+    "weight bench",
+    "kettlebell",
+    "dumbbell"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "gym poster"
+   ],
+   "travel": "none",
+   "notes": "ECC on the wall band (y 0-0.25) scale 0.9999, 0 px, cc 1.000 through f42; compare 0/42 background edges black. Ends at f31, where Pax takes out a phone with a small Polly figure on top of it (see next span)"
+  },
+  {
+   "start": 31,
+   "end": 43,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "12 frames, also lead_copy: Pax takes out a grey phone with a small Polly figure (rose penguin, white face, tuft) sitting on its top edge and holds it at his chest from f31. The same Polly figure rides on the phone in every later shot that shows it"
+  },
+  {
+   "start": 43,
+   "end": 85,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "phone-screen insert: chat UI fills the picture, only Pax's flipper typing; a message is typed out and sent. Also lead_copy: Polly avatar in the chat header and the Polly figure on top of the phone"
+  },
+  {
+   "start": 85,
+   "end": 131,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "other",
+   "notes": "Pax walks across sea ice holding the phone with the Polly figure on it (visible at its tip from f86, full view f124-130). Also a tracking camera move (compare 86/122: every ice edge and crack has moved, the pebbles slide toward Pax), so not filled: lead_copy outranks camera_move"
+  },
+  {
+   "start": 131,
+   "end": 146,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "other",
+   "notes": "f131-141: the phone held low, photographing two pebbles on the ice, only Pax's belly and feet in view (also lead_hidden); f142-145: four smeared zoom-out frames (profile hard-cut candidates f142-145) back to the ice wide shot; f145 still scale 1.039 vs f155"
+  },
+  {
+   "start": 146,
+   "end": 164,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "18 frames, also lead_copy: Pax stands on the ice holding the phone with the Polly figure, smiling then closing his eyes. Locked: ECC on the ice floor band (y 0.75-0.98) vs f155 scale 1.0000, <= 0.5 px f146-163; compare 146/163 ice edges black (the water band at the top reads a fake pull-back)"
+  },
+  {
+   "start": 164,
+   "end": 204,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "phone-screen insert (chat with a photo of the pebbles, a message typed and sent), only Pax's flipper; Polly avatar and Polly figure on the phone (also lead_copy)"
+  },
+  {
+   "start": 204,
+   "end": 218,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "14 frames, also no_lead: a closed wooden door on a plain wall, nobody in view"
+  },
+  {
+   "start": 218,
+   "end": 255,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "other",
+   "notes": "Pax, sweating, squeezes his eyes shut over the phone with the Polly figure on it (f218-236), then a fast pull-back f237-239 to a wide of him sitting on a toilet with the phone (f240-254). Polly figure visible throughout"
+  },
+  {
+   "start": 255,
+   "end": 280,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "phone-screen insert again (a message typed out), only Pax's flipper; Polly avatar and Polly figure (also lead_copy)"
+  }
+ ]
+}

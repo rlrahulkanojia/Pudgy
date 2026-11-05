@@ -1,0 +1,276 @@
+{
+ "skit": "iteration_7/293_videos/2D_PP_Eepy_Base.mp4",
+ "frames": 242,
+ "fps": 24.0,
+ "curated_by": "curator-v10-07",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a living room drawn on a plain pale grey background"
+  },
+  "s2": {
+   "kind": "set",
+   "desc": "a dim hallway with a wooden door and an arched doorway"
+  },
+  "s3": {
+   "kind": "set",
+   "desc": "a dim bedroom with a wooden bed"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 18,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "18 frames: a teal retro television on a wooden cabinet showing scrolling credits text on its screen; no lead (also no_lead)"
+  },
+  {
+   "start": 18,
+   "end": 102,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a cream sofa behind them and the back of a teal television blurred in the foreground",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 72,
+       "screen": "center"
+      }
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 80,
+       "screen": "left-center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 18,
+     "end": 36,
+     "text": "Polly snuggles against Pax's shoulder with her eyes closed while Pax sits under a checkered blanket beside her, blinking and glancing at her"
+    },
+    {
+     "start": 36,
+     "end": 46,
+     "text": "Pax closes his eyes with a contented look while Polly dozes against him under the blanket"
+    },
+    {
+     "start": 46,
+     "end": 56,
+     "text": "Pax opens his eyes and wriggles sideways out from under the blanket, leaving Polly asleep beneath it"
+    },
+    {
+     "start": 56,
+     "end": 67,
+     "text": "Pax sits on the front edge of the sofa with his feet dangling, looking at the sleeping Polly"
+    },
+    {
+     "start": 67,
+     "end": 74,
+     "text": "Pax spreads his flippers and hops down off the sofa onto the floor, shutting his eyes as he jumps"
+    },
+    {
+     "start": 74,
+     "end": 81,
+     "text": "Pax stands in front of the sofa while Polly slumps sideways onto the cushions, still asleep"
+    },
+    {
+     "start": 81,
+     "end": 102,
+     "text": "Pax turns his back and leans over Polly lying on the sofa, gathering the blanket around her"
+    }
+   ],
+   "props": [
+    "checkered blanket",
+    "sofa",
+    "television"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "steady slow push-in through the whole shot: ECC on the television band (y 0.72-0.98) scale 1.004 at f24 -> 1.046 at f96, ty drifting to -43 px, cc 0.95-1.00; compare 18/101 shows doubled sofa and television edges. No static run. Top third is plain wall, no overlay | verification pass 2 (verify_v10_report_v12): beat 5 (67-74): Pax's eyes are open f67-69 as he spreads his flippers; they close only from f70, mid-hop; beats 1-2: Pax's eyes are open f34-35 and closed f36-44, so the eyes-closed beat starts at f36; no smile is drawn (plain closed beak), so 'small content smile' is replaced by a contented look; camera confirmed push_in: scale 1.001 -> 1.048 at f100 on the television band, tx/ty match a zoom abo"
+  },
+  {
+   "start": 102,
+   "end": 134,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pan_right",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a softly blurred room seen through the arched doorway",
+   "time": "night",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 102,
+     "end": 134,
+     "text": "Pax waddles along carrying the sleeping Polly, wrapped in a checkered blanket, in his flippers past a wooden door"
+    }
+   ],
+   "props": [
+    "checkered blanket",
+    "wooden door"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "tracking move: Pax stays in place in the picture while the door and the arched doorway slide steadily left (door from about x 0.55 to x 0.35 of the width over the shot; compare 102/133 shows the door and arch doubled while Pax overlaps). ECC has no trustworthy band (plain wall, cc < 0.6 elsewhere), judged by eye. Dim night tint"
+  },
+  {
+   "start": 134,
+   "end": 160,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with a bedside table holding a lamp with a rose shade behind them",
+   "time": "night",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 134,
+     "end": 146,
+     "text": "Pax stands beside the bed holding the sleeping Polly, wrapped in a checkered blanket, and glances down at her"
+    },
+    {
+     "start": 146,
+     "end": 149,
+     "text": "Pax shuts his eyes for a moment, still holding the sleeping Polly against him"
+    },
+    {
+     "start": 149,
+     "end": 160,
+     "text": "Pax leans forward and lays Polly down on the bed, still wrapped in the blanket and asleep"
+    }
+   ],
+   "props": [
+    "checkered blanket",
+    "bed",
+    "bedside lamp"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: ECC on the lamp band (y 0.20-0.42, x 0-0.30) and the bed-foot band (y 0.78-0.99) both scale 1.0000, 0 px, cc 1.000 through f158; compare 134/159 keeps lamp and bed edges black. Pax's lower body is behind the bed edge. Lamp base is a small golden figure and the bedpost has a yellow duck finial: neither is a penguin. Top third plain wall, bottom fifth bed foot: no overlay. Dim night tint | verification pass 2 (verify_v10_report_v12): beats 1-2: Pax's eyes are open f134-145 and closed only f146-148 (open again at f149), so the eyes-shut beat is [146,149), not [145,150); beat 2: no smile is drawn (closed beak); wording changed to a plain eyes-shut moment"
+  },
+  {
+   "start": 160,
+   "end": 174,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "14 frames: Polly's face tucked in the blanket on the pillow, eyes closed, a teddy bear behind her"
+  },
+  {
+   "start": 174,
+   "end": 184,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "same face framing suddenly lit warm and bright, Polly's eyes wide open f174-180; then a fast pull-back f181-183 to the bedside view"
+  },
+  {
+   "start": 184,
+   "end": 196,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "12 static frames: Polly lies wide awake in the bed with a white glow around her while Pax stands beside the bed looking at her"
+  },
+  {
+   "start": 196,
+   "end": 200,
+   "boundary": "transition",
+   "keep": false,
+   "drop_reason": "transition",
+   "camera": "static",
+   "notes": "cross-dissolve f196-199 (mean diff to f195 2.5 -> 10.5, to f205 10.7 -> 2.9); f200 is the first clean frame of the next shot"
+  },
+  {
+   "start": 200,
+   "end": 242,
+   "boundary": "after_transition",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "wide high view of the bed: Pax lies awake in bed while Polly jumps between poses (standing on the bed, peeking over the headboard, curled on the floor, sprawled on the bed) in jump cuts at f210, 218, 224, 230, 237 on the same background. Polly holds or leaves a small plush drawn exactly like Pax, visible in every frame of the shot; skit ends on this shot"
+  }
+ ]
+}

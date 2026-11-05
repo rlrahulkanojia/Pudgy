@@ -1,0 +1,326 @@
+{
+ "skit": "iteration_7/293_videos/2D_PP_BlanketMonster_Base.mp4",
+ "frames": 307,
+ "fps": 24.0,
+ "curated_by": "curator-v10-09",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a bedroom with a yellow wooden bed with duck-topped bedposts, drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 39,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "effect",
+   "camera": "other",
+   "notes": "opening POV from inside the bed: black frames f0-4 and f15-19, an eyelid-shaped black vignette opens and closes (blinks) f5-22, then the POV over Polly's head and Pax's flipper un-blurs f22-38. Only slivers of the leads visible"
+  },
+  {
+   "start": 39,
+   "end": 123,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with white pillows and a pale blanket, and a beam of sunlight slanting across the bed",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 110,
+       "screen": "left"
+      }
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 39,
+     "end": 60,
+     "text": "Pax lies tucked in bed looking ahead with open eyes while Polly snuggles against his cheek with her eyes closed, smiling"
+    },
+    {
+     "start": 60,
+     "end": 73,
+     "text": "Pax closes his eyes with a contented smile while Polly keeps nuzzling his cheek"
+    },
+    {
+     "start": 73,
+     "end": 84,
+     "text": "Pax turns his head and presses a kiss onto Polly's cheek, a blush on his face"
+    },
+    {
+     "start": 84,
+     "end": 105,
+     "text": "Pax faces forward again with wide open eyes while Polly stays snuggled against him with her eyes closed"
+    },
+    {
+     "start": 105,
+     "end": 123,
+     "text": "Pax sits up and scoots to the left edge of the bed while Polly stays lying with her eyes closed and her flippers under her chin"
+    }
+   ],
+   "props": [
+    "bed",
+    "pillows",
+    "blanket"
+   ],
+   "prop_events": [],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "camera locked: ECC on the bed-foot band scale 1.0000, 0 px at cc 1.000 for f39-119; compare 39/122 background edges overlap. Top-band ECC rows (f55 1.08) are bad fits on the plain sunbeam wall, ignored. No overlays"
+  },
+  {
+   "start": 123,
+   "end": 188,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with long curtains hanging from a rod on the back wall, and the end of the bed in the foreground",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 123,
+     "end": 139,
+     "text": "Pax stands at the round window with his back turned and reaches out to grab the curtain"
+    },
+    {
+     "start": 139,
+     "end": 155,
+     "text": "Pax glances back over his shoulder as he drags the curtain across the window, and the sunbeam on the floor fades"
+    },
+    {
+     "start": 155,
+     "end": 169,
+     "text": "Pax holds the closed curtains with one flipper raised, peeking back over his shoulder in the now dim room"
+    },
+    {
+     "start": 169,
+     "end": 188,
+     "text": "Pax lets go and turns around to face forward, then stands with one flipper on his hip and a pleased look"
+    }
+   ],
+   "props": [
+    "curtains",
+    "round window",
+    "bed"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: ECC on the bed band scale 1.0000, 0 px at cc 1.000 f127-143; after f147 the fit fails because the room darkens, but compare 123/187 keeps the bed, bedpost knob and curtain rod edges black (overlapping). The picture dims f147-160 because Pax closes the curtains (in-world light, not an effect) | verification pass 2 (verify_v10_report_v15): view: the round window with its cross frame is hidden behind the closed curtains from about f157, so the end window [167,188) shows no window; view now names only what stays visible; camera locked: background edges overlap in compare 123/187 and raw diff outside Pax is 0; the ECC jumps (f125, f147+) are bad fits on the flat wall and the fading sunbeam"
+  },
+  {
+   "start": 188,
+   "end": 212,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the curtains drawn and the room dim, and a white pillow behind her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 188,
+     "end": 212,
+     "text": "Polly sleeps in bed with her eyes closed and her flippers tucked under her chin, smiling softly"
+    }
+   ],
+   "props": [
+    "bed",
+    "pillows",
+    "blanket"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "slow push-in through the whole shot: ECC on the headboard band scale 1.003 at f192 to 1.022 at f210 with a drift of -12 px x, -21 px y; compare 188/211 shows every edge doubled"
+  },
+  {
+   "start": 212,
+   "end": 223,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "11 static frames (ECC scale 1.0000, 0 px to f222): Pax stands in front of the closed curtains on the far side of the bed, a flipper on his hip; the camera starts to pan at f223"
+  },
+  {
+   "start": 223,
+   "end": 252,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pan_right",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the curtains drawn and the room dim, and the end of the bed in the foreground",
+   "time": "day",
+   "size_change": true,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "props": [
+    "blanket",
+    "curtains",
+    "bed"
+   ],
+   "prop_events": [],
+   "effects": [
+    "motion blur"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "pan right with a slight push-in from f223 to the end of the shot: ECC on the bed band tx -3 px at f223, -40 at f226, -108 at f230 (fit fails after as the blanket rises into the band); the curtain slides out to the left and the right bedpost comes into view. f250-251 Pax leaps toward the viewer with motion blur | verification pass 2 (verify_v10_report_v15): pan right only f223-241 (19 frames: curtain edge 707->411 px), camera at rest f242-251 (raw diff vs f246 <= 0.05 mean). A move under 21 frames is too_short, and the 10-frame static tail is too short as well; nothing keepable or flippable in [223,252).",
+   "beats_dropped": [
+    {
+     "start": 223,
+     "end": 237,
+     "text": "Pax stands behind the bed in the dim room, blinking and looking around"
+    },
+    {
+     "start": 237,
+     "end": 248,
+     "text": "Pax looks on as the blanket rises off the bed like a long arm and wraps around his flipper"
+    },
+    {
+     "start": 248,
+     "end": 252,
+     "text": "Pax leaps up into the air in fright with his eyes wide and his beak open"
+    }
+   ]
+  },
+  {
+   "start": 252,
+   "end": 268,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "16 frames, wide shot of the whole bed between two nightstands with lamps: Pax lands in bed beside Polly and pulls the blanket over both of them, then they peek out"
+  },
+  {
+   "start": 268,
+   "end": 307,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the curtains drawn and the room dim, and white pillows behind them",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 268,
+     "end": 284,
+     "text": "Pax lies in bed staring ahead with wide eyes and blinks once, while Polly snuggles in against his side with her eyes closed"
+    },
+    {
+     "start": 284,
+     "end": 298,
+     "text": "Pax glances sideways at Polly with wide eyes as she nuzzles his cheek, smiling with her eyes closed"
+    },
+    {
+     "start": 298,
+     "end": 307,
+     "text": "Pax turns toward Polly and puts a flipper around her, closing his eyes as they cuddle"
+    }
+   ],
+   "props": [
+    "bed",
+    "pillows",
+    "blanket"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: ECC on the bed-foot band and the headboard band scale 1.0000, 0 px at cc 1.000 f274-304; compare 268/306 background edges overlap. Skit ends on this shot"
+  }
+ ]
+}

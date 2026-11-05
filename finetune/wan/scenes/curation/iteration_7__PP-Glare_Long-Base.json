@@ -1,0 +1,31 @@
+{
+ "skit": "iteration_7/293_videos/PP-Glare_Long-Base.mp4",
+ "frames": 169,
+ "fps": 24.0,
+ "curated_by": "curator-v10-21",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 169,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "the whole skit is one extreme close-up of Polly's face over the iFin she holds (soft-focus, foreground). Her eyes reflect the phone screen, and the reflection in each eye is a recognisable picture of Pax (photos scrolling: Pax waving, Pax in a suit and tie f96-126, Pax lying down) on every open-eye frame f0-62, f66-149, f153-168; her eyes are closed only f63-65 and f150-152. Expressions: blank stare, open-beaked surprise, half-lidded blushing look, wide smile. profile's cut candidates f31/f39/f61 are the reflected picture changing, not shot changes. Dropped as lead_copy (a screen showing a lead) for the whole run"
+  }
+ ]
+}

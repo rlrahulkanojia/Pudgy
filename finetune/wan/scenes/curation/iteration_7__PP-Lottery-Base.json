@@ -1,0 +1,342 @@
+{
+ "skit": "iteration_7/293_videos/PP-Lottery-Base.mp4",
+ "frames": 274,
+ "fps": 24.0,
+ "curated_by": "curator-v10-21",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "a navy-and-white striped scarf",
+  "o2": "a lavender-and-white striped scarf"
+ },
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a living room drawn on a plain pale grey background"
+  },
+  "s2": {
+   "kind": "set",
+   "desc": "a grassy cliff top above a calm sea"
+  },
+  "s3": {
+   "kind": "set",
+   "desc": "a sandy beach dotted with chunks of ice beside the sea"
+  },
+  "s4": {
+   "kind": "flat",
+   "desc": "a bedroom drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 43,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a cream sofa piled with cushions",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 41,
+     "text": "Pax lies back on the sofa against the cushions with a flipper at his chin, gazing upward and blinking"
+    },
+    {
+     "start": 41,
+     "end": 43,
+     "text": "Pax starts to push himself up off the cushions"
+    }
+   ],
+   "props": [
+    "sofa",
+    "cushions"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f0-42 (bottom band with the sofa base and the foreground furniture pixel-identical). A push-in starts at f43"
+  },
+  {
+   "start": 43,
+   "end": 48,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "push_in",
+   "notes": "push-in f43-47 (bottom-band diff to previous 1.2, 2.0, 1.7, 1.2, 0.7, then 0 from f49; final position from f48) while Pax sits up. 5 frames"
+  },
+  {
+   "start": 48,
+   "end": 86,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a cream sofa piled with cushions behind him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 48,
+     "end": 66,
+     "text": "Pax sits upright on the sofa with his flippers spread wide, looking up with an open beak"
+    },
+    {
+     "start": 66,
+     "end": 72,
+     "text": "Pax lowers his flippers and folds them in front of his belly"
+    },
+    {
+     "start": 72,
+     "end": 86,
+     "text": "Pax sits still with his flippers clasped, glancing around with a worried frown"
+    }
+   ],
+   "props": [
+    "sofa",
+    "cushions"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f48-85 (bottom band pixel-identical). No overlay"
+  },
+  {
+   "start": 86,
+   "end": 163,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a coral picnic blanket at the cliff edge and a low sun on the horizon",
+   "time": "sunset",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [
+      "o2"
+     ]
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 86,
+     "end": 94,
+     "text": "Pax and Polly sit with their backs turned on a picnic blanket at the cliff edge, holding steaming mugs"
+    },
+    {
+     "start": 94,
+     "end": 112,
+     "text": "Pax and Polly raise their mugs and sip with their eyes closed"
+    },
+    {
+     "start": 112,
+     "end": 128,
+     "text": "Pax and Polly lower their mugs and gaze out at the sea and the setting sun"
+    },
+    {
+     "start": 128,
+     "end": 146,
+     "text": "Polly leans against Pax and the two snuggle close, facing the sea"
+    },
+    {
+     "start": 146,
+     "end": 163,
+     "text": "Pax and Polly sit snuggled together as little red hearts float up around them"
+    }
+   ],
+   "props": [
+    "mugs",
+    "picnic blanket"
+   ],
+   "prop_events": [],
+   "effects": [
+    "hearts"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "DREAM: probably imagined (comes straight after Pax lies thinking on the sofa, then sits up wide-eyed); fills the whole picture, on style, no bubble border or whole-picture effect, so kept as an ordinary shot. camera locked f86-162 (cliff-and-sea band pixel-identical; steam from the mugs and the hearts are the only other motion)."
+  },
+  {
+   "start": 163,
+   "end": 228,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with a bright sun and puffy clouds over an orange-tinted horizon",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 184,
+       "screen": "right"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 163,
+     "end": 198,
+     "text": "Polly bends over tracing a big heart in the sand with a stick while Pax stands beside it, holding his own stick to the sand"
+    },
+    {
+     "start": 198,
+     "end": 204,
+     "text": "Polly straightens up and turns to face forward while Pax smiles"
+    },
+    {
+     "start": 204,
+     "end": 212,
+     "text": "Pax and Polly stand on either side of the sand heart holding their sticks, looking at each other"
+    },
+    {
+     "start": 212,
+     "end": 228,
+     "text": "Pax smiles with his eyes closed while Polly closes her eyes and blushes"
+    }
+   ],
+   "props": [
+    "sticks",
+    "heart drawn in the sand"
+   ],
+   "prop_events": [],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [
+    "letters drawn in the sand"
+   ],
+   "travel": "moves_within",
+   "notes": "DREAM: probably imagined (comes straight after Pax lies thinking on the sofa, then sits up wide-eyed); fills the whole picture, on style, no bubble border or whole-picture effect, so kept as an ordinary shot. camera locked f163-227 (ice-and-sand band identical apart from a small starfish/sparkle toggle). Letters are drawn inside the sand heart: in-world, not transcribed"
+  },
+  {
+   "start": 228,
+   "end": 274,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s4",
+   "view": "with a big bed with a golden headboard between two bedside tables with lamps",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 228,
+     "end": 243,
+     "text": "Pax and Polly lie side by side in a big bed under the covers, cheek to cheek and blushing"
+    },
+    {
+     "start": 243,
+     "end": 249,
+     "text": "Pax and Polly close their eyes and wrap their flippers around each other"
+    },
+    {
+     "start": 249,
+     "end": 264,
+     "text": "Pax and Polly cuddle with their eyes closed as little hearts float up above the bed"
+    },
+    {
+     "start": 264,
+     "end": 274,
+     "text": "Pax and Polly lie cuddled together under the covers with their eyes closed, blushing"
+    }
+   ],
+   "props": [
+    "bed",
+    "covers",
+    "bedside lamps"
+   ],
+   "prop_events": [],
+   "effects": [
+    "hearts",
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "DREAM: probably imagined (comes straight after Pax lies thinking on the sofa, then sits up wide-eyed); fills the whole picture, on style, no bubble border or whole-picture effect, so kept as an ordinary shot. camera locked f228-273 (bed-frame band pixel-identical). Only their heads and flippers show above the covers, clearly recognisable. Skit ends here | verification pass 2 (verify_v10_report_v20): beat 3 (f249-274): the hearts float only f250-263; f264-273 they are gone (red-pixel count back to the blush-mark baseline); checked: DREAM confirmed (full picture, on style, no border or effect); locked (bed and floor region raw diff 0.003); bedpost finials are cream duck-like heads with yellow beaks and the lamp bases are fish shapes, neither lead"
+  }
+ ]
+}

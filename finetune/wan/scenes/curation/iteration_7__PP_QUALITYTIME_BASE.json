@@ -1,0 +1,22 @@
+{
+ "skit": "iteration_7/293_videos/PP_QUALITYTIME_BASE.mp4",
+ "frames": 195,
+ "fps": 24.0,
+ "curated_by": "curator-v10-06",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {},
+ "outfits": {},
+ "settings": {},
+ "spans": [
+  {
+   "start": 0,
+   "end": 195,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "off_style",
+   "camera": "static",
+   "notes": "OLD_DESIGN: the whole skit is one shot in the older Pudgy design: yellow beaks and yellow feet, paler periwinkle and rose bodies, a glossy shaded sky-blue sofa with white shine marks, on the plain pale grey ground, eye level. Content (for reference only): Pax sits on the sofa looking at a phone; Polly peeks over the sofa back holding her phone (f18-87), hops over the back f88-95 and lands beside him, snuggles up against him, a heart pops above them f136-152, both keep scrolling side by side to the end. No cuts (profile and strip); the sofa looks fixed in place throughout. No overlay"
+  }
+ ]
+}

@@ -1,0 +1,384 @@
+{
+ "skit": "iteration_7/293_videos/PP-NY26-Base.mp4",
+ "frames": 306,
+ "fps": 24.0,
+ "curated_by": "curator-v10-08",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "a pair of gold number-shaped novelty glasses"
+ },
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a snowy park with pine trees"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "a room drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 33,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "push_in",
+   "notes": "Montage skit. Its picture repeats two shots of PP-MemoryBox-Base in this batch: f55-65 is MemoryBox's clifftop selfie (MemoryBox f91-135) and f97-107 is MemoryBox's beach seashell shot (MemoryBox f11-46); both are too short here. This span: a 2025 December wall calendar with crossed-off days on a plain background, accelerating push-in toward the last day; no penguin"
+  },
+  {
+   "start": 33,
+   "end": 39,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "transition",
+   "camera": "other",
+   "notes": "fly-through the calendar's last-day numeral into the next shot (f33-38; remnant of the numeral shape still in f38)"
+  },
+  {
+   "start": 39,
+   "end": 52,
+   "boundary": "after_transition",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "13 frames: Pax and Polly at a claw machine, Polly holding a prize"
+  },
+  {
+   "start": 52,
+   "end": 55,
+   "boundary": "transition",
+   "keep": false,
+   "drop_reason": "transition",
+   "camera": "static",
+   "notes": "3-frame dissolve f52-54"
+  },
+  {
+   "start": 55,
+   "end": 66,
+   "boundary": "after_transition",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "11 frames: clifftop selfie at sunset (same picture as PP-MemoryBox-Base f91-135)"
+  },
+  {
+   "start": 66,
+   "end": 69,
+   "boundary": "transition",
+   "keep": false,
+   "drop_reason": "transition",
+   "camera": "static",
+   "notes": "3-frame dissolve f66-68"
+  },
+  {
+   "start": 69,
+   "end": 80,
+   "boundary": "after_transition",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "11 frames: Pax and Polly sit in the snow by an igloo holding gifts"
+  },
+  {
+   "start": 80,
+   "end": 83,
+   "boundary": "transition",
+   "keep": false,
+   "drop_reason": "transition",
+   "camera": "static",
+   "notes": "3-frame dissolve f80-82"
+  },
+  {
+   "start": 83,
+   "end": 94,
+   "boundary": "after_transition",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "11 frames: wide igloo kitchen, Pax and Polly at the counter"
+  },
+  {
+   "start": 94,
+   "end": 97,
+   "boundary": "transition",
+   "keep": false,
+   "drop_reason": "transition",
+   "camera": "static",
+   "notes": "3-frame dissolve f94-96"
+  },
+  {
+   "start": 97,
+   "end": 108,
+   "boundary": "after_transition",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "11 frames: beach seashell shot (same picture as PP-MemoryBox-Base f11-46)"
+  },
+  {
+   "start": 108,
+   "end": 111,
+   "boundary": "transition",
+   "keep": false,
+   "drop_reason": "transition",
+   "camera": "static",
+   "notes": "3-frame dissolve f108-110"
+  },
+  {
+   "start": 111,
+   "end": 122,
+   "boundary": "after_transition",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "11 frames: Polly hugs Pax under a checked blanket, hearts above"
+  },
+  {
+   "start": 122,
+   "end": 125,
+   "boundary": "transition",
+   "keep": false,
+   "drop_reason": "transition",
+   "camera": "static",
+   "notes": "3-frame dissolve f122-124"
+  },
+  {
+   "start": 125,
+   "end": 136,
+   "boundary": "after_transition",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "11 frames: Pax and Polly at a round table with papers and a book, Pax in a mask"
+  },
+  {
+   "start": 136,
+   "end": 139,
+   "boundary": "transition",
+   "keep": false,
+   "drop_reason": "transition",
+   "camera": "static",
+   "notes": "3-frame dissolve f136-138"
+  },
+  {
+   "start": 139,
+   "end": 162,
+   "boundary": "after_transition",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a coral park bench and snow-capped pine trees behind them",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 139,
+     "end": 143,
+     "text": "Pax and Polly sit side by side on the park bench, each holding a cup of bubble tea with a straw"
+    },
+    {
+     "start": 143,
+     "end": 157,
+     "text": "Pax and Polly lean in and clink their bubble tea cups together with their eyes closed and happy smiles"
+    },
+    {
+     "start": 157,
+     "end": 162,
+     "text": "Pax and Polly draw their cups back, Pax smiling with his eyes still closed while Polly opens her eyes"
+    }
+   ],
+   "props": [
+    "bubble tea cups",
+    "park bench"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f139-161: tree region 0 changed pixels per frame at full res (f138 is the last dissolve frame); only the clouds drift. 23 frames, followed by the zoom-out transition at f162. No caption or watermark | verification pass 2 (verify_v10_report_v08): beat 3: they do not smile at each other: Pax keeps his eyes closed and Polly opens hers looking ahead (f157-161)"
+  },
+  {
+   "start": 162,
+   "end": 171,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "transition",
+   "camera": "pull_back",
+   "notes": "the bench picture shrinks into the first-day cell of a January 2026 wall calendar as the view pulls out of the calendar (f162-170)"
+  },
+  {
+   "start": 171,
+   "end": 196,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pull_back",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a wall calendar hanging above them",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left",
+     "presence": "enters",
+     "enters_at": 172,
+     "outfit": [
+      "o1"
+     ]
+    },
+    {
+     "id": "pax",
+     "screen": "right",
+     "presence": "enters",
+     "enters_at": 172,
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 171,
+     "end": 178,
+     "text": "Polly and Pax pop up into view from the bottom corners, Polly on the left smiling with her eyes closed"
+    },
+    {
+     "start": 178,
+     "end": 190,
+     "text": "Polly holds her glasses with both flippers and grins while Pax stands beside her looking ahead"
+    },
+    {
+     "start": 190,
+     "end": 196,
+     "text": "Polly lowers one flipper and holds it out toward Pax"
+    }
+   ],
+   "props": [
+    "wall calendar"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "wall calendar"
+   ],
+   "travel": "enters",
+   "notes": "eased pull-back from the end of the transition until f195 (calendar region change count falls from 41k to 3.5k per frame, 0 from f196); Pax and Polly rise into the picture from the bottom corners f172-177 while it pulls back. No caption or watermark"
+  },
+  {
+   "start": 196,
+   "end": 281,
+   "boundary": "camera",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a wall calendar hanging above them",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 196,
+     "end": 232,
+     "text": "Polly lowers her flipper and stands a little apart from Pax, both looking ahead with their eyes open"
+    },
+    {
+     "start": 232,
+     "end": 253,
+     "text": "Polly clasps her flippers at her chest while Pax folds his flippers in front of him shyly, both smiling"
+    },
+    {
+     "start": 253,
+     "end": 262,
+     "text": "Pax turns toward Polly and reaches a flipper out to her"
+    },
+    {
+     "start": 262,
+     "end": 271,
+     "text": "Pax and Polly step together and take each other's flippers"
+    },
+    {
+     "start": 271,
+     "end": 281,
+     "text": "Pax and Polly hug and spin around each other, ending side by side holding flippers with Pax on the left"
+    }
+   ],
+   "props": [
+    "wall calendar"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "wall calendar",
+    "number-shaped glasses"
+   ],
+   "travel": "moves_within",
+   "notes": "camera locked f196-280: calendar region 0 changed pixels per frame at full res. The calendar (2026, January) is treated as an in-world wall calendar like the 2025 one at the start, not an overlay. Pax wears glasses shaped as the first two digits and Polly the last two; both written as the same outfit. From f281 the calendar morphs into a title, so the span ends at f280. No caption or watermark | verification pass 2 (verify_v10_report_v08): beat 1: no blink seen for either lead f196-231 at step 1 (they look ahead and glance around); 'both blinking' removed"
+  },
+  {
+   "start": 281,
+   "end": 306,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "graphic_overlay",
+   "camera": "static",
+   "overlays": [
+    "title text"
+   ],
+   "notes": "the wall calendar morphs into a large Happy New Year title with sparkle bursts drawn over the picture (f281-305) while Pax and Polly stand holding flippers"
+  }
+ ]
+}

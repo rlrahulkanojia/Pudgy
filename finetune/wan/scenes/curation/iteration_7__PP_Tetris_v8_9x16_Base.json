@@ -1,0 +1,67 @@
+{
+ "skit": "iteration_7/293_videos/PP_Tetris_v8_9x16_Base.mp4",
+ "frames": 278,
+ "fps": 24.0,
+ "curated_by": "curator-v10-19",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {},
+ "outfits": {},
+ "settings": {},
+ "spans": [
+  {
+   "start": 0,
+   "end": 37,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "ad_merch",
+   "camera": "static",
+   "notes": "sponsored Walgreens skit: store aisle with red Walgreens logo balloons and a welcome-to-Walgreens-pharmacy sign legible over the whole shot; Pax pushes a small cart while Polly reads a list. Same ruling as the Walmart sections in PP-Scenic-Base (curator-v10-03). keep12 0.44 not checked further (drop stands on the brand)"
+  },
+  {
+   "start": 37,
+   "end": 126,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "shopping-cart close-up packed with Walgreens-tagged goods (red W tags) and Pudgy plush toys, including a small Polly plush (pink, crest) with a W tag; Polly behind the cart, Pax's flipper stacking items like Tetris blocks. Also ad_merch. The cart shifts down in frame ~f87-94 (camera or cart move, not checked: dropped anyway)"
+  },
+  {
+   "start": 126,
+   "end": 168,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "ad_merch",
+   "camera": "static",
+   "notes": "Pax pushing a small cart in front of the Walgreens logo balloon and the welcome-to-Walgreens sign, legible the whole shot"
+  },
+  {
+   "start": 168,
+   "end": 217,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "cart close-up: Pax's flippers wedge items in (flour sack, butter, wipes) among Walgreens-tagged Pudgy plushes, the small Polly plush visible at the bottom. Also ad_merch"
+  },
+  {
+   "start": 217,
+   "end": 258,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "ad_merch",
+   "camera": "static",
+   "notes": "Pax leaning on his small cart, smiling, under the welcome-to-Walgreens sign (brand lettering cut by the right edge but legible) and the bottom of a logo balloon at the top edge, whole shot"
+  },
+  {
+   "start": 258,
+   "end": 278,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "20 frames: Polly behind the cart tosses a big pillow and a fish-print can, which fly at the viewer and fill the picture at the end (also ad_merch: W-tagged goods). Top band has no texture until f276 (ECC 0.989 there), camera not judged further"
+  }
+ ]
+}

@@ -1,0 +1,337 @@
+{
+ "skit": "iteration_7/293_videos/2D_PP_Solution_Base.mp4",
+ "frames": 193,
+ "fps": 24.0,
+ "curated_by": "curator-v10-05",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "a peach hooded blanket with fish patches"
+ },
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a plain pale grey background"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "a living room with a cream sofa drawn on a plain pale grey background"
+  },
+  "s3": {
+   "kind": "flat",
+   "desc": "a bedroom with a yellow wooden bed with duck-topped bedposts, drawn on a plain pale grey background"
+  },
+  "s4": {
+   "kind": "flat",
+   "desc": "a dining corner with a round cream table and wooden chairs, drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 30,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 30,
+     "text": "Polly snuggles against Pax with her eyes closed and a blushing smile while Pax, a flipper around her, gazes at her as hearts float up above them"
+    }
+   ],
+   "props": [],
+   "prop_events": [],
+   "effects": [
+    "hearts",
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "plain background, so ECC has little to fit (band rows wobble with the figures at cc 0.97-0.99, no trend); judged by the floor shadows: their mask keeps the same box (x 189-870, bottom row 1352 at full res) on every 4th frame f0-29, and compare 0/29 figure and shadow edges overlap. No caption or watermark in the top third or bottom fifth"
+  },
+  {
+   "start": 30,
+   "end": 54,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a yellow shell-shaped cushion on the sofa arm",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 30,
+     "end": 38,
+     "text": "Polly sits hunched on the sofa wrapped in her hooded blanket, chin resting on her folded flippers, with sad watery eyes"
+    },
+    {
+     "start": 38,
+     "end": 47,
+     "text": "Polly closes her eyes with a small frown, still huddled in the blanket"
+    },
+    {
+     "start": 47,
+     "end": 54,
+     "text": "Polly opens her eyes again and stares ahead glumly"
+    }
+   ],
+   "props": [
+    "sofa",
+    "hooded blanket"
+   ],
+   "prop_events": [],
+   "effects": [
+    "tears"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f30-53: ECC on the left sofa-arm band (y 0.6-0.95, x 0-0.15) scale 1.0000, 0 px, cc 1.000; compare 30/53 sofa edges black. Pull-back starts f54. Polly is wrapped in a peach hooded blanket, her face, pink tuft and a rim of her rose head visible: kept as Polly with an outfit (judged recognisable; see report) | verification pass 2 (verify_v10_report_v09): beat 1/2 boundary: Polly's eyes are already closed at f38 (open f30-37, closed f38-46, open from f47); beat 1 claimed sad watery (open) eyes to f39"
+  },
+  {
+   "start": 54,
+   "end": 60,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "6-frame pull-back f54-59 (ECC vs f30: scale 0.983 at f54, 0.932 at f55; f59->f60 still changes, f60=f61 locked). Also camera_move"
+  },
+  {
+   "start": 60,
+   "end": 90,
+   "boundary": "camera",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a yellow shell-shaped cushion on the sofa arm",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "enters",
+     "enters_at": 60,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 67,
+       "screen": "left-center"
+      }
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 60,
+     "end": 65,
+     "text": "Pax waddles in from the left toward the sofa while Polly sits huddled in her hooded blanket with her eyes closed"
+    },
+    {
+     "start": 65,
+     "end": 71,
+     "text": "Pax hops up and flops belly-down across the sofa arm, pressing his cheek to Polly's while she opens her eyes wide"
+    },
+    {
+     "start": 71,
+     "end": 90,
+     "text": "Pax lies across the sofa arm nuzzling Polly's hood while she closes her eyes in a blushing smile and a heart floats up"
+    }
+   ],
+   "props": [
+    "sofa",
+    "hooded blanket"
+   ],
+   "prop_events": [],
+   "effects": [
+    "hearts",
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "enters",
+   "notes": "camera locked f60-89: ECC on the far-right sofa band (y 0.5-0.9, x 0.82-1.0) scale 1.0000, 0 px, cc 1.000 at every frame; compare 70/89 sofa edges black. A band nearer Polly reads shifts of 12-25 px, but that band holds her blanket. Pax is half inside the left edge at f60 and fully in by f64 | verification pass 2 (verify_v10_report_v09): beat 2: missed jump - Pax does not lean over the sofa arm, he hops off the floor at f66-67 and flops belly-down across the sofa arm (feet in the air from f67); beat 2/3 boundary: Polly's eyes are still open at f70 and close at f71"
+  },
+  {
+   "start": 90,
+   "end": 112,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with a peach lamp on the nightstand behind the headboard",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 90,
+     "end": 112,
+     "text": "Polly lies tucked under the blanket with a thermometer in her beak, cheeks flushed red and sweat drops on her brow, eyes squeezed shut"
+    }
+   ],
+   "props": [
+    "thermometer",
+    "bed",
+    "blanket",
+    "lamp"
+   ],
+   "prop_events": [],
+   "effects": [
+    "sweat drops",
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f90-111: ECC on the headboard and lamp band (y 0-0.3, x 0.6-1.0) scale 1.0000, 0 px, cc 1.000 at every frame; pull-back starts f112 (scale 0.991). Duck-topped bedpost is a bed ornament, not a lead"
+  },
+  {
+   "start": 112,
+   "end": 121,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "9-frame pull-back f112-120 from Polly's face to the bedside, Pax comes into view on the right; locked from f121. Also camera_move"
+  },
+  {
+   "start": 121,
+   "end": 139,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "18 locked frames (ECC on the bed-foot band scale 1.0000, 0 px to f138): Pax sits by the bed holding a bowl and spoon-feeds Polly, who lies sick with the thermometer"
+  },
+  {
+   "start": 139,
+   "end": 177,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s4",
+   "view": "with a bowl of salad on the table in front of her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 139,
+     "end": 157,
+     "text": "Polly sits at the table chewing with her eyes closed and a blushing smile, her fork resting in the salad bowl"
+    },
+    {
+     "start": 157,
+     "end": 170,
+     "text": "Polly opens her eyes and pokes her fork around in the bowl"
+    },
+    {
+     "start": 170,
+     "end": 177,
+     "text": "Polly lifts a forkful of food up out of the bowl and looks ahead"
+    }
+   ],
+   "props": [
+    "bowl of salad",
+    "fork",
+    "table",
+    "wooden chair"
+   ],
+   "prop_events": [],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f139-176: ECC on the table band (y 0.7-1.0, x 0-0.45) scale 1.0000, 0 px, cc 1.000 at every frame; compare 139/175 table and chair edges black. Pull-back starts f177 (scale 0.947)"
+  },
+  {
+   "start": 177,
+   "end": 193,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "16 frames to the end: fast pull-back f177-181 to a wide view of Pax and Polly at the round table, then a slow drift (ECC scale ~0.997 per frame) while Polly holds out a forkful to Pax. Also camera_move"
+  }
+ ]
+}

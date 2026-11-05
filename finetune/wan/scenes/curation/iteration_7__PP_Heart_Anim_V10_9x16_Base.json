@@ -1,0 +1,245 @@
+{
+ "skit": "iteration_7/293_videos/PP_Heart_Anim_V10 9x16 Base.mp4",
+ "frames": 274,
+ "fps": 24.0,
+ "curated_by": "curator-v10-13",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "an empty space with a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 56,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 24,
+     "text": "Pax lies on his belly, cheek propped on one flipper, scrolling with the other on {ifin} lying on the floor"
+    },
+    {
+     "start": 24,
+     "end": 28,
+     "text": "Pax blinks slowly, his head still resting on his flipper"
+    },
+    {
+     "start": 28,
+     "end": 56,
+     "text": "Pax keeps scrolling the phone with his flipper, gazing down at the screen"
+    }
+   ],
+   "props": [
+    "phone"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 0,
+     "by": "pax",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "plain background (motion: no fit); judged locked by compare 0/57: Pax's floor shadow and body edges overlap, his size and place constant (blue extent x0.23-0.71, y0.45-0.63 every 4th frame). The phone is the iFin (tuft at its end, full-res crop f10). Its tiny screen shows other people's posts: a green-and-red character f0-15, then a black-and-white penguin in a red scarf f16-55 (full-res crops f20, f40): not a lead. Ends at f56, when the next post (the blue penguin seen in the insert) starts scrolling onto the screen. Pax lies down: ~20% of the height but half the width, so medium wide"
+  },
+  {
+   "start": 56,
+   "end": 58,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "2 frames: the blue penguin post (a Pax picture, see the insert) scrolls onto the floor phone's screen (also lead_copy)"
+  },
+  {
+   "start": 58,
+   "end": 99,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "phone-screen insert: the iFin (tuft on top) fills the picture showing a social feed, Pax's flipper tapping in from the left. Post 1 is a Pax-like blue penguin in a red bandana and navy overalls (double-tap heart pops f76), then it scrolls to Polly holding a bouquet f88-98. Also lead_copy; in-world UI text"
+  },
+  {
+   "start": 99,
+   "end": 137,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "back to Pax lying on the floor (squeezed-shut eyes f99-102, heart eyes f103-133, chin on flipper), but the floor phone's screen shows the Polly-with-bouquet post (a pink penguin, recognisable at full res f110, f120) until f136; from f137 the screen shows a big heart instead"
+  },
+  {
+   "start": 137,
+   "end": 167,
+   "boundary": "same_shot",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 137,
+     "end": 164,
+     "text": "Pax lies on his belly and taps again and again on {ifin} lying on the floor, wide-eyed, as a heart flashes on its screen"
+    },
+    {
+     "start": 164,
+     "end": 167,
+     "text": "Pax keeps tapping as a small coral heart floats up from the phone's screen"
+    }
+   ],
+   "props": [
+    "phone"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 137,
+     "by": "pax",
+     "is_ifin": true
+    }
+   ],
+   "effects": [
+    "heart",
+    "motion lines"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "same shot as f99-136 (compare 99/167: shadow and body edges overlap; Pax's extent constant). Floor phone screen shows only a big heart f137-166 (outline or filled as he taps), no lead picture. Little tap lines flick around the phone; a heart rises from it f164-166. Motion blur of the whoosh starts at f167 (f166 crisp) | verification pass 2 (verify_v10_report_v11): camera static; screen shows only the heart icon from f137 (Polly post until f136); f166 is a little soft from Pax's own movement (vertical, his body moves ~20 px), the horizontal whoosh smear starts f167; beat: the heart rising from the phone is only f164-166, but the single beat claims it for the whole span, and the span's only window [137,158) never shows it. Split it off"
+  },
+  {
+   "start": 167,
+   "end": 188,
+   "boundary": "transition",
+   "keep": false,
+   "drop_reason": "transition",
+   "camera": "other",
+   "notes": "whoosh transition from Pax to Polly: Pax smears off in a horizontal motion blur f167-174, the picture is empty but for a small heart and a streak f175-183, Polly smears in from the left f184-187; crisp again from f188 (d1 rises 1.3 -> 3.9 and settles; f175-182 static empty). 21 frames"
+  },
+  {
+   "start": 188,
+   "end": 274,
+   "boundary": "after_transition",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 232,
+       "screen": "left-center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 188,
+     "end": 195,
+     "text": "Polly stands holding {ifin} to her cheek with her eyes squeezed shut and her face covered in little coral hearts as a heart floats up"
+    },
+    {
+     "start": 195,
+     "end": 210,
+     "text": "Polly opens one eye for a moment, then squeezes both shut again, hugging the phone to her cheek"
+    },
+    {
+     "start": 210,
+     "end": 226,
+     "text": "Polly sways and swings a flipper out to the side with one eye open, still clutching the phone"
+    },
+    {
+     "start": 226,
+     "end": 233,
+     "text": "Polly hops up into the air and tips over backward"
+    },
+    {
+     "start": 233,
+     "end": 274,
+     "text": "Polly lies on her back with her feet in the air, rocking gently as she clutches the phone to her face"
+    }
+   ],
+   "props": [
+    "phone"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 188,
+     "by": "polly",
+     "is_ifin": true
+    }
+   ],
+   "effects": [
+    "hearts"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "plain background; judged locked: Polly's size constant (pink extent y0.39-0.63 standing, 0.47-0.67 lying) and her floor shadow stays put until she hops; compare 187/228 and 232/273 show only her own motion. Her face is covered in coral heart marks the whole span (a character-attached effect, like blush). Her phone is the iFin (grey back, lenses, tuft; full-res crop f214). No caption or watermark | verification pass 2 (verify_v10_report_v11): camera static (plain ground, Polly's shadow fixed until the hop); f188 is the first sharp frame after the whoosh; top-third changes are only the floating heart f192-194 and Polly's hop f226-229; beat [188,210): her eyes are not squeezed shut throughout - she opens one eye f195-203, shuts both f204-211, and keeps one eye open f212-224 (zoomed every frame); the only floating heart is f189-195"
+  }
+ ]
+}

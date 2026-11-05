@@ -1,0 +1,83 @@
+{
+ "skit": "iteration_7/293_videos/2D_PP_QuickMiss_Base.mp4",
+ "frames": 256,
+ "fps": 24.0,
+ "curated_by": "curator-v10-02",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {},
+ "spans": [
+  {
+   "start": 0,
+   "end": 112,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "pull_back",
+   "notes": "Pax wears a pale grey hockey jersey (number 88) with a printed small Pax on the chest: a blue Pudgy penguin with white face, head tuft, orange beak and feet, waving (checked at full resolution f30, f80, f220), the same crest ruled lead_copy in iteration_2 Champ and Tone. f0-40: Pax alone at the igloo door with a duffel bag (its print shows small penguin figures) and a hockey stick; f44-111: Polly brings his helmet and fastens it, a framed photo of Pax and Polly stands on the side table by the window the whole time (f60, f100 checked). Camera: locked f0-22, small bounce f24-38 (ECC scale 0.988-1.010, ty +-8 px), pull-back f38-46, locked f47-111"
+  },
+  {
+   "start": 112,
+   "end": 132,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "20 frames: wide exterior, igloo and a red snow-car on runners, Pax tiny walking to it with the duffel bag. Also lead_copy (jersey print, though tiny here)"
+  },
+  {
+   "start": 132,
+   "end": 154,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "Pax loads the duffel bag and hockey stick into the snow-car (number plate text). The duffel bag carries a small Polly charm (pink, as on the keychain insert) and a print of little penguins, visible f132-146; jersey print visible f132-136. Only f146-153 are free of copies, far too short"
+  },
+  {
+   "start": 154,
+   "end": 186,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "other",
+   "notes": "Pax wears a pale grey hockey jersey (number 88) with a printed small Pax on the chest: a blue Pudgy penguin with white face, head tuft, orange beak and feet, waving (checked at full resolution f30, f80, f220), the same crest ruled lead_copy in iteration_2 Champ and Tone, seen through the windscreen in every frame. Pax sits in the snow-car; background and car edges doubled in compare 154/185 (camera drifts)"
+  },
+  {
+   "start": 186,
+   "end": 209,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "push_in",
+   "notes": "insert: car keys in the ignition with a Polly charm (a small pink penguin keyring) and a rose tag with her name; no real lead. Also lead_copy. Slow push-in (ECC scale 1.014 at f192, 1.048 at f204)"
+  },
+  {
+   "start": 209,
+   "end": 229,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "other",
+   "notes": "20 frames: Pax in the snow-car with teary eyes. Also lead_copy (jersey print through the windscreen) and a slight camera drift (compare 209/228)"
+  },
+  {
+   "start": 229,
+   "end": 256,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "back inside the igloo: the framed photo of Pax and Polly is on the side table in every frame; Polly arranges the flowers, Pax comes back in at ~f242 (jersey print) and they hug. Camera locked (ECC scale 1.000, 0 px)"
+  }
+ ]
+}

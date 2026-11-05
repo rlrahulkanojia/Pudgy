@@ -1,0 +1,153 @@
+{
+ "skit": "iteration_7/293_videos/PP-ActsOfService-Base.mp4",
+ "frames": 145,
+ "fps": 24.0,
+ "curated_by": "curator-v10-08",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a living room drawn on a plain pale grey background"
+  },
+  "s2": {
+   "kind": "set",
+   "desc": "a kitchen with a curved counter, a cream fridge and an archway into the living room"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 91,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a cream sofa with yellow scallop-shell armrests",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 10,
+     "text": "Pax sits beside Polly on the sofa and reaches over to take her flipper in his"
+    },
+    {
+     "start": 10,
+     "end": 34,
+     "text": "Pax holds Polly's flipper up to his beak and kisses it with his eyes closed while Polly watches him"
+    },
+    {
+     "start": 34,
+     "end": 45,
+     "text": "Pax lets go and flings both flippers up in the air with a wide open-beaked smile"
+    },
+    {
+     "start": 45,
+     "end": 64,
+     "text": "Pax throws his flippers around Polly and presses his face to her cheek, blushing, while Polly shuts one eye and smiles with her beak open"
+    },
+    {
+     "start": 64,
+     "end": 91,
+     "text": "Pax hugs Polly tight with his eyes closed as small red hearts float up above them, while Polly smiles shyly in his arms"
+    }
+   ],
+   "props": [
+    "sofa"
+   ],
+   "prop_events": [],
+   "effects": [
+    "hearts",
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f0-90: sofa edges black in compare 0/90; region diff on the right armrest 0.00 per frame through f90, first movement at f91. No caption or watermark (high-pass check of f0/45/90). The pale background is later revealed as the room's wall by the pull-back | verification pass 2 (verify_v10_report_v05): beat [45,64): Polly winks (one eye shut, the other wide open, beak open), she does not squint; checked at full res f46-63; beat [64,91): 26 words, trimmed to 23 (same content)"
+  },
+  {
+   "start": 91,
+   "end": 113,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "effect",
+   "camera": "pull_back",
+   "notes": "eased pull-back f91-112 from the sofa to a kitchen counter piled with dirty dishes: armrest region diff rises from f91, settles by f113. Also an effect: a soft-focus blur on the foreground dishes as they slide in (f101-110) and a vignette with a light shaft fading in (f100-112). Effect outranks camera_move, so not filled"
+  },
+  {
+   "start": 113,
+   "end": 145,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "effect",
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a pile of dirty dishes, mugs and a sponge by a gold tap in the foreground, and the sofa seen through the archway behind",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 113,
+     "end": 145,
+     "text": "Pax and Polly sit hugging on the sofa far in the background while small flies buzz over the dirty dishes in front"
+    }
+   ],
+   "props": [
+    "sofa",
+    "dirty dishes",
+    "mugs",
+    "sponge",
+    "tap"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f113-144 (top-left region diff 0.00-0.02 per frame). Dropped as effect: a dark vignette around the edges and a light shaft from the top over the whole picture, and the leads (about 9% of the height) are drawn in soft focus behind the sharp dishes. Fields filled so it can be flipped if this lighting is ruled in-style. The face on the red mug at the right is a generic mug face, not a lead. No caption or watermark"
+  }
+ ]
+}

@@ -1,0 +1,310 @@
+{
+ "skit": "iteration_7/293_videos/PP-Help-Base.mp4",
+ "frames": 262,
+ "fps": 24.0,
+ "curated_by": "curator-v10-05",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "an igloo kitchen with pale ice-brick walls and a curved turquoise counter"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "a kitchen with a turquoise counter and a two-ring stove, drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 31,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "high angle",
+   "setting": "s1",
+   "view": "with a pot and a skillet on the stove in front of them and a bowl of vegetables and a sink on the counter behind",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 31,
+     "text": "Polly chops a carrot on a cutting board with a knife while Pax stands beside her, glancing around"
+    }
+   ],
+   "props": [
+    "knife",
+    "carrot",
+    "cutting board",
+    "pot",
+    "skillet",
+    "bowl of vegetables"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f0-30: ECC on the wall band (y 0-0.3) scale 1.0000, 0 px at cc 0.96-0.99; compare 0/30 counter, stove and wall edges black. No caption or watermark"
+  },
+  {
+   "start": 31,
+   "end": 108,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a pot and a skillet on the stove in front of them",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 76,
+       "screen": "right-center"
+      }
+     ]
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 76,
+       "screen": "left-center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 31,
+     "end": 46,
+     "text": "Polly tips chopped onion from a cutting board into the pot while Pax stands at the skillet, smiling"
+    },
+    {
+     "start": 46,
+     "end": 58,
+     "text": "Polly turns and leans away toward the left edge while Pax waits at the skillet"
+    },
+    {
+     "start": 58,
+     "end": 64,
+     "text": "Polly turns back and reaches a flipper out to tap Pax"
+    },
+    {
+     "start": 64,
+     "end": 72,
+     "text": "Polly leans in close behind Pax's shoulder, peering at the skillet"
+    },
+    {
+     "start": 72,
+     "end": 82,
+     "text": "Pax slides over to the left while Polly steps around behind him to the skillet"
+    },
+    {
+     "start": 82,
+     "end": 96,
+     "text": "Polly stands behind the skillet with a flipper raised to her chest, smiling, while Pax stands beside her with blushing cheeks"
+    },
+    {
+     "start": 96,
+     "end": 108,
+     "text": "Polly grips the skillet handle and stirs the vegetables with a wooden spatula while Pax stands beside her with blushing cheeks"
+    }
+   ],
+   "props": [
+    "cutting board",
+    "pot",
+    "skillet",
+    "wooden spatula"
+   ],
+   "prop_events": [],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "camera locked f31-107: ECC on the counter-front band (y 0.85-1.0) scale 1.0000, |t| <= 0.4 px, cc 1.000. Polly is partly cut by the left edge f50-56 while she leans away; Pax stays fully visible | verification pass 2 (verify_v10_report_v10): beat 6 [82,108): Polly does not stir until f97. f82-96 she stands behind the skillet with a flipper raised to her chest, looking at Pax, then smiles with her eyes shut (f95); at f97 she grips the skillet handle and the spatula and stirs f97-107. The 21-frame window [80,101) would otherwise caption stirring for a stretch that shows almost none"
+  },
+  {
+   "start": 108,
+   "end": 140,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "high angle",
+   "setting": "s1",
+   "view": "with a pot of soup and a skillet of vegetables on the stove in front of them and a bowl of vegetables and a sink behind",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 108,
+     "end": 128,
+     "text": "Polly slices raw fish on a cutting board while Pax stands in front of her by the stove, holding a tray of sliced fish and blinking"
+    },
+    {
+     "start": 128,
+     "end": 140,
+     "text": "Pax lets go of the tray and turns to look back up at Polly while she keeps slicing"
+    }
+   ],
+   "props": [
+    "knife",
+    "cutting board",
+    "raw fish",
+    "tray of sliced fish",
+    "pot",
+    "skillet"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f108-139: ECC on the wall band scale 1.0000, 0 px, cc 1.000 at every 2nd frame; compare 108/139 counter and stove edges black"
+  },
+  {
+   "start": 140,
+   "end": 262,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a pot and a skillet on the stove in front of them and a bottle of soy sauce at the end of the counter",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 140,
+     "end": 156,
+     "text": "Polly stirs the pot with a wooden spoon while Pax tosses the vegetables up out of his skillet and catches them"
+    },
+    {
+     "start": 156,
+     "end": 182,
+     "text": "Polly keeps her spoon in the pot and reaches over to pat Pax's side while the two look at each other"
+    },
+    {
+     "start": 182,
+     "end": 200,
+     "text": "Pax turns and leans off toward the right edge while Polly stirs the pot"
+    },
+    {
+     "start": 200,
+     "end": 212,
+     "text": "Pax comes back holding a salt shaker and holds it out to Polly"
+    },
+    {
+     "start": 212,
+     "end": 224,
+     "text": "Pax and Polly lean close together over the salt shaker, looking at each other"
+    },
+    {
+     "start": 224,
+     "end": 234,
+     "text": "Polly presses her beak to Pax's cheek with her eyes closed while Pax blushes"
+    },
+    {
+     "start": 234,
+     "end": 246,
+     "text": "Polly shakes salt into the pot while Pax watches her with blushing cheeks"
+    },
+    {
+     "start": 246,
+     "end": 262,
+     "text": "Pax lifts his flippers and sways with his eyes shut and a big grin while Polly seasons the pot"
+    }
+   ],
+   "props": [
+    "pot",
+    "skillet",
+    "wooden spoon",
+    "salt shaker",
+    "soy sauce bottle"
+   ],
+   "prop_events": [],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [
+    "bottle label"
+   ],
+   "travel": "none",
+   "notes": "camera locked f140-261: ECC on the counter-front band (y 0.85-1.0) scale 1.0000, cc 1.000 at every frame; a sub-2 px settle at f150 (tx -0.5 -> +1.4 px, then constant to the end), not a move. Pax is partly cut by the right edge f184-198 while he leans away; Polly stays fully visible. No hidden cuts: every pose change f140-261 is continuous on step-1/2 strips. The soy sauce bottle label is a red-and-white emblem with no legible brand (checked at full res): in-world, not ad_merch"
+  }
+ ]
+}

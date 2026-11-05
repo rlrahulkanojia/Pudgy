@@ -1,0 +1,336 @@
+{
+ "skit": "iteration_7/293_videos/PP_Random_v6 9x16 base.mp4",
+ "frames": 249,
+ "fps": 24.0,
+ "curated_by": "curator-v10-13",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a snowy field with low hills and snow-capped pine trees"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "an empty space with a plain pale grey background"
+  },
+  "s3": {
+   "kind": "set",
+   "desc": "a café with an icy pale teal counter and a glass pastry case under a big shop sign"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 25,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a red snow car on skis beside him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 10,
+     "text": "Pax stands beside the red snow car holding his phone up in one flipper, looking at it"
+    },
+    {
+     "start": 10,
+     "end": 16,
+     "text": "Pax stretches the phone out toward the snow car and snaps a photo with a little flash"
+    },
+    {
+     "start": 16,
+     "end": 25,
+     "text": "Pax draws the phone back to his chest and glances down at it"
+    }
+   ],
+   "props": [
+    "phone",
+    "snow car"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 0,
+     "by": "pax",
+     "is_ifin": "unsure"
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "a montage of nine short shots of Pax photographing things, each 20-39 frames; hard cuts at 25, 50, 75, 100, 139, 165, 191, 215 (d1 18-50, step-1 checked). Locked: motion on the tree/hill band (y0.38-0.50, x0-0.55, clouds excluded) scale 1.0000, 0 px, cc 1.000 f3-24. The phone is seen edge-on here (iFin unsure; the same phone shows the tuft in the café shot). The flash at f12-14 is a small local sparkle at the phone. No brand on the car; no caption or watermark"
+  },
+  {
+   "start": 25,
+   "end": 50,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a hockey jersey hanging on a hanger beside him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 25,
+     "end": 35,
+     "text": "Pax stands beside a hockey jersey hanging on a hanger, holding his phone up to it"
+    },
+    {
+     "start": 35,
+     "end": 41,
+     "text": "Pax pushes the phone toward the jersey and snaps a photo with a little flash"
+    },
+    {
+     "start": 41,
+     "end": 50,
+     "text": "Pax keeps the phone raised beside the jersey and looks at it"
+    }
+   ],
+   "props": [
+    "phone",
+    "hockey jersey",
+    "hanger"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 25,
+     "by": "pax",
+     "is_ifin": "unsure"
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "team name and number on the jersey"
+   ],
+   "travel": "none",
+   "notes": "locked: motion on the jersey band (y0.33-0.55, x0.05-0.40) scale 1.0000, 0 px, cc 1.000 f28-49. The navy jersey carries a number, an invented team name, a red hockey-helmet print and a small igloo crest (full-res crop f30): no lead print, no real brand found; treated as in-world text. Unsure only if the client counts it as Pudgy merch shown as a product"
+  },
+  {
+   "start": 50,
+   "end": 75,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with hanging lamps, the glass pastry case and a magazine rack behind him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 50,
+     "end": 60,
+     "text": "Pax stands at the café counter with a long paper receipt in one flipper, holding {ifin} up to his face with the other"
+    },
+    {
+     "start": 60,
+     "end": 65,
+     "text": "Pax snaps a photo, a little flash sparkling on the back of the phone"
+    },
+    {
+     "start": 65,
+     "end": 75,
+     "text": "Pax keeps holding up the phone and the dangling receipt, staring at the screen with wide eyes"
+    }
+   ],
+   "props": [
+    "phone",
+    "receipt",
+    "pastry case",
+    "magazine rack"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 50,
+     "by": "pax",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "café sign",
+    "magazine covers"
+   ],
+   "travel": "none",
+   "notes": "locked: motion on the shop-sign band (y0-0.18) scale 1.0000, 0 px, cc 1.000 f53-74. The big green sign is the invented Huddlebucks café name (allowed in-world text per the curator rulings). Background is drawn soft-focus (static). Magazine covers are blurred, nothing recognisable as a lead. Phone back is pale grey with lenses and the tuft on top (full-res crop f56) = iFin"
+  },
+  {
+   "start": 75,
+   "end": 100,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "Pax photographs himself in a tall fish-shaped standing mirror; his reflection shows in the mirror the whole shot (a mirror reflection of a lead is lead_copy)"
+  },
+  {
+   "start": 100,
+   "end": 119,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "camera move under 21 frames: close-up of Polly asleep in bed, then a fast eased pull-back to the whole bed f102-118 (motion on the footboard band reaches scale 0.9753 at f119 and holds; d1 6-17 per frame falling to 0.3 at f119)"
+  },
+  {
+   "start": 119,
+   "end": 139,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "20 static frames after the pull-back (footboard band constant f119-138, d1 <= 0.3): Pax lies in bed beside the sleeping Polly holding his phone up over her. One frame short of 21"
+  },
+  {
+   "start": 139,
+   "end": 165,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a round cream table and two wooden chairs",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 139,
+     "end": 145,
+     "text": "Polly scoops up a forkful of food from her plate while Pax, sitting beside her, holds his phone up toward her"
+    },
+    {
+     "start": 145,
+     "end": 151,
+     "text": "Polly lifts the fork to her beak with her eyes closed while Pax keeps the phone raised"
+    },
+    {
+     "start": 151,
+     "end": 155,
+     "text": "Pax snaps a photo of Polly with a little flash as she takes the bite"
+    },
+    {
+     "start": 155,
+     "end": 165,
+     "text": "Polly chews happily with her eyes closed while Pax smiles with his eyes shut, still holding up his phone"
+    }
+   ],
+   "props": [
+    "phone",
+    "fork",
+    "plate of food",
+    "round table"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 139,
+     "by": "pax",
+     "is_ifin": "unsure"
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "locked: compare 139/164 keeps the table, chairs and their shadow black (the table-base motion band is a long-line band that fits falsely, so compare decides, per the rulings). Pax's phone is held edge-on toward Polly: its screen never faces out, iFin unsure. Seated leads drawn ~21-25% of the height"
+  },
+  {
+   "start": 165,
+   "end": 191,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lookalike",
+   "camera": "static",
+   "notes": "U5: Pax holds his phone up for a selfie beside a grand old lady penguin with a towering curly white wig, a red gown, a gold-and-turquoise jewelled necklace and drop earrings. Her face is white and her flipper tips and the back of her head are pale pink (full-res crops f166, f190), so she is drawn on Polly's body. Polly appears as herself elsewhere in this skit, so she is someone else (not a necklace of pearls, but the same logic as Polly's mum): unfilled lookalike drop"
+  },
+  {
+   "start": 191,
+   "end": 215,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "sunset over the sea: Polly and Pax seen from behind, Pax holds up the iFin (tuft on top) and its screen shows Polly the whole shot f191-214 (a phone point of view with the other lead on its screen)"
+  },
+  {
+   "start": 215,
+   "end": 249,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "Polly sits on a toilet nibbling a snack; from f230 to the end a flipper pushes the iFin in from the right and its screen shows Polly (flash at f236). The clean part f215-229 is only 15 frames"
+  }
+ ]
+}

@@ -1,0 +1,345 @@
+{
+ "skit": "iteration_7/293_videos/PP-Bite-Base.mp4",
+ "frames": 339,
+ "fps": 24.0,
+ "curated_by": "curator-v10-27",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a dining room drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 35,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with plates of salmon, rice and greens on a round table in front of them",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 16,
+     "text": "Pax sits at the table holding a fork and glances over at Polly while she chews with her eyes closed, smiling"
+    },
+    {
+     "start": 16,
+     "end": 22,
+     "text": "Polly opens her eyes and glances toward Pax, who sits holding his fork"
+    },
+    {
+     "start": 22,
+     "end": 35,
+     "text": "Pax chews happily with his eyes closed while Polly watches him"
+    }
+   ],
+   "props": [
+    "fork",
+    "plates of food",
+    "round table",
+    "wooden chairs"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "slow push-in through the whole shot: table band y0.55-0.80 scale 1.004 at f3, 1.039 at f24, 1.072 at f33 (cc >= 0.994); table-base patch drifts dx -7, dy +18 by f33 with falling match. Only reason is the move: both leads visible, no overlay, on style. Hard cut at f35 | verification pass 2 (verify_v10_report_v26): push_in confirmed (table about 1.07x by f34, centred on the table; compare 0/34), hard cut at f35; beat 2 [17,35): Pax's eyes are open until f21 and shut from f22; Polly opens hers at f16"
+  },
+  {
+   "start": 35,
+   "end": 141,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with plates of salmon, rice and greens on a round table in front of them",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 35,
+     "end": 54,
+     "text": "Pax chews with his eyes closed and a smile while Polly holds her fork over her plate and glances at him"
+    },
+    {
+     "start": 54,
+     "end": 70,
+     "text": "Polly spears a piece of salmon from her plate and reaches across to feed it to Pax, who takes it in his beak"
+    },
+    {
+     "start": 70,
+     "end": 78,
+     "text": "Polly pulls her fork back while Pax chews with his eyes closed"
+    },
+    {
+     "start": 78,
+     "end": 95,
+     "text": "Pax chews happily with his eyes closed and raises a flipper while Polly watches him, fork in flipper"
+    },
+    {
+     "start": 95,
+     "end": 106,
+     "text": "Polly smiles with her eyes closed, fork in flipper, while Pax keeps chewing with his eyes closed"
+    },
+    {
+     "start": 106,
+     "end": 110,
+     "text": "Polly lays her fork down on her plate"
+    },
+    {
+     "start": 110,
+     "end": 141,
+     "text": "Polly raises a flipper to her beak and giggles with her eyes closed while Pax opens his eyes and looks over at her"
+    }
+   ],
+   "props": [
+    "fork",
+    "plates of food",
+    "round table",
+    "wooden chairs"
+   ],
+   "prop_events": [
+    {
+     "prop": "fork",
+     "event": "puts_down",
+     "frame": 107,
+     "by": "polly"
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked (table-base patch matched at dx 0, dy 0, score 1.000 every 6th frame f35-137; motion on the table band y0.62-0.85: scale 1.0000, 0 px, except <=1.7 px at f71-83 while Polly's flipper crosses the band; compare 35/140: table and chair edges black). No overlay | verification pass 2 (verify_v10_report_v26): beat 4 [78,106): Polly's eyes are open f78-94 (she watches Pax); she closes them and smiles only from f95; camera locked (table-base patch dx 0 dy 0, raw diff <=0.02 every 3rd frame f35-140)"
+  },
+  {
+   "start": 141,
+   "end": 215,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with his plate of salmon, rice and greens on a round table in front of him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 141,
+     "end": 151,
+     "text": "Pax sits at the table with his fork over his plate, looking around with a little smile"
+    },
+    {
+     "start": 151,
+     "end": 195,
+     "text": "Pax piles salmon, rice and greens onto his fork, scooping bite after bite from the plate"
+    },
+    {
+     "start": 195,
+     "end": 199,
+     "text": "Pax lifts the heaped forkful up beside his head"
+    },
+    {
+     "start": 199,
+     "end": 215,
+     "text": "Pax holds the towering forkful up high with his eyes closed and a proud smile"
+    }
+   ],
+   "props": [
+    "fork",
+    "plate of food",
+    "round table",
+    "wooden chair"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked (table-leg and chair patches matched at dx 0, dy 0, score >= 0.885 every 5th frame f141-211; the low keep12 is Pax's arm and fork moving close up). A tiny rose shell emblem on the table leg is decoration. No overlay"
+  },
+  {
+   "start": 215,
+   "end": 269,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with her plate of food and a fork resting on it on a round table in front of her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 215,
+     "end": 229,
+     "text": "Polly sits at the table with her flippers pressed together under her beak, eyes closed and smiling"
+    },
+    {
+     "start": 229,
+     "end": 241,
+     "text": "Polly gets a heaped forkful of salmon and greens pushed into her beak by a flipper reaching in from the left"
+    },
+    {
+     "start": 241,
+     "end": 251,
+     "text": "Polly covers her stuffed beak with both flippers, her eyes wide open and her cheeks blushing"
+    },
+    {
+     "start": 251,
+     "end": 269,
+     "text": "Polly chews with her eyes squeezed shut, both flippers over her stuffed beak and her cheeks blushing"
+    }
+   ],
+   "props": [
+    "fork",
+    "plate of food",
+    "round table",
+    "wooden chair"
+   ],
+   "prop_events": [],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked (table-leg patch matched at dx 0, dy 0, score 1.000 every 4th frame f215-267; chair patch 0,0 except f235 when the fork covers it). Pax shows only as a flipper at the left edge f229-241, so he is not listed. No overlay | verification pass 2 (verify_v10_report_v26): beat 3 [241,269): Polly's eyes are wide open f233-250 while she covers her stuffed beak; they squeeze shut only from f251; camera locked (table-leg patch dx 0 dy 0 every 3rd frame); the flipper-only Pax correctly not listed"
+  },
+  {
+   "start": 269,
+   "end": 339,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with plates of salmon, rice and greens on a round table in front of them",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 269,
+     "end": 281,
+     "text": "Polly pushes the food into her beak with both flippers, blushing, while Pax watches with his fork in hand"
+    },
+    {
+     "start": 281,
+     "end": 296,
+     "text": "Polly chews hard with her eyes squeezed shut and her flippers at her beak while Pax watches"
+    },
+    {
+     "start": 296,
+     "end": 304,
+     "text": "Polly lowers her flippers and swallows with her eyes squeezed shut, crumbs around her beak"
+    },
+    {
+     "start": 304,
+     "end": 320,
+     "text": "Polly wipes her beak with a flipper while Pax watches her"
+    },
+    {
+     "start": 320,
+     "end": 339,
+     "text": "Pax closes his eyes and smiles while Polly smiles with her eyes closed, a flipper resting at her chest"
+    }
+   ],
+   "props": [
+    "fork",
+    "plates of food",
+    "round table",
+    "wooden chairs"
+   ],
+   "prop_events": [],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked (table-base patch matched at dx 0, dy 0, score 1.000 every 6th frame f269-335; motion on the table band y0.62-0.85: scale 1.0000, 0 px, cc 1.000; compare 269/338: table and chair edges black). Same set-up as [35,141). No overlay"
+  }
+ ]
+}

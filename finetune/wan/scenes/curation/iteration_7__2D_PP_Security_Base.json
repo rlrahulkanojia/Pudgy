@@ -1,0 +1,220 @@
+{
+ "skit": "iteration_7/293_videos/2D_PP_Security_Base.mp4",
+ "frames": 199,
+ "fps": 24.0,
+ "curated_by": "curator-v10-22",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "a black suit and tie",
+  "o2": "black sunglasses"
+ },
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a snowy yard in front of a round igloo house with an arched wooden door"
+  },
+  "s2": {
+   "kind": "set",
+   "desc": "a snowy village street lined with colourful shops and igloo houses"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 16,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "Pax in a suit and sunglasses steps out of the igloo doorway; camera locked f0-15 (sky band tx 0, cc 1.000), then a fast pan right starts at f16"
+  },
+  {
+   "start": 16,
+   "end": 20,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pan_right",
+   "notes": "fast pan right following Pax: sky band tx -9 at f16, -45 f17, -100 f18, -135 f19, settled at -144 from f20 (cc >= 0.96). 4 frames, so too_short ranks before camera_move"
+  },
+  {
+   "start": 20,
+   "end": 64,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the open wooden door and a round window behind them",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": [
+      "o1",
+      "o2"
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "left",
+     "presence": "enters",
+     "enters_at": 39,
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 20,
+     "end": 39,
+     "text": "Pax stands guard beside the igloo doorway in his suit and sunglasses, facing ahead with a stern frown"
+    },
+    {
+     "start": 39,
+     "end": 54,
+     "text": "Pax presses a flipper to the coiled earpiece at his ear while Polly walks into the doorway behind him from inside"
+    },
+    {
+     "start": 54,
+     "end": 64,
+     "text": "Polly stops in the doorway holding a red purse and smiles while Pax lowers his flipper and keeps standing guard"
+    }
+   ],
+   "props": [
+    "earpiece",
+    "red purse"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "enters",
+   "notes": "camera locked f20-63 (motion on the sky band y0.00-0.25 vs f24: scale 1.0000, 0 px, cc 1.000 every 4 frames; compare 20/63: igloo edges black). Polly comes into the doorway from the left at f39. Top third (sky) and bottom fifth (snow) clean: no overlay | verification pass 2 (verify_v10_report_v21): travel: Polly comes into view in the doorway at f39 (presence enters), so travel is 'enters', not 'none'"
+  },
+  {
+   "start": 64,
+   "end": 86,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the curved igloo wall and a round window behind him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [
+      "o2"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 64,
+     "end": 74,
+     "text": "Pax stands in his suit and sunglasses with his flippers at his sides, frowning more and more sternly"
+    },
+    {
+     "start": 74,
+     "end": 79,
+     "text": "Pax's suit bursts apart and its torn pieces fly off him in dark streaks"
+    },
+    {
+     "start": 79,
+     "end": 86,
+     "text": "Pax stands bare-chested in his sunglasses with a muscular chest and abs, his flippers held out from his sides"
+    }
+   ],
+   "props": [
+    "earpiece"
+   ],
+   "prop_events": [],
+   "effects": [
+    "motion lines"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f64-85 (motion on the wall band x0.00-0.20 y0.00-0.30 vs f64: scale 1.0000, 0 px, cc 1.000 every frame). The torn-suit smears f74-79 are a character-attached cartoon effect, not a whole-picture effect. Pax is drawn with a gag muscular body from f78 (same 2D style, same Pax head and sunglasses): kept and described; flagged to the lead as a judgement call. No overlay. Suit worn f64-73 and torn off f74-79 (10 and 12 frames each side), so per the mid-shot outfit ruling it is left off outfit and the beats say when it goes; sunglasses (o2) stay on the whole span"
+  },
+  {
+   "start": 86,
+   "end": 137,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pan_right",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a pale teal ice path behind them",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [
+      "o2"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 86,
+     "end": 121,
+     "text": "Polly and Pax walk side by side to the right, Polly holding a red purse and a bare-chested, muscular Pax swinging his flippers"
+    },
+    {
+     "start": 121,
+     "end": 137,
+     "text": "Polly walks on with her eyes closed and a content smile while Pax strides beside her in his sunglasses"
+    }
+   ],
+   "props": [
+    "red purse",
+    "earpiece"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "tracking shot: the characters walk in place while the street, its shops and the ground lines scroll left the whole shot (building band y0.30-0.45 tx -76 by f90 vs f86, cc 1.000; f86 vs f136 shows a different stretch of street). Pax is bare-chested with the gag muscular body. No overlay, no lead depiction in the blurred background | verification pass 2 (verify_v10_report_v21): beat 1: Pax is bare-chested with the gag muscular body (abs, pecs) for the whole span; the beat only says 'muscular flippers', and gives no walking direction (they walk to the right, the street slides left)"
+  },
+  {
+   "start": 137,
+   "end": 199,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "bedroom: Pax in a sleep mask lies against the pillows hugging a small Polly plush (rose penguin with Polly's tuft) for the whole shot, f137-198, while Polly sits beside him with a jar of face cream; a pull-back starts near the end (about f180). lead_copy ranks before camera_move"
+  }
+ ]
+}

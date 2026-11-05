@@ -1,0 +1,236 @@
+{
+ "skit": "iteration_7/293_videos/PP-RoadTrip-Base.mp4",
+ "frames": 231,
+ "fps": 24.0,
+ "curated_by": "curator-v10-05",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "headphones and a rose polka-dot sleep mask"
+ },
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a snowy field with pine trees under a sky with soft clouds"
+  },
+  "s2": {
+   "kind": "set",
+   "desc": "the driver's seat of an open-top car in a snowy landscape with pine trees"
+  },
+  "s3": {
+   "kind": "set",
+   "desc": "the bed inside a cosy camper with a curved peach ceiling and a small skylight"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 40,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with an open-top car in the foreground and a mint suitcase on its back seat",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 25,
+       "screen": "center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 40,
+     "text": "Polly waddles to the right toward the car, hugging a folded blanket piled high with snacks, a tumbler, a game console and toy figurines"
+    }
+   ],
+   "props": [
+    "folded blanket",
+    "snack bag",
+    "tumbler",
+    "game console",
+    "penguin figurines",
+    "car",
+    "suitcase"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "snack bag label"
+   ],
+   "travel": "moves_within",
+   "notes": "steady slow push-in through the whole shot: ECC on the car band (y 0.75-1.0) scale 1.001 at f2 rising evenly to 1.024 at f38 with a drift to -14 px x, -24 px y, cc >= 0.99; compare 0/39 car edges doubled. The two figurines on the pile (a yellow penguin in sunglasses with a flower lei, a black-and-white penguin in a rose dress) are neither lead: props. Snack bag brand is an invented parody name, not a real brand. Brand check (curator ruling): the snack bag's name is an invented Pudgy-world parody, the game console has no logo, and the figurines are loose props in the scene, not merchandise shown as a product: no ad_merch"
+  },
+  {
+   "start": 40,
+   "end": 59,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "19 locked frames (ECC on the seat band scale 1.0000, 0 px): Pax in the driver's seat seen from behind, tapping the map on the dashboard screen"
+  },
+  {
+   "start": 59,
+   "end": 68,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pan_left",
+   "notes": "9-frame pan f59-67 (seat band tx +2, +11, +25, +45, +68, +88, +103, +111, +113 px, locked from f68) while Pax turns to face forward. Also camera_move"
+  },
+  {
+   "start": 68,
+   "end": 86,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "18 locked frames (seat band scale 1.0002, 2 px constant vs f66): Pax sits facing forward in the driver's seat, blinking. The sky band reads low cc here because the clouds drift; not used"
+  },
+  {
+   "start": 86,
+   "end": 163,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with a fish-print blanket, a shelf of snacks and a game console above her, a television and a starry tumbler on the nightstand",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 86,
+     "end": 96,
+     "text": "Polly sits up in bed with the sleep mask pushed up on her forehead, looking ahead with wide eyes"
+    },
+    {
+     "start": 96,
+     "end": 126,
+     "text": "Polly lies back on the pillow under the blanket with her eyes closed, yawning"
+    },
+    {
+     "start": 126,
+     "end": 146,
+     "text": "Polly pulls the sleep mask down over her eyes and settles into the pillow with a flipper behind her head"
+    },
+    {
+     "start": 146,
+     "end": 163,
+     "text": "Polly holds up a remote control with a small smile, the mask still over her eyes"
+    }
+   ],
+   "props": [
+    "fish-print blanket",
+    "pillow",
+    "remote control",
+    "snack bag",
+    "game console",
+    "television",
+    "tumbler",
+    "penguin figurines"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "snack bag label"
+   ],
+   "travel": "none",
+   "notes": "camera locked f86-162: ECC on the ceiling band (y 0-0.2) scale 1.0000, 0 px, cc 1.000 at every 4th frame (the bottom band moves 3-5 px only because the blanket is in it). Figurines: a yellow penguin in sunglasses by the pillow and a black-and-white penguin in a rose dress on the nightstand, neither a lead (props). TV picture shows a disco ball, no lead. The camper's window shutter starts down at f163. Brand check (curator ruling): the snack bag's name is an invented Pudgy-world parody, the game console has no logo, and the figurines are loose props in the scene, not merchandise shown as a product: no ad_merch"
+  },
+  {
+   "start": 163,
+   "end": 182,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "transition",
+   "camera": "static",
+   "notes": "19 frames: a slatted grey shutter slides down from the top edge over the whole picture f163-181 (dark rows 6 -> 524 of 1920), cut at f182. It is the camper window's roller shutter (the wide shot f212+ shows it closed), used as a wipe; also too_short"
+  },
+  {
+   "start": 182,
+   "end": 212,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a map screen and a gear stick on the dashboard",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 182,
+     "end": 212,
+     "text": "Pax sits facing forward in the driver's seat, a flipper by the dashboard, one eye narrowed in a doubtful look, blinking now and then"
+    }
+   ],
+   "props": [
+    "car",
+    "dashboard map screen",
+    "gear stick"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f182-211: ECC on the seat band (y 0.75-1.0) and the dashboard band (y 0.45-0.7, x 0.55-1.0) scale 1.0000, 0 px, cc 1.000; compare 182/211 only 214 changed edge px (Pax's eyes). No caption or watermark | verification pass 2 (verify_v10_report_v02): beat: Pax does not glance from side to side; his pupils stay put the whole shot. He keeps one eye narrowed in a doubtful look and blinks at f188 and f196; locked confirmed (seat, dashboard and tree bands rawdiff <=0.03; scenery does not move)"
+  },
+  {
+   "start": 212,
+   "end": 231,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "19 frames to the end: wide view of the open-top car towing a round camper across the snow, the camper window's shutter closing f214-220; Pax tiny in the car"
+  }
+ ]
+}

@@ -1,0 +1,169 @@
+{
+ "skit": "iteration_7/293_videos/2D_PP_SleepFight_Base.mp4",
+ "frames": 170,
+ "fps": 24.0,
+ "curated_by": "curator-v10-17",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a bedroom drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 88,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a yellow double bed with duck-head bedposts between two nightstands with rose lampshades",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 8,
+     "text": "Pax waves both flippers and talks with a frown while Polly glares at him with a flipper on her hip"
+    },
+    {
+     "start": 8,
+     "end": 20,
+     "text": "Pax rubs his chin with a flipper and frowns while Polly keeps glaring at him, flipper on her hip"
+    },
+    {
+     "start": 20,
+     "end": 30,
+     "text": "Polly presses a flipper to her chest and frowns while Pax looks over at her"
+    },
+    {
+     "start": 30,
+     "end": 38,
+     "text": "Polly holds a flipper up as she talks while Pax watches her with his flippers lowered"
+    },
+    {
+     "start": 38,
+     "end": 76,
+     "text": "Pax folds his flippers across his chest, shutting his eyes now and then, while Polly swings a flipper out wide as she talks"
+    },
+    {
+     "start": 76,
+     "end": 83,
+     "text": "Pax and Polly drop their flippers to their sides and stare straight ahead with wide eyes"
+    },
+    {
+     "start": 83,
+     "end": 88,
+     "text": "Pax and Polly duck down under the blanket and pull it up over their heads"
+    }
+   ],
+   "props": [
+    "bed",
+    "blanket",
+    "pillows",
+    "nightstands",
+    "table lamps"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "steady push-in with a slight drift through the whole shot: ECC on the bed-frame band (y 0.55-0.80) ~1% scale per 4 frames in every sub-range f0-86, slowing near the end; compare 0/87 shows the bed and nightstands much larger and doubled. Both leads fully under the blanket f85-87 only. Lamp bases are fish-shaped, bedposts end in duck heads: props, no penguin figures. No overlay in top third or bottom fifth"
+  },
+  {
+   "start": 88,
+   "end": 170,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a yellow headboard and duck-head bedposts behind them and a pale teal blanket over them",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 88,
+     "end": 91,
+     "text": "Pax and Polly lower the blanket from over their faces onto their chests"
+    },
+    {
+     "start": 91,
+     "end": 123,
+     "text": "Pax and Polly lie on their pillows facing away from each other, eyes open, blinking now and then"
+    },
+    {
+     "start": 123,
+     "end": 129,
+     "text": "Pax and Polly both shut their eyes for a moment on their pillows"
+    },
+    {
+     "start": 129,
+     "end": 153,
+     "text": "Pax and Polly open their eyes again and lie still, staring off in opposite directions"
+    },
+    {
+     "start": 153,
+     "end": 170,
+     "text": "Pax and Polly fall asleep with their eyes closed and their beaks dropping open"
+    }
+   ],
+   "props": [
+    "bed",
+    "blanket",
+    "pillows"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: ECC on the bed-frame band (y 0.72-0.90) scale 1.0000, 0 px, cc 1.000 at every step f94-166; compare 88/169 bed and headboard edges overlap exactly. Leads lie under the blanket with heads, faces and a flipper visible the whole span (not lead_hidden); only f88-89 has the blanket up to their eyes. Framing: the bed fills the width, the leads show only heads above the blanket, so medium wide is a judgement call. No overlay in top third or bottom fifth"
+  }
+ ]
+}

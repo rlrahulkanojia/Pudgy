@@ -1,0 +1,59 @@
+{
+ "skit": "iteration_7/293_videos/PP_Shared_Base.mov",
+ "frames": 143,
+ "fps": 24.0,
+ "curated_by": "curator-v10-06",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {"kind": "lead"},
+  "polly": {"kind": "lead"}
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {"kind": "flat", "desc": "a living room drawn on a plain pale grey background"}
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 49,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a long cream sofa with yellow shell-shaped armrests",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {"id": "polly", "screen": "left-center", "presence": "full", "outfit": []},
+    {"id": "pax", "screen": "right-center", "presence": "full", "outfit": []}
+   ],
+   "beats": [
+    {"start": 0, "end": 15, "text": "Polly sits on the sofa looking down at {ifin} in her flippers while Pax beside her looks down at his own phone"},
+    {"start": 15, "end": 31, "text": "Polly turns her head to look at Pax, holding her phone at her chest, while he keeps looking down at his phone"},
+    {"start": 31, "end": 49, "text": "Pax lowers his phone to his lap and turns his wide eyes toward Polly while she keeps looking at him"}
+   ],
+   "props": ["phone", "sofa"],
+   "prop_events": [
+    {"prop": "phone", "event": "uses", "frame": 0, "by": "polly", "is_ifin": true},
+    {"prop": "phone", "event": "uses", "frame": 0, "by": "pax", "is_ifin": true}
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked (motion on the sofa-base band y0.66-0.80: scale 1.0000, <=0.5 px, cc 1.000 f6-48; frame-to-frame diff on that band and on the left armrest 0.00-0.01 every frame). Both phones are iFins (pale grey backs, lenses, tuft on top); only their backs face the viewer, so no screen content is visible in this shot. Hard cut at f49. No overlay"
+  },
+  {
+   "start": 49,
+   "end": 143,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "push_in",
+   "notes": "Pax alone at the end of the sofa scrolling a chat on the iFin, screen facing the viewer the whole shot: a Polly avatar in the chat header and shared clips of Polly (in a bubble f52-60, at a table f96-108, more after) are visible throughout. Also a steady slow push-in for the whole shot (sofa band scale 1.011 at f57 -> 1.087 at f113, cc >= 0.94; frame diff ~0.5 every frame f50-142). Skit ends on this shot"
+  }
+ ]
+}

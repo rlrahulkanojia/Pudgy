@@ -1,0 +1,228 @@
+{
+ "skit": "iteration_7/293_videos/PP-IceTray-Base.mp4",
+ "frames": 301,
+ "fps": 24.0,
+ "curated_by": "curator-v10-02",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a kitchen drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 62,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a glass jug, an ice-cube tray and salt and pepper shakers on a bright cyan counter",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 28,
+     "text": "Polly stands at the counter pouring water from a glass jug into an ice-cube tray, moving the jug along it"
+    },
+    {
+     "start": 28,
+     "end": 38,
+     "text": "Polly blinks and sets the jug down on the counter beside her"
+    },
+    {
+     "start": 38,
+     "end": 46,
+     "text": "Polly pulls her flipper back and takes hold of the brimming tray with both flippers"
+    },
+    {
+     "start": 46,
+     "end": 62,
+     "text": "Polly lifts the full tray in front of her and holds it level, glancing down at it nervously"
+    }
+   ],
+   "props": [
+    "glass jug",
+    "ice-cube tray",
+    "salt and pepper shakers"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "locked (ECC on the shaker band x0-0.35: scale 1.000, <=1 px f0-60; compare 0/61 shaker and counter edges black). No overlay in the top third or bottom fifth"
+  },
+  {
+   "start": 62,
+   "end": 71,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "fridge alone, no lead (9 frames). Also no_lead"
+  },
+  {
+   "start": 71,
+   "end": 88,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "pull-back f71-87 from the fridge as Polly's back comes into the foreground (ECC on the wall band: locked to f70, moving from f71, locked again from f88). Also a camera_move"
+  },
+  {
+   "start": 88,
+   "end": 104,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "Polly seen from behind, large and cut off in the foreground, carrying the tray toward the distant fridge; 16 static frames"
+  },
+  {
+   "start": 104,
+   "end": 144,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_hidden",
+   "camera": "static",
+   "notes": "insert of the brimming ice tray held against Polly's belly while her feet waddle in place: her head is out of the picture the whole time (only the beak tip and the edge of one eye at the top), so she is not recognisable. The ground is plain, so a tracking camera cannot be ruled out either (compare 104/143 has no fixed background edge)"
+  },
+  {
+   "start": 144,
+   "end": 152,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "Polly's face, worried, looking down at the tray (8 frames)"
+  },
+  {
+   "start": 152,
+   "end": 168,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "hard cut (punch-in) to a closer view of Polly's worried face with a sweat drop (16 frames)"
+  },
+  {
+   "start": 168,
+   "end": 292,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a cream fridge and a round cream table",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 196,
+       "screen": "center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 168,
+     "end": 206,
+     "text": "Polly waddles slowly toward the fridge carrying a brimming ice tray, water dripping into puddles on the floor"
+    },
+    {
+     "start": 206,
+     "end": 222,
+     "text": "Polly stops beside the fridge and stretches a flipper up toward the freezer handle, holding the tray in the other"
+    },
+    {
+     "start": 222,
+     "end": 240,
+     "text": "Polly strains upward with her eyes squeezed shut while the tray drips water"
+    },
+    {
+     "start": 240,
+     "end": 253,
+     "text": "Polly opens her eyes, grips the freezer handle and pulls the door open"
+    },
+    {
+     "start": 253,
+     "end": 259,
+     "text": "Polly lifts the dripping tray toward the open freezer"
+    },
+    {
+     "start": 259,
+     "end": 275,
+     "text": "Polly, with her back turned, stretches up on her toes and slides the tray into the freezer"
+    },
+    {
+     "start": 275,
+     "end": 280,
+     "text": "Polly pushes the freezer door shut and turns to face forward"
+    },
+    {
+     "start": 280,
+     "end": 286,
+     "text": "Polly stands by the fridge with a flipper on its door, looking pleased"
+    },
+    {
+     "start": 286,
+     "end": 292,
+     "text": "Polly steps away with a closed-eyed smile, then slips on the wet floor with her flippers flung out"
+    }
+   ],
+   "props": [
+    "ice-cube tray",
+    "fridge",
+    "puddles",
+    "table",
+    "chairs"
+   ],
+   "prop_events": [],
+   "effects": [
+    "sweat drops"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "locked f168-291: compare 168/289 and 190/193 fridge edges black; pixel diff on the fridge's right side (y0.30-0.62, x0.85-1.0) vs f168 is under 0.02 grey levels at f192, f288, f291 (ECC on the fridge bands is unreliable here: too little texture, and Polly's flipper and the freezer door enter them). The wooden chairs at the table are hidden behind Polly until ~f204, so the view names only the table. A crash zoom starts at f292"
+  },
+  {
+   "start": 292,
+   "end": 301,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "push_in",
+   "notes": "crash zoom f292-296 onto Polly sprawled on the wet floor, then 4 static frames to the end. Also a camera_move"
+  }
+ ]
+}

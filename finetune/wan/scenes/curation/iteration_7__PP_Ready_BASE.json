@@ -1,0 +1,248 @@
+{
+ "skit": "iteration_7/293_videos/PP_Ready_BASE.mp4",
+ "frames": 379,
+ "fps": 24.0,
+ "curated_by": "curator-v10-22",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  },
+  "x1": {
+   "kind": "extra",
+   "desc": "a penguin skeleton"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a living room drawn on a plain pale grey background"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "a bathroom seen through an arched doorway, drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 82,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a cream armchair",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 16,
+     "text": "Pax sits in the cream armchair with a teal T-shirt draped over its arm, looking ahead"
+    },
+    {
+     "start": 16,
+     "end": 26,
+     "text": "Pax reaches over to the arm of the chair and picks up the T-shirt"
+    },
+    {
+     "start": 26,
+     "end": 42,
+     "text": "Pax holds the T-shirt up to his beak and sniffs it with a frown"
+    },
+    {
+     "start": 42,
+     "end": 56,
+     "text": "Pax lowers the shirt and bunches it up in his flippers"
+    },
+    {
+     "start": 56,
+     "end": 63,
+     "text": "Pax pulls the T-shirt down over his head"
+    },
+    {
+     "start": 63,
+     "end": 82,
+     "text": "Pax tugs the shirt straight and sits back in the armchair wearing it, an igloo print on its front"
+    }
+   ],
+   "props": [
+    "armchair",
+    "T-shirt"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f0-81 (compare 0/81: armchair edges black; the motion band crossed Pax and could not fit). The teal T-shirt goes on at f56-63, so it is not listed as an outfit (worn only the last 19 frames); the beats say when it goes on. Igloo print only, no lead depiction. No overlay"
+  },
+  {
+   "start": 82,
+   "end": 162,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "inserts with only Polly's flippers: the iFin music player f82-128 (song titles as screen text; album art of a peach penguin with a pearl necklace, then a close-up cartoon face, both lead-like depictions), then her makeup bag tipped out over a blue table f129-161 (hard cut at f129). No lead in either, one dropped run"
+  },
+  {
+   "start": 162,
+   "end": 273,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "mirror shots: f162-218 Polly tries on hats and outfits beside a tall oval mirror that shows her reflection the whole time; f219-272 (hard cut at f219) close-up of Polly drawing on eyeliner seen in the mirror, framed by its border with glare streaks on the glass (her reflection). Mirror reflection of a lead is lead_copy. profile flags at f176, f252, f253 and f263 are animation pops inside locked shots (mirror border edges black in compare 251/252 and 262/263)"
+  },
+  {
+   "start": 273,
+   "end": 343,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a cream toilet with a shell-shaped lid and a bathtub with a teal shower curtain",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 273,
+     "end": 286,
+     "text": "Polly holds up a red perfume bottle beside the toilet and sprays a puff toward her face with one eye shut"
+    },
+    {
+     "start": 286,
+     "end": 298,
+     "text": "Polly lifts the bottle beside her head and sprays it with her eyes closed, a rose puff floating above her"
+    },
+    {
+     "start": 298,
+     "end": 312,
+     "text": "Polly turns her back and sprays a puff of perfume out toward the bathtub"
+    },
+    {
+     "start": 312,
+     "end": 320,
+     "text": "Polly keeps the bottle held out with her back turned while a small green puff of gas rises at her feet"
+    },
+    {
+     "start": 320,
+     "end": 331,
+     "text": "Polly turns her head to the right in profile with her eye closed as the green puff fades, still holding the bottle out"
+    },
+    {
+     "start": 331,
+     "end": 343,
+     "text": "Polly opens her eye, aims the bottle downward and sprays a puff of perfume below it"
+    }
+   ],
+   "props": [
+    "perfume bottle",
+    "toilet",
+    "bathtub",
+    "shower curtain"
+   ],
+   "prop_events": [],
+   "effects": [
+    "green gas puff"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f273-342 (motion on the doorway and curtain band y0.25-0.45 x0.2-0.8 vs f273: scale 0.9999, 0 px, cc 1.000 every 5 frames; compare 273/342: doorway, toilet and curtain edges black). No mirror in view. Top and bottom bands hold only the doorway arch and its frame: no overlay | verification pass 2 (verify_v10_report_v17): camera locked (doorway-arch band pixel-identical f273-342); it is a doorway, not a mirror (room interior with toilet and tub, no glass or glare); no overlay; beat 3 (298-320) missed Polly spraying a puff toward the bathtub at f302-306; missing: a small green puff of gas rises between Polly's feet f312-326 (in-style gag effect); added as a beat and to effects; beat 4 (320-343): her eye is closed f3"
+  },
+  {
+   "start": 343,
+   "end": 379,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with thick cobwebs strung across the wall behind a cream armchair",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "x1",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 365,
+       "screen": "left"
+      }
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "enters",
+     "enters_at": 355,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 370,
+       "screen": "center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 343,
+     "end": 355,
+     "text": "{x1} sits slumped in the armchair with thick cobwebs strung behind it, not moving"
+    },
+    {
+     "start": 355,
+     "end": 360,
+     "text": "Polly walks in from the right as {x1} slides down out of the armchair"
+    },
+    {
+     "start": 360,
+     "end": 379,
+     "text": "Polly walks to the left beside {x1}, which shuffles along next to her toward the left edge"
+    }
+   ],
+   "props": [
+    "armchair",
+    "cobwebs"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "enters",
+   "notes": "camera locked f343-378 (motion on the web and chair band vs f343: scale 1.0000, 0 px, cc 1.000 to f352, then the leads cross the band; compare 343/378: cobweb and armchair edges black). Lead visible f355-378 (24 of 36 frames). The skeleton is the story's punchline for Pax having waited in the same armchair, but it is drawn as a plain cream skeleton with a round penguin skull, not recognisable as Pax: kept as an extra and flagged to the lead as a judgement call. No overlay | verification pass 2 (verify_v10_report_v17): camera locked (compare 343/378: cobweb and armchair edges black); no overlay; skeleton is a plain cream skeleton with a round skull and beak, no head tuft or lead colouring, so not recognisable as Pax: extra is acceptable; beat 3: Polly does not walk off; she walks left and is still at left-center at f378 (only the skeleton reaches the left edge); beat 1 and view: the cobwebs are strung across the"
+  }
+ ]
+}

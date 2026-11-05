@@ -1,0 +1,480 @@
+{
+ "skit": "iteration_7/293_videos/PP_Coexisting_v14_9x16 base.mp4",
+ "frames": 428,
+ "fps": 24.0,
+ "curated_by": "curator-v10-05",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "an igloo kitchen with pale ice-brick walls"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "a living room with a cream sofa drawn on a plain pale grey background"
+  },
+  "s3": {
+   "kind": "flat",
+   "desc": "a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 61,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a soapy sink in the counter in front of them and a cream fridge and a utensil rack behind",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "exits",
+     "exits_at": 57,
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 20,
+     "text": "Polly sips from a penguin-face mug with her eyes closed while Pax scrubs a plate with a sponge at the soapy sink"
+    },
+    {
+     "start": 20,
+     "end": 44,
+     "text": "Polly opens her eyes, sets the mug down on the counter and watches Pax, who keeps scrubbing the plate"
+    },
+    {
+     "start": 44,
+     "end": 61,
+     "text": "Polly turns and waddles off to the right, leaving the mug on the counter, while Pax keeps scrubbing"
+    }
+   ],
+   "props": [
+    "plate",
+    "sponge",
+    "penguin-face mug",
+    "sink",
+    "fridge"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "exits",
+   "notes": "camera locked f0-60: ECC on the wall band (y 0.05-0.35) scale 1.0000, <= 0.2 px, cc 0.994-0.998; the cream fridge's top edge stays at row 710 (full res) on every 5th frame; compare 0/60 wall and fridge edges black. Polly is clipped by the right edge f0-2, fully in from f3, gone from f57. The mug's face is a generic orange penguin, neither lead: prop. No caption or watermark | verification pass 2 (verify_v10_report_v01): beat 1 [0,26): Polly's eyes open at f20 and she lowers the mug from the beak f20-25; 'with her eyes closed' is false for f20-25. Beat boundary moved to f20"
+  },
+  {
+   "start": 61,
+   "end": 126,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a soapy sink in the counter in front of them and a cream fridge and a utensil rack behind",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 61,
+     "end": 71,
+     "text": "Pax holds a wet plate over the soapy sink while Polly waits beside him holding a yellow towel"
+    },
+    {
+     "start": 71,
+     "end": 86,
+     "text": "Pax hands the plate to Polly, who takes it in her towel"
+    },
+    {
+     "start": 86,
+     "end": 96,
+     "text": "Pax picks up the penguin-face mug and a sponge while Polly starts drying the plate"
+    },
+    {
+     "start": 96,
+     "end": 126,
+     "text": "Pax scrubs the mug with the sponge, beaming with his eyes shut, while Polly dries the plate with her eyes closed"
+    }
+   ],
+   "props": [
+    "plate",
+    "yellow towel",
+    "sponge",
+    "penguin-face mug",
+    "sink",
+    "fridge"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "steady slow push-in through the whole shot: the fridge's top edge climbs evenly from row 636 (f65) to 475 (f125) at full res, ~2.6 px per frame; ECC on the wall band scale 1.010 at f65 -> 1.075 at f109 with ty -14 -> -180 px; compare 61/125 only 553 static edge px. No static run"
+  },
+  {
+   "start": 126,
+   "end": 199,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with the soft-focus corner of a yellow armchair in the foreground",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 126,
+     "end": 144,
+     "text": "Polly stands by the sofa hugging a fish-print cushion while Pax sits on the sofa holding a bag of chips"
+    },
+    {
+     "start": 144,
+     "end": 158,
+     "text": "Polly turns and props the cushion up on the sofa behind her while Pax munches from his bag"
+    },
+    {
+     "start": 158,
+     "end": 170,
+     "text": "Polly turns back and picks up the mop leaning beside her"
+    },
+    {
+     "start": 170,
+     "end": 199,
+     "text": "Polly mops the floor in front of the sofa while Pax sits munching chips and watching her"
+    }
+   ],
+   "props": [
+    "fish-print cushion",
+    "bag of chips",
+    "mop",
+    "sofa",
+    "armchair"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "snack bag label"
+   ],
+   "travel": "none",
+   "notes": "camera locked f126-198: ECC on the sofa-arm band (y 0.38-0.68, x 0.8-1.0) scale 1.0000, <= 0.2 px, cc 1.000 at every 4th frame; the armchair band stays within 1.6 px (the mop head enters it). Chips bag label is a generic made-up design, not a real brand. Polly has her back turned f144-156 but stays fully visible"
+  },
+  {
+   "start": 199,
+   "end": 274,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with the soft-focus corner of a yellow armchair in the foreground",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 199,
+     "end": 211,
+     "text": "Pax stands with his back turned, plumping the cushion on the sofa while Polly mops the floor beside him"
+    },
+    {
+     "start": 211,
+     "end": 229,
+     "text": "Pax turns around with a squinting grin and gestures toward the cushion while Polly keeps mopping and looks at him"
+    },
+    {
+     "start": 229,
+     "end": 241,
+     "text": "Polly stands the mop upright and closes her eyes with a smile while Pax watches her"
+    },
+    {
+     "start": 241,
+     "end": 274,
+     "text": "Pax and Polly chat face to face, waving their flippers, as Polly holds the upright mop"
+    }
+   ],
+   "props": [
+    "fish-print cushion",
+    "mop",
+    "sofa",
+    "armchair"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "slow push-in through the whole shot: ECC on the armchair band (y 0.75-1.0, x 0-0.3) scale 1.023 at f215 rising to 1.076 at f271 vs f199 (rows at cc 1.000), compare 199/273 sofa edges doubled. No static run"
+  },
+  {
+   "start": 274,
+   "end": 333,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with an old fridge dripping with fresh cream paint at the top and two paint cans at its foot",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "exits",
+     "exits_at": 322,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 298,
+       "screen": "right-center"
+      }
+     ]
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 274,
+     "end": 292,
+     "text": "Polly waddles across holding a phone up in both flippers while Pax brushes cream paint onto the fridge"
+    },
+    {
+     "start": 292,
+     "end": 322,
+     "text": "Polly walks off to the right still looking at her phone while Pax keeps painting the fridge"
+    },
+    {
+     "start": 322,
+     "end": 333,
+     "text": "Pax keeps brushing paint onto the side of the fridge on his own"
+    }
+   ],
+   "props": [
+    "phone",
+    "paintbrush",
+    "paint cans",
+    "fridge"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 274,
+     "by": "polly",
+     "is_ifin": "unsure"
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "exits",
+   "notes": "plain ground, so judged by the fridge: its colour mask keeps the same box (x 310-680, y 717-1222 at full res) on every 6th frame f274-328; compare 274/332 fridge and paint-can edges black. ECC on a fridge band drifts only because Pax's fresh paint changes its texture. Phone has a pale grey back and a lens cluster but no tuft is visible at full res: written as a phone (is_ifin unsure). Polly is cut by the right edge from ~f310 and gone from f322"
+  },
+  {
+   "start": 333,
+   "end": 370,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with a freshly painted cream fridge with a fish emblem and two paint cans in front of it",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 333,
+     "end": 349,
+     "text": "Pax waves a flipper with a paintbrush in the other while Polly brushes paint onto the fridge, a dab of cream paint on her head"
+    },
+    {
+     "start": 349,
+     "end": 370,
+     "text": "Pax lowers his flipper and stares as a sweat drop appears beside his head while Polly keeps painting"
+    }
+   ],
+   "props": [
+    "paintbrush",
+    "paint cans",
+    "fridge"
+   ],
+   "prop_events": [],
+   "effects": [
+    "sweat drops"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "plain ground, judged by the cream fridge: its top and bottom edges stay at rows 758 and 1330 (full res) on every frame f333-369; the push-in starts at f370"
+  },
+  {
+   "start": 370,
+   "end": 383,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "push_in",
+   "notes": "13-frame push-in f370-382: the fridge's top edge climbs 758 -> 674 and its bottom 1330 -> 1373 (full res), ~6 px per frame, locked again from f383. Also camera_move"
+  },
+  {
+   "start": 383,
+   "end": 428,
+   "boundary": "camera",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with a freshly painted cream fridge with a fish emblem and two paint cans in front of it",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 383,
+     "end": 395,
+     "text": "Polly turns to Pax holding her brush at her chest while Pax stands beside her with a sweat drop by his head"
+    },
+    {
+     "start": 395,
+     "end": 404,
+     "text": "Polly waves a flipper as she talks to Pax, her brush in the other flipper"
+    },
+    {
+     "start": 404,
+     "end": 416,
+     "text": "Polly rests a flipper on her chest and looks at Pax while sweat drops fly off him"
+    },
+    {
+     "start": 416,
+     "end": 428,
+     "text": "Pax and Polly both close their eyes with gentle smiles, still holding their brushes"
+    }
+   ],
+   "props": [
+    "paintbrush",
+    "paint cans",
+    "fridge"
+   ],
+   "prop_events": [],
+   "effects": [
+    "sweat drops"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "plain ground, judged by the cream fridge: top edge at row 674 and bottom at 1373-1374 (full res) on every 3rd frame f383-426. Skit ends on this shot. No caption or watermark"
+  }
+ ]
+}

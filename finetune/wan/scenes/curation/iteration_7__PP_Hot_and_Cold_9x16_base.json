@@ -1,0 +1,32 @@
+{
+ "skit": "iteration_7/293_videos/PP_Hot_and_Cold_9x16_base.mov",
+ "frames": 165,
+ "fps": 24.0,
+ "curated_by": "curator-v10-17",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {},
+ "spans": [
+  {
+   "start": 0,
+   "end": 165,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "off_style",
+   "camera": "static",
+   "overlays": [
+    "meme caption"
+   ],
+   "notes": "OLD_DESIGN: yellow feet, paler rose and periwinkle bodies, on a plain pale grey background, in every shot. Also graphic_overlay: a white meme caption sits in the top third on every frame f0-164 (three different captions, switching at f50 and f104). Shots: Polly shivering wrapped in a white blanket f0-49 (hard cut at f50), Pax waving and fanning himself f50-103, Polly runs in and hugs Pax f102-164 with a heart above them. Nothing keepable, so one span | Client 2026-11-05: the older yellow-foot design is removed from training (Q2); a clean copy would not bring this back."
+  }
+ ]
+}

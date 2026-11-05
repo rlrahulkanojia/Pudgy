@@ -1,0 +1,425 @@
+{
+ "skit": "iteration_7/293_videos/PP_Bubble_v10 9x16 Base.mp4",
+ "frames": 356,
+ "fps": 24.0,
+ "curated_by": "curator-v10-30",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  },
+  "x1": {
+   "kind": "extra",
+   "desc": "a black-and-white penguin in an orange bobble hat and a rose hoodie"
+  },
+  "x2": {
+   "kind": "extra",
+   "desc": "a grey penguin in a grey bobble hat and navy overalls"
+  },
+  "x3": {
+   "kind": "extra",
+   "desc": "a grey penguin in a navy captain's hat and a yellow top"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a snowy hillside with pine trees under a cloudy sky"
+  },
+  "s2": {
+   "kind": "set",
+   "desc": "a snowy roadside with a bus stop"
+  },
+  "s3": {
+   "kind": "set",
+   "desc": "a wide snowy field under a cloudy sky"
+  },
+  "s4": {
+   "kind": "set",
+   "desc": "an igloo living room with ice-brick walls and a round window"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 126,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a flat block of ice in the snow",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 66,
+       "screen": "right-center"
+      }
+     ]
+    },
+    {
+     "id": "x1",
+     "screen": "left",
+     "presence": "enters",
+     "enters_at": 14,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 52,
+       "screen": "left-center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 14,
+     "text": "Pax sits alone on a block of ice inside a dashed see-through bubble, nibbling a rice ball"
+    },
+    {
+     "start": 14,
+     "end": 48,
+     "text": "{x1} walks in from the left holding a fish snack while Pax keeps nibbling inside his bubble"
+    },
+    {
+     "start": 48,
+     "end": 60,
+     "text": "{x1} plops down on the ice right beside Pax, pressing up against his bubble"
+    },
+    {
+     "start": 60,
+     "end": 70,
+     "text": "Pax leans sideways and scoots away to the right, his bubble sliding with him"
+    },
+    {
+     "start": 70,
+     "end": 126,
+     "text": "Pax sits in his bubble a little apart from {x1}, both nibbling their snacks"
+    }
+   ],
+   "props": [
+    "rice ball",
+    "fish snack",
+    "block of ice"
+   ],
+   "prop_events": [],
+   "effects": [
+    "a dashed bubble around Pax"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: ECC on the pine-tree band (y 0.15-0.45, x 0.75-1.0) scale 1.0000, <= 0.8 px, cc >= 0.999 every 8th frame; compare 0/125 trees, ice block and snow edges black. Clouds drift (in-world). The dashed circle around Pax is his personal-space bubble, a cartoon element that travels with him and later stretches around Polly; judged an in-style effect attached to the character, not an overlay (no text, UI or caption), and described in every beat. No overlay, no lead depiction | verification pass 2 (verify_v10_report_v25): x1 enters at f14 (fish snack and hoodie at the left edge f14, face by f16), not f18, so beat 1 'Pax sits alone' is false f14-17. enters_at and the beat 1/2 boundary moved to f14; the dashed personal-space bubble holds as a character-attached effect, not a graphic_overlay: no text or icon, it travels with Pax, other penguins press against it and it stretches around Polly later; it is named in the b"
+  },
+  {
+   "start": 126,
+   "end": 199,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a round bus stop sign on a pole beside a grey sidewalk",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 160,
+       "screen": "right-center"
+      }
+     ]
+    },
+    {
+     "id": "x2",
+     "screen": "left",
+     "presence": "enters",
+     "enters_at": 127,
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 126,
+     "end": 140,
+     "text": "Pax waits at the bus stop inside his dashed bubble while {x2} shuffles in from the left looking at a phone"
+    },
+    {
+     "start": 140,
+     "end": 150,
+     "text": "{x2} sidles up close against Pax's bubble while Pax glances sideways at him"
+    },
+    {
+     "start": 150,
+     "end": 158,
+     "text": "Pax squeezes his eyes shut as {x2} presses up against his bubble"
+    },
+    {
+     "start": 158,
+     "end": 170,
+     "text": "Pax steps away to the right with his eyes still shut, his bubble moving with him"
+    },
+    {
+     "start": 170,
+     "end": 199,
+     "text": "Pax stands still in his bubble, glancing sideways at {x2}, who keeps looking at the phone"
+    }
+   ],
+   "props": [
+    "phone",
+    "bus stop sign"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 131,
+     "by": "x2",
+     "is_ifin": "unsure"
+    }
+   ],
+   "effects": [
+    "a dashed bubble around Pax"
+   ],
+   "overlays": [],
+   "in_world_text": [
+    "bus stop sign"
+   ],
+   "travel": "none",
+   "notes": "camera locked: ECC on the bus-stop-sign band (y 0.25-0.40, x 0.60-0.95) scale 1.0000, <= 1.6 px, cc >= 0.993 every 6th frame; compare 126/198 sign, pole and sidewalk edges black. Clouds drift. The sign shows a bus pictogram, no words. x2's phone has a grey back with lenses; no tuft seen, so not called the iFin | verification pass 2 (verify_v10_report_v25): beat 2 [140,158) says Pax squeezes his eyes shut; his eyes are open f140-149 and shut f150-167 (full-res f140-194), so the squeeze also runs into beat 3. Split beat 2 at f150 and said in beat 3 that his eyes stay shut; locked: sign region phase correlation 0 px every 8th frame, ECC on the sign band <=1.6 px cc >= 0.993"
+  },
+  {
+   "start": 199,
+   "end": 259,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "exits",
+     "exits_at": 255,
+     "outfit": []
+    },
+    {
+     "id": "x3",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 199,
+     "end": 216,
+     "text": "{x3} smiles and waves at Pax while Pax waddles to the right toward him inside his dashed bubble"
+    },
+    {
+     "start": 216,
+     "end": 236,
+     "text": "Pax waddles to the right inside his bubble and passes in front of {x3}"
+    },
+    {
+     "start": 236,
+     "end": 255,
+     "text": "Pax keeps waddling away to the right and walks out of view while {x3} watches"
+    },
+    {
+     "start": 255,
+     "end": 259,
+     "text": "{x3} stands alone in the snow as the edge of the bubble slips away at the right"
+    }
+   ],
+   "props": [],
+   "prop_events": [],
+   "effects": [
+    "a dashed bubble around Pax"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "exits",
+   "notes": "camera locked: compare 199/258 horizon line and x3's shadow black (snow band too plain for motion; its fit only follows Pax). Clouds drift. Pax's body leaves the picture at f255 (last sliver f254); the bubble outline stays at the right edge to f258. Pax visible 56 of 60 frames | verification pass 2 (verify_v10_report_v25): beat 1 [199,216) says Pax stands still; he waddles to the right from the first frame (body centre x 0.15 at f199, 0.26 f208, 0.35 f214, steady steps on a step-1 strip f197-217) while x3 stays put. Reworded beat 1; locked: compare 199/258 horizon line and x3's shadow black"
+  },
+  {
+   "start": 259,
+   "end": 310,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s4",
+   "view": "with a cream couch and a wall shelf of small penguin figurines",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 277,
+       "screen": "left-center"
+      }
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 259,
+     "end": 267,
+     "text": "Pax stands inside his dashed bubble in front of the couch, glancing at Polly as she looks at {ifin}"
+    },
+    {
+     "start": 267,
+     "end": 274,
+     "text": "Pax crouches with his flippers out and springs up toward the couch"
+    },
+    {
+     "start": 274,
+     "end": 284,
+     "text": "Pax lands on the couch seat beside Polly and settles inside his bubble"
+    },
+    {
+     "start": 284,
+     "end": 298,
+     "text": "Pax sits beside Polly looking over at her while she keeps tapping at her phone"
+    },
+    {
+     "start": 298,
+     "end": 310,
+     "text": "Pax reaches a flipper out and pulls Polly in against him, his bubble stretching over her"
+    }
+   ],
+   "props": [
+    "couch",
+    "figurines on a shelf"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 259,
+     "by": "polly",
+     "is_ifin": true
+    }
+   ],
+   "effects": [
+    "a dashed bubble around Pax"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f259-309: ECC on the round-window band (y 0.40-0.55, x 0-0.12) and the shelf band (y 0.30-0.45, x 0.6-1.0) scale 1.0000, <= 1 px, cc 1.000 to f301/f309. Polly's phone checked at full res f290/f330: pale grey back, lens block, little tuft on top = iFin. Shelf figurines (a black-and-white penguin in sunglasses with a medal, a yellow-haired penguin in glasses) are neither lead: props, as in other curators' figurine rulings. No overlay"
+  },
+  {
+   "start": 310,
+   "end": 317,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "other",
+   "notes": "7-frame camera jolt and slide as Polly is pulled into the bubble: window band tx +19.6 px at f311, back to +4.4 at f312, then sliding to +24.3 px at f317, constant after (cc 1.000)"
+  },
+  {
+   "start": 317,
+   "end": 356,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s4",
+   "view": "with a cream couch and a wall shelf of small penguin figurines",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 317,
+     "end": 331,
+     "text": "Pax sits squeezed against Polly inside the dashed bubble with blush on his cheeks while Polly holds {ifin}, her beak open"
+    },
+    {
+     "start": 331,
+     "end": 343,
+     "text": "Polly leans her cheek against Pax and starts to blush while the bubble around them widens to fit them both"
+    },
+    {
+     "start": 343,
+     "end": 356,
+     "text": "Pax closes his eyes with a blushing smile as Polly cuddles against him, still holding her phone"
+    }
+   ],
+   "props": [
+    "couch",
+    "figurines on a shelf"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 317,
+     "by": "polly",
+     "is_ifin": true
+    }
+   ],
+   "effects": [
+    "a dashed bubble around Pax and Polly",
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f317-355: ECC on the round-window band vs f300 constant at +24.3 px / scale 1.0000, cc 1.000 every frame f317-323 and every 6th to f355 (so locked after the f310-316 slide); compare 317/355 window and couch edges black. No overlay | verification pass 2 (verify_v10_report_v25): beat 1 [317,331) says both have blush on their cheeks; only Pax blushes there. Polly has no blush marks until ~f337 and has her beak open (full-res f317-355). Reworded beats 1 and 2; locked from f317: window band 1.0000 / 0 px cc 1.000 every 3rd frame to f353; the shelf band varies only where the widening bubble outline crosses it"
+  }
+ ]
+}

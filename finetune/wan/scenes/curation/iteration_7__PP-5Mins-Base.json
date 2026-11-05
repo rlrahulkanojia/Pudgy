@@ -1,0 +1,430 @@
+{
+ "skit": "iteration_7/293_videos/PP-5Mins-Base.mp4",
+ "frames": 369,
+ "fps": 24.0,
+ "curated_by": "curator-v10-25",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a living room drawn on a plain pale grey background"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "a dining corner drawn on a plain pale grey background"
+  },
+  "s3": {
+   "kind": "flat",
+   "desc": "a bathroom drawn on a plain pale grey background"
+  },
+  "s4": {
+   "kind": "flat",
+   "desc": "a bedroom drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 45,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a cream sofa and a yellow shell-shaped cushion",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 22,
+     "text": "Pax sits on the sofa holding {ifin} out in one flipper and glances at it, his other flipper raised to his chin"
+    },
+    {
+     "start": 22,
+     "end": 45,
+     "text": "Pax pulls the phone in and hugs it to his chest with both flippers, eyes closed and cheeks blushing"
+    }
+   ],
+   "props": [
+    "phone",
+    "sofa",
+    "cushion"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 0,
+     "by": "pax",
+     "is_ifin": true
+    }
+   ],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: raw pixel difference on the sofa arm and cushion (x 0-0.22, y 0.62-1.0) 0.00-0.15 vs f0 through f44; compare 0/44 keeps every sofa edge black (the ECC bottom band read -6 to -8 px at cc 0.93 because Pax's feet sit in it). Phone: pale grey back, three lenses, tuft on top = iFin; its back faces the viewer. Pax's beak and feet are a saturated amber-orange (RGB ~240,160,48), deeper than the current salmon but not the old yellow, and his blue is a little deeper; no OLD_DESIGN cue applies, so kept (flagged to the coordinator). No overlay in the top third or bottom fifth"
+  },
+  {
+   "start": 45,
+   "end": 82,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "insert of the wall clock above the sofa back, its hands sweeping round; no character"
+  },
+  {
+   "start": 82,
+   "end": 89,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "7-frame fast pull-back and tilt down from the clock to the wide view of Pax on the sofa (bottom-band raw diff 4.6 -> 26.9 -> 8.7, settled at f89)"
+  },
+  {
+   "start": 89,
+   "end": 90,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "verification pass 2 (verify_v10_report_v19): last frame of the f82 pull-back/tilt (raw diff to f90: 3.6 bottom band, 6.5 sofa arm; compare 89/90 doubles the sofa and clock); split off by verifier-v10-19"
+  },
+  {
+   "start": 90,
+   "end": 133,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a cream sofa, a yellow shell-shaped cushion and a round clock on the wall",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 90,
+     "end": 111,
+     "text": "Pax sits on the sofa turned toward the wall clock, holding {ifin} in both flippers and gazing up at the clock"
+    },
+    {
+     "start": 111,
+     "end": 118,
+     "text": "Pax turns to face forward and holds the phone up beside him in one flipper"
+    },
+    {
+     "start": 118,
+     "end": 133,
+     "text": "Pax blinks and looks at the phone in his raised flipper with a calm face"
+    }
+   ],
+   "props": [
+    "phone",
+    "sofa",
+    "cushion",
+    "wall clock"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 90,
+     "by": "pax",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "clock face"
+   ],
+   "travel": "none",
+   "notes": "camera locked from f89 (raw diff vs f89 0.00 on the bottom band f89-99 step 1); ECC on the sofa band (y 0.55-0.85, x 0.6-1.0) 0 px, cc 1.000 to f108 (later rows fail only because the phone enters the band); compare 90/132 keeps the sofa and clock edges black. Same phone as f0-44. No overlay | verification pass 2 (verify_v10_report_v19): boundary: f89 is still the last frame of the pull-back/tilt. Raw diff vs f90: bottom band 3.6 mean (5.9% of px changed), sofa-arm band 6.5 (8.8%); compare 89/90 shows doubled sofa and clock edges (906 static vs 11744 changed edge px). f90 and f91 are identical (0.00), motion vs f90 1.0000/0 px. The kept span must start at f90"
+  },
+  {
+   "start": 133,
+   "end": 170,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a round cream table and a wooden chair",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 133,
+     "end": 145,
+     "text": "Pax sits at a round table staring at {ifin} held up in one flipper while poking at his plate of food with a fork"
+    },
+    {
+     "start": 145,
+     "end": 157,
+     "text": "Pax lifts a forkful of food toward his beak and squeezes his eyes shut for a moment"
+    },
+    {
+     "start": 157,
+     "end": 170,
+     "text": "Pax holds the forkful in midair, his worried eyes back on the phone"
+    }
+   ],
+   "props": [
+    "phone",
+    "fork",
+    "plate of food",
+    "table",
+    "chair"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 133,
+     "by": "pax",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: raw pixel difference on the table and chair legs (x 0-0.4, y 0.75-1.0) 0.00 vs f133 every 3rd frame; compare 133/169 keeps the table, chair and plate edges black. Phone back faces the viewer. No overlay"
+  },
+  {
+   "start": 170,
+   "end": 206,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with a round sink, a tube of toothpaste and igloo-shaped taps in front of him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 170,
+     "end": 186,
+     "text": "Pax scrubs his beak with a toothbrush in one flipper while holding {ifin} up in the other, one eye on it"
+    },
+    {
+     "start": 186,
+     "end": 206,
+     "text": "Pax keeps brushing as a drip of foam runs from his beak, still peering at the phone with one eye"
+    }
+   ],
+   "props": [
+    "phone",
+    "toothbrush",
+    "toothpaste",
+    "sink"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 170,
+     "by": "pax",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: raw pixel difference on the sink and taps (y 0.85-1.0) and the top-left corner 0.00 vs f170 every 3rd frame; compare 170/205 keeps the sink, taps and toothpaste edges black. Pax is cut off by the sink at the belly. No overlay"
+  },
+  {
+   "start": 206,
+   "end": 246,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s4",
+   "view": "with a yellow headboard, white pillows and a duck-shaped knob on the bedpost",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 206,
+     "end": 213,
+     "text": "Pax lies in bed under the covers holding {ifin} close to his face, sobbing with streams of tears"
+    },
+    {
+     "start": 213,
+     "end": 222,
+     "text": "Pax squeezes his eyes shut as tears run down onto the pillow, the phone pressed to his cheek"
+    },
+    {
+     "start": 222,
+     "end": 246,
+     "text": "Pax holds the phone up above his face and stares at it with worried brows, tears still streaming"
+    }
+   ],
+   "props": [
+    "phone",
+    "bed",
+    "pillows",
+    "blanket"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 206,
+     "by": "pax",
+     "is_ifin": true
+    }
+   ],
+   "effects": [
+    "tears"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: raw pixel difference on the headboard corner (y 0-0.2) and the bedpost knob (x 0.55-1, y 0.8-1) 0.00 vs f206 every 3rd frame; compare 206/245 keeps the bed, pillow and bedpost edges black. Pax lies with his head and flippers above the covers (judged by drawn size, not visible height). The tear puddle on the pillow is an in-style tear effect. No overlay"
+  },
+  {
+   "start": 246,
+   "end": 281,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "high view of the bedroom in a pale washed palette, cobwebs everywhere: a skeleton lies in the bed holding the phone; no lead visible (the skeleton is not drawn in a lead's look)"
+  },
+  {
+   "start": 281,
+   "end": 308,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "transition",
+   "camera": "static",
+   "notes": "a wavy distortion ripples the bedroom from f281 (frame diff jumps 0.05 -> 0.88), then a cross-dissolve f297-307 into the sofa shot (diff to f320 15.1 -> 1.4); f308 is the first clean frame"
+  },
+  {
+   "start": 308,
+   "end": 369,
+   "boundary": "after_transition",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a cream sofa, a yellow shell-shaped cushion and a round clock on the wall",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 308,
+     "end": 320,
+     "text": "Pax sits on the sofa holding {ifin} up beside him and glances at it with worried brows"
+    },
+    {
+     "start": 320,
+     "end": 336,
+     "text": "Pax sits up straight and looks ahead with wide eyes, his free flipper lifted out from his side"
+    },
+    {
+     "start": 336,
+     "end": 342,
+     "text": "Pax closes his eyes with a small smile and drops his flipper back to his belly"
+    },
+    {
+     "start": 342,
+     "end": 369,
+     "text": "Pax slumps forward with his eyes closed and a drowsy, content smile, still holding the phone"
+    }
+   ],
+   "props": [
+    "phone",
+    "sofa",
+    "cushion",
+    "wall clock"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 308,
+     "by": "pax",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "clock face"
+   ],
+   "travel": "none",
+   "notes": "camera locked: raw pixel difference on the sofa arm (x 0-0.3, y 0.75-1.0) and the clock corner (x 0.7-1.0, y 0.1-0.3) 0.00-0.03 vs f308 every 3rd frame; compare 308/368 keeps the sofa and clock edges black. Same set-up as f89-132. No overlay | verification pass 2 (verify_v10_report_v19): beat 2: the flipper is not resting on his belly for most of f320-336; from f323 to f338 Pax holds his free flipper out from his side (motion on the left band loses cc there because the flipper enters it); beat 3: the flipper drops back to his belly at ~f340 as he closes his eyes (f338)"
+  }
+ ]
+}

@@ -1,0 +1,385 @@
+{
+ "skit": "iteration_7/293_videos/2D_PP_Experiment_Base.mp4",
+ "frames": 340,
+ "fps": 24.0,
+ "curated_by": "curator-v10-28",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "a red apron",
+  "o2": "a rose T-shirt with a heart on the front"
+ },
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a dining room drawn on a plain pale grey background"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "a clothes shop drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 28,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "pan_right",
+   "notes": "insert of a messy kitchen counter (spilled milk carton, bowls of green batter, open recipe book, cream can); the view slides sideways across it the whole shot; no character (also camera_move)"
+  },
+  {
+   "start": 28,
+   "end": 63,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a round cream table and a small wooden chair",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 28,
+     "end": 38,
+     "text": "Polly hugs a dark bowl of green goo to her apron with her eyes closed while Pax sits across the table watching her"
+    },
+    {
+     "start": 38,
+     "end": 48,
+     "text": "Polly leans across the table and sets the bowl down in front of Pax, who eyes it with sweat drops"
+    },
+    {
+     "start": 48,
+     "end": 63,
+     "text": "Polly sits back smiling with green smears on her face while Pax glances down at the bowl"
+    }
+   ],
+   "props": [
+    "bowl of green goo",
+    "spoon",
+    "round table",
+    "wooden chair"
+   ],
+   "prop_events": [],
+   "effects": [
+    "sweat drops"
+   ],
+   "overlays": [],
+   "in_world_text": [
+    "apron lettering"
+   ],
+   "travel": "none",
+   "notes": "motion on the table base and floor shadows (y 0.64-0.78) scale 1.0000, 0.5 px, cc 1.000 throughout; compare 28/62 table, chair and shadows black. Top third and bottom fifth plain ground, no overlay"
+  },
+  {
+   "start": 63,
+   "end": 95,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a round cream table and a small wooden chair",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 63,
+     "end": 70,
+     "text": "Pax sits at the table looking down at the bowl of green goo in front of him, blinking"
+    },
+    {
+     "start": 70,
+     "end": 83,
+     "text": "Pax raises a flipper to his beak and stares at the bowl with a wary look"
+    },
+    {
+     "start": 83,
+     "end": 95,
+     "text": "Pax blinks, lowers his flipper and frowns at the bowl as sweat drops appear on his head"
+    }
+   ],
+   "props": [
+    "bowl of green goo",
+    "spoon",
+    "round table",
+    "wooden chair"
+   ],
+   "prop_events": [],
+   "effects": [
+    "sweat drops"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "motion on the table and chair (y 0.60-0.95, x 0-0.35) scale 1.0000, 0 px, cc 1.000; compare 63/94 table and chair edges black. The bowl holds green goo with a fish skeleton and a purple tentacle. No overlay"
+  },
+  {
+   "start": 95,
+   "end": 116,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a round cream table in front of her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 95,
+     "end": 116,
+     "text": "Polly sits at the table in her apron with green smears on her face, gazing up with shining eyes as sparkles twinkle around her"
+    }
+   ],
+   "props": [
+    "round table"
+   ],
+   "prop_events": [],
+   "effects": [
+    "sparkles",
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [
+    "apron lettering"
+   ],
+   "travel": "none",
+   "notes": "slow push-in through the whole 21-frame shot: motion on the table (y 0.70-1.00) scale 1.003 at f97 -> 1.034 at f115 with ty drifting to -50 px; compare 95/115 shows doubled table-top and table-base edges. No static run. No overlay"
+  },
+  {
+   "start": 116,
+   "end": 161,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a round cream table and a small wooden chair",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 116,
+     "end": 134,
+     "text": "Pax frowns at the bowl of green goo with sweat drops on his head, squeezing his eyes shut and opening them again"
+    },
+    {
+     "start": 134,
+     "end": 147,
+     "text": "Pax picks up the spoon and plunges it into the bowl, where it stays standing upright"
+    },
+    {
+     "start": 147,
+     "end": 155,
+     "text": "Pax peers down at the bowl and jerks back with wide eyes and his beak open in alarm"
+    },
+    {
+     "start": 155,
+     "end": 161,
+     "text": "Pax clamps a flipper over his beak and squeezes his eyes shut, a sweat drop on his head"
+    }
+   ],
+   "props": [
+    "bowl of green goo",
+    "spoon",
+    "round table",
+    "wooden chair"
+   ],
+   "prop_events": [],
+   "effects": [
+    "sweat drops"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "motion on the table and chair (y 0.60-0.95, x 0-0.35) 1.0000/0 px until the spoon enters the band at f132; compare 116/160 table, chair, bowl and shadows all black. No overlay"
+  },
+  {
+   "start": 161,
+   "end": 187,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "close-up",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a blurred clothes rack behind her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "partial",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 161,
+     "end": 168,
+     "text": "Polly holds up a shirt on a hanger in each flipper and glances up at one of them"
+    },
+    {
+     "start": 168,
+     "end": 180,
+     "text": "Polly turns her head and eyes the tie-dye shirt in her other flipper, thinking"
+    },
+    {
+     "start": 180,
+     "end": 185,
+     "text": "Polly lifts both shirts higher, shutting her eyes and smiling broadly"
+    },
+    {
+     "start": 185,
+     "end": 187,
+     "text": "Polly opens her eyes and her beak wide, looking straight ahead"
+    }
+   ],
+   "props": [
+    "shirts on hangers"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "motion on the blurred rack (y 0-0.20, x 0.55-1.00) scale 1.0000-1.0002, 0.1 px, cc 1.000 to f186 (step 1); f187 is the first frame of a quick pull-back. The rack is too blurred for Canny, but the diff map 161/186 is blank on it. No overlay"
+  },
+  {
+   "start": 187,
+   "end": 203,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "16 frames: fast pull-back from the Polly close-up to a wide view of her in the shop f187-~197 (motion vs f189: scale 0.937 -> 0.928, ty +52 -> +63), then a 6-frame rest to the cut"
+  },
+  {
+   "start": 203,
+   "end": 238,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with blurred clothes racks and a table of folded clothes behind him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [
+      "o2"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 203,
+     "end": 211,
+     "text": "Pax stands with his flippers at his sides, glancing sideways with a sulky frown"
+    },
+    {
+     "start": 211,
+     "end": 221,
+     "text": "Pax closes his eyes and tips his head back with a frown"
+    },
+    {
+     "start": 221,
+     "end": 238,
+     "text": "Pax opens his eyes and looks off to the side with a worried frown and his beak slightly open"
+    }
+   ],
+   "props": [],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "shirt lettering"
+   ],
+   "travel": "none",
+   "notes": "motion on the left rack (y 0.20-0.50, x 0-0.18) scale 1.0000, 0 px, cc 1.000; compare 203/237 left rack edges black; crops of the right table of folded clothes at f203/210/220/230/237 identical. The right band fits badly only because Pax's flipper is in it. No overlay"
+  },
+  {
+   "start": 238,
+   "end": 319,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "Pax lies on a cream sofa with a knitted headband whose front carries a Polly-style penguin face (rose head, tuft, white face), visible the whole shot, while Polly tends him from a little spa trolley with a sign"
+  },
+  {
+   "start": 319,
+   "end": 340,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "whip",
+   "notes": "snowy riverbank with fir trees and a flock of birds; f319-324 a blurred whip move into it, then birds fly over; no character"
+  }
+ ]
+}

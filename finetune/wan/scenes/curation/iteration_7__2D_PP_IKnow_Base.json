@@ -1,0 +1,507 @@
+{
+ "skit": "iteration_7/293_videos/2D_PP_IKnow_Base.mp4",
+ "frames": 332,
+ "fps": 24.0,
+ "curated_by": "curator-v10-21",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "a navy-and-white striped scarf"
+ },
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a clinic waiting room drawn on a plain pale grey background"
+  },
+  "s2": {
+   "kind": "set",
+   "desc": "a snowy field with a snow-capped pine tree on a hill behind"
+  },
+  "s3": {
+   "kind": "set",
+   "desc": "a snowy field beside a grassy patch of red and yellow flowers under a bright sky"
+  },
+  "s4": {
+   "kind": "flat",
+   "desc": "a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 57,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a row of plastic chairs and an anatomy poster on the wall behind them",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 23,
+     "text": "Polly sits on a chair hugging her belly with an ice pack on her head and a worried look, while Pax sits beside her"
+    },
+    {
+     "start": 23,
+     "end": 43,
+     "text": "Polly lowers her flippers and reaches one toward Pax, smiling with her eyes closed, while Pax sits still looking ahead"
+    },
+    {
+     "start": 43,
+     "end": 48,
+     "text": "Pax closes his eyes with a small smile while Polly opens her eyes and looks ahead"
+    },
+    {
+     "start": 48,
+     "end": 57,
+     "text": "Pax leans toward Polly and slips a flipper behind her back while she sits looking ahead"
+    }
+   ],
+   "props": [
+    "ice pack",
+    "chairs",
+    "anatomy poster"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "slow push-in with a slight drift through the whole shot from f0 (compare 0/12 and 0/57: chair, poster and door-frame edges doubled; ECC ~0.1% scale per frame on the poster band). The wall poster is a generic anatomy chart with a teal penguin silhouette, not a lead: treated as a prop. No overlay"
+  },
+  {
+   "start": 57,
+   "end": 70,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "push_in",
+   "notes": "fast punch-in f57-61 (ECC scale per frame 1.008, 1.029, 1.06, ...; total ~1.32x), then a slow sideways settle f62-69 (wall band still changing until f70). 13 frames"
+  },
+  {
+   "start": 70,
+   "end": 83,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "13 static frames after the punch-in (wall band identical f70-82): Pax sits with a flipper on Polly's back while she looks ahead, an almost held pose"
+  },
+  {
+   "start": 83,
+   "end": 106,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a red car beside them, its trunk open",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 83,
+     "end": 95,
+     "text": "Pax reaches into the open trunk of a red car with his back turned while Polly, beside him, raises her flippers to her chest"
+    },
+    {
+     "start": 95,
+     "end": 106,
+     "text": "Pax turns around from the trunk hugging a tall armful of grocery bags while Polly stands behind him"
+    }
+   ],
+   "props": [
+    "car",
+    "grocery bags"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "license plate"
+   ],
+   "travel": "none",
+   "notes": "camera locked f83-105 (ECC on the sky/tree band scale 1.000, 0 px, cc 1.000 to f105; compare 83/105 tree and car edges overlap). Background drawn soft-focus. The bags hold vegetables, a pail and a purple bag: no lead print. No overlay in the top third or bottom fifth | verification pass 2 (verify_v10_report_v18): beat 1: Polly's flippers are at her sides f83-89 and only come up to her chest from f90"
+  },
+  {
+   "start": 106,
+   "end": 112,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "quick pull-back f106-111 (ECC scale 0.99, 0.97, 0.92 ... vs f105; still -0.7% at f111, pure pan from f112) while Pax turns with the grocery bags. 6 frames"
+  },
+  {
+   "start": 112,
+   "end": 131,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pan_left",
+   "notes": "pan left following Pax and Polly as they walk left toward an igloo, ~14 px per frame (ECC scale 1.000 on the tree band); Pax carries the grocery bags with a sweat drop, Polly follows. 19 frames, under 21 (split moves, curator ruling)"
+  },
+  {
+   "start": 131,
+   "end": 135,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "push_in",
+   "notes": "punch-in during the pan f131-134 (scale +2.8% then +6% frame to frame; from f135 pure pan again). 4 frames"
+  },
+  {
+   "start": 135,
+   "end": 147,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pan_left",
+   "notes": "pan left resumes f135-146 (~16 px per frame, slowing to ~10), the igloo door coming into view at the left. 12 frames"
+  },
+  {
+   "start": 147,
+   "end": 177,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with a bed of red and yellow flowers beside her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 147,
+     "end": 153,
+     "text": "Polly reaches a flipper into the flower bed and picks a red flower"
+    },
+    {
+     "start": 153,
+     "end": 167,
+     "text": "Polly holds the red flower up in front of her and gazes at it as a wind swirl drifts past"
+    },
+    {
+     "start": 167,
+     "end": 177,
+     "text": "Polly closes her eyes and sniffs the flower with a contented smile"
+    }
+   ],
+   "props": [
+    "red flower"
+   ],
+   "prop_events": [],
+   "effects": [
+    "wind swirl"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f147-176 (bottom snow band pixel-identical; compare 147/176 flower and ground edges overlap). The flowers sway a little (in-world animation) and a white wind-swirl line drifts across the sky f154-176. The pull-back starts at f177"
+  },
+  {
+   "start": 177,
+   "end": 182,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "fast pull-back f177-181 from Polly alone to a wide two-shot; Pax in his scarf comes into the picture at the left during it. 5 frames"
+  },
+  {
+   "start": 182,
+   "end": 212,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with a bed of red and yellow flowers at the right",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 205,
+       "screen": "right-center"
+      }
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 182,
+     "end": 191,
+     "text": "Pax stands in a striped scarf looking over at Polly while she sniffs her red flower with her eyes closed"
+    },
+    {
+     "start": 191,
+     "end": 197,
+     "text": "Pax closes his eyes with a smile and pulls the scarf off his neck"
+    },
+    {
+     "start": 197,
+     "end": 205,
+     "text": "Pax walks over to Polly holding the scarf out in both flippers"
+    },
+    {
+     "start": 205,
+     "end": 212,
+     "text": "Pax turns his back and wraps the scarf around Polly's neck, hiding her behind him"
+    }
+   ],
+   "props": [
+    "striped scarf",
+    "red flower"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "camera locked from f182 (bottom snow-streak band pixel-identical f182-211; still moving f181). Polly is mostly behind Pax f209-211; Pax stays fully visible. Scarf left off Pax's outfit list: he wears it only f182-193 (under 21 frames each side of taking it off), the beats say when it comes off"
+  },
+  {
+   "start": 212,
+   "end": 261,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with a bed of red and yellow flowers at the right",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 220,
+       "screen": "left-center"
+      }
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 212,
+     "end": 220,
+     "text": "Pax, with his back turned, tucks the striped scarf around Polly's neck and steps back to her side"
+    },
+    {
+     "start": 220,
+     "end": 232,
+     "text": "Pax stands beside Polly and looks at her while Polly, wrapped in the scarf and holding her flower, looks ahead"
+    },
+    {
+     "start": 232,
+     "end": 238,
+     "text": "Pax closes his eyes with a happy smile while Polly stands still beside him"
+    },
+    {
+     "start": 238,
+     "end": 248,
+     "text": "Pax opens his eyes and looks at Polly while she stands holding her flower"
+    },
+    {
+     "start": 248,
+     "end": 261,
+     "text": "Polly closes her eyes and blushes with a shy smile while Pax keeps looking at her"
+    }
+   ],
+   "props": [
+    "striped scarf",
+    "red flower"
+   ],
+   "prop_events": [],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "camera locked (right cloud band identical f212-260; compare 212/260 cloud, flower and hill edges overlap). At f212-215 Polly is mostly behind Pax"
+  },
+  {
+   "start": 261,
+   "end": 294,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s4",
+   "view": "with the top of a giant red heart under her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 261,
+     "end": 279,
+     "text": "Polly sits on top of a giant red heart with rosy cheeks, looking around and blinking"
+    },
+    {
+     "start": 279,
+     "end": 294,
+     "text": "Polly folds her flippers over her belly and glances sideways bashfully, her beak slightly open"
+    }
+   ],
+   "props": [
+    "giant heart"
+   ],
+   "prop_events": [],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: the heart's edge at both frame corners is pixel-identical f261-293 (compare 261/293 heart edge overlaps). keep12 was low only because Polly fills the frame and moves"
+  },
+  {
+   "start": 294,
+   "end": 302,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "8 frames: Pax up close below the heart, pushing it up with a raised flipper"
+  },
+  {
+   "start": 302,
+   "end": 306,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "fast pull-back f302-305 to the final wide shot (whole-frame diff to previous 35, 23, 9, then 2.6 at f306 and 0 from f307). 4 frames"
+  },
+  {
+   "start": 306,
+   "end": 332,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s4",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 306,
+     "end": 332,
+     "text": "Pax props up a giant red heart with one raised flipper, gazing up at Polly, who sits on top smiling shyly"
+    }
+   ],
+   "props": [
+    "giant heart"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked from f306: the heart's left-lobe edge and Pax's floor shadow are pixel-identical f306-331 (still moving at f305); only Pax blinks. Skit ends on this shot"
+  }
+ ]
+}

@@ -1,0 +1,266 @@
+{
+ "skit": "iteration_7/293_videos/2D_PP_OCD_Base.mp4",
+ "frames": 309,
+ "fps": 24.0,
+ "curated_by": "curator-v10-10",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "an igloo room with pale ice-brick walls"
+  },
+  "s2": {
+   "kind": "set",
+   "desc": "a kitchen with a curved mint-green counter and white wall cabinets"
+  },
+  "s3": {
+   "kind": "set",
+   "desc": "a red convertible car in front of a soft-focus snowy hill and sky"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 37,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a round porthole window above her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left",
+     "presence": "partial",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 16,
+     "text": "Polly crouches low on the floor and scrubs a foamy spot on the wall with a toothbrush, with a determined frown"
+    },
+    {
+     "start": 16,
+     "end": 32,
+     "text": "Polly lowers the toothbrush and stares at the wall as a shine streaks across the clean spot"
+    },
+    {
+     "start": 32,
+     "end": 37,
+     "text": "Polly shuts her eyes with a contented look and pops up off the floor"
+    }
+   ],
+   "props": [
+    "toothbrush"
+   ],
+   "prop_events": [],
+   "effects": [
+    "foam bubbles",
+    "shine streaks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "locked: ECC on the wall/window band f0-34 scale 1.0000, tx under 1 px (the band includes the window, whose clouds drift, so confirmed by compare 0/35: every wall and window-frame edge overlaps). Polly is cut off by the left edge. A fast pull-back starts at f37 (ECC f37 scale 0.94 vs f33) | verification pass 2 (verify_v10_report_v03): framing: Polly is drawn crouched with her whole body in the picture (cut only by the left edge) and the bottom third of the frame is empty floor; her visible height is ~30%, and when she pops up at f36 she is ~42% of the height. Nothing is cut at the belly, so this is medium, not medium close-up"
+  },
+  {
+   "start": 37,
+   "end": 56,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "snap pull-back f37-39 (Polly stands up as the view widens), then a near-locked medium wide of Polly standing by the window with sparkles f40-55 (16 frames, ECC scale drifts to 0.9992). Both pieces are under 21 frames, one reason, so one span"
+  },
+  {
+   "start": 56,
+   "end": 74,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "second snap pull-back f56-58 (ECC f56 scale 0.82), then a locked wide of a messy room with a bed and clutter, Polly small at the back, f59-73 (15 frames)"
+  },
+  {
+   "start": 74,
+   "end": 106,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "insert: a cupboard shelf of cups, bowls and plates with only Polly's flipper reaching in to straighten three stacked penguin-face mugs. The mugs are a Pax-style and a Polly-style penguin face plus a yellow one (also lead_copy)"
+  },
+  {
+   "start": 106,
+   "end": 136,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "pull_back",
+   "notes": "same shot: pull-back from the shelf f106-111 to a medium wide kitchen, locked f112-127 (16 frames), then a short pan f128-135 (ECC counter band tx +3 -> +124 px). The open right cabinet shows the Pax- and Polly-face mugs (small) until Polly closes the door f134-135; locked from f136"
+  },
+  {
+   "start": 136,
+   "end": 211,
+   "boundary": "camera",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a round porthole window beside the cabinets",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 136,
+     "end": 148,
+     "text": "Polly stands at the counter facing the wall and reaches up to pull open the left cabinet door"
+    },
+    {
+     "start": 148,
+     "end": 162,
+     "text": "Polly turns to the counter beside her and grabs a stack of grey dishes piled there"
+    },
+    {
+     "start": 162,
+     "end": 172,
+     "text": "Polly heaves the stack of dishes up over her head and crams it into the open cabinet"
+    },
+    {
+     "start": 172,
+     "end": 181,
+     "text": "Polly swings the cabinet door shut on the crammed, toppling dishes"
+    },
+    {
+     "start": 181,
+     "end": 197,
+     "text": "Polly presses one raised flipper against the closed cabinet doors to hold them shut, her eyes squeezed tight"
+    },
+    {
+     "start": 197,
+     "end": 211,
+     "text": "Polly opens her eyes and sinks back down a little, her flipper still pressed against the cabinet doors"
+    }
+   ],
+   "props": [
+    "stack of grey dishes",
+    "wall cabinet"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "locked f136-210: ECC on the window band and the right counter band scale 1.0000, tx under 0.3 px (f168 row low cc = Polly in the band). The right cabinet with the penguin-face mugs stays closed through the span; the left cabinet holds only grey dishes. Polly is seen mostly from behind; compare 136/210: cabinet, counter and window edges all overlap | verification pass 2 (verify_v10_report_v03): beat 5 (181-211): only one of Polly's flippers is raised against the doors (the other is never visible), not both; beat 5: Polly's eyes are squeezed shut f180-196 and open from f197; from f205 she sinks back down a little with the flipper sliding below the knobs. Split into two beats"
+  },
+  {
+   "start": 211,
+   "end": 255,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with the car's round wing mirror in front of her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "partial",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 211,
+     "end": 232,
+     "text": "Polly leans over the car door and sprays the round wing mirror with a purple spray bottle"
+    },
+    {
+     "start": 232,
+     "end": 238,
+     "text": "Polly turns to face forward and brings a yellow cloth up to the mirror"
+    },
+    {
+     "start": 238,
+     "end": 253,
+     "text": "Polly rubs the mirror with the yellow cloth while gazing ahead with a small smile, the spray bottle in her other flipper"
+    },
+    {
+     "start": 253,
+     "end": 255,
+     "text": "Polly closes her eyes with a contented smile, still holding the cloth by the mirror"
+    }
+   ],
+   "props": [
+    "red convertible car",
+    "purple spray bottle",
+    "yellow cloth",
+    "wing mirror"
+   ],
+   "prop_events": [],
+   "effects": [
+    "spray droplets"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "locked: ECC on the car body band scale 1.0000, 0 px f211-251; compare 211/254 car edges black. Only the soft-focus clouds drift slowly. The mirror shows a plain glint, no reflection of Polly in this span. Polly is cut off by the car door and the right edge | verification pass 2 (verify_v10_report_v03): beat 3 (238-255) says she gazes ahead, but Polly's eyes half-close at f253 and are shut with a contented smile at f254. Split off a short final beat"
+  },
+  {
+   "start": 255,
+   "end": 277,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "insert of the wing mirror: Polly appears only as her reflection in the mirror, smiling, with sparkles; her yellow cloth slides out f255-257. Mirror reflection of a lead = lead_copy (curator ruling); also no_lead"
+  },
+  {
+   "start": 277,
+   "end": 290,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "13 locked frames: Polly sits in the car and sprays perfume from the purple bottle at her face with her eyes closed"
+  },
+  {
+   "start": 290,
+   "end": 309,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "snap pull-back f290-292 to a wide of the loaded red car on skis on a snowy road, then 16 frames with the background drifting (ECC tx +17 -> -5 px). 19 frames in all"
+  }
+ ]
+}

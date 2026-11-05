@@ -1,0 +1,308 @@
+{
+ "skit": "iteration_7/293_videos/PP_Fog_Base.mp4",
+ "frames": 324,
+ "fps": 24.0,
+ "curated_by": "curator-v10-16",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "a white towel wrapped around her head",
+  "o2": "a white bathrobe"
+ },
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "an igloo living room with pale ice-brick walls, a cream sofa and an arched wooden door"
+  },
+  "s2": {
+   "kind": "set",
+   "desc": "an igloo hallway with pale ice-brick walls and an arched wooden door"
+  },
+  "s3": {
+   "kind": "flat",
+   "desc": "an empty space with a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 82,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a fish-print cushion on the sofa and a glass coffee table in front",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "enters",
+     "enters_at": 9,
+     "outfit": [
+      "o1",
+      "o2"
+     ],
+     "moves": [
+      {
+       "frame": 76,
+       "screen": "center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 10,
+     "text": "Pax sits on the sofa holding {ifin} up and looking at it as the door behind him swings open"
+    },
+    {
+     "start": 10,
+     "end": 26,
+     "text": "Polly steps out through the doorway with her eyes closed while Pax keeps looking at his phone"
+    },
+    {
+     "start": 26,
+     "end": 42,
+     "text": "Polly raises a flipper toward the door beside her while Pax sits looking at his phone"
+    },
+    {
+     "start": 42,
+     "end": 70,
+     "text": "Pax turns round to look at Polly, who stands by the door with her flippers raised to her cheeks and her eyes closed"
+    },
+    {
+     "start": 70,
+     "end": 82,
+     "text": "Polly steps away from the door and walks over behind the sofa toward Pax"
+    }
+   ],
+   "props": [
+    "phone",
+    "sofa",
+    "cushion",
+    "glass coffee table",
+    "folded towel"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 0,
+     "by": "pax",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "enters",
+   "notes": "ECC on the sofa front and table band (y 0.75-0.95) scale 0.9999, <= 0.2 px, cc 1.000 through f78; compare 0/81 wall, door and table edges black. Phone has the pale grey back, lenses and tuft = iFin. Polly wears a white bathrobe and a towel on her head; no necklace"
+  },
+  {
+   "start": 82,
+   "end": 108,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "enters",
+     "enters_at": 83,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 94,
+       "screen": "left-center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 82,
+     "end": 94,
+     "text": "Pax walks in from the left carrying a folded white towel and stops in front of the closed wooden door"
+    },
+    {
+     "start": 94,
+     "end": 101,
+     "text": "Pax stands at the door with the towel tucked against him, blinking and then looking up at it"
+    },
+    {
+     "start": 101,
+     "end": 108,
+     "text": "Pax reaches out and grabs the round knob of the closed wooden door"
+    }
+   ],
+   "props": [
+    "folded towel",
+    "door"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "enters",
+   "notes": "locked: the ice-brick wall band (y 0-0.2) is pixel-identical to f100 (mean |diff| 0.00) f84-105, and the wall-floor line at the right edge stays at rows 744-749 (of 960) through f122. Ends where steam starts pouring out of the opened door (f108) | verification pass 2 (verify_v10_report_v13): beat 3 [101,108): the door stays shut through f107; Pax only grabs the knob. The door first opens at f108, in the dropped steam span, so 'pulls the door open' is false for the whole beat; camera locked (right wall and top regions identical vs f100, door top identical vs f84); the compare edge overlay looks doubled only where Pax covers the door"
+  },
+  {
+   "start": 108,
+   "end": 123,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "15 frames, also effect onset: white steam pours out of the opened door and veils the doorway (the door is washed nearly white by f118) while Pax stands holding the knob"
+  },
+  {
+   "start": 123,
+   "end": 173,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "transition",
+   "camera": "other",
+   "notes": "fog whiteout carrying the change of place: f123-129 a closer shot of Pax already engulfed in steam, cut at f130, Pax fades into a white fog that covers the whole picture (f132-139), and the bathroom (shower curtain, sink, puddles) emerges under the fading fog f140-172"
+  },
+  {
+   "start": 173,
+   "end": 204,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "effect",
+   "camera": "static",
+   "notes": "Pax stands holding the towel, one eye squeezed shut, while the fog wash fades out of the whole picture (background 209,228,236 at f173 -> 203,225,233 at f182) and soft steam clouds drift and fade behind him until ~f193. Only f193-203 (11 frames) are clean"
+  },
+  {
+   "start": 204,
+   "end": 220,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "16 frames, also no_lead: the bathroom counter with sinks, bottles and a hair dryer, water splashed on the floor"
+  },
+  {
+   "start": 220,
+   "end": 223,
+   "boundary": "transition",
+   "keep": false,
+   "drop_reason": "transition",
+   "camera": "whip",
+   "notes": "3-frame whip pan from the counter to the floor"
+  },
+  {
+   "start": 223,
+   "end": 241,
+   "boundary": "after_transition",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "18 frames, also no_lead: the wet floor with puddles, a bath mat and towels"
+  },
+  {
+   "start": 241,
+   "end": 244,
+   "boundary": "transition",
+   "keep": false,
+   "drop_reason": "transition",
+   "camera": "whip",
+   "notes": "3-frame whip pan from the floor to the shower"
+  },
+  {
+   "start": 244,
+   "end": 268,
+   "boundary": "after_transition",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "the empty shower: shower head on a rail, curtain, a sponge and bubbles, nobody in view"
+  },
+  {
+   "start": 268,
+   "end": 296,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 290,
+       "screen": "left-center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 268,
+     "end": 288,
+     "text": "Pax stands holding a folded white towel against his chest, his other flipper at his beak, glancing about uncertainly"
+    },
+    {
+     "start": 288,
+     "end": 296,
+     "text": "Pax slips, flinging a flipper up and squeezing his eyes shut as one foot shoots out and he tips over backward"
+    }
+   ],
+   "props": [
+    "folded towel"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "plain ground, so ECC has nothing to fit: judged by Pax's feet and floor shadow, whose lower edge stays at row 471/480 (shadow 455) f268-294 while he stands; no steam left in the picture. Ends as he lands at f296"
+  },
+  {
+   "start": 296,
+   "end": 324,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "lead_hidden",
+   "camera": "static",
+   "notes": "Pax lies on his back in the bottom-left corner after the fall; only his belly and upturned feet are in the picture (head out of frame) to the end"
+  }
+ ]
+}

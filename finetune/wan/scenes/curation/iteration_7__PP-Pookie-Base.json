@@ -1,0 +1,188 @@
+{
+ "skit": "iteration_7/293_videos/PP-Pookie-Base.mp4",
+ "frames": 186,
+ "fps": 24.0,
+ "curated_by": "curator-v10-20",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a room with rounded archways drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 20,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "20 frames, camera locked (door patch tracked 1.00, 0 px): Polly waddles out of a far archway toward the right past an open door at the left edge"
+  },
+  {
+   "start": 20,
+   "end": 56,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a pale aqua desk holding a laptop and a parcel in the foreground and a shell-shaped chair at the edge",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "enters",
+     "enters_at": 22,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 25,
+       "screen": "left-center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 20,
+     "end": 26,
+     "text": "Polly edges out from behind the side of the archway, only one flipper showing at first"
+    },
+    {
+     "start": 26,
+     "end": 36,
+     "text": "Polly stands at the edge of the archway with both flippers stretched out to the side, eyes wide"
+    },
+    {
+     "start": 36,
+     "end": 48,
+     "text": "Polly creeps sideways to the left with small shuffling steps"
+    },
+    {
+     "start": 48,
+     "end": 56,
+     "text": "Polly stops in the archway and stands glancing to the side with a cautious look"
+    }
+   ],
+   "props": [
+    "laptop",
+    "parcel",
+    "desk",
+    "shell-shaped chair"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "enters",
+   "notes": "camera locked: desk/laptop patch tracked every 3 frames f20-53: scale 1.00, 0 px, score >= 0.999 (motion's arch band gave noisy fits: the arch is soft, low-texture shading). Polly is half hidden behind the right side of the archway f20-~40 but her head is visible from f22. The laptop lid has a small igloo logo (prop, not a lead). No overlay. Ground is the standard pale grey-cyan (RGB ~205,224,229), worded as the plain pale grey background | verification pass 2 (verify_v10_report_v06): beat 2 [26,44) says Polly creeps left the whole time, but she stands still f26-35 (pink-mask centre fixed at x 0.348) with both flippers stretched out to the side, and only creeps left f36-48 (x 0.337 -> 0.257); beat 3's stop starts at f48, not f44; moves: Polly is left of center from f25 (centre 0.40 at f24, 0.345 at f26), not from f40; camera locked: desk band y0.66-0.90 1.0000 / <=0.4 px cc 1.0"
+  },
+  {
+   "start": 56,
+   "end": 78,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "push_in",
+   "notes": "empty desk insert with the shell-shaped chair, slow push-in. Also lead_copy: a framed photo of Polly stands on the desk and the laptop screen shows Pax and Polly"
+  },
+  {
+   "start": 78,
+   "end": 91,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "13 static frames (arch patch tracked 1.00, 0 px to f90): Polly stands in front of an archway with a flipper to her cheek, thinking. The camera starts moving at f91"
+  },
+  {
+   "start": 91,
+   "end": 107,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pan_left",
+   "notes": "16 frames of camera move: the view pans left with Polly as she walks toward an open door, pulling back and then pushing in again (arch patch: content shifts ~300 px right by f101, then scale 0.87 -> 1.00 f102-107). Also a camera move"
+  },
+  {
+   "start": 107,
+   "end": 120,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "13 frames, camera held (arch patch 1.00, 0 px f107-115): Polly pushes the door, which swings shut in front of the archway f116-119 with Polly beside it, her back turned"
+  },
+  {
+   "start": 120,
+   "end": 152,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "push_in",
+   "notes": "bathroom insert: a toilet with an open lid, a toilet-paper holder and a towel rail; the view pushes in and pans f124-132, then holds. No character"
+  },
+  {
+   "start": 152,
+   "end": 154,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "2 still frames before the push-in starts (easing-tail ruling): Polly stands with her flippers pressed to her head, eyes squeezed shut"
+  },
+  {
+   "start": 154,
+   "end": 186,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a tall archway behind her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 154,
+     "end": 160,
+     "text": "Polly stands with both flippers pressed to the sides of her head, eyes squeezed shut and beak open"
+    },
+    {
+     "start": 160,
+     "end": 186,
+     "text": "Polly opens her eyes wide with worried brows and an open beak, flippers still pressed to her head"
+    }
+   ],
+   "props": [],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "steady push-in from f154 (arch patch first shifts at f154) to the end of the skit (arch patch drifts from f154; compare 152/185: the archway and Polly both grow, no edge stays black). Polly grows from ~45% to ~60% of the picture height through the push-in. No overlay"
+  }
+ ]
+}

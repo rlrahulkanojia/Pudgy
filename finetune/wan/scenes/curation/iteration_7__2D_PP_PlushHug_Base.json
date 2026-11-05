@@ -1,0 +1,184 @@
+{
+ "skit": "iteration_7/293_videos/2D_PP_PlushHug_Base.mp4",
+ "frames": 328,
+ "fps": 24.0,
+ "curated_by": "curator-v10-19",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "the arched open doorway of an igloo looking out on a snowy field"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "a bedroom drawn on a plain grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 40,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "lead_hidden",
+   "camera": "static",
+   "notes": "close view of a purple duffel bag on a grey rolling suitcase; only the leads' big flippers reach in from the edges (Pax left, Polly right). Also lead_copy: Polly holds up a small Polly plush and stuffs it into the bag f12-30, and the tiny Polly charm on the suitcase side shows at the lower-left edge throughout"
+  },
+  {
+   "start": 40,
+   "end": 92,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "wide shot outside the igloo (Pax in a black tie with a briefcase, Polly, the suitcase, a yellow taxi sled at the left edge): a small Polly charm (pink, crest, orange feet) hangs on the left side of the suitcase in every frame. Camera locked (ECC on the igloo band: scale 1.000, 0 px; only the clouds drift). Otherwise clean: Pax and Polly smile, nuzzle with hearts f64-80, Polly waves f84-91"
+  },
+  {
+   "start": 92,
+   "end": 102,
+   "boundary": "transition",
+   "keep": false,
+   "drop_reason": "transition",
+   "camera": "static",
+   "notes": "dissolve f92-101 from the igloo exterior to Polly at the doorway"
+  },
+  {
+   "start": 102,
+   "end": 162,
+   "boundary": "after_transition",
+   "keep": true,
+   "camera": "static",
+   "framing": "close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with snowy hills and pine trees outside the arch",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "partial",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 136,
+       "screen": "center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 102,
+     "end": 134,
+     "text": "Polly stands in the open doorway with her back turned, watching a yellow taxi sled drive slowly away across the snow"
+    },
+    {
+     "start": 134,
+     "end": 152,
+     "text": "Polly turns around and swings the wooden door shut with one flipper, frowning"
+    },
+    {
+     "start": 152,
+     "end": 162,
+     "text": "Polly walks off to the left past the closed door with a sulky frown"
+    }
+   ],
+   "props": [
+    "taxi sled",
+    "wooden door"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "taxi roof sign"
+   ],
+   "travel": "moves_within",
+   "notes": "camera locked: arch edges overlap exactly in compare 102/132, 133/134 and 132/148 (the arch wall has no texture for ECC). The door swings in from the left edge f141-155; Polly is cut off at the left edge f157-161. No overlays"
+  },
+  {
+   "start": 162,
+   "end": 171,
+   "boundary": "transition",
+   "keep": false,
+   "drop_reason": "transition",
+   "camera": "static",
+   "notes": "dissolve f162-170 from the closed door to the bedroom"
+  },
+  {
+   "start": 171,
+   "end": 227,
+   "boundary": "after_transition",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "medium wide",
+   "angle": "high angle",
+   "setting": "s2",
+   "view": "with a big yellow bed with pale sheets and two pillows between nightstands with coral lamps",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 171,
+     "end": 208,
+     "text": "Polly lies tucked under the covers in bed with a sad frown, blinking and glancing to one side"
+    },
+    {
+     "start": 208,
+     "end": 227,
+     "text": "Polly rolls onto her side and turns away toward the empty half of the bed"
+    }
+   ],
+   "props": [
+    "bed",
+    "lamp",
+    "duck-shaped bedpost"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "slow steady push-in through the whole bedroom shot f171-303: ECC on the bed band scale 1.017 per 6 frames (f177 1.017 -> f231 1.174, cc >= 0.956), still climbing f229-281 (1.010 -> 1.140 vs f225); compare 171/231 shows doubled bed edges. Ends where the Pax plush first shows at Polly's flipper (f227). On style (flat bed, normal Polly), not the old design | verification pass 2 (verify_v10_report_v11): camera push_in confirmed: motion on the bed-foot band (7% texture both ways) climbs steadily 1.0117 (f175) -> 1.1627 (f227) at cc 1.000; nightstand band agrees; boundaries ok: dissolve ends f170; the Pax plush's foot first shows at Polly's flipper f227; framing: Polly in bed shows ~0.157 of the height (head to flipper above the covers, body under them), i.e. a lead drawn ~0.26-0.30 tall; per the l"
+  },
+  {
+   "start": 227,
+   "end": 304,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "push_in",
+   "notes": "Polly pulls a small Pax plush out and hugs it (f227-255); the plush dissolves into a full-size Pax she cuddles in bed (f255-264, imagined, f264-282), then back into the plush (f282-292). Push-in continues throughout (also camera_move, effect)"
+  },
+  {
+   "start": 304,
+   "end": 328,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "off_style",
+   "camera": "push_in",
+   "notes": "ad end card: rendered Pax & Polly plush toys fly in on a pale background, then a title and a join-waitlist line appear f314-327 (also ad_merch, lead_copy, no_lead, graphic_overlay)"
+  }
+ ]
+}

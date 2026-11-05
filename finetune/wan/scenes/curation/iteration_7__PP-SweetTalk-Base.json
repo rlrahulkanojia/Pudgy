@@ -1,0 +1,203 @@
+{
+ "skit": "iteration_7/293_videos/PP-SweetTalk-Base.mp4",
+ "frames": 193,
+ "fps": 24.0,
+ "curated_by": "curator-v10-19",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a bedroom drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 31,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "high angle",
+   "setting": "s1",
+   "view": "with a yellow bed with pale sheets and pillows and a duck-shaped bedpost",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 18,
+     "text": "Polly sits propped up against the pillows in bed, tapping at {ifin} held in both flippers"
+    },
+    {
+     "start": 18,
+     "end": 31,
+     "text": "Polly raises her brows and opens her beak in a delighted little smile, still holding the phone"
+    }
+   ],
+   "props": [
+    "phone",
+    "bed"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 0,
+     "by": "polly",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: ECC on the bedpost band scale 1.000, 0 px, cc 1.000 f5-30. Phone back is pale grey with the lens block and the little tuft on top = iFin. No overlays"
+  },
+  {
+   "start": 31,
+   "end": 74,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "phone-screen insert: the iFin's chat screen fills the picture (Pax avatar in the header, chat bubbles with text, a photo of two cherries), only a bit of Polly's body at the bottom corners. Also lead_copy (Pax avatar)"
+  },
+  {
+   "start": 74,
+   "end": 120,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "high angle",
+   "setting": "s1",
+   "view": "with a yellow bed with pale sheets and pillows and a duck-shaped bedpost",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 74,
+     "end": 86,
+     "text": "Polly lies back in bed staring wide-eyed at {ifin} as blush spreads across her cheeks"
+    },
+    {
+     "start": 86,
+     "end": 118,
+     "text": "Polly hugs the phone to her cheek with her eyes closed and a blissful, blushing smile"
+    },
+    {
+     "start": 118,
+     "end": 120,
+     "text": "Polly starts to roll over onto her side, still cuddling the phone"
+    }
+   ],
+   "props": [
+    "phone",
+    "bed"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 74,
+     "by": "polly",
+     "is_ifin": true
+    }
+   ],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f74-150: ECC on the bedpost band and on the footpost band scale 1.000, 0 px, cc 1.000 every 4 frames; f150 still 1.000, f151 is the first moved frame (1.0055, -20 px). keep12 dips are Polly rolling. No overlays | verification pass 2 (verify_v10_report_v07): lead_copy inside the span: as Polly rolls onto her side the iFin turns its screen to the viewer f120-124 and again f138-140, showing the chat with Pax's avatar in the header (plus chat bubbles and the cherry photo). Ruling: end the kept span at the first frame where the screen faces out (f120); the clean stretches after f120 (f125-137, f141-150) are under 21 frames, so [120,151) is one lead_copy d"
+  },
+  {
+   "start": 120,
+   "end": 151,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "verification pass 2 (verify_v10_report_v07): the iFin's screen faces out f120-124 and f138-140, showing the chat with Pax's avatar in the header (lead_copy, ruling: end the kept span where the screen faces out); the clean runs f125-137 and f141-150 are under 21 frames. Polly rolls side to side cuddling the phone and tips onto her belly at f146-150"
+  },
+  {
+   "start": 151,
+   "end": 157,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "other",
+   "notes": "6-frame swing of the view down and around to the floor as Polly falls off the bed (also camera_move)"
+  },
+  {
+   "start": 157,
+   "end": 193,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "high angle",
+   "setting": "s1",
+   "view": "with the side of the yellow bed and a tall duck-topped bedpost behind her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 157,
+     "end": 169,
+     "text": "Polly lands face down on the floor beside the bed and lies sprawled flat, the phone under her flipper"
+    },
+    {
+     "start": 169,
+     "end": 193,
+     "text": "Polly lies face down on the floor wiggling her feet while little hearts float up above her"
+    }
+   ],
+   "props": [
+    "phone",
+    "bed"
+   ],
+   "prop_events": [],
+   "effects": [
+    "hearts"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: ECC on the bed band scale 1.0002, 0 px, cc 0.953 every 3 frames f160-190; compare 157/192 bed and bedpost edges overlap exactly. Polly is seen from behind (pink back, crest, orange soles), face hidden in the floor, whole body in view: kept as Polly. No overlays"
+  }
+ ]
+}

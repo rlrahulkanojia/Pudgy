@@ -1,0 +1,300 @@
+{
+ "skit": "iteration_7/293_videos/PP_Charging_v9_9x16 base.mp4",
+ "frames": 221,
+ "fps": 24,
+ "curated_by": "curator-v10-26",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "an igloo living room with pale ice-brick walls, a cream sofa and a glass coffee table"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 66,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a wooden door in the ice-brick wall behind her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 26,
+     "text": "Polly sits on the sofa holding up {ifin} and tapping at its screen"
+    },
+    {
+     "start": 26,
+     "end": 36,
+     "text": "Polly reaches down for the charging cable lying beside her on the sofa"
+    },
+    {
+     "start": 36,
+     "end": 47,
+     "text": "Polly plugs the cable into the bottom of her phone"
+    },
+    {
+     "start": 47,
+     "end": 58,
+     "text": "Polly leans over and lays the phone down on the sofa cushion, then sits back up"
+    },
+    {
+     "start": 58,
+     "end": 66,
+     "text": "Polly hops down off the sofa and stands with her eyes closed"
+    }
+   ],
+   "props": [
+    "phone",
+    "charging cable",
+    "sofa"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 0,
+     "by": "polly",
+     "is_ifin": true
+    },
+    {
+     "prop": "phone",
+     "event": "puts_down",
+     "frame": 50,
+     "by": "polly",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "locked: ECC on the door band (y 0.30-0.58, x 0.75-1.0) scale 1.0000, <=0.3 px, cc 1.000 every 5 frames to f60, and on the coffee-table band (y 0.68-0.92) 1.0000, 0 px, cc 1.000 every 3 frames to f63; the door's colour centroid holds at 963 px f0-65 and moves at f66. The phone is the iFin (full-res crop f20: pale grey back, three lenses, tuft on top). Top third plain ice-brick wall, bottom fifth floor and table: no overlay"
+  },
+  {
+   "start": 66,
+   "end": 95,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pan_right",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a wooden door in the ice-brick wall behind her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 66,
+     "end": 95,
+     "text": "Polly waddles to the right past the wooden door toward a small side table with a coral purse on it"
+    }
+   ],
+   "props": [
+    "coral purse",
+    "side table"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "tracking pan right: the door slides left ~26 px a frame (centroid 963 -> 210 px f65-95) while Polly stays near the middle, so travel none. Filled for U3"
+  },
+  {
+   "start": 95,
+   "end": 111,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "16 static frames at the side table (door centroid 210 px): Polly reaches for the coral purse"
+  },
+  {
+   "start": 111,
+   "end": 151,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pan_left",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a wooden door in the ice-brick wall behind her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 111,
+     "end": 120,
+     "text": "Polly lifts the coral purse off the side table and hangs it from her flipper"
+    },
+    {
+     "start": 120,
+     "end": 151,
+     "text": "Polly waddles back to the left toward the sofa, carrying the coral purse"
+    }
+   ],
+   "props": [
+    "coral purse",
+    "side table",
+    "sofa"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "tracking pan left with eased ends: door centroid 210 -> 880 px f110-150 (0.6 px/frame at f111, ~30 px/frame mid-move, 2 px/frame by f149); Polly stays near the middle, so travel none. Filled for U3"
+  },
+  {
+   "start": 151,
+   "end": 185,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the cream sofa beside her and a wooden door in the ice-brick wall behind",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 151,
+     "end": 160,
+     "text": "Polly, with the coral purse on her flipper, reaches over to the phone lying on the sofa"
+    },
+    {
+     "start": 160,
+     "end": 179,
+     "text": "Polly picks up the phone, still plugged into the cable, and looks down at it"
+    },
+    {
+     "start": 179,
+     "end": 185,
+     "text": "Polly pulls the phone free of the cable and hugs it to her chest"
+    }
+   ],
+   "props": [
+    "phone",
+    "charging cable",
+    "coral purse",
+    "sofa"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "picks_up",
+     "frame": 160,
+     "by": "polly",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "locked: the door's colour centroid holds at 879.56 px (+-0.1) f151-184 and moves at f185 (-0.6, then -4, -7 px); frame-to-frame phase correlation on the door band reads 0.0 px at response 1.0 f153-180. The phone is the same iFin as f0-65. Top third plain ice-brick wall, bottom fifth floor and table: no overlay"
+  },
+  {
+   "start": 185,
+   "end": 207,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pan_right",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a wooden door in the ice-brick wall ahead of her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 185,
+     "end": 195,
+     "text": "Polly turns around, holding the phone up to her face"
+    },
+    {
+     "start": 195,
+     "end": 207,
+     "text": "Polly waddles away toward the wooden door with her back turned, the coral purse on her flipper"
+    }
+   ],
+   "props": [
+    "phone",
+    "coral purse"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "tracking pan right: door left edge 744 -> 356 px f185-207 with an eased stop; Polly stays near the middle, so travel none. 22 frames. Filled for U3"
+  },
+  {
+   "start": 207,
+   "end": 221,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "14 static frames (door left edge 356 px) of Polly walking to the door with her back turned"
+  }
+ ]
+}

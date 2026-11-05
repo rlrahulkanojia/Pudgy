@@ -1,0 +1,148 @@
+{
+ "skit": "iteration_7/293_videos/PP_FoodPic_Base.mp4",
+ "frames": 293,
+ "fps": 24.0,
+ "curated_by": "curator-v10-31",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a room with a table crowded with plates of food in front of a plain pale grey wall"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 114,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "effect",
+   "camera": "pan_right",
+   "notes": "one continuous moving take over a table of food (iced drinks, syrupy pancakes, sushi, rice cakes, sandwiches) with Pax peeking from behind it; no static frame anywhere in the skit (per-frame phase shift 8-11 px/frame leftward, all depth bands alike). In f0-113 Pax is drawn out of focus (a soft depth-of-field blur on him and the back of the table) and only comes sharp at f114 (focus pull f70-113). A lens blur on the lead is not the flat Pudgy look: effect, which outranks camera_move"
+  },
+  {
+   "start": 114,
+   "end": 154,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "other",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a stack of syrupy pancakes, sushi, rice cakes and a plate of sandwiches in front of him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "partial",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 136,
+       "screen": "right-center"
+      }
+     ]
+    }
+   ],
+   "beats": [],
+   "props": [
+    "pancakes",
+    "sushi",
+    "rice cakes",
+    "sandwiches",
+    "iced drink"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "Pax in focus from f114. Pan right with an upward drift: content moves 4-7 px/frame left and 3-4 px/frame down, slowing to a stop at f154 (unsure: a diagonal pan, the tilt-up part is real). Pax shows only from the shoulders up behind the table (partial). Otherwise keepable: no overlay | verification pass 2 (verify_v10_report_v22): compound move: every depth band moves left and down together, about 6.5 px left and 4.3 px down per 2 frames (half-res) at f114-130, easing to a stop at f154: a pan right with a tilt up at two-thirds of its speed, plus a slow zoom (affine scale ~1.0025 per 4 frames). Under the Compound moves ruling this is camera other and unfilled"
+  },
+  {
+   "start": 154,
+   "end": 158,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "other",
+   "notes": "turnaround of the pan, under 1.5 px/frame f154-157 (4 frames)"
+  },
+  {
+   "start": 158,
+   "end": 214,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "other",
+   "notes": "verification pass 2 (verify_v10_report_v22): compound move: accelerating pan left with a strong push-in (affine scale 1.005 -> 1.019 per 4 frames, about 16% overall), unfilled per the Compound moves ruling; Pax nibbles the sandwiches, bites, then straightens up"
+  },
+  {
+   "start": 214,
+   "end": 293,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pan_left",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with plates of sushi, rice cakes and a stack of syrupy pancakes in front of him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "partial",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 236,
+       "screen": "center"
+      },
+      {
+       "frame": 262,
+       "screen": "right-center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 214,
+     "end": 238,
+     "text": "Pax looks ahead from behind the plates of food with raised brows and a worried frown"
+    },
+    {
+     "start": 238,
+     "end": 293,
+     "text": "Pax stares ahead with heavy-lidded, unimpressed eyes from behind the plates of food"
+    }
+   ],
+   "props": [
+    "sushi",
+    "rice cakes",
+    "pancakes",
+    "sandwiches",
+    "iced drink"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "pan left accelerating from ~2 px/frame at f159 to ~12 px/frame at the end (content moves right, little vertical drift); never settles. An iced drink re-enters the foreground at the left from about f245. Pax in focus throughout, shoulders up behind the table (partial). Otherwise keepable: no overlay | verification pass 2 (verify_v10_report_v22): f158-213 is a compound move: the pan left accelerates while the camera pushes in hard (isotropic affine scale 1.005 -> 1.019 per 4 frames in every band, about 16% overall; a 16-frame affine fit gives cc 0.999 vs 0.674 for translation only). Split off as camera_move with camera other, unfilled; the speed changes abruptly at f214 (zoom drops to a steady ~1.0044 per 4 frames), so f214-292 is its own"
+  }
+ ]
+}

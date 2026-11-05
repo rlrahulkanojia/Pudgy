@@ -1,0 +1,173 @@
+{
+ "skit": "iteration_7/293_videos/PP-Attitude-Base.mp4",
+ "frames": 159,
+ "fps": 24.0,
+ "curated_by": "curator-v10-24",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "an empty space with a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 100,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "exits",
+     "exits_at": 96,
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 8,
+     "text": "Pax stands with one flipper resting on his chest, looking ahead with wide eyes and his beak slightly open"
+    },
+    {
+     "start": 8,
+     "end": 20,
+     "text": "Pax closes his eyes with a smug smile, then glances sideways with a smirk, his flipper still on his chest"
+    },
+    {
+     "start": 20,
+     "end": 35,
+     "text": "Pax drops his flippers to his sides and glances around with a worried frown"
+    },
+    {
+     "start": 35,
+     "end": 46,
+     "text": "Pax looks around with raised brows, his flippers hanging at his sides"
+    },
+    {
+     "start": 46,
+     "end": 56,
+     "text": "Pax turns his body to the right and looks over that way"
+    },
+    {
+     "start": 56,
+     "end": 65,
+     "text": "Pax turns back with a puzzled frown and angles his body toward the left"
+    },
+    {
+     "start": 65,
+     "end": 74,
+     "text": "Pax blinks, then lifts both flippers out to his sides and stares ahead with wide eyes and an open beak"
+    },
+    {
+     "start": 74,
+     "end": 100,
+     "text": "Pax hurries off to the left with quick steps and goes out of view"
+    }
+   ],
+   "props": [],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "exits",
+   "notes": "One continuous take on a fully plain ground (no texture at all: motion gives no fit; ground std < 0.3). Camera judged static by compare 0/72: Pax's feet and shadow overlap exactly while he stands, and his shadow line stays at y 0.69 throughout. He stands in place f0-73, then moves left from f74 (x 0.30-0.73 -> 0.00-0.09 at f96, last sliver f99), feet stepping. Top third and bottom fifth are the bare ground on every 8th frame: no caption or watermark. Pax leaves and comes back in the same take, so the return is a same_shot span | verification pass 2 (verify_v10_report_v20): beat 1 (f0-20): f0-6 Pax looks ahead with wide round eyes and a slightly open beak (not sideways, not half-lidded); eyes close with a smug smile f8-9; he glances sideways with a smirk f10-19; beat 2 (f20-46): the worried frown holds f20-33 only; f34-45 his brows are raised and the frown is gone; beat 4 (f56-65): he faces forward only at f56, then angles his body toward the left f58-64 (3/4 view);"
+  },
+  {
+   "start": 100,
+   "end": 106,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "6 frames of empty plain ground between Pax's exit and his return"
+  },
+  {
+   "start": 106,
+   "end": 153,
+   "boundary": "same_shot",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "enters_exits",
+     "enters_at": 107,
+     "exits_at": 149,
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "left",
+     "presence": "enters_exits",
+     "enters_at": 110,
+     "exits_at": 152,
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 106,
+     "end": 125,
+     "text": "Pax hurries in from the left with Polly slung belly-down over his shoulder and raises his free flipper with a grin"
+    },
+    {
+     "start": 125,
+     "end": 130,
+     "text": "Pax grips Polly over his shoulder with both flippers and walks on to the right with an open-beaked grin"
+    },
+    {
+     "start": 130,
+     "end": 153,
+     "text": "Pax carries Polly off to the right while she hangs limp over his shoulder with her eyes closed and her cheeks blushing"
+    }
+   ],
+   "props": [],
+   "prop_events": [],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "crosses",
+   "notes": "same plain-ground take: Pax re-enters at the left edge at f106 carrying Polly (her body from f110), crosses at a steady ~0.033 frame widths per frame with the shadow line fixed at y 0.69, and is gone by f153 (Polly's head last). Polly's eyes are closed with blushing cheeks while she is carried. No caption or watermark | verification pass 2 (verify_v10_report_v20): beat 2 (f125-153): Polly's eyes are open f122-129 and close only from f130 (with blush marks); Pax grins with an open beak f124-128; effects: blush marks show on Polly f130-152 but effects is empty; checked: uniform ground (std 0), crossing at a steady rate with feet stepping, no size change"
+  },
+  {
+   "start": 153,
+   "end": 159,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "6 frames of empty plain ground at the end"
+  }
+ ]
+}

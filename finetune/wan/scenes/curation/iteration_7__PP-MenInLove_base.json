@@ -1,0 +1,256 @@
+{
+ "skit": "iteration_7/293_videos/PP-MenInLove_base.mp4",
+ "frames": 294,
+ "fps": 24.0,
+ "curated_by": "curator-v10-32",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a shower drawn on a plain pale grey background"
+  },
+  "s2": {
+   "kind": "set",
+   "desc": "a snowy forest with small fir trees under a leafy canopy"
+  },
+  "s3": {
+   "kind": "set",
+   "desc": "a deep snowdrift in an open snowy field under a pale sky with soft clouds"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 36,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "Pax brushing his teeth at an ice sink. The iFin phone lies face up on the sink showing a chat screen with Polly's round avatar (pink head, white face; the same avatar the f105-137 insert shows large) next to two messages, every frame. Small, but recognisable as Polly: lead_copy by the avatar/screen rule. Otherwise a static, clean shot."
+  },
+  {
+   "start": 36,
+   "end": 105,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "Pax lying on his back beside a red car outside an igloo, holding a wrench. The phone lies face up on a yellow toolbox showing the same chat screen with Polly's avatar (tiny, about 15 px) every frame. Dropped as lead_copy by the avatar/screen rule; the avatar here is barely legible at full size, so this one is the judgement call of the skit."
+  },
+  {
+   "start": 105,
+   "end": 138,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "overlays": [
+    "chat UI with text"
+   ],
+   "notes": "insert of the phone screen (chat app with Polly's avatar in the header, message bubbles and a keyboard) in a plastic bag under the shower; only Pax's flipper typing. no_lead ranks above lead_copy and graphic_overlay."
+  },
+  {
+   "start": 138,
+   "end": 162,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a shower head spraying water over him and a puddle at his feet",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 138,
+     "end": 162,
+     "text": "Pax stands under the running shower, his head piled with soap suds, holding {ifin} sealed in a plastic bag up to his face"
+    }
+   ],
+   "props": [
+    "phone in a plastic bag",
+    "shower head",
+    "soap suds"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 138,
+     "by": "pax",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "locked f138-161 (shower-head fixture template 0 px, score 1.000; compare 138/161 fixture and puddle black; only the water spray and Pax move). The phone shows its back (three lenses) through the bag; no screen visible. Pax barely moves: one beat."
+  },
+  {
+   "start": 162,
+   "end": 186,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pan_right",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with snowy hills behind",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 162,
+     "end": 180,
+     "text": "Pax waddles to the right through the snow with his head bowed, staring down at a phone in his flippers"
+    },
+    {
+     "start": 180,
+     "end": 186,
+     "text": "Pax keeps walking without looking up and bumps head first into a big tree trunk"
+    }
+   ],
+   "props": [
+    "phone",
+    "tree"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 162,
+     "by": "pax",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "U3: tracking shot, the background slides left about 48 px per frame (canopy band -54/-101/-148 px over f163-165; trunk edge 1056 -> 815 px f180-185) while Pax walks in place; the slide stops at the impact f185. The phone is held edge-on, screen not visible; its back with three lenses shows at f186. | verification pass 2 (verify_v10_report_v25): beat 1 writes {ifin}, but in this span the phone is held edge-on the whole time, a thin grey slab with no lenses or tuft visible (full-res f162-185); its back first shows at f186, outside the span. The compiled caption would claim 'three camera lenses on the back and a little tuft on top'. Per the iFin rule (only where it is clearly the iFin) the beat now says 'a phone'; prop_events left is_ifin t"
+  },
+  {
+   "start": 186,
+   "end": 199,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "shake",
+   "notes": "impact jolt f186-190 (trunk edge jumps 815 -> 848 -> 795 -> 811 px), then still f191-198; Pax bounces off the tree and falls flat on his back as the phone flies up. 13 frames."
+  },
+  {
+   "start": 199,
+   "end": 216,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "low view up into the tree as snow clumps fall from the canopy; no lead; 17 frames."
+  },
+  {
+   "start": 216,
+   "end": 294,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with a small fir tree in the distance",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 224,
+       "screen": "center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 216,
+     "end": 230,
+     "text": "Pax sits up in the deep snowdrift, buried to his chest, while clumps of snow fall around him"
+    },
+    {
+     "start": 230,
+     "end": 238,
+     "text": "Pax winces as {ifin} drops from above, bonks him on the head and lands upright in the snow beside him"
+    },
+    {
+     "start": 238,
+     "end": 246,
+     "text": "Pax glances down at the phone standing in the snow beside his face"
+    },
+    {
+     "start": 246,
+     "end": 262,
+     "text": "Pax tilts his head toward the phone with his eyes closed and a soft, dreamy smile"
+    },
+    {
+     "start": 262,
+     "end": 278,
+     "text": "Pax looks at the phone with wide, longing eyes, his beak slightly open"
+    },
+    {
+     "start": 278,
+     "end": 294,
+     "text": "Pax keeps gazing at the phone as small red hearts float up from him"
+    }
+   ],
+   "props": [
+    "phone"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "drops",
+     "frame": 230,
+     "is_ifin": true
+    }
+   ],
+   "effects": [
+    "hearts"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "locked f216-293 (snow band 0 px cc 1.000, edges 1.3%/3.2%; distant fir tree template 0 px every frame). Pax is buried to the chest; head and face visible throughout, drawn about as large as in the shower shot, hence medium. The phone shows only its back (three lenses, tuft) the whole time."
+  }
+ ]
+}

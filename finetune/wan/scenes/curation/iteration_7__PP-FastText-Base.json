@@ -1,0 +1,243 @@
+{
+ "skit": "iteration_7/293_videos/PP-FastText-Base.mp4",
+ "frames": 296,
+ "fps": 24.0,
+ "curated_by": "curator-v10-01",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "an igloo living room with pale ice-brick walls"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 28,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a cream sofa, a round porthole window and a wooden wall shelf of small penguin figurines behind him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 28,
+     "text": "Pax stands in front of the sofa holding {ifin} up to his chest and taps at it with a flipper, blinking"
+    }
+   ],
+   "props": [
+    "phone",
+    "sofa",
+    "wall shelf with penguin figurines"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 0,
+     "by": "pax",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "steady push-in through the whole shot, ~1.5% scale per 4 frames (ECC on the wall band; compare 0/27 shows doubled sofa edges). Shelf figurines (black-and-white penguin in a yellow beanie and sunglasses, a penguin in a yellow outfit with goggles, a pale penguin in a starry wizard hat cut off by the right edge f0-12) are not Pax or Polly: treated as props. Phone has the pale grey back, three lenses and tuft = iFin"
+  },
+  {
+   "start": 28,
+   "end": 70,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "phone-screen insert: the iFin's chat screen fills the picture, only Pax's flipper typing at the keyboard; a message is typed out letter by letter and sent. The chat header shows a small Polly avatar (also a lead_copy)"
+  },
+  {
+   "start": 70,
+   "end": 88,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "18 static frames: Pax in front of the sofa, eyes closed with a smile, then holds the phone out to his side. Camera locked f70-87 (ECC scale 1.000)"
+  },
+  {
+   "start": 88,
+   "end": 93,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "notes": "quick punch-in f88-92: ECC scale 1.007, 1.027, 1.051, 1.054, 1.030 per frame, locked again from f93"
+  },
+  {
+   "start": 93,
+   "end": 110,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "17 static frames after the punch-in: Pax holds the phone out and looks at it, then brings it back to his chest"
+  },
+  {
+   "start": 110,
+   "end": 182,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "phone-screen insert again (chat with Polly's reply, Pax's flipper typing a reply). Internal screen changes, not shot changes: keyboard pops in at f122, keyboard drops away and the chat scrolls f153-156, typing-dots bubble from ~f157. Polly avatar in the chat header"
+  },
+  {
+   "start": 182,
+   "end": 233,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a soft-focus cream sofa and a wall shelf behind him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 182,
+     "end": 191,
+     "text": "Pax holds {ifin} at his chest, glances down at it and squeezes his eyes shut with a smile"
+    },
+    {
+     "start": 191,
+     "end": 212,
+     "text": "Pax turns to one side with a flipper stuck out and looks up and away from the phone with his beak open"
+    },
+    {
+     "start": 212,
+     "end": 224,
+     "text": "Pax swings round to face the other way with his beak open and a determined frown, his flipper still stuck out"
+    },
+    {
+     "start": 224,
+     "end": 228,
+     "text": "Pax squeezes his eyes shut and turns back toward the phone"
+    },
+    {
+     "start": 228,
+     "end": 233,
+     "text": "Pax hunches over the phone and taps at it quickly with a determined frown"
+    }
+   ],
+   "props": [
+    "phone",
+    "sofa"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 182,
+     "by": "pax",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "slow push-in with a slight drift through the whole shot: ECC on the wall band ~0.5% scale and 6 px per 8 frames, no static run. Background drawn soft-focus (blurred) in this shot and in span 8 | verification pass 2 (verify_v10_report_v02): beat [191,224): Pax is not beaming at the phone: f190-210 he is turned to one side looking up and away, f212-223 he swings round the other way with a frown (brows angled), eyes squeezed shut f212-214 and f224-227; beat [224,233): the hunch over the phone with the frown starts at f228; f224-227 his eyes are squeezed shut as he turns back; push-in confirmed (rawdiff on the sofa band grows steadily f"
+  },
+  {
+   "start": 233,
+   "end": 269,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "phone-screen insert: Pax's flipper types and sends a reply, Polly's next reply arrives; a punch-in on the phone at f256-257 (no lead visible either side). Polly avatar in the chat header"
+  },
+  {
+   "start": 269,
+   "end": 296,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a soft-focus cream sofa and a wall shelf behind him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 269,
+     "end": 276,
+     "text": "Pax holds {ifin} at his chest and squeezes his eyes shut with a giddy smile"
+    },
+    {
+     "start": 276,
+     "end": 296,
+     "text": "Pax opens his eyes wide and stares ahead with his beak slightly open, holding the phone at his chest"
+    }
+   ],
+   "props": [
+    "phone",
+    "sofa"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 269,
+     "by": "pax",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "slow push-in with a slight downward drift through the whole shot (ECC ~0.33% scale and 3-4 px per 4 frames), no static run. Skit ends on this shot | verification pass 2 (verify_v10_report_v02): beat 2: Pax stares ahead, not at the phone (pupils level, phone held low at his chest f276-295); beat boundary: his eyes reopen at f276, not f278"
+  }
+ ]
+}

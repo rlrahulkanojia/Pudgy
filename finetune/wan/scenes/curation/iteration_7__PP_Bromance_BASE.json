@@ -1,0 +1,22 @@
+{
+ "skit": "iteration_7/293_videos/PP_Bromance_BASE.mp4",
+ "frames": 393,
+ "fps": 24.0,
+ "curated_by": "curator-v10-14",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {},
+ "outfits": {},
+ "settings": {},
+ "spans": [
+  {
+   "start": 0,
+   "end": 393,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "off_style",
+   "camera": "static",
+   "notes": "OLD_DESIGN: the earlier Pudgy character design throughout: yellow beaks and yellow feet (current Pax and Polly have orange ones), paler periwinkle and rose bodies. Unlike the ProRes OLD_DESIGN files the drawing is flat (no glossy shading, no high angle), so this is ruled on the characters alone, as curator-v10-06 did for GFMoods the other way round (current design on glossy furniture = not OLD_DESIGN). Even if this were flipped, most of it drops anyway. Shots (profile hard cuts, not placed at step 1): [0,22) the blue penguin from behind looking at framed photos of himself with a blue penguin in a red scarf and navy overalls (lead_copy); [22,82) the blue penguin close up touching his cheek, worried, then a pull-back ~f37-50 to him standing beside the pink penguin, who sits in a light-blue armchair with a phone (static ~f51-81); [82,144) insert of a December 2023 wall calendar, his flipper crossing off days up to a handwritten note on the 19th, then a push-in on it (no_lead, in-world text); [144,197) a light-blue door, he walks in from the right and opens it on the red-scarf penguin and a yellow penguin wearing earmuffs; [197,232) diagonal split screen of the red-scarf penguin and the blue penguin, both tearing up (effect); [232,343) the blue penguin and the red-scarf penguin hug and dance about, the yellow penguin wearing earmuffs (cream earmuffs, maroon cape with a rose bow) in the foreground from behind; moving view (keep12 0.30); [343,393) the pink penguin and the yellow penguin wearing earmuffs stand side by side on a plain pale ground, static (profile keep12 0.90). U5: the red-scarf penguin is a Pax lookalike (blue penguin in a red scarf and navy overalls). No meme caption or watermark seen | Client 2026-11-05: older yellow-foot design and the red-scarf and earmuffs penguins are removed from training (Q2, Q5, Q6); a clean copy would not bring this back."
+  }
+ ]
+}

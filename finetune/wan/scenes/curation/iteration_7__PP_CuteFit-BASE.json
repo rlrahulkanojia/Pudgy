@@ -1,0 +1,400 @@
+{
+ "skit": "iteration_7/293_videos/PP_CuteFit-BASE.mp4",
+ "frames": 389,
+ "fps": 29.97,
+ "curated_by": "curator-v10-17",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "a red bow on her head"
+ },
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a living room with a cream sofa drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 60,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "Polly, seen from behind, ties a red bow on her head in front of a tall fish-shaped standing mirror; her reflection (face and bow) shows in the mirror in every frame f0-59. A reflection is a depiction of the lead (lead_copy, as ruled for the wing-mirror insert in iteration_7)"
+  },
+  {
+   "start": 60,
+   "end": 80,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "Pax on the sofa with his phone: 9 identical frozen frames f60-68, then a pull-back f69-79 (whole-frame diff vs f60 4.2 -> 8.4), locked from f80. Polly's edge appears at the right from f77. 20 frames"
+  },
+  {
+   "start": 80,
+   "end": 145,
+   "boundary": "camera",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 80,
+     "end": 90,
+     "text": "Polly stands beside the sofa touching the bow on her head while Pax sits on the sofa looking at {ifin}"
+    },
+    {
+     "start": 90,
+     "end": 100,
+     "text": "Polly puts her flippers on her hips and smiles with her eyes closed while Pax keeps looking at his phone"
+    },
+    {
+     "start": 100,
+     "end": 145,
+     "text": "Polly stands with her flippers behind her, glancing over at Pax, who stays absorbed in his phone"
+    }
+   ],
+   "props": [
+    "phone",
+    "sofa"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 80,
+     "by": "pax",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: left-armrest region diff vs f82 is 0.00-0.14 f80-145 and the sofa edges overlap in compare 82/146; motion's ECC on the sofa bands gives unstable tx (aperture on long horizontal lines), so the pixel check was used. A punch-in starts at f146. Phone shows its back (pale grey, three lenses, tuft) = iFin; its screen faces Pax. Polly is at the right edge, partly cut, f80-88. No overlay | verification pass 2 (verify_v10_report_v15): boundary: the punch-in starts at f145, not f146. Left-armrest raw diff vs f80 is 0.12 mean through f144, then f145 steps (vs f144: mean 0.32, max 13), holds at f146 (animated on twos) and grows from f147. The kept span must end at f145; rest confirmed f80-144; Polly fully in frame from f80 (she steps about 0.1 of the width toward the sofa f87-89); beats fine"
+  },
+  {
+   "start": 145,
+   "end": 146,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "push_in",
+   "notes": "verification pass 2 (verify_v10_report_v15): first frame of the punch-in that continues in [146,162) (armrest diff vs f144: mean 0.32, max 13)"
+  },
+  {
+   "start": 146,
+   "end": 162,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "push_in",
+   "notes": "punch-in f146-161 (sofa scale ~1.13 by f160; armrest region diff 0.33 -> 6.0 vs f82), locked again from f162. 16 frames"
+  },
+  {
+   "start": 162,
+   "end": 213,
+   "boundary": "camera",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 162,
+     "end": 172,
+     "text": "Polly stands at the end of the sofa looking at Pax while he keeps his eyes on {ifin}"
+    },
+    {
+     "start": 172,
+     "end": 208,
+     "text": "Polly clasps her flippers in front of her and sways shyly, blinking, while Pax looks at his phone"
+    },
+    {
+     "start": 208,
+     "end": 213,
+     "text": "Polly lifts a flipper and reaches it toward Pax"
+    }
+   ],
+   "props": [
+    "phone",
+    "sofa"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 162,
+     "by": "pax",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: armrest region diff vs f165 0.00-0.16 f162-212, sofa-seat phase correlation 0 px; a push-in starts at f213. Still wide after the punch-in (Pax ~17% of the height). No overlay"
+  },
+  {
+   "start": 213,
+   "end": 227,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "push_in",
+   "notes": "push-in f213-219 (armrest diff 2.5 -> 7.6), hard cut at f220 to an angled view of the sofa that is still settling (small pull-back/shift f220-226, region diff 6.2 -> 3.7, locked from f227). One reason, nothing keepable between: one span"
+  },
+  {
+   "start": 227,
+   "end": 280,
+   "boundary": "camera",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ],
+     "moves": [
+      {
+       "frame": 242,
+       "screen": "right-center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 227,
+     "end": 236,
+     "text": "Polly stands beside the sofa smiling at Pax while he sits looking at {ifin}"
+    },
+    {
+     "start": 236,
+     "end": 244,
+     "text": "Polly hops up onto the sofa and plops down right next to Pax"
+    },
+    {
+     "start": 244,
+     "end": 280,
+     "text": "Polly sits squeezed in beside Pax, glancing at him and fidgeting, while Pax keeps his eyes on his phone"
+    }
+   ],
+   "props": [
+    "phone",
+    "sofa"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 227,
+     "by": "pax",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: sofa-base region diff vs f230 0.00-0.02 f227-239, vs f250 0.00 f240-279; phase correlation f239->f240 0 px, no changed pixels (the 0.08 step is codec noise). No overlay"
+  },
+  {
+   "start": 280,
+   "end": 314,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "close view from behind Pax on the sofa: the iFin's screen faces us and plays a video showing Pax and Polly (clear at f285; small figures later), f280-312 until Pax tosses the phone away (a sliver of it is still at the top-left edge at f313, gone at f314). Polly climbs in from the left f303-310"
+  },
+  {
+   "start": 314,
+   "end": 336,
+   "boundary": "same_shot",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left",
+     "presence": "partial",
+     "outfit": [
+      "o1"
+     ]
+    },
+    {
+     "id": "pax",
+     "screen": "right",
+     "presence": "partial",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 314,
+     "end": 322,
+     "text": "Pax, seen from behind, pats Polly's head with a flipper as she lies against his side, blushing"
+    },
+    {
+     "start": 322,
+     "end": 336,
+     "text": "Polly gazes up at Pax from his side with rosy cheeks while little sparkles twinkle beside her bow"
+    }
+   ],
+   "props": [
+    "sofa"
+   ],
+   "prop_events": [],
+   "effects": [
+    "sparkles",
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "same locked shot as the dropped f280-313 (sofa-seat region diff vs f282 0.06 constant, phase correlation 0 px f282->f335), after the phone has left the picture. Pax is cut by the right edge (back, head and one flipper visible), Polly by the left and bottom edges. 22 frames, starting f314 after the last sliver of the phone leaves the top-left edge. No overlay"
+  },
+  {
+   "start": 336,
+   "end": 389,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 336,
+     "end": 349,
+     "text": "Polly lies across Pax's lap on the sofa, snuggled against him, while Pax looks down at her wide-eyed"
+    },
+    {
+     "start": 349,
+     "end": 357,
+     "text": "Pax throws both flippers up in surprise while Polly stays curled in his lap"
+    },
+    {
+     "start": 357,
+     "end": 366,
+     "text": "Pax wraps his flippers around Polly and squeezes his eyes shut in a tight cuddle"
+    },
+    {
+     "start": 366,
+     "end": 389,
+     "text": "Pax hugs Polly with his eyes squeezed shut as she blushes and small hearts float up beside them"
+    }
+   ],
+   "props": [
+    "sofa"
+   ],
+   "prop_events": [],
+   "effects": [
+    "hearts",
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: sofa-base phase correlation f336->f388 0 px, no changed pixels; armrest stays put. Skit ends on this shot. No overlay"
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "skit": "iteration_7/293_videos/PP-EmojiText-Base.mp4",
+ "frames": 200,
+ "fps": 24.0,
+ "curated_by": "curator-v10-32",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {},
+ "spans": [
+  {
+   "start": 0,
+   "end": 200,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "graphic_overlay",
+   "camera": "other",
+   "overlays": [
+    "chat bubbles with text"
+   ],
+   "notes": "one continuous take of Pax with a phone and a mug in an igloo room. Chat-app message bubbles with text and emoji are drawn over the top half from f1 to f199 (one bubble from f1, a second from f15, a third from f140); only f0 is clean. The view also seems to shift (profile steady runs only f24-72, f143-173, f179-200; not measured, camera set to 'other'), but the overlay is the more permanent reason and covers every frame but f0. No part can be kept."
+  }
+ ]
+}

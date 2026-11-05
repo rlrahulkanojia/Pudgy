@@ -1,0 +1,234 @@
+{
+ "skit": "iteration_7/293_videos/PP_Wash_BASE.mp4",
+ "frames": 238,
+ "fps": 24.0,
+ "curated_by": "curator-v10-18",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a kitchen with a counter and a stovetop, drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 29,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "off_style",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a frying pan on the burners in front of her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "props": [
+    "raw fish",
+    "frying pan",
+    "stovetop"
+   ],
+   "prop_events": [],
+   "effects": [
+    "steam lines"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: compare 0/28 counter and burner edges overlap exactly and the difference map is blank outside Polly, the fish and the pan. motion fits here are unreliable (the counter front is flat colour and the pan steams), so the call rests on compare. No caption or watermark (equalised top third / bottom fifth scan every 9 frames) | verification pass 2 (verify_v10_coordinator_wash): OLD_DESIGN: yellow-foot variant (beak hue ~46 deg, feet ~48 deg, measured by verifier-v10-01; coordinator ruling 2026-11-04)",
+   "beats_dropped": [
+    {
+     "start": 0,
+     "end": 18,
+     "text": "Polly stands at the stove holding a raw fish up by its tail beside a frying pan"
+    },
+    {
+     "start": 18,
+     "end": 29,
+     "text": "Polly lays the fish down in the pan with her flipper and it starts to sizzle"
+    }
+   ]
+  },
+  {
+   "start": 29,
+   "end": 59,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "insert: a tap pours water into a sink, then only Polly's two flippers come in from the bottom edge and rub together under the stream (f36-58), splashing. No body or face visible"
+  },
+  {
+   "start": 59,
+   "end": 90,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "off_style",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a cutting board and an empty plate in front of her and a frying pan at the side",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "props": [
+    "tomato",
+    "knife",
+    "cutting board",
+    "plate",
+    "frying pan"
+   ],
+   "prop_events": [],
+   "effects": [
+    "steam lines"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: compare 59/89 counter, plate and pan edges overlap and the difference map is blank outside Polly, the knife and the tomato; the left-counter band fits 0 px, cc 1.000 to f74 (later rows slide along the textureless counter, cc 0.957). The cooked fish in the pan at the right edge steams. No caption or watermark | verification pass 2 (verify_v10_coordinator_wash): OLD_DESIGN: yellow-foot variant (beak hue ~46 deg, feet ~48 deg, measured by verifier-v10-01; coordinator ruling 2026-11-04)",
+   "beats_dropped": [
+    {
+     "start": 59,
+     "end": 90,
+     "text": "Polly slices a tomato into rounds on a wooden cutting board with a knife, smiling as the slices pile up"
+    }
+   ]
+  },
+  {
+   "start": 90,
+   "end": 117,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "the same tap insert again: only Polly's flippers rubbing under the running water"
+  },
+  {
+   "start": 117,
+   "end": 150,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "off_style",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a frying pan on the burners in front of her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "props": [
+    "lemon",
+    "frying pan",
+    "cooked fish",
+    "stovetop"
+   ],
+   "prop_events": [],
+   "effects": [
+    "steam lines"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: motion on the counter-front band (y 70-100%) scale 1.0000, <=0.1 px, cc 1.000 every 5 frames; compare 117/149 edges overlap. No caption or watermark | verification pass 2 (verify_v10_coordinator_wash): OLD_DESIGN: yellow-foot variant (beak hue ~46 deg, feet ~48 deg, measured by verifier-v10-01; coordinator ruling 2026-11-04)",
+   "beats_dropped": [
+    {
+     "start": 117,
+     "end": 150,
+     "text": "Polly squeezes half a lemon over the fish frying in the pan, watching the drops fall onto it"
+    }
+   ]
+  },
+  {
+   "start": 150,
+   "end": 171,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "the same tap insert again (21 frames): only Polly's flippers under the running water"
+  },
+  {
+   "start": 171,
+   "end": 207,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "off_style",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a plate of cooked fish and tomato slices in front of her and a frying pan at the side",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "props": [
+    "plate",
+    "cooked fish",
+    "tomato slices",
+    "salt",
+    "frying pan"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: compare 171/206 counter, plate and pan edges overlap and the difference map is blank outside Polly and the falling seasoning; motion rows on the flat counter slide (+44 px at cc 0.96, a textureless band), so the call rests on compare. No caption or watermark | verification pass 2 (verify_v10_coordinator_wash): OLD_DESIGN: yellow-foot variant (beak hue ~46 deg, feet ~48 deg, measured by verifier-v10-01; coordinator ruling 2026-11-04)",
+   "beats_dropped": [
+    {
+     "start": 171,
+     "end": 207,
+     "text": "Polly sprinkles white grains of salt from her flipper tip over the plated fish, eyes closed in a proud smile"
+    }
+   ]
+  },
+  {
+   "start": 207,
+   "end": 238,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "the same tap insert to the end: only Polly's flippers rubbing under the running water"
+  }
+ ]
+}

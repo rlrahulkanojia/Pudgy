@@ -1,0 +1,228 @@
+{
+ "skit": "iteration_7/293_videos/PP_Clutter_v17_9x16 base.mp4",
+ "frames": 374,
+ "fps": 24.0,
+ "curated_by": "curator-v10-23",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a bathroom with a sink, drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 184,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a cup of toothbrushes and a tube of toothpaste on the counter",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "exits",
+     "exits_at": 33,
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "enters",
+     "enters_at": 36,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 116,
+       "screen": "left-center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 9,
+     "text": "Pax lays his toothbrush down on the edge of the sink"
+    },
+    {
+     "start": 9,
+     "end": 33,
+     "text": "Pax turns and walks off to the right, leaving the toothbrush lying on the counter"
+    },
+    {
+     "start": 33,
+     "end": 52,
+     "text": "Polly walks in from the right and stops behind the sink"
+    },
+    {
+     "start": 52,
+     "end": 72,
+     "text": "Polly glances down at the toothbrush lying on the counter and frowns"
+    },
+    {
+     "start": 72,
+     "end": 96,
+     "text": "Polly rests a flipper on the sink and stares at the toothbrush with a frown"
+    },
+    {
+     "start": 96,
+     "end": 112,
+     "text": "Polly picks up the toothbrush from the counter"
+    },
+    {
+     "start": 112,
+     "end": 130,
+     "text": "Polly carries the toothbrush to the cup at the left and puts it in"
+    },
+    {
+     "start": 130,
+     "end": 156,
+     "text": "Polly lifts a flipper to her beak with a thoughtful look"
+    },
+    {
+     "start": 156,
+     "end": 184,
+     "text": "Polly looks around the counter with narrowed, suspicious eyes"
+    }
+   ],
+   "props": [
+    "toothbrush",
+    "toothbrush cup",
+    "toothpaste",
+    "sink"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "crosses",
+   "notes": "one locked take f0-360, split at Pax's return (same_shot rule for a lead who leaves and comes back). camera locked: phase correlation on the toothbrush cup and counter (y0.55-0.72, x0-0.2) 0 px every frame f1-360; compare 40/330 sink and counter edges overlap exactly (only the props moved). Pax's last sliver f32, Polly's first f36 (f33-35 empty). No caption or watermark; cup and toothpaste carry no print or brand"
+  },
+  {
+   "start": 184,
+   "end": 361,
+   "boundary": "same_shot",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a cup of toothbrushes on the counter",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "exits",
+     "exits_at": 336,
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right",
+     "presence": "enters",
+     "enters_at": 186,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 220,
+       "screen": "right-center"
+      },
+      {
+       "frame": 322,
+       "screen": "center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 184,
+     "end": 196,
+     "text": "Pax walks back in from the right while Polly picks up the toothpaste tube by the cup"
+    },
+    {
+     "start": 196,
+     "end": 211,
+     "text": "Polly squeezes the toothpaste tube while Pax looks on from the right"
+    },
+    {
+     "start": 211,
+     "end": 233,
+     "text": "Polly holds the toothpaste tube up and stares at it while Pax steps up to the sink beside her"
+    },
+    {
+     "start": 233,
+     "end": 242,
+     "text": "Polly sets the tube down on the counter while Pax stands at the sink watching her"
+    },
+    {
+     "start": 242,
+     "end": 280,
+     "text": "Pax holds a flipper to his beak, looking sheepish, while Polly waves a flipper at the counter"
+    },
+    {
+     "start": 280,
+     "end": 300,
+     "text": "Pax closes his eyes with a small smile while Polly looks at him"
+    },
+    {
+     "start": 300,
+     "end": 310,
+     "text": "Polly puts a flipper around Pax and kisses him on the cheek"
+    },
+    {
+     "start": 310,
+     "end": 336,
+     "text": "Polly turns and walks behind Pax and off to the right"
+    },
+    {
+     "start": 336,
+     "end": 361,
+     "text": "Pax stands alone at the sink, looking ahead"
+    }
+   ],
+   "props": [
+    "toothbrush",
+    "toothbrush cup",
+    "toothpaste",
+    "sink"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "crosses",
+   "notes": "same locked take as [0,184) (phase 0 px to f360). Pax's first frame on his return is f186; Polly's last sliver f335. The take ends at f360: from f361 the view slides and cuts to a wider view. No caption or watermark | verification pass 2 (verify_v10_report_v17): camera locked; move starts f361 (+5.5 px), so the end is right; no overlay; beats 3-4: Pax steps up to the sink at f216-222 (inside beat 3), not during 233-242; by f233 he is standing at the sink watching Polly; characters: Pax reaches right-center at f220, not f236 (moves frame corrected)"
+  },
+  {
+   "start": 361,
+   "end": 374,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "other",
+   "notes": "13 frames: the view slides sideways f361-363, then a jump (profile cut at f364) to a wider view revealing a heap of clutter piled at the left end of the counter beside Pax, settling by f367"
+  }
+ ]
+}

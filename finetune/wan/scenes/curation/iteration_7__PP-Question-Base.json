@@ -1,0 +1,98 @@
+{
+ "skit": "iteration_7/293_videos/PP-Question-Base.mp4",
+ "frames": 200,
+ "fps": 24.0,
+ "curated_by": "curator-v10-29",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 72,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 16,
+     "text": "Polly stands with her flippers clasped under her chin, gazing to the right with a worried look and blushing cheeks"
+    },
+    {
+     "start": 16,
+     "end": 24,
+     "text": "Polly squeezes her eyes shut and turns to face the other way, hugging her belly"
+    },
+    {
+     "start": 24,
+     "end": 50,
+     "text": "Polly looks off to the left with anxious eyes, her flippers wrapped around her belly"
+    },
+    {
+     "start": 50,
+     "end": 56,
+     "text": "Polly shuts her eyes and turns back toward the right"
+    },
+    {
+     "start": 56,
+     "end": 72,
+     "text": "Polly clasps her flippers under her chin again and gazes to the right with a worried look"
+    }
+   ],
+   "props": [],
+   "prop_events": [],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "fully plain ground: only Polly and her shadow. Her bounding box stays at x 266-714 / y 733-1381 (height 634-648 px) through f71, shifting only with her own pose changes; from f72 the whole picture translates rigidly (-10, -33, -63, -105 px...) = start of the whip. Judged static per the plain-ground ruling. No caption or watermark."
+  },
+  {
+   "start": 72,
+   "end": 83,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "transition",
+   "camera": "whip",
+   "notes": "whip-pan transition: Polly's picture eases out to the left f72-76, Pax's doorway scene slides in f77 and eases to rest (wall template x +238, +138, +71, +30, +7 px at f78-82; 0 from f83)."
+  },
+  {
+   "start": 83,
+   "end": 200,
+   "boundary": "after_transition",
+   "keep": false,
+   "drop_reason": "ad_merch",
+   "camera": "other",
+   "notes": "real brand: the parcels Pax carries (and later sets on the floor) are brown boxes with blue tape and the Amazon smile-arrow logo, legible on every frame f83-199 (label POLLY on them too). Content: Pax in a black tie stands at an igloo door holding the parcels and a briefcase (static f83-~138), the camera then pulls back and shifts (~f139-168) to a wide view with Polly standing at the left; Pax sets the parcels down and leaves through the door, a red sled passes the window. One run, one reason (ad_merch outranks camera_move)."
+  }
+ ]
+}

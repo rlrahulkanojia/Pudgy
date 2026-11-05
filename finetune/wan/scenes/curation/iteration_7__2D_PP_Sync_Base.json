@@ -1,0 +1,142 @@
+{
+ "skit": "iteration_7/293_videos/2D_PP_Sync_Base.mp4",
+ "frames": 168,
+ "fps": 24.0,
+ "curated_by": "curator-v10-01",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a living room drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 16,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "overlays": [
+    "heartbeat line graphic"
+   ],
+   "notes": "16 frames: Pax lies alone on the cream sofa. A heart icon with a scrolling heartbeat (ECG) line is drawn over the picture above him, f0-15. The whole skit carries this graphic, see span 2"
+  },
+  {
+   "start": 16,
+   "end": 34,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "overlays": [
+    "heartbeat line graphic"
+   ],
+   "notes": "18 frames: Polly stands alone hugging a bundled blanket, a heart icon with a heartbeat line drawn above her, f16-33. Hard cut at f34 was not in profile's hard-cut list (it showed up only as a gradual-change candidate, d1 6.9); placed with a step-1 strip"
+  },
+  {
+   "start": 34,
+   "end": 168,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "graphic_overlay",
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a cream sofa with yellow scallop-shell armrests and a pillow at one end",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "left",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 70,
+       "screen": "left-center"
+      },
+      {
+       "frame": 94,
+       "screen": "center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 34,
+     "end": 46,
+     "text": "Polly stands beside the sofa hugging a bundled coral blanket while Pax lies on his back on the sofa, head on a pillow"
+    },
+    {
+     "start": 46,
+     "end": 58,
+     "text": "Polly waddles to the end of the sofa, dragging the blanket behind her, and turns to face the seat"
+    },
+    {
+     "start": 58,
+     "end": 73,
+     "text": "Polly climbs up onto the sofa seat, hauling the blanket up with her"
+    },
+    {
+     "start": 73,
+     "end": 91,
+     "text": "Polly kneels on the seat and shuffles toward Pax holding the blanket up, while Pax lies still looking up"
+    },
+    {
+     "start": 91,
+     "end": 100,
+     "text": "Polly lies down on top of Pax and spreads the blanket over both of them"
+    },
+    {
+     "start": 100,
+     "end": 124,
+     "text": "Polly snuggles her cheek against Pax's face with her eyes closed while Pax lies under her with his eyes open"
+    },
+    {
+     "start": 124,
+     "end": 136,
+     "text": "Pax wraps a flipper around Polly and closes his eyes"
+    },
+    {
+     "start": 136,
+     "end": 168,
+     "text": "Pax and Polly lie still under the blanket with their eyes closed, cuddling on the sofa"
+    }
+   ],
+   "props": [
+    "blanket",
+    "sofa",
+    "pillow"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [
+    "heartbeat line graphic"
+   ],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "A heart icon plus scrolling heartbeat (ECG) line is drawn over the picture above the sofa on every frame f34-167: two lines (one per lead, in their colours) until ~f112, merging f112-135 into one red heart with a single line f136-167. Read as a meter / UI overlay -> graphic_overlay. Camera locked (compare 34/167: sofa edges overlap). No meme caption or watermark. All kept-span fields filled so the span can be flipped if the heartbeat graphic is ruled an allowed in-style effect. Blanket pattern is fish, not a lead print"
+  }
+ ]
+}

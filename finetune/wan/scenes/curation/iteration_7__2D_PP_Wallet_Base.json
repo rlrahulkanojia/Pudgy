@@ -1,0 +1,216 @@
+{
+ "skit": "iteration_7/293_videos/2D_PP_Wallet_Base.mp4",
+ "frames": 212,
+ "fps": 24.0,
+ "curated_by": "curator-v10-14",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  },
+  "x1": {
+   "kind": "extra",
+   "desc": "a grey penguin wearing a cream apron"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a street market drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 64,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a striped yellow and coral awning over shelves of tins and a counter draped in a fish-print cloth",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "x1",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 20,
+     "text": "Polly reaches up to the shelf of tins on the stall while Pax stands beside her and {x1} waits behind the counter holding a paper bag"
+    },
+    {
+     "start": 20,
+     "end": 31,
+     "text": "Polly turns forward holding a tin and smiles with her beak open while Pax watches"
+    },
+    {
+     "start": 31,
+     "end": 36,
+     "text": "Polly, with her eyes closed and a smile, holds the tin out across the counter to {x1}"
+    },
+    {
+     "start": 36,
+     "end": 44,
+     "text": "{x1} takes hold of the tin and smiles with closed eyes while Polly holds it out"
+    },
+    {
+     "start": 44,
+     "end": 52,
+     "text": "{x1} holds the tin over the counter with open eyes while Polly looks on"
+    },
+    {
+     "start": 52,
+     "end": 64,
+     "text": "{x1} drops the tin into the paper bag while Polly turns forward and opens her shell purse"
+    }
+   ],
+   "props": [
+    "sardine tins",
+    "paper bag",
+    "shell purse"
+   ],
+   "prop_events": [
+    {
+     "prop": "tin",
+     "event": "hands_over",
+     "frame": 44,
+     "by": "polly"
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "tin labels"
+   ],
+   "travel": "none",
+   "notes": "slow push-in through the whole shot: ECC on the awning band (y 0.31-0.43) climbs scale 1.004 at f4 -> 1.052 at f60 with a steady upward drift, no static run; compare 0/63 doubled awning edges. Only reason, so filled (U3). The tin labels show a human profile in a circle, not a lead. No caption or watermark | verification pass 2 (verify_v10_report_v02): beat [20,34): Polly's eyes are open f22-30 (closed only f20-21 while turning, and again from f31); she holds the tin out across the counter from f31, not f34; beat [34,52): {x1}'s closed-eye smile is f36-43 only; from f44 {x1} has the tin with open eyes; push-in confirmed (awning/car band ECC scale 1.00 -> 1.05, compare 0/63 doubled edges); fields ok"
+  },
+  {
+   "start": 64,
+   "end": 125,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the striped awning and shelves of tins at the stall beside them",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 64,
+     "end": 73,
+     "text": "Polly holds her open shell purse in both flippers and peers into it while Pax stands beside her"
+    },
+    {
+     "start": 73,
+     "end": 91,
+     "text": "Pax reaches over and rests a flipper on top of Polly's purse while Polly looks up at him"
+    },
+    {
+     "start": 91,
+     "end": 106,
+     "text": "Pax draws his flipper back and lifts his chin with his eyes closed and a proud smile"
+    },
+    {
+     "start": 106,
+     "end": 118,
+     "text": "Pax turns to one side and reaches a flipper behind his back, glancing sideways"
+    },
+    {
+     "start": 118,
+     "end": 125,
+     "text": "Pax pulls out a brown wallet and holds it at his chest with both flippers"
+    }
+   ],
+   "props": [
+    "shell purse",
+    "brown wallet",
+    "sardine tins"
+   ],
+   "prop_events": [
+    {
+     "prop": "wallet",
+     "event": "takes_out",
+     "frame": 118,
+     "by": "pax"
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "tin labels"
+   ],
+   "travel": "none",
+   "notes": "camera locked f64-140: ECC on the awning band (y 0.17-0.33, x 0.5-1) 0.0-0.1 px at cc 1.000. Ends at f125, where the bank card with a Pax-style penguin print starts to slide out of the wallet (see next span). No caption or watermark"
+  },
+  {
+   "start": 125,
+   "end": 169,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "pan_right",
+   "notes": "Pax takes a bank card out of the wallet; the card is printed with a small Pax-style penguin (white belly, orange feet), visible f126 to ~f163 as he holds it up and then out to the vendor. The camera also pans right f141-157 following Pax, rests f157-160 and pushes in f161-168 (camera_move as well). The card also carries a card-network wordmark (real-brand style, would be ad_merch too)"
+  },
+  {
+   "start": 169,
+   "end": 188,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "19 static frames after the push-in: Polly alone at the stall scratching her head with a sweat drop, then smiling and holding her purse; Pax's edge leaves on the right f169-174"
+  },
+  {
+   "start": 188,
+   "end": 212,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "push_in",
+   "notes": "insert of the inside of Polly's shell purse (lipstick, fish biscuit, camera, acorn, toy gadget); only her flippers at the sides f188-193, then a jump in on the purse contents f194-211"
+  }
+ ]
+}

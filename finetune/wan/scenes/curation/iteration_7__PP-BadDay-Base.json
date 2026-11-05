@@ -1,0 +1,497 @@
+{
+ "skit": "iteration_7/293_videos/PP-BadDay-Base.mp4",
+ "frames": 364,
+ "fps": 24.0,
+ "curated_by": "curator-v10-27",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "a black necktie",
+  "o2": "a pair of headphones with star badges",
+  "o3": "a cream towel wrapped around her head"
+ },
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "an igloo entryway with curved ice-block walls, a wooden door and a little bench"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "a living room with a cream sofa drawn on a plain pale grey background"
+  },
+  "s3": {
+   "kind": "flat",
+   "desc": "a dining corner drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 46,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right",
+     "presence": "enters",
+     "enters_at": 3,
+     "outfit": [
+      "o1"
+     ],
+     "moves": [
+      {
+       "frame": 24,
+       "screen": "center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 10,
+     "text": "Pax pushes the wooden door open and steps inside, scowling with his face flushed, a briefcase in his flipper"
+    },
+    {
+     "start": 10,
+     "end": 18,
+     "text": "Pax tosses his keys onto the little bench beside the door"
+    },
+    {
+     "start": 18,
+     "end": 33,
+     "text": "Pax trudges away from the door with a grumpy frown, carrying his briefcase"
+    },
+    {
+     "start": 33,
+     "end": 46,
+     "text": "Pax stands frowning with his briefcase while the door swings shut behind him"
+    }
+   ],
+   "props": [
+    "briefcase",
+    "keys",
+    "little bench",
+    "wooden door"
+   ],
+   "prop_events": [
+    {
+     "prop": "keys",
+     "event": "puts_down",
+     "frame": 14,
+     "by": "pax"
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "enters",
+   "notes": "f0-2 empty room before the door opens. Camera locked (wall-line patch y0.05-0.30 matched at dx 0, dy 0 to f45; bench patch 0,0 until Pax covers it; compare 0/45: door, bench and wall edges black). No overlay"
+  },
+  {
+   "start": 46,
+   "end": 105,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a round window behind, a teal armchair and the back of a shell-shaped monitor in the foreground",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [
+      "o2"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 46,
+     "end": 64,
+     "text": "Pax sits on the sofa in headphones gripping a game controller, scowling with his face flushed red"
+    },
+    {
+     "start": 64,
+     "end": 71,
+     "text": "Pax squeezes his eyes shut as the flush on his face fades"
+    },
+    {
+     "start": 71,
+     "end": 105,
+     "text": "Pax plays on with the controller, wide-eyed and relaxed, his beak opening into a small smile"
+    }
+   ],
+   "props": [
+    "game controller",
+    "sofa",
+    "necktie on the sofa",
+    "monitor"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked (motion on the window band y0.15-0.40 x0-0.2 and the foreground band y0.70-1.00 x0-0.6: scale 1.0000, 0 px, cc 1.000; compare 46/104: sofa, window and monitor edges black). The monitor shows only its back. His tie lies on the sofa, so it is a prop here, not an outfit. No overlay"
+  },
+  {
+   "start": 105,
+   "end": 180,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "enters",
+     "enters_at": 108,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 168,
+       "screen": "center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 105,
+     "end": 120,
+     "text": "Polly pushes the door open and shuffles in, wailing with her eyes squeezed shut and tears flying"
+    },
+    {
+     "start": 120,
+     "end": 140,
+     "text": "Polly trudges to the left sobbing, a starry tumbler cup in one flipper and a purple bag on her shoulder"
+    },
+    {
+     "start": 140,
+     "end": 151,
+     "text": "Polly stands crying with her beak open while the door swings shut behind her"
+    },
+    {
+     "start": 151,
+     "end": 165,
+     "text": "Polly shuffles a little to the right, wailing with her eyes shut and tears spraying from them"
+    },
+    {
+     "start": 165,
+     "end": 169,
+     "text": "Polly topples forward onto her face"
+    },
+    {
+     "start": 169,
+     "end": 180,
+     "text": "Polly lies flat on her belly on the floor with the purple bag resting on her back"
+    }
+   ],
+   "props": [
+    "tumbler cup",
+    "purple bag",
+    "wooden door",
+    "little bench"
+   ],
+   "prop_events": [],
+   "effects": [
+    "tears"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "enters",
+   "notes": "camera locked (bench patch matched at dx 0, dy 0, score 0.999 f105-130 and f155-165 when not covered; compare 105/179: door, bench and wall edges black). The bag carries a tiny charm of a black-headed penguin in a rose dress with a navy bow: neither lead, so a prop. No overlay | verification pass 2 (verify_v10_report_v24): locked: raw diff vs f105 top band <= 0.10, floor band 0.00; bag charm is a black-headed penguin in a rose dress with a navy bow: neither lead, prop (checked at full res f158); beat [120,140): Polly walks to the LEFT across the room (centre x 0.77 at f120 -> 0.35 at f141), not 'forward' (her size does not change); 'forward' would read as toward the viewer; beats [140,153)/[153,165): she stands cryi"
+  },
+  {
+   "start": 180,
+   "end": 212,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a glass coffee table in front of the sofa",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 180,
+     "end": 186,
+     "text": "Polly sits on the sofa wrapped in a peach fish-print blanket, holding a tub of chocolate ice cream and a spoon, teary-eyed"
+    },
+    {
+     "start": 186,
+     "end": 200,
+     "text": "Polly spoons ice cream into her beak with her eyes closed and tears on her cheeks"
+    },
+    {
+     "start": 200,
+     "end": 212,
+     "text": "Polly squeezes her eyes shut and sobs with the spoon in her beak"
+    }
+   ],
+   "props": [
+    "blanket",
+    "ice cream tub",
+    "spoon",
+    "sofa",
+    "glass coffee table"
+   ],
+   "prop_events": [],
+   "effects": [
+    "tears"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked (motion on the table band y0.65-0.85 x0.6-1.0: scale 1.0000, 0 px, cc 1.000 f186-210; compare 180/211: sofa and table edges black). Her head and face show from the blanket hood. Hard cut (time skip, same locked set-up) at f212. No overlay"
+  },
+  {
+   "start": 212,
+   "end": 260,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a glass coffee table in front of the sofa and a spilled tub of ice cream on the floor",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 212,
+     "end": 231,
+     "text": "Polly sleeps slumped against the sofa arm under a fish-print blanket, chocolate smeared on her face and a spoon in her flipper"
+    },
+    {
+     "start": 231,
+     "end": 243,
+     "text": "Polly, still asleep, lets her flipper flop down off the sofa with the spoon dangling from it"
+    },
+    {
+     "start": 243,
+     "end": 260,
+     "text": "Polly sleeps on as the spoon slips from her flipper and drops to the floor beside the spilled tub"
+    }
+   ],
+   "props": [
+    "blanket",
+    "spoon",
+    "ice cream tub",
+    "sofa",
+    "glass coffee table"
+   ],
+   "prop_events": [
+    {
+     "prop": "spoon",
+     "event": "drops",
+     "frame": 244,
+     "by": "polly"
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "a cut by time skip at f212 with the same locked set-up (table-leg patch matched at dx 0, dy 0 across f210-212 and to f259; motion on the table band vs f212: scale 1.0000, <=0.2 px, cc 1.000; sofa-arm patch 0,0 score 1.000). No overlay"
+  },
+  {
+   "start": 260,
+   "end": 323,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with a round table holding a fruit-topped layer cake and a wooden chair in front",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": [
+      "o3"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 260,
+     "end": 270,
+     "text": "Polly eats a forkful of cake with tears on her cheeks, holding {ifin} in her other flipper"
+    },
+    {
+     "start": 270,
+     "end": 306,
+     "text": "Polly sits at the table with teary, drooping eyes, the phone in one flipper and her fork resting on the table"
+    },
+    {
+     "start": 306,
+     "end": 314,
+     "text": "Polly lowers the phone and lays it down on the table"
+    },
+    {
+     "start": 314,
+     "end": 323,
+     "text": "Polly turns in her chair to look off to the right"
+    }
+   ],
+   "props": [
+    "phone",
+    "fork",
+    "layer cake",
+    "round table",
+    "wooden chair"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "puts_down",
+     "frame": 310,
+     "by": "polly",
+     "is_ifin": true
+    }
+   ],
+   "effects": [
+    "tears"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked (motion on the chair band y0.60-0.78 x0.6-1.0: scale 1.0000, <=0.1 px, cc 1.000; compare 260/322: table, chair and cake edges black). The phone has a pale grey back, three lenses and a tuft: the iFin. A small rose shell emblem on the table leg is decoration. No overlay"
+  },
+  {
+   "start": 323,
+   "end": 364,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right",
+     "presence": "enters",
+     "enters_at": 325,
+     "outfit": [
+      "o1"
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "left",
+     "presence": "enters",
+     "enters_at": 348,
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 323,
+     "end": 334,
+     "text": "Pax pushes the door open and steps inside with his briefcase"
+    },
+    {
+     "start": 334,
+     "end": 347,
+     "text": "Pax reaches over and lays his keys on the little bench"
+    },
+    {
+     "start": 347,
+     "end": 353,
+     "text": "Polly runs in from the left with a towel wrapped on her head while Pax turns toward her"
+    },
+    {
+     "start": 353,
+     "end": 357,
+     "text": "Polly leaps at Pax and throws her flippers around him"
+    },
+    {
+     "start": 357,
+     "end": 364,
+     "text": "Polly hugs Pax tight as her towel unwinds and streams out behind her, while he drops his briefcase and hugs her back"
+    }
+   ],
+   "props": [
+    "briefcase",
+    "keys",
+    "little bench",
+    "wooden door",
+    "towel"
+   ],
+   "prop_events": [
+    {
+     "prop": "keys",
+     "event": "puts_down",
+     "frame": 340,
+     "by": "pax"
+    },
+    {
+     "prop": "briefcase",
+     "event": "drops",
+     "frame": 357,
+     "by": "pax"
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "enters",
+   "notes": "f323-324 empty room before the door opens. Camera locked (doorway-arch patch matched at dx 0, dy 0, score >= 0.999 every 3rd frame f330-363; bench patch 0,0 f323-341 before Polly covers it). Polly's towel unwinds from f356, so it is not listed as her outfit. No overlay"
+  }
+ ]
+}

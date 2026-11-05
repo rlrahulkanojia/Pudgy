@@ -1,0 +1,82 @@
+{
+ "skit": "iteration_7/293_videos/PP-Snooze-Base.mp4",
+ "frames": 129,
+ "fps": 24.0,
+ "curated_by": "curator-v10-19",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a dim bedroom drawn on a plain grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 129,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a wooden bed with a duck-shaped bedpost, and a phone lying face up on a wooden nightstand in the foreground",
+   "time": "night",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 65,
+     "text": "Pax sleeps on his side under the covers with his head on the pillow, beak open and drooling"
+    },
+    {
+     "start": 65,
+     "end": 72,
+     "text": "Pax reaches a flipper out from under the covers and taps the phone as its screen lights up"
+    },
+    {
+     "start": 72,
+     "end": 129,
+     "text": "Pax tucks his flipper back under the covers and keeps sleeping with his beak open"
+    }
+   ],
+   "props": [
+    "phone",
+    "bed",
+    "nightstand",
+    "duck-shaped bedpost"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 67,
+     "by": "pax",
+     "is_ifin": "unsure"
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "phone alarm screen"
+   ],
+   "travel": "none",
+   "notes": "one locked shot: ECC scale 1.000, 0 px, cc 1.000 every 16 frames; compare 0/128 almost all edges static. Night-time palette (dim, desaturated) for the whole skit, constant: treated as night lighting, not an effect. The phone lies screen-up, so its back can't be seen: is_ifin unsure. Screen glows f65-69, Pax's flipper taps it f67-70. Pax's body is under the covers (head and a flipper show), in the picture: presence full. No overlays"
+  }
+ ]
+}

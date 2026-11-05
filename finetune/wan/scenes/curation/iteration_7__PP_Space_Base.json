@@ -1,0 +1,379 @@
+{
+ "skit": "iteration_7/293_videos/PP_Space_Base.mp4",
+ "frames": 350,
+ "fps": 24.0,
+ "curated_by": "curator-v10-32",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "an icy seascape with floating ice floes under a pale sky"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 37,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a wicker picnic basket beside them",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 12,
+     "text": "Polly hugs Pax from the side with her eyes closed while he sits holding a fishing rod out over the water"
+    },
+    {
+     "start": 12,
+     "end": 30,
+     "text": "Polly nuzzles against Pax as a small heart floats up above them"
+    },
+    {
+     "start": 30,
+     "end": 37,
+     "text": "Polly keeps hugging Pax with a closed-eye smile while he holds the rod still"
+    }
+   ],
+   "props": [
+    "fishing rod",
+    "picnic basket"
+   ],
+   "prop_events": [],
+   "effects": [
+    "hearts"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "U3: slow steady push-in through the whole shot, water band scale 1.0075 at f2 rising to 1.114 at f36, floe template drifting down 42 px; compare 0/36 shows only 942 static edge px. Followed by a dissolve. No caption or watermark."
+  },
+  {
+   "start": 37,
+   "end": 40,
+   "boundary": "transition",
+   "keep": false,
+   "drop_reason": "transition",
+   "camera": "other",
+   "notes": "dissolve f37-39 into the medium two-shot; f40 is the first clean frame"
+  },
+  {
+   "start": 40,
+   "end": 94,
+   "boundary": "after_transition",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a wicker picnic basket beside them",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 40,
+     "end": 44,
+     "text": "Polly hugs Pax from the side with a happy closed-eye smile while he grips his fishing rod, staring ahead"
+    },
+    {
+     "start": 44,
+     "end": 54,
+     "text": "Polly opens her eyes and looks up at Pax, still hugging him, while he glances at her with a frown"
+    },
+    {
+     "start": 54,
+     "end": 64,
+     "text": "Polly keeps hugging Pax and opens her beak as she looks at him, while he eyes her with a worried frown"
+    },
+    {
+     "start": 64,
+     "end": 74,
+     "text": "Polly lets go of Pax and sits up beside him, looking at him while he keeps holding the rod"
+    },
+    {
+     "start": 74,
+     "end": 94,
+     "text": "Polly clasps her flippers and gazes at Pax with a worried look while he stares ahead, holding the rod"
+    }
+   ],
+   "props": [
+    "fishing rod",
+    "picnic basket"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "locked: compare 40/93 ice-cliff and basket edges black (the motion fit on the lower band was thrown by the animated water, so compare decides). | verification pass 2 (verify_v10_report_v24): locked: raw diff vs f40 on the left and right ice cliff <= 0.13 every 2nd frame; compare 40/93 cliff edges black (the ~7 px ECC drift f56-80 on the cliff band is the animated water edge); beat [40,64): Polly's closed-eye smile lasts only f40-43; from f44 her eyes are open and she looks up at Pax, from f54 her beak is open as she looks at him. Pax is not staring ahead f44-64: he glances at her with"
+  },
+  {
+   "start": 94,
+   "end": 128,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with floating chunks of ice on the sea behind her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 94,
+     "end": 108,
+     "text": "Polly sits on the ice with her flippers clasped, glancing to the side with a worried frown"
+    },
+    {
+     "start": 108,
+     "end": 128,
+     "text": "Polly turns her head away and lets her flippers drop, her eyes filling with tears"
+    }
+   ],
+   "props": [],
+   "prop_events": [],
+   "effects": [
+    "tears"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "locked: compare 94/127 ground lines, puddle and shadow black; the distant ice chunks bob slightly (in-world animation)."
+  },
+  {
+   "start": 128,
+   "end": 155,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "insert: the fishing line under the floe edge, a fish bites and is pulled up out of the water; no lead"
+  },
+  {
+   "start": 155,
+   "end": 179,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a wicker picnic basket beside him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 155,
+     "end": 161,
+     "text": "Pax grips the fishing rod and cranks the reel with a determined frown"
+    },
+    {
+     "start": 161,
+     "end": 169,
+     "text": "Pax brightens with an open-beaked smile as he keeps reeling in"
+    },
+    {
+     "start": 169,
+     "end": 179,
+     "text": "Pax stops reeling and turns his head to the right with a puzzled look"
+    }
+   ],
+   "props": [
+    "fishing rod",
+    "picnic basket"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "locked: compare 155/178 basket and ice edge black."
+  },
+  {
+   "start": 179,
+   "end": 215,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "other",
+   "notes": "wide of Pax alone fishing on the floe with the caught fish hanging. Still f179-192 (14 frames), then the whole picture (floe, Pax, basket, fish) slides about 330 px right in f193-196, holds f197-210 and slides back f211-214. Nothing fixed in the plain sky and sea shows whether the view or the floe moves; the rigid, 4-frame slides read as quick camera slides, so every piece is under 21 frames. If a verifier reads it as the floe drifting under a locked view, [179,215) could be one 36-frame span."
+  },
+  {
+   "start": 215,
+   "end": 270,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "other",
+   "notes": "empty sea with floating ice chunks while the view moves across it (direction not measured: the drop reason does not depend on it); no lead"
+  },
+  {
+   "start": 270,
+   "end": 273,
+   "boundary": "transition",
+   "keep": false,
+   "drop_reason": "transition",
+   "camera": "other",
+   "notes": "dissolve f270-272 to the sailboat"
+  },
+  {
+   "start": 273,
+   "end": 294,
+   "boundary": "after_transition",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "other",
+   "notes": "an empty sailboat with an anchor sail and a life ring passes by; no one aboard"
+  },
+  {
+   "start": 294,
+   "end": 296,
+   "boundary": "transition",
+   "keep": false,
+   "drop_reason": "transition",
+   "camera": "other",
+   "notes": "dissolve f294-295 to Polly on a distant floe"
+  },
+  {
+   "start": 296,
+   "end": 326,
+   "boundary": "after_transition",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with small chunks of ice floating nearby",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 296,
+     "end": 326,
+     "text": "Polly sits all alone on a small ice floe out on the sea, her flippers crossed"
+    }
+   ],
+   "props": [],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "U3: push-in that speeds up toward the end (not slow) from a wide view of the distant floe up to Polly f296-325 (ice band scale 1.04 at f317 rising to 1.25 at f325; cliff template 0 px from f326). Polly is small for the first frames but visible throughout."
+  },
+  {
+   "start": 326,
+   "end": 350,
+   "boundary": "camera",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 326,
+     "end": 334,
+     "text": "Polly sits on the edge of the ice with her flippers crossed, frowning"
+    },
+    {
+     "start": 334,
+     "end": 350,
+     "text": "Polly's frown softens into a sad, wistful look as she gazes off to the side"
+    }
+   ],
+   "props": [],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "locked f326-349 (ice-cliff template 0 px, score 1.000 every frame; compare 326/349 cliff edges black). Her lower body is behind the ice edge."
+  }
+ ]
+}

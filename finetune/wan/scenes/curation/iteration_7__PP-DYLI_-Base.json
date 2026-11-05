@@ -1,0 +1,295 @@
+{
+ "skit": "iteration_7/293_videos/PP-DYLI -Base.mp4",
+ "frames": 218,
+ "fps": 24.0,
+ "curated_by": "curator-v10-30",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "a white napkin tied around his neck"
+ },
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a dining room drawn on a plain pale grey background"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "a room with an arched doorway drawn on a plain pale grey background"
+  },
+  "s3": {
+   "kind": "flat",
+   "desc": "a living room drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 94,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pull_back",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a round cream table and two wooden chairs",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 44,
+       "screen": "right"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 14,
+     "text": "Polly carries a bowl of shrimp pasta up to the table and holds it out toward Pax while he watches"
+    },
+    {
+     "start": 14,
+     "end": 22,
+     "text": "Polly sets the bowl down in front of Pax while he blinks and smiles at it"
+    },
+    {
+     "start": 22,
+     "end": 35,
+     "text": "Polly steps back from the table smiling with her eyes closed while Pax looks down at his food"
+    },
+    {
+     "start": 35,
+     "end": 52,
+     "text": "Polly turns to face forward and shuffles over to the end of the table while Pax gazes at his bowl"
+    },
+    {
+     "start": 52,
+     "end": 94,
+     "text": "Polly stands at the end of the table glancing at Pax while he holds his flippers together over his pasta"
+    }
+   ],
+   "props": [
+    "bowl of shrimp pasta",
+    "fork",
+    "round table",
+    "wooden chairs"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "slow steady pull-back with a small drift through the whole shot: ECC on the table/chair band (y 0.60-0.80, x 0-0.45, cc >= 0.99 except f18) scale 0.978 at f6, 0.941 at f30, 0.900 at f60, 0.859 at f90, tx +74 / ty +134 px by f90; compare 0/93 every edge moved. Only reason: camera_move (no overlay in the top third or bottom fifth, no depiction; the pink shell on the chair leg is a decoration) | verification pass 2 (verify_v10_report_v25): beat 3 [22,38) says Polly smiles with her eyes closed; her eyes are open from f35 (full-res crops f20-42). Moved the beat 3/4 boundary to f35; pull_back confirmed: one steady centred pull-back, chair/table band vs f0 scale 0.957 f24 -> 0.900 f60 -> 0.856 f92 with tx/ty = (1-s) x centre (no separate drift), cc 0.999; the pink shape on the chair leg is a shell decoration"
+  },
+  {
+   "start": 94,
+   "end": 97,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "other",
+   "notes": "3 frames of camera settle at the start of the doorway shot (ECC on the wall band vs f94: f95 scale 1.005, f96 tx -31 px, then constant from f97)"
+  },
+  {
+   "start": 97,
+   "end": 123,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a small wooden cabinet beside the doorway",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 97,
+     "end": 103,
+     "text": "Polly turns in the doorway and slips behind its right edge, keeping her head out"
+    },
+    {
+     "start": 103,
+     "end": 123,
+     "text": "Polly peeks out from behind the edge of the doorway, gripping it with one flipper and glancing sideways"
+    }
+   ],
+   "props": [
+    "wooden cabinet"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f97-122: ECC on the wall/cabinet band (y 0.40-0.60, x 0-0.45) scale 1.0000, 0 px, cc 1.000 every 3rd frame; compare 97/122 cabinet and arch edges black. From f102 the right half of Polly is behind the doorway's edge, her face and front stay visible. The soft shapes seen through the doorway f94-97 are the couch of the next shot, not a depiction. No overlay"
+  },
+  {
+   "start": 123,
+   "end": 169,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with a cream couch piled with cushions",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 123,
+     "end": 129,
+     "text": "Polly hops up onto the couch and plops down sitting with her feet sticking out"
+    },
+    {
+     "start": 129,
+     "end": 147,
+     "text": "Polly sits on the couch with her flippers at her sides, glancing around with shifty eyes"
+    },
+    {
+     "start": 147,
+     "end": 154,
+     "text": "Polly pulls a pair of binoculars out from her side and lifts them toward her face"
+    },
+    {
+     "start": 154,
+     "end": 169,
+     "text": "Polly turns to the left and peers through the binoculars, holding them up to her eyes"
+    }
+   ],
+   "props": [
+    "binoculars",
+    "couch",
+    "cushions"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: ECC on the couch's left arm (y 0.60-0.80, x 0-0.30) scale 1.0001, 0.0 px, cc 1.000 every 5th frame f128-168; compare 123/168 couch and cushion edges black (the right-hand band reads a constant +10 px at cc 0.97 because Polly's flipper sits in it at f123). Cushion print is a fish, not a lead. No overlay"
+  },
+  {
+   "start": 169,
+   "end": 194,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 169,
+     "end": 181,
+     "text": "Pax lifts a forkful with a shrimp toward his open beak, his eyes closed in delight"
+    },
+    {
+     "start": 181,
+     "end": 193,
+     "text": "Pax closes his beak around the fork and holds it there with his eyes shut"
+    },
+    {
+     "start": 193,
+     "end": 194,
+     "text": "Pax opens his eyes wide with the fork still in his beak"
+    }
+   ],
+   "props": [
+    "bowl of shrimp pasta",
+    "fork",
+    "wooden chair",
+    "round table"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "slow push-in through the shot: ECC on the chair/table band (y 0.65-0.95, x 0-0.5, cc >= 0.96) scale 1.0015 at f170, 1.020 at f181, 1.042 at f193 relative to f169 (and again 1.003-1.012 per frame vs f186 to f194). Ends at f195 where a fast pull-back starts. Only reason: camera_move | verification pass 2 (verify_v10_report_v25): the push-in ends at f193, not f194: frame-to-frame fits on two bands reverse at f193->f194 (chair/table band 1.0031/frame push through f193, then 0.9917; table band 0.9993 then 0.9906; vs f169 scale 1.0424 at f193 drops to 1.0341 at f194, cc 0.996), so f194 is the first frame of the pull-back. Trimmed to [169,194) and gave f194 its own too_short pull_back span (apply_verify cannot extend the exist"
+  },
+  {
+   "start": 194,
+   "end": 195,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "verification pass 2 (verify_v10_report_v25): first frame of the fast pull-back that continues in [195,203): vs f193 the chair/table band reads scale 0.992 and the table band 0.991 at cc >= 0.998, after a steady +0.3%/frame push to f193. 1 frame"
+  },
+  {
+   "start": 195,
+   "end": 203,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "fast pull-back from Pax alone to the two-shot of both at the table (f195 scale 0.97 vs f186; f196 jump; vs f196: 0.836 f197 easing to 0.8114 at f203). 8 frames"
+  },
+  {
+   "start": 203,
+   "end": 218,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "15 static frames to the end (ECC vs f203 1.0000, 0 px, cc 1.000): Pax eats at the table while Polly sits across with her flippers on her cheeks, watching him"
+  }
+ ]
+}

@@ -1,0 +1,148 @@
+{
+ "skit": "iteration_7/293_videos/PP-Gasp-Base.mp4",
+ "frames": 144,
+ "fps": 24.0,
+ "curated_by": "curator-v10-14",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a snowy landscape with pine trees and rolling white hills"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 27,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "other",
+   "notes": "vehicle-mounted tracking shot: the red convertible stays in place (motion on the bonnet band y0.75-1.0: scale 1.000, bobs 5-15 px) while the snowy scenery behind recedes (band y0.25-0.40: scale 0.981 at f3 -> 0.867 at f21, cc >= 0.99). Not filled: no caption clause exists for this move ('other' does not compile; push_in/pull_back would be false because the car keeps its size) - same ruling as curator-v10-20 (DrivingPartner) and v10-06 (Anxious). Content for a later fill: front view of the car, Polly in the left seat holding a small grey pot-shaped mug, Pax at the wheel on the right sipping a drink through a straw; Polly blinks f6-8. No overlay, no lead copy"
+  },
+  {
+   "start": 27,
+   "end": 42,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "other",
+   "notes": "15 frames: Polly in the passenger seat holding her mug, looking around; scenery scrolls behind (tracking)"
+  },
+  {
+   "start": 42,
+   "end": 59,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "other",
+   "notes": "17 frames: Pax at the wheel tosses his drink cup over his shoulder (f45-49) and turns; the view swings and the scenery moves (bonnet band shifts ~90 px), and Polly flies past as a pink motion smear f56-59; at rest from f59"
+  },
+  {
+   "start": 59,
+   "end": 72,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "13 static frames: Pax stares wide-eyed while the drink cup lands upright on the dashboard and spills (f61-64)"
+  },
+  {
+   "start": 72,
+   "end": 96,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the car's dashboard and a spilled coffee cup in the foreground",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "partial",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 72,
+     "end": 91,
+     "text": "Polly lies sprawled face down in the snow ahead of the car while Pax sits at the wheel in the foreground with his back turned"
+    },
+    {
+     "start": 91,
+     "end": 96,
+     "text": "Polly lifts her head out of the snow and raises {ifin} in one flipper"
+    }
+   ],
+   "props": [
+    "car dashboard",
+    "coffee cup",
+    "phone"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "picks_up",
+     "frame": 92,
+     "by": "polly",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "coffee cup emblem"
+   ],
+   "travel": "none",
+   "notes": "camera locked: motion on the tree line (y0.25-0.36) and the dashboard (y0.8-1.0) 0.0 px at cc 1.000 f72-93; only the clouds drift slowly (sky band ~1 px/frame, cc 0.83; not used for the camera call). Ends at f96, the first frame where the phone screen (showing a Pax video) faces out. The phone is the iFin: grey back with the lens bump f92-95, tuft on top visible from f96. The cup carries an invented Pudgy-world cafe emblem (green circle with a crowned white penguin, a parody, not a real brand logo and not a lead; blurred here as a foreground object), so in-world, not ad_merch. No caption or watermark (top and bottom checked at full res) | verification pass 2 (verify_v10_report_v08): beat 1: Polly lies in the snow ahead of the car (seen past Pax and the dashboard through the windscreen), not behind it"
+  },
+  {
+   "start": 96,
+   "end": 107,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "11 frames: Polly sits up in the snow holding the iFin overhead; its screen shows a video of Pax (also lead_copy)"
+  },
+  {
+   "start": 107,
+   "end": 129,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "phone-screen insert: the iFin fills the picture, showing a social-video app with Pax dancing on screen (also lead_copy and UI); only Polly's flipper at the bottom"
+  },
+  {
+   "start": 129,
+   "end": 144,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "15 frames: Pax at the wheel looks back wide-eyed (f129-136), then turns to face forward with a squint (from f137, pose snap / profile cut candidate)"
+  }
+ ]
+}

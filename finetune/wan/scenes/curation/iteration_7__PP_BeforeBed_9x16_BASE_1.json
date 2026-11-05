@@ -1,0 +1,156 @@
+{
+ "skit": "iteration_7/293_videos/PP_BeforeBed 9x16_BASE_1.mp4",
+ "frames": 136,
+ "fps": 24.0,
+ "curated_by": "curator-v10-27",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a bedroom drawn on a plain dusky grey-lavender background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 87,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a big double bed between two nightstands holding mugs, a water bottle and a phone",
+   "time": "night",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 16,
+     "text": "Polly stretches a flipper out over the covers and tucks it behind her head, smiling with her eyes closed, while Pax lies beside her"
+    },
+    {
+     "start": 16,
+     "end": 54,
+     "text": "Pax and Polly lie side by side under the covers with their eyes closed and sleepy smiles"
+    },
+    {
+     "start": 54,
+     "end": 68,
+     "text": "Pax opens his eyes and glances around while Polly peeks at him with one eye open"
+    },
+    {
+     "start": 68,
+     "end": 87,
+     "text": "Pax closes his eyes and dozes off while Polly opens both eyes and looks over at him"
+    }
+   ],
+   "props": [
+    "double bed",
+    "nightstands",
+    "mugs",
+    "water bottle",
+    "phone"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "music player on the phone screen"
+   ],
+   "travel": "none",
+   "notes": "one continuous shot; slow push-in from f0 easing out by f87 (footboard band y0.62-0.82 scale 1.016 at f8, 1.046 f24, 1.116 f64, cc >= 0.993; footboard patch from f100 still offset dx +22, dy -27 at f60, +5/-6 at f81, 0/0 from f87). Only reason is the move: both leads visible, no overlay, on style. The whole picture is a steady dim night tone (background RGB 179,189,207 every frame, luma 186 +-0.4): steady night lighting, kept with time night, not an effect. The tan mug on the right nightstand has a small generic penguin face (neither lead): a prop. The phone lying screen-up on the left nightstand is the iFin (grey back, tuft), showing a music player; nobody handles it, so no prop event | verification pass 2 (verify_v10_report_v26): push_in confirmed: bed 1.17x larger f0->f87 about the frame centre, steady rate, eased stop at f87 (patches 0,0 from f87); beat timing: Pax opens his eyes at f54 (not f56) and shuts them again at f68 (not f70); Polly opens both eyes at f69; OLD_DESIGN checked: beak hue ~35-36 deg under the steady night tone (current amber), flat drawing, no yellow feet - not OLD_DESIGN; phone screen shows a music"
+  },
+  {
+   "start": 87,
+   "end": 136,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a big double bed between two nightstands holding mugs, a water bottle and a phone",
+   "time": "night",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 87,
+     "end": 97,
+     "text": "Pax sleeps with his eyes closed and little z marks floating above his head while Polly lies wide awake looking at him"
+    },
+    {
+     "start": 97,
+     "end": 104,
+     "text": "Polly reaches a flipper across the covers toward Pax"
+    },
+    {
+     "start": 104,
+     "end": 124,
+     "text": "Polly presses her flipper against Pax's side while he keeps sleeping with z marks above his head"
+    },
+    {
+     "start": 124,
+     "end": 136,
+     "text": "Polly lets her flipper drop onto the covers and stares at Pax while he sleeps on"
+    }
+   ],
+   "props": [
+    "double bed",
+    "nightstands",
+    "mugs",
+    "water bottle",
+    "phone"
+   ],
+   "prop_events": [],
+   "effects": [
+    "zzz"
+   ],
+   "overlays": [],
+   "in_world_text": [
+    "music player on the phone screen"
+   ],
+   "travel": "none",
+   "notes": "camera locked f87-135 (motion on the footboard band y0.68-0.82 and the left-nightstand band y0.45-0.60 x0-0.18 vs f87: scale 1.0000/0.9999, <=0.6 px, cc 1.000; footboard patch dx 0, dy 0, score >= 0.998 f87-132; compare 87/135: bed, nightstand and mug edges black). Steady night tone as in [0,87). No overlay"
+  }
+ ]
+}

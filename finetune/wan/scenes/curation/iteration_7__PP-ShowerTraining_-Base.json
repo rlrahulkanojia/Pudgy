@@ -1,0 +1,360 @@
+{
+ "skit": "iteration_7/293_videos/PP-ShowerTraining -Base.mp4",
+ "frames": 276,
+ "fps": 24.0,
+ "curated_by": "curator-v10-20",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a snowy clearing with snow-covered pine trees under a pale sky"
+  },
+  "s2": {
+   "kind": "set",
+   "desc": "a snowy landscape around a tall smoking volcano"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 36,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pull_back",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a campfire under a steaming pot on a wooden tripod beside him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 22,
+     "text": "Pax stands beside the campfire with his flippers folded over his chest, frowning sideways at the steaming pot"
+    },
+    {
+     "start": 22,
+     "end": 36,
+     "text": "Pax drops his flippers to his sides and squeezes his eyes shut with a grimace"
+    }
+   ],
+   "props": [
+    "campfire",
+    "cooking pot",
+    "wooden tripod"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "slow pull-back from f0, settling at f36: motion on the left tree band (y0.30-0.55, x0-0.15, clear of the steam) scale 0.981 at f8 -> 0.945 at f32 vs f0, then frames f36-45 identical (scale 0.9965 vs f28 at every frame). The steam and clouds drift by themselves, so the right side was not used"
+  },
+  {
+   "start": 36,
+   "end": 113,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a campfire under a steaming pot on a wooden tripod beside him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 36,
+     "end": 42,
+     "text": "Pax sways with his eyes squeezed shut and his flippers held out at his sides"
+    },
+    {
+     "start": 42,
+     "end": 57,
+     "text": "Pax hops up and down on the spot with his flippers pressed to his cheeks"
+    },
+    {
+     "start": 57,
+     "end": 71,
+     "text": "Pax leans in toward the steaming pot and jabs one flipper out at it"
+    },
+    {
+     "start": 71,
+     "end": 78,
+     "text": "Pax pulls back upright with his flippers raised, squeezing his eyes shut, then opening them in a frown"
+    },
+    {
+     "start": 78,
+     "end": 101,
+     "text": "Pax stands with his flippers at his chest, glaring at the pot with a determined frown"
+    },
+    {
+     "start": 101,
+     "end": 113,
+     "text": "Pax stretches one flipper out toward the pot, then spreads both flippers wide, still frowning"
+    }
+   ],
+   "props": [
+    "campfire",
+    "cooking pot",
+    "wooden tripod"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: motion on the left tree band scale 0.9997, 0.1 px vs f41 every 8 frames to f105; ground band (y0.75-0.97, x0-0.45) 1.0002, 0.3 px (one 5 px blip at f65 where Pax's shadow enters the band); compare 36/112 trees, tripod, stones and ground lines black (only the clouds and steam change). Steam rises from the pot throughout: in-world | verification pass 2 (verify_v10_report_v08): beat 4: Pax's eyes are shut only f69-72; they are open in a frown from f73; beat 6: Pax first stretches one flipper toward the pot (f102-107), then spreads both wide (f108-112)"
+  },
+  {
+   "start": 113,
+   "end": 150,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a steaming pot hung over a crackling campfire on a wooden tripod in front of him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 113,
+     "end": 144,
+     "text": "Pax stands behind the steaming pot with a determined frown and dips one flipper into the bubbling water"
+    },
+    {
+     "start": 144,
+     "end": 148,
+     "text": "Pax squeezes his eyes shut with his flipper still in the pot"
+    },
+    {
+     "start": 148,
+     "end": 150,
+     "text": "Pax pops his eyes wide open and jerks back with an open beak"
+    }
+   ],
+   "props": [
+    "campfire",
+    "cooking pot",
+    "wooden tripod"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: compare 113/149 tripod, pot rim, stones and trees black. The ground band read a slow 7 px drift, but that band holds the flickering fire; the tree band is crossed by steam, so compare decides"
+  },
+  {
+   "start": 150,
+   "end": 184,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a campfire under a steaming pot on a wooden tripod beside him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 150,
+     "end": 154,
+     "text": "Pax lands on the snow beside the campfire after a leap, flippers flung out"
+    },
+    {
+     "start": 154,
+     "end": 180,
+     "text": "Pax stands by the fire flapping one raised flipper, his eyes squeezed shut in a wince"
+    },
+    {
+     "start": 180,
+     "end": 184,
+     "text": "Pax opens his eyes and looks ahead, his flipper still raised"
+    }
+   ],
+   "props": [
+    "campfire",
+    "cooking pot",
+    "wooden tripod"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: motion on the left tree band (y0.40-0.55, x0-0.2) scale 1.0000, 0.1 px, cc 1.000 every 4 frames; compare 150/183 trees and ground lines black | verification pass 2 (verify_v10_report_v08): framing: Pax is drawn ~22% of the picture height (outline rows 0.445-0.667 at f170), which is medium wide, not wide. Camera locked (the f152-153 blip on the x0-0.2 tree band is Pax's flipper; x0-0.11 band 1.0000/0 px every frame)"
+  },
+  {
+   "start": 184,
+   "end": 238,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the edge of the campfire at the right",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "exits",
+     "exits_at": 236,
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 184,
+     "end": 190,
+     "text": "Pax stands in the snow holding one flipper up, looking ahead with teary eyes and a wobbly frown"
+    },
+    {
+     "start": 190,
+     "end": 198,
+     "text": "Pax closes his eyes and lifts a flipper to his beak"
+    },
+    {
+     "start": 198,
+     "end": 220,
+     "text": "Pax presses both flippers to his puckered beak with his eyes shut"
+    },
+    {
+     "start": 220,
+     "end": 228,
+     "text": "Pax lowers his flippers and narrows his eyes into a determined, scheming look"
+    },
+    {
+     "start": 228,
+     "end": 238,
+     "text": "Pax waddles quickly off to the right and out of view"
+    }
+   ],
+   "props": [
+    "campfire"
+   ],
+   "prop_events": [],
+   "effects": [
+    "tears"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "exits",
+   "notes": "camera locked: motion on the left tree band (y0.30-0.55, x0-0.14) scale 1.0000, 0 px, cc 1.000 every 4 frames to f240; compare 184/237 trees, hill line and ground lines black. Pax is gone from f238 (last sliver at the right edge f237)"
+  },
+  {
+   "start": 238,
+   "end": 244,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "6 frames of empty snow after Pax leaves (also no_lead)"
+  },
+  {
+   "start": 244,
+   "end": 276,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a plume of grey smoke rising from its glowing crater",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 262,
+       "screen": "center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 244,
+     "end": 256,
+     "text": "Pax, small in the distance, scrambles up the steep slope of the volcano toward the crater"
+    },
+    {
+     "start": 256,
+     "end": 263,
+     "text": "Pax reaches the rim of the glowing crater and stands at its edge"
+    },
+    {
+     "start": 263,
+     "end": 270,
+     "text": "Pax leaps high into the rising smoke above the crater"
+    },
+    {
+     "start": 270,
+     "end": 276,
+     "text": "Pax drops back down toward the glowing crater"
+    }
+   ],
+   "props": [
+    "volcano"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "camera locked: motion on the volcano/snow band (y0.55-0.95) scale 0.9998, 1 px, cc 0.999 every 4 frames; compare 244/275 volcano and hill edges black (only the smoke drifts). Pax is drawn small here (~3% of the picture height) but clearly a blue penguin climbing, leaping and falling; kept as a wide shot. Skit ends on this shot"
+  }
+ ]
+}

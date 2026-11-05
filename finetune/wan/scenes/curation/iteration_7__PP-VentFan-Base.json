@@ -1,0 +1,134 @@
+{
+ "skit": "iteration_7/293_videos/PP-VentFan-Base.mp4",
+ "frames": 282,
+ "fps": 24.0,
+ "curated_by": "curator-v10-14",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "an igloo kitchen with pale ice-brick walls"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 65,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "insert of a pot of soup on the stove with steam; only Polly's arm and flipper stirring with a wooden spoon. The whole picture also has a heavy dark vignette and steam haze (effect)"
+  },
+  {
+   "start": 65,
+   "end": 115,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "effect",
+   "camera": "static",
+   "notes": "Polly stirs the pot under the range hood with a cross, squinting face; a heavy dark vignette frames the whole picture and steam haze fills it on every frame"
+  },
+  {
+   "start": 115,
+   "end": 125,
+   "boundary": "transition",
+   "keep": false,
+   "drop_reason": "transition",
+   "camera": "static",
+   "notes": "dissolve f115-124 from the stove shot into the close-up of Polly's face"
+  },
+  {
+   "start": 125,
+   "end": 196,
+   "boundary": "after_transition",
+   "keep": false,
+   "drop_reason": "effect",
+   "camera": "static",
+   "notes": "extreme close-up of Polly's face, sweating and squinting in the steam; the picture is darkened to a dim mauve-brown colour wash with a heavy vignette on every frame"
+  },
+  {
+   "start": 196,
+   "end": 224,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "effect",
+   "camera": "static",
+   "notes": "Polly glances up at the range hood from behind the big pot, wooden spoon raised; heavy dark vignette on every frame"
+  },
+  {
+   "start": 224,
+   "end": 240,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "insert of the range hood's on/off switch; only Polly's flipper reaching up and flipping it (f238-239). Heavy vignette too"
+  },
+  {
+   "start": 240,
+   "end": 248,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "8 frames: the vignette clears at f240 and the view pulls back fast from the switch to the whole kitchen (motion scale 0.68 at f244 -> 0.994 at f248); at rest from f248 (f248 vs f249: 0.0 px)"
+  },
+  {
+   "start": 248,
+   "end": 282,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a stove and a steaming pot under an ice-brick range hood, a round window, and a carrot and leeks on a cutting board in the foreground",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 248,
+     "end": 261,
+     "text": "Polly stands by the stove with her eyes closed and beak slightly open, one flipper stretched toward the pot and a wooden spoon in the other"
+    },
+    {
+     "start": 261,
+     "end": 282,
+     "text": "Polly lowers her flipper and stands still, holding the wooden spoon across her belly with her eyes closed and a calm look, while the pot steams"
+    }
+   ],
+   "props": [
+    "wooden spoon",
+    "pot",
+    "stove",
+    "range hood",
+    "carrot",
+    "leeks"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "switch label"
+   ],
+   "travel": "none",
+   "notes": "camera at rest from f248: motion on the wall/hood band (y0-0.3, x0.5-1) vs f248 is 0.0-0.1 px at cc 1.000 to f281, and the cutting-board/floor band (y0.82-1.0, away from the steam) is 0.0 px at cc 1.000; compare 248/281 wall and counter edges overlap, only Polly and the steam change. No vignette in this shot (it clears at f240). No caption or watermark (top third and bottom fifth checked at full res). Steam rising from the pot is in-world"
+  }
+ ]
+}

@@ -1,0 +1,320 @@
+{
+ "skit": "iteration_7/293_videos/2D_PP_LoveIsland_Base.mp4",
+ "frames": 352,
+ "fps": 24.0,
+ "curated_by": "curator-v10-31",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a living room drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 22,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a cream sofa and a round window showing a snowy tree behind her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 10,
+     "text": "Polly sits on the cream sofa hugging a bag of chips, chewing and blinking"
+    },
+    {
+     "start": 10,
+     "end": 22,
+     "text": "Polly scoots sideways on the sofa and turns her head to look off to the right with her beak open"
+    }
+   ],
+   "props": [
+    "bag of chips",
+    "sofa",
+    "remote control"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: compare 0/21 sofa, window and remote edges overlap; lower band shift at f12 is Polly's feet in the band (upper-right window band 1.000, <=1 px). No overlay. The octopus on the chip bag is packaging art, not a lead"
+  },
+  {
+   "start": 22,
+   "end": 75,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with an open front door showing a snowy yard and a red car, and a glass coffee table and the back of a TV in the foreground",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 22,
+     "end": 56,
+     "text": "Pax stands in the open doorway holding up a wrench beside a red toolbox, blinking and smiling, while Polly munches chips on the sofa"
+    },
+    {
+     "start": 56,
+     "end": 75,
+     "text": "Pax turns around to face out through the doorway with his back to the viewer, holding the toolbox, while Polly reaches into her chip bag"
+    }
+   ],
+   "props": [
+    "bag of chips",
+    "wrench",
+    "red toolbox",
+    "sofa",
+    "red car",
+    "TV"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: TV/coffee-table band 1.000, 0 px at cc 1.000 (texture 1.4%/2.7%); compare 22/74 door, window and TV edges overlap. No overlay"
+  },
+  {
+   "start": 75,
+   "end": 115,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "insert of the TV on a yellow cabinet: a beach show with an open clam, title letters typing in on the screen (in-world). No lead"
+  },
+  {
+   "start": 115,
+   "end": 153,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "push_in",
+   "notes": "f115-130 the wide door view again (16 frames), a fast push-in toward the door f131-134, then f135-152 a closer view of Pax peeking around the door with the red car outside (18 frames). No piece reaches 21 frames"
+  },
+  {
+   "start": 153,
+   "end": 199,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a cream sofa below a round window, and the back of a TV in the foreground",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 153,
+     "end": 176,
+     "text": "Pax stands at the round window twisting a screwdriver into its edge while Polly sits on the sofa eating chips"
+    },
+    {
+     "start": 176,
+     "end": 199,
+     "text": "Pax keeps working on the window with the screwdriver while Polly lifts more chips to her beak"
+    }
+   ],
+   "props": [
+    "screwdriver",
+    "bag of chips",
+    "sofa",
+    "cushion",
+    "TV"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: TV-back band 1.000, 0 px at cc 1.000 (texture 3.4%/8.6%); compare 153/198 sofa, window and TV edges overlap. The cushion shows a white fish shape (prop). Jump cut to the tilted-sofa setup at f199 (same background, missed by profile). No overlay"
+  },
+  {
+   "start": 199,
+   "end": 232,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a round window and the back of a TV in the foreground",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 199,
+     "end": 232,
+     "text": "Pax stands hunched by a yellow jack propping up one end of the tilted sofa and taps it with a hammer, while Polly lies on her side on the sofa holding her chips"
+    }
+   ],
+   "props": [
+    "hammer",
+    "car jack",
+    "sofa",
+    "bag of chips",
+    "screwdriver",
+    "saw",
+    "TV"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: TV-only band 1.000, 0 px at cc 1.000 (texture 3.4%/6.4%); the lower band's +9 px came from Pax's feet and the tools in it; compare 199/231 TV, window and sofa edges overlap. Jump cut to the level sofa at f232. No overlay | verification pass 2 (verify_v10_report_v18): characters: at f199 Polly lies at x 0.54-0.73 of the width (centre 0.65), which is right-center, not center"
+  },
+  {
+   "start": 232,
+   "end": 261,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a cream sofa below a round window, and the back of a TV in the foreground",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right",
+     "presence": "enters",
+     "enters_at": 237,
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 232,
+     "end": 237,
+     "text": "Polly sits alone on the sofa with her flippers on her cheeks, opening her eyes"
+    },
+    {
+     "start": 237,
+     "end": 245,
+     "text": "Pax steps in close from the right in the foreground, holding a wrench under his chin"
+    },
+    {
+     "start": 245,
+     "end": 261,
+     "text": "Pax looks up thoughtfully with the wrench at his chin and blinks while Polly sits still on the sofa behind him"
+    }
+   ],
+   "props": [
+    "wrench",
+    "sofa",
+    "TV"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "enters",
+   "notes": "camera locked: TV-back band (x 0-0.6, clear of Pax) 1.000, 0 px at cc 1.000 (texture 3.0%/7.2%). Pax is drawn large in the foreground, cut by the right and bottom edges; framing set by the room (Polly wide). No overlay"
+  },
+  {
+   "start": 261,
+   "end": 319,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "insert of the TV screen showing a dating show: an olive penguin in sunglasses, a lilac penguin, an orange penguin in a purple swimsuit and a black penguin in sunglasses around a fire bowl. None is a lead. Small reframe at f305"
+  },
+  {
+   "start": 319,
+   "end": 352,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "f319-334 Pax's face up close reacting (16 frames), then a pull-back f335-343 to Pax and Polly side by side on the sofa, flippers on cheeks, and 9 still frames to the end. No piece reaches 21 frames"
+  }
+ ]
+}

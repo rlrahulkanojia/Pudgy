@@ -1,0 +1,149 @@
+{
+ "skit": "iteration_7/293_videos/PP-Google-Base.mp4",
+ "frames": 218,
+ "fps": 24.0,
+ "curated_by": "curator-v10-31",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a bedroom drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 101,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "medium wide",
+   "angle": "high angle",
+   "setting": "s1",
+   "view": "with a yellow bed with a duck-head bedpost, and a nightstand with a lamp and a mug",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 56,
+     "text": "Pax and Polly lie side by side in bed under the covers, Polly snuggled against him with blushing cheeks while Pax looks at her"
+    },
+    {
+     "start": 56,
+     "end": 80,
+     "text": "Pax closes his eyes and lifts a flipper over the covers while Polly lies beside him watching"
+    },
+    {
+     "start": 80,
+     "end": 101,
+     "text": "Pax rolls onto his side away from Polly and settles down, while Polly props herself up beside him"
+    }
+   ],
+   "props": [
+    "bed",
+    "lamp",
+    "mug",
+    "blanket"
+   ],
+   "prop_events": [],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "slow push-in through the whole shot: bed-band scale 1.004 at f5 rising steadily to 1.091 at f100 (lamp band agrees); compare 0/100 every edge doubled. Otherwise keepable: leads visible, no overlay, on style. The orange penguin-face mug is a generic prop (not a lead)"
+  },
+  {
+   "start": 101,
+   "end": 150,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the duck-head bedpost and the lamp behind her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 101,
+     "end": 129,
+     "text": "Polly sits propped up in bed, opens her eyes and gazes ahead with a sad, worried frown"
+    },
+    {
+     "start": 129,
+     "end": 150,
+     "text": "Polly squeezes her eyes shut, then opens them with tears welling up, still frowning"
+    }
+   ],
+   "props": [
+    "bed",
+    "lamp",
+    "blanket"
+   ],
+   "prop_events": [],
+   "effects": [
+    "tears"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "slow push-in through the whole shot: bedpost/lamp band scale 1.004 at f105 rising steadily to 1.037 at f149; compare 101/149 every edge doubled. A sliver of Pax's body under the covers shows at the bottom-left corner (not listed). No overlay | verification pass 2 (verify_v10_report_v18): framing: Polly is shown from the head down to her belly at the covers, about 40% of the picture height, which is medium close-up, not close-up (more than 60%)"
+  },
+  {
+   "start": 150,
+   "end": 182,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "insert of a computer screen: a search page with an invented logo while a query is typed letter by letter (in-world text). No lead"
+  },
+  {
+   "start": 182,
+   "end": 218,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "pull-back from the screen f182-198 (17 frames) to Polly seen from behind at the computer, then 19 locked frames f199-217 to the end. No piece reaches 21 frames"
+  }
+ ]
+}

@@ -1,0 +1,521 @@
+{
+ "skit": "iteration_7/293_videos/PP-Favor-Base.mp4",
+ "frames": 385,
+ "fps": 24.0,
+ "curated_by": "curator-v10-20",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a bedroom drawn on a plain grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 16,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "16 frames, high wide view of the bedroom: Pax, seen from behind at the bottom, waddles toward the bed where Polly sits under the covers looking at her phone. The bed-foot plush (dark-headed penguin in a rose dress with a navy-teal bow) and the peach penguin-face mug on the right nightstand are generic, neither lead: props"
+  },
+  {
+   "start": 16,
+   "end": 58,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the covers pulled up to his belly and a bedpost topped with a carved duck head beside him",
+   "time": "night",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 30,
+       "screen": "center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 16,
+     "end": 32,
+     "text": "Pax sits up in bed and scoots toward the middle, glancing to the side with wide eyes"
+    },
+    {
+     "start": 32,
+     "end": 58,
+     "text": "Pax grips the edge of the blanket at his chest with one flipper and glances sideways with raised, uneasy brows"
+    }
+   ],
+   "props": [
+    "blanket",
+    "bed"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "camera locked: motion on the bedpost band (y0.25-0.65, x0.82-1.0) scale 1.0000, 0 px, cc 1.000 every 4 frames; compare 16/57 bedpost edges black. No overlay, no lead copy"
+  },
+  {
+   "start": 58,
+   "end": 94,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a yellow headboard, a duck-topped bedpost and a peach lamp behind her",
+   "time": "night",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 58,
+     "end": 68,
+     "text": "Polly sits up in bed holding {ifin} up near her face and peers over it with raised brows"
+    },
+    {
+     "start": 68,
+     "end": 94,
+     "text": "Polly lowers the phone to her lap and looks straight ahead with big pleading eyes and worried brows"
+    }
+   ],
+   "props": [
+    "phone",
+    "blanket",
+    "lamp"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 58,
+     "by": "polly",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: motion on the headboard band (y0.22-0.48, x0-0.25) scale 1.0000, <=1.5 px; compare 58/93 bedpost, lamp and headboard edges black (only the blanket under Polly's flippers shifts). Phone: pale grey back, three lenses, tuft on top = iFin"
+  },
+  {
+   "start": 94,
+   "end": 106,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "12 static frames (bedpost band scale 1.0000, 0 px to f105): Pax holds the blanket at his chest with both flippers, glancing sideways. A slow push-in starts at f106"
+  },
+  {
+   "start": 106,
+   "end": 142,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the covers pulled up around him and a bedpost topped with a carved duck head beside him",
+   "time": "night",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 106,
+     "end": 113,
+     "text": "Pax pulls the blanket up over one shoulder and turns aside, squeezing his eyes shut"
+    },
+    {
+     "start": 113,
+     "end": 142,
+     "text": "Pax holds the blanket raised beside him and gives a flat, narrow-eyed sideways glare"
+    }
+   ],
+   "props": [
+    "blanket",
+    "bed"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "slow push-in with a slight downward drift from f106 to the cut: motion on the bedpost band scale 1.0007 at f106 rising steadily to 1.0256 at f138, content drifting up ~2.4 px/frame (cc >= 0.98); finial template f94->f141 scale 1.010, 17 px up; compare 94/141 doubled bedpost edges"
+  },
+  {
+   "start": 142,
+   "end": 178,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a yellow headboard, a duck-topped bedpost and a peach lamp behind her",
+   "time": "night",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 142,
+     "end": 159,
+     "text": "Polly holds {ifin} in her lap and gazes ahead with big pleading eyes, tilting her head a little"
+    },
+    {
+     "start": 159,
+     "end": 178,
+     "text": "Polly briefly shuts her eyes, then looks ahead again with worried, upturned brows"
+    }
+   ],
+   "props": [
+    "phone",
+    "blanket",
+    "lamp"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 142,
+     "by": "polly",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: lamp band scale 1.0000, 0 px, cc 1.000; compare 142/177 only 40 changed edge px (the end pose matches the start pose)"
+  },
+  {
+   "start": 178,
+   "end": 216,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the covers pulled up around him and a bedpost topped with a carved duck head beside him",
+   "time": "night",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 178,
+     "end": 188,
+     "text": "Pax peeks out from behind the raised blanket, glancing sideways with an uneasy frown"
+    },
+    {
+     "start": 188,
+     "end": 216,
+     "text": "Pax rests a flipper on top of the blanket and stares sideways with narrowed, annoyed eyes"
+    }
+   ],
+   "props": [
+    "blanket",
+    "bed"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "slow push-in with a slight downward drift for the whole shot, from f179: bedpost band scale 1.0009 at f179 rising to 1.0331 at f214, content drifting up ~2.5 px/frame (cc >= 0.97); finial template f178->f215 scale 1.015, 22 px up; compare 178/215 doubled bedpost edges. No static run"
+  },
+  {
+   "start": 216,
+   "end": 254,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a yellow headboard, a duck-topped bedpost and a peach lamp behind her",
+   "time": "night",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 216,
+     "end": 230,
+     "text": "Polly holds {ifin} in her lap and gazes ahead with big pleading eyes and raised brows"
+    },
+    {
+     "start": 230,
+     "end": 234,
+     "text": "Polly narrows her eyes into an annoyed frown, still holding the phone"
+    },
+    {
+     "start": 234,
+     "end": 238,
+     "text": "Polly lets the phone drop out of her flippers onto the blanket"
+    },
+    {
+     "start": 238,
+     "end": 254,
+     "text": "Polly clutches the covers up to her chest and glares ahead with an angry frown"
+    }
+   ],
+   "props": [
+    "phone",
+    "blanket",
+    "lamp"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "drops",
+     "frame": 234,
+     "by": "polly",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: headboard band scale 1.0000, 0 px, cc 1.000 every 4 frames; compare 216/253 bedpost, lamp and headboard edges black. The dropped phone shows the iFin back (pale grey, three lenses, tuft)"
+  },
+  {
+   "start": 254,
+   "end": 276,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "push_in",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the covers pulled up around him and a bedpost topped with a carved duck head beside him",
+   "time": "night",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "props": [
+    "blanket",
+    "bed"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "slow push-in with a slight downward drift from f255: bedpost band scale 1.0009 -> 1.0184 by f272 (cc >= 0.99), content drifting up ~2.5 px/frame. Split at f276, where a quicker reframing move begins as Pax lies down | verification pass 2 (verify_v10_report_v03): verifier v03: the push-in runs f254-272 only (19 frames); from f273 the camera reverses into the reframing pull-back (finial content -3.1 px at f272, back to +1.2 px by f275). A camera move under 21 frames is too_short, so this span cannot flip under U3",
+   "beats_dropped": [
+    {
+     "start": 254,
+     "end": 264,
+     "text": "Pax rests a flipper on the blanket and keeps up a narrow-eyed sideways glare"
+    },
+    {
+     "start": 264,
+     "end": 276,
+     "text": "Pax opens his eyes wide and lifts the edge of the blanket higher with one flipper"
+    }
+   ]
+  },
+  {
+   "start": 276,
+   "end": 286,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "10 frames: Pax drops down onto the pillow under the blanket while the view pulls back and drifts down (finial band from f279: scale 0.979 -> 0.973, content 80 -> 169 px lower, settling at f286). Also a camera move"
+  },
+  {
+   "start": 286,
+   "end": 312,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with his head on the pillow under the covers and a bedpost topped with a carved duck head behind him",
+   "time": "night",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 286,
+     "end": 312,
+     "text": "Pax lies on his side under the blanket with his eyes closed, asleep and barely stirring"
+    }
+   ],
+   "props": [
+    "blanket",
+    "pillow"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked after the reframing move: finial band (y0.30-0.55, x0.84-1.0) scale 1.0000, <=0.1 px vs f286, cc 1.000, every 2 frames to f310; frames identical f286-299 in the band. Only Pax's head and the blanket top show (body under the covers), but his face is fully visible: kept, not lead_hidden"
+  },
+  {
+   "start": 312,
+   "end": 332,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "20 frames: Polly sits in bed sipping from a mint-green tumbler, the iFin lying on the blanket. Quick pull-back f317-322 (headboard band scale 0.970 -> 0.950) then held. Too short either way"
+  },
+  {
+   "start": 332,
+   "end": 385,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "wide",
+   "angle": "high angle",
+   "setting": "s1",
+   "view": "with a large bed with duck-topped bedposts, bedside tables with peach lamps and a long curtain at the right",
+   "time": "night",
+   "size_change": true,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 332,
+     "end": 338,
+     "text": "Pax turns over and sits up in bed beside Polly, who holds a mint-green tumbler"
+    },
+    {
+     "start": 338,
+     "end": 354,
+     "text": "Pax looks at the tumbler while Polly holds it out toward him"
+    },
+    {
+     "start": 354,
+     "end": 362,
+     "text": "Pax takes the tumbler from Polly with his flippers"
+    },
+    {
+     "start": 362,
+     "end": 372,
+     "text": "Pax swings out from under the covers and drops off the side of the bed with the tumbler while Polly smiles with her eyes closed"
+    },
+    {
+     "start": 372,
+     "end": 385,
+     "text": "Pax stands on the floor beside the bed holding the tumbler at his side and takes a small step to the right"
+    }
+   ],
+   "props": [
+    "tumbler",
+    "phone",
+    "bed",
+    "bedside lamps",
+    "penguin plush",
+    "penguin-face mug"
+   ],
+   "prop_events": [
+    {
+     "prop": "tumbler",
+     "event": "hands_over",
+     "frame": 356,
+     "by": "polly"
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "camera locked: curtain band (y0.05-0.40, x0.70-1.0) and lamp band (x0-0.18) scale 1.0000, 0 px, cc 1.000 every 4 frames (lamp band disturbed only f368-372 when Pax passes the left nightstand). time = night for every filled span of this skit: the same bedroom shows a dark starry sky through the round window in [0,16), and the whole scene uses the same dim slate-grey wall (RGB ~187,197,211, darker than the standard pale ground), per the steady-night ruling. Generic props, neither lead: a dark-headed penguin plush in a rose dress with a bow at the foot of the bed, and a peach penguin-face mug on the right nightstand. The iFin lies on the blanket; another phone lies on the left nightstand | verification pass 2 (verify_v10_report_v03): size_change: Pax hops off the bed f364-372 onto the floor in front of it, toward the viewer, and is drawn ~20-25% larger there (head ~0.18 of the width while sitting in bed at f352, ~0.22 standing on the floor at f378; he moves from y~0.47 to y~0.75). The caption's 'the characters stay the same size' is false; flag, no change: Polly's mint-green tumbler (handle, straw lid) carries a small white wa"
+  }
+ ]
+}

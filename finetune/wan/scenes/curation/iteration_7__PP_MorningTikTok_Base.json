@@ -1,0 +1,120 @@
+{
+ "skit": "iteration_7/293_videos/PP_MorningTikTok_Base.mp4",
+ "frames": 170,
+ "fps": 24.0,
+ "curated_by": "curator-v10-02",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a bedroom drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 170,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a yellow bed with duck-topped bedposts between two nightstands with rose-shaded lamps",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 86,
+     "text": "Pax sits up in bed typing on a grey laptop on his lap while Polly sleeps hidden under the blanket beside him"
+    },
+    {
+     "start": 86,
+     "end": 98,
+     "text": "Pax stops typing and glances sideways toward the lump under the blanket"
+    },
+    {
+     "start": 98,
+     "end": 104,
+     "text": "Pax reaches a flipper over and nudges the lump under the blanket"
+    },
+    {
+     "start": 104,
+     "end": 116,
+     "text": "Polly pops her head out from under the blanket holding {ifin} and looks at it while Pax watches her"
+    },
+    {
+     "start": 116,
+     "end": 123,
+     "text": "Polly looks at her phone with her eyes open while Pax sits beside her with the laptop, looking over"
+    },
+    {
+     "start": 123,
+     "end": 142,
+     "text": "Polly closes her eyes and smiles with rosy cheeks over her phone while Pax watches her, the laptop on his lap"
+    },
+    {
+     "start": 142,
+     "end": 152,
+     "text": "Pax pushes the laptop aside and turns toward Polly"
+    },
+    {
+     "start": 152,
+     "end": 170,
+     "text": "Pax wraps his flippers around Polly and hugs her with his eyes closed as a small heart pops up, while she smiles at her phone"
+    }
+   ],
+   "props": [
+    "laptop",
+    "phone",
+    "bed",
+    "blanket",
+    "nightstands",
+    "lamps"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 104,
+     "by": "polly",
+     "is_ifin": true
+    }
+   ],
+   "effects": [
+    "hearts",
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "the whole skit is one shot with a slow, steady push-in: ECC on the bed band y0.6-0.9 gives scale 1.004-1.011 and 4-17 px per 8 frames, every 8-frame step from f0 to f168 (cc 0.95-0.997 where Pax and Polly are out of the band), no static run; compare 0/169 bed and lamp edges doubled. Polly is only a rose lump under the blanket (top of her head) f0-103, Pax is visible throughout. The laptop lid shows a small igloo logo (Pudgy-world, not a real brand). Polly's phone has the pale grey back, lenses and tuft = iFin (crop f120). No overlay in the top third or bottom fifth | verification pass 2 (verify_v10_report_v15): camera: push_in confirmed. ORB similarity fit every 8 frames gives scale 1.0077-1.0090 per step, centred on (0.50, 0.50), no pan/tilt drift, f0 through f168: a single steady push-in; beat 5 [116,142): Polly's eyes are open only f116-122; from f123 she has her eyes closed with blush and an open-beak smile, so 'gazes at her phone' is false for most of the beat. Split at f123"
+  }
+ ]
+}

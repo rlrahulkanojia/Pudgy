@@ -1,0 +1,382 @@
+{
+ "skit": "iteration_7/293_videos/PP-Relocate-Base.mp4",
+ "frames": 273,
+ "fps": 24.0,
+ "curated_by": "curator-v10-10",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "a black necktie"
+ },
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a living room drawn on a plain pale grey background"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "a dining area drawn on a plain pale grey background"
+  },
+  "s3": {
+   "kind": "set",
+   "desc": "a snowy field outside an ice-block igloo"
+  },
+  "s4": {
+   "kind": "set",
+   "desc": "a snowy field with rolling hills under a cloudy sky"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 79,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a cream sofa with scalloped yellow armrests",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "exits",
+     "exits_at": 78,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 66,
+       "screen": "right-center"
+      }
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "exits",
+     "exits_at": 53,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 33,
+       "screen": "right"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 18,
+     "text": "Pax reads a teal book on the sofa while Polly sits beside him looking at {ifin}"
+    },
+    {
+     "start": 18,
+     "end": 27,
+     "text": "Polly sets the phone down on the sofa's armrest"
+    },
+    {
+     "start": 27,
+     "end": 51,
+     "text": "Polly hops off the sofa and waddles away to the right while Pax keeps reading"
+    },
+    {
+     "start": 51,
+     "end": 60,
+     "text": "Pax closes his book and slides down off the sofa"
+    },
+    {
+     "start": 60,
+     "end": 79,
+     "text": "Pax waddles away to the right with the book under his flipper, leaving the phone on the armrest"
+    }
+   ],
+   "props": [
+    "sofa",
+    "teal book",
+    "phone"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "puts_down",
+     "frame": 20,
+     "by": "polly",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "exits",
+   "notes": "locked: ECC on the left sofa-arm band 1.0000 / 0 px f0-78 (f39-45 rows low cc = Pax standing up into it); a full-res crop at f22 and f60 shows the phone on the armrest in the same place. The phone has the pale grey back, three lenses and the tuft = iFin. A faint seam runs down the right edge (the last ~40 px of background are 6 levels lighter) for the whole shot: a compositing edge, not an overlay. Both leads have left by f78"
+  },
+  {
+   "start": 79,
+   "end": 115,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a round table and two wooden chairs",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 79,
+     "end": 91,
+     "text": "Pax and Polly sit across a round table eating sushi rolls, popping pieces into their beaks"
+    },
+    {
+     "start": 91,
+     "end": 103,
+     "text": "Pax chews with his eyes closed and a flipper raised to his face while Polly chews happily"
+    },
+    {
+     "start": 103,
+     "end": 115,
+     "text": "Pax reaches across the table toward his plate while Polly keeps chewing with her eyes closed"
+    }
+   ],
+   "props": [
+    "round table",
+    "plates of sushi rolls"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "locked: consecutive ECC on the table band 1.0000 / 0 px f79-114; compare 80/112: table, chair and pedestal edges overlap. The right-chair band moves only with Polly's body. A pull-back starts at f115"
+  },
+  {
+   "start": 115,
+   "end": 124,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "pull-back f115-123 (table band scale 0.99 -> 0.93 per frame) as Pax gets up from his chair with his plate"
+  },
+  {
+   "start": 124,
+   "end": 190,
+   "boundary": "camera",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a round table and two wooden chairs",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "exits",
+     "exits_at": 144,
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "exits",
+     "exits_at": 183,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 168,
+       "screen": "left-center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 124,
+     "end": 144,
+     "text": "Pax waddles away to the left carrying his empty plate while Polly keeps eating at the table"
+    },
+    {
+     "start": 144,
+     "end": 154,
+     "text": "Polly sits alone at the table and eats the last of her sushi"
+    },
+    {
+     "start": 154,
+     "end": 166,
+     "text": "Polly gathers up her plate and gets down from her chair"
+    },
+    {
+     "start": 166,
+     "end": 190,
+     "text": "Polly waddles off to the left with her plate, leaving the table and chairs empty"
+    }
+   ],
+   "props": [
+    "round table",
+    "plates"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "exits",
+   "notes": "locked: consecutive ECC on the table band 1.0000 / 0 px f124-189 (single blip f168 = Polly passing); compare 125/189: table and pedestal edges overlap, the chairs shift because the leads push them. Pax gone from f144, Polly from f183 (lead-colour pixel counts); f183-189 shows the empty table | verification pass 2 (verify_v10_report_v11): camera locked: pedestal template vs f189 is 0 px from f124 (f123 still 2 px into the pull-back) to f188; beat 1/2 boundary: a sliver of Pax is still at the left edge f140-143 (blue x 0.00-0.04), so 'Polly sits alone' starts at f144, where he exits"
+  },
+  {
+   "start": 190,
+   "end": 213,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with its arched wooden door beside him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 190,
+     "end": 198,
+     "text": "Pax pulls the wooden igloo door shut with one flipper"
+    },
+    {
+     "start": 198,
+     "end": 206,
+     "text": "Pax turns around to face forward, holding a black briefcase"
+    },
+    {
+     "start": 206,
+     "end": 213,
+     "text": "Pax hefts the briefcase and stands ready with a pleased look"
+    }
+   ],
+   "props": [
+    "igloo door",
+    "black briefcase"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "locked: consecutive ECC on the igloo-dome band 1.0000 / 0 px f191-212; compare 190/212: every igloo block edge overlaps. Pax wears a black collar with a necktie. A tracking pan starts at f213"
+  },
+  {
+   "start": 213,
+   "end": 238,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pan_right",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s4",
+   "view": "with the curved wall of an ice-block igloo on the left",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 213,
+     "end": 219,
+     "text": "Pax sets off walking to the right, carrying his black briefcase"
+    },
+    {
+     "start": 219,
+     "end": 238,
+     "text": "Pax waddles along with his eyes closed and a contented smile, the briefcase in his flipper"
+    }
+   ],
+   "props": [
+    "black briefcase"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "tracking pan right following Pax f213-237: the igloo slides left ~46 px per frame (consecutive ECC on the dome band, cc >= 0.99 f214-226) and the hills ~13 px per frame (parallax) while Pax stays in the middle; the igloo leaves the picture at ~f237. Clouds avoided as bands. A pull-back follows from f238"
+  },
+  {
+   "start": 238,
+   "end": 248,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "pull-back f238-247 (tree band scale ~0.97 per frame) as Polly pops up out of Pax's briefcase at f240"
+  },
+  {
+   "start": 248,
+   "end": 259,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "other",
+   "notes": "after a 1-frame rest, a small settling move f249-258 (tree band ty +4 to +11 px and scale 0.99-1.01 per frame): Polly sits in the open briefcase peeking up at Pax, who looks down at her"
+  },
+  {
+   "start": 259,
+   "end": 273,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "14 locked frames (tree band 1.0000 / 0 px; compare 259/272 edges overlap): Polly in the open briefcase leans against Pax, both smiling"
+  }
+ ]
+}

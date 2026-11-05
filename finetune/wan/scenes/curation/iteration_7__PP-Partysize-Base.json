@@ -1,0 +1,350 @@
+{
+ "skit": "iteration_7/293_videos/PP-Partysize-Base.mp4",
+ "frames": 306,
+ "fps": 24.0,
+ "curated_by": "curator-v10-07",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a supermarket aisle with teal shelves stocked with bags of chips"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "a supermarket drawn on a plain pale grey background with pale shelf silhouettes"
+  },
+  "s3": {
+   "kind": "flat",
+   "desc": "an empty space with a plain pale background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 7,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "push_in",
+   "notes": "fast opening punch-in f0-6 (2-7% scale per frame: the shelf unit's outer frame leaves the picture); slows into the steady push-in of the next span from f7"
+  },
+  {
+   "start": 7,
+   "end": 65,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with price tags on the shelf edges",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 7,
+     "end": 13,
+     "text": "Pax stands behind his shopping cart in front of the shelf, looking at the bags of chips"
+    },
+    {
+     "start": 13,
+     "end": 21,
+     "text": "Pax reaches up with one flipper and takes a bag of chips off the shelf"
+    },
+    {
+     "start": 21,
+     "end": 41,
+     "text": "Pax holds the bag of chips up in front of him with a small smile as little hearts float up beside him"
+    },
+    {
+     "start": 41,
+     "end": 47,
+     "text": "Pax drops the bag of chips into his shopping cart"
+    },
+    {
+     "start": 47,
+     "end": 65,
+     "text": "Pax grips the cart handle and stares at the shelf, his eyes narrowing into a determined frown"
+    }
+   ],
+   "props": [
+    "shopping cart",
+    "bag of chips"
+   ],
+   "prop_events": [
+    {
+     "prop": "bag of chips",
+     "event": "picks_up",
+     "frame": 15,
+     "by": "pax"
+    },
+    {
+     "prop": "bag of chips",
+     "event": "puts_down",
+     "frame": 43,
+     "by": "pax"
+    }
+   ],
+   "effects": [
+    "hearts"
+   ],
+   "overlays": [],
+   "in_world_text": [
+    "price tags"
+   ],
+   "travel": "none",
+   "notes": "steady slow push-in through the shot: ECC on the upper shelf band right of Pax (y 0.15-0.36, x 0.60-1.00) vs f8 climbs 1.006, 1.013, ... 1.047 at f40 (cc 0.96-1.00), and the shelf lines keep rising by eye to f64 (fit lost on the repeating stock after f40). No static run"
+  },
+  {
+   "start": 65,
+   "end": 88,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "insert: bags of chips on the shelf with a price tag, the cart's edge below; no lead. Quick punch-in f73-75 inside it"
+  },
+  {
+   "start": 88,
+   "end": 146,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with price tags on the shelf edges",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 88,
+     "end": 102,
+     "text": "Pax stands holding the handle of his shopping cart, a bag of chips inside it, and glances around"
+    },
+    {
+     "start": 102,
+     "end": 107,
+     "text": "Pax lifts the bag of chips back out of the cart with one flipper"
+    },
+    {
+     "start": 107,
+     "end": 121,
+     "text": "Pax holds the bag of chips up beside his face and closes his eyes, thinking"
+    },
+    {
+     "start": 121,
+     "end": 133,
+     "text": "Pax reaches up and puts the bag of chips back on the shelf, patting it into place"
+    },
+    {
+     "start": 133,
+     "end": 146,
+     "text": "Pax lowers his flipper back to the empty cart's handle, blinks slowly and looks ahead"
+    }
+   ],
+   "props": [
+    "shopping cart",
+    "bag of chips"
+   ],
+   "prop_events": [
+    {
+     "prop": "bag of chips",
+     "event": "picks_up",
+     "frame": 103,
+     "by": "pax"
+    },
+    {
+     "prop": "bag of chips",
+     "event": "puts_down",
+     "frame": 124,
+     "by": "pax"
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "price tags"
+   ],
+   "travel": "none",
+   "notes": "camera locked: ECC on the shelf band (y 0.25-0.36, full width) scale 1.0000, 0 px, cc 1.000 at every 4th frame to f144; compare 88/145 keeps the shelf edges black. Top third plain wall above the shelf, bottom fifth plain floor: no overlay"
+  },
+  {
+   "start": 146,
+   "end": 170,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a tall yellow display stand of snack bags under a hanging arrow sign beside him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 146,
+     "end": 158,
+     "text": "Pax stands holding his empty shopping cart and stares at the display of snack bags beside him"
+    },
+    {
+     "start": 158,
+     "end": 163,
+     "text": "Pax blinks and edges the cart a little closer to the display"
+    },
+    {
+     "start": 163,
+     "end": 170,
+     "text": "Pax gazes up at the display with raised brows and his beak dropping open in awe"
+    }
+   ],
+   "props": [
+    "shopping cart",
+    "snack display stand"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: ECC on the top band (y 0-0.30) and the display band (y 0.25-0.50, x 0.55-1.00) both scale 1.0000, 0 px, cc 1.000; compare 146/169 keeps the sign and display edges black. The hanging arrow sign carries no text in this shot (the price text appears only in the later close view, f238+). Bottom fifth plain floor: no overlay"
+  },
+  {
+   "start": 170,
+   "end": 184,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "14 frames: Pax closer, holding the cart, looking up; small thought bubbles rise from his head from f176"
+  },
+  {
+   "start": 184,
+   "end": 204,
+   "boundary": "transition",
+   "keep": false,
+   "drop_reason": "transition",
+   "camera": "tilt_up",
+   "notes": "a big thought cloud drops in from the top and the view rises into it, Pax sliding out of the bottom by f193; the move eases out until f203 (frame diff 0.76 at f203, 0.33 at f204)"
+  },
+  {
+   "start": 204,
+   "end": 230,
+   "boundary": "after_transition",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "notes": "DREAM: inside Pax's thought cloud, filling the whole picture: Polly sits on a plain pale background among open snack bags, munching from a big bag of chips with blush marks and hearts floating up around her. Dropped under v9b's 'dream or thought bubble showing them' copy rule; the picture itself is plain on-style Polly, so this could be flipped if dreams that fill the frame are ruled kept | verification pass 2 (verify_v10_report_v15_manual): flipped to kept: DREAM ruling: from f200 the dream fills the whole picture with no bubble border (the cloud edge last shows at f199), it is drawn on style and has no whole-picture effect; camera at rest from f203 (floor-bag regions raw diff vs f204 <= 5 levels to f229); the cloud wipe starts at f230. So it is an ordinary kept shot under the current ruling; Polly sits among open snack bags with blush marks, eyes cl",
+   "size_change": false,
+   "travel": "none",
+   "props": [
+    "bags of chips"
+   ],
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "framing": "medium",
+   "angle": "eye level",
+   "time": "day",
+   "view": "with open snack bags and scattered fish-shaped crackers around her",
+   "effects": [
+    "hearts",
+    "blush marks"
+   ],
+   "prop_events": [],
+   "setting": "s3",
+   "in_world_text": [],
+   "overlays": [],
+   "beats": [
+    {
+     "start": 204,
+     "end": 211,
+     "text": "Polly sits among open snack bags with her eyes closed, raising a flipper to her beak to nibble a chip"
+    },
+    {
+     "start": 211,
+     "end": 230,
+     "text": "Polly holds the bag of chips up in both flippers and munches happily, eyes closed and cheeks blushing, as hearts float up"
+    }
+   ]
+  },
+  {
+   "start": 230,
+   "end": 244,
+   "boundary": "transition",
+   "keep": false,
+   "drop_reason": "transition",
+   "camera": "static",
+   "notes": "cloud wipe: puffs of cloud cover the dream f230-237 and clear away f238-243 to reveal the snack display under the price sign; settles at f244"
+  },
+  {
+   "start": 244,
+   "end": 255,
+   "boundary": "after_transition",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "11 frames: the snack display under the hanging sign with a price on it; no lead (also no_lead)"
+  },
+  {
+   "start": 255,
+   "end": 273,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "18 frames: Pax with his cart beside the display under the priced sign, looking up at it with a determined frown"
+  },
+  {
+   "start": 273,
+   "end": 306,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "the empty cart alone; the whole display stand slides in from the left and is tipped into the cart, only Pax's flipper visible pushing it f279-297; skit ends on this shot"
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+{
+ "skit": "iteration_7/293_videos/PP-HowManyTimes-Base.mp4",
+ "frames": 204,
+ "fps": 24.0,
+ "curated_by": "curator-v10-04",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a reading corner drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 23,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a low cream desk stacked with books and a tall bookshelf behind it",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 13,
+     "text": "Pax stands to the left of the desk, looking over at the stacked books and blinking once"
+    },
+    {
+     "start": 13,
+     "end": 23,
+     "text": "Pax steps up to the desk and reaches a flipper toward a red book as small thought bubbles rise above his head"
+    }
+   ],
+   "props": [
+    "books",
+    "desk",
+    "bookshelf"
+   ],
+   "prop_events": [],
+   "effects": [
+    "small thought bubbles"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "locked: motion on the bookshelf band (y 0.30-0.62, x 0.6-1.0) scale 1.0000, 0.1 px at cc 1.000 f2-f20 (f22+ Pax's flipper and the book enter the band); compare 0/23 shelf and desk edges black. Small empty thought-bubble ovals rise above Pax from f13; a large thought cloud bursts out at f23 and Polly fades into it at f29, so the span ends at f23. No overlay in the top third or bottom fifth"
+  },
+  {
+   "start": 23,
+   "end": 204,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "a thought bubble showing Polly (later Pax and Polly together) floats above Pax on every frame from f29 to the end, through all five shots: bookshelf f23-49 (cloud bursts out f23, Polly fades in f29, Pax holds the red book), snowy flower meadow f50-84 (Pax holds a bouquet), beach at sunset f85-128, room with a round window and a vase of flowers f129-162, laundry baskets and a lamp f163-203. Hard cuts at f50, f85, f129, f163; nothing in between can be kept, so one span. f23-28 is the empty cloud forming, kept with this run because it is under 21 frames"
+  }
+ ]
+}

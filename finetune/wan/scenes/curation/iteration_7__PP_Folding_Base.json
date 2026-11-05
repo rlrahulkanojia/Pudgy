@@ -1,0 +1,328 @@
+{
+ "skit": "iteration_7/293_videos/PP_Folding_Base.mp4",
+ "frames": 321,
+ "fps": 24.0,
+ "curated_by": "curator-v10-13",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a laundry room drawn on a plain pale grey background"
+  },
+  "s2": {
+   "kind": "set",
+   "desc": "an igloo living room with pale ice-brick walls"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 60,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a washing machine and a laundry basket beside her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 24,
+     "text": "Polly stands beside the washing machine pressing buttons on its panel with her flipper as the drum starts to turn"
+    },
+    {
+     "start": 24,
+     "end": 38,
+     "text": "Polly stretches her flipper out toward the round door of the shaking machine"
+    },
+    {
+     "start": 38,
+     "end": 60,
+     "text": "Polly stands still with her flippers at her sides, watching the colourful laundry spin in the drum"
+    }
+   ],
+   "props": [
+    "washing machine",
+    "laundry basket"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: compare 0/24 and 0/59 keep the laundry basket and Polly's floor shadow edges black, while the washing machine's edges are doubled: the machine itself shakes as it runs (in-world motion). The motion fit on the machine band reads -17 px at cc ~0.95 for that reason. No caption or watermark"
+  },
+  {
+   "start": 60,
+   "end": 106,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a clothesline of pegged-up clothes behind him and a basket of laundry on the floor",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 60,
+     "end": 76,
+     "text": "Pax stands by the clothesline holding a teal shirt down in front of his belly, looking ahead"
+    },
+    {
+     "start": 76,
+     "end": 80,
+     "text": "Pax blinks and lifts the teal shirt up to his chest with both flippers"
+    },
+    {
+     "start": 80,
+     "end": 106,
+     "text": "Pax holds the shirt up in front of him with both flippers, staring ahead with wide eyes"
+    }
+   ],
+   "props": [
+    "teal shirt",
+    "clothesline",
+    "laundry basket"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: motion on the clothesline band (y0.30-0.45) and the floor/basket band (y0.70-0.85) both read scale 1.0000, 0 px, cc 1.000 f64-104. The coral item on the line is a pair of shorts, not Polly. No caption or watermark"
+  },
+  {
+   "start": 106,
+   "end": 122,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "16 frames: Polly carries a laundry basket to the cream sofa and tips clothes onto it. Cut on the same set at f122 (Polly vanishes, Pax appears at the left; profile missed it)"
+  },
+  {
+   "start": 122,
+   "end": 135,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "13 frames: Pax at the left end of the sofa holding an armful of teal clothes. Cut on the same set at f135 (both suddenly sit on the sofa)"
+  },
+  {
+   "start": 135,
+   "end": 179,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a cream sofa heaped with clothes, a round porthole window and a wall shelf of small penguin figurines",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 135,
+     "end": 167,
+     "text": "Pax sits beside Polly on the sofa between heaps of clothes while both stare ahead with wide round eyes"
+    },
+    {
+     "start": 167,
+     "end": 179,
+     "text": "Pax and Polly shut their eyes and lean their heads together, smiling sweetly"
+    }
+   ],
+   "props": [
+    "sofa",
+    "clothes",
+    "wall shelf with penguin figurines"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: shelf band (y0.48-0.58, x0.68-1.0) and window band (x0-0.16) both scale 1.0000, 0 px, cc 1.000 f138-178. Shelf figurines (black-and-white penguin in a yellow beanie and sunglasses, a yellow penguin with blonde hair and glasses, a pale penguin in a starry wizard hat; full-res crop f150) are not Pax or Polly: props, as in PP-FastText. Leads are small (~14% of the height). Cut on the same set at f179"
+  },
+  {
+   "start": 179,
+   "end": 206,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a towering heap of clothes on the cream sofa, a round porthole window and a wall shelf of small penguin figurines",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 179,
+     "end": 193,
+     "text": "Pax sits on top of a towering heap of clothes on the sofa, peering down at Polly, who has her back turned and a flipper raised"
+    },
+    {
+     "start": 193,
+     "end": 206,
+     "text": "Pax squeezes his eyes shut and tips his head back on top of the heap while Polly keeps a flipper raised toward him"
+    }
+   ],
+   "props": [
+    "sofa",
+    "heap of clothes",
+    "wall shelf with penguin figurines"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked within the shot: shelf band constant at -0.9 px vs f106 (a 1 px reframe at the cut) at cc 0.997 for f182-202; compare 179/205 background edges black. Polly is seen from behind the whole shot (lead still identifiable)"
+  },
+  {
+   "start": 206,
+   "end": 232,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "insert: the heap of clothes fills the picture with a white sock poking out; only Pax's flipper reaches in from the left f222-231 to grab it"
+  },
+  {
+   "start": 232,
+   "end": 263,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a towering heap of clothes beside him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 232,
+     "end": 238,
+     "text": "Pax, holding a white sock in one flipper, pulls a second white sock out of the towering heap of clothes"
+    },
+    {
+     "start": 238,
+     "end": 263,
+     "text": "Pax holds the second sock up beside his face and eyes it with a puzzled look, the first sock dangling from his other flipper"
+    }
+   ],
+   "props": [
+    "white socks",
+    "heap of clothes"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: motion on the wall band (y0.05-0.35, x0-0.5) scale 1.0000-1.0001, 0 px, cc 0.999-1.000 f235-262; compare 232/262 wall lines black. Pax ~34% of the height (tuft y0.39 to feet y0.73) -> medium wide"
+  },
+  {
+   "start": 263,
+   "end": 270,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "7 static frames: Pax seen from behind facing the heap, which is drawn soft-focus (static)"
+  },
+  {
+   "start": 270,
+   "end": 294,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "transition",
+   "camera": "tilt_up",
+   "notes": "the view eases up and back (motion ty +6 -> +107 px f270-273) while the blurred heap dissolves into a mountain-of-clothes view against a sky (double exposure f275-293, d1 18-21 falling to 1.9 at f293); Pax slides out of the bottom of the picture f278-285"
+  },
+  {
+   "start": 294,
+   "end": 321,
+   "boundary": "after_transition",
+   "keep": false,
+   "drop_reason": "lead_hidden",
+   "camera": "static",
+   "notes": "static end card of the gag: a hazy, half-transparent mountain of clothes under a sky with clouds and birds; no lead f294-295, then only Polly's small head peeks out from behind the heap at the right edge f296-320 (about 3% of the height). The translucent rendering of the mountain may also be off_style"
+  }
+ ]
+}

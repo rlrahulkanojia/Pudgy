@@ -1,0 +1,177 @@
+{
+ "skit": "iteration_7/293_videos/PP-TurningInBed-Base.mp4",
+ "frames": 168,
+ "fps": 24.0,
+ "curated_by": "curator-v10-13",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a bedroom with a big yellow bed with duck-topped bedposts between two nightstands with peach lamps, drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 53,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "wide",
+   "angle": "high angle",
+   "setting": "s1",
+   "view": "with the bed seen from its foot, white pillows under the curved headboard",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 28,
+     "text": "Pax lies snuggled up behind Polly with a flipper wrapped around her, both with their eyes closed and smiling"
+    },
+    {
+     "start": 28,
+     "end": 35,
+     "text": "Pax lets go of Polly and rolls onto his back, facing forward with his eyes closed"
+    },
+    {
+     "start": 35,
+     "end": 43,
+     "text": "Pax turns over toward the left, lifting a flipper as he rolls away from Polly"
+    },
+    {
+     "start": 43,
+     "end": 53,
+     "text": "Pax lies still with his back to Polly and his eyes closed while she sleeps on, facing the other way"
+    }
+   ],
+   "props": [
+    "bed",
+    "pillows",
+    "nightstands with peach lamps"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "one locked shot for the whole skit (motion on the footboard band y0.72-0.88: scale 1.0000, 0 px, cc 1.000 at every 4th frame f4-f164; compare 0/52 background edges overlap). Pax body height ~18% of the picture -> wide. Lamp bases are a small animal shape, not a penguin. No overlay f0-52 (top third and bottom fifth are plain); the red X icon appears from f53"
+  },
+  {
+   "start": 53,
+   "end": 83,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "graphic_overlay",
+   "camera": "static",
+   "overlays": [
+    "icon"
+   ],
+   "notes": "a red square icon with a white X drawn over the picture above the headboard f53-82, while Pax lies with his back to Polly (the wrong-way verdict of the gag)"
+  },
+  {
+   "start": 83,
+   "end": 137,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "wide",
+   "angle": "high angle",
+   "setting": "s1",
+   "view": "with the bed seen from its foot, white pillows under the curved headboard",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 118,
+       "screen": "left-center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 83,
+     "end": 104,
+     "text": "Pax lies snuggled up behind Polly with a flipper wrapped around her, both with their eyes closed and smiling"
+    },
+    {
+     "start": 104,
+     "end": 110,
+     "text": "Polly turns over to face forward inside Pax's hug, lifting a flipper, her eyes still closed"
+    },
+    {
+     "start": 110,
+     "end": 118,
+     "text": "Polly rolls across in front of Pax to his other side, flippers at her beak, while he turns over behind her"
+    },
+    {
+     "start": 118,
+     "end": 137,
+     "text": "Pax hugs Polly from behind again, both of them now facing the left with their eyes closed and gentle smiles"
+    }
+   ],
+   "props": [
+    "bed",
+    "pillows",
+    "nightstands with peach lamps"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "cut on the same set at f83: the pose jumps from apart (f82, red X) to the hug (f83); profile missed it (identical background). f83-103 repeats the f0-27 hug drawing. Pax is mostly behind Polly f110-115 (outline only), brief. compare 83/136 background edges overlap; motion locked. Green check icon appears from f137"
+  },
+  {
+   "start": 137,
+   "end": 168,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "graphic_overlay",
+   "camera": "static",
+   "overlays": [
+    "icon"
+   ],
+   "notes": "a green square icon with a white check mark drawn over the picture above the headboard f137-167 to the end, while Pax hugs Polly from behind"
+  }
+ ]
+}

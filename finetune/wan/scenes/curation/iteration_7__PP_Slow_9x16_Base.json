@@ -1,0 +1,408 @@
+{
+ "skit": "iteration_7/293_videos/PP_Slow_9x16 Base.mp4",
+ "frames": 389,
+ "fps": 24.0,
+ "curated_by": "curator-v10-18",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "a pair of half-moon reading glasses"
+ },
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "an icy polar seascape under a pale sky"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 31,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with soft clouds and snowy hills on the horizon behind the iceberg he sits on",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 14,
+     "text": "Pax sits on the edge of an iceberg holding {ifin} in both flippers, staring down at the screen"
+    },
+    {
+     "start": 14,
+     "end": 31,
+     "text": "Pax tips his head back with his eyes shut and an open-beaked grin, scratching the back of his head with one flipper"
+    }
+   ],
+   "props": [
+    "phone",
+    "iceberg"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 0,
+     "by": "pax",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: motion on the iceberg band (y 80-99%) scale 1.0000, <=0.2 px, cc 1.000 every 3 frames; compare 0/30 iceberg edges overlap (the sky band fits badly because the clouds drift a little). Phone: pale grey back, three lenses, tuft = iFin. No caption or watermark (equalised scan: only 1-level gradient banding in the sky). The iceberg could in principle float, so the fit was cross-checked on cloud and horizon edges in compare (all overlap)"
+  },
+  {
+   "start": 31,
+   "end": 57,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with soft clouds and snowy hills on the horizon behind the ice floe they sit on",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 31,
+     "end": 38,
+     "text": "Pax scratches the back of his head with his eyes closed, holding {ifin}, while Polly sits reading an open book"
+    },
+    {
+     "start": 38,
+     "end": 57,
+     "text": "Pax opens his eyes and holds the phone out toward Polly, who keeps her book open and eyes it sideways with a frown"
+    }
+   ],
+   "props": [
+    "phone",
+    "book",
+    "ice floe"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 31,
+     "by": "pax",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "static head of a 177-frame shot: motion on the ice-cliff band (y 70-86%) within 0.9 px, scale 0.9997-1.0000, cc 1.000 every frame f32-56; compare 31/55 floe edges overlap. The slow push-in starts at f57 (next span). The small ice chunk in the water drifts on its own (sea band reads +3 to +6 px), the floe does not. No caption or watermark. Because the floe floats, the static call rests on compare 31/55, where cloud and horizon edges overlap too"
+  },
+  {
+   "start": 57,
+   "end": 208,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with soft clouds and snowy hills on the horizon behind the ice floe they sit on",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 57,
+     "end": 74,
+     "text": "Pax holds {ifin} out toward Polly while she keeps her book open and peers at the screen"
+    },
+    {
+     "start": 74,
+     "end": 115,
+     "text": "Polly lowers her closed book onto her lap and squints at the phone that Pax keeps holding out to her"
+    },
+    {
+     "start": 115,
+     "end": 124,
+     "text": "Pax shuts his eyes and lifts his other flipper to his open beak, still holding the phone out to Polly"
+    },
+    {
+     "start": 124,
+     "end": 143,
+     "text": "Pax opens his eyes and keeps holding the phone out while Polly squints at it"
+    },
+    {
+     "start": 143,
+     "end": 158,
+     "text": "Pax stretches his flipper further, pushing the phone closer to Polly while she stares at it"
+    },
+    {
+     "start": 158,
+     "end": 185,
+     "text": "Polly raises a flipper to the side of her head and squints at the phone as Pax holds it up for her"
+    },
+    {
+     "start": 185,
+     "end": 208,
+     "text": "Pax squeezes one eye shut in a wince, still holding the phone up to Polly, who keeps her flipper at her head"
+    }
+   ],
+   "props": [
+    "phone",
+    "book",
+    "ice floe"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 57,
+     "by": "pax",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "slow push-in from f57 to the cut: ECC on the floe band scale 1.004 at f71, 1.018 f103, 1.036 f143, 1.052 f175, 1.066 f207 vs f31 (sky band agrees); f57-68 the fit jitters by up to 14 px before settling into the steady push. Compare 31/207 shows the whole scene scaled up. No caption or watermark. Not a bobbing floe: compare 31/207 shows the clouds and the horizon scaled up with it | verification pass 2 (verify_v10_report_v04): camera_move push_in confirmed: floe band climbs 1.0045 (f69) -> 1.0651 (f201) with a jittery start f57-68; cut at f208 clean; no overlay; beat 2 (f74-143, 69 frames) misses Pax's own action: f115-123 he shuts his eyes and lifts his other flipper to his open beak while still holding the phone out, then opens them at f124; split the beat"
+  },
+  {
+   "start": 208,
+   "end": 226,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "18 frames: the same floe in heavy rain under grey clouds, Polly under a red umbrella and Pax in a yellow hooded raincoat holding his phone"
+  },
+  {
+   "start": 226,
+   "end": 244,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "18 frames: the same floe in falling snow, both in red Santa hats, Polly in a green scarf, Pax holding his phone out to her"
+  },
+  {
+   "start": 244,
+   "end": 288,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "partial",
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 244,
+     "end": 279,
+     "text": "Polly raises a flipper to her glasses and squints hard through them at a phone held up beside her, her brows deeply furrowed"
+    },
+    {
+     "start": 279,
+     "end": 286,
+     "text": "Polly relaxes her brows and gazes through her glasses with her beak slightly open"
+    },
+    {
+     "start": 286,
+     "end": 288,
+     "text": "Polly opens her eyes wide as her glasses slip down below her beak"
+    }
+   ],
+   "props": [
+    "phone",
+    "reading glasses"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 244,
+     "by": "polly",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "keep12 is low because Polly fills the frame and sways; background is a sky gradient over a strip of ice. Camera locked: motion on the sky band scale 1.0001, 0 px, cc 1.000 every 4 frames, and the sloped ice-horizon line sits at the same height in every frame. The phone shows its pale grey back with the lens cluster (tuft out of picture): is_ifin true, written as her phone. Split from the next span at f288, where the glasses are gone, so the outfit is true for every window. No caption or watermark | verification pass 2 (verify_v10_report_v04): camera locked: the sky band is too plain for motion (texture <1%), but the ice-horizon line at the right edge (x 1075) sits at rows 1193-1197 in every frame f244-320; cut at f244 clean; no overlay; beat 1: no flipper holds the phone in the picture (it stands at the right edge; in the shots around this one Pax holds the phone up to Polly), so 'Polly holds up her phone' is not shown; her visible fli"
+  },
+  {
+   "start": 288,
+   "end": 321,
+   "boundary": "same_shot",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "partial",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 288,
+     "end": 313,
+     "text": "Polly leans back with her eyes closed and a contented open-beaked smile"
+    },
+    {
+     "start": 313,
+     "end": 321,
+     "text": "Polly opens her eyes and glances up to the side with raised brows and a worried look"
+    }
+   ],
+   "props": [
+    "phone"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "same locked close-up as the previous span (motion on the sky band scale 1.0001, 0 px through f320; compare 244/320 shows only Polly moving). Glasses gone from f288; the phone stays at the right edge until ~f303, then is out of picture. No caption or watermark"
+  },
+  {
+   "start": 321,
+   "end": 359,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with soft clouds and snowy hills on the horizon behind the iceberg he sits on",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 321,
+     "end": 334,
+     "text": "Pax sits on the iceberg holding {ifin} up in one flipper and stares at it with a flat, half-lidded look"
+    },
+    {
+     "start": 334,
+     "end": 340,
+     "text": "Pax swaps the phone across into his other flipper"
+    },
+    {
+     "start": 340,
+     "end": 359,
+     "text": "Pax keeps staring at the phone with the same flat, half-lidded look"
+    }
+   ],
+   "props": [
+    "phone",
+    "iceberg"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 321,
+     "by": "pax",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: motion on the iceberg band within 0.1 px to f330, then the fit picks up Pax's feet (cc 0.985, <=5 px); compare 321/358 iceberg and cloud edges overlap exactly. Same set-up as span 1. No caption or watermark. The iceberg could in principle float, so the fit was cross-checked on cloud and horizon edges in compare (all overlap)"
+  },
+  {
+   "start": 359,
+   "end": 389,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "phone-screen insert to the end: the iFin's screen fills the picture with a meme post (a caption line of text over a picture of a penguin lying on a beach towel under a parasol), held still; Pax's flippers at the sides. Also graphic text; the penguin in the picture is too small to place"
+  }
+ ]
+}

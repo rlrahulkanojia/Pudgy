@@ -1,0 +1,233 @@
+{
+ "skit": "iteration_7/293_videos/PP-BeachActivities-Base_V2.mp4",
+ "frames": 172,
+ "fps": 24.0,
+ "curated_by": "curator-v10-12",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  },
+  "x1": {
+   "kind": "extra",
+   "desc": "a light brown penguin"
+  },
+  "x2": {
+   "kind": "extra",
+   "desc": "a grey penguin"
+  }
+ },
+ "outfits": {
+  "o1": "a wide orange sun hat with a bow and swim goggles on the brim",
+  "o2": "a lavender polka-dot swimsuit",
+  "o3": "a yellow hard hat with a headlamp"
+ },
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a sunny sandy beach by the sea"
+  },
+  "s2": {
+   "kind": "set",
+   "desc": "a sunny sandy beach in front of a row of colourful seaside shops"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 58,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "notes": "lead_copy: the back cover of Polly's book carries two small panel pictures, the lower one a blue Pudgy-style penguin with a white face (Pax's design, darker hue), visible on every frame she holds the book (best seen f18-30, f150-165). Dropped under the small-depiction ruling; if a verifier rules it a generic penguin, flip to kept with: setting s1, view 'with a striped beach umbrella over her deckchair, a small round side table and the water's edge in the corner', medium wide, eye level, Polly center full in o1+o2, beats [0,15) Polly lounges in the deckchair holding an open book up in front of her, reading / [15,39) Polly picks up her iced coffee from the side table and sips it through the straw with her eyes closed / [39,58) Polly lowers the drink and looks up from her book with wide eyes. Camera evidence: one continuous shot with two whip pans. Camera locked f0-57: ECC on the umbrella-pole band (x 0-0.20, y 0.25-0.60) scale 1.0000, 0 px, cc 1.000 to f57; first move f58 (5 px). The bottom sand band drifts only because the water at the bottom right animates. Clouds drift. No caption or watermark (top third and bottom fifth checked every 12 frames) | verification pass 2 (verify_v10_report_v11): flipped to kept: not a lead depiction: the two back-cover panel pictures are ~20x40 px (on 1080x1920) dark navy-teal penguins, one in a straw hat holding something red, one sitting with a light-blue book; their blue is RGB ~48,97,128 / 93,159,188 (hue ~200 deg), far darker and greener than Pax's periwinkle (RGB ~132,169,238, hue ~220 deg), and no tuft or other Pax feature resolves even at 5x. Generic penguin pictu",
+   "size_change": false,
+   "travel": "none",
+   "props": [
+    "deckchair",
+    "book",
+    "iced coffee",
+    "side table",
+    "beach umbrella"
+   ],
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [
+      "o1",
+      "o2"
+     ]
+    }
+   ],
+   "framing": "medium wide",
+   "angle": "eye level",
+   "time": "day",
+   "view": "with a striped beach umbrella over her deckchair, a small round side table and the water's edge in the corner",
+   "effects": [],
+   "prop_events": [],
+   "setting": "s1",
+   "in_world_text": [],
+   "overlays": [],
+   "beats": [
+    {
+     "start": 0,
+     "end": 13,
+     "text": "Polly reclines in the deckchair holding an open book up in front of her, reading"
+    },
+    {
+     "start": 13,
+     "end": 21,
+     "text": "Polly picks up her iced coffee from the side table and puts the straw to her beak"
+    },
+    {
+     "start": 21,
+     "end": 39,
+     "text": "Polly sips the iced coffee through the straw with her eyes closed, her book in the other flipper"
+    },
+    {
+     "start": 39,
+     "end": 46,
+     "text": "Polly opens her eyes and sets the iced coffee back down on the side table"
+    },
+    {
+     "start": 46,
+     "end": 58,
+     "text": "Polly holds her book up and looks off to the side with wide open eyes"
+    }
+   ]
+  },
+  {
+   "start": 58,
+   "end": 73,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "whip",
+   "notes": "quick pan from Polly across the beach to Pax and the two penguins (content slides right), f58-72; settles at f73 (ECC on the shop band constant from f73). 15 frames"
+  },
+  {
+   "start": 73,
+   "end": 114,
+   "boundary": "camera",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a mound of dug-up sand beside him and a wooden beach sign and umbrellas behind them",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": [
+      "o3"
+     ]
+    },
+    {
+     "id": "x1",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "x2",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 73,
+     "end": 91,
+     "text": "Pax stands in a hole in the sand digging with a small shovel and flings sand over his shoulder while {x1} and {x2} cheer behind him"
+    },
+    {
+     "start": 91,
+     "end": 114,
+     "text": "Pax keeps shoveling sand out of the hole while {x1} and {x2} wave their flippers in the air"
+    }
+   ],
+   "props": [
+    "shovel"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "beach sign"
+   ],
+   "travel": "none",
+   "notes": "camera locked f73-113: ECC on the shop band (x 0-0.20, y 0.33-0.40) vs f73/f74 within 0.5 px, scale 1.000, cc 1.000; second pan starts f114. Background drawn soft-focus; the big cloud drifts left (in-world). Pax is in the hole up to his chest: hard hat, face and flippers visible throughout, blue body showing; read as Pax in a hard hat (no other blue penguin in the skit). The brown and grey penguins are side characters, not lead lookalikes. No overlay in the top third or bottom fifth"
+  },
+  {
+   "start": 114,
+   "end": 126,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "whip",
+   "notes": "quick pan back from Pax's group to Polly (content slides left), f114-125; settles at f126. 12 frames"
+  },
+  {
+   "start": 126,
+   "end": 172,
+   "boundary": "camera",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "notes": "lead_copy: the back cover of Polly's book carries two small panel pictures, the lower one a blue Pudgy-style penguin with a white face (Pax's design, darker hue), visible on every frame she holds the book (best seen f18-30, f150-165). Dropped under the small-depiction ruling; if a verifier rules it a generic penguin, flip to kept with: setting s1, view 'with a striped beach umbrella over her deckchair, a small round side table and the water's edge in the corner', medium wide, eye level, Polly center full in o1+o2, beats [126,149) Polly lounges in the deckchair with her book in her flippers, gazing off to the side and blinking slowly / [149,172) Polly turns back to her book and flips a page as she reads. Camera evidence: camera locked f126-171: ECC on the umbrella-pole band (x 0-0.20, y 0.25-0.60) and the chair band (x 0-0.35, y 0.55-0.75) scale 1.0000, 0 px, cc 1.000; compare 126/171 umbrella, table and chair edges black (only the water's edge and a cloud move). f125 is still 12 px off. Skit ends on this shot. No overlay | verification pass 2 (verify_v10_report_v11): flipped to kept: not a lead depiction: the two back-cover panel pictures are ~20x40 px (on 1080x1920) dark navy-teal penguins, one in a straw hat holding something red, one sitting with a light-blue book; their blue is RGB ~48,97,128 / 93,159,188 (hue ~200 deg), far darker and greener than Pax's periwinkle (RGB ~132,169,238, hue ~220 deg), and no tuft or other Pax feature resolves even at 5x. Generic penguin pictu",
+   "size_change": false,
+   "travel": "none",
+   "props": [
+    "deckchair",
+    "book",
+    "iced coffee",
+    "side table",
+    "beach umbrella"
+   ],
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [
+      "o1",
+      "o2"
+     ]
+    }
+   ],
+   "framing": "medium wide",
+   "angle": "eye level",
+   "time": "day",
+   "view": "with a striped beach umbrella over her deckchair, a small round side table and the water's edge in the corner",
+   "effects": [],
+   "prop_events": [],
+   "setting": "s1",
+   "in_world_text": [],
+   "overlays": [],
+   "beats": [
+    {
+     "start": 126,
+     "end": 149,
+     "text": "Polly reclines in the deckchair with her book in her flippers, gazing off to the side and blinking once"
+    },
+    {
+     "start": 149,
+     "end": 172,
+     "text": "Polly turns back to her book and flips a page as she reads"
+    }
+   ]
+  }
+ ]
+}

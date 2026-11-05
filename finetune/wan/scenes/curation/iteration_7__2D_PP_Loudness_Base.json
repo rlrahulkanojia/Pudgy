@@ -1,0 +1,323 @@
+{
+ "skit": "iteration_7/293_videos/2D_PP_Loudness_Base.mp4",
+ "frames": 321,
+ "fps": 24.0,
+ "curated_by": "curator-v10-14",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "a white collared shirt with a black tie"
+ },
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a bedroom drawn on a plain pale grey background"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "an empty space with a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 20,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pan_left",
+   "notes": "20 frames: Polly asleep in bed, then the camera eases into a move from the first frame (ECC on the wall band drifts from f1, fast f10-19) across to Pax standing at the far nightstand; at rest from f20 (f20 vs f21: 0.0 px)"
+  },
+  {
+   "start": 20,
+   "end": 47,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a nightstand and a lamp with a rose shade beside a yellow bed",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 20,
+     "end": 25,
+     "text": "Pax stands beside the nightstand straightening his black tie with both flippers"
+    },
+    {
+     "start": 25,
+     "end": 29,
+     "text": "Pax lowers his flippers and closes his eyes with a pleased smile"
+    },
+    {
+     "start": 29,
+     "end": 47,
+     "text": "Pax holds his flippers out at his sides and steps forward on tiptoe, glancing sideways"
+    }
+   ],
+   "props": [
+    "bed",
+    "nightstand",
+    "lamp"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "camera at rest from f20: ECC on the wall/headboard band vs f22 is 0.0-0.2 px through f46, compare 20/46 background edges overlap. Only the dark outline of Polly's head shows as a sliver on the right edge (not recognisable, not listed). No caption or watermark (top third and bottom fifth checked at full res)"
+  },
+  {
+   "start": 47,
+   "end": 89,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ],
+     "moves": [
+      {
+       "frame": 63,
+       "screen": "center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 47,
+     "end": 52,
+     "text": "Pax stands to the right of a black briefcase on the floor, one flipper raised, eyeing it"
+    },
+    {
+     "start": 52,
+     "end": 55,
+     "text": "Pax squeezes his eyes shut for a moment"
+    },
+    {
+     "start": 55,
+     "end": 63,
+     "text": "Pax creeps toward the briefcase on tiptoe, lifting one foot at a time"
+    },
+    {
+     "start": 63,
+     "end": 76,
+     "text": "Pax stops beside the briefcase and stretches a flipper out toward its handle"
+    },
+    {
+     "start": 76,
+     "end": 89,
+     "text": "Pax grips the briefcase handle and carefully lifts it off the floor"
+    }
+   ],
+   "props": [
+    "black briefcase"
+   ],
+   "prop_events": [
+    {
+     "prop": "briefcase",
+     "event": "picks_up",
+     "frame": 80,
+     "by": "pax"
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "plain ground, so the camera was judged on the briefcase: ECC on the briefcase corner band (x 0-0.3, y 0.55-0.75) is 0.0-0.1 px f47-71 until Pax's flipper reaches it; briefcase and Pax keep their size. No caption or watermark"
+  },
+  {
+   "start": 89,
+   "end": 91,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "push_in",
+   "notes": "2-frame tail of a small push-in at the start of the bed shot (ECC on the duck-lamp band: f90 scale 1.0017, f91 1.0087, then constant)"
+  },
+  {
+   "start": 91,
+   "end": 140,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a white blanket and pillows, and a duck-shaped lamp and a lamp with a rose shade behind the bed",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 91,
+     "end": 108,
+     "text": "Pax leans over the bed and draws the blanket up over Polly, who sleeps with her eyes closed"
+    },
+    {
+     "start": 108,
+     "end": 113,
+     "text": "Pax bends down toward the top of Polly's head with his eyes open while she sleeps"
+    },
+    {
+     "start": 113,
+     "end": 129,
+     "text": "Pax nuzzles the top of Polly's head with his eyes closed while she sleeps"
+    },
+    {
+     "start": 129,
+     "end": 137,
+     "text": "Pax lifts his head and gazes down at sleeping Polly with his eyes open"
+    },
+    {
+     "start": 137,
+     "end": 140,
+     "text": "Pax straightens up and turns his head to the left, closing his eyes"
+    }
+   ],
+   "props": [
+    "blanket",
+    "pillow",
+    "duck-shaped lamp"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked from f91: ECC on the duck-lamp band (x 0-0.3, y 0.15-0.35) 0.0 px at cc 1.000 f93-137 vs f93; compare 91/139 lamp and Polly edges overlap, only Pax and the blanket fold change. The duck lamp is a yellow duck, not a lead. No caption or watermark | verification pass 2 (verify_v10_report_v15): framing: Pax is drawn at the same size as in the full-body shot [47,89) (head about 356 px wide vs 310 px there, about 37% of the height if whole) and only his head and chest show above the bed, about 26% of the height; Polly's head in the foreground is larger still. That is medium, not medium close-up (ruling: judge by drawn size); beat 2: Pax's eyes are open while he bends down f108-112 and clos"
+  },
+  {
+   "start": 140,
+   "end": 158,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "18 frames: nightstand with a star-and-heart tumbler; only Pax's flipper, shirt and briefcase at the left edge as the briefcase knocks the tumbler over (also lead_hidden)"
+  },
+  {
+   "start": 158,
+   "end": 173,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "15 frames: one in-between frame f158 (Pax at the left edge by the nightstand), then from f159 Pax in a shirt and tie close up, eyes wide, turning fast at f169-172; Polly's head behind him in bed"
+  },
+  {
+   "start": 173,
+   "end": 190,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "17 frames on a plain ground: the tumbler falls into view and Pax's flipper slides under it (f173-186), then a fast pull-back f187-189 reveals Pax lying on his belly"
+  },
+  {
+   "start": 190,
+   "end": 204,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "14 frames: Pax lies on his belly holding the tumbler upright, blinking"
+  },
+  {
+   "start": 204,
+   "end": 223,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "19 frames: Polly sits on a stool at a vanity blow-drying her head with a yellow hair dryer"
+  },
+  {
+   "start": 223,
+   "end": 242,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pan_left",
+   "notes": "19 frames: Polly takes a polka-dot dress on a hanger out of a cream wardrobe; the view shifts f229-232"
+  },
+  {
+   "start": 242,
+   "end": 256,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "14 frames: Polly in a pearl necklace with a handbag at a tall mirror; her reflection in the mirror would also make it lead_copy"
+  },
+  {
+   "start": 256,
+   "end": 273,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "17 frames: Pax lies in bed under the blanket, eyes open"
+  },
+  {
+   "start": 273,
+   "end": 321,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "off_style",
+   "camera": "static",
+   "overlays": [
+    "end card"
+   ],
+   "notes": "ad end card in another style (ruling 'Ad end cards'): real 3D-rendered Pax and Polly plush toys fading in on a pale ground f273-283, then the SHOP / LINK IN BIO end card with the plushes and logo f284-320 (also ad_merch / graphic_overlay). One reason, one span"
+  }
+ ]
+}
