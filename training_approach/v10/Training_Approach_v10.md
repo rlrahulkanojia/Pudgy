@@ -1,8 +1,9 @@
 # Training Approach v10: production reels, end to end (final stage)
 
 **In one sentence:** fine-tune the production model (`pudgy-v8-merged` + E5) on the client's
-published Instagram reels, together with the 99 skits, so that each *shot* behaves like a
-production shot. Do it through the **high-noise expert first**, where layout, staging and motion
+production skits (the 186 new clean `_Base` exports in `iteration_7`, many of them the clean
+versions of its Instagram reels), together with the 99 skits v9b used, so that each *shot*
+behaves like a production shot. Do it through the **high-noise expert first**, where layout, staging and motion
 are decided (the expert v9b-1 left frozen). Then assemble end-to-end reels with the shot pipeline the
 long-form box already runs.
 
@@ -10,11 +11,11 @@ long-form box already runs.
 |---|---|
 | **Base** | Wan2.2-I2V-A14B. Low-noise: `pudgy-v8-merged` (v7fixed + v8@550). High-noise: v2 golden. Phone: E5 embedding. The production setup in [`README` v9](../v9/README.md) |
 | **Trains** | **Stage 1:** a fresh **high-noise** LoRA (rank 16), with the low-noise expert frozen. **Stage 2 (only if needed):** a low-noise LoRA at a lower lr, with a preservation loss. Two files, each gated on its own and each bisectable |
-| **Data** | `v10_reels`: the 217 reels in `~/Documents/PudgyReels` (51.9 min, measured §2), curated to static or tagged-camera spans, **plus the already curated `v9b_535` skit windows**, plus 35% v8 replay |
+| **Data** | `v10_scenes_748`: **745 trainable windows** (18.2 min, 157 skits) from the clean `iteration_7` bases, **plus `v9b_535`'s 348 skit windows** (U7), plus 35% v8 replay: ≈ 1,570 clips after the holdout (§3). The 217 Instagram reels were the first plan; the clean bases replaced them on 2026-11-04 (§2) |
 | **Output** | an end-to-end reel = a premise → a shot list → a keyframe per shot → one generation per shot (I2V or FLF) → QA → cuts, caption text, watermark and music added **in post** |
 | **Budget** | ≈ 2.5–3 weeks of wall clock on one A100 80 GB: Phase 0 ≈ 1.5 days, prep ≈ 1 week (mostly CPU and curation), Stage 1 ≈ 1 day of training + ≈ 1.5 days of eval, Stage 2 the same if it runs |
 | **If v10 fails its gate** | production stays v8merged + E5, and the v10 work ships as pipeline gains (keyframes, FLF, QA). There is always a final deliverable |
-| **Status** | **draft, 2026-11-01; data curated 2026-11-04.** U1 is answered: the client sent clean `_Base` masters as `Data/raw/iteration_7` (293 videos; 190 new skits). 186 were curated and every trainable span independently verified (`finetune/wan/scenes/CURATION_v10.md`, `VERIFY_v10.md`). Captions: `scenes/captions_v10_windows.jsonl`, from `compile_captions_v10.py`: **637 kept windows (15.4 min, 144 skits)**, plus 108 U3 camera-move windows (2.8 min): **745 train**. 3 U5 lookalike windows (Fixer) wait on the client. **U3 = yes** (2026-11-04). **The client answered U5 and U9 on 2026-11-05** (§7). U2, U4 and U6–U8 are still open. Captions moved to `Data/processed/v10_scenes_748/` |
+| **Status** | **draft, 2026-11-01; data curated 2026-11-04.** U1 is answered: the client sent clean `_Base` masters as `Data/raw/iteration_7` (293 videos; 190 new skits). 186 were curated and every trainable span independently verified (`finetune/wan/scenes/CURATION_v10.md`, `VERIFY_v10.md`). Captions: `scenes/captions_v10_windows.jsonl`, from `compile_captions_v10.py`: **637 kept windows (15.4 min, 144 skits)**, plus 108 U3 camera-move windows (2.8 min): **745 train**. 3 U5 lookalike windows (Fixer) wait on the client. **U3 = yes** (2026-11-04). **The client answered U5 and U9 on 2026-11-05** (§7). `v9b_535`'s windows checked for the yellow-foot design on 2026-11-09: none (U9). U2, U4 and U6–U8 are still open. Captions moved to `Data/processed/v10_scenes_748/`. **Next:** Phase 0, then the holdout and clip cutting on the GPU box |
 
 ---
 
@@ -27,7 +28,7 @@ Every row is a measurement from an earlier run, not a preference.
 | 1 | **v9b-1** trained a rank-32 **low-noise** LoRA on 348 skit windows + 35% replay. By step 100 every v8 motion label had lost margin, crying by −0.10. Held-out motion fell 9 → 6/12 (R1 ✗) and R2 was 1.066 at t = 0.85 ([REPORT_v9b](../../docs/training_reports/v9/REPORT_v9b.md)) | Don't put the scene behaviour into the low-noise expert first. That is where v8's labels live, and they are what regressed |
 | 2 | v9b-1's scene gain **didn't use the caption**: text-attributable gain −0.0008, CI spanning 0, scene caption choice 6/15 → 6/15. v9c-phone showed the same thing (99.6% caption-independent) | Captions must carry what frame 0 doesn't (ordered beats, entrances, expression changes). The stage must also be measured on whether it uses them (G3) |
 | 3 | v9c2's x₀ probe: what a shot ends up showing is **settled before the high-noise → low-noise switch** (12/12 at t = 0.9, 5/6 at 0.95) | Staging, travel and beat order are high-noise decisions, so **Stage 1 trains the high-noise expert**. That also leaves the low-noise expert, and v8's Tier-1 labels, **unchanged by construction** |
-| 4 | v5: expression data on the high-noise expert **collapsed prompt control** (SSIM 0.9692 between opposite prompts). ANALYSIS_v7 §4: in-place actions have ≈ 0 between-label variance at high noise | That was in-place data, which carries no layout signal. Reels do: positions, entrances and staging differ per caption. The v5 failure is still the main risk of Stage 1, so G3 (does it use text?) and G4 (do v8 prompts still separate?) are gates, not reports |
+| 4 | v5: expression data on the high-noise expert **collapsed prompt control** (SSIM 0.9692 between opposite prompts). ANALYSIS_v7 §4: in-place actions have ≈ 0 between-label variance at high noise | That was in-place data, which carries no layout signal. Production skits do: positions, entrances and staging differ per caption. The v5 failure is still the main risk of Stage 1, so G3 (does it use text?) and G4 (do v8 prompts still separate?) are gates, not reports |
 | 5 | v9b-1's damage was complete by step 100, and step 50 was never scored. v8 plateaued by step 300; v9c by step 125 | Lower lr and rank than v9b; **score from step 50**, every 50 |
 | 6 | 35% replay didn't protect motion in v9b-1. The preservation loss exists (v9c2 pivotal, with the block-swap fix), and in expectation it equals replay, with a zero-variance target (RESEARCH_v9c_fixes C9) | Keep 35% replay **and** add preservation on replay prompts. Neither alone is trusted |
 | 7 | E5 was trained through v8merged (low) + **golden (high)** | Any change to the high-noise expert means re-checking the phone with ID1 (G5) |
@@ -38,6 +39,12 @@ Every row is a measurement from an earlier run, not a preference.
 ---
 
 ## 2. The reels, measured (2026-11-01)
+
+> **Superseded as the training source on 2026-11-04.** The client sent the clean `_Base`
+> exports (`Data/raw/iteration_7`, route A, U1). 89 of the 217 reels now have a clean base and
+> 128 older ones have none (`reels_without_base.txt`). v10 trains on the bases (§3). This
+> section is kept as the record of why the masters were asked for. The reels stay the few-shot
+> library for §6.
 
 Source: `~/Documents/PudgyReels/`. 217 originals plus `playable/` (H.264 re-encodes of the same
 217); `links.txt` holds 217 `instagram.com/reel/<code>` URLs. **The originals are the source of
@@ -69,83 +76,91 @@ truth**: `playable/` is a second-generation encode.
 captions, UI and live action, so the estimate is **35–50% → 18–26 min**. That is about 2–2.7× v9b's
 footage, or ≈ 27–35 min together with `v9b_535`. It is enough to shift staging, acting and
 pacing priors. It is **not** enough to teach new physics or new characters from text alone.
+**Measured on the clean bases instead (2026-11-05):** 47% of the frames kept, 18.2 min
+trainable; ≈ 27 min together with `v9b_535`, before the holdout.
 
 ---
 
-## 3. Data: `v10_reels`
+## 3. Data: `v10_scenes_748` + `v9b_535`
 
-### 3.1 Ingest (first, before any analysis)
+### 3.1 Ingest: done (2026-11-04)
 
-1. Copy the 217 originals and `links.txt` into `Data/raw/iteration_7_reels/` (raw, never
-   edited), with a `README.md` and `CHANGELOG.md`. Mirror it to Azure with
-   `scripts/mirror_data_to_azure.py` (`.venv-dashboard/bin/python`). `playable/` is not mirrored;
-   it can be rebuilt.
-2. MD5 manifest. Record each reel's shortcode, URL, resolution, fps, duration and bitrate (the
-   §2 probe, as `finetune/wan/reels/profile_reels.py`).
+`Data/raw/iteration_7/`: 293 clean `_Base` exports at 1080×1920 (13.2 Mbps median, about 20×
+the Instagram copies), with `README.md`, `CHANGELOG.md` and `reel_matches.tsv`, mirrored to
+Azure. 99 are byte-identical re-sends of iteration_1/2 and 190 are new skits. The 217 reel
+files stay in `~/Documents/PudgyReels/`, not ingested: they are needed only as the §6 few-shot
+library and for the next ask (the 128 reels without a base).
 
-### 3.2 Clean frames: captions and watermark
+### 3.2 Clean frames: route A delivered
 
-The order of preference:
+The bases carry no meme caption and no watermark, so no loss mask (route B) or inpainting
+(route C) is needed. The few spans where a base still showed a caption, a handle or an end card
+were dropped as `graphic_overlay` or `ad_merch`. Routes B and C stay the fallback only if the
+128 reels without a base are ever used. G2's OCR check stays a gate either way.
 
-| route | what | cost | risk |
-|---|---|---|---|
-| **A. Client masters** (recommended, U1) | the client made these reels. Ask for the **caption-free, watermark-free exports** at 1080×1920, 24 fps, the same `_Base` exports iteration_1/2 arrived as | a client ask; nothing on our side | timing |
-| B. Loss mask | OCR the caption and watermark boxes per frame (dilated) → a pixel mask → a latent mask (÷ 8). Those tokens are excluded from the loss. Needs the per-token loss-weight patch, the same one the motion-weighted loss needs (not yet in training) | ≈ 2–3 days | frame 0 still shows the text. At inference our keyframes carry none, but text-bearing first frames must never reach eval |
-| C. Inpaint | video inpainting of the text boxes; the text sits mostly over flat pale ground | ≈ 2 days + review | smears on outlines when text crosses a character. Those spans get dropped |
+### 3.3 Curation: done (2026-11-04, client answers applied 2026-11-05)
 
-**Recommendation:** start route A on day 1, and build route B in parallel as the fallback. Route
-C only for spans where text sits on flat ground. **A span whose text crosses a lead is dropped** under
-B and C. Gate G2 checks for rendered text either way.
+186 of the 190 new skits curated with the v9b machinery (`finetune/wan/scenes/`), the v9b
+schema and [`CURATION_v10.md`](../../finetune/wan/scenes/CURATION_v10.md). Every trainable span
+was checked by an independent verifier ([`VERIFY_v10.md`](../../finetune/wan/scenes/VERIFY_v10.md));
+about 1 in 3 got a fix. Camera moves are tagged (U3), side characters follow the client's
+ruling (U5) and the yellow-foot design is out (U9). The reel-only fields (caption boxes, the
+OCR'd premise) weren't needed.
 
-### 3.3 Curation (the v9b machinery, extended)
+### 3.4 Normalisation (at prep, on the GPU box)
 
-Reuse `finetune/wan/scenes/` (curate_tools, `span_motion_check.py`, `curate_check.py`, the
-CURATION brief): curators by batch, then verification passes over every kept span. New fields
-and rules for reels:
-
-- **caption and watermark boxes** per span, frame-ranged (for route B/C and for G2);
-- **camera**: `static` or a tagged move (`push_in`, `pull_back`, `pan_l/r`, `whip`); see U3;
-- **cast**: leads, plus side characters described by look. The client accepted the black-and-white
-  penguin and ruled out yellow earmuffs, grandpa and the red-scarf penguin (U5). Unresolved
-  lookalikes are dropped, as with Polly's mum in v9b;
-- **drop**: live action, UI inserts, title and text cards, ads and merch, lead depictions, effects
-  (vignettes, time-lapses, colour washes), cross-dissolves;
-- **premise**: the OCR'd meme line per reel ("When your package says 'arriving soon'…"). It is
-  **metadata for the story layer (§6), never in a training caption**.
-
-### 3.4 Normalisation
-
-- **fps (U4):** 24 fps stays. The 30 fps reels get a cadence test in Phase 0. A 24→30
-  pulldown gets inverse-telecined to exact 24. A native 30 fps reel is dropped, not resampled:
-  v8 measured that resampling hand-drawn animation judders or ghosts outlines.
-- **Size:** → 480×854 (Lanczos) → centre crop 480×848, as v9b. Landscape and square reels are
-  dropped.
+- **fps (U4):** 739 of the 745 trainable windows are at 24 fps. The other 6 (238 frames) are
+  `PP_CuteFit-BASE.mp4` at 29.97 fps: cadence test at prep, inverse telecine if pulldown, drop
+  if native 30. Never resampled (v8: resampling hand-drawn animation judders or ghosts outlines).
+- **Size:** 1080×1920 → 480×854 (Lanczos) → centre crop 480×848, as v9b. 6 skits have 4 px
+  black columns at both edges (`PILLARBOX` in their spans): crop them first.
 - **Buckets:** f21 · f33 · f49 · f81, plus **f121** if Phase 0 #3 passes. Windows are
-  non-overlapping and never cross a cut. The lead is visible in at least half the window.
+  non-overlapping, never cross a cut, and need the lead in at least half the window.
 
-### 3.5 Captions
+### 3.5 Captions: done
 
-v9b's compiler (`scenes/captions_v9b.py`), unchanged in form:
-`STYLE. SETTING. CHARACTERS (registry anchors, screen side, outfit). BEATS in order
-("first …, then …"), with a speed word. EXPRESSION changes. CAMERA clause.`
-
-- D10 still holds: **no v8 action clause verbatim**, with the lint in place.
-- The camera clause is "fixed camera, locked-off shot, …" for static spans, and explicit wording for
-  tagged moves (U3).
-- No on-screen text is transcribed, and nothing names the meme caption.
-- A scene sheet per reel, so consecutive shots share wording.
+`Data/processed/v10_scenes_748/captions_v10_windows.jsonl` (748 rows, 745 trainable), built by
+`finetune/wan/scenes/compile_captions_v10.py` with v9b's compiler (`scenes/captions_v9b.py`)
+unchanged. That compiler still reproduces all 348 of v9b's captions exactly. Structure:
+`STYLE. CHARACTERS (registry anchors, screen side, outfit). SETTING. BEATS in order.
+FRAMING, ANGLE and CAMERA clause.` Every caption passes prep's lint: D10 (no v8
+action clause verbatim), no lead colour words outside the anchors, no on-screen text.
 
 ### 3.6 Mix and holdout
 
-| part | source | share |
-|---|---|---|
-| reel windows | `v10_reels` (curated) | ≈ 45% |
-| skit windows | `v9b_535`'s 348 scene windows (curated and verified; the 6 held-out skits stay out) | ≈ 20% |
-| v8 replay | `prep_v9` builders, stratified per (character, label), D10 anchors | **35%** |
+| part | source | windows | share |
+|---|---|---|---|
+| iteration_7 scene windows | `v10_scenes_748`, trainable rows minus the holdout | ≈ 670 | ≈ 43% |
+| v9b skit windows | `v9b_535`'s 348 scene windows (U7; v9b's 6 held-out skits stay out) | 348 | ≈ 22% |
+| v8 replay | `prep_v9` builders, stratified per (character, label), D10 anchors | ≈ 550 | **35%** |
+| **total** | | **≈ 1,570** | |
 
-**Holdout:** 20 whole reels (≈ 10%), stratified by cast (single and two-character, with and
-without the yellow penguin), set type and camera tag, plus v9b's 6 held-out skits. From these
-come the Tier-1 scene windows (with distractor captions) and the Tier-2 shot suite.
+**Holdout:** ≈ 16 whole iteration_7 skits (≈ 10% of 157), chosen at prep and stratified by cast
+(single and two-character; 101 skits have a two-shot), set type (flat vs set) and camera (static
+vs a move; 64 skits have one), plus v9b's 6 held-out skits. Their rows are removed before
+training. From these come the Tier-1 scene windows (with distractor captions) and the Tier-2
+shot suite.
+
+### 3.7 v10's new data against v9b's (2026-11-05)
+
+Same pipeline (480×848, 24 fps, the same compiler) and no shared footage: no common files or
+names, and the closest frame hashes are different skits.
+
+| | v9b (trained in v9b-1) | v10 new (`v10_scenes_748`) |
+|---|---|---|
+| source | iteration_1 + 2, 99 skits curated | iteration_7, 186 skits curated |
+| scene windows | 348 (after a 6-skit holdout) | 745 (before the holdout) |
+| skits / minutes | 78 / 8.7 min | 157 / 18.2 min |
+| buckets f21 / f33 / f49 / f81 | 46 / 21 / 24 / 10% | 47 / 21 / 23 / 9% |
+| both leads / Pax only / Polly only | 45 / 34 / 20% | 44 / 30 / 26% |
+| camera moves | 0% | 14.5% (push-in 79, pan 17, pull-back 10, other 2) |
+| framing medium wide / wide / medium close-up or tighter | 43 / 18 / 14% | 60 / 9 / 9% |
+| high angle | 1% | 5% |
+| side character | 2% | 4% |
+| yellow-foot design | none (checked 2026-11-09, U9) | excluded (3,154 frames) |
+
+Label words that stay thin even combined: surprised (10 + 6 windows), confused (5 + 6),
+laughing (10 + 5).
 
 ---
 
@@ -167,7 +182,7 @@ come the Tier-1 scene windows (with distractor captions) and the Tier-2 shot sui
 **Why rank 16 and lr 3e-5:** v9b's rank 32 / lr 5e-5 did all its damage by step 100. This is
 0.6× the lr and half the rank, so a smaller per-step weight change (the exact size is unmeasured;
 Tier 0's ‖τ‖ trajectory will show it), with checkpoints dense enough to stop early. With about
-1,600 clips (≈ 1,050 scene windows + 35% replay), 300 steps × 8 is ≈ 1.5 epochs. v9b was already
+1,570 clips (≈ 1,020 scene windows + 35% replay, §3.6), 300 steps × 8 is ≈ 1.5 epochs. v9b was already
 at 3.0 epochs by step 200.
 
 **Compute** (A100 80 GB, v9b's measured 187 s per step at 480×848): Stage 1 ≈ 16–20 h for 300
@@ -184,16 +199,16 @@ f81 ≈ 8–12 min per clip. **A second GPU roughly halves the eval.** Verify ev
 | # | test | decides |
 |---|---|---|
 | 1 | **Tier 2 on the existing v9b@100 and v9b@200** (Azure `v9b/weights/`) vs v8merged, on the 8-job scene suite plus 52 v8 `core` prompts. v9b-1 was never generated | whether low-noise scene training made scenes *visibly* better despite failing R1. If yes, U2's trade-off is real and Stage 2 moves up. If not, the low-noise route is closed |
-| 2 | **Baseline**: v8merged + golden on the held-out reels' shots (first frame + v10 caption, 3 seeds; and FLF with the real last frame) | the "before" for G1 and G2 |
+| 2 | **Baseline**: v8merged + golden on the held-out skits' shots (first frame + v10 caption, 3 seeds; and FLF with the real last frame) | the "before" for G1 and G2 |
 | 3 | **f121 check**: v8merged at 121 frames, 480×848, 6 prompts × 3 seeds vs the same at f81: drift, loop-back, end-of-clip degradation | whether the f121 bucket exists (U6) |
-| 4 | **Compression check**: the same skit shot from the clean `_Base` export and from its Instagram reel (the one exact pair: `DInIYt4Nb1C` ↔ `PP-Burrito-Base.mp4`), both through the VAE at 480×848: lead-box PSNR and banding by eye | whether 663 kbps footage is trainable as delivered, or needs masters (U1) |
-| 5 | **30 fps cadence**: per-frame difference periodicity (period 5 ⇒ pulldown) on all 65 | U4 |
+| 4 | ~~**Compression check**~~ (reel vs clean base through the VAE) | **not needed**: v10 trains on the clean masters (13.2 Mbps median), not the 663 kbps reels (U1) |
+| 5 | **30 fps cadence**: per-frame difference periodicity (period 5 ⇒ pulldown), now on one file: `PP_CuteFit-BASE.mp4` (29.97 fps, 6 windows) | U4; cheap enough to run at prep |
 
 ### 5.1 Gates (per stage, per checkpoint; the winner is the passing checkpoint with the best G1)
 
 | id | check | bar |
 |---|---|---|
-| **G1** | **Production preference**: blind A/B on held-out reel shots (same first frame, caption and seed), v10 vs v8merged, judged by the user/team plus a Claude judge pre-validated against them | **v10 preferred**, exact one-sided binomial at α = 0.05: **≥ 48 of 80** paired judgements (60%). Sized for 0.85 power at a true 65% preference; 67 judgements would give only 0.78 |
+| **G1** | **Production preference**: blind A/B on held-out skit shots (same first frame, caption and seed), v10 vs v8merged, judged by the user/team plus a Claude judge pre-validated against them | **v10 preferred**, exact one-sided binomial at α = 0.05: **≥ 48 of 80** paired judgements (60%). Sized for 0.85 power at a true 65% preference; 67 judgements would give only 0.78 |
 | **G2** | **Automatic quality** on the same clips: duplicate leads = 0 (`dupcheck`); zoom ≤ 3% on static-camera prompts; motion ratio 0.7–1.3 vs the real shot; identity (DINO crop similarity to frame 0) ≥ v8merged; **no rendered text or watermark** (OCR on generated frames finds nothing absent from frame 0) | all hold |
 | **G3** | **Uses the caption**: high-noise Tier 1 (`dcls_asset_v9.py --expert high`, t 0.95 / 0.92) on held-out scene windows, true caption vs distractors (beat order swapped, leads' actions exchanged, another shot's action) | text-attributable gain < 0, CI excluding 0. **v9b-1 failed exactly this** |
 | **G4** | **v8 prompts still work**: Tier-2 `core` (52 prompts) label 1-NN per kind within 0.1 of v8merged; `compose` motion ≥ v8merged. Stage 2 also gets low-noise R1 and R2 at the bar U2 sets. Stage 1 leaves the low-noise Tier 1 unchanged by construction; this is verified once | all hold |
@@ -211,12 +226,13 @@ v10 trains shots. A reel is assembled by the pipeline in `finetune/wan/longform_
 
 1. **Premise → shot list.** A Claude prompt layer (`docs/documents/Prompt_Compiler_Spec.md`)
    turns a meme premise into 3–6 shots, each a v10 caption compiled from the registry. **The
-   217 reels are its few-shot library**: premise (OCR) ↔ shot list (curation) ↔ video, so
-   pacing (≈ 3–4 shots, 1.5–2.6 s each) is calibrated on the client's own reels.
+   reels with a clean base are its few-shot library** (89 of 217, `iteration_7/reel_matches.tsv`):
+   premise (OCR'd from the reel) ↔ shot list (the base's curation) ↔ video, so pacing (≈ 3–4
+   shots, 1.5–2.6 s each) is calibrated on the client's own reels.
 2. **Keyframes.** I2V needs a first frame per shot. Three sources: the client's frames;
    composites (plates + character cut-outs, `keyframes.py`); or the previous shot's last frame
-   within a set. **New sets and new staging need a keyframe generator** (an image LoRA on the reel
-   frames, with text removed). This is the main gap for truly new reels: **workstream v10-K**,
+   within a set. **New sets and new staging need a keyframe generator** (an image LoRA on frames
+   from the clean bases, which carry no text). This is the main gap for truly new reels: **workstream v10-K**,
    which can run alongside Stage 1.
 3. **Generate** each shot with v10 (I2V, or FLF where the layout must hold: two characters + props,
    as v8 found).
@@ -231,15 +247,15 @@ v10 trains shots. A reel is assembled by the pipeline in `finetune/wan/longform_
 
 | # | decision | recommendation | why |
 |---|---|---|---|
-| U1 | **Ask the client for clean masters** of the 217 reels (no captions, no watermark, 1080×1920, 24 fps)? | **yes, day 1**; build the loss mask (§3.2 B) in parallel as the fallback | they produced them, iteration_1/2 came as clean `_Base` exports, and it removes the biggest data risk at no cost to us. Also confirm the client is happy for its published reels to be training data |
+| U1 | **Ask the client for clean masters** of the 217 reels (no captions, no watermark, 1080×1920, 24 fps)? | ✅ **done: the client sent 293 clean `_Base` exports on 2026-11-04** (`iteration_7`, for training). 89 of the 217 reels now have a base; the 128 older ones without one are listed for a later ask | it removed the biggest data risk: no loss mask, no inpainting, no 663 kbps footage |
 | U2 | **What "best" means** for the final gate: production preference (G1) first, with v8 label guardrails (G4), or v9's strict per-label R1 | **G1 first, G4 as the guardrail**; R1 reported, not gating Stage 1 | v9's R1 is measured on 1024² single-character studio clips. The final product is 9:16 reels. Phase 0 #1 shows what the strict bar costs |
 | U3 | Camera moves: include tagged spans (≤ 25%, explicit camera clause) or static only | **include, tagged**: ✅ **decided yes, 2026-11-04** (108 windows, 14.5% of the 745 trainable; `processed/v10_scenes_748`) | push-ins and pans are part of the reel style; v9b set them aside for "a later camera stage", and this is the last stage. G2's zoom bar guards static prompts |
-| U4 | 30 fps reels (65 of 217) | inverse telecine if pulldown; **drop if native 30** | no resampling of hand-drawn timing (v8) |
+| U4 | 30 fps footage: was 65 of 217 reels; now **one base**, `PP_CuteFit-BASE.mp4` (29.97 fps, 6 windows) | inverse telecine if pulldown; **drop if native 30** | no resampling of hand-drawn timing (v8) |
 | U5 | New characters: names and registry phrases (yellow earmuffs, black-and-white, grandpa, bunny hood, …); is the **blue penguin in a red scarf and overalls** Pax or someone else? | ✅ **client answered, 2026-11-05.** Out of training: the red-scarf penguin, yellow earmuffs and the old bearded penguin (no names), and the bunny costume (a one-off). Accepted: the black-and-white penguin. The pearl-necklace penguin is Polly dressed up, so Purse, CancelPlans and PoopBreak train. **Still open:** Fixer's stubble and goggles (3 windows held), and whether other unnamed side penguins stay (25 trainable windows, kept for now) | a Pax lookalike in training teaches "two Paxes", the Polly's-mum case |
 | U6 | f121 (5 s) bucket | **only if Phase 0 #3 passes** | A14B has only seen 21 latent frames; 31 is extrapolation |
-| U7 | Include `v9b_535`'s skit windows | **yes** | curated and verified already, and the same production domain |
+| U7 | Include `v9b_535`'s skit windows | **yes** | curated and verified already, the same production domain, no footage shared with iteration_7 (§3.7), and free of the yellow-foot design (U9) |
 | U8 | Stage 2 (low-noise) | **conditional** on Stage 1 passing and a visible detail gap | the low-noise expert is where v9b-1 regressed |
-| U9 | The **yellow-foot variant** in iteration_7: current flat drawing, but yellow feet and beak (hue ≥ ~42°). About 12 skits, ~3,000 frames: Affection, Bromance, LastBite, QUALITYTIME, SkinCare, Upset, SAMEROOM, Blanket, ALREADYSEENIT, Wash, … | ✅ **exclude; client answered, 2026-11-05:** an older design, no longer acceptable (`off_style`, `OLD_DESIGN:` notes) | captions never name foot colour, so including it would teach yellow feet beside the current salmon/amber. Recorded in `finetune/wan/scenes/CURATION_v10.md` |
+| U9 | The **yellow-foot variant** in iteration_7: current flat drawing, but yellow feet and beak (hue ≥ ~42°). About 12 skits, ~3,000 frames: Affection, Bromance, LastBite, QUALITYTIME, SkinCare, Upset, SAMEROOM, Blanket, ALREADYSEENIT, Wash, … | ✅ **exclude; client answered, 2026-11-05:** an older design, no longer acceptable (`off_style`, `OLD_DESIGN:` notes). **`v9b_535`'s 348 windows checked 2026-11-09: none.** A beak-hue probe (`scenes/check_beak_hue.py`, 6 frames per window) read a median 26° (salmon) on 307 windows. Its 5 hits at ≥ 42° were props (sparkles, a car jack), and the 41 windows with no readable beak (night, close-ups, back views) are current design by eye. Calibrated on iteration_7: 23 of 24 yellow-foot spans ≥ 42°, 0 of 120 kept spans | captions never name foot colour, so including it would teach yellow feet beside the current salmon/amber. Recorded in `finetune/wan/scenes/CURATION_v10.md` |
 
 ---
 
@@ -247,28 +263,32 @@ v10 trains shots. A reel is assembled by the pipeline in `finetune/wan/longform_
 
 - **The high-noise LoRA could collapse prompt control (v5).** G3 and G4 gate it from step 50, and
   the file is bisectable (drop it to get v8 back).
-- **Text and watermark leak**, if route A slips and masking is imperfect. The G2 OCR check is a hard bar.
-- **Compressed footage teaches artifacts** (banding, blocking on flat fills). Phase 0 #4; masters
-  (U1) remove the risk.
+- **Text and watermark leak**: low now. The bases are clean, and the few spans that still showed
+  text were dropped. The G2 OCR check stays a hard bar.
+- **Compressed footage teaches artifacts**: removed by the masters (U1).
 - **New characters at low data**: a side character seen in 10 reels won't be drawn reliably from
   text. In I2V the look comes from the keyframe ("one name, one look"), and captions keep names consistent.
 - **Small n in G1** if fewer held-out shots survive curation. 80 judgements is the floor. Add seeds
   before relaxing the bar.
 - **Keyframes stay the bottleneck** for genuinely new reels (§6.2). v10 improves shots; v10-K
   decides how new a reel can be.
-- **Calendar**: prep is ≈ 1 week, mostly curation. The curator pass is the long pole, as in v9b
-  (12 curators, 3 verification passes).
+- **Calendar**: curation, the long pole, is done. What's left of prep is the holdout and cutting
+  clips on the GPU box.
+- **Late client answers**: the unnamed side penguins (U5) sit in 25 trainable windows. If the
+  client rules them out, those rows come out before training; nothing else changes.
 
 ## 9. Order
 
 | step | needs | can start |
 |---|---|---|
-| ingest + profile + mirror (§3.1) | — | **now** |
-| client ask: masters, character names, permission (U1, U5) | user sign-off | **now** |
-| Phase 0 #1–#3, #5 | a GPU; v9b checkpoints on Azure | **now** |
-| curation + captions + prep (§3.3–3.6) | ingest; route A or B decided | ≈ 1 week |
-| Phase 0 #4 | the 8 skit-matched reels | with prep |
+| ingest + profile + mirror (§3.1) | — | ✅ done 2026-11-04 |
+| client ask: masters, character names (U1, U5, U9) | — | ✅ answered 2026-11-04/05; Fixer and the other unnamed side penguins still open, **not blocking** |
+| curation + captions (§3.3, §3.5) | — | ✅ done 2026-11-05 |
+| `v9b_535` yellow-foot check (U9) | — | ✅ done 2026-11-09: clean |
+| user decisions U2 (gate) and U7 (reuse `v9b_535`) | — | **now** |
+| Phase 0 #1–#3 | a GPU; v9b checkpoints on Azure | **now** |
+| prep: holdout, clip cutting, #5 cadence on CuteFit, replay build (§3.4, §3.6) | a GPU box; Phase 0 #3 for f121 | ≈ 1–2 days |
 | **Stage 1** (high-noise) → gates | prep, Phase 0 | after prep |
 | Stage 2 (low-noise) → gates | Stage 1 passing + a detail gap | after Stage 1 |
-| v10-K keyframe LoRA | text-free reel frames | alongside Stage 1 |
+| v10-K keyframe LoRA | frames from the clean bases | alongside Stage 1 |
 | final: the best of {v10, v8merged} + pipeline, with sample reels | gates | end |
