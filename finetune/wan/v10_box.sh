@@ -13,7 +13,8 @@
 #   bash finetune/wan/v10_box.sh train      # Stage 1 in the background + Azure monitor (GPU 0)
 #   bash finetune/wan/v10_box.sh gpu1       # GPU 1 scheduler: Tier-1 base, Tier 1 per checkpoint (+ early stop),
 #                                           #   baseline generation, Phase 0 #1; run in the background
-#   bash finetune/wan/v10_box.sh solo       # ONE-GPU box: the whole sequence on GPU 0, resumable (run in tmux)
+#   bash finetune/wan/v10_box.sh solo_watch # ONE-GPU box: solo + retries of failed stages (run THIS in tmux)
+#   bash finetune/wan/v10_box.sh solo       # ONE-GPU box: the whole sequence on GPU 0, resumable
 #   bash finetune/wan/v10_box.sh status     # training + GPU 1 state
 #   bash finetune/wan/v10_box.sh pause S    # stop the trainer once step S's state is saved
 #   bash finetune/wan/v10_box.sh candidate  # after training + gpu1: pick the candidate, run G2 / G4 / G5 on it
@@ -207,7 +208,10 @@ pull_v9b)
 cache)
   [ -s "$CFG" ] || { echo "no $CFG - run pull first"; exit 1; }
   export CUDA_VISIBLE_DEVICES=$TRAIN_GPU
-  cache_cfg "$CFG" 2>&1 | tee "$LOGS/cache.log"
+  cache_cfg "$CFG" 2>&1 | tee -a "$LOGS/cache.log"
+  # Self-healing after an interrupted run: delete any file cut off mid-write, re-encode it, then verify strictly.
+  "$PY" "$FW/verify_cache_v8.py" --config "$CFG" --fix 2>&1 | tee -a "$LOGS/cache.log" || true
+  cache_cfg "$CFG" 2>&1 | tee -a "$LOGS/cache.log"
   "$PY" "$FW/verify_cache_v8.py" --config "$CFG" 2>&1 | tee -a "$LOGS/cache.log"
   # Spatial size: scene latents 480x848 / 8 = 60 x 106 (no silent re-bucketing), replay 1024 / 8 = 128 x 128.
   "$PY" - "$CFG" <<'PYEOF' 2>&1 | tee -a "$LOGS/cache.log"
@@ -351,10 +355,22 @@ solo)
   # trainer resumes from its newest complete state. Run it in tmux. Exit 20 = early stop, 11 = G2 eye check needed,
   # 30 = no checkpoint holds Tier 1; each is a stop to report (HANDOVER_v10 section 4b).
   export EVAL_GPU=$TRAIN_GPU
-  POLL="${SOLO_POLL:-300}"
+  POLL="${SOLO_POLL:-30}"
+  # One GPU: no interleaving needed, so each generation phase runs in ONE model load instead of 10-clip slices.
+  GEN_CHUNK="${GEN_CHUNK_SOLO:-1000000}"
   stage() { echo "== [$(ts)] SOLO $*" | tee -a "$LOGS/solo.log" "$LOGS/v10_box.log"; }
   wait_trainer_gone() { while [ -n "$(trainer_pids)" ]; do sleep "$POLL"; done; }
   state_of() { printf "%s/%s-step%08d-state" "$RUN" "$RUN_NAME" "$1"; }
+  start_train() { [ -n "$(trainer_pids)" ] && { stage "trainer already running: $(trainer_pids | tr '\n' ' ')"; return 0; }; bash "$0" train; }
+  phase0_p1() {   # Phase 0 #1 needs no decision: run it whenever the sequence would otherwise leave the GPU idle
+    [ -f "$LOGS/phase0_p1.done" ] && return 0
+    if [ -s "$W/wan_output/pudgy-v9b-lownoise/pudgy-v9b-lownoise-step00000100.safetensors" ] && [ -s "$W/wan_output/pudgy-v9b-lownoise/pudgy-v9b-lownoise-step00000200.safetensors" ]; then
+      stage "Phase 0 #1"; while gen_chunk phase0_p1 phase0_v10.py p1; do :; done
+      ev phase0_v10.py report 2>&1 | tee "$LOGS/phase0_p1_report.txt"
+    else
+      stage "Phase 0 #1 skipped: v9b@100/200 missing (v10_box.sh pull_v9b, then re-run solo)"
+    fi
+  }
   [ -f "$LOGS/cache.done" ]    || { stage "cache"; bash "$0" cache && touch "$LOGS/cache.done"; }
   [ -f "$LOGS/evalprep.done" ] || { stage "evalprep"; bash "$0" evalprep && touch "$LOGS/evalprep.done"; }
   [ -f "$LOGS/smoke.done" ]    || { stage "smoke"; bash "$0" smoke && touch "$LOGS/smoke.done"; }
@@ -363,17 +379,18 @@ solo)
   FINAL=$(printf "%s/%s-step%08d.safetensors" "$RUN" "$RUN_NAME" "$MAX_STEPS")
   # 1. train to step 100 (MAX_STEPS stays $MAX_STEPS, so the cosine schedule is the planned one), then the early stop
   if ! eval_tier1_done 100; then
-    if [ ! -d "$(state_of 100)" ]; then stage "train to step 100"; bash "$0" train; bash "$0" pause 100; fi
+    if [ ! -d "$(state_of 100)" ]; then stage "train to step 100"; start_train; bash "$0" pause 100; fi
     wait_trainer_gone
     for S in 50 100; do eval_tier1_done $S || { stage "Tier 1 step $S"; eval_tier1 $S; }; done
   fi
   if [ -f "$LOGS/EARLY_STOP" ]; then
-    stage "EARLY STOP: $(cat "$LOGS/EARLY_STOP") - Stage 1 is not kept"
-    bash "$0" archive; MSG="v10 box: early stop at step 100" bash "$0" git; exit 20
+    stage "EARLY STOP: $(cat "$LOGS/EARLY_STOP") - Stage 1 is not kept; Phase 0 #1 runs first (it informs the next decision)"
+    bash "$0" archive; MSG="v10 box: early stop at step 100" bash "$0" git
+    phase0_p1; bash "$0" archive; MSG="v10 box: early stop; Phase 0 #1 done" bash "$0" git; exit 20
   fi
   # 2. finish training, then Tier 1 on the remaining checkpoints
   if [ ! -s "$FINAL" ]; then
-    stage "train to step $MAX_STEPS"; bash "$0" train; sleep 60; wait_trainer_gone
+    stage "train to step $MAX_STEPS"; start_train; sleep 60; wait_trainer_gone
     [ -s "$FINAL" ] || { stage "training stopped before step $MAX_STEPS - see $LOGS/train.log; re-run solo to resume"; exit 1; }
   fi
   for S in $(seq 150 "$TIER1_EVERY" "$MAX_STEPS"); do eval_tier1_done $S || { stage "Tier 1 step $S"; eval_tier1 $S; }; done
@@ -382,23 +399,40 @@ solo)
   if [ ! -f "$LOGS/CANDIDATE" ]; then
     stage "candidate gates"
     set +e; eval_candidate 2>&1 | tee -a "$LOGS/candidate.log"; RC=${PIPESTATUS[0]}; set -e
-    if [ $RC -eq 30 ]; then stage "no checkpoint holds Tier 1 - Stage 1 is not kept"; bash "$0" archive; MSG="v10 box: no checkpoint holds Tier 1" bash "$0" git; exit 30; fi
-    if [ $RC -eq 11 ]; then stage "G2 needs an eye check (HANDOVER_v10 Step 10); then re-run solo"; exit 11; fi
-    [ $RC -eq 0 ] || { stage "candidate exit $RC"; exit $RC; }
+    if [ $RC -eq 30 ]; then
+      stage "no checkpoint holds Tier 1 - Stage 1 is not kept; Phase 0 #1 runs first"
+      bash "$0" archive; MSG="v10 box: no checkpoint holds Tier 1" bash "$0" git; phase0_p1; bash "$0" archive; exit 30
+    fi
+    # 11 = G2 needs a human eye check: keep going (G1 page, Phase 0 #1) so the GPU is not idle while it waits
+    if [ $RC -eq 11 ]; then stage "G2 needs an eye check (HANDOVER_v10 Step 10); continuing meanwhile"; touch "$LOGS/G2_EYE_CHECK_PENDING"
+    elif [ $RC -ne 0 ]; then stage "candidate exit $RC"; exit $RC; fi
   fi
   # 4. the G1 page for the user, then Phase 0 #1 while they judge
   [ -f "$LOGS/g1.done" ] || { stage "G1 page"; eval_g1 && touch "$LOGS/g1.done"; }
   bash "$0" archive; MSG="v10 box: Stage 1 done, candidate $(cat "$LOGS/CANDIDATE"), G1 page ready" bash "$0" git
-  if [ ! -f "$LOGS/phase0_p1.done" ]; then
-    if [ -s "$W/wan_output/pudgy-v9b-lownoise/pudgy-v9b-lownoise-step00000100.safetensors" ] && [ -s "$W/wan_output/pudgy-v9b-lownoise/pudgy-v9b-lownoise-step00000200.safetensors" ]; then
-      stage "Phase 0 #1"; while gen_chunk phase0_p1 phase0_v10.py p1; do :; done
-      ev phase0_v10.py report 2>&1 | tee "$LOGS/phase0_p1_report.txt"
-    else
-      stage "Phase 0 #1 skipped: v9b@100/200 missing (v10_box.sh pull_v9b, then re-run solo)"
-    fi
-  fi
+  phase0_p1
   bash "$0" archive; MSG="v10 box: solo sequence complete" bash "$0" git
+  if [ -f "$LOGS/G2_EYE_CHECK_PENDING" ]; then
+    stage "WAITING FOR THE G2 EYE CHECK of $(cat "$LOGS/CANDIDATE") (HANDOVER_v10 section 4b); the G1 page is built but must not be judged until it passes"
+    exit 11
+  fi
   stage "SOLO DONE: candidate $(cat "$LOGS/CANDIDATE"); G1 page on Azure v10/eval/g1/pages/; write the report (Step 12)"
+  ;;
+
+solo_watch)
+  # solo + a watchdog: a failed stage (exit 1: a crash, an OOM, a network blip) is retried after 2 min, up to
+  # SOLO_RETRIES times (solo is resumable). Decision stops (0, 20, 11, 30) are never retried. Run THIS in tmux.
+  tries=0; max="${SOLO_RETRIES:-3}"
+  while true; do
+    set +e; bash "$0" solo; RC=$?; set -e
+    case $RC in
+      0|11|20|30) log "solo_watch: solo exited $RC - a stop for a person (HANDOVER_v10 section 4b)"; exit $RC ;;
+    esac
+    tries=$((tries + 1))
+    if [ $tries -gt "$max" ]; then log "solo_watch: solo failed $tries times (last exit $RC) - giving up; see $LOGS/solo.log"; exit $RC; fi
+    log "solo_watch: solo exited $RC (attempt $tries of $max) - retrying in 2 min"
+    sleep "${SOLO_RETRY_WAIT:-120}"
+  done
   ;;
 
 candidate)

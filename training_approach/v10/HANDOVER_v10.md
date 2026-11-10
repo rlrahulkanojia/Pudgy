@@ -269,8 +269,8 @@ plan's status line. Send the user a short summary with sample clips. Then run `g
 The box rented for this run has **one** A100 80 GB. Steps 1–3 are the same (on one GPU the box script
 already uses GPU 0 for evaluation). Then, instead of Steps 4–11, run the whole sequence on GPU 0 in tmux:
 ```bash
-tmux new-session -d -s solo "bash /workspace/Pudgy/finetune/wan/v10_box.sh solo; exec bash"   # log: /workspace/logs_v10/solo.log
-nohup sh -c 'while true; do bash /workspace/Pudgy/finetune/wan/v10_box.sh sync; sleep 1800; done' > /workspace/logs_v10/sync.log 2>&1 &
+tmux new-session -d -s solo "bash /workspace/Pudgy/finetune/wan/v10_box.sh solo_watch; exec bash"   # log: /workspace/logs_v10/solo.log
+tmux new-session -d -s sync "while true; do bash /workspace/Pudgy/finetune/wan/v10_box.sh sync >> /workspace/logs_v10/sync.log 2>&1; sleep 1800; done"
 ```
 `solo` runs, one job at a time, each stage with the same checks as Steps 4–11:
 1. cache + marks, evalprep, smoke (stops on `SMOKE FAILED`), the Tier-1 base rows;
@@ -280,6 +280,11 @@ nohup sh -c 'while true; do bash /workspace/Pudgy/finetune/wan/v10_box.sh sync; 
 4. the **baseline** (Phase 0 #2), then the **candidate's G5, G2, G4** in turn (with the fallback on a FAIL);
 5. the **G1 page** to Azure for the user, archive and git; then **Phase 0 #1** while the user judges.
 
+**Keeping the GPU busy** (2026-11-10): each generation phase runs in one model load (no 10-clip slices on one
+GPU); `solo` polls every 30 s; at any stop that waits for a person (early stop, no checkpoint holds, a G2 eye
+check) it first runs Phase 0 #1, which needs no decision; and `solo_watch` re-runs a failed stage (exit 1)
+after 2 min, up to 3 times, before giving up. Use `tmux` (a bare `nohup … &` over ssh dies with the session).
+
 It is **resumable**: after any stop, fix the cause and run the same tmux command again; finished stages are
 skipped (flag files in `/workspace/logs_v10`, Tier-1 results, existing clips) and training resumes from its
 newest complete state. Its exit codes are the stops to report:
@@ -287,10 +292,10 @@ newest complete state. Its exit codes are the stops to report:
 | exit | meaning | do |
 |---|---|---|
 | 0 | done: G1 page on Azure, Phase 0 #1 done | Step 12 (report); tell the user the page is ready |
-| 20 | early stop at step 100 (`EARLY_STOP`) | archived and pushed already; report (Step 9) |
-| 11 | G2 needs an eye check | Step 10's eye check. All fine → run `solo` again. One not fine → `rm /workspace/logs_v10/CANDIDATE`, then `CANDIDATE_BEFORE=<S> bash v10_box.sh candidate` (moves to the previous checkpoint), then `solo` again |
-| 30 | no checkpoint holds Tier 1 | archived and pushed already; report |
-| 1 | a stage failed (smoke, cache, a crash) | read `solo.log` and that stage's log; fix; run `solo` again |
+| 20 | early stop at step 100 (`EARLY_STOP`); Phase 0 #1 ran afterwards | archived and pushed already; report (Step 9) |
+| 11 | G2 needs an eye check; the G1 page and Phase 0 #1 are already done meanwhile (the page must not be judged yet) | Step 10's eye check. All fine → `rm /workspace/logs_v10/G2_EYE_CHECK_PENDING`, run `solo_watch` again (exit 0). One not fine → `rm /workspace/logs_v10/{CANDIDATE,g1.done,G2_EYE_CHECK_PENDING}`, then `CANDIDATE_BEFORE=<S> bash v10_box.sh candidate` (the previous checkpoint), then `solo_watch` again |
+| 30 | no checkpoint holds Tier 1; Phase 0 #1 ran afterwards | archived and pushed already; report |
+| 1 | a stage failed 4 times in a row (`solo_watch` already retried it 3 times) | read `solo.log` and that stage's log; fix; run `solo_watch` again |
 
 **Timeline on one A100** (estimates): setup and downloads ~3–6 h; cache, smoke, base ~2.5 h; training to 100
 ~6 h + Tier 1 ~1 h; training to 300 ~13–15 h; Tier 1 at 150–300 ~2 h; baseline ~17–20 h; candidate
