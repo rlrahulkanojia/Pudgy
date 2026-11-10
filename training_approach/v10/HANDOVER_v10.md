@@ -72,7 +72,7 @@ decided with the user (plan §0). If something looks wrong, stop and ask.
 | Phone (Q17) | E5 frozen and spliced into the phone phrase during training, as at inference |
 | Data | `processed/v10_1525`: **991 scene windows** at 480 wide × 848 tall, 24 fps (643 from iteration_7 + v9b's 348; f21 467 · f33 213 · f49 221 · f81 90; 88 camera moves) + **534 v8 replay clips** at 1024² (35%) |
 | Holdout | 16 iteration_7 skits (`finetune/wan/scenes/holdout_v10.json`) + v9b's 6. None of their frames is in the set |
-| Gates (Q1, Q12–Q15, Q19) | plan §5.1. G1 blind human preference decides; G2, G4, G5 guard; G3 is reported and can stop a run |
+| Gates (Q1, Q12–Q15, Q19, Q21–Q24) | plan §5.1. G1 blind human preference decides; G2, G4, G5 guard; G3 is reported and can stop a run |
 | Not in this run (Q20) | Stage 2 (low-noise) unless the user approves it after Stage 1; the keyframe LoRA (v10-K); end-to-end reels |
 
 ---
@@ -234,9 +234,11 @@ Stage 1 not kept, go to Step 12), **2** (missing input: fix and re-run). On a G2
 the previous Tier-1 checkpoint by itself (plan §5.1). The verdicts are in
 `/workspace/logs_v10/candidate_verdicts.txt`; the candidate's name in `/workspace/logs_v10/CANDIDATE`.
 
-**On 11 (REVIEW):** look at every clip `$R/suite/g2_v10_<S>.json` lists (duplicate characters, text, a
-zoom it couldn't measure), against its real shot and the v8merged clip, and record a verdict per clip in
-the run log. The candidate passes G2 only if every flagged clip is fine by eye; if one isn't, treat G2 as
+**On 11 (REVIEW):** look at every clip `$R/suite/g2_v10_<S>.json` lists under `eye_check` (more
+duplicate-lead frames than the real shot, or text absent from frame 0 and the real shot; Q14, Q21),
+against its real shot and the v8merged clip, and record a verdict per clip in the run log. G2's other
+bars are automatic: zoom ≤ 3% (smoothed), median motion ratio 0.7–1.3, identity not measurably worse
+than v8merged (Q22). The candidate passes G2 only if every flagged clip is fine by eye; if one isn't, treat G2 as
 FAIL and run `candidate` again after noting it (it then moves to the previous checkpoint).
 
 ### Step 11. G1: blind preference (the user judges)

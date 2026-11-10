@@ -19,7 +19,7 @@ long-form box already runs.
 
 ## 0. Decisions (2026-11-10)
 
-Settled with the user in three grilling rounds, each question asked with a recommendation; the
+Settled with the user in four grilling rounds (Q21–Q24 on how the gates handle real footage), each question asked with a recommendation; the
 user accepted every recommendation. They override anything below that reads otherwise.
 
 | # | decision |
@@ -44,6 +44,10 @@ user accepted every recommendation. They override anything below that reads othe
 | Q18 | **Phase 0 #1 runs on GPU 1 while Stage 1 trains**; the baseline (Phase 0 #2) runs first |
 | Q19 | **G1 is judged on I2V clips** (first frame + caption); about 8 FLF clips per model are a visual report only |
 | Q20 | **This box run covers Phase 0, Stage 1, the gates and the report** (Stage 2 only if approved). The keyframe LoRA (v10-K) and end-to-end sample reels are a later handover |
+| Q21 | **G2 is robust to real footage**: zoom is the max over the fit series of the median of 3 consecutive fits, and the 3 jobs whose locked real shot already reads > 1.5% are reported, not gated; on-screen text counts only if absent from frame 0 **and** the real shot and ≥ 3 characters, and sends the clip to an eye check rather than failing it; motion is gated on the median ratio |
+| Q22 | **G2 identity: not measurably worse** than v8merged, i.e. the 95% CI (wider of bootstrap and Student-t) of the paired (job, seed) difference must not lie wholly below 0 |
+| Q23 | **G4's 52-prompt label check per kind**, label 1-NN averaged over Pax and Polly, one-sided (≥ v8merged − 0.1); at 1024² as v8 |
+| Q24 | **G1: "can't tell" counts as half a win**, so n stays at all 102 pairs (pass ≥ 60); several judges are pooled per judgement, each judge's result also printed |
 
 ---
 
@@ -248,10 +252,10 @@ passes G2, G4 and G5.
 
 | id | check | bar |
 |---|---|---|
-| **G1** | **Production preference**: blind A/B on held-out skit shots (same first frame, caption and seed), v10 vs v8merged, judged blind by people only (Q12) on I2V clips (Q19); judges weigh how well each clip follows its caption | **v10 preferred**, exact one-sided binomial at α = 0.05: **≥ 48 of 80** paired judgements (60%). Sized for 0.85 power at a true 65% preference; 67 judgements would give only 0.78 |
-| **G2** | **Automatic quality** on the same clips: duplicate leads no more than in the real shot (`dupcheck`; flagged clips checked by eye, Q14); zoom ≤ 3% on static-camera prompts; motion ratio 0.7–1.3 vs the real shot; identity (DINO crop similarity to frame 0) ≥ v8merged; **no rendered text or watermark** (OCR on generated frames finds nothing absent from frame 0) | all hold |
+| **G1** | **Production preference**: blind A/B on held-out skit shots (same first frame, caption and seed), v10 vs v8merged, judged blind by people only (Q12) on I2V clips (Q19); judges weigh how well each clip follows its caption | **v10 preferred**, exact one-sided binomial at α = 0.05 over every pair: **≥ 60 of the 102** pairs ("can't tell" = half, Q24); the plan's sizing was ≥ 48 of 80 (0.85 power at a true 65% preference) |
+| **G2** | **Automatic quality** on the same clips: duplicate leads no more than in the real shot (`dupcheck`; flagged clips checked by eye, Q14); zoom ≤ 3% on static-camera prompts (smoothed, Q21); median motion ratio 0.7–1.3 vs the real shot; identity (DINO lead-crop similarity to frame 0) **not measurably worse** than v8merged (Q22); **no rendered text or watermark**: text absent from frame 0 and the real shot sends the clip to an eye check (Q21) | zoom, motion and identity hold, and every flagged clip is fine by eye |
 | **G3** | **Uses the caption**: high-noise Tier 1 (`dcls_asset_v9.py --expert high`, t 0.95 / 0.92) on held-out scene windows, true caption vs distractors (beat order swapped, leads' actions exchanged, another shot's action) | **reported, not gating** (Q13). Text-attributable gain with the wider of the bootstrap and Student-t CI (RESEARCH_v9c_fixes §6c). It stops a run only when the gain is > 0 with its CI excluding 0 (caption use measurably worse). v9b-1's was ≈ 0 |
-| **G4** | **v8 prompts still work**: Tier-2 `core` (52 prompts) label 1-NN per kind within 0.1 of v8merged; `compose` motion-label score (`motion_zs`) within 0.1 of v8merged (Q15). Per checkpoint, the high-noise v8-label R2 (loss ratio ≤ 1.05 at t 0.95 and 0.92) stands in for it. Stage 2 also gets low-noise R1 and R2 at the bar U2 sets. Stage 1 leaves the low-noise Tier 1 unchanged by construction; this is verified once | all hold |
+| **G4** | **v8 prompts still work**: Tier-2 `core` (52 prompts) label 1-NN per kind (averaged over Pax and Polly, Q23) within 0.1 of v8merged; `compose` motion-label score (`motion_zs`) within 0.1 of v8merged (Q15). Per checkpoint, the high-noise v8-label R2 (loss ratio ≤ 1.05 at t 0.95 and 0.92) stands in for it. Stage 2 also gets low-noise R1 and R2 at the bar U2 sets. Stage 1 leaves the low-noise Tier 1 unchanged by construction; this is verified once | all hold |
 | **G5** | **Phone**: ID1 on the 24-clip confirm tier with E5 on the v10 stack | ≤ 1 / 24 (E5 alone: 0 / 24) |
 
 **Stopping rule:** the stage stops at step 100 if the high-noise v8-label R2 fails at both step 50

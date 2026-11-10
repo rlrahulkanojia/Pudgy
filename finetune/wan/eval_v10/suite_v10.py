@@ -29,8 +29,8 @@ v9b's 8), each with its first frame, its own caption and frame count (f49 / f81)
             zoom      no static-camera clip measured > 3%   (unverifiable clips listed, not failed; a job
                       whose locked REAL shot reads > 1.5% - a moving prop drags the fit - is reported, not gated)
             motion    median ratio over the clips in [0.7, 1.3]
-            identity  mean identity(cand) >= mean identity(base), paired over (job, seed)
-                      (the paired difference's CI is reported; the bar is the literal spec)
+            identity  not measurably worse than base: the 95% CI (wider of bootstrap and Student-t) of the
+                      paired (job, seed) difference cand - base must not lie wholly below 0 (Q22)
             ocr       no clip with new text in >= 2 sampled frames   else REVIEW (eye check)
   selftest  scores the REAL shots as if generated (config "real") and gates real vs real: every
             check must pass trivially (scorer sanity, runs on a laptop without a GPU)
@@ -391,8 +391,9 @@ def gate(cand, base="v8merged", only=None, seeds=C.SEEDS, limit=0):
                    "pass": MOTION_LO <= mot <= MOTION_HI, "bar": f"median motion ratio in [{MOTION_LO}, {MOTION_HI}]"},
         "identity": {"n_pairs": len(pairs), "cand": round(idc, 4), "base": round(idb, 4),
                      "paired_diff": round(dm, 4), "ci": [round(dlo, 4), round(dhi, 4)],
-                     "not_measurably_worse": dhi >= 0, "pass": idc >= idb,
-                     "bar": "mean DINO lead-crop similarity to frame 0 >= v8merged (literal)"},
+                     "not_measurably_worse": dhi >= 0, "pass": dhi >= 0,
+                     "bar": "DINO lead-crop similarity to frame 0 not measurably worse than v8merged: the 95% CI "
+                            "of the paired (job, seed) difference must not lie wholly below 0 (Q22)"},
         "ocr": {"fail": of, "suspect": osus, "pass": not of, "base_fail": sum(r["ocr"]["verdict"] == "fail" for r in rb.values()),
                 "bar": "no text absent from frame 0 and from the real shot (in >= 2 sampled frames = flagged for an eye "
                        "check; in 1 = suspect, listed)"},
