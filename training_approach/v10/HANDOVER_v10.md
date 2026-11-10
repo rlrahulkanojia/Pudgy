@@ -81,7 +81,7 @@ decided with the user (plan §0). If something looks wrong, stop and ask.
 
 | need | why |
 |---|---|
-| **2 GPUs with 80 GB** (A100 or H100) (Q6) | GPU 0 trains; GPU 1 runs the baseline, Phase 0 #1 and each checkpoint's Tier 1. A clean training run reserves almost the whole 80 GB |
+| **2 GPUs with 80 GB** (A100 or H100) (Q6), **or one** (Q25: the `solo` sequence, §4b) | with two, GPU 0 trains while GPU 1 runs the baseline, Phase 0 #1 and each checkpoint's Tier 1; with one, everything runs in turn. A clean training run reserves almost the whole 80 GB |
 | RAM ≥ 128 GB | block swap, data loaders, caching |
 | Disk ≥ 250 GB free on `/workspace` | ~65 GB base weights, caches, 12 checkpoints with states, eval clips |
 | CUDA 12.x/13.x driver, ffmpeg, internet to Hugging Face, GitHub and Azure | weights from HF, code from GitHub, everything else from Azure |
@@ -263,6 +263,39 @@ G2/G4/G5 tables with contact sheets, Phase 0 #1's reading, and what G1 needs fro
 plan's status line. Send the user a short summary with sample clips. Then run `git` again.
 
 ---
+
+### 4b. On a one-GPU box: `solo` (this run, decided 2026-11-10, Q25)
+
+The box rented for this run has **one** A100 80 GB. Steps 1–3 are the same (on one GPU the box script
+already uses GPU 0 for evaluation). Then, instead of Steps 4–11, run the whole sequence on GPU 0 in tmux:
+```bash
+tmux new-session -d -s solo "bash /workspace/Pudgy/finetune/wan/v10_box.sh solo; exec bash"   # log: /workspace/logs_v10/solo.log
+nohup sh -c 'while true; do bash /workspace/Pudgy/finetune/wan/v10_box.sh sync; sleep 1800; done' > /workspace/logs_v10/sync.log 2>&1 &
+```
+`solo` runs, one job at a time, each stage with the same checks as Steps 4–11:
+1. cache + marks, evalprep, smoke (stops on `SMOKE FAILED`), the Tier-1 base rows;
+2. **train to step 100** (with `MAX_STEPS` still 300, so the learning-rate schedule is the planned one), pause,
+   **Tier 1 at 50 and 100** and the early-stop rule (~1 h);
+3. resume and **finish training** to step 300, then Tier 1 at 150–300;
+4. the **baseline** (Phase 0 #2), then the **candidate's G5, G2, G4** in turn (with the fallback on a FAIL);
+5. the **G1 page** to Azure for the user, archive and git; then **Phase 0 #1** while the user judges.
+
+It is **resumable**: after any stop, fix the cause and run the same tmux command again; finished stages are
+skipped (flag files in `/workspace/logs_v10`, Tier-1 results, existing clips) and training resumes from its
+newest complete state. Its exit codes are the stops to report:
+
+| exit | meaning | do |
+|---|---|---|
+| 0 | done: G1 page on Azure, Phase 0 #1 done | Step 12 (report); tell the user the page is ready |
+| 20 | early stop at step 100 (`EARLY_STOP`) | archived and pushed already; report (Step 9) |
+| 11 | G2 needs an eye check | Step 10's eye check. All fine → run `solo` again. One not fine → `rm /workspace/logs_v10/CANDIDATE`, then `CANDIDATE_BEFORE=<S> bash v10_box.sh candidate` (moves to the previous checkpoint), then `solo` again |
+| 30 | no checkpoint holds Tier 1 | archived and pushed already; report |
+| 1 | a stage failed (smoke, cache, a crash) | read `solo.log` and that stage's log; fix; run `solo` again |
+
+**Timeline on one A100** (estimates): setup and downloads ~3–6 h; cache, smoke, base ~2.5 h; training to 100
+~6 h + Tier 1 ~1 h; training to 300 ~13–15 h; Tier 1 at 150–300 ~2 h; baseline ~17–20 h; candidate
+(G5 ~6.6 h, G2 ~13 h, G4 ~3 h) ~23 h; the G1 page; Phase 0 #1 ~12 h. About **4–4.5 days** to the G1 page,
+plus Phase 0 #1. Same GPU-hours as two GPUs.
 
 ## 5. Keeping things safe
 

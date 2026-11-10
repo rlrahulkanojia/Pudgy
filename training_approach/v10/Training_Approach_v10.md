@@ -19,7 +19,7 @@ long-form box already runs.
 
 ## 0. Decisions (2026-11-10)
 
-Settled with the user in four grilling rounds (Q21–Q24 on how the gates handle real footage), each question asked with a recommendation; the
+Settled with the user in four grilling rounds (Q21–Q24 on how the gates handle real footage; Q25 when the box arrived), each question asked with a recommendation; the
 user accepted every recommendation. They override anything below that reads otherwise.
 
 | # | decision |
@@ -48,6 +48,7 @@ user accepted every recommendation. They override anything below that reads othe
 | Q22 | **G2 identity: not measurably worse** than v8merged, i.e. the 95% CI (wider of bootstrap and Student-t) of the paired (job, seed) difference must not lie wholly below 0 |
 | Q23 | **G4's 52-prompt label check per kind**, label 1-NN averaged over Pax and Polly, one-sided (≥ v8merged − 0.1); at 1024² as v8 |
 | Q24 | **G1: "can't tell" counts as half a win**, so n stays at all 102 pairs (pass ≥ 60); several judges are pooled per judgement, each judge's result also printed |
+| Q25 | **The run uses one A100 80 GB** (the box rented on 2026-11-10), not two (Q6): `v10_box.sh solo` runs everything in turn on GPU 0: train to step 100, pause for Tier 1 at 50/100 and the early stop, finish training, then baseline, candidate gates, the G1 page and Phase 0 #1. About 4–4.5 days instead of ~2.5, at about the same GPU-hours ([`HANDOVER_v10.md`](HANDOVER_v10.md) §4b) |
 
 ---
 
