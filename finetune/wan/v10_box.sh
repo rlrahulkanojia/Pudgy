@@ -71,7 +71,7 @@ cache_cfg() {   # $1 = dataset toml; latents (+ T5 unless $2 = latents-only)
 smoke_gate() {   # $1 = smoke log, $2 = exit code. Gate lines from the training-side build (2026-11-10).
   local L=$1 RC=$2 OOM ST PRES ASSET
   OOM=$(grep -ac "memory mapping failed with OOM" "$L" || true)
-  ST=$(tr '\r' '\n' < "$L" | grep -a "PRESERVE_STATS" | tail -1)
+  ST=$(tr '\r' '\n' < "$L" | grep -a "PRESERVE_STATS" | tail -1 || true)   # none when the trainer never started
   PRES=$(echo "$ST" | sed -nE 's/.* preserve=([0-9]+) .*/\1/p'); ASSET=$(echo "$ST" | sed -nE 's/.* asset=([0-9]+) .*/\1/p')
   echo "exit $RC; mapping-OOM lines $OOM (must be 0); $ST"
   if [ "$RC" -eq 0 ] && grep -aq "== done:" "$L" && [ "${OOM:-1}" -eq 0 ] && [ "${PRES:-0}" -gt 0 ] && [ "${ASSET:-0}" -gt 0 ] \
@@ -371,9 +371,15 @@ solo)
       stage "Phase 0 #1 skipped: v9b@100/200 missing (v10_box.sh pull_v9b, then re-run solo)"
     fi
   }
-  [ -f "$LOGS/cache.done" ]    || { stage "cache"; bash "$0" cache && touch "$LOGS/cache.done"; }
-  [ -f "$LOGS/evalprep.done" ] || { stage "evalprep"; bash "$0" evalprep && touch "$LOGS/evalprep.done"; }
-  [ -f "$LOGS/smoke.done" ]    || { stage "smoke"; bash "$0" smoke && touch "$LOGS/smoke.done"; }
+  # A failed stage must stop solo (solo_watch retries it). `bash $0 X && touch` inside `[ -f ] || { }` did not:
+  # set -e is off there, and on 2026-11-10 a failed smoke went straight on to Tier 1 and training.
+  for ST in cache evalprep smoke; do
+    if [ ! -f "$LOGS/$ST.done" ]; then
+      stage "$ST"
+      bash "$0" "$ST" || { stage "$ST FAILED - see $LOGS/$ST.log"; exit 1; }
+      touch "$LOGS/$ST.done"
+    fi
+  done
   evalenv
   eval_tier1_base_done || { stage "Tier-1 base rows"; eval_tier1_base; }
   FINAL=$(printf "%s/%s-step%08d.safetensors" "$RUN" "$RUN_NAME" "$MAX_STEPS")
@@ -408,7 +414,7 @@ solo)
     elif [ $RC -ne 0 ]; then stage "candidate exit $RC"; exit $RC; fi
   fi
   # 4. the G1 page for the user, then Phase 0 #1 while they judge
-  [ -f "$LOGS/g1.done" ] || { stage "G1 page"; eval_g1 && touch "$LOGS/g1.done"; }
+  if [ ! -f "$LOGS/g1.done" ]; then stage "G1 page"; eval_g1; touch "$LOGS/g1.done"; fi   # set -e stays on inside eval_g1
   bash "$0" archive; MSG="v10 box: Stage 1 done, candidate $(cat "$LOGS/CANDIDATE"), G1 page ready" bash "$0" git
   phase0_p1
   bash "$0" archive; MSG="v10 box: solo sequence complete" bash "$0" git
