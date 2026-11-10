@@ -1,0 +1,85 @@
+{
+ "skit": "iteration_7/293_videos/PP_10MM_9x16_BASE.mp4",
+ "frames": 266,
+ "fps": 24.0,
+ "curated_by": "curator-v10-07",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {},
+ "outfits": {},
+ "settings": {},
+ "spans": [
+  {
+   "start": 0,
+   "end": 42,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "off_style",
+   "camera": "static",
+   "notes": "OLD_DESIGN: older Pudgy design throughout the skit: the blue penguin has a bright yellow beak, a periwinkle body with soft gradient shading on the head and face (phone-glow lighting), at night in a dim blue-grey room; the reels on the phone show the older Polly and Pax with yellow feet and beaks. Phone has two lenses and no tuft: not the iFin. Heart poster with printed text on the wall (in-world). Shot: the penguin lies on his side in bed under a grey blanket, scrolling a phone held to his face. Tiny settle at the start (ECC on the poster corner scale 0.979 at f6, steady 0.995 from f12), then locked"
+  },
+  {
+   "start": 42,
+   "end": 66,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "phone insert: a flipper swipes up to the lock screen showing the time, f42-65; no lead"
+  },
+  {
+   "start": 66,
+   "end": 141,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "off_style",
+   "camera": "static",
+   "notes": "OLD_DESIGN: older Pudgy design throughout the skit: the blue penguin has a bright yellow beak, a periwinkle body with soft gradient shading on the head and face (phone-glow lighting), at night in a dim blue-grey room; the reels on the phone show the older Polly and Pax with yellow feet and beaks. Phone has two lenses and no tuft: not the iFin. Heart poster with printed text on the wall (in-world). Shot: the penguin in bed lifts himself up, eyes closed, then props up on the pillow holding the phone close and stares at it with heavy-lidded eyes. Camera locked (ECC on the poster corner scale 0.9996-1.0000, cc 1.000)"
+  },
+  {
+   "start": 141,
+   "end": 177,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "off_style",
+   "camera": "static",
+   "notes": "OLD_DESIGN: the phone screen fills the picture and plays a social-media reel of the older-design Polly (yellow feet and beak) by a light switch, then sitting on a sofa; app UI and handle text, a flipper scrolling (also lead_copy, graphic UI)"
+  },
+  {
+   "start": 177,
+   "end": 200,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "off_style",
+   "camera": "static",
+   "notes": "OLD_DESIGN: older Pudgy design throughout the skit: the blue penguin has a bright yellow beak, a periwinkle body with soft gradient shading on the head and face (phone-glow lighting), at night in a dim blue-grey room; the reels on the phone show the older Polly and Pax with yellow feet and beaks. Phone has two lenses and no tuft: not the iFin. Heart poster with printed text on the wall (in-world). Shot: back in bed, the penguin holds the phone to his face, eyes half closed, then shut. Camera locked (ECC scale 0.9997-0.9999, cc 1.000)"
+  },
+  {
+   "start": 200,
+   "end": 224,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "off_style",
+   "camera": "static",
+   "notes": "OLD_DESIGN: phone screen again: a reel of the older-design Polly and Pax sitting on a sofa, then a flipper swipes to the lock screen f219-223 (also lead_copy, graphic UI)"
+  },
+  {
+   "start": 224,
+   "end": 237,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "push_in",
+   "notes": "13 frames: the lock screen showing the later time fills the picture, slight push-in; no lead"
+  },
+  {
+   "start": 237,
+   "end": 266,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "off_style",
+   "camera": "static",
+   "notes": "OLD_DESIGN: older Pudgy design throughout the skit: the blue penguin has a bright yellow beak, a periwinkle body with soft gradient shading on the head and face (phone-glow lighting), at night in a dim blue-grey room; the reels on the phone show the older Polly and Pax with yellow feet and beaks. Phone has two lenses and no tuft: not the iFin. Heart poster with printed text on the wall (in-world). Shot: front view of the penguin sitting up in bed with the phone held up over his face, then lowering it to show wide, tired eyes f250+. Camera locked f237-249 (ECC cc 1.000); skit ends on this shot"
+  }
+ ]
+}

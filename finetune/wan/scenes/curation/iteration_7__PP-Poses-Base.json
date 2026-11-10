@@ -1,0 +1,449 @@
+{
+ "skit": "iteration_7/293_videos/PP-Poses-Base.mp4",
+ "frames": 420,
+ "fps": 24.0,
+ "curated_by": "curator-v10-07",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a snowy landscape by the sea with a frosted pine tree under soft clouds"
+  },
+  "s3": {
+   "kind": "flat",
+   "desc": "a restaurant drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 20,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pan_right",
+   "notes": "20 frames: Pax and Polly waddle side by side across the snow while the view tracks with them (the pine tree slides 36 px left f0-19 by template match, locked from f20)"
+  },
+  {
+   "start": 20,
+   "end": 70,
+   "boundary": "camera",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a strip of icy water along the horizon behind them",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "exits",
+     "outfit": [],
+     "exits_at": 66
+    }
+   ],
+   "beats": [
+    {
+     "start": 20,
+     "end": 34,
+     "text": "Polly and Pax waddle a couple of steps to the right side by side and come to a stop"
+    },
+    {
+     "start": 34,
+     "end": 46,
+     "text": "Pax points off to the right with one flipper while Polly stands beside him looking at him"
+    },
+    {
+     "start": 46,
+     "end": 53,
+     "text": "Polly takes out {ifin} and holds it at her chest while Pax turns to look at her"
+    },
+    {
+     "start": 53,
+     "end": 57,
+     "text": "Pax beams with his eyes squeezed shut beside Polly"
+    },
+    {
+     "start": 57,
+     "end": 66,
+     "text": "Pax hops away to the right and waddles out of the picture while Polly waddles a few steps after him holding the phone"
+    },
+    {
+     "start": 66,
+     "end": 70,
+     "text": "Polly keeps waddling slowly to the right alone in the snow, holding {ifin} at her chest"
+    }
+   ],
+   "props": [
+    "phone"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "takes_out",
+     "frame": 46,
+     "by": "polly",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "exits",
+   "notes": "camera locked from f20: template match on the pine tree scale-free 0 px f20-69 (score 0.999-1.0) and the snow band static; the horizon water ripples and the clouds drift a few px (in-world animation, not the camera). Phone has the pale grey back, three lenses and the tuft = iFin. Top third sky and clouds, bottom fifth plain snow: no overlay | verification pass 2 (verify_v10_report_v09): beats 5-6: Polly is not standing still - she waddles about 100 px to the right f57-69 (feet stepping f59, f61, f63, f67) holding the phone; beat 6 claimed she stands alone"
+  },
+  {
+   "start": 70,
+   "end": 81,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "11 frames: Pax waddles away from the viewer toward a red snowmobile by the shore"
+  },
+  {
+   "start": 81,
+   "end": 128,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "Polly's flipper raises the iFin into the foreground and its screen shows Pax posing beside the snowmobile (a screen showing a lead) f81-127; shutter flash on the screen f112-116; the phone swings away f123-127"
+  },
+  {
+   "start": 128,
+   "end": 146,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "18 frames: Pax poses beside the snowmobile alone, eyes closed with a smile; a sliver of Polly's flipper at the bottom-right edge"
+  },
+  {
+   "start": 146,
+   "end": 158,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "12 frames: Pax and Polly at a restaurant table, Pax holding the iFin up at Polly; a soft cone of flash light shines from the phone across the table f153-157 (also effect)"
+  },
+  {
+   "start": 158,
+   "end": 220,
+   "boundary": "same_shot",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with a round table between them set with a tablecloth, plates of food and a flower in a vase",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 158,
+     "end": 166,
+     "text": "Polly poses with a flipper raised to her chin while Pax holds {ifin} up toward her, taking a picture"
+    },
+    {
+     "start": 166,
+     "end": 174,
+     "text": "Pax leans across the table, holding the phone out closer to Polly while she keeps her pose"
+    },
+    {
+     "start": 174,
+     "end": 188,
+     "text": "Polly raises a flipper in a cheerful pose, briefly squeezing her eyes shut, while Pax keeps the phone pointed at her"
+    },
+    {
+     "start": 188,
+     "end": 202,
+     "text": "Pax pulls the phone back in front of himself and looks down at its screen while Polly holds her flipper up"
+    },
+    {
+     "start": 202,
+     "end": 212,
+     "text": "Pax raises the phone toward Polly again while she keeps one flipper lifted"
+    },
+    {
+     "start": 212,
+     "end": 220,
+     "text": "Polly lowers her flipper to rest it against her cheek and glances down while Pax keeps the phone on her"
+    }
+   ],
+   "props": [
+    "phone",
+    "table",
+    "plates of food",
+    "flower vase"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 158,
+     "by": "pax",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: ECC on the lower band (y 0.65-0.98) scale 1.0000, |t| <= 0.5 px, cc >= 0.999, and the table skirt matches at 0 px f158-218; compare 146/219 keeps table and chair edges black. Starts after the flash cone of f153-157. Phone back with three lenses and the tuft = iFin. Plain wall above, plain floor below: no overlay"
+  },
+  {
+   "start": 220,
+   "end": 271,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "phone POV: Pax's flipper holds the iFin in the foreground and its screen shows Polly posing at the table (a screen showing a lead); shutter flashes f232 and f252, f268-270"
+  },
+  {
+   "start": 271,
+   "end": 293,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with a round table between them set with a tablecloth, plates of food and a flower in a vase",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 271,
+     "end": 277,
+     "text": "Pax holds {ifin} up in front of him and looks at its screen while Polly sits watching him"
+    },
+    {
+     "start": 277,
+     "end": 283,
+     "text": "Pax stretches across the table, holding the phone out to Polly"
+    },
+    {
+     "start": 283,
+     "end": 293,
+     "text": "Polly leans over, takes the phone from Pax's flipper and pulls it back toward herself"
+    }
+   ],
+   "props": [
+    "phone",
+    "table",
+    "plates of food",
+    "flower vase"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "hands_over",
+     "frame": 280,
+     "by": "pax",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: table skirt template matches at 0 px f271-291 (score 1.0); compare 271/292 keeps table and chair edges black (the ECC ty wobble on the lower band comes from Polly's foot and chair in it). Only 22 frames: yields a single f21 window"
+  },
+  {
+   "start": 293,
+   "end": 342,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with the table, plates of food and a flower vase beside her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 293,
+     "end": 309,
+     "text": "Polly sits on her chair holding {ifin} up close to her face and stares at its screen"
+    },
+    {
+     "start": 309,
+     "end": 342,
+     "text": "Polly narrows her eyes into an unimpressed frown while she keeps looking at the phone"
+    }
+   ],
+   "props": [
+    "phone",
+    "chair",
+    "table",
+    "plates of food",
+    "flower vase"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 293,
+     "by": "polly",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "steady slow push-in through the whole shot: ECC on the lower band climbs 1.000 -> 1.040 by f341 with a steady drift (cc 0.87-0.89, Polly in the band); compare 293/341 shows the chair and table edges doubled. No static run. Phone back faces the viewer: no screen visible | verification pass 2 (verify_v10_report_v09): beat 1/2 boundary: Polly's frown starts at f309 (lowered brows, half-lidded eyes from f309), not f317"
+  },
+  {
+   "start": 342,
+   "end": 384,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with a round table between them set with a tablecloth, plates of food and a flower in a vase",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 342,
+     "end": 350,
+     "text": "Polly frowns at {ifin} in her flippers while Pax sits across the table watching her"
+    },
+    {
+     "start": 350,
+     "end": 362,
+     "text": "Polly leans across the table and hands the phone back to Pax"
+    },
+    {
+     "start": 362,
+     "end": 372,
+     "text": "Pax holds the phone close and looks at it while Polly settles back in her chair"
+    },
+    {
+     "start": 372,
+     "end": 384,
+     "text": "Pax lifts the phone toward Polly again while she sits and looks back at him, opening her beak"
+    }
+   ],
+   "props": [
+    "phone",
+    "table",
+    "plates of food",
+    "flower vase"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "hands_over",
+     "frame": 356,
+     "by": "polly",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: ECC on the lower band scale 0.9997-1.0000, |t| < 1 px, cc 1.000, and the table skirt matches at 0 px f342-382; compare 342/383 keeps table and chair edges black. No flash in this span"
+  },
+  {
+   "start": 384,
+   "end": 398,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "phone POV again: the iFin's screen shows Polly at the table, shutter flash f395-397"
+  },
+  {
+   "start": 398,
+   "end": 420,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "the phone screen turns black with a storage warning message (UI text); only Pax's flipper holding the phone, which pushes in toward the screen f404-408; skit ends on this shot"
+  }
+ ]
+}

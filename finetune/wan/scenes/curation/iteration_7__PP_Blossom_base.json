@@ -1,0 +1,341 @@
+{
+ "skit": "iteration_7/293_videos/PP_Blossom_base.mp4",
+ "frames": 328,
+ "fps": 24.0,
+ "curated_by": "curator-v10-17",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "an empty space with a plain pale grey background"
+  },
+  "s2": {
+   "kind": "set",
+   "desc": "an igloo room with pale ice-brick walls"
+  },
+  "s3": {
+   "kind": "flat",
+   "desc": "a dining nook with a round table and wooden chairs, drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 28,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 9,
+     "text": "Pax and Polly stand facing each other, Pax with his flippers tucked behind his back"
+    },
+    {
+     "start": 9,
+     "end": 14,
+     "text": "Pax pulls a bouquet of orange flowers from behind his back and holds it out to Polly"
+    },
+    {
+     "start": 14,
+     "end": 28,
+     "text": "Pax holds the bouquet out while Polly gazes at it and lifts a flipper toward it"
+    }
+   ],
+   "props": [
+    "bouquet of flowers"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "plain flat background, motion cannot fit; judged by eye and a foreground-bbox track: both ground shadows stay on y 320/480 and overlap in compare 0/27, character heights constant, f0-7 identical frames. No overlay in top third or bottom fifth"
+  },
+  {
+   "start": 28,
+   "end": 67,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 28,
+     "end": 35,
+     "text": "Polly stares wide-eyed at a bouquet of orange flowers held out to her from the right"
+    },
+    {
+     "start": 35,
+     "end": 41,
+     "text": "Polly takes the bouquet from the flipper holding it out and pulls it in"
+    },
+    {
+     "start": 41,
+     "end": 54,
+     "text": "Polly hugs the bouquet to her chest and closes her eyes with a happy smile"
+    },
+    {
+     "start": 54,
+     "end": 67,
+     "text": "Polly cuddles the bouquet with her eyes closed as a red heart pops up beside her head"
+    }
+   ],
+   "props": [
+    "bouquet of flowers"
+   ],
+   "prop_events": [],
+   "effects": [
+    "hearts"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "plain flat background; Polly's ground shadow overlaps exactly in compare 28/66 and her outline is frame-identical f28-33, f43-50, f60-66: camera locked. Only Pax's flipper shows, at the right edge f28-41 (he is not listed: never more than a flipper). Polly's whole body is ~60% of the height: medium, close to medium close-up. No overlay in top third or bottom fifth"
+  },
+  {
+   "start": 67,
+   "end": 117,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a vase of orange flowers on a small round table in front of a round window looking out on a snowy hill with a tree",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "enters",
+     "enters_at": 72,
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 67,
+     "end": 81,
+     "text": "Polly walks in from the right and stops beside the vase of flowers"
+    },
+    {
+     "start": 81,
+     "end": 93,
+     "text": "Polly stands beside the table and gazes at the flowers"
+    },
+    {
+     "start": 93,
+     "end": 105,
+     "text": "Polly shuts her eyes and leans in, resting her flippers on the table to smell the flowers"
+    },
+    {
+     "start": 105,
+     "end": 117,
+     "text": "Polly sniffs the flowers with a dreamy smile as a small heart floats up beside them"
+    }
+   ],
+   "props": [
+    "vase of flowers",
+    "small round table",
+    "round window"
+   ],
+   "prop_events": [],
+   "effects": [
+    "hearts"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "enters",
+   "notes": "camera locked: ECC on the wall band (y 0.02-0.18) scale 1.0002, 0 px, cc 1.000 at every step f75-195. Ends at f117, where the window sky starts to darken (time-lapse, next span). Only the vase is in view f67-71; Polly's foot enters at f72. No overlay in top third or bottom fifth"
+  },
+  {
+   "start": 117,
+   "end": 143,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "effect",
+   "camera": "static",
+   "notes": "time-lapse: the window sky darkens frame by frame f117-133 (sky BGR 223/208/178 -> 205/183/158) and Polly cross-dissolves from her spot by the vase to a new pose at the left f126-142 (two half-transparent Pollys f131-141; clean from f143)"
+  },
+  {
+   "start": 143,
+   "end": 177,
+   "boundary": "same_shot",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a vase of pale fading flowers on a small round table in front of a round window looking out on a dim snowy hill",
+   "time": "evening",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 143,
+     "end": 152,
+     "text": "Polly, holding a whisk at her side, steps up to the vase and reaches a flipper toward the flowers"
+    },
+    {
+     "start": 152,
+     "end": 167,
+     "text": "Polly closes her eyes and sniffs the flowers with a soft smile while petals drop onto the table"
+    },
+    {
+     "start": 167,
+     "end": 177,
+     "text": "Polly keeps sniffing the flowers as a small red heart floats up above her head"
+    }
+   ],
+   "props": [
+    "vase of flowers",
+    "whisk",
+    "small round table",
+    "round window"
+   ],
+   "prop_events": [],
+   "effects": [
+    "hearts"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "static stretch inside the time-lapse: sky colour frame-identical f133-176 and wall band ECC cc 1.000; the cross-dissolve is finished by f143 (ghost region stable f143-146). Kept with time evening (dusky sky through the window). Polly's back is cut by the left edge f143-147 only. No overlay in top third or bottom fifth"
+  },
+  {
+   "start": 177,
+   "end": 194,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "effect",
+   "camera": "static",
+   "notes": "time-lapse back to day: the sky brightens f177-185 while the flowers and then Polly fade out (Polly half-transparent f185-193, gone at f194)"
+  },
+  {
+   "start": 194,
+   "end": 243,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "push_in",
+   "notes": "no lead: the empty fish-shaped vase on its table in front of the window. Static f194-200, push-in on the window f201-225 (sky region diff 8-49 per frame), static again f226-242"
+  },
+  {
+   "start": 243,
+   "end": 270,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 243,
+     "end": 256,
+     "text": "Polly sits on a wooden chair at the round table, holding up a red book and looking ahead"
+    },
+    {
+     "start": 256,
+     "end": 261,
+     "text": "Polly lays the book down flat on the table, a red heart on its cover"
+    },
+    {
+     "start": 261,
+     "end": 270,
+     "text": "Polly rests her flippers on the book and smiles with her eyes closed"
+    }
+   ],
+   "props": [
+    "book",
+    "round table",
+    "wooden chairs"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "book cover title"
+   ],
+   "travel": "none",
+   "notes": "camera locked: ECC on the table-pedestal band (y 0.72-0.95, x 0.45-1.0) scale 1.0000, <0.5 px, cc 1.000 f247-267; compare 243/269 table and chair edges overlap. The cover's lettering is too small to read here (the next shot shows it). No overlay in top third or bottom fifth"
+  },
+  {
+   "start": 270,
+   "end": 328,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "push_in",
+   "notes": "insert on the book: only Polly's flipper f270-290, then the open scrapbook alone with a pressed flower and taped photos of Pax and Polly (also lead_copy); cover lettering in-world. Slow push-in (book grows f300 -> f327)"
+  }
+ ]
+}

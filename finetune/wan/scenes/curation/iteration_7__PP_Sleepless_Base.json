@@ -1,0 +1,91 @@
+{
+ "skit": "iteration_7/293_videos/PP_Sleepless_Base.mp4",
+ "frames": 147,
+ "fps": 24,
+ "curated_by": "curator-v10-26",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a dim bedroom drawn on a plain grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 147,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a wooden bed with a duck-shaped bedpost, and {ifin} lying screen-down on the covers beside her",
+   "time": "night",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 16,
+     "text": "Polly lies on her side under the covers with her head on the pillow and a flipper tucked under her cheek, eyes closed"
+    },
+    {
+     "start": 16,
+     "end": 41,
+     "text": "Polly snaps her eyes wide open and stares ahead, lying still on the pillow"
+    },
+    {
+     "start": 41,
+     "end": 65,
+     "text": "Polly shuts her eyes again and lies motionless with her cheek resting on her flipper"
+    },
+    {
+     "start": 65,
+     "end": 90,
+     "text": "Polly opens her eyes wide once more and stares blankly ahead from the pillow"
+    },
+    {
+     "start": 90,
+     "end": 114,
+     "text": "Polly closes her eyes again, still lying on her side under the covers"
+    },
+    {
+     "start": 114,
+     "end": 140,
+     "text": "Polly pops her eyes open yet again and gazes ahead, wide awake"
+    },
+    {
+     "start": 140,
+     "end": 147,
+     "text": "Polly closes her eyes one more time, lying still on the pillow"
+    }
+   ],
+   "props": [
+    "phone",
+    "bed",
+    "pillows"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "one locked shot, the whole skit: ECC on the headboard band (y 0.05-0.30) scale 1.0000, <=0.3 px, cc 0.998-1.000 every 16 frames, and on the bed-foot band (y 0.70-0.98) 1.0000, <=0.4 px, cc 1.000; compare 0/146 keeps every bed and headboard edge black (10457 static vs 356 changed px). Steady dim, desaturated night palette for the whole skit: night lighting, not an effect. Eyes: closed f0-15, open f16-40, closed f41-64, open f65-89, closed f90-113, open f114-139, closed f140-146 (step-1 crops). The phone lies screen-down on the covers the whole time, never handled: full-res crop shows the iFin back (pale grey, three lenses, little tuft on top), so it is written {ifin} in view. The bedpost knob is a cream duck shape, not a penguin. Top third plain wall and headboard, bottom fifth bed foot: no overlay. Body under the covers is in the picture: presence full | verification pass 2 (verify_v10_report_v19): beat 5: Polly does not squeeze her eyes; f91-113 they are the same calm closed lines as f41-64"
+  }
+ ]
+}

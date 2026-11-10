@@ -1,0 +1,217 @@
+{
+ "skit": "iteration_7/293_videos/PP-Fixer-Base.mp4",
+ "frames": 234,
+ "fps": 24.0,
+ "curated_by": "curator-v10-19",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "dark safety goggles with a teal strap",
+  "o2": "a grey stubble beard"
+ },
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a living room drawn on a plain pale grey background"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "an arched igloo doorway drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 81,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a cream sofa with coral cushions, and a teal armchair and a yellow footstool soft and blurred in the foreground",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 56,
+     "text": "Pax sits on the sofa holding a striped bucket of fish crackers, munching them and glancing to the side"
+    },
+    {
+     "start": 56,
+     "end": 68,
+     "text": "Pax flings the striped bucket up into the air with his eyes shut, scattering fish crackers everywhere"
+    },
+    {
+     "start": 68,
+     "end": 81,
+     "text": "Pax sits back with the empty bucket landed upside down on his head like a hat, smiling"
+    }
+   ],
+   "props": [
+    "striped snack bucket",
+    "fish crackers",
+    "sofa"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: ECC on the sofa/footstool band scale 1.000, ~0 px at cc >= 0.99 until Pax's toss enters the band (f56+); compare 0/80 shows sofa and armchair edges overlapping exactly. No overlays"
+  },
+  {
+   "start": 81,
+   "end": 206,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lookalike",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a wooden door swung open on the left and a dim room inside",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": [
+      "o1",
+      "o2"
+     ],
+     "moves": [
+      {
+       "frame": 105,
+       "screen": "center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 81,
+     "end": 101,
+     "text": "Polly stands in the open doorway with the goggles over her eyes, holding up a hammer and a yellow power drill"
+    },
+    {
+     "start": 101,
+     "end": 113,
+     "text": "Polly pushes the goggles up onto her forehead with the hammer flipper, uncovering her eyes"
+    },
+    {
+     "start": 113,
+     "end": 129,
+     "text": "Polly holds the hammer up beside her head and the drill at her chest, blinking"
+    },
+    {
+     "start": 129,
+     "end": 157,
+     "text": "Polly stands still holding the hammer and the drill in front of her belly and looks ahead"
+    },
+    {
+     "start": 157,
+     "end": 165,
+     "text": "Polly lifts the hammer and the drill up to her chest and glances aside with a worried look"
+    },
+    {
+     "start": 165,
+     "end": 197,
+     "text": "Polly keeps holding her tools with a worried look while puffs of smoke and small flames rise in the dim doorway behind her"
+    },
+    {
+     "start": 197,
+     "end": 206,
+     "text": "Polly raises the hammer high and lifts one foot to step forward with a frown as flames and smoke billow up behind her"
+    }
+   ],
+   "props": [
+    "hammer",
+    "power drill",
+    "wooden door"
+   ],
+   "prop_events": [],
+   "effects": [
+    "smoke",
+    "flames"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "U5: a penguin drawn exactly like Polly (rose body, Polly's three-strand crest and face, orange feet) but with a grey stubble beard around the beak and dark safety goggles with a teal strap, holding a hammer and a yellow power drill. Most likely Polly in a handyman disguise, but the stubble is a facial feature, not clothing, so I cannot place it for sure (compare Polly's mum = Polly + a necklace). Filled as Polly with outfits o1/o2, because that is the only identity under which this solo span could ever be kept (the validator requires a lead in a filled span); if the client names a different character, it stays dropped. Camera locked: ECC on the arch band scale 1.000, 0 px, cc 1.000 f89-193; compare 81/205 arch and door edges overlap. No overlays. Smoke from ~f165, flames grow f185-205 (in-scene) | verification pass 2 (verify_v10_report_v13): filled lookalike (U5, Polly with goggles and a grey beard) handled per the curator-v10-19 ruling; camera locked (door region identical f81-205, top and floor regions 0.00); beat 4 [129,165): from f157 Polly lifts the hammer and drill up to her chest and glances aside with worried brows, so 'in front of her belly, looking ahead calmly' is false f157-164; beat 6 [189,206): Polly only stands holding | Client 2026-11-05: Q4 was answered for the bunny costume only; stubble and goggles are still open, so this stays held."
+  },
+  {
+   "start": 206,
+   "end": 234,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the cream sofa and its coral cushions behind him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 206,
+     "end": 212,
+     "text": "Pax sits on the sofa with the striped bucket upside down on his head, looking up in surprise"
+    },
+    {
+     "start": 212,
+     "end": 216,
+     "text": "Pax squeezes his eyes shut and flinches down"
+    },
+    {
+     "start": 216,
+     "end": 222,
+     "text": "Pax springs up off the seat with one flipper thrown up in the air"
+    },
+    {
+     "start": 222,
+     "end": 234,
+     "text": "Pax lands back on the seat clutching the sides of his head, staring wide-eyed with an open beak"
+    }
+   ],
+   "props": [
+    "striped snack bucket",
+    "fish crackers",
+    "sofa"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: ECC on the sofa band scale 1.000, 0 px, cc 1.000 f209-233. keep12 0.73 is Pax's jump. No overlays | verification pass 2 (verify_v10_report_v13): framing: Pax measures 29-33% of the picture height (crest to feet, f207-233; about 30% while seated), which is medium wide, not medium; camera locked (compare 206/233 sofa edges black); beats checked step 1 and correct"
+  }
+ ]
+}

@@ -1,0 +1,185 @@
+{
+ "skit": "iteration_7/293_videos/PP-Foot-Base.mp4",
+ "frames": 155,
+ "fps": 24.0,
+ "curated_by": "curator-v10-29",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a plain pale grey background"
+  },
+  "s2": {
+   "kind": "set",
+   "desc": "a bed with a yellow headboard"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 32,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "high angle",
+   "setting": "s1",
+   "view": "with a teal-edged picnic blanket under them and a wicker picnic basket beside it",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 32,
+     "text": "Pax and Polly rest side by side on the picnic blanket holding flippers, both with their eyes closed and calm smiles"
+    }
+   ],
+   "props": [
+    "picnic blanket",
+    "picnic basket"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: motion on the basket/blanket-edge band y 0.33-0.42 (texture 4%/6%) 1.0000, 0.1 px, cc 1.000 every 4 frames; compare f0/f31 static edges 7542 vs 516 changed. No caption or watermark. The whole skit carries 4 px pure-black columns at the left and right picture edges (export pillarbox, ~1.8 px after prep's 480-wide scale); kept, as other curators kept PP-Favor and PP-BFPockets with the same bars, but flagged for a global ruling. | verification pass 2 (verify_v10_report_v27): beat: Pax and Polly are not leaning together (their bodies stay apart); what is visible is that they hold flippers between them (Pax's right and Polly's left flipper meet at the center) while resting with eyes closed; camera locked: basket/blanket corner region diff <= 0.44 vs f0; only a slow sway of the leads (whole-frame diff peaks 0.95 at f18 and returns); PILLARBOX: 4 px pure-black columns at"
+  },
+  {
+   "start": 32,
+   "end": 66,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a cream armchair with rounded yellow armrests under them",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 32,
+     "end": 66,
+     "text": "Polly hugs Pax from the side with her cheek pressed to his as they sit in the armchair, both smiling with their eyes closed"
+    }
+   ],
+   "props": [
+    "armchair"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: compare f32/f65 every armchair edge black (static edge px 5172 vs 442 changed: only small head movements). motion on the armchair band x 0.6-0.98 wobbles (scale 0.97-1.00) on its smooth curves; compare decides. 4 px black edge columns as noted on the first span."
+  },
+  {
+   "start": 66,
+   "end": 103,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "push_in",
+   "notes": "one shot: wide sofa view of Polly lying with her feet against Pax f66-83 (18 frames), a fast push-in f84-86, then a close insert of Pax's side and Polly's feet f87-102 (16 frames). Every part is under 21 frames."
+  },
+  {
+   "start": 103,
+   "end": 131,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "close-up",
+   "angle": "overhead",
+   "setting": "s2",
+   "view": "with a pillow under his head",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "partial",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 103,
+     "end": 111,
+     "text": "Pax lies with his head on the pillow, his eyes closed and his face calm"
+    },
+    {
+     "start": 111,
+     "end": 119,
+     "text": "Pax keeps his eyes closed as an orange foot pokes in from the right and presses against his side"
+    },
+    {
+     "start": 119,
+     "end": 131,
+     "text": "Pax turns his face away to the left with a contented open-beaked smile, his eyes still closed"
+    }
+   ],
+   "props": [
+    "pillow",
+    "bed"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: motion on the headboard/pillow band y 0.02-0.30 (texture 2%/5%) 1.0000, 0 px, cc 1.000 f106-130; compare f103/f130 headboard and pillow edges black. The foot at the right edge f111-130 is Polly's, not listed (flipper-at-the-edge ruling). Pax's lower body is outside the picture: presence partial. 4 px black edge columns as noted on the first span. | verification pass 2 (verify_v10_report_v27): beat 119-131: Pax does not tilt his head toward the foot; from f119 he turns his face away to the left (beak moves from right of center to left of center, the blue head marking swaps sides) with a contented open-beaked smile, eyes closed; camera locked f103-130 (headboard/pillow band 1.0000, 0 px, cc 1.000; pixel diff <= 0.09), pull-back starts f131. PILLARBOX: 4 px black columns, kept"
+  },
+  {
+   "start": 131,
+   "end": 155,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "fast pull-back f131-135 from Pax's close-up to a high wide view of the bed (Pax sitting up, Polly lying with her feet on him), then static f136-154: 19 frames (motion vs f134 constant from f136). Both parts under 21 frames."
+  }
+ ]
+}

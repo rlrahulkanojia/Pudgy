@@ -1,0 +1,302 @@
+{
+ "skit": "iteration_7/293_videos/2D_PP_WrongOrder_Base.mp4",
+ "frames": 273,
+ "fps": 24.0,
+ "curated_by": "curator-v10-12",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  },
+  "x1": {
+   "kind": "extra",
+   "desc": "a dark maroon penguin with a spiky purple crest and a black bow tie"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a restaurant drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 59,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a round wooden dining table set with napkins and a sauce bottle, and a potted plant at the right edge",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "x1",
+     "screen": "center",
+     "presence": "exits",
+     "exits_at": 57,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 42,
+       "screen": "left"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 14,
+     "text": "{x1} stands between them with two bowls on a tray and sets one bowl down in front of Polly while she holds her flippers together"
+    },
+    {
+     "start": 14,
+     "end": 30,
+     "text": "{x1} turns and sets the other bowl down in front of Pax while Polly raises her flippers to her cheeks with a happy smile"
+    },
+    {
+     "start": 30,
+     "end": 45,
+     "text": "{x1} smiles and walks off behind Pax to the left with the empty tray while Polly picks up a spoon"
+    },
+    {
+     "start": 45,
+     "end": 50,
+     "text": "{x1} walks behind Pax toward the left edge while Pax smiles with his eyes shut and Polly lifts her spoon"
+    },
+    {
+     "start": 50,
+     "end": 59,
+     "text": "{x1} slips out at the left edge while Pax stares ahead with wide eyes and Polly holds her spoon out over the table"
+    }
+   ],
+   "props": [
+    "bowls of food",
+    "tray",
+    "spoon",
+    "sauce bottle",
+    "napkins"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: ECC on the table band (y 0.60-0.80) scale 1.0000, 0 px, cc 1.000 to f42 (later rows dip only because the waiter walks into the band at the left); compare 0/58 table and plant edges black. No caption or watermark (top third and bottom fifth checked every 15 frames). Waiter is a side character, not a lead lookalike; mostly out of picture from f57, a sliver at the left edge until the cut at f59 | verification pass 2 (verify_v10_report_v03): beat 4 (45-59): Pax never looks down at his food. He smiles with his eyes shut f46-49, then stares ahead with wide eyes f50-58; beat 4: Polly does not move the spoon toward her bowl. She lifts it (f44-50) and holds it out over the table toward Pax's side f50-58. Split into two beats"
+  },
+  {
+   "start": 59,
+   "end": 67,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "8 clean frames: Pax at the table behind his bowl, eyes squeezed shut then open. A thought bubble starts popping in (first small dot) at f67"
+  },
+  {
+   "start": 67,
+   "end": 97,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "graphic_overlay",
+   "camera": "static",
+   "overlays": [
+    "thought bubble"
+   ],
+   "notes": "thought bubble over Pax f67-96: dots, then a bubble showing a dish (f71-78), then the dish crossed out with a big red X (f79-96). Icon bubbles are graphic_overlay as in Knowing/Handful (v9b precedent)"
+  },
+  {
+   "start": 97,
+   "end": 132,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "graphic_overlay",
+   "camera": "static",
+   "overlays": [
+    "thought bubble"
+   ],
+   "notes": "wide of Pax and Polly at the table with Pax's thought bubble the whole shot: crossed-out dish f97-104, then a bubble showing a dish f105-131"
+  },
+  {
+   "start": 132,
+   "end": 168,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "insert: Pax's beak alone on a plain white ground (no head, eyes or body drawn); the beak opens f140-147, then Polly's flipper comes up from the bottom and presses against it f142-167. No recognisable lead (beak/flipper-only insert = no_lead)"
+  },
+  {
+   "start": 168,
+   "end": 184,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pan_left",
+   "notes": "Polly seen from behind waving a flipper; the view slides so the table and Pax come in at the left (move ends f183, ECC on the table band identical from f184). 16 frames"
+  },
+  {
+   "start": 184,
+   "end": 206,
+   "boundary": "camera",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a dining table set with bowls, a sauce bottle and napkins between them, and a small empty table in the background",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "partial",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "x1",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 184,
+     "end": 206,
+     "text": "Polly, seen from behind, waves one flipper up and down while Pax sits across the table glancing at her nervously and {x1} waits behind with a tray"
+    }
+   ],
+   "props": [
+    "bowls of food",
+    "tray",
+    "sauce bottle",
+    "napkins"
+   ],
+   "prop_events": [],
+   "effects": [
+    "sweat drops"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "starts where the slide settles: ECC on the table band (x 0-0.25, y 0.60-0.95) vs f182/f183/f184 is constant from f184 to f205 (cc 0.99); compare 183/205 table edges black. Polly's back fills the right half, cut off at the right and bottom. Pax has a sweat drop on his cheek f184-190 that fades. No overlay in the top third or bottom fifth"
+  },
+  {
+   "start": 206,
+   "end": 255,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a round wooden dining table set with bowls, napkins and a sauce bottle, and a potted plant at the right edge",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "x1",
+     "screen": "left",
+     "presence": "enters",
+     "enters_at": 208,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 220,
+       "screen": "center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 206,
+     "end": 221,
+     "text": "{x1} hurries in from the left behind Pax carrying an empty tray while Polly keeps one flipper raised high"
+    },
+    {
+     "start": 221,
+     "end": 236,
+     "text": "{x1} stops between Pax and Polly holding the tray while Polly frowns and points a flipper at her bowl"
+    },
+    {
+     "start": 236,
+     "end": 246,
+     "text": "Polly squeezes her eyes shut and keeps pointing at her bowl while Pax sweats and glances at her"
+    },
+    {
+     "start": 246,
+     "end": 255,
+     "text": "Polly folds her flippers across her chest while Pax presses his flippers together and squeezes his eyes shut"
+    }
+   ],
+   "props": [
+    "bowls of food",
+    "tray",
+    "sauce bottle",
+    "napkins"
+   ],
+   "prop_events": [],
+   "effects": [
+    "sweat drops"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "slow push-in through the whole shot with a small jolt f208-217: ECC on the table band (y 0.62-0.80, cc >= 0.98) scale 1.0045 at f218 climbing to 1.0197 at f254, ty -19 px; compare 206/254 shows doubled table edges. No static run of 21 frames. No overlay in the top third or bottom fifth. Pax and the waiter have sweat drops from ~f215"
+  },
+  {
+   "start": 255,
+   "end": 273,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "18 frames to the end: close-up of Pax with sweat drops and blush, flippers pressed together at his chest. Skit ends on this shot"
+  }
+ ]
+}

@@ -1,0 +1,234 @@
+{
+ "skit": "iteration_7/293_videos/PP-WorkingInBed-Base.mp4",
+ "frames": 218,
+ "fps": 24.0,
+ "curated_by": "curator-v10-32",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a bedroom drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 73,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a small pale aqua table and stool, and a cream nightstand and the end of a bed behind",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 44,
+     "text": "Pax sits on a stool at the small table, writing in an open notebook with a pencil, a mug beside him"
+    },
+    {
+     "start": 44,
+     "end": 50,
+     "text": "Pax turns on the stool to face forward with a pleased squint"
+    },
+    {
+     "start": 50,
+     "end": 58,
+     "text": "Pax sits facing forward and looks ahead wide-eyed"
+    },
+    {
+     "start": 58,
+     "end": 66,
+     "text": "Pax turns back to the table and closes the notebook"
+    },
+    {
+     "start": 66,
+     "end": 73,
+     "text": "Pax picks up the notebook and slides off the stool with his eyes closed and a calm smile"
+    }
+   ],
+   "props": [
+    "notebook",
+    "pencil",
+    "mug",
+    "small table",
+    "stool"
+   ],
+   "prop_events": [
+    {
+     "prop": "notebook",
+     "event": "picks_up",
+     "frame": 66,
+     "by": "pax"
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "handwriting in the notebook"
+   ],
+   "travel": "none",
+   "notes": "locked f0-72 (nightstand band 0.1 px, cc 1.000); the pan starts at f73. The nightstand and bed behind are drawn softly blurred here (drawn depth of field), sharp once the view reaches the bed. The mug has a generic orange penguin face; the bed posts are chick-head finials; neither is a lead. The phone on the nightstand is the iFin showing a music-player screen. No caption or watermark."
+  },
+  {
+   "start": 73,
+   "end": 110,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "other",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a cream nightstand and a big bed with a yellow headboard",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "props": [
+    "notebook",
+    "small table",
+    "stool"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "U3: the view follows Pax from the table to the bed f73-109: the scenery slides left and slightly down (nightstand template +27 px across, -19 px down per frame near the end), i.e. a pan right with a slight upward tilt; settled at f110 (template 0 px, score 1.000). Pax stays near the middle of the picture. | verification pass 2 (verify_v10_report_v24): verifier-v10-24: f73-90 pan right (~22 px/frame, slight up), then f91-109 push-in (~1.5%/frame scale) combined with the pan and an upward tilt, settling at f110. Each single move is under 21 frames: too_short. No move clause is true for the whole span.",
+   "beats_dropped": [
+    {
+     "start": 73,
+     "end": 90,
+     "text": "Pax hops off the stool and waddles to the right with the notebook, his eyes closed and smiling"
+    },
+    {
+     "start": 90,
+     "end": 110,
+     "text": "Pax walks on toward the bed with his back turned, the notebook tucked under his flipper"
+    }
+   ]
+  },
+  {
+   "start": 110,
+   "end": 218,
+   "boundary": "camera",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a big bed with a yellow headboard, white covers and cream nightstands on both sides",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 123,
+       "screen": "center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 110,
+     "end": 123,
+     "text": "Pax stands beside the bed with his back turned and reaches a flipper up onto the mattress"
+    },
+    {
+     "start": 123,
+     "end": 130,
+     "text": "Pax hops up onto the bed with the notebook in his flipper"
+    },
+    {
+     "start": 130,
+     "end": 140,
+     "text": "Pax sits on the bed facing forward with the notebook beside him"
+    },
+    {
+     "start": 140,
+     "end": 146,
+     "text": "Pax turns and starts to slip under the covers"
+    },
+    {
+     "start": 146,
+     "end": 176,
+     "text": "Pax lies tucked under the covers against the pillow, holding up the closed notebook and looking at it"
+    },
+    {
+     "start": 176,
+     "end": 192,
+     "text": "Pax opens the notebook on the covers and writes in it with a pencil"
+    },
+    {
+     "start": 192,
+     "end": 200,
+     "text": "Pax's eyes droop shut and his head tips back against the pillow"
+    },
+    {
+     "start": 200,
+     "end": 210,
+     "text": "Pax falls asleep as the pencil slips from his flipper and drops to the floor"
+    },
+    {
+     "start": 210,
+     "end": 218,
+     "text": "Pax lies asleep with his beak slightly open, the notebook open on the covers"
+    }
+   ],
+   "props": [
+    "notebook",
+    "pencil",
+    "bed",
+    "phone"
+   ],
+   "prop_events": [
+    {
+     "prop": "pencil",
+     "event": "drops",
+     "frame": 202,
+     "by": "pax"
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "handwriting in the notebook"
+   ],
+   "travel": "none",
+   "notes": "locked f110-217 (nightstand band 0.2 px, cc 1.000; template 0 px every frame). Pax under the covers keeps his head and flippers visible. The iFin phone lies on the nightstand showing a generic music-player screen, no lead."
+  }
+ ]
+}

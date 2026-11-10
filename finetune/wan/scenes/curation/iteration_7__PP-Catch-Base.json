@@ -1,0 +1,275 @@
+{
+ "skit": "iteration_7/293_videos/PP-Catch-Base.mp4",
+ "frames": 255,
+ "fps": 24.0,
+ "curated_by": "curator-v10-17",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "an empty space with a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 106,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 28,
+       "screen": "right-center"
+      }
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "left",
+     "presence": "enters_exits",
+     "enters_at": 47,
+     "exits_at": 102,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 56,
+       "screen": "left-center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 6,
+     "text": "Pax turns from facing the side to face forward, blinking his eyes shut"
+    },
+    {
+     "start": 6,
+     "end": 25,
+     "text": "Pax clasps his flippers at his chest and glances around with raised eyebrows"
+    },
+    {
+     "start": 25,
+     "end": 37,
+     "text": "Pax shuffles a little to the right with his flippers clasped, glancing nervously to the side"
+    },
+    {
+     "start": 37,
+     "end": 47,
+     "text": "Pax turns to the right and creeps forward, leaning ahead with his flippers held out"
+    },
+    {
+     "start": 47,
+     "end": 56,
+     "text": "Polly dashes in from the left behind Pax, holding a butterfly net"
+    },
+    {
+     "start": 56,
+     "end": 60,
+     "text": "Polly swings the butterfly net and scoops Pax up into it"
+    },
+    {
+     "start": 60,
+     "end": 85,
+     "text": "Polly holds the net out beside her while Pax sits caught inside it, wriggling"
+    },
+    {
+     "start": 85,
+     "end": 88,
+     "text": "Pax springs up out of the net into the air"
+    },
+    {
+     "start": 88,
+     "end": 95,
+     "text": "Pax lands beside the empty net and squats down with his flippers spread while Polly stares"
+    },
+    {
+     "start": 95,
+     "end": 106,
+     "text": "Polly backs away to the left, dragging the empty net out of view, while Pax starts waddling, facing right"
+    }
+   ],
+   "props": [
+    "butterfly net"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "the whole skit is one locked shot on a plain flat background (profile: no cuts; motion cannot fit a plain ground). Judged by eye and by a foreground-bbox track: every shadow sits on the same ground line (y 310/480) the whole skit, character heights stay the same (Pax 114 px f0, 111 px f110), and Pax's standing position f3-24 does not drift. Split at f106 only so Polly's exit (f102) and re-entry (f119) can be recorded. Top third and bottom fifth have no overlay on any frame (edge scan every 5 frames) | verification pass 2 (verify_v10_report_v11): camera: the ground is perfectly plain (std 0.00 in the top 30% and bottom 25% on every 10th frame), so no pan could show; shadows and character heights constant: static; no overlay anywhere (top third and bottom fifth are flat 227 on every frame checked); beat [95,106): Pax does not waddle to the right. He turns right at f94 and walks in place (6-frame foot cycle) while drifting LEFT (centre x 0.7"
+  },
+  {
+   "start": 106,
+   "end": 255,
+   "boundary": "same_shot",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "exits",
+     "exits_at": 128,
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "left",
+     "presence": "enters",
+     "enters_at": 119,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 126,
+       "screen": "left-center"
+      },
+      {
+       "frame": 172,
+       "screen": "right-center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 106,
+     "end": 119,
+     "text": "Pax keeps waddling along facing right with his flippers held out in front of him"
+    },
+    {
+     "start": 119,
+     "end": 125,
+     "text": "Polly rushes in from the left carrying a big cardboard box"
+    },
+    {
+     "start": 125,
+     "end": 131,
+     "text": "Polly scoops Pax into the cardboard box, his feet sticking up as he tumbles in"
+    },
+    {
+     "start": 131,
+     "end": 139,
+     "text": "Polly pushes the box upright and turns to face forward beside it"
+    },
+    {
+     "start": 139,
+     "end": 149,
+     "text": "Polly tosses a bag of chips, a soda can, a game console and a book into the box"
+    },
+    {
+     "start": 149,
+     "end": 158,
+     "text": "Polly rubs her flippers together at her chest beside the open box, glancing sideways"
+    },
+    {
+     "start": 158,
+     "end": 166,
+     "text": "Polly reaches over and folds the box flaps shut"
+    },
+    {
+     "start": 166,
+     "end": 175,
+     "text": "Polly swings the box around to her other side while Pax's head peeks up out of it"
+    },
+    {
+     "start": 175,
+     "end": 180,
+     "text": "Polly leans over the box and presses its flaps down with both flippers"
+    },
+    {
+     "start": 180,
+     "end": 184,
+     "text": "Polly turns to the front with one flipper on the box and a roll of tape behind her"
+    },
+    {
+     "start": 184,
+     "end": 203,
+     "text": "Polly walks around the box wrapping strip after strip of tape across it"
+    },
+    {
+     "start": 203,
+     "end": 207,
+     "text": "Polly turns to the front and holds up a yellow pencil"
+    },
+    {
+     "start": 207,
+     "end": 219,
+     "text": "Polly pokes a row of holes into the side of the box with the pencil, sweat drops on her head"
+    },
+    {
+     "start": 219,
+     "end": 233,
+     "text": "Polly tucks the pencil away and stands with a flipper on the taped box, sweating"
+    },
+    {
+     "start": 233,
+     "end": 240,
+     "text": "Polly wipes her brow with a flipper"
+    },
+    {
+     "start": 240,
+     "end": 248,
+     "text": "Polly flicks the sweat off her flipper and glances at the box"
+    },
+    {
+     "start": 248,
+     "end": 255,
+     "text": "Polly rests a flipper on the box and smiles with her eyes closed"
+    }
+   ],
+   "props": [
+    "cardboard box",
+    "bag of chips",
+    "soda can",
+    "game console",
+    "book",
+    "roll of tape",
+    "pencil"
+   ],
+   "prop_events": [],
+   "effects": [
+    "sweat drops"
+   ],
+   "overlays": [],
+   "in_world_text": [
+    "snack bag label",
+    "soda can label"
+   ],
+   "travel": "enters",
+   "notes": "same locked shot as span 1. The box's right edge stays at x 216/270 f135-166 and its left edge at x 83/270 f184-254 while Polly moves: camera locked; the box changes place only when Polly swings it round f166-175. Pax is inside the box from f128 (exits_at), visible only as a head peeking out f171-174. Snack bag has a crab cartoon and a brand name, can reads Soda: in-world, not transcribed. No overlay in top third or bottom fifth | verification pass 2 (verify_v10_report_v11): camera static (same plain-ground evidence as [0,106)); no overlay; beat [106,119): Pax never comes to a stop. His feet keep cycling every frame f104-124 (foot blobs alternate) while he drifts right to x 0.75 (f112) and back left to 0.66 (f124); rest checked: box scoop f124-130, items f140-148 (snack brand is an invented parody name, console has no logo), sweat drops f212-234 and flicked off f238,"
+  }
+ ]
+}

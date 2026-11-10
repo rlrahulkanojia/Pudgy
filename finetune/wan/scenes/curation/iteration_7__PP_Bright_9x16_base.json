@@ -1,0 +1,61 @@
+{
+ "skit": "iteration_7/293_videos/PP_Bright_9x16_base.mov",
+ "frames": 209,
+ "fps": 24.0,
+ "curated_by": "curator-v10-03",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {},
+ "outfits": {},
+ "settings": {},
+ "spans": [
+  {
+   "start": 0,
+   "end": 60,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "graphic_overlay",
+   "camera": "static",
+   "overlays": [
+    "meme caption"
+   ],
+   "notes": "Client 2026-11-05: red-scarf and earmuffs penguins are removed from training (Q5, Q6); a clean copy would not bring this back. | meme caption across the top third on every frame of the skit, f0-208 (one line, 'His' f0-105, 'Her' f106-208). Two shots: f0-31 a blue penguin in a red scarf and navy overalls and a yellow penguin wearing earmuffs and a scarf sit on a sofa with phones; cut at f32 to a close-up of the blue penguin holding a phone whose screen plays a social-media video (in-world UI and text), f32-59. The blue penguin in the scarf and overalls is the U5 'Pax or not?' case (would be lookalike), but the caption outranks it. Current flat style, orange feet: not OLD_DESIGN."
+  },
+  {
+   "start": 60,
+   "end": 106,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "overlays": [
+    "meme caption"
+   ],
+   "notes": "Client 2026-11-05: red-scarf and earmuffs penguins are removed from training (Q5, Q6); a clean copy would not bring this back. | close-up of the yellow penguin wearing earmuffs only, squinting and frowning at the glare (f60-105); no lead or lookalike in view. Meme caption on every frame too."
+  },
+  {
+   "start": 106,
+   "end": 188,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "graphic_overlay",
+   "camera": "static",
+   "overlays": [
+    "meme caption"
+   ],
+   "notes": "Client 2026-11-05: red-scarf and earmuffs penguins are removed from training (Q5, Q6); a clean copy would not bring this back. | meme caption on every frame. Sofa two-shot again (blue penguin in scarf and overalls + yellow penguin wearing earmuffs) f106-154, push-in f155-160 to the blue penguin alone, then a white glare from his phone fills the picture f178-187 (also an effect) as he is knocked back and the phone flies up. Hard pose change at f181 is in-shot, not a cut."
+  },
+  {
+   "start": 188,
+   "end": 209,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "overlays": [
+    "meme caption"
+   ],
+   "notes": "high aerial view of a snowy town at night with a beam of light shooting up from one house; no character visible. Meme caption on every frame."
+  }
+ ]
+}

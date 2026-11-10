@@ -1,0 +1,460 @@
+{
+ "skit": "iteration_7/293_videos/PP-Raccon-Base.mp4",
+ "frames": 382,
+ "fps": 24.0,
+ "curated_by": "curator-v10-21",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a dressing corner drawn on a plain pale grey background"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "a kitchen drawn on a plain pale grey background"
+  },
+  "s3": {
+   "kind": "flat",
+   "desc": "a bedroom drawn on a plain pale grey background"
+  },
+  "s4": {
+   "kind": "flat",
+   "desc": "a dining corner drawn on a plain pale grey background"
+  },
+  "s5": {
+   "kind": "flat",
+   "desc": "a living room drawn on a plain pale grey background"
+  },
+  "s6": {
+   "kind": "flat",
+   "desc": "a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 6,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "6 frames of Polly alone on a cushioned stool brushing her tuft with a red hairbrush at a vanity, before Pax shows up in the mirror"
+  },
+  {
+   "start": 6,
+   "end": 58,
+   "boundary": "same_shot",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "notes": "Pax appears inside the glass of the vanity's arched mirror from f6 (pops up, watches Polly brush her hair, blushes with hearts) and no physical Pax is anywhere else in the picture: read as a mirror reflection of a lead (curator ruling: lead_copy). He does have a small shadow on the vanity top, so he might instead be standing behind an empty frame; if a verifier reads it that way the span is keepable (camera locked, compare 0/57; no overlay) | verification pass 2 (verify_v10_report_v22): flipped to kept: not a mirror reflection: the arch has no glass tint or sheen (its inside is exactly the background colour, 211,230,237), it shows no reflection of Polly sitting beside it, and it is the same arched opening with a shaded jamb reveal that stands behind this vanity set in Traffic [83,119); Pax slides in from behind the arch's left jamb at f6-8 and stands in the opening, smaller and further back, with",
+   "size_change": false,
+   "travel": "enters",
+   "props": [
+    "red hairbrush",
+    "vanity table",
+    "cushioned stool"
+   ],
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "enters",
+     "enters_at": 6,
+     "outfit": []
+    }
+   ],
+   "framing": "medium wide",
+   "angle": "eye level",
+   "time": "day",
+   "view": "with a cream vanity table and a tall arched opening behind it",
+   "effects": [
+    "blush marks",
+    "hearts"
+   ],
+   "prop_events": [],
+   "setting": "s1",
+   "in_world_text": [],
+   "overlays": [],
+   "beats": [
+    {
+     "start": 6,
+     "end": 12,
+     "text": "Pax slides into view from behind the side of the arch while Polly brushes her tuft with a red hairbrush"
+    },
+    {
+     "start": 12,
+     "end": 26,
+     "text": "Polly keeps brushing her tuft while Pax stands in the archway watching her"
+    },
+    {
+     "start": 26,
+     "end": 40,
+     "text": "Pax blushes as little hearts pop up beside him while Polly keeps brushing her tuft"
+    },
+    {
+     "start": 40,
+     "end": 58,
+     "text": "Polly lowers the brush and holds it up beside her, blinking, while Pax keeps blushing with hearts popping"
+    }
+   ]
+  },
+  {
+   "start": 58,
+   "end": 102,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a small stove and a steaming pot of stew",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "left",
+     "presence": "enters",
+     "enters_at": 63,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 66,
+       "screen": "left-center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 58,
+     "end": 63,
+     "text": "Pax stands at a small stove stirring a steaming pot of stew with a spoon"
+    },
+    {
+     "start": 63,
+     "end": 72,
+     "text": "Polly bounds in from the left and hugs Pax from behind while he stirs"
+    },
+    {
+     "start": 72,
+     "end": 90,
+     "text": "Polly hugs Pax from behind with her eyes closed and a smile while he keeps stirring the pot"
+    },
+    {
+     "start": 90,
+     "end": 102,
+     "text": "Pax blushes and glances back at Polly with a shy smile"
+    }
+   ],
+   "props": [
+    "stove",
+    "pot",
+    "spoon"
+   ],
+   "prop_events": [],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "enters",
+   "notes": "camera locked (compare 58/101: stove edges overlap; the band changes f65-72 and f88-97 are Polly's foot and the steam). No overlay | verification pass 2 (verify_v10_report_v22): Polly enters at f63, not f64 (pink first visible at the left edge on f63, mid-leap)"
+  },
+  {
+   "start": 102,
+   "end": 139,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with a big bed with a golden headboard",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 102,
+     "end": 139,
+     "text": "Polly sleeps tucked under the covers with her eyes closed and her beak open, a drop of drool at its tip"
+    }
+   ],
+   "props": [
+    "bed",
+    "covers",
+    "pillow"
+   ],
+   "prop_events": [],
+   "effects": [
+    "drool drop"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked (bed band pixel-identical f102-138). Only Polly's head and a flipper show above the covers, clearly recognisable"
+  },
+  {
+   "start": 139,
+   "end": 216,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s4",
+   "view": "with a wooden chair and a small table with a white tablecloth",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 139,
+     "end": 147,
+     "text": "Polly sits at a table and picks up a piece of sushi from the plate in front of her"
+    },
+    {
+     "start": 147,
+     "end": 175,
+     "text": "Polly pops the sushi into her beak and chews with her eyes closed, swaying happily"
+    },
+    {
+     "start": 175,
+     "end": 187,
+     "text": "Polly reaches for another piece of sushi and lifts it to her beak"
+    },
+    {
+     "start": 187,
+     "end": 197,
+     "text": "Polly chews with her eyes closed and a blissful smile"
+    },
+    {
+     "start": 197,
+     "end": 203,
+     "text": "Polly quickly grabs another piece and stuffs it into her beak"
+    },
+    {
+     "start": 203,
+     "end": 216,
+     "text": "Polly chews happily with her eyes closed, a flipper at her beak"
+    }
+   ],
+   "props": [
+    "plate of sushi",
+    "table",
+    "chair"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked (compare 139/215: chair, table and tablecloth edges overlap). The plate goes from about six pieces of sushi to two"
+  },
+  {
+   "start": 216,
+   "end": 242,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s5",
+   "view": "with the end of a cream sofa",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 216,
+     "end": 242,
+     "text": "Polly sits on the end of the sofa holding {ifin} and scrolls on it with a flipper, eyes on the screen"
+    }
+   ],
+   "props": [
+    "phone",
+    "sofa"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 216,
+     "by": "polly",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked (sofa-arm band pixel-identical f216-241). Phone: pale grey back, lenses, tuft = iFin; its back faces the viewer"
+  },
+  {
+   "start": 242,
+   "end": 286,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "phone-screen insert: the iFin fills the picture showing a social-media post with a meme picture of Pax in a grey beanie and red scarf and caption text (also lead_copy); only the edge of Polly's flipper visible; dropped as lead_copy (curator ruling: a phone POV with the other lead on its screen)"
+  },
+  {
+   "start": 286,
+   "end": 324,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s5",
+   "view": "with the end of a cream sofa",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 286,
+     "end": 304,
+     "text": "Polly sits on the sofa staring at {ifin} with teary, wobbling eyes"
+    },
+    {
+     "start": 304,
+     "end": 324,
+     "text": "Polly squeezes her eyes shut and sobs, tears spurting, a flipper pressed to her beak"
+    }
+   ],
+   "props": [
+    "phone",
+    "sofa"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 286,
+     "by": "polly",
+     "is_ifin": true
+    }
+   ],
+   "effects": [
+    "tears"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f286-323 (sofa band pixel-identical; compare 286/325 sofa edges overlap). Phone back faces the viewer"
+  },
+  {
+   "start": 324,
+   "end": 326,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "the last 2 frames of the sofa shot: the whole background tint shifts slightly lighter (about +5 RGB) just before the cut. Cut off to keep the kept span uniform"
+  },
+  {
+   "start": 326,
+   "end": 382,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s6",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 326,
+     "end": 346,
+     "text": "Polly stands with one flipper on her hip and the other raised, squinting sideways with a skeptical look"
+    },
+    {
+     "start": 346,
+     "end": 353,
+     "text": "Polly squashes down and squeezes her eyes shut"
+    },
+    {
+     "start": 353,
+     "end": 370,
+     "text": "Polly flips a flipper up beside her head and tilts it back with her eyes closed and a smug smile"
+    },
+    {
+     "start": 370,
+     "end": 382,
+     "text": "Polly crosses her flippers and stares ahead with a stern pout"
+    }
+   ],
+   "props": [],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "plain background: camera judged by the floor shadow (black in compare 326/381 and 326/360) and Polly's feet line, which stays at the same row (y 1444) through the shot; keep12 was low only because Polly moves. Skit ends here"
+  }
+ ]
+}

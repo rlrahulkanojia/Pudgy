@@ -1,0 +1,147 @@
+{
+ "skit": "iteration_7/293_videos/PP-Accident-Base.mp4",
+ "frames": 145,
+ "fps": 24.0,
+ "curated_by": "curator-v10-28",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a bedroom with a large yellow wooden bed"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 10,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "10 static frames of Pax mopping beside the bed before the slow push-in starts at f10 (motion on the window band: 1.0000 to f9, 1.0006 at f10, 1.0016 at f12)"
+  },
+  {
+   "start": 10,
+   "end": 89,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "medium wide",
+   "angle": "high angle",
+   "setting": "s1",
+   "view": "with a curtained window and a bedside lamp behind the bed",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 10,
+     "end": 42,
+     "text": "Pax pushes a flat mop back and forth across the floor beside the bed, glancing around"
+    },
+    {
+     "start": 42,
+     "end": 72,
+     "text": "Pax keeps mopping beside the bed, blinking with a small smile"
+    },
+    {
+     "start": 72,
+     "end": 84,
+     "text": "Pax stands the mop upright and lifts his other flipper with a cheerful look"
+    },
+    {
+     "start": 84,
+     "end": 89,
+     "text": "Pax turns toward the bed, still holding the mop upright"
+    }
+   ],
+   "props": [
+    "flat mop",
+    "bed",
+    "bedside lamp"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "slow steady push-in: motion on the window and curtains (y 0.26-0.47, x 0.42-0.85) scale 1.0016 at f12 -> 1.110 at f72 with ty drifting to -102 px (cc 0.97-1.00); re-fit vs f72 on y 0.22-0.42, x 0.60-1.00: 1.012 at f76 -> 1.056 at f92, and step 1 vs f84 settles at f89. No static run of 21 frames inside it. No overlay"
+  },
+  {
+   "start": 89,
+   "end": 145,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "high angle",
+   "setting": "s1",
+   "view": "with a curtained window and a bedside lamp behind the bed",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 123,
+       "screen": "left"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 89,
+     "end": 97,
+     "text": "Pax stands beside the bed holding the mop upright, glancing off to the side"
+    },
+    {
+     "start": 97,
+     "end": 105,
+     "text": "Pax grabs the edge of the blanket and flings it up into the air"
+    },
+    {
+     "start": 105,
+     "end": 123,
+     "text": "Pax disappears under the blanket as it billows up and settles over the bed"
+    },
+    {
+     "start": 123,
+     "end": 145,
+     "text": "Pax lies in bed with his head on the pillow and the blanket pulled up, eyes closed, the mop leaning against the bed"
+    }
+   ],
+   "props": [
+    "flat mop",
+    "blanket",
+    "bed",
+    "bedside lamp"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "motion on the window and curtains (y 0.20-0.40, x 0.60-1.00) vs f100: scale 1.0000, 0.1 px, cc 1.000 to f144; step 1 vs f84 identical from f89 on. Pax is out of sight under the flying blanket for about f107-121 (16 of 56 frames); visible the rest. No overlay | verification pass 2 (verify_v10_report_v22): beat 1 (f89-97): Pax is not looking ahead; his pupils are turned to the side (right) every frame f89-96"
+  }
+ ]
+}

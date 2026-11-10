@@ -1,0 +1,222 @@
+{
+ "skit": "iteration_7/293_videos/PP-WakeUpText-Base.mp4",
+ "frames": 172,
+ "fps": 24.0,
+ "curated_by": "curator-v10-13",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a bedroom with a yellow bed and a cream nightstand, drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 70,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "medium wide",
+   "angle": "high angle",
+   "setting": "s1",
+   "view": "with a peach lamp and a small mug on the nightstand and a duck-topped bedpost behind him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 10,
+     "text": "Pax lies asleep on his back with his eyes closed and one flipper resting on the blanket while {ifin} lies beside him"
+    },
+    {
+     "start": 10,
+     "end": 34,
+     "text": "Pax rubs his eye with a flipper, blinking sleepily as he lies on the pillow"
+    },
+    {
+     "start": 34,
+     "end": 48,
+     "text": "Pax yawns with his beak wide open and his eyes squinting"
+    },
+    {
+     "start": 48,
+     "end": 56,
+     "text": "Pax keeps yawning and raises a flipper up behind his head"
+    },
+    {
+     "start": 56,
+     "end": 66,
+     "text": "Pax opens both eyes wide and holds a flipper up beside his head"
+    },
+    {
+     "start": 66,
+     "end": 70,
+     "text": "Pax swings a flipper out to the side and rolls over toward the phone"
+    }
+   ],
+   "props": [
+    "phone",
+    "bed",
+    "peach lamp",
+    "mug"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "slow eased push-in through the opening shot: motion on the lamp/bedpost band (y0.25-0.45, x0-0.42) vs f0 reads scale 1.003 (f16), 1.030 (f30), 1.043 (f36), 1.070 (f48), 1.084 (f60), 1.0867 (f64), 1.0878 (f69) and then holds at 1.0878 from f69 (cc 0.999); the first frames creep (1.0004 at f4, 1.0009 at f8 on the nightstand band), so the whole run f0-69 is one moving span. Phone on the blanket is the iFin (pale grey back, lenses, tuft; full-res crop f0). The mug on the nightstand has a small peach penguin face: generic, not a lead (same ruling as PP-Tasks). No caption or watermark | verification pass 2 (verify_v10_report_v11): filled camera_move: push_in is right - lamp/bedpost band scale 1.003 (f16) -> 1.0878 (f69), cc 0.999 on the clean rows; beat [0,10): no flipper is tucked behind his head. At f0-9 his visible flipper lies on the blanket over his front; the other is out of sight. iFin confirmed at f0/f40 (three lenses, tuft)"
+  },
+  {
+   "start": 70,
+   "end": 96,
+   "boundary": "camera",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "high angle",
+   "setting": "s1",
+   "view": "with a peach lamp and a small mug on the nightstand and a duck-topped bedpost behind him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 70,
+     "end": 75,
+     "text": "Pax lies on his side with a flipper resting on the phone on the blanket, glancing down at it"
+    },
+    {
+     "start": 75,
+     "end": 79,
+     "text": "Pax picks up the phone and lifts it to his face with his eyes shut"
+    },
+    {
+     "start": 79,
+     "end": 96,
+     "text": "Pax holds {ifin} up close to his face and stares at the screen with wide open eyes"
+    }
+   ],
+   "props": [
+    "phone",
+    "bed",
+    "peach lamp",
+    "mug"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "picks_up",
+     "frame": 75,
+     "by": "pax",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "locked after the push-in: motion vs f74 on the lamp band reads scale 0.9999, 0.2 px, cc 1.000 for f75-89, f91, f94 (f90/92/93/95 rows have low cc: the phone and flipper enter the band); vs f0 the scale holds at 1.0878 f69-94. 26 frames. iFin clearly visible f80-95 (lenses, tuft). Hard cut to the phone-screen insert at f96"
+  },
+  {
+   "start": 96,
+   "end": 126,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "push_in",
+   "notes": "phone-screen insert: the iFin's lock screen (clock, a message notification from Polly with her avatar, Polly as the wallpaper) fills the picture, Pax's flipper holding it at the edges f96-108; pushes in toward the screen f96-112. Also lead_copy (Polly on the wallpaper and avatar) and in-world text"
+  },
+  {
+   "start": 126,
+   "end": 172,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "high angle",
+   "setting": "s1",
+   "view": "with a peach lamp and a small mug on the nightstand and a duck-topped bedpost behind him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 126,
+     "end": 133,
+     "text": "Pax lies holding {ifin} up to his face and stares at the screen with wide eyes"
+    },
+    {
+     "start": 133,
+     "end": 138,
+     "text": "Pax lowers the phone to his chest and shuts his eyes with a smile"
+    },
+    {
+     "start": 138,
+     "end": 156,
+     "text": "Pax hugs the phone to his chest with his eyes closed and an open-beaked smile while a small heart floats up above him"
+    },
+    {
+     "start": 156,
+     "end": 172,
+     "text": "Pax keeps cuddling the phone against his chest with his eyes closed, smiling happily"
+    }
+   ],
+   "props": [
+    "phone",
+    "bed",
+    "peach lamp",
+    "mug"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 126,
+     "by": "pax",
+     "is_ifin": true
+    }
+   ],
+   "effects": [
+    "heart"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "locked: motion on the bedpost/footboard band (y0.80-1.0, x0-0.35) vs f126 reads scale 1.0000, 0 px, cc 1.000 from f138 to the end (f135/f141 rows lower cc: the blanket edge moves); compare 126/171 background edges overlap. A small coral heart pops up beside his head f136-155. No caption or watermark"
+  }
+ ]
+}

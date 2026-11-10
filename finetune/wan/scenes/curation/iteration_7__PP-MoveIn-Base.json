@@ -1,0 +1,332 @@
+{
+ "skit": "iteration_7/293_videos/PP-MoveIn-Base.mp4",
+ "frames": 390,
+ "fps": 24.0,
+ "curated_by": "curator-v10-16",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a room with a cream bookshelf, drawn on a plain pale grey background"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "a living room with a cream sofa, a glass coffee table and a wooden door, drawn on a plain pale grey background"
+  },
+  "s3": {
+   "kind": "set",
+   "desc": "an open-air balcony with a wooden deck and a pale railing under a sunny sky with puffy clouds"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 23,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "lead_hidden",
+   "camera": "static",
+   "notes": "the bookshelf fills the picture; only the tip of Polly's flipper reaches in from the left to tidy the books (f0-11, f20-22)"
+  },
+  {
+   "start": 23,
+   "end": 33,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "10 frames, also camera_move: fast ease-out pull-back from the bookshelf to a wide of Polly beside it (profile cut candidates f23-26 are this move; ECC vs f40 on the shelf: scale 1.168 f26, 1.036 f27, 1.004 f28 -> 1.002 f32), locked from f33"
+  },
+  {
+   "start": 33,
+   "end": 50,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "17 locked frames (shelf band pixel-identical to f40): Polly stands beside the bookshelf, reaches to it, then hugs her flippers to her chest with her eyes closed"
+  },
+  {
+   "start": 50,
+   "end": 116,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with books and two small igloo ornaments on the shelves beside him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 50,
+     "end": 59,
+     "text": "Pax stands by the bookshelf holding a small penguin figurine in sunglasses against his belly, a flipper raised to his beak"
+    },
+    {
+     "start": 59,
+     "end": 86,
+     "text": "Pax reaches over with one flipper and pushes the books on the shelf aside, the figurine held in the other"
+    },
+    {
+     "start": 86,
+     "end": 92,
+     "text": "Pax lifts the figurine and looks at it"
+    },
+    {
+     "start": 92,
+     "end": 101,
+     "text": "Pax sets the figurine on the middle shelf with both flippers"
+    },
+    {
+     "start": 101,
+     "end": 116,
+     "text": "Pax steps back from the shelf, rests his flippers on his hips and gazes ahead with a satisfied look"
+    }
+   ],
+   "props": [
+    "bookshelf",
+    "books",
+    "penguin figurine",
+    "igloo ornaments"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "ECC on the top shelf (y 0.33-0.47, x 0.18-0.5) scale 1.0000, <= 0.1 px, cc 1.000 through f115. The figurine is a black-and-white penguin with red hair, sunglasses and an orange patterned jacket: neither lead, treated as a prop. Feet and body colours match the current design (not OLD_DESIGN) | verification pass 2 (verify_v10_report_v14): beat 0 (f50-59): Pax is not looking down at the figurine: one flipper is raised to his beak and his pupils look left toward the shelf (f50, f53, f56)"
+  },
+  {
+   "start": 116,
+   "end": 158,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a stack of books and a candle on the glass table",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 116,
+     "end": 127,
+     "text": "Polly holds a potted plant in a bowl over the glass table and sets it down beside a stack of books"
+    },
+    {
+     "start": 127,
+     "end": 140,
+     "text": "Polly leans over the table with her eyes closed, her flippers straightening the stack of books under the candle"
+    },
+    {
+     "start": 140,
+     "end": 158,
+     "text": "Polly opens her eyes and looks over the table, her flippers still resting on the books"
+    }
+   ],
+   "props": [
+    "potted plant",
+    "books",
+    "candle",
+    "glass coffee table"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "slow steady push-in through the whole shot and on into the next one: ECC on the door band (y 0.22-0.4, x 0.45-0.75) vs f116 scale 1.004 f124, 1.012 f132, 1.023 f148, 1.029 f156 (cc 1.000). Hard cut to Pax at f158 on the same background (missed by profile) | verification pass 2 (verify_v10_report_v14): beat 0/1 boundary: the plant is still held up at f125 and lands on the table at f126-127; beat 1: Polly's flippers rest on the book stack, not the candle (f129-139); the candle jar stays put on top"
+  },
+  {
+   "start": 158,
+   "end": 228,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a stack of books, a candle and a potted plant on the glass table",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 158,
+     "end": 170,
+     "text": "Pax tips a cardboard box over the glass table, spilling purple game controllers onto it"
+    },
+    {
+     "start": 170,
+     "end": 182,
+     "text": "Pax tosses the empty box down to the floor at his side and stands with his flippers spread, looking ahead"
+    },
+    {
+     "start": 182,
+     "end": 206,
+     "text": "Pax leans over the table and arranges the controllers beside the potted plant"
+    },
+    {
+     "start": 206,
+     "end": 228,
+     "text": "Pax straightens up behind the table and smiles ahead, a flipper resting on the controllers"
+    }
+   ],
+   "props": [
+    "cardboard box",
+    "game controllers",
+    "potted plant",
+    "books",
+    "candle",
+    "glass coffee table"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "the same slow push-in continues across the cut: ECC on the door band vs f116 scale 1.036 f164, 1.047 f180, 1.061 f196, 1.074 f212, 1.081 f220 (cc 1.000) | verification pass 2 (verify_v10_report_v14): beat 1 (f170-182): the box drops to the floor at Pax's right side, not behind him, and he looks ahead with his flippers spread (f172-180), not down at the controllers (he only leans to them from f182)"
+  },
+  {
+   "start": 228,
+   "end": 262,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with a large potted plant in a red fish-patterned pot",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 228,
+     "end": 246,
+     "text": "Polly leans into the big red plant pot with her eyes closed, pushing it along the deck"
+    },
+    {
+     "start": 246,
+     "end": 262,
+     "text": "Polly straightens up beside the pot and gazes up at the plant with her flippers clasped at her chest"
+    }
+   ],
+   "props": [
+    "potted plant"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "slow push-in: deck and railing lines in a clear column at the right edge (x 0.93-0.99, 540x960) drift down and spread apart steadily, 554->556, 672->676, 767->773, 878->887 px from f228 to f261 (lower lines move more = growing scale); compare 228/261 railing and deck lines doubled. ECC bands with characters or clouds were not used (drifting clouds fake a pan)"
+  },
+  {
+   "start": 262,
+   "end": 292,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with a large potted plant in a red fish-patterned pot",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 272,
+       "screen": "right-center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 262,
+     "end": 276,
+     "text": "Pax pushes a round dark green barbecue grill on wheels across the deck toward the plant"
+    },
+    {
+     "start": 276,
+     "end": 292,
+     "text": "Pax stops behind the grill, holding its handle, and looks ahead"
+    }
+   ],
+   "props": [
+    "barbecue grill",
+    "potted plant"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "slow push-in continuing from the previous shot: deck lines in a clear column at the left edge (x 0-0.06) 768->774, 803->809, 874->882 px from f262 to f291; compare 262/291 railing, pot and deck lines doubled"
+  },
+  {
+   "start": 292,
+   "end": 390,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "other",
+   "notes": "Polly hangs a framed photo of Pax and Polly cheek to cheek on the wall; the photo stays in view to the end. A pull-back ~f341-352 widens the picture as Pax comes in from the right in white sunglasses with a snowboard"
+  }
+ ]
+}

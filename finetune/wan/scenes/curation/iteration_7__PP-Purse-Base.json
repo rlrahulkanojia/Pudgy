@@ -1,0 +1,340 @@
+{
+ "skit": "iteration_7/293_videos/PP-Purse-Base.mp4",
+ "frames": 227,
+ "fps": 24.0,
+ "curated_by": "curator-v10-15",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "a pale seashell-shaped bow on her head and a pearl necklace"
+ },
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a snowy yard in front of an igloo with an arched wooden door"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 4,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "f0 Pax close at the door turning a key, then a fast pull-back f1-3 to the wide view (settled from f4, ECC scale 0.897 vs f3)"
+  },
+  {
+   "start": 4,
+   "end": 22,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "18 static frames: Pax turns the key in the igloo door while the bow-and-pearls pink penguin (see U5 spans) stands beside him. Also lookalike"
+  },
+  {
+   "start": 22,
+   "end": 26,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pan_right",
+   "notes": "4-frame sideways move: ECC tx -10, -36, -72, -108, settles at -125 px from f26 (also a camera_move)"
+  },
+  {
+   "start": 26,
+   "end": 51,
+   "boundary": "camera",
+   "keep": true,
+   "drop_reason": null,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the igloo's ice-block wall behind them and smooth snow in front",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 26,
+     "end": 36,
+     "text": "Pax stands by the igloo door holding a phone in one flipper and his keys in the other, frowning sideways at Polly"
+    },
+    {
+     "start": 36,
+     "end": 51,
+     "text": "Pax looks up at Polly and blinks while she stands beside him with her flippers clasped and a coral shell-shaped purse on her arm"
+    }
+   ],
+   "props": [
+    "phone",
+    "keys",
+    "shell-shaped purse",
+    "wooden door"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 26,
+     "by": "pax",
+     "is_ifin": "unsure"
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "Client 2026-11-05: pearl necklace = Polly dressed up (Q3, U5), flipped to kept. | U5: a penguin drawn exactly like Polly (rose body, Polly's three-feather tuft and face) but wearing a pale seashell-shaped bow on her head and a pearl necklace and carrying a coral shell-shaped purse; she is Pax's companion all skit (he hands her his phone and keys, she makes him carry her purse) and reads as Polly dressed up, but the pearl necklace is the marker v9b used for Polly's mum (MothersDay2), so not placed for sure. Filled as polly with o1 so the span flips to kept if U5 places her as Polly; otherwise it stays dropped. Camera locked f26-50 (ECC scale 1.0005, tx fixed, cc 0.986). Phone: grey frame and a tuft on top, screen side only, so is_ifin unsure. No overlay in top third or bottom fifth Re-checked on cloud-free bands: igloo wall (y0.05-0.30, x0-0.6) and snow ground (y0.85-1.0) both scale 1.000, tx within 2 px."
+  },
+  {
+   "start": 51,
+   "end": 65,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "push_in",
+   "notes": "push-in f51-53 (ECC scale 1.019, 1.064 vs f48), then 11 static frames f54-64 as Pax holds the phone out to her; both parts too short. Also lookalike"
+  },
+  {
+   "start": 65,
+   "end": 117,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": null,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the igloo's ice-block wall and the edge of its wooden door behind her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 65,
+     "end": 79,
+     "text": "Polly reaches out and takes a phone from a flipper that sticks in from the left edge"
+    },
+    {
+     "start": 79,
+     "end": 85,
+     "text": "Polly tucks the phone into her coral shell-shaped purse"
+    },
+    {
+     "start": 85,
+     "end": 93,
+     "text": "Polly reaches out again and takes a set of keys on a green keychain from the flipper"
+    },
+    {
+     "start": 93,
+     "end": 107,
+     "text": "Polly drops the keys into her purse and snaps it shut as the flipper pulls back out of the picture"
+    },
+    {
+     "start": 107,
+     "end": 117,
+     "text": "Polly lifts the purse by its handle and holds it out to her side"
+    }
+   ],
+   "props": [
+    "phone",
+    "keys",
+    "shell-shaped purse"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "hands_over",
+     "frame": 72,
+     "by": "pax",
+     "is_ifin": "unsure"
+    },
+    {
+     "prop": "keys",
+     "event": "hands_over",
+     "frame": 89,
+     "by": "pax"
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "Client 2026-11-05: pearl necklace = Polly dressed up (Q3, U5), flipped to kept. | U5: the same bow-and-pearls Polly-like penguin as f26-51 (rose body, Polly's tuft and face, pale seashell bow, pearl necklace, coral shell purse); filled as polly with o1. If U5 does not place her as Polly this span also has no lead: Pax is only a flipper at the left edge f65-96 (not listed in characters, written 'a flipper'). Camera locked (ECC scale 1.000 cc 1.000 f69-113). No overlay Re-checked on cloud-free bands: igloo wall (y0.05-0.30, x0-0.6) and snow ground (y0.85-1.0) both scale 1.000, tx within 2 px."
+  },
+  {
+   "start": 117,
+   "end": 124,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "Pax close in front of the door f117-120, then a pull-back f121-123 (ECC scale 0.940, 0.853, 0.893 vs f117), locked from f124"
+  },
+  {
+   "start": 124,
+   "end": 148,
+   "boundary": "camera",
+   "keep": true,
+   "drop_reason": null,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the arched wooden door and ice-block wall behind him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 124,
+     "end": 133,
+     "text": "Pax stands in front of the igloo door looking at a coral shell-shaped purse held out to him by a flipper at the right edge"
+    },
+    {
+     "start": 133,
+     "end": 148,
+     "text": "Pax folds his flippers over his chest and lifts his chin with a stubborn look, blinking, while the purse stays held out beside him"
+    }
+   ],
+   "props": [
+    "shell-shaped purse",
+    "wooden door"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "Client 2026-11-05: pearl necklace = Polly dressed up (Q3, U5), flipped to kept. | U5: the purse is held out by the bow-and-pearls Polly-like penguin's rose flipper at the right edge (only the flipper is visible, so she is not listed in characters and the beats say 'a flipper'); dropped with her other spans and flips with them. Camera locked (ECC scale 1.000 cc 1.000 f126-146). No overlay Re-checked on cloud-free bands: igloo wall (y0.05-0.30, x0-0.6) and snow ground (y0.85-1.0) both scale 1.000, tx within 2 px. | verification pass 2 (verify_v10_report_v02): beat [133,148): Pax does not look away: he shuts his eyes and lifts his chin f132-135 and f140, and between times glances toward the purse side (f136-138, f144-147); locked confirmed (igloo wall band rawdiff 0.00 f124-147); flag for the caller: the lookalike is only a rose flipper at the right edge in this span; under the flipper ruling it is unnamed and Pax is the only character, so this span may"
+  },
+  {
+   "start": 148,
+   "end": 227,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": null,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the snow-capped igloo dome, soft clouds and smooth snow in front",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 218,
+       "screen": "center"
+      }
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ],
+     "moves": [
+      {
+       "frame": 218,
+       "screen": "right"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 148,
+     "end": 160,
+     "text": "Polly hands her coral shell-shaped purse to Pax, and he takes it by the handle"
+    },
+    {
+     "start": 160,
+     "end": 178,
+     "text": "Pax holds the purse in front of his belly with both flippers and stares at it with a sulky frown while Polly smiles"
+    },
+    {
+     "start": 178,
+     "end": 190,
+     "text": "Pax lowers the purse to his side and turns toward Polly"
+    },
+    {
+     "start": 190,
+     "end": 211,
+     "text": "Pax reaches over and takes Polly's flipper, and they both close their eyes with happy smiles"
+    },
+    {
+     "start": 211,
+     "end": 227,
+     "text": "Pax and Polly turn and waddle off to the right side by side, Pax carrying the purse"
+    }
+   ],
+   "props": [
+    "shell-shaped purse",
+    "wooden door"
+   ],
+   "prop_events": [
+    {
+     "prop": "shell-shaped purse",
+     "event": "hands_over",
+     "frame": 152,
+     "by": "polly"
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "Client 2026-11-05: pearl necklace = Polly dressed up (Q3, U5), flipped to kept. | U5: the same bow-and-pearls Polly-like penguin (her bow turns out of sight behind her head from f211); filled as polly with o1. Camera locked the whole shot (ECC scale 1.000 cc 1.000 f152-224). Polly reaches the right edge at f226 but does not leave. No overlay in top third or bottom fifth Re-checked on cloud-free bands: igloo wall (y0.05-0.30, x0-0.6) and snow ground (y0.85-1.0) both scale 1.000, tx within 2 px."
+  }
+ ]
+}

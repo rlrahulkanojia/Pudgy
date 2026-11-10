@@ -1,0 +1,174 @@
+{
+ "skit": "iteration_7/293_videos/PP-GFMoods-Base.mp4",
+ "frames": 305,
+ "fps": 24.0,
+ "curated_by": "curator-v10-06",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "an igloo kitchen with pale ice-brick walls"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 94,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a glossy aqua counter and peach cabinets in front, salt and pepper shakers and a bowl of red fruit on it, and a white shelf unit of stacked dishes behind",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 33,
+     "text": "Pax squeezes a mayonnaise bottle over an open sandwich on a plate while Polly dances behind him with her flippers raised and her eyes closed"
+    },
+    {
+     "start": 33,
+     "end": 52,
+     "text": "Pax sets the bottle down and lays the top slice of bread on the sandwich while Polly keeps swaying with her flippers out"
+    },
+    {
+     "start": 52,
+     "end": 62,
+     "text": "Pax lifts the sandwich off the plate and holds it to his chest with a smile and closed eyes, while Polly bounces behind him"
+    },
+    {
+     "start": 62,
+     "end": 94,
+     "text": "Pax takes bites of the sandwich and munches, glancing to the side, while Polly keeps dancing behind him with a happy smile"
+    }
+   ],
+   "props": [
+    "sandwich",
+    "plate",
+    "mayonnaise bottle",
+    "salt and pepper shakers",
+    "bowl of red fruit",
+    "dish shelf"
+   ],
+   "prop_events": [
+    {
+     "prop": "mayonnaise bottle",
+     "event": "puts_down",
+     "frame": 34,
+     "by": "pax"
+    },
+    {
+     "prop": "sandwich",
+     "event": "picks_up",
+     "frame": 54,
+     "by": "pax"
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "packaging label"
+   ],
+   "travel": "none",
+   "notes": "camera locked (motion on the wall band y0.03-0.25: scale 1.0000, 0 px, cc 1.000 at every 6th frame f6-90). Pax stands behind the counter, lower body hidden by it. The mayonnaise bottle carries an invented parody label (a made-up name on a red lattice pattern, not a real brand's name), so in-world packaging text under the brand ruling, not transcribed. Fridge shelves hold plain navy shapes; no lead depicted anywhere. Characters are the current design (orange feet) though the counter is glossy: not OLD_DESIGN. No overlay | verification pass 2 (verify_v10_report_v13): view/props: the white rounded unit behind Polly is an open dish shelf holding stacked navy plates, bowls and cups, not a fridge (no door, no food); mayonnaise label reads an invented parody name (a play on a real lattice-pattern brand, not its name): in-world packaging text, fine; camera locked: compare 0/93 every background edge black; beats checked step 3 and correct"
+  },
+  {
+   "start": 94,
+   "end": 176,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with an aqua counter, an oven under an ice-brick hood, a round window and wooden spoons hanging on the wall",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 94,
+     "end": 136,
+     "text": "Polly lies across Pax's lap on the kitchen floor with teary eyes while Pax holds her close with a flipper on her head, frowning sadly"
+    },
+    {
+     "start": 136,
+     "end": 176,
+     "text": "Polly squeezes her eyes shut with tears on her cheek while Pax keeps hugging her and looks down at her"
+    }
+   ],
+   "props": [
+    "oven",
+    "wooden spoons",
+    "kitchen towel"
+   ],
+   "prop_events": [],
+   "effects": [
+    "tears"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "slow push-in through the whole shot: wall band y0.03-0.30 scale 1.005 at f100 climbing steadily to 1.064 at f172 (cc >= 0.96), with a drift up-left; compare 94/175 doubled oven and hood edges. No static run. Pax sits on the floor against the counter. No overlay, no lead depiction"
+  },
+  {
+   "start": 176,
+   "end": 254,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "camera locked (compare 176/253: chair, desk and laptop edges black), but the desk holds a framed photo of Polly and the laptop wallpaper shows Pax and Polly, visible the whole shot. Content: Pax in a rose swivel chair at a desk with a laptop, Polly dancing in front with her eyes closed, turning her back f216-224"
+  },
+  {
+   "start": 254,
+   "end": 305,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "push_in",
+   "notes": "Pax and Polly hug sitting on a bed while Polly holds a small plush of herself (pink penguin with Polly's crest, headphones and navy overalls) the whole shot. Also a slow push-in (bed band scale 1.002 -> 1.033 over f259-304). Skit ends on this shot"
+  }
+ ]
+}

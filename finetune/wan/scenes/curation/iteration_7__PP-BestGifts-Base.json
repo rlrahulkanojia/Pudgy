@@ -1,0 +1,62 @@
+{
+ "skit": "iteration_7/293_videos/PP-BestGifts-Base.mp4",
+ "frames": 249,
+ "fps": 24.0,
+ "curated_by": "curator-v10-12",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {"kind": "lead"},
+  "polly": {"kind": "lead"}
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {"kind": "flat", "desc": "an empty space with a plain pale grey background"}
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 119,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "left", "presence": "enters", "enters_at": 0, "outfit": [],
+     "moves": [{"frame": 26, "screen": "left-center"}]},
+    {"id": "polly", "screen": "right", "presence": "enters", "enters_at": 0, "outfit": [],
+     "moves": [{"frame": 26, "screen": "right-center"}]}
+   ],
+   "beats": [
+    {"start": 0, "end": 26, "text": "Pax waddles in from the left while Polly waddles in from the right, and they meet in the middle"},
+    {"start": 26, "end": 38, "text": "Pax reaches behind his back and pulls out a small wrapped gift with a bow while Polly looks at him"},
+    {"start": 38, "end": 59, "text": "Pax holds the gift out to Polly with a smile while she raises a flipper to her cheek in delight"},
+    {"start": 59, "end": 74, "text": "Polly takes the gift from Pax with both flippers"},
+    {"start": 74, "end": 86, "text": "Polly hugs the gift to her chest with blushing cheeks while Pax smiles at her"},
+    {"start": 86, "end": 119, "text": "Polly leans in and nuzzles Pax cheek to cheek, holding the gift, as they both close their eyes and blush"}
+   ],
+   "props": ["wrapped gift with a bow"],
+   "prop_events": [],
+   "effects": ["blush marks"],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "enters",
+   "notes": "plain flat background, so ECC has no fit; judged by eye: the two walk toward each other from opposite edges (a pan would move both the same way), feet and shadows stay the same size, and compare 28/118 puts Pax's shadow at the same place. Both are partly cut off by the side edges at f0 and fully in by ~f4. Top third and bottom fifth are perfectly uniform on every frame f0-118 (pixel std 0): no caption or watermark"
+  },
+  {
+   "start": 119,
+   "end": 249,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "phone-screen inserts to the end, each a hard cut (f119, f143, f167, f191, f215): the iFin (tuft on top) fills the picture showing a chat of voice messages with a Pax avatar in the header (f119-142), a call screen with on-screen text and a heart (f143-166), a text chat with Pax's avatar (f167-190), a recents call list (f191-214), and a lock screen whose wallpaper shows Pax and Polly with a notification (f215-248). Also lead_copy (avatars, wallpaper) and on-screen text throughout"
+  }
+ ]
+}

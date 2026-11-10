@@ -1,0 +1,332 @@
+{
+ "skit": "iteration_7/293_videos/PP-Volume-Base.mp4",
+ "frames": 401,
+ "fps": 24.0,
+ "curated_by": "curator-v10-11",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a living room with a cream sofa against a plain grey wall"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 54,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with fish-print cushions on the sofa and the soft-focus back of a television in the foreground",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 26,
+     "text": "Pax lies on his belly across the sofa, snuggled against Polly, while Polly pats the top of his head with one flipper"
+    },
+    {
+     "start": 26,
+     "end": 37,
+     "text": "Polly lifts her flipper away and Pax nestles closer against her, his flipper resting on a TV remote"
+    },
+    {
+     "start": 37,
+     "end": 54,
+     "text": "Pax lifts the remote and points it ahead while Polly sits hugging a cushion, watching with wide eyes"
+    }
+   ],
+   "props": [
+    "TV remote",
+    "cushions",
+    "television"
+   ],
+   "prop_events": [
+    {
+     "prop": "TV remote",
+     "event": "picks_up",
+     "frame": 37,
+     "by": "pax"
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "steady slow push-in through the whole shot: ECC on the television band (y 0.75-1.0) scale 1.011 at f6 -> 1.080 at f48 (about +0.2% per frame), ty drifting to -77 px, cc 0.96-1.00; no static run. Otherwise keepable (both leads, no overlay, cushions carry a plain fish print), so filled for U3. Hard cut at f54"
+  },
+  {
+   "start": 54,
+   "end": 99,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "TV-screen insert: the television shows a penguin in a witch hat and a blonde penguin in a rose scarf (neither is a lead), with a volume bar on the screen counting up; no lead"
+  },
+  {
+   "start": 99,
+   "end": 118,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "19 locked frames (TV band identity f100-117) in the pushed-in sofa framing: Pax lies against Polly pointing the remote ahead"
+  },
+  {
+   "start": 118,
+   "end": 126,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "8-frame pull-back f118-125 (ECC scale 0.997 -> 0.853; TV and sofa-arm regions settle at f126) while Pax sits up; a camera move under 21 frames is too_short"
+  },
+  {
+   "start": 126,
+   "end": 194,
+   "boundary": "camera",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with fish-print cushions on the sofa and the soft-focus back of a television in the foreground",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 126,
+     "end": 131,
+     "text": "Pax and Polly sit side by side on the sofa looking ahead, a TV remote propped up on the seat beside Polly"
+    },
+    {
+     "start": 131,
+     "end": 170,
+     "text": "Pax turns to Polly and holds one flipper out toward her as he talks, while Polly blinks and looks back at him with a worried face"
+    },
+    {
+     "start": 170,
+     "end": 176,
+     "text": "Pax keeps his flipper held out while the remote beside Polly topples over flat onto the seat"
+    },
+    {
+     "start": 176,
+     "end": 181,
+     "text": "Pax keeps his flipper held out toward Polly as he talks, the remote lying flat on the seat between them"
+    },
+    {
+     "start": 181,
+     "end": 194,
+     "text": "Pax turns to face ahead, still gesturing with one flipper as he talks, while Polly keeps looking at him"
+    }
+   ],
+   "props": [
+    "TV remote",
+    "cushions",
+    "television"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: ECC on the television band (y 0.75-1.0) scale 1.0000, 0 px, cc 1.000 every 4th frame f138-190; phase correlation on both sofa arms and the TV vs f126 = 0.0 px throughout. Wall is a plain grey-lavender (RGB ~187,197,211), leads in full colour, so no time tag. No caption or watermark (top third plain wall, bottom fifth the blurred TV back) | verification pass 2 (verify_v10_report_v17): camera locked (TV band, both sofa arms and wall: d1 0.00, phase 0 px f126-193; pull-back settles by f125/126); no overlay; beat 4 (176-194): Pax turns to face ahead at f181-182 and gestures with his flipper bent by his chest; the beat said he keeps gesturing at Polly throughout. Split at f181"
+  },
+  {
+   "start": 194,
+   "end": 221,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "TV-screen insert: the witch-hat penguin's face fills the screen, volume bar going from 19 to 20; no lead"
+  },
+  {
+   "start": 221,
+   "end": 284,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with fish-print cushions on the sofa and the soft-focus back of a television in the foreground",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 221,
+     "end": 227,
+     "text": "Polly holds the TV remote out toward Pax with a frown, then stands it upright on the seat beside her"
+    },
+    {
+     "start": 227,
+     "end": 235,
+     "text": "Pax spreads his flippers wide with his eyes closed and his beak open while Polly watches him"
+    },
+    {
+     "start": 235,
+     "end": 251,
+     "text": "Pax sits with his flippers at his sides and his eyes closed, looking calm, while Polly glances over at him"
+    },
+    {
+     "start": 251,
+     "end": 258,
+     "text": "Pax tilts his head with his eyes squeezed shut while the remote beside Polly tips over flat onto the seat"
+    },
+    {
+     "start": 258,
+     "end": 284,
+     "text": "Pax opens his eyes and frowns sideways at Polly while she hugs her cushion and looks back at him"
+    }
+   ],
+   "props": [
+    "TV remote",
+    "cushions",
+    "television"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: ECC on the television band identity f229-277; phase correlation on the left and right sofa arms and the TV vs f221 <= 0.4 px every 8th frame to f281 and 0.0 px on f276-283. Ends before the jiggle that starts at f284. No caption or watermark | verification pass 2 (verify_v10_report_v17): camera locked f221-283 (TV band and right sofa arm pixel-identical; shake starts f284); no overlay; beat 2 (228-251) missed Pax flinging both flippers wide with his eyes closed and beak open f224-234; 'calm little smile' not visible (closed eyes, small beak). Split into 227-235 and 235-251; beat 1 ends at f227 when the remote stands upright"
+  },
+  {
+   "start": 284,
+   "end": 309,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "shake",
+   "notes": "small shake f284-299: both sofa arms move together by up to 3-4 px (phase correlation vs f221: +1.8 px at f284, -3.3/+3.8 px at f292) and the TV by about 1 px, then the picture rests 1.7 px lower f300-308. The shake is 16 frames and the settled tail 9 frames, both under 21, so too_short (camera-move ruling). Pax hops on the sofa during it"
+  },
+  {
+   "start": 309,
+   "end": 348,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "zoom_in",
+   "notes": "TV-screen insert: the witch-hat penguin on a broom with the volume bar dropping 20 -> 17, framed tighter in three jump punch-ins (f317-319, f326-327, f335-337); no lead"
+  },
+  {
+   "start": 348,
+   "end": 401,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a fish-print cushion beside him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 348,
+     "end": 353,
+     "text": "Pax lowers his flippers from the sides of his head and stares ahead with wide eyes"
+    },
+    {
+     "start": 353,
+     "end": 370,
+     "text": "Pax sits still on the sofa with his flippers at his sides, staring ahead with wide worried eyes"
+    },
+    {
+     "start": 370,
+     "end": 377,
+     "text": "Pax squeezes his eyes shut and flings both flippers up beside his head"
+    },
+    {
+     "start": 377,
+     "end": 391,
+     "text": "Pax tips his head back and clutches the sides of his face with both flippers, his beak wide open in a wail"
+    },
+    {
+     "start": 391,
+     "end": 401,
+     "text": "Pax drops his flippers to his sides and slumps with his head tipped back and his eyes half shut"
+    }
+   ],
+   "props": [
+    "cushions"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: phase correlation on the sofa-bottom, right-sofa and left-cushion regions vs f348 = 0.0 px on every 2nd frame f349-399 (the ECC band fit's -10 px reading was Pax's flipper in the band). Polly is out of the picture in this framing. Skit ends on this shot. No caption or watermark"
+  }
+ ]
+}

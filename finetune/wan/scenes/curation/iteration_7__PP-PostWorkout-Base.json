@@ -1,0 +1,283 @@
+{
+ "skit": "iteration_7/293_videos/PP-PostWorkout-Base.mp4",
+ "frames": 289,
+ "fps": 24.0,
+ "curated_by": "curator-v10-30",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "a coral-red backpack",
+  "o2": "a pair of dark headphones with teal ear cups"
+ },
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a dining room drawn on a plain pale grey background"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "an empty space with a plain pale grey background"
+  },
+  "s3": {
+   "kind": "flat",
+   "desc": "a bathroom drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 74,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a round cream table and two wooden chairs",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 10,
+     "text": "Pax sits behind the table over a bowl of cereal, holding a spoon upright with a weary frown"
+    },
+    {
+     "start": 10,
+     "end": 54,
+     "text": "Pax holds his spoon out to the side at arm's length and stares at it with tired, drooping eyes"
+    },
+    {
+     "start": 54,
+     "end": 64,
+     "text": "Pax closes his eyes and lowers the spoon down to the tabletop"
+    },
+    {
+     "start": 64,
+     "end": 74,
+     "text": "Pax slumps forward with both flippers flat on the table and his eyes shut"
+    }
+   ],
+   "props": [
+    "bowl of cereal",
+    "spoon",
+    "round table",
+    "wooden chairs"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: ECC on the chair/table band (y 0.60-0.85, x 0-0.40) scale 1.0000, |t| <= 1.2 px (one 3 px row at f42), cc 1.000 every 6th frame; compare 0/73 table and chair edges black. Style: whole skit carries a faint per-frame grain (background std ~1.5 grey levels, not visible by eye) and Pax's feet are a saturated amber orange (~RGB 248,168,48), not the old design's yellow (~240,208,48); body and face as the current design, so judged on style, not OLD_DESIGN. No overlay in the top third or bottom fifth (pixel scan every 6th frame)"
+  },
+  {
+   "start": 74,
+   "end": 139,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 74,
+     "end": 94,
+     "text": "Pax stands still with his backpack on, frowning with heavy, tired eyes"
+    },
+    {
+     "start": 94,
+     "end": 111,
+     "text": "Pax squeezes his eyes shut and turns slightly, swinging one flipper back toward the backpack strap"
+    },
+    {
+     "start": 111,
+     "end": 139,
+     "text": "Pax reaches across his chest to rub his shoulder, wincing with his eyes squeezed shut"
+    }
+   ],
+   "props": [],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "plain ground, so motion has too little texture; compare 75/138: Pax's shadow ellipse and feet overlap exactly, he stays the same size and place, so camera locked (keep12 is low only from his flipper and head motion). No overlay"
+  },
+  {
+   "start": 139,
+   "end": 165,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 139,
+     "end": 149,
+     "text": "Pax holds a big pair of dark headphones out in front of him, squinting at them"
+    },
+    {
+     "start": 149,
+     "end": 154,
+     "text": "Pax lifts the headphones up in front of his face, still squinting"
+    },
+    {
+     "start": 154,
+     "end": 165,
+     "text": "Pax closes his eyes and brings the headphones up onto his head"
+    }
+   ],
+   "props": [
+    "headphones"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "hard cut at f139 (backpack gone, headphones in his flippers). Same locked take as the next span: compare 139/211 shadow ellipse and feet black. The profile's f149 candidate is a pose change, not a cut. Split at f165, the first frame with the headphones on his head (26 frames before, 47 after), so 'wearing' holds in every window | verification pass 2 (verify_v10_report_v25): beat 2 [149,165) says his eyes are closed; they are still half-lidded and squinting f149-153 and close at f154 (full-res f147-156). Split the beat at f154"
+  },
+  {
+   "start": 165,
+   "end": 212,
+   "boundary": "same_shot",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [
+      "o2"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 165,
+     "end": 192,
+     "text": "Pax presses the headphones to his ears with both flippers, his eyes closed as he listens"
+    },
+    {
+     "start": 192,
+     "end": 212,
+     "text": "Pax wraps his flippers around himself and sways a little, eyes closed and beak slightly open"
+    }
+   ],
+   "props": [],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "locked (compare 139/211 shadow and feet black; plain ground). The profile's f193 candidate is a pose change (flippers drop from the ear cups to a self-hug), not a cut. No overlay"
+  },
+  {
+   "start": 212,
+   "end": 289,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 212,
+     "end": 224,
+     "text": "Pax sits on the rim of a toilet with a worried look, his feet sticking out in front"
+    },
+    {
+     "start": 224,
+     "end": 231,
+     "text": "Pax squeezes his eyes shut and leans back with one flipper reaching behind him"
+    },
+    {
+     "start": 231,
+     "end": 254,
+     "text": "Pax slips down into the toilet bowl, grimacing with his eyes shut as one foot kicks up"
+    },
+    {
+     "start": 254,
+     "end": 267,
+     "text": "Pax pops back up onto the rim and sits with his head tipped back and his eyes shut"
+    },
+    {
+     "start": 267,
+     "end": 289,
+     "text": "Pax sits upright on the toilet with his eyes shut while a tear starts rolling down his cheek"
+    }
+   ],
+   "props": [
+    "toilet"
+   ],
+   "prop_events": [],
+   "effects": [
+    "tears"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: compare 213/288 toilet edges and shadow black (motion bands fail: Pax fills the textured part and the rest is plain). Tear from f272. No overlay"
+  }
+ ]
+}

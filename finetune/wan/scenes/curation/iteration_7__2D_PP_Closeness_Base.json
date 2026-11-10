@@ -1,0 +1,327 @@
+{
+ "skit": "iteration_7/293_videos/2D_PP_Closeness_Base.mp4",
+ "frames": 198,
+ "fps": 24.0,
+ "curated_by": "curator-v10-16",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "a beige hoodie"
+ },
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "an empty space with a plain pale grey background"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "a grocery produce stand drawn on a plain pale grey background"
+  },
+  "s3": {
+   "kind": "flat",
+   "desc": "a bedroom drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 21,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "partial",
+     "outfit": [
+      "o1"
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "enters",
+     "enters_at": 15,
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 14,
+     "text": "Pax stands still in his hoodie with raised brows, gazing ahead, as a lump rises up inside the front of the hoodie"
+    },
+    {
+     "start": 14,
+     "end": 21,
+     "text": "Polly pushes her head up out of the hoodie collar in front of Pax, who opens his beak in surprise as she covers his face"
+    }
+   ],
+   "props": [
+    "hoodie with a small igloo print"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "plain background, so ECC has nothing to fit: judged by Pax's head, which keeps its size and place f0-20; only the hoodie narrows f19-20 as Polly squeezes up (character animation). Small igloo print on the hoodie is a graphic, not a lead. Hard cut at f21 missed by profile (same flat background) | verification pass 2 (verify_v10_report_v07): beat 1: Pax shows no frown f0-13 (raised arched brows, neutral beak); he opens his beak in surprise f17 as Polly rises; Pax presence: his hoodie runs off the bottom and both sides of the picture for the whole span (partial, not full)"
+  },
+  {
+   "start": 21,
+   "end": 24,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "3-frame settle after the cut: the whole figure and its shadow shrink about the centre (bbox 210 -> 191 px wide f21-24), locked from f24. Camera move or a pop-in scale, either way not kept"
+  },
+  {
+   "start": 24,
+   "end": 46,
+   "boundary": "camera",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 24,
+     "end": 37,
+     "text": "Pax and Polly stand squeezed together inside one hoodie, cheeks pressed together, gazing ahead with wide eyes"
+    },
+    {
+     "start": 37,
+     "end": 46,
+     "text": "Pax and Polly close their eyes and blush while Pax wraps his flipper across the front of the hoodie"
+    }
+   ],
+   "props": [],
+   "prop_events": [],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "plain background: judged by the figure's bounding box and floor shadow, constant f24-45 (x 48-239, shadow bottom 362/480)"
+  },
+  {
+   "start": 46,
+   "end": 119,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a display of tomatoes, striped squash and eggplants in front of him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 104,
+       "screen": "left"
+      }
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "enters",
+     "enters_at": 92,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 104,
+       "screen": "right-center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 46,
+     "end": 62,
+     "text": "Pax stands behind the produce stand with a flipper resting on the vegetables, glancing from side to side"
+    },
+    {
+     "start": 62,
+     "end": 76,
+     "text": "Pax picks a tomato from the display and holds it up close to his beak"
+    },
+    {
+     "start": 76,
+     "end": 87,
+     "text": "Pax holds the tomato out at his side, smiling"
+    },
+    {
+     "start": 87,
+     "end": 92,
+     "text": "Pax tosses the tomato up into the air above his head"
+    },
+    {
+     "start": 92,
+     "end": 103,
+     "text": "Polly's flipper rises from behind Pax's head and catches the tomato while Pax waves and then closes his eyes"
+    },
+    {
+     "start": 103,
+     "end": 110,
+     "text": "Pax and Polly turn sideways, stuck back to back by crumpled grey tape, as Polly holds the tomato over a basket"
+    },
+    {
+     "start": 110,
+     "end": 119,
+     "text": "Polly drops the tomato into her basket as the taped pair shuffles left, Pax sliding toward the left edge"
+    }
+   ],
+   "props": [
+    "tomatoes",
+    "produce display",
+    "shopping basket",
+    "grey tape"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "ECC on the produce band (y 0.72-0.98) scale 1.0000, 0 px, cc 1.000 through f118. Polly is hidden behind Pax until her flipper rises at f92 and her body comes into view at f103 | verification pass 2 (verify_v10_report_v07): framing: Pax is drawn at the same size as in the medium [24,46) shot (head about a third of the picture width); only his top half shows above the stand, and the ruling says judge a partly hidden lead by drawn size: medium, not medium wide"
+  },
+  {
+   "start": 119,
+   "end": 138,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "19 frames: Pax asleep in bed, his head on the pillow; a small shift of the headboard f136-137 just before the cut. Cut at f138 (f137 d1 8.3 is the shift, f138 d1 20.3 the cut)"
+  },
+  {
+   "start": 138,
+   "end": 158,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "other",
+   "notes": "20 frames, one reason: f138-140 settle (ECC scale 0.94, 0.89 vs f138), f141-153 locked (13 frames: Pax and Polly asleep in the bed, Pax slides to the edge), f154-157 quick push-in and tilt down as Pax falls off the bed to the floor (bed and nightstand grow ~1.4x), locked again from f158"
+  },
+  {
+   "start": 158,
+   "end": 198,
+   "boundary": "camera",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "wide",
+   "angle": "high angle",
+   "setting": "s3",
+   "view": "with a yellow bed and a bedside table with a lamp",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 184,
+       "screen": "center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 158,
+     "end": 166,
+     "text": "Pax lies face down on the floor beside the bed while Polly lies on her belly at the edge of the bed, peering down at him"
+    },
+    {
+     "start": 166,
+     "end": 180,
+     "text": "Polly sits up on the bed with her flippers at her chest, looking down at Pax on the floor"
+    },
+    {
+     "start": 180,
+     "end": 186,
+     "text": "Polly tips forward off the bed and flops down onto Pax's back"
+    },
+    {
+     "start": 186,
+     "end": 198,
+     "text": "Polly lies on top of Pax with her eyes closed and blushing cheeks while Pax stays face down"
+    }
+   ],
+   "props": [
+    "bed",
+    "bedside table",
+    "lamp",
+    "duck figure"
+   ],
+   "prop_events": [],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "ECC on the left nightstand band (y 0.3-0.6, x 0-0.3) vs f158: scale 1.0000, 0 px, cc 1.000 through f197; compare 158/197 furniture edges black. A small yellow duck figure on the far nightstand is a prop, not a lead | verification pass 2 (verify_v10_report_v07): Pax screen: he lies at x 0.35-0.65 of the picture, centred at 0.5: center, not left-center; Polly move at f184: she ends lying on Pax at x 0.37-0.63: center, not left-center"
+  }
+ ]
+}

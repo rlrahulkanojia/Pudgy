@@ -1,0 +1,118 @@
+{
+ "skit": "iteration_7/293_videos/PP-FavoritePerson-Base.mp4",
+ "frames": 126,
+ "fps": 24.0,
+ "curated_by": "curator-v10-10",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a living room drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 17,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "push_in",
+   "notes": "push-in, slow f0-6 then fast f6-16 (the sofa's yellow armrest grows 54 -> 65 px wide at 540 px): Pax reads a teal book on the sofa under a fish-pattern blanket, Polly leaps in from the top right and lands on him, the book falls to the floor. 17 frames"
+  },
+  {
+   "start": 17,
+   "end": 126,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a cream sofa, a fish-pattern blanket and a teal book lying open on the floor",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 17,
+     "end": 33,
+     "text": "Polly lies sprawled across Pax on the sofa and hugs him, pressing her face to his cheek"
+    },
+    {
+     "start": 33,
+     "end": 44,
+     "text": "Polly kisses Pax's cheek with her eyes shut as little hearts float up above them while Pax squeezes his eyes shut"
+    },
+    {
+     "start": 44,
+     "end": 78,
+     "text": "Polly keeps kissing Pax's cheek as more hearts float up, while Pax looks on wide-eyed, blinking now and then"
+    },
+    {
+     "start": 78,
+     "end": 86,
+     "text": "Polly draws back from Pax's cheek, smiling with her eyes squeezed shut, while Pax blinks"
+    },
+    {
+     "start": 86,
+     "end": 96,
+     "text": "Polly lifts her head, looks at Pax and tugs at the edge of the blanket"
+    },
+    {
+     "start": 96,
+     "end": 104,
+     "text": "Polly slips down under the blanket beside Pax"
+    },
+    {
+     "start": 104,
+     "end": 117,
+     "text": "Polly snuggles under the blanket next to Pax with rosy cheeks and closed eyes while he looks on"
+    },
+    {
+     "start": 117,
+     "end": 126,
+     "text": "Pax blushes and shuts his eyes too while Polly stays snuggled against him under the blanket"
+    }
+   ],
+   "props": [
+    "sofa",
+    "fish-pattern blanket",
+    "teal book"
+   ],
+   "prop_events": [],
+   "effects": [
+    "hearts",
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "slow steady push-in through the whole span: the dropped book grows 83 -> 94 px wide and drifts down 686 -> 705 px, the sofa armrest moves 103 -> 85 px left (540 px wide decode), about +12% over 109 frames; compare 20/43, 62/85 and 100/125 all show doubled sofa, leg and book edges. ECC bands here are unusable (the blanket and characters fill them; the wall is plain), so it was measured on these fixed props. Otherwise keepable: both leads visible, no overlay | verification pass 2 (verify_v10_report_v06): camera push_in confirmed: motion on the book/floor band y0.69-0.80 x0-0.6 climbs steadily 1.03 (f25) -> 1.12 (f121) at cc 0.97-0.99; compare 17/125 doubles book, sofa and leg edges. No snap-back, no cut; f17 is the first frame after the book lands; beat 2 [33,78): 'Pax looks on wide-eyed' is false f33-43, where Pax's eyes are shut during the first kisses (step-1 face crops); they open at f44, clos"
+  }
+ ]
+}

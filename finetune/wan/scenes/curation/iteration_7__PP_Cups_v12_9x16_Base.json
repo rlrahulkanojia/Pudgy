@@ -1,0 +1,271 @@
+{
+ "skit": "iteration_7/293_videos/PP_Cups_v12_9x16_Base.mp4",
+ "frames": 302,
+ "fps": 24.0,
+ "curated_by": "curator-v10-03",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a kitchen with pastel cabinets along the walls and a cream fridge"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "a plain pale grey background"
+  },
+  "s3": {
+   "kind": "set",
+   "desc": "a pale room with a tall arched doorway"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 16,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "Pax at the open fridge holding a juice jug: static f0-9 (10 frames, ECC 0 px), then a fast pull-back f10-15 to the wide kitchen; locked from f16. Both pieces under 21 frames."
+  },
+  {
+   "start": 16,
+   "end": 42,
+   "boundary": "camera",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the fridge on the left and a long row of cabinets and counters behind him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 33,
+       "screen": "right"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 16,
+     "end": 27,
+     "text": "Pax holds a jug of orange juice and pushes the fridge door shut with his flipper"
+    },
+    {
+     "start": 27,
+     "end": 42,
+     "text": "Pax skips off to the right with the jug tucked under his flipper, bouncing on his feet"
+    }
+   ],
+   "props": [
+    "jug of orange juice",
+    "fridge"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "camera locked f16-41 (ECC on the cabinet band: scale 0.8443 constant vs f13; pixel diff of the top band vs f16 <= 0.03). Pax reaches the right edge and is half cut off f39-41 but never leaves. No overlay."
+  },
+  {
+   "start": 42,
+   "end": 117,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "push_in",
+   "notes": "four short shots, nothing keepable: f42-66 Pax from behind opens a cupboard (static f42-48, push-in f49-55, static f56-66 with only his back at the left edge and the empty shelves); f67-81 Pax behind a counter holding the jug, looking around (15 frames); f82-98 an empty sink with only Pax's side at the left edge (17 frames); f99-116 Pax opens an empty dishwasher, holding the jug up (18 frames)."
+  },
+  {
+   "start": 117,
+   "end": 146,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "close-up",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "partial",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 117,
+     "end": 129,
+     "text": "Pax tilts his head and gazes up to one side with a puzzled, worried frown"
+    },
+    {
+     "start": 129,
+     "end": 146,
+     "text": "Pax straightens up and brings a flipper to his chin, gazing off to the side with one brow raised"
+    }
+   ],
+   "props": [],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "plain background (ECC: no texture); pixel diff of the top quarter is 0.00 vs f117 for every frame, and Pax's belly line stays at the same height: camera locked. The profile's d1 at f129/130 is a pose change (flipper to chin), not a cut. Pax is cut off at the belly by the bottom edge. No overlay."
+  },
+  {
+   "start": 146,
+   "end": 167,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "Pax walks into an arched doorway from the right (static f146-162, 17 frames), then a fast pull-back f163-166 reveals shelves of mugs in the foreground; locked from f167."
+  },
+  {
+   "start": 167,
+   "end": 189,
+   "boundary": "camera",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with shelves crowded with mugs and cups and a wicker basket of cups in the foreground",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 167,
+     "end": 189,
+     "text": "Pax stands motionless in the arched doorway, staring straight ahead with a blank expression"
+    }
+   ],
+   "props": [
+    "mugs",
+    "wicker basket"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f167-188 (ECC on the shelf band vs f167: scale 1.0000, 0 px, cc 1.000); f166 is the last frame of the pull-back. 22 frames. No overlay."
+  },
+  {
+   "start": 189,
+   "end": 224,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "pan_right",
+   "notes": "insert of a desk piled with mugs, a laptop and a flower vase, with a name label (in-world text, a lead's name), panning right from ~f203; no character in view."
+  },
+  {
+   "start": 224,
+   "end": 276,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with the edge of the arched doorway behind him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "enters",
+     "enters_at": 267,
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 224,
+     "end": 247,
+     "text": "Pax stands in front of the archway with his flippers held out at his sides, glancing around with a worried frown"
+    },
+    {
+     "start": 247,
+     "end": 250,
+     "text": "Pax flings both flippers up into the air with a worried frown"
+    },
+    {
+     "start": 250,
+     "end": 264,
+     "text": "Pax clutches his head with both flippers, looking around anxiously"
+    },
+    {
+     "start": 264,
+     "end": 267,
+     "text": "Pax throws his flippers out wide with his eyes squeezed shut"
+    },
+    {
+     "start": 267,
+     "end": 276,
+     "text": "Pax drops his flippers and stares toward the right while Polly slides into view at the right edge"
+    }
+   ],
+   "props": [],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f224-275: pixel diff of the archway band (top 30%, right half) is 0.00 vs f224 on every frame (ECC is unreliable on the soft archway gradient here). A pull-back starts at f276. Polly is only partly in view at the right edge f267-275. No overlay."
+  },
+  {
+   "start": 276,
+   "end": 302,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "pull-back f276-281 as Pax turns to Polly, who holds a clay jug; locked f282-301 (band pixel diff 0.00) but that is only 20 frames: Polly lowers the jug from her beak, smiling, beside Pax."
+  }
+ ]
+}

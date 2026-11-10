@@ -1,0 +1,311 @@
+{
+ "skit": "iteration_7/293_videos/PP-Anxious-Base.mp4",
+ "frames": 264,
+ "fps": 24.0,
+ "curated_by": "curator-v10-06",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "an art corner drawn on a plain pale grey background"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "a home office drawn on a plain pale grey background"
+  },
+  "s3": {
+   "kind": "set",
+   "desc": "a snowy landscape at the edge of a high ice cliff above a valley, with soft clouds in the sky"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 29,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a wooden easel holding a sunset painting of an igloo, and a small table with a cup of brushes",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 21,
+     "text": "Polly stands at the easel dabbing paint onto the canvas with a brush, a paint palette held in her other flipper"
+    },
+    {
+     "start": 21,
+     "end": 24,
+     "text": "Polly turns her face forward and blinks her eyes shut"
+    },
+    {
+     "start": 24,
+     "end": 29,
+     "text": "Polly looks straight ahead with raised brows and her beak slightly open"
+    }
+   ],
+   "props": [
+    "easel",
+    "painting",
+    "paintbrush",
+    "paint palette",
+    "cup of brushes"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f0-28 (motion on the side-table band x0.80-1.00: scale 1.0000, 0 px, cc 1.000 every frame); the easel itself wobbles slightly as Polly paints. Painting shows a sunset, an igloo and trees: no lead depicted. No overlay"
+  },
+  {
+   "start": 29,
+   "end": 33,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "fast pull-back with a sideways drift that reveals Pax on the left: table band scale 0.979 at f29, 0.892 f30, 0.768 f31; locked again from f33 (motion 33->35: 1.0000). 4 frames, so too_short ranks before camera_move"
+  },
+  {
+   "start": 33,
+   "end": 66,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a wooden easel holding a sunset painting of an igloo, and a small table with a cup of brushes",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 33,
+     "end": 43,
+     "text": "Pax shuffles a little closer to Polly with his flippers held at his chest while she keeps painting at the easel"
+    },
+    {
+     "start": 43,
+     "end": 57,
+     "text": "Polly dabs at the canvas with a worried frown and a sweat drop on her head while Pax watches beside her"
+    },
+    {
+     "start": 57,
+     "end": 66,
+     "text": "Pax raises a flipper to his chin, looking uneasy, while Polly keeps brushing pale streaks onto the painting"
+    }
+   ],
+   "props": [
+    "easel",
+    "painting",
+    "paintbrush",
+    "paint palette",
+    "cup of brushes"
+   ],
+   "prop_events": [],
+   "effects": [
+    "sweat drop"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f33-65 (motion on the side-table band x0.88-1.00 vs f34: scale 1.0000, <=0.3 px, cc 1.000; compare 38/65: easel and table edges black). Hard cut to the screen insert at f66. No overlay"
+  },
+  {
+   "start": 66,
+   "end": 91,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "insert of the computer screen (a search page being typed into) filling the picture; only the edge of Polly's flipper at the bottom right. In-world screen text"
+  },
+  {
+   "start": 91,
+   "end": 138,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a pale teal desk holding a computer, a rose swivel chair and an orange coral plant",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 107,
+       "screen": "left-center"
+      }
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 91,
+     "end": 105,
+     "text": "Pax waddles up to Polly's chair holding a plate with a slice of cake while Polly sits at the computer with her back turned"
+    },
+    {
+     "start": 105,
+     "end": 131,
+     "text": "Polly turns her head to look back over her shoulder at Pax while he stands beside her chair holding the cake"
+    },
+    {
+     "start": 131,
+     "end": 138,
+     "text": "Polly turns back to the computer screen while Pax keeps holding the plate of cake, watching her"
+    }
+   ],
+   "props": [
+    "plate with a slice of cake",
+    "computer",
+    "desk",
+    "swivel chair"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "computer screen"
+   ],
+   "travel": "moves_within",
+   "notes": "camera locked: compare 91/137 shows the desk, computer, chair and coral edges black; motion on the desk/coral band reads 1.0000 at f95-99 and f135, the excursions in between are Polly turning in the band. Computer screen shows a search page (in-world, no lead). No overlay"
+  },
+  {
+   "start": 138,
+   "end": 168,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "screen insert again: the search box fills with keyboard mash; edge of Polly's flipper at the bottom right. f138-139 settle slightly (profile's 138/139/140 candidates) inside the same insert"
+  },
+  {
+   "start": 168,
+   "end": 217,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "other",
+   "notes": "vehicle-mounted driving shot: the car hood stays locked (motion on band y0.78-0.98: scale 1.000, bobs 0-8 px) while the scenery layer behind recedes and slides: not just the clouds (sky band scale 0.993 at f170 -> 0.835 at f208) but the pine tree and the hill line too (tree band x0.00-0.12 scale 0.931/0.898/0.944 at f172/176/184, cc >= 0.995; compare 168/192 doubled tree and hill edges), and from f194 the car swerves sideways (hood band tx +35 to +73 px) with the scenery jumping at f210-216. Not filled: 'other' has no caption clause and push_in/pull_back would be false (same ruling as curator-v10-20 on DrivingPartner). Content for a later fill: front view over the red car's hood, Polly at the wheel and Pax in the passenger seat holding a phone to his ear, then looking at it; Polly gets a sweat drop and squints, Pax waves the phone about as the car swerves. Phone looks like the iFin (pale grey, lenses), unsure. No overlay, no lead copy"
+  },
+  {
+   "start": 217,
+   "end": 264,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right",
+     "presence": "enters",
+     "enters_at": 229,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 236,
+       "screen": "center"
+      }
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "enters",
+     "enters_at": 229,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 236,
+       "screen": "center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 217,
+     "end": 227,
+     "text": "The snowy cliff top stands empty above the valley under the clouds"
+    },
+    {
+     "start": 227,
+     "end": 236,
+     "text": "Pax and Polly slide in from the right in a red car on skis and skid to a stop at the very edge of the cliff"
+    },
+    {
+     "start": 236,
+     "end": 264,
+     "text": "Pax and Polly sit in the car teetering nose-down on the cliff edge, Pax leaning out, as snow crumbles off below"
+    }
+   ],
+   "props": [
+    "red car on skis",
+    "phone"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "enters",
+   "notes": "camera locked: compare 217/263 shows the cliff outline, the mountain line and the clouds all black (overlapping exactly; the clouds do not drift); motion on the cliff-tip band y0.30-0.55 x0.00-0.30 reads 1.0000, 0 px, cc 1.000 at f222-232, later rows fail once the car's ski enters the band (the sky band also reads 1.0000 throughout, cited only as support since clouds can drift). f217-226 empty cliff, the car's nose enters at f227, both leads visible from ~f230 (34 of 47 frames). Leads small but clearly Pax and Polly. Pax holds a small phone in the car, not mentioned in beats (too small to confirm iFin). Skit ends on this shot | verification pass 2 (verify_v10_report_v04): camera confirmed locked: cliff-face band y0.66-0.98 x0.5-1.0 within 1.6 px (falling snow bits), cloud band 1.0000; compare 217/263 cliff, mountain and cloud edges black; f217-226 is an empty cliff (no lead, 10 frames): per the short-lead-free-stretch ruling its beat must name what is visible; the old beat 1 claimed the leads slide in from f217; beat 2: the car never tips over; it stops at f236-238"
+  }
+ ]
+}

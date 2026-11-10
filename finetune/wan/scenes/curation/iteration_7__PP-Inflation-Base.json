@@ -1,0 +1,89 @@
+{
+ "skit": "iteration_7/293_videos/PP-Inflation-Base.mp4",
+ "frames": 338,
+ "fps": 24.0,
+ "curated_by": "curator-v10-25",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {"kind": "lead"}
+ },
+ "outfits": {
+  "o1": "a navy baseball cap with a white logo",
+  "o2": "a navy-and-white striped scarf"
+ },
+ "settings": {
+  "s1": {"kind": "flat", "desc": "a dining room drawn on a plain pale grey background"}
+ },
+ "spans": [
+  {
+   "start": 0, "end": 95, "boundary": "start", "keep": true,
+   "camera": "static", "framing": "medium close-up", "angle": "eye level",
+   "setting": "s1",
+   "view": "with a cream table in front of him, a brown armchair behind him, a round wall clock and framed pictures of a starfish and a whale",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "left-center", "presence": "full", "outfit": ["o1"]}
+   ],
+   "beats": [
+    {"start": 0, "end": 12, "text": "Pax sits at the table holding a bag of chips and tears it open"},
+    {"start": 12, "end": 22, "text": "Pax peeks into the full bag and smiles with his eyes closed"},
+    {"start": 22, "end": 44, "text": "Pax tips the bag over a lilac bowl and pours out a thick stream of chips"},
+    {"start": 44, "end": 74, "text": "Pax keeps shaking the bag as the chips pile high and spill over the rim onto the table"},
+    {"start": 74, "end": 95, "text": "Pax sets the bag down beside the overflowing bowl and looks ahead with a pleased face"}
+   ],
+   "props": ["bag of chips", "bowl", "chips", "table", "armchair", "wall clock", "framed pictures"],
+   "prop_events": [{"prop": "bag of chips", "event": "puts_down", "frame": 78, "by": "pax"}],
+   "effects": [], "overlays": [], "in_world_text": ["snack bag label"],
+   "travel": "none",
+   "notes": "camera locked: ECC on the wall band (y 0.20-0.38, pictures and clock) scale 1.000-1.001, <1 px, cc 0.998 every 8th frame; compare 0/94 keeps the picture frames, clock and table edge black. Only the clock hands step (in-world). The bag's label is an invented snack name with a crab mascot (in-world text, not a real brand logo; never transcribed). Pax's beak is the amber-orange variant also kept in PP-BFPockets. No overlay in the top third or bottom fifth"
+  },
+  {
+   "start": 95, "end": 189, "boundary": "cut", "keep": true,
+   "camera": "static", "framing": "medium close-up", "angle": "eye level",
+   "setting": "s1",
+   "view": "with a cream table in front of him, a brown armchair behind him, two framed landscape pictures and a potted plant",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "left-center", "presence": "full", "outfit": ["o2"]}
+   ],
+   "beats": [
+    {"start": 95, "end": 117, "text": "Pax sits at the table holding a bag of chips, tears it open and peers inside"},
+    {"start": 117, "end": 127, "text": "Pax smiles with his eyes closed and lifts the bag up"},
+    {"start": 127, "end": 151, "text": "Pax tips the bag over the lilac bowl and pours out a small handful of chips"},
+    {"start": 151, "end": 161, "text": "Pax squints and shakes the bag hard over the bowl"},
+    {"start": 161, "end": 189, "text": "Pax sets the bag down and scratches the back of his head, frowning at the half-empty bowl"}
+   ],
+   "props": ["bag of chips", "bowl", "chips", "table", "armchair", "framed pictures", "potted plant"],
+   "prop_events": [{"prop": "bag of chips", "event": "puts_down", "frame": 162, "by": "pax"}],
+   "effects": [], "overlays": [], "in_world_text": ["snack bag label"],
+   "travel": "none",
+   "notes": "camera locked: ECC on the wall band (y 0.20-0.38) scale 1.0000, 0.1 px, cc 1.000 every 8th frame; raw difference on the picture band 0.00-0.10 vs f95; compare 95/188 keeps the pictures, plant and table edge black. Same snack bag as f0-94. No overlay"
+  },
+  {
+   "start": 189, "end": 338, "boundary": "cut", "keep": true,
+   "camera": "static", "framing": "medium close-up", "angle": "eye level",
+   "setting": "s1",
+   "view": "with a cream table in front of him, a brown armchair behind him, a framed sailboat picture and an orange lamp on a side table",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "left-center", "presence": "full", "outfit": []}
+   ],
+   "beats": [
+    {"start": 189, "end": 205, "text": "Pax sits at the table holding a bag of chips and tugs at its top"},
+    {"start": 205, "end": 221, "text": "Pax squeezes one eye shut and strains to pull the bag open"},
+    {"start": 221, "end": 235, "text": "Pax peeks into the open bag with a puzzled look"},
+    {"start": 235, "end": 265, "text": "Pax holds the bag upside down over the empty lilac bowl and shakes it"},
+    {"start": 265, "end": 299, "text": "Pax keeps shaking the bag as a single chip tumbles out and drops into the bowl"},
+    {"start": 299, "end": 313, "text": "Pax sets the bag down on the table and reaches into the bowl with a frown"},
+    {"start": 313, "end": 327, "text": "Pax lifts the single chip up in his flipper and stares at it"},
+    {"start": 327, "end": 338, "text": "Pax watches the chip crumble into falling crumbs, his beak dropping open"}
+   ],
+   "props": ["bag of chips", "bowl", "chip", "table", "armchair", "framed picture", "lamp"],
+   "prop_events": [{"prop": "bag of chips", "event": "puts_down", "frame": 303, "by": "pax"}],
+   "effects": [], "overlays": [], "in_world_text": ["snack bag label"],
+   "travel": "none",
+   "notes": "camera locked: raw pixel difference on the picture and lamp region (x 0.6-1.0, y 0.2-0.42) 0.00 vs f189 every 6th frame through f333; compare 189/337 keeps the picture, lamp and table edge black (ECC on the full-width wall band reads cc 0.86-0.96 only because Pax's head enters it). No overlay"
+  }
+ ]
+}

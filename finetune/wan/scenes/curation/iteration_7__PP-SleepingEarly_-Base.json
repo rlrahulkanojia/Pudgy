@@ -1,0 +1,47 @@
+{
+ "skit": "iteration_7/293_videos/PP-SleepingEarly -Base.mp4",
+ "frames": 130,
+ "fps": 24.0,
+ "curated_by": "curator-v10-15",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "polly": {"kind": "lead"}
+ },
+ "outfits": {
+  "o1": "a coral polka-dot sleep mask"
+ },
+ "settings": {
+  "s1": {"kind": "set", "desc": "a dim bedroom with a yellow wooden bed and a matching bedside table against a grey wall"}
+ },
+ "spans": [
+  {
+   "start": 0, "end": 117, "boundary": "start", "keep": true,
+   "camera": "static", "framing": "medium wide", "angle": "high angle", "setting": "s1",
+   "view": "with a phone lying on the bedside table",
+   "time": "night", "size_change": false,
+   "characters": [
+    {"id": "polly", "screen": "center", "presence": "full", "outfit": ["o1"]}
+   ],
+   "beats": [
+    {"start": 0, "end": 9, "text": "Polly lies in bed with the covers pulled up and a sleep mask pushed up on her forehead, glancing around with her eyes open"},
+    {"start": 9, "end": 27, "text": "Polly closes her eyes and sinks down into the pillow as the blanket rises up to her beak"},
+    {"start": 27, "end": 60, "text": "Polly lies still under the blanket with her eyes closed, the mask still up on her forehead"},
+    {"start": 60, "end": 84, "text": "Polly reaches up with a flipper, pulls the sleep mask down over her eyes and turns her head on the pillow"},
+    {"start": 84, "end": 117, "text": "Polly lies still on her side with the mask over her eyes, tucked under the blanket"}
+   ],
+   "props": ["bed", "blanket", "pillow", "bedside table", "phone"],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked through the shot: ECC on the headboard band (y0.18-0.40, x0-0.35) scale 0.9999 tx -0.1 cc 0.999 at every 8th frame f8-112; compare 0/116 headboard, bedside table and floor edges overlap. The phone on the bedside table shifts a few px once (f8-13, a small buzz). Phone is the iFin (pale grey back, lenses, tuft) but only lies there, so written 'a phone' in view. No overlay in top third or bottom fifth"
+  },
+  {
+   "start": 117, "end": 130, "boundary": "cut", "keep": false, "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "13 frames: lights out, Polly lies awake with the mask pushed up, staring at the iFin held to her face, her face lit by its glow"
+  }
+ ]
+}

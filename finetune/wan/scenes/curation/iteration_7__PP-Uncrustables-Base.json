@@ -1,0 +1,399 @@
+{
+ "skit": "iteration_7/293_videos/PP-Uncrustables-Base.mp4",
+ "frames": 366,
+ "fps": 24,
+ "curated_by": "curator-v10-26",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "a peach-and-white striped blanket with fish prints draped over her head like a hood"
+ },
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a dining area with a round cream table and wooden chairs, drawn on a plain pale grey background"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "a living room with a cream sofa drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 38,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with an empty white plate on the table in front of him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 6,
+     "text": "Pax raises a round sandwich to his open beak and takes a bite"
+    },
+    {
+     "start": 6,
+     "end": 31,
+     "text": "Pax chews with his eyes closed and a blissful look, holding the sandwich in both flippers"
+    },
+    {
+     "start": 31,
+     "end": 38,
+     "text": "Pax opens his eyes and keeps chewing, holding the sandwich at his chest"
+    }
+   ],
+   "props": [
+    "sandwich",
+    "plate"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "locked: ECC on the table and pedestal band (y 0.66-0.92, x 0.15-1.0) scale 1.0001, -0.2 px, cc 1.000 f31-37; compare 0/20 and 18/36 keep table, plate and chair edges black (an ECC band that includes Pax's body reads a false 0.95 scale). A pull-back starts at f38. The sandwich is a round crimped crustless sandwich with no packaging or logo anywhere in the skit, so no ad_merch. Top third plain wall, bottom fifth floor and table pedestal: no overlay"
+  },
+  {
+   "start": 38,
+   "end": 45,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "7-frame pull-back from Pax to the two-shot at the table (ECC scale 0.985 at f38, 0.90 at f45, static from f45)"
+  },
+  {
+   "start": 45,
+   "end": 120,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a white plate in front of each of them on the table",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 45,
+     "end": 68,
+     "text": "Polly saws the crust off the sandwich on her plate with a knife while Pax holds his round sandwich, watching her"
+    },
+    {
+     "start": 68,
+     "end": 80,
+     "text": "Pax takes a bite of his sandwich while Polly finishes trimming hers"
+    },
+    {
+     "start": 80,
+     "end": 94,
+     "text": "Polly lifts the trimmed sandwich off her plate with both flippers, leaving strips of crust behind"
+    },
+    {
+     "start": 94,
+     "end": 120,
+     "text": "Polly bites into her sandwich and chews with her eyes closed while Pax holds his and watches"
+    }
+   ],
+   "props": [
+    "sandwiches",
+    "plates",
+    "knife"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "locked: ECC on the table and pedestal band (y 0.62-0.86) scale 1.0001, -0.1 px, cc 1.000 every 8 frames f53-117; compare 45/119 keeps table, chair and shadow edges black. Hard cut to the living room at f120. Top third plain wall, bottom fifth floor shadow: no overlay"
+  },
+  {
+   "start": 120,
+   "end": 243,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with yellow shell-shaped armrests on the sofa, a glass coffee table and the back of a teal armchair in the foreground",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "enters",
+     "outfit": [],
+     "enters_at": 120,
+     "moves": [
+      {
+       "frame": 128,
+       "screen": "left-center"
+      }
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 120,
+     "end": 152,
+     "text": "Pax waddles in from the left carrying a plate of sandwiches and holds a bowl of snacks out to Polly"
+    },
+    {
+     "start": 152,
+     "end": 162,
+     "text": "Polly takes the bowl of snacks onto her lap while Pax stands beside the sofa"
+    },
+    {
+     "start": 162,
+     "end": 180,
+     "text": "Pax hops up onto the sofa beside Polly with his plate, his eyes closed"
+    },
+    {
+     "start": 180,
+     "end": 200,
+     "text": "Pax turns and sets his plate down on the sofa arm, keeping one sandwich"
+    },
+    {
+     "start": 200,
+     "end": 222,
+     "text": "Pax holds his sandwich in his lap while Polly munches snacks from the bowl"
+    },
+    {
+     "start": 222,
+     "end": 236,
+     "text": "Pax peels a strip of crust off his sandwich and turns to drop it on the plate"
+    },
+    {
+     "start": 236,
+     "end": 243,
+     "text": "Pax turns back to face forward with his sandwich while Polly eats from her bowl"
+    }
+   ],
+   "props": [
+    "plate of sandwiches",
+    "bowl of snacks",
+    "sofa",
+    "glass coffee table",
+    "armchair"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "enters",
+   "notes": "locked: ECC on the armchair band (y 0.80-0.99) scale 1.0000, 0.0 px, cc 1.000 every 10 frames; compare 120/242 keeps sofa, coffee-table and armchair edges black. Pax is partly in at the left edge on f120 and fully in by ~f124. Polly sits wrapped in a peach-and-white striped blanket over her head, face fully visible. Top third plain wall, bottom fifth armchair and rug: no overlay"
+  },
+  {
+   "start": 243,
+   "end": 288,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with the cream sofa behind her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 243,
+     "end": 262,
+     "text": "Polly eats a snack from the bowl in her lap, chewing calmly"
+    },
+    {
+     "start": 262,
+     "end": 272,
+     "text": "Polly blinks as a flipper holding a sandwich reaches in from the left"
+    },
+    {
+     "start": 272,
+     "end": 288,
+     "text": "Polly stares at the sandwich held out beside her with wide eyes and an open beak"
+    }
+   ],
+   "props": [
+    "bowl of snacks",
+    "sandwich"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "locked: ECC on the left sofa band (y 0.55-0.99, x 0-0.15) scale 1.0000, 0 px, cc 1.000 f247-263 (Pax's flipper enters it after); the sofa's horizontal lines at the left edge sit at the same rows (1099/1122/1620/1665/1879 px) f243-287; compare 243/288 keeps sofa edges black. Pax shows only as a flipper at the left edge from f264, so he is not listed. A slow push-in starts at f288. Top third plain wall: no overlay"
+  },
+  {
+   "start": 288,
+   "end": 319,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with the cream sofa behind her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 288,
+     "end": 298,
+     "text": "Polly reaches up with a worried look and takes the sandwich from a flipper reaching in from the left"
+    },
+    {
+     "start": 298,
+     "end": 310,
+     "text": "Polly lifts the bowl of snacks off her lap and slides it away to the right"
+    },
+    {
+     "start": 310,
+     "end": 319,
+     "text": "Polly holds the sandwich in both flippers, closes her eyes and blushes"
+    }
+   ],
+   "props": [
+    "bowl of snacks",
+    "sandwich"
+   ],
+   "prop_events": [],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "slow push-in on Polly: the sofa lines at the left edge move steadily down (1620 -> 1644 px and 1879 -> 1898 px f288-318, the top line only 1099 -> 1105), a scale-up of ~3.5% centred near her face; compare 289/318 shows doubled sofa edges. Not a cut at f289: the pose snaps but the sofa edges stay black in compare 288/289. The flipper (Pax, unnamed) withdraws out of the picture ~f300. Filled for U3 | verification pass 2 (verify_v10_report_v19): beat 1: 'the flipper' has no antecedent in this span's caption; per the flipper-only ruling name it as a flipper reaching in from the left"
+  },
+  {
+   "start": 319,
+   "end": 366,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a plate on one sofa arm, a bowl of snacks on the other, a glass coffee table and the back of a teal armchair in the foreground",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 319,
+     "end": 329,
+     "text": "Pax and Polly sit side by side on the sofa holding their sandwiches, Polly blushing with her eyes closed"
+    },
+    {
+     "start": 329,
+     "end": 348,
+     "text": "Polly leans her head against Pax's shoulder while he holds his sandwich and looks ahead"
+    },
+    {
+     "start": 348,
+     "end": 366,
+     "text": "Pax closes his eyes and blushes while Polly rests her head against him"
+    }
+   ],
+   "props": [
+    "sandwiches",
+    "plate",
+    "bowl of snacks",
+    "sofa",
+    "glass coffee table",
+    "armchair"
+   ],
+   "prop_events": [],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "locked: ECC on the armchair band (y 0.80-0.99) scale 1.0000, <=0.1 px, cc 1.000 every 6 frames; compare 319/365 keeps sofa, table and armchair edges black. Top third plain wall, bottom fifth armchair and rug: no overlay"
+  }
+ ]
+}

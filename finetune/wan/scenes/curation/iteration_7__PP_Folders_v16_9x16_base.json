@@ -1,0 +1,211 @@
+{
+ "skit": "iteration_7/293_videos/PP_Folders_v16_9x16 base.mp4",
+ "frames": 329,
+ "fps": 24.0,
+ "curated_by": "curator-v10-20",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a home office drawn on a plain pale grey background"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "a home office drawn on a plain slate-grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 52,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a curved glass desk on coral-shaped legs, a rounded teal computer and a shell-shaped chair",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 16,
+     "text": "Polly sits at the desk resting her chin on one flipper, gazing at the computer screen"
+    },
+    {
+     "start": 16,
+     "end": 52,
+     "text": "Polly lowers her flipper to the keyboard and watches the screen with a calm, attentive look"
+    }
+   ],
+   "props": [
+    "computer",
+    "keyboard",
+    "desk",
+    "shell-shaped chair",
+    "desk figurine"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "slow push-in through the whole shot: motion on the desk-leg and coral band (y0.62-0.80, x0-0.6) scale 1.003 at f6 rising to 1.063 at f48 (cc >= 0.96, most rows >= 0.99); compare 0/51 every desk edge doubled. The small figurine on the desk is a dark penguin with a brown bowl cut in a coral heart-print outfit, seen from behind: neither lead, a prop. The computer carries a small igloo sticker (invented, not a real brand). No overlay"
+  },
+  {
+   "start": 52,
+   "end": 150,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "computer-screen insert: the desktop fills the picture, a folder is created and named letter by letter (UI text), only Polly's flippers reach in at the bottom corners"
+  },
+  {
+   "start": 150,
+   "end": 176,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a curved glass desk on coral-shaped legs, a rounded teal computer and a shell-shaped chair",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 150,
+     "end": 160,
+     "text": "Polly sits at the desk watching the computer screen with wide, attentive eyes"
+    },
+    {
+     "start": 160,
+     "end": 176,
+     "text": "Polly lifts a flipper to her chest and closes her eyes with a happy smile while a small heart pops up above her"
+    }
+   ],
+   "props": [
+    "computer",
+    "keyboard",
+    "desk",
+    "shell-shaped chair",
+    "desk figurine"
+   ],
+   "prop_events": [],
+   "effects": [
+    "heart"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: motion on the desk-leg and coral band (y0.62-0.80, x0-0.6) scale 1.0000, <=0.1 px, cc 1.000 every 5 frames; compare 150/175 desk, coral and computer edges black. The heart shows ~f163-172. Same desk figurine as span 0 (generic, a prop). No overlay"
+  },
+  {
+   "start": 176,
+   "end": 196,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "push_in",
+   "notes": "20 frames, push-in (desk band scale 1.011 -> 1.062): Pax at his desk with the laptop, chin on his flipper, side-eyeing the screen"
+  },
+  {
+   "start": 196,
+   "end": 238,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "laptop-screen insert: a right-click menu, then a new folder appears (UI text and cursor); no character"
+  },
+  {
+   "start": 238,
+   "end": 284,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a pale aqua desk holding a laptop and a parcel, and a shell-shaped chair",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 238,
+     "end": 248,
+     "text": "Pax sits at the desk with a determined frown, one flipper resting on the laptop keys"
+    },
+    {
+     "start": 248,
+     "end": 273,
+     "text": "Pax leans in over the laptop and taps at the keys with a focused, narrow-eyed look"
+    },
+    {
+     "start": 273,
+     "end": 284,
+     "text": "Pax straightens up and stares at the screen with wide eyes and raised brows"
+    }
+   ],
+   "props": [
+    "laptop",
+    "parcel",
+    "desk",
+    "shell-shaped chair"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "slow push-in through the whole shot: motion on the desk-leg band (y0.62-0.80) scale 1.007 at f244 rising to 1.036 at f274 (cc >= 0.98 on most rows); compare 238/283 desk edges doubled. Laptop lid has a small igloo logo (invented). No overlay"
+  },
+  {
+   "start": 284,
+   "end": 329,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "laptop-screen insert, nearer: a folder with a typed name, then a replace-file dialog box (UI text, cursor); no character. Skit ends here"
+  }
+ ]
+}

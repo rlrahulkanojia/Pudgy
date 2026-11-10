@@ -1,0 +1,237 @@
+{
+ "skit": "iteration_7/293_videos/PP-Togetheness-Base.mp4",
+ "frames": 164,
+ "fps": 24.0,
+ "curated_by": "curator-v10-11",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "an igloo kitchen with pale ice-brick walls and a curved teal counter"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 53,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with bowls of vegetables and a carrot on a cutting board on the counter beside her, and a jar on a wall shelf",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 15,
+     "text": "Polly stands at the counter whisking batter in a mixing bowl, little splatters of batter dotting her cheeks"
+    },
+    {
+     "start": 15,
+     "end": 19,
+     "text": "Polly shuts her eyes for a moment with a happy smile"
+    },
+    {
+     "start": 19,
+     "end": 45,
+     "text": "Polly beams and chatters, her beak opening and closing, swaying gently as she keeps whisking the batter"
+    },
+    {
+     "start": 45,
+     "end": 53,
+     "text": "Polly closes her beak and looks ahead with wide eyes, still whisking"
+    }
+   ],
+   "props": [
+    "mixing bowl",
+    "whisk",
+    "vegetables",
+    "cutting board"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: ECC on the wall/shelf band (y 0.15-0.35) scale 1.0000, 0 px, cc 1.000 every 6th frame; top and bottom regions diff 0.00 vs f0 throughout. A soft-focus range hood edge sits in the top-left foreground. The shelf jar holds plain rose sweets (full-res crop f10), no lead depiction. No caption or watermark (top third and bottom fifth checked). Eyes shut f16-17 | verification pass 2 (verify_v10_report_v16): beat 3 [19,45): Polly's beak opens and closes throughout (closed f22-24 and f30-33, open f18-21, f25-29, f34-45): she chatters, it is not held open"
+  },
+  {
+   "start": 53,
+   "end": 98,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a round window and an ice-brick range hood above the stove",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 53,
+     "end": 74,
+     "text": "Pax stands at the stove stirring food in a skillet with a wooden spoon, watching it, a few sauce specks on his cheek"
+    },
+    {
+     "start": 74,
+     "end": 77,
+     "text": "Pax shuts his eyes for a moment with a contented smile"
+    },
+    {
+     "start": 77,
+     "end": 83,
+     "text": "Pax turns his face toward the front with his beak open in a smile"
+    },
+    {
+     "start": 83,
+     "end": 98,
+     "text": "Pax looks ahead and chatters with a little smile, his beak opening and closing, resting the spoon in the skillet"
+    }
+   ],
+   "props": [
+    "skillet",
+    "wooden spoon",
+    "stove"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: ECC on the window/hood band (y 0.10-0.30) scale 1.0000, 0 px, cc 1.000 every 6th frame; top and bottom regions diff 0.00 vs f53. Eyes shut f74-76. No caption or watermark | verification pass 2 (verify_v10_report_v16): beat 4 [83,98): Pax's beak opens and closes (open f85-88 and f92-94, closed f83-84, f89-91, f95-97): he chatters, not a held calm smile"
+  },
+  {
+   "start": 98,
+   "end": 132,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the stove and an ice-brick range hood behind them",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 98,
+     "end": 104,
+     "text": "Pax reaches out a flipper and touches Polly's cheek as they stand facing each other by the stove, and Polly shuts her eyes"
+    },
+    {
+     "start": 104,
+     "end": 108,
+     "text": "Pax and Polly turn together to face forward"
+    },
+    {
+     "start": 108,
+     "end": 132,
+     "text": "Pax clasps his flippers at his chest while Polly holds one flipper raised high, both looking ahead and chattering, beaks opening and closing"
+    }
+   ],
+   "props": [
+    "stove"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: ECC on the hood/shelf band (y 0.20-0.38) scale 1.0000, 0 px, cc 1.000 every 6th frame; that band's diff vs f98 is 0.00 on every frame. Nearly a hold f113-131 (whole-frame diff <= 0.02). No caption or watermark | verification pass 2 (verify_v10_report_v16): beat 3 [108,132): both leads' beaks open and close in turn (Polly closed f117-118, f122-123, f128-131; Pax open f115-116, f118-120, f122-123, f128, f130): they chatter; 'with her beak open' claimed a held pose; beat 1 [98,104): Polly shuts her eyes f100-105 as Pax touches her cheek; added"
+  },
+  {
+   "start": 132,
+   "end": 164,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the long curved counter, the range hood and wall shelves behind them",
+   "time": "day",
+   "size_change": true,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 132,
+     "end": 156,
+     "text": "Pax and Polly hug and twirl around each other in a happy little dance, hopping as they spin"
+    },
+    {
+     "start": 156,
+     "end": 164,
+     "text": "Pax and Polly keep hugging and start another twirl of their dance"
+    }
+   ],
+   "props": [],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "camera locked: ECC on the hood/shelf band (y 0.25-0.40) scale 1.0000, 0 px, cc 1.000 every 6th frame. The dance is a 24-frame loop (f156 repeats f132). size_change true because they circle in depth as they twirl (one passes in front of the other). Skit ends on this shot. No caption or watermark"
+  }
+ ]
+}

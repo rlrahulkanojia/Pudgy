@@ -1,0 +1,31 @@
+{
+ "skit": "iteration_7/293_videos/pp_SAMEROOM_BASE.mp4",
+ "frames": 163,
+ "fps": 24.0,
+ "curated_by": "curator-v10-09",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {},
+ "outfits": {},
+ "settings": {},
+ "spans": [
+  {
+   "start": 0,
+   "end": 162,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "off_style",
+   "camera": "other",
+   "notes": "OLD_DESIGN: yellow feet on both leads, paler rose Polly and periwinkle Pax, glossy sofa with painted highlight streaks, thin black frame lines at the picture edges. Shots: f0-133 Polly sits at the end of a long sofa looking at a phone (static to ~f110; a fast pull-back and swing f111-118 reveals Pax in the foreground at the near end of the same sofa, holding a phone; then holds f118-133); hard cut at f134 to a wide shot of both on the sofa with phones, static f134-161. No overlays"
+  },
+  {
+   "start": 162,
+   "end": 163,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "single black end frame"
+  }
+ ]
+}

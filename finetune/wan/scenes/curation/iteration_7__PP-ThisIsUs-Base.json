@@ -1,0 +1,281 @@
+{
+ "skit": "iteration_7/293_videos/PP-ThisIsUs-Base.mp4",
+ "frames": 247,
+ "fps": 24.0,
+ "curated_by": "curator-v10-10",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a caf\u00e9 with a bright cyan counter in front of a plain pale grey wall"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 43,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a small round table and a wooden chair behind him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 6,
+     "text": "Pax reaches into a takeaway tray of salad on the counter and lifts out a pair of cherry tomatoes"
+    },
+    {
+     "start": 6,
+     "end": 18,
+     "text": "Pax holds the cherry tomatoes up and gazes at them with a happy, open-beaked smile"
+    },
+    {
+     "start": 18,
+     "end": 27,
+     "text": "Pax reaches down with his other flipper and picks up {ifin} from the counter, still holding up the tomatoes"
+    },
+    {
+     "start": 27,
+     "end": 43,
+     "text": "Pax holds the phone up in front of him beside the tomatoes as a small flash sparkles on its back"
+    }
+   ],
+   "props": [
+    "takeaway tray of salad",
+    "cherry tomatoes",
+    "phone"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "picks_up",
+     "frame": 24,
+     "by": "pax",
+     "is_ifin": true
+    }
+   ],
+   "effects": [
+    "sparkle"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "locked: the counter's diagonal glare stripes keep 100% of their edges frame to frame f0-42 (ECC is unusable on them: they are periodic) and compare 0/42 shows every stripe and the tray overlapping. Pax is hidden below the belly by the counter. The phone has the pale grey back, three lenses and the tuft = iFin | verification pass 2 (verify_v10_report_v01): beat 1/2: the tomato pick-up happens in beat 1's range: Pax's flipper is in the tray f0-3 and lifts the tomatoes out f3-5; by f5 they are held up. Beat 1 says only 'glances to the side' and beat 2 [6,18) claims the pick-up; beat 4: the phone's back (lenses) faces the viewer and the sparkle is drawn on it; 'snaps a photo of the tomatoes' is intent, reworded to what is visible"
+  },
+  {
+   "start": 43,
+   "end": 92,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "phone-screen insert: a chat app fills the picture, only Pax's flippers holding it and typing; the photo of the tomatoes is sent and a reply is typed. The chat header shows a small Polly avatar (also lead_copy); in-world text"
+  },
+  {
+   "start": 92,
+   "end": 126,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a small round table and a wooden chair behind him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 92,
+     "end": 100,
+     "text": "Pax sets {ifin} down flat on the counter"
+    },
+    {
+     "start": 100,
+     "end": 126,
+     "text": "Pax crosses his flippers in front of his belly and waits with a smug, narrow-eyed look"
+    }
+   ],
+   "props": [
+    "takeaway tray of salad",
+    "phone"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "puts_down",
+     "frame": 95,
+     "by": "pax",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "locked f92-126: glare-stripe edges keep >= 97% every frame; compare 92/125 stripes and tray overlap. A pull-back starts at f127 | verification pass 2 (verify_v10_report_v01): boundary: the pull-back starts at f126, not f127. Counter band f125->f126 changes (mean 0.72, 4060 px >20; top wall band 3135 px), motion on the counter band reads scale 0.9856 ty +24.7 at f126 (1.0000 / 0 px f121-125). Trim to [92,126) and add [126,127) too_short pull_back; beat 2: Pax's flippers are crossed in front of his belly above the counter, not folded on the counter"
+  },
+  {
+   "start": 126,
+   "end": 127,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "verification pass 2 (verify_v10_report_v01): first frame of the pull-back (scale 0.9856 vs the locked f125); the move continues in [127,132)"
+  },
+  {
+   "start": 127,
+   "end": 132,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "quick pull-back f127-131 (glare-stripe edge keep drops to 0.04-0.57)"
+  },
+  {
+   "start": 132,
+   "end": 149,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "17 locked frames: Polly walks up from the back of the caf\u00e9 toward the counter, growing as she comes, holding her phone (iFin, back facing out) while Pax watches"
+  },
+  {
+   "start": 149,
+   "end": 160,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "Polly turns her iFin's screen outward f149-159: it shows the chat with a small Pax avatar in the header and the photo with Pax's flipper holding the tomatoes (screen-turned-out ruling)"
+  },
+  {
+   "start": 160,
+   "end": 227,
+   "boundary": "same_shot",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a round table, a wooden chair and an arched doorway behind them",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 160,
+     "end": 178,
+     "text": "Polly lowers her phone to her chest and smiles at Pax, waving her other flipper toward him"
+    },
+    {
+     "start": 178,
+     "end": 184,
+     "text": "Polly sets her phone down on the counter"
+    },
+    {
+     "start": 184,
+     "end": 202,
+     "text": "Polly blushes and holds a flipper to her cheek with a bashful smile while Pax watches her"
+    },
+    {
+     "start": 202,
+     "end": 212,
+     "text": "Polly leans in and throws her flippers around Pax, who opens his beak in surprise"
+    },
+    {
+     "start": 212,
+     "end": 227,
+     "text": "Polly hugs Pax and kisses his cheek as both of them blush and little hearts float up"
+    }
+   ],
+   "props": [
+    "takeaway tray of salad",
+    "phone"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "puts_down",
+     "frame": 180,
+     "by": "polly",
+     "is_ifin": true
+    }
+   ],
+   "effects": [
+    "blush marks",
+    "hearts"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "locked f132-226: glare-stripe edges keep >= 97% every frame; compare 135/225 stripes, tray and Pax's phone overlap. Polly's phone shows its back f160-177, then lies flat on the counter from f180 with its screen seen edge-on (unreadable, no lead recognisable). Pax's own phone lies dark on the counter. A push-in starts at f227 | verification pass 2 (verify_v10_report_v01): beat 1 [160,178): 'chats to Pax' is not visible: Polly's beak stays closed f160-177 (it was open f150-158, inside the lead_copy span); she holds the phone at her chest, smiles and waves her other flipper toward Pax"
+  },
+  {
+   "start": 227,
+   "end": 232,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "push_in",
+   "notes": "fast push-in f227-231 onto the hugging pair"
+  },
+  {
+   "start": 232,
+   "end": 247,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "15 locked frames (compare 232/246 stripes overlap): Polly hugs Pax and nuzzles his cheek, Pax winks and blushes, hearts float up"
+  }
+ ]
+}

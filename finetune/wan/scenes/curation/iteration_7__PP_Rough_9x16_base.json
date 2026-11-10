@@ -1,0 +1,239 @@
+{
+ "skit": "iteration_7/293_videos/PP_Rough_9x16_base.mov",
+ "frames": 259,
+ "fps": 24.0,
+ "curated_by": "curator-v10-03",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "a fluffy bunny-ear headband",
+  "o2": "a mint green face mask",
+  "o3": "a rumpled half-buttoned white shirt",
+  "o4": "a navy tie"
+ },
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a doorway with a wooden door set in a pale stone arch"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 14,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "14 frames of the closed door with a delivery box held up in front of it; no lead until the door opens at f14 (also no_lead). Current flat style, not OLD_DESIGN."
+  },
+  {
+   "start": 14,
+   "end": 58,
+   "boundary": "same_shot",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a delivery box held up toward her from below by a pair of flippers",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": [
+      "o1",
+      "o2"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 14,
+     "end": 23,
+     "text": "Polly peeks out from behind the door as it swings open"
+    },
+    {
+     "start": 23,
+     "end": 36,
+     "text": "Polly leans out of the doorway and looks up over the delivery box held out in front of her"
+    },
+    {
+     "start": 36,
+     "end": 47,
+     "text": "Polly stands still as her face mask peels loose on one side and slips down over one eye"
+    },
+    {
+     "start": 47,
+     "end": 58,
+     "text": "Polly presses the face mask back into place with a flipper and looks up with wide eyes"
+    }
+   ],
+   "props": [
+    "delivery box"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "packaging label and restaurant name on the box"
+   ],
+   "travel": "none",
+   "notes": "Polly placed by her tuft, colouring and the same face as the unmasked Polly at f70-121; the headband and the skincare face mask are outfits, her eyes and beak stay visible. Camera locked: pixel diff of the arch-top band (y 0.08-0.20) is 0.00 vs f0 on every frame f1-57; compare 0/57 arch edges black. The box is lifted by the off-screen deliverer's flippers (bottom corners). The box print (a chef bird mascot, invented restaurant name) is in-world packaging, not a lead and not a real brand. No overlay. | verification pass 2 (verify_v10_report_v14): beat 1 (f23-36): the box is held below her face, while Polly's pupils look up (f20, f26, f30, f34): she looks up over the box, not at it; beat 3 (f47-58): after pressing the mask back she looks up with wide eyes (f52, f57), not at the box; checked: current design (not OLD_DESIGN); Chef Pengu's box print is an invented name (no real business found), its yellow chef-penguin mascot is neither lead; a"
+  },
+  {
+   "start": 58,
+   "end": 70,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "12 frames of the closed door behind an orange delivery bag; Polly first shows at f70 (also no_lead)."
+  },
+  {
+   "start": 70,
+   "end": 122,
+   "boundary": "same_shot",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with an orange delivery bag held up toward her from below by a pair of flippers",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 70,
+     "end": 85,
+     "text": "Polly peeks out from behind the door and wipes a tear from her eye with a flipper, frowning"
+    },
+    {
+     "start": 85,
+     "end": 91,
+     "text": "Polly squeezes her eyes shut and rubs them with her flipper"
+    },
+    {
+     "start": 91,
+     "end": 112,
+     "text": "Polly gazes up with teary eyes as the delivery bag is lifted up in front of her"
+    },
+    {
+     "start": 112,
+     "end": 122,
+     "text": "Polly blushes and stares at the bag with shining, teary eyes, a flipper reaching onto it"
+    }
+   ],
+   "props": [
+    "delivery bag",
+    "receipt"
+   ],
+   "prop_events": [],
+   "effects": [
+    "tears",
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [
+    "delivery-service name on the bag",
+    "receipt"
+   ],
+   "travel": "none",
+   "notes": "Camera locked: arch-top band pixel diff 0.00 vs f58 until the door swings open (f68-72), then constant 0.94 to f121; compare 58/121 arch edges black. The bag's name is an invented Pudgy-world delivery service (allowed in-world text, never transcribed). Polly's lower body is behind the bag. No overlay."
+  },
+  {
+   "start": 122,
+   "end": 145,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "shake",
+   "notes": "closed door with a clipboard and pen held out from the lower left; a 4-frame shake f130-133 (band diff 2.2 then back to 0.00 at f134, ECC scale 1.0024 at f131), the door opens f143-144; no lead until f145. Every piece is under 21 frames (also no_lead)."
+  },
+  {
+   "start": 145,
+   "end": 194,
+   "boundary": "same_shot",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a clipboard and pen held out toward him from the lower left",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "enters",
+     "enters_at": 145,
+     "outfit": [
+      "o3",
+      "o4"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 145,
+     "end": 150,
+     "text": "Pax hops out from behind the door, tangled up in his shirt and tie"
+    },
+    {
+     "start": 150,
+     "end": 170,
+     "text": "Pax frowns in annoyance and tugs at the shirt bunched up around his flipper and neck"
+    },
+    {
+     "start": 170,
+     "end": 194,
+     "text": "Pax pulls the rumpled shirt collar up across his beak and peers over it with wide eyes"
+    }
+   ],
+   "props": [
+    "clipboard",
+    "pen"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "form text on the clipboard"
+   ],
+   "travel": "enters",
+   "notes": "Camera locked: compare 145/193 arch edges black; the arch-top band is constant after the door opens. Pax comes out from behind the door at f145-147 (only a flipper and foot at f145). The clipboard is raised toward him f145-153. No overlay."
+  },
+  {
+   "start": 194,
+   "end": 259,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "ad_merch",
+   "camera": "static",
+   "notes": "a cardboard parcel with Walmart-logo tape and a Pudgy toys label sits in front of the door for the whole shot (f194-258); Polly in a towel head wrap and a bathrobe peeks out from ~f205."
+  }
+ ]
+}

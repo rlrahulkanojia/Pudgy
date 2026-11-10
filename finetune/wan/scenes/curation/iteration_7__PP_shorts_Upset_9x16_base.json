@@ -1,0 +1,22 @@
+{
+ "skit": "iteration_7/293_videos/PP_shorts_Upset_9x16_base.mov",
+ "frames": 216,
+ "fps": 24.0,
+ "curated_by": "curator-v10-24",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {},
+ "outfits": {},
+ "settings": {},
+ "spans": [
+  {
+   "start": 0,
+   "end": 216,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "off_style",
+   "camera": "other",
+   "notes": "OLD_DESIGN: the earlier Pudgy look throughout: bright yellow beaks and feet (~RGB 240,208,64), paler rose and periwinkle bodies, a glossy shaded sky-coloured sofa. One take: it opens close on the rose penguin sulking under a blanket on the sofa and pulls back f0-~24; the blue penguin walks in from the right with a plate of sushi, sits at the other end and eats while the rose one glares, and later the rose one shifts and leans toward him. A pinned wall poster with a heart and a printed message (in-world text) hangs above the sofa throughout. One reason for the whole run, so one span"
+  }
+ ]
+}

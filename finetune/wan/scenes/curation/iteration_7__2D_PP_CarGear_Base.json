@@ -1,0 +1,194 @@
+{
+ "skit": "iteration_7/293_videos/2D_PP_CarGear_Base.mp4",
+ "frames": 289,
+ "fps": 24.0,
+ "curated_by": "curator-v10-27",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "a wide orange sun hat with a magenta ribbon and bow",
+  "o2": "a red bucket hat stacked on top of the sun hat",
+  "o3": "a pair of cat-eye sunglasses with rose frames"
+ },
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "an open-top car with brown leather seats and a purple dashboard, parked in a snowy landscape"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 20,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "Pax at the wheel turning the ignition key; 20 frames. Also lead_copy: a Polly-face plush in the cup holder (f0-19) and Polly penguin charms on the POLLY keychain (f0-19)"
+  },
+  {
+   "start": 20,
+   "end": 49,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "Pax climbs out of the car and shuts the door. From f24 he holds the keys with the POLLY keychain: two little Polly penguin charms (rose head, white body) visible in his flipper f24-48. f20-23 alone would be too_short"
+  },
+  {
+   "start": 49,
+   "end": 88,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the gear stick and cup holders in front of her and snowy hills with pine trees behind",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 49,
+     "end": 64,
+     "text": "Polly sits buckled into her seat with a flipper on the seatbelt buckle, glancing sideways"
+    },
+    {
+     "start": 64,
+     "end": 76,
+     "text": "Polly turns and leans toward the dashboard, glancing that way, with one flipper stretched out behind her"
+    },
+    {
+     "start": 76,
+     "end": 82,
+     "text": "Polly swings up a red shell-shaped purse that hangs by its strap from her flipper"
+    },
+    {
+     "start": 82,
+     "end": 88,
+     "text": "Polly reaches down with her other flipper and lifts the water bottle out of the cup holder"
+    }
+   ],
+   "props": [
+    "seatbelt",
+    "red shell-shaped purse",
+    "water bottle",
+    "gear stick"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f49-115 (motion on the pine-tree band y0.15-0.32 x0.70-1.00 and the console band y0.85-1.00 x0-0.5: scale 1.0000, <=0.3 px, cc 1.000; compare 49/87: dashboard and seat edges black; only the clouds drift). Ends at f88: the bottle Polly lifts carries a printed Pax-and-Polly sticker, first visible f88. No overlay | verification pass 2 (verify_v10_report_v25): beat 2 [64,76): the flipper Polly stretches out behind her is the screen-right one that was on the seatbelt buckle in beat 1 (full-res f57-72), so 'her other flipper' is wrong; reworded; checked as asked: no Polly charm, keychain or lead sticker on any frame f49-87 (full-res bottle crops f49-89: the bottle is plain until it tips at f87; the Pax-and-Polly sticker first shows at f88, outside the spa"
+  },
+  {
+   "start": 88,
+   "end": 116,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "the water bottle Polly holds has a printed Polly-and-Pax sticker, visible f88-115 (she also puts on cat-eye sunglasses at ~f108)"
+  },
+  {
+   "start": 116,
+   "end": 130,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "Pax waits by the car holding the POLLY keychain with Polly charms; 14 frames"
+  },
+  {
+   "start": 130,
+   "end": 213,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "Polly in the passenger seat hugging a pile of gear and stacking hats; the pile holds the bottle with the printed Pax-and-Polly sticker, visible f130-195 and f205-211 (f196-204 is 9 frames without it). The d1 spike at f138 is a hat swinging in, not a cut: motion on the pine band vs f130 stays at scale 1.0000, 0 px to f232"
+  },
+  {
+   "start": 213,
+   "end": 237,
+   "boundary": "same_shot",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the gear stick and cup holders in front of her and snowy hills with pine trees behind",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [
+      "o1",
+      "o2",
+      "o3"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 213,
+     "end": 219,
+     "text": "Polly turns to face the dashboard and reaches for the glove compartment, a lavender heart bag dangling from her flipper"
+    },
+    {
+     "start": 219,
+     "end": 225,
+     "text": "Polly pulls the glove compartment open, showing a small red spray can with a chili pepper label inside"
+    },
+    {
+     "start": 225,
+     "end": 233,
+     "text": "Polly peers into the open glove compartment with her flipper resting near its door"
+    },
+    {
+     "start": 233,
+     "end": 237,
+     "text": "Polly reaches into the glove compartment toward the red spray can"
+    }
+   ],
+   "props": [
+    "lavender heart bag",
+    "glove compartment",
+    "red spray can",
+    "seatbelt"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "starts at f213, the first frame after the gear pile (with the printed bottle) leaves the picture as she turns. Camera locked (pine band vs f130 and console band vs f213: scale 1.0000, <=0.2 px, cc 1.000; compare 213/236: dashboard, seat and gear-stick edges black). Hard cut to the exterior at f237. No overlay"
+  },
+  {
+   "start": 237,
+   "end": 289,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "other",
+   "notes": "outside by the igloo: Polly in both hats carries a towering pile of gear, it all tumbles to the ground and Pax turns to look. Pax holds the POLLY keychain with its two Polly penguin charms f244-277 and again f284-288 (small, about 25 px tall at 1080 wide, but drawn as Polly). The camera also drifts early in the shot (igloo band y0.30-0.55 x0-0.2 vs f237: scale 0.981, +30 px at f245, cc 0.996)"
+  }
+ ]
+}

@@ -1,0 +1,152 @@
+{
+ "skit": "iteration_7/293_videos/PP-Scenic-Base.mp4",
+ "frames": 203,
+ "fps": 24.0,
+ "curated_by": "curator-v10-03",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a snowy landscape of rolling hills with snow-capped pine trees under a pale sky"
+  },
+  "s2": {
+   "kind": "set",
+   "desc": "a snowy clearing beside a frozen lake, with pine trees under dark grey storm clouds"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 27,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pan_right",
+   "notes": "two pieces, both under 21 frames: static f0-8 (9 frames, ECC on the left tree band scale 1.0000, 0 px) as Pax lifts a picnic basket out of a red snowmobile, then a pan to the right f9-26 (background tx -11, -35, -64, -100 px at f9-12) revealing Polly; locked from f27 (ECC vs f27: 0 px, cc 1.000)."
+  },
+  {
+   "start": 27,
+   "end": 50,
+   "boundary": "camera",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a snow-capped pine tree behind them",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 27,
+     "end": 33,
+     "text": "Pax holds a picnic basket and glances sideways at Polly, who stands beside him with a doubtful frown"
+    },
+    {
+     "start": 33,
+     "end": 45,
+     "text": "Pax looks ahead and opens and closes his beak as he speaks while Polly keeps frowning beside him"
+    },
+    {
+     "start": 45,
+     "end": 50,
+     "text": "Pax tilts his brows into a worried frown while Polly stares ahead with a flat frown"
+    }
+   ],
+   "props": [
+    "picnic basket",
+    "red snowmobile"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f27-49 (ECC on the tree/hill band 0.12-0.36 vs f27: scale 1.0000, 0 px, cc 1.000; compare 27/49 background edges all black). The snowmobile's nose is cut off at the left edge. No overlay."
+  },
+  {
+   "start": 50,
+   "end": 82,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a red snowmobile parked in the snow in the foreground",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 50,
+     "end": 68,
+     "text": "Pax and Polly stand side by side with their backs turned, gazing out over the frozen lake, Pax holding a picnic basket"
+    },
+    {
+     "start": 68,
+     "end": 82,
+     "text": "Pax and Polly turn their heads toward each other and trade blank, glum looks"
+    }
+   ],
+   "props": [
+    "picnic basket",
+    "red snowmobile"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f50-81: ECC on the lake/tree band left (0.58-0.75, x 0-0.3) scale 1.0000, 0 px; right tree <1 px; compare 50/81 trees, lake and snowmobile edges black. Only the storm clouds drift (they are animated). Both leads seen from behind. No overlay."
+  },
+  {
+   "start": 82,
+   "end": 203,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "ad_merch",
+   "camera": "static",
+   "notes": "Walmart ad section, one run: f82-123 Pax and Polly with Walmart-logo shopping bags in front of an igloo store with a Walmart sign (a golden light-ray glow washes in from the left from ~f97, also an effect); cut at f124 to Pax with the logo bags (f124-141); wipe transition f142-143; f144-157 Polly with a logo bag under the Walmart sign; cut at f158 to a sunset over sand dunes, Pax and Polly from behind among parked cars setting down the logo bags (spark logo legible at full res on every frame f158-202), Polly holding up a red can from ~f180."
+  }
+ ]
+}

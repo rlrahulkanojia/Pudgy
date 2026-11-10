@@ -1,0 +1,25 @@
+{
+ "skit": "iteration_7/293_videos/PP_Cooking_9x16_base_v2.mov",
+ "frames": 170,
+ "fps": 24.0,
+ "curated_by": "curator-v10-09",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {},
+ "outfits": {},
+ "settings": {},
+ "spans": [
+  {
+   "start": 0,
+   "end": 170,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "graphic_overlay",
+   "camera": "other",
+   "overlays": [
+    "meme caption"
+   ],
+   "notes": "Client 2026-11-05: red-scarf and earmuffs penguins are removed from training (Q5, Q6); a clean copy would not bring this back. | meme caption in the upper third on every frame f0-169 (checked frame by frame): one caption f0-119, a second one f120-169. Shots under it: f0-72 a Pax-like penguin in a red scarf and navy overalls eats a fish dish with chopsticks, then crosses his flippers (would be a U5 lookalike case: Pax or not); f73-119 close-up of the fish plate with a flipper garnishing it with tongs (no lead); f120-129 a yellow penguin wearing earmuffs at a kitchen counter (9 frames); f130-169 wide kitchen, the scarf penguin at the left counter while the earmuffs penguin cooks chaotically. Normal 2D design (not OLD_DESIGN). Kept as one span: nothing in it can be kept"
+  }
+ ]
+}

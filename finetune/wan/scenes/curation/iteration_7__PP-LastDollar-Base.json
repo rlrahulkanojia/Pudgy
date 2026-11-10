@@ -1,0 +1,249 @@
+{
+ "skit": "iteration_7/293_videos/PP-LastDollar-Base.mp4",
+ "frames": 178,
+ "fps": 24.0,
+ "curated_by": "curator-v10-08",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a room drawn on a plain pale grey background"
+  },
+  "s2": {
+   "kind": "set",
+   "desc": "a snowy countryside with pine trees and rolling white hills"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 29,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a tall cream cabinet with doors and drawers",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 18,
+       "screen": "right"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 6,
+     "text": "Pax stands at the side of a tall cream cabinet and reaches behind it with both flippers"
+    },
+    {
+     "start": 6,
+     "end": 29,
+     "text": "Pax drags a big block of ice with a piggy bank frozen inside out from beside the cabinet, shuffling backward to the right with his eyes squeezed shut"
+    }
+   ],
+   "props": [
+    "cabinet",
+    "ice block",
+    "piggy bank"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "camera locked (ECC on the cabinet band scale 1.0000, 0 px through f28). Pax is cut by the right edge from ~f22 but never leaves. No caption or watermark"
+  },
+  {
+   "start": 29,
+   "end": 63,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "insert: the piggy bank frozen in the ice block fills the picture while the ice melts and drips away (f49-62); no penguin visible"
+  },
+  {
+   "start": 63,
+   "end": 69,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "fast pull-back f63-68 from the piggy-bank insert to the hair-dryer shot (also a camera_move); settles at f69 (Pax's bounding box fixed from f69)"
+  },
+  {
+   "start": 69,
+   "end": 98,
+   "boundary": "camera",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a melting block of ice in a puddle on the floor beside him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 69,
+     "end": 98,
+     "text": "Pax stands beside the melting ice block, waving a yellow hair dryer back and forth at the piggy bank frozen inside it"
+    }
+   ],
+   "props": [
+    "hair dryer",
+    "ice block",
+    "piggy bank"
+   ],
+   "prop_events": [],
+   "effects": [
+    "motion lines"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f69-97: plain ground so ECC has no texture; Pax's body and feet bounding box constant (feet y 471-474 to 646-647, body right edge 468-469 at 540 wide) from f69, while f63-68 still scale. The ice block shrinks as it melts (drawn, not the camera). No caption or watermark"
+  },
+  {
+   "start": 98,
+   "end": 126,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "other",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a round cream table beside him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 98,
+     "end": 105,
+     "text": "Pax stands by a round table scratching his head with a wooden mallet, eyeing the piggy bank on it"
+    },
+    {
+     "start": 105,
+     "end": 118,
+     "text": "Pax swings the mallet down and smashes the piggy bank into shards and a few banknotes, then winks"
+    },
+    {
+     "start": 118,
+     "end": 126,
+     "text": "Pax holds the mallet up and looks at the pile of shards and banknotes with a sheepish smile"
+    }
+   ],
+   "props": [
+    "wooden mallet",
+    "piggy bank",
+    "banknotes",
+    "table"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "dropped as other: the background panel in this shot is smaller than the picture, leaving a visible lighter margin on all four sides (inner RGB 208,226,233 vs margin 214,229,237, a crisp rectangle edge ~20 px in from each side at 540 wide), a compositing artifact not seen in the other shots. Fields filled so it can be flipped if the margin is ruled harmless. Camera locked (table edges black in compare 98/125, ECC 1.0000 to f106). No caption or watermark"
+  },
+  {
+   "start": 126,
+   "end": 178,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a red open-top car around them, a peach sky with drifting clouds behind",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 126,
+     "end": 136,
+     "text": "Polly and Pax sit side by side in the open car holding tacos in both flippers and chewing"
+    },
+    {
+     "start": 136,
+     "end": 149,
+     "text": "Pax lifts his taco and takes a big bite, eyes open, while Polly opens wide, bites hers and chews with eyes shut"
+    },
+    {
+     "start": 149,
+     "end": 178,
+     "text": "Polly chews happily with her eyes closed and rosy cheeks while Pax chews beside her at the steering wheel"
+    }
+   ],
+   "props": [
+    "car",
+    "tacos",
+    "steering wheel"
+   ],
+   "prop_events": [],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: compare 126/177 shows black edges on the car, windshield, trees and hills; only the clouds drift (ECC on the sky band is thrown by them). Time left as day: the sky is peach but it may be the palette, not sunset. No caption or watermark. Skit ends on this shot | verification pass 2 (verify_v10_report_v03): beat 2 (136-149) says both take big bites with their eyes closed: Pax bites with his eyes open throughout (f135-148), and Polly's eyes are open as she opens wide at f136-138 and shut only while she bites and chews from f140; beat 1 (126-136): Polly's eyes are shut f126-129, so 'looking ahead' is not true for both; dropped the phrase"
+  }
+ ]
+}

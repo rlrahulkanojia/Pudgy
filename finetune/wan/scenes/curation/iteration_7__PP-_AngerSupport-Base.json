@@ -1,0 +1,139 @@
+{
+ "skit": "iteration_7/293_videos/PP- AngerSupport-Base.mp4",
+ "frames": 143,
+ "fps": 24.0,
+ "curated_by": "curator-v10-05",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a living room with a cream sofa drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 13,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "13 frames: insert of a teal retro television on a yellow cabinet, its screen showing a black-and-white penguin in a yellow jersey cheering with a score bar; no lead (also no_lead)"
+  },
+  {
+   "start": 13,
+   "end": 143,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the soft-focus back of a teal television on a yellow cabinet in the foreground",
+   "time": "day",
+   "size_change": true,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "exits",
+     "exits_at": 113,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 96,
+       "screen": "left"
+      }
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 128,
+       "screen": "left-center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 13,
+     "end": 22,
+     "text": "Pax frowns at Polly and flings his flippers up with his eyes squeezed shut as his face flushes red, while Polly watches him"
+    },
+    {
+     "start": 22,
+     "end": 33,
+     "text": "Pax scowls with a red face and reaches a flipper out to Polly while she looks back at him"
+    },
+    {
+     "start": 33,
+     "end": 40,
+     "text": "Polly winces with her eyes squeezed shut while Pax scowls beside her, red-faced"
+    },
+    {
+     "start": 40,
+     "end": 53,
+     "text": "Pax holds a flipper to his head with his eyes squeezed shut while Polly gestures at him with her flippers"
+    },
+    {
+     "start": 53,
+     "end": 79,
+     "text": "Pax rubs his head with his eyes shut and his face red while Polly holds her flippers to her chest and looks at him"
+    },
+    {
+     "start": 79,
+     "end": 86,
+     "text": "Pax clutches both sides of his head with his eyes squeezed shut while Polly watches"
+    },
+    {
+     "start": 86,
+     "end": 93,
+     "text": "Pax flaps his flippers up and down beside his red face, glaring with an open beak, then squeezes his eyes shut"
+    },
+    {
+     "start": 93,
+     "end": 113,
+     "text": "Pax stomps off to the left with a flipper raised and leaves the picture while Polly winces, then frowns after him"
+    },
+    {
+     "start": 113,
+     "end": 130,
+     "text": "Polly waddles to the left and a little toward the front, her flippers swinging and her brows lowered in a frown"
+    },
+    {
+     "start": 130,
+     "end": 143,
+     "text": "Polly shuffles a little further left, blinks her eyes shut, then looks up to one side with blushing cheeks"
+    }
+   ],
+   "props": [
+    "sofa",
+    "television"
+   ],
+   "prop_events": [],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "exits",
+   "notes": "camera locked f13-142: ECC on the foreground television band (y 0.75-1.0, x 0.65-1.0) scale 1.0000, 0 px, cc 1.000 at every 4th frame; compare 13/88 and 13/142 sofa and television edges black (the sofa band itself has Pax in it, so its ECC rows are meaningless). Pax's red face is an anger flush drawn on him. No caption or watermark in the top third or bottom fifth (checked at full res f20/f80/f140) | verification pass 2 (verify_v10_report_v04): camera confirmed locked: motion on the sofa-top band y0.33-0.40 x0-0.6 (texture 2.2%/10.2%) scale 1.0000, 0 px, cc 1.000 every 2nd frame f15-141; compare 13/142 sofa and TV edges black; cut at f13 clean; no caption or watermark (top third has no edges at all); size_change: Polly walks diagonally left and toward the viewer f113-142 (feet 1276->1371 px, body height 469->505 px, +8%), so 'the charact"
+  }
+ ]
+}

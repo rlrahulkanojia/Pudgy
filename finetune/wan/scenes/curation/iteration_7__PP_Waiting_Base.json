@@ -1,0 +1,448 @@
+{
+ "skit": "iteration_7/293_videos/PP_Waiting_Base.mov",
+ "frames": 394,
+ "fps": 24.0,
+ "curated_by": "curator-v10-13",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a snowy landscape with a winding road, a pine tree and a distant igloo"
+  },
+  "s2": {
+   "kind": "set",
+   "desc": "a snowy doorstep outside an igloo house with an arched wooden door"
+  },
+  "s3": {
+   "kind": "set",
+   "desc": "an igloo living room with pale ice-brick walls, a cream sofa and a glass coffee table"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 25,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a bright sun and white clouds in the sky",
+   "time": "day",
+   "size_change": true,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 25,
+     "text": "Pax drives a red snow car on skis along the snowy road, coming closer as he grips the wheel and looks ahead"
+    }
+   ],
+   "props": [
+    "snow car"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "camera locked: compare 0/24 keeps the tree, igloo, clouds and road edges black while the snow car grows and drifts left as it drives up (size_change). The same drive is repeated in four weathers (f64, f112, f159, f206). No caption or watermark"
+  },
+  {
+   "start": 25,
+   "end": 64,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right",
+     "presence": "enters",
+     "enters_at": 27,
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 25,
+     "end": 33,
+     "text": "Polly stands at the igloo door waving a flipper while Pax walks in from the right carrying a brown suitcase"
+    },
+    {
+     "start": 33,
+     "end": 40,
+     "text": "Pax stops in front of Polly, seen from behind with the suitcase in his flipper, while she keeps waving"
+    },
+    {
+     "start": 40,
+     "end": 52,
+     "text": "Pax holds out the suitcase and Polly takes its handle in both flippers"
+    },
+    {
+     "start": 52,
+     "end": 64,
+     "text": "Polly holds the suitcase in front of her and gazes up at Pax as they both stand still"
+    }
+   ],
+   "props": [
+    "suitcase"
+   ],
+   "prop_events": [
+    {
+     "prop": "suitcase",
+     "event": "hands_over",
+     "frame": 44,
+     "by": "pax"
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "enters",
+   "notes": "camera locked: compare 25/63 keeps the igloo bricks, arch and door black (the plain top band has too little texture for motion). f52-63 is a frozen hold (d1 0.00). Pax is seen from behind and cut by the right edge; the brown suitcase has fish and shell stickers"
+  },
+  {
+   "start": 64,
+   "end": 92,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with heavy rain streaking down",
+   "time": "day",
+   "size_change": true,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 64,
+     "end": 92,
+     "text": "Pax drives the red snow car closer through pouring rain, his brown suitcase balanced on his head as a shelter, looking worried"
+    }
+   ],
+   "props": [
+    "snow car",
+    "suitcase"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "camera locked: compare 64/91 keeps the tree and road edges black; only the car (driving up) and the rain streaks change. Rain is in-world weather drawn over the whole set, steady through the shot; the palette is a little greyer (overcast), not a wash | verification pass 2 (verify_v10_report_v04): camera locked: compare 64/91 tree and road edges black; rain is steady in-world weather; cuts at f64 and f92 clean; no overlay; view: the sky is not grey; it is the same pale sky blue as the sunny drive, a little darker (RGB ~176,224,240 vs 198,235,250), behind the rain streaks; drop the colour claim"
+  },
+  {
+   "start": 92,
+   "end": 112,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "20 frames: Polly waits at the igloo door under an orange umbrella in the rain, waving"
+  },
+  {
+   "start": 112,
+   "end": 139,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with snow falling from a cloudy sky",
+   "time": "day",
+   "size_change": true,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 112,
+     "end": 139,
+     "text": "Pax sits frozen stiff inside a clear block of ice at the wheel as the red snow car glides closer through falling snow"
+    }
+   ],
+   "props": [
+    "snow car",
+    "block of ice"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "camera locked: compare 112/138 keeps the tree and road edges black; snowflakes drift (in-world). Pax is fully visible through the ice (tuft, eyes, beak; full-res crops f114, f136) but tinted pale by it: kept, see the report. Steady cold-blue overcast palette"
+  },
+  {
+   "start": 139,
+   "end": 159,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "20 frames: Polly waits at the door in a peach striped hooded robe in falling snow"
+  },
+  {
+   "start": 159,
+   "end": 186,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_hidden",
+   "camera": "static",
+   "notes": "blizzard drive: Pax is buried under a heap of snow f159-176, only his eyes and beak peeking out, then shakes it off f177-178; the clean rest f178-185 is 8 frames. Camera locked (compare 159/185 tree edges black), wind streaks and snow in-world"
+  },
+  {
+   "start": 186,
+   "end": 206,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "20 frames: Polly braces against a blizzard at the door in a yellow hooded raincoat with a fish print"
+  },
+  {
+   "start": 206,
+   "end": 233,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a bright sun and white clouds in the sky",
+   "time": "day",
+   "size_change": true,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 206,
+     "end": 233,
+     "text": "Pax drives the red snow car closer under the sunny sky, a heap of snow still piled on its hood, and blinks as he looks ahead"
+    }
+   ],
+   "props": [
+    "snow car"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "camera locked: compare 206/232 keeps the tree, igloo, clouds and road edges black; same drive as f0-24 with snow on the hood"
+  },
+  {
+   "start": 233,
+   "end": 253,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "20 frames: the closed igloo door with nobody there (also no_lead)"
+  },
+  {
+   "start": 253,
+   "end": 275,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a bright sun and white clouds in the sky",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 253,
+     "end": 259,
+     "text": "Pax sits at the wheel of the stopped snow car, leaning to one side and peering ahead"
+    },
+    {
+     "start": 259,
+     "end": 275,
+     "text": "Pax shifts across the seat and glances around with a puzzled frown"
+    }
+   ],
+   "props": [
+    "snow car"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked and the car parked: compare 253/274 keeps the tree, igloo, clouds and the whole car black; only Pax moves. 22 frames"
+  },
+  {
+   "start": 275,
+   "end": 282,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "7 frames: the closed wooden door from inside the igloo"
+  },
+  {
+   "start": 282,
+   "end": 298,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "16 frames: the door swings open on Pax standing outside with his suitcase (f282-284), then a frozen hold f285-297 (d1 0.00)"
+  },
+  {
+   "start": 298,
+   "end": 306,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "8-frame pull-back from the doorway to the living room, Polly coming into view at the lower left (d1 4-20, settles by f306)"
+  },
+  {
+   "start": 306,
+   "end": 321,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "15 static frames: Polly packs food into takeaway boxes at the glass table while Pax stands in the doorway behind"
+  },
+  {
+   "start": 321,
+   "end": 339,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "18 frames: close-up of Polly at the table turning to look, a takeaway box in her flippers"
+  },
+  {
+   "start": 339,
+   "end": 361,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with the front door open behind them",
+   "time": "day",
+   "size_change": true,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 339,
+     "end": 348,
+     "text": "Polly sits with her back turned at the glass table of takeaway boxes while Pax stands in the open doorway behind her, his suitcase at his side"
+    },
+    {
+     "start": 348,
+     "end": 361,
+     "text": "Polly springs up and hurries toward the door, knocking over a little candle on the table, while Pax waits in the doorway"
+    }
+   ],
+   "props": [
+    "takeaway boxes",
+    "candle",
+    "suitcase",
+    "glass coffee table"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "camera locked: compare 339/360 keeps the ice-brick wall lines, door frame, sofa and table edges black (the plain wall band has too little texture for motion). f339-346 is a frozen hold. Polly is seen from behind in the foreground (~36% of the height); Pax small in the doorway. 22 frames | verification pass 2 (verify_v10_report_v04): camera locked: compare 339/360 door frame, wall lines and table edges black (the sofa only looks wider because Polly stops covering it); cuts at f339 and f361 clean; no overlay; size_change: Polly springs up and moves right and back behind the table toward the door f352-360 (away from the viewer); her head and body shrink (~25% narrower head, body height 541->431 px), so 'the characters stay the s"
+  },
+  {
+   "start": 361,
+   "end": 394,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "effect",
+   "camera": "static",
+   "notes": "Polly rushes in from the left and hugs Pax at the open door (clean f361-378, only 18 frames); from f379 to the end cartoon flames rise from the bottom edge and fill the lower part of the picture with a warm glow around the hugging pair"
+  }
+ ]
+}

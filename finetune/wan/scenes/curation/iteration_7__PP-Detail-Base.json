@@ -1,0 +1,250 @@
+{
+ "skit": "iteration_7/293_videos/PP-Detail-Base.mp4",
+ "frames": 250,
+ "fps": 24.0,
+ "curated_by": "curator-v10-21",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a living room drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 31,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a cream sofa behind them and the back of a teal armchair in the foreground",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left",
+     "presence": "enters",
+     "enters_at": 0,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 10,
+       "screen": "left-center"
+      }
+     ]
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 16,
+     "text": "Polly walks in from the left gazing at {ifin} in her flippers while Pax sits on the sofa holding a teal remote"
+    },
+    {
+     "start": 16,
+     "end": 25,
+     "text": "Polly stops in front of the sofa and holds the phone out to Pax"
+    },
+    {
+     "start": 25,
+     "end": 31,
+     "text": "Pax takes the phone from Polly while she turns away with her eyes closed and a smile"
+    }
+   ],
+   "props": [
+    "phone",
+    "remote",
+    "sofa",
+    "armchair"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 0,
+     "by": "polly",
+     "is_ifin": true
+    },
+    {
+     "prop": "phone",
+     "event": "hands_over",
+     "frame": 25,
+     "by": "polly",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "enters",
+   "notes": "camera locked f0-30 (foreground armchair band pixel-identical; compare 0/30 sofa and armchair edges overlap). Polly is cut by the left edge at f0-2 as she walks in. Phone: pale grey back, three lenses, tuft = iFin; its back faces the viewer, so no screen content shows. The push-in starts at f31"
+  },
+  {
+   "start": 31,
+   "end": 49,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "push_in",
+   "notes": "push-in f31-35 (armchair band diff to previous 3.6, 7.2, 9.5, 8.8, 9.3, then 0 from f37; settled at f36) while Polly hops onto the sofa beside Pax, then 13 locked frames f36-48 of the two sitting side by side. 18 frames in all"
+  },
+  {
+   "start": 49,
+   "end": 91,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "phone point of view: phone-screen insert: the iFin held in Pax's flippers fills the picture, its photo gallery showing a picture of Polly (also a lead_copy); only Pax's flippers visible; dropped as lead_copy (curator ruling: a phone POV with the other lead on its screen)"
+  },
+  {
+   "start": 91,
+   "end": 121,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the cream sofa behind him and a teal remote lying beside him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 91,
+     "end": 121,
+     "text": "Pax sits on the sofa clutching {ifin} to his chest in both flippers, glancing sideways with wide eyes"
+    }
+   ],
+   "props": [
+    "phone",
+    "remote",
+    "sofa"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 91,
+     "by": "pax",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked (sofa and wall bands pixel-identical f91-120). The phone's back faces the viewer: no screen content visible"
+  },
+  {
+   "start": 121,
+   "end": 174,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "phone point of view: phone-screen insert again, closer: the gallery photo of Polly fills the phone screen (also a lead_copy), Pax's flippers holding it; thumbnails along the bottom; dropped as lead_copy (curator ruling: a phone POV with the other lead on its screen)"
+  },
+  {
+   "start": 174,
+   "end": 211,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "extreme close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "partial",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 174,
+     "end": 196,
+     "text": "Pax glares ahead with narrowed eyes and a frown, holding {ifin} up in front of him"
+    },
+    {
+     "start": 196,
+     "end": 199,
+     "text": "Pax squeezes his eyes shut and dips his head slightly"
+    },
+    {
+     "start": 199,
+     "end": 211,
+     "text": "Pax opens his eyes and raises one eyebrow with a doubtful frown"
+    }
+   ],
+   "props": [
+    "phone"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 174,
+     "by": "pax",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: the phone held in the (soft-focus) foreground keeps its edges in compare 174/198 and 198/205; only Pax's face moves. profile's cut candidate at f199 is the expression change, not a cut. Phone back faces the viewer"
+  },
+  {
+   "start": 211,
+   "end": 231,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "20 locked frames (armchair band identical f211-249): Polly sits on the sofa with her flippers clasped, looking at Pax, while Pax looks at the phone and then lifts it to his face; at f231 he turns the screen to the viewer, see next span"
+  },
+  {
+   "start": 231,
+   "end": 250,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "19 frames, also lead_copy: Pax holds the phone out toward Polly with its screen to the viewer, showing the photo of Polly (f231-249), and gestures at her with his other flipper while she watches. Skit ends here"
+  }
+ ]
+}

@@ -1,0 +1,72 @@
+{
+ "skit": "iteration_7/293_videos/PP_Vacation_Base.mp4",
+ "frames": 349,
+ "fps": 24.0,
+ "curated_by": "curator-v10-30",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {"kind": "lead"},
+  "polly": {"kind": "lead"}
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {"kind": "set", "desc": "an igloo room with pale ice-brick walls"}
+ },
+ "spans": [
+  {
+   "start": 0, "end": 50, "boundary": "start", "keep": false, "drop_reason": "lead_copy", "camera": "other",
+   "notes": "Pax and Polly stand at the front door with their suitcases; Pax waves and hurries off to the right with his green suitcase, Polly stays. lead_copy: Pax's green suitcase carries a charm of a pink penguin with a crest, white face, blush and headphones (full res f0: Polly's look), in view until he leaves with it (~f44); Polly's yellow suitcase carries a black-and-white penguin charm in a red jacket (not a lead). Camera also drifts (ECC on the door band tx -24 px by f4, -48 px from f32, cc 0.90-0.99). The clean tail f44-49 is 6 frames, so not split"
+  },
+  {
+   "start": 50, "end": 125, "boundary": "cut", "keep": false, "drop_reason": "lead_copy", "camera": "static",
+   "notes": "Pax kneels behind his open green suitcase stuffing in clothes from a laundry basket, then hops up and runs out to the right (~f110-118); suitcase and basket alone to f124. The pink Polly-look charm hangs on the front of the open suitcase in every frame (full res f60)"
+  },
+  {
+   "start": 125, "end": 180, "boundary": "cut", "keep": true, "camera": "static",
+   "framing": "medium wide", "angle": "eye level", "setting": "s1",
+   "view": "with a round window looking out on a snowy garden and the edge of a door",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "polly", "screen": "left-center", "presence": "full", "outfit": []}
+   ],
+   "beats": [
+    {"start": 125, "end": 137, "text": "Polly stands by the round window with one flipper on the handle of her yellow suitcase, glancing to the side"},
+    {"start": 137, "end": 149, "text": "Polly lowers her flipper and keeps glancing sideways, waiting beside her suitcase"},
+    {"start": 149, "end": 163, "text": "Polly narrows her eyes into an impatient frown"},
+    {"start": 163, "end": 180, "text": "Polly glances around with heavy-lidded eyes, still waiting beside her suitcase"}
+   ],
+   "props": ["yellow suitcase", "suitcase charm"],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f125-179: ECC on the door band (y 0.25-0.65, x 0.85-1.0) scale 1.0000, <= 0.2 px, cc 1.000 every 3rd frame, and on the window+door band per frame f175-179; compare 125/179 window, door and suitcase edges black. The view in the window (tree, flowering bush, igloo, snow) does not change before f180 (window-region pixel diff vs f125 <= 0.1 to f179); the season time-lapse only starts at f218. The suitcase charm is a black-and-white penguin in a red puffer jacket with bunny ears, neither lead. No overlay (pixel scan every 6th frame)"
+  },
+  {
+   "start": 180, "end": 218, "boundary": "camera", "keep": false, "drop_reason": "camera_move", "camera": "push_in",
+   "framing": "medium wide", "angle": "eye level", "setting": "s1",
+   "view": "with a round window looking out on a snowy garden and the edge of a door",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "polly", "screen": "left", "presence": "exits", "exits_at": 214, "outfit": []}
+   ],
+   "beats": [
+    {"start": 180, "end": 194, "text": "Polly stands beside her yellow suitcase and turns her gaze to the left"},
+    {"start": 194, "end": 218, "text": "Polly waddles off to the left out of the picture, leaving her suitcase standing alone by the window"}
+   ],
+   "props": ["yellow suitcase", "suitcase charm"],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "exits",
+   "notes": "steady push-in from f180: ECC on the window+door band (y 0.30-0.55, x 0.38-1.0, cc >= 0.98) scale 1.002 at f180, 1.012 at f185, 1.024 at f191, 1.043 at f203, 1.064 at f209 (door band locked to f179). Polly is half out of the picture from ~f204 and only a thin sliver of her back shows f214-219 (gone at f220), so exits_at 214. Ends at f218, the first frame of the time-lapse cross-dissolve on the suitcase. Only reason: camera_move"
+  },
+  {
+   "start": 218, "end": 349, "boundary": "same_shot", "keep": false, "drop_reason": "no_lead", "camera": "push_in",
+   "notes": "the suitcase alone by the window while a time-lapse runs: cross-dissolves pile a coat, a scarf and hat, a tablecloth, slippers, flowers and a picture frame on it while the window tree goes autumn, bare and green again (effect as well). Polly's last sliver at the left edge f218-219. The framed picture on the table at the end shows a penguin face (would be lead_copy too)"
+  }
+ ]
+}

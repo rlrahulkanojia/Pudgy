@@ -1,0 +1,88 @@
+{
+ "skit": "iteration_7/293_videos/PP-XMas25-Base.mp4",
+ "frames": 392,
+ "fps": 24.0,
+ "curated_by": "curator-v10-15",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {},
+ "outfits": {},
+ "settings": {},
+ "spans": [
+  {
+   "start": 0,
+   "end": 52,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "push_in",
+   "notes": "establishing shot: a snowy village at night with an igloo, a decorated tree and a snowman under falling snow; no characters. Slow push-in (ECC scale 1.007 at f8 to 1.034 at f48, cc 0.91-0.95 because of the falling snow)"
+  },
+  {
+   "start": 52,
+   "end": 134,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "other",
+   "notes": "living room at night: decorated tree and presents; a red-and-white sleeve (Santa's arm) slides presents in f65-90, a fast move right and in f92-~105 (ECC tx -12 at f92, -75 at f94, then scale 1.47 at f96) brings a big present and a round night window into view, the arm adds the big present f105-125. No lead. The tree also carries lead depictions (see f176-212)"
+  },
+  {
+   "start": 134,
+   "end": 176,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "the same village at sunrise, no characters"
+  },
+  {
+   "start": 176,
+   "end": 212,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "wide living room (camera locked, ECC scale 1.000 cc 1.000): Pax waddles in from the right edge ~f181 and stops by the presents. The tree at the left carries a figurine ornament of Polly lying on Pax, a snow globe with Pax and Polly inside, and rose and periwinkle sweater ornaments with penguin prints, visible the whole shot (checked at full size, f200). Would otherwise be a keep"
+  },
+  {
+   "start": 212,
+   "end": 255,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_hidden",
+   "camera": "static",
+   "notes": "the big present fills the picture; only Pax's flipper reaches in to take its gift tag (in-world text, a name tag)"
+  },
+  {
+   "start": 255,
+   "end": 327,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "other",
+   "notes": "f255-279 locked (ECC scale 1.000 cc 1.000): Pax reads the tag and lifts the lid, but the snow globe ornament with a Pax-style penguin inside shows at the top-left edge the whole time. f280-291 pull-back (scale 0.97-0.94) as Polly in a Santa hat pops out of the box, revealing the full tree with the Pax-and-Polly figurine, snow globe and sweater ornaments; locked again f292-326 while Polly holds up a sprig of mistletoe over Pax and they blush. Lead depictions throughout"
+  },
+  {
+   "start": 327,
+   "end": 343,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pan_right",
+   "notes": "pan right f327-333 as Polly leaps onto Pax (tree slides out at the left), then 9 static frames f334-342 of them lying hugged on the floor before the end-card text starts"
+  },
+  {
+   "start": 343,
+   "end": 392,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "ad_merch",
+   "camera": "static",
+   "overlays": [
+    "end-card title text"
+   ],
+   "notes": "branded end card: a holiday-greeting title with the brand name (a sign-off from the brand) writes itself in across the top third f343-391 over Polly lying on Pax with hearts. ad_merch by the reason order (ad end card); also graphic_overlay"
+  }
+ ]
+}

@@ -1,0 +1,162 @@
+{
+ "skit": "iteration_7/293_videos/PP_Temple_Base.mp4",
+ "frames": 207,
+ "fps": 24.0,
+ "curated_by": "curator-v10-28",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a dining room drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 120,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a round window showing a sunny sky behind her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 18,
+     "text": "Polly sits at the table pouring cucumber water from a glass pitcher into a jar"
+    },
+    {
+     "start": 18,
+     "end": 33,
+     "text": "Polly sets the pitcher down beside her and picks up the jar"
+    },
+    {
+     "start": 33,
+     "end": 51,
+     "text": "Polly tips her head back and drinks from the jar"
+    },
+    {
+     "start": 51,
+     "end": 63,
+     "text": "Polly lowers the jar to the table and reaches for a carrot stick on her plate"
+    },
+    {
+     "start": 63,
+     "end": 72,
+     "text": "Polly lifts the carrot stick to her beak and bites into it"
+    },
+    {
+     "start": 72,
+     "end": 120,
+     "text": "Polly crunches on the carrot with her eyes closed and a content smile, holding it out to her side"
+    }
+   ],
+   "props": [
+    "glass pitcher",
+    "jar of cucumber water",
+    "plate of carrot and celery sticks"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "keep12 is low because Polly moves a lot; motion bands all contain Polly or the pitcher, so compare decides: 0/60, 60/119 and 0/119 window frame, table edge and plate edges black, diff map blank on the background. Top third plain wall, bottom fifth plain table, no overlay"
+  },
+  {
+   "start": 120,
+   "end": 207,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a round window behind her and a table crowded with food",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 120,
+     "end": 129,
+     "text": "Polly sits behind plates of pancakes, macarons, sandwiches and a long sushi roll, forking food into her beak"
+    },
+    {
+     "start": 129,
+     "end": 138,
+     "text": "Polly lifts a sandwich to her beak and takes a big bite with her eyes closed"
+    },
+    {
+     "start": 138,
+     "end": 153,
+     "text": "Polly chews happily with her eyes closed, a fork in her flipper"
+    },
+    {
+     "start": 153,
+     "end": 168,
+     "text": "Polly forks another bite from the pancakes and eats it"
+    },
+    {
+     "start": 168,
+     "end": 183,
+     "text": "Polly sits still looking ahead, holding the fork up beside her"
+    },
+    {
+     "start": 183,
+     "end": 189,
+     "text": "Polly flings the fork away and grabs the tray of sushi"
+    },
+    {
+     "start": 189,
+     "end": 191,
+     "text": "Polly lifts the sushi tray up toward her face"
+    },
+    {
+     "start": 191,
+     "end": 207,
+     "text": "Polly tips the tray against her face with her eyes closed, sushi slices sliding toward her beak as a few tumble off"
+    }
+   ],
+   "props": [
+    "pancakes",
+    "macarons",
+    "sandwiches",
+    "sushi roll",
+    "fork"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "hard cut at f120 (step 1). motion on the pancake plate (y 0.68-0.80, x 0-0.30) scale 1.0000, 0.1 px, cc 1.000 until the fork enters the band at f155; compare 120/165 and 120/206 window, pancakes, macarons and sandwich plate black. No overlay | verification pass 2 (verify_v10_report_v16): last beat [189,207) claimed Polly tips the whole roll into her open beak: her beak is hidden behind the tray from f192, slices tumble off the tray f193-206, and her eyes close at f191; split into lift (f189-190) and tip (f191-206)"
+  }
+ ]
+}

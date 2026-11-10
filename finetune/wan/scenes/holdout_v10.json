@@ -1,0 +1,35 @@
+{
+ "skits": [
+  "iteration_7/293_videos/2D_PP_Security_Base.mp4",
+  "iteration_7/293_videos/PP-BeachActivities-Base_V2.mp4",
+  "iteration_7/293_videos/PP-Brainrot-Base_1.mp4",
+  "iteration_7/293_videos/PP-DYLI -Base.mp4",
+  "iteration_7/293_videos/PP-GentleOne-Base.mp4",
+  "iteration_7/293_videos/PP-Hectic-Base.mp4",
+  "iteration_7/293_videos/PP-Highlighter-Base.mp4",
+  "iteration_7/293_videos/PP-Leftovers-Base.mp4",
+  "iteration_7/293_videos/PP-MenInLove_base.mp4",
+  "iteration_7/293_videos/PP-Poses-Base.mp4",
+  "iteration_7/293_videos/PP-WorkingInBed-Base.mp4",
+  "iteration_7/293_videos/PP_Blossom_base.mp4",
+  "iteration_7/293_videos/PP_Charging_v9_9x16 base.mp4",
+  "iteration_7/293_videos/PP_Fog_Base.mp4",
+  "iteration_7/293_videos/PP_Hype_base.mp4",
+  "iteration_7/293_videos/PP_Sleepless_Base.mp4"
+ ],
+ "seed": 10,
+ "target": 16,
+ "rule": "choose_holdout_v10.py: rows_v10 rows; eligible = >= 1 G1 shot (window >= 49 f), >= 1 Tier-1 window (>= 33 f), window count in the 25-75th percentile; proportional allocation over (two-shot, camera move, main setting kind) strata; topped up until G1 shots + v9b's 8 >= min_g1",
+ "windows_held": 71,
+ "windows_total": 714,
+ "g1_shots": 26,
+ "v9b_t2_jobs": 8,
+ "plus_v9b_holdout": [
+  "iteration_1/30_videos/2D_PP_BackToBed_Base.mp4",
+  "iteration_1/30_videos/2D_PP_TirePressure_Base.mp4",
+  "iteration_1/30_videos/2D_PP_Drinker_Base.mp4",
+  "iteration_2/72_videos/2D_PP_BackTogether_Base.mp4",
+  "iteration_2/72_videos/PP-MorningFart-Base.mp4",
+  "iteration_2/72_videos/PP-BubbleWrap-Base.mp4"
+ ]
+}

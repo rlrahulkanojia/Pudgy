@@ -1,0 +1,51 @@
+{
+ "skit": "iteration_7/293_videos/2D_PP_Scrambled_Base.mp4",
+ "frames": 349,
+ "fps": 24.0,
+ "curated_by": "curator-v10-31",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {"kind": "lead"},
+  "polly": {"kind": "lead"}
+ },
+ "outfits": {},
+ "settings": {},
+ "spans": [
+  {
+   "start": 0, "end": 30, "boundary": "start", "keep": false, "drop_reason": "graphic_overlay",
+   "camera": "tilt_up",
+   "notes": "Polly at a desk between towering paper stacks, holding a sheet. Small thought puffs from f3; at f12 the picture shifts (stack band ty +53 px, the scene slides down to make room) and the puffs grow into a big thought bubble; a black scribble fills the bubble from f17 to the end. Bubble showing an icon = graphic_overlay (Knowing/Handful ruling). The clean part f0-16 is only 17 frames"
+  },
+  {
+   "start": 30, "end": 129, "boundary": "cut", "keep": false, "drop_reason": "lead_hidden",
+   "camera": "static",
+   "notes": "inside Polly's thought bubble: the cloud border fills the picture and the real Polly shows only as the top of her head at the bottom edge (a sliver: lead_hidden). The bubble holds a black scribble (f30-44), then a small Pax walks in (f45) and Polly appears beside him; the scribble breaks up and vanishes (f100-128). From f45 the bubble also shows the leads (lead_copy, dream-in-bubble ruling); lead_hidden is used because it holds for every frame and ranks first"
+  },
+  {
+   "start": 129, "end": 157, "boundary": "cut", "keep": false, "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "Polly at the desk smiling with blush marks; a small thought bubble above her head shows Pax and Polly standing together for the whole shot (bubble showing a lead = lead_copy)"
+  },
+  {
+   "start": 157, "end": 223, "boundary": "cut", "keep": false, "drop_reason": "lead_hidden",
+   "camera": "static",
+   "notes": "inside the thought bubble again, real Polly only the top of her head at the bottom edge. The small Pax and Polly in the bubble stand side by side, then the bubble-Polly turns into a black scribble (f189) that swells while Pax watches (also lead_copy)"
+  },
+  {
+   "start": 223, "end": 247, "boundary": "cut", "keep": false, "drop_reason": "graphic_overlay",
+   "camera": "static",
+   "notes": "Polly at the desk, worried, sweat drops, with a thought bubble holding a black scribble above her head for the whole shot (bubble showing an icon). Camera locked (compare 223/246 stack edges overlap; the stack-band jitter came from Polly's paper in the band)"
+  },
+  {
+   "start": 247, "end": 330, "boundary": "cut", "keep": false, "drop_reason": "lead_hidden",
+   "camera": "static",
+   "notes": "inside the thought bubble, real Polly only the top of her head at the bottom edge. A black scribble; the small Pax walks in from the right with a vacuum and sucks it up (about f260-294), the bubble-Polly reappears and they hug (f321-329); a push-in toward the bubble runs from about f315 to the cut. Also lead_copy"
+  },
+  {
+   "start": 330, "end": 349, "boundary": "cut", "keep": false, "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "19 frames: Polly at the desk blushing, a small thought bubble showing Pax and Polly hugging (lead_copy too). Camera locked (compare 330/348)"
+  }
+ ]
+}

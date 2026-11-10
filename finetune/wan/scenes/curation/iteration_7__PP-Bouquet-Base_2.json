@@ -1,0 +1,196 @@
+{
+ "skit": "iteration_7/293_videos/PP-Bouquet-Base_2.mp4",
+ "frames": 413,
+ "fps": 24.0,
+ "curated_by": "curator-v10-09",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {"kind": "lead"},
+  "polly": {"kind": "lead"}
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {"kind": "flat", "desc": "a kitchen with a long cyan counter, drawn on a plain pale grey background"},
+  "s2": {"kind": "flat", "desc": "a bedroom with a yellow bed, drawn on a plain pale grey background"}
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 24,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with jars, bottles, a mixing bowl and a tray of eggs on the counter",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "center", "presence": "full", "outfit": []}
+   ],
+   "beats": [
+    {"start": 0, "end": 24, "text": "Pax stands at the kitchen counter with his back turned, busily cooking as bits of food splash up around him"}
+   ],
+   "props": ["mixing bowl", "jars", "bottles", "eggs"],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "slow push-in through the whole shot: ECC on the counter at both sides scale 1.003 at f4 to 1.031 at f22, ty -29 px; compare 0/23 shows doubled counter edges. Skit is a Valentine's bouquet ad: the plush bouquet (lead_copy) and a product photo end card follow"
+  },
+  {
+   "start": 24,
+   "end": 34,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "push_in",
+   "notes": "10 frames of a small settling push-in at the start of the close-up (ECC bottom band scale 1.003 at f26 to 1.0073 at f34, then held)"
+  },
+  {
+   "start": 34,
+   "end": 87,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a wooden tray of breakfast food on the messy counter in front of him and a round table and chair behind him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "center", "presence": "full", "outfit": []}
+   ],
+   "beats": [
+    {"start": 34, "end": 43, "text": "Pax stands behind a tray of breakfast food with food smudges on his face and a sweat drop, blinking"},
+    {"start": 43, "end": 64, "text": "Pax closes his eyes and wipes his brow with a flipper, flicking the sweat away"},
+    {"start": 64, "end": 73, "text": "Pax opens his eyes and narrows them with a wobbly, tired smile"},
+    {"start": 73, "end": 87, "text": "Pax puts his flippers on his hips and beams proudly at the breakfast tray"}
+   ],
+   "props": ["breakfast tray", "omelette", "sushi", "bread loaf", "sauce bottle"],
+   "prop_events": [],
+   "effects": ["sweat drop"],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: ECC vs f36 on the counter-front band and on the table band scale 1.0000, under 0.5 px at cc 1.000 f44-84"
+  },
+  {
+   "start": 87,
+   "end": 122,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with an open wooden door in an arched doorway behind him and the soft-focus end of the bed in the foreground",
+   "time": "day",
+   "size_change": true,
+   "characters": [
+    {"id": "pax", "screen": "right-center", "presence": "full", "outfit": [], "moves": [{"frame": 106, "screen": "center"}]}
+   ],
+   "beats": [
+    {"start": 87, "end": 100, "text": "Pax steps out from behind the open door carrying a wooden tray of breakfast food"},
+    {"start": 100, "end": 122, "text": "Pax waddles forward into the bedroom holding the tray out in both flippers"}
+   ],
+   "props": ["breakfast tray", "door", "bed"],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "camera locked: compare 87/121 keeps the door, arch and floor edges black (ECC on the blurred bed band is noisy, not used). Pax grows a little as he walks toward the viewer. A light switch on the wall"
+  },
+  {
+   "start": 122,
+   "end": 174,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a nightstand holding a peach lamp and a small yellow duck figurine beside the bed",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {"id": "polly", "screen": "left-center", "presence": "full", "outfit": []},
+    {"id": "pax", "screen": "right", "presence": "full", "outfit": [], "moves": [{"frame": 145, "screen": "right-center"}]}
+   ],
+   "beats": [
+    {"start": 122, "end": 138, "text": "Polly sits up in bed rubbing her eye sleepily as Pax stands beside the bed holding a tray of breakfast"},
+    {"start": 138, "end": 155, "text": "Pax leans in and sets the tray down on the blanket in front of Polly"},
+    {"start": 155, "end": 174, "text": "Pax straightens up beside the bed with a smile while Polly looks at him and holds a flipper to her cheek"}
+   ],
+   "props": ["breakfast tray", "bed", "lamp", "duck figurine"],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "camera locked: ECC on the bed-foot band scale 1.000x, under 2 px at cc >= 0.99 f130-178; compare 122/173 overlaps. Ends at f174 where the plush bouquet (lead_copy) starts to come out from behind Pax"
+  },
+  {
+   "start": 174,
+   "end": 252,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "other",
+   "notes": "the Valentine plush bouquet with a Pax plush and a Polly plush holding a red heart: Pax holds it out f174-180, close-up of it with sparkles after the cut at f181 (static to ~f205, then a pull-back f205-210), then Polly in bed with the bouquet on the nightstand and in her flippers until she knocks the tray into the air f245-251. Hard cut at f252 (missed by profile: same plain background). The bouquet is Pudgy's own plush product (also ad_merch); lead_copy ranks first"
+  },
+  {
+   "start": 252,
+   "end": 296,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with the foot of the bed and a round bedpost knob in the foreground",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "center", "presence": "full", "outfit": []}
+   ],
+   "beats": [
+    {"start": 252, "end": 258, "text": "Pax throws up his flippers with wide eyes as the breakfast tray tumbles through the air above him"},
+    {"start": 258, "end": 266, "text": "Pax grabs the falling tray and catches the plate on it"},
+    {"start": 266, "end": 280, "text": "Pax shifts the tray from side to side, catching the pieces of food as they rain down onto it"},
+    {"start": 280, "end": 296, "text": "Pax stands at the foot of the bed holding the full tray, blinking with a relieved look"}
+   ],
+   "props": ["breakfast tray", "plate", "food", "bed"],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: compare 252/295 keeps the bed and bedpost edges black (ECC on the bed band fails with the flying food, not used). No bouquet in view"
+  },
+  {
+   "start": 296,
+   "end": 318,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "wide bed shot again: Polly hugs the plush bouquet (Pax and Polly plushes) while Pax sets the tray beside her and kisses her cheek"
+  },
+  {
+   "start": 318,
+   "end": 413,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "off_style",
+   "camera": "other",
+   "notes": "product photo end card: the real plush bouquet on a pedestal against a rose backdrop, with logo, product text and a slow push-in. Also ad_merch, graphic_overlay and lead_copy; off_style ranks first"
+  }
+ ]
+}

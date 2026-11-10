@@ -1,0 +1,123 @@
+{
+ "skit": "iteration_7/293_videos/PP-Checks-Base.mp4",
+ "frames": 138,
+ "fps": 24.0,
+ "curated_by": "curator-v10-23",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {"kind": "lead"},
+  "polly": {"kind": "lead"}
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {"kind": "flat", "desc": "a living room with a cream sofa drawn on a plain pale grey background"},
+  "s2": {"kind": "set", "desc": "a bedroom inside an igloo with walls of ice blocks"}
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 40,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with yellow shell-shaped armrests on the sofa",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "left-center", "presence": "full", "outfit": []},
+    {"id": "polly", "screen": "right-center", "presence": "full", "outfit": []}
+   ],
+   "beats": [
+    {"start": 0, "end": 12, "text": "Polly sits beside Pax on the sofa and talks with both flippers spread wide, while Pax sits still and blinks"},
+    {"start": 12, "end": 28, "text": "Polly turns toward Pax and talks on, reaching one flipper out at him, while Pax sits still facing forward"},
+    {"start": 28, "end": 40, "text": "Polly shuts her eyes for a moment and lowers her flippers, then lifts them again while Pax keeps sitting still"}
+   ],
+   "props": ["sofa", "phone"],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: motion on the sofa base and shadow (y0.62-0.75) 0.0-0.2 px at cc 1.000 f0-36; compare 0/39 sofa edges overlap exactly. A dark phone lies dark side up on the cushion by Pax's feet the whole shot (too small to identify; it shows a Pax-and-Polly wallpaper in the next shot). No caption or watermark (top third and bottom fifth plain ground)"
+  },
+  {
+   "start": 40,
+   "end": 83,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "Pax on the sofa (camera locked, motion 0.0-0.1 px cc 1.000) picks up the phone f59 and holds it with the screen facing out f59-69: the lock-screen wallpaper shows Pax and Polly together (lead_copy). The pieces either side are too short to keep: [40,59) 19 frames, [70,83) 13 frames (Pax holds the phone with its dark side out, talks, blinks f78, raises a flipper f80-82). The phone has a grey rim and a tuft on top, likely the iFin"
+  },
+  {
+   "start": 83,
+   "end": 86,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "3-frame snap pull-back from the Pax shot to a wide view of the sofa (f83 slightly smaller, f84 mid-move, f85 scale ~1.05 vs f86); settled from f86"
+  },
+  {
+   "start": 86,
+   "end": 117,
+   "boundary": "camera",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with yellow shell-shaped armrests on the sofa",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "left-center", "presence": "full", "outfit": []}
+   ],
+   "beats": [
+    {"start": 86, "end": 101, "text": "Pax sits alone on the sofa holding a phone in one flipper, glancing from side to side"},
+    {"start": 101, "end": 111, "text": "Pax blinks and turns his head to look off to the right"},
+    {"start": 111, "end": 117, "text": "Pax turns back to face forward and stares ahead, still holding the phone"}
+   ],
+   "props": ["sofa", "phone"],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: motion on the sofa legs and shadow (y0.68-0.76) within +/-1.4 px at cc 1.000 f86-116 (alternating, line jitter, no drift); compare 86/116 sofa and armrest edges overlap exactly. The phone shows only its dark side in this span (no wallpaper visible, checked every 2nd frame). No caption or watermark"
+  },
+  {
+   "start": 117,
+   "end": 138,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a bed and a nightstand with a lamp in the foreground and a round window between curtains",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {"id": "polly", "screen": "right-center", "presence": "full", "outfit": []}
+   ],
+   "beats": [
+    {"start": 117, "end": 138, "text": "Polly sits on the floor beside the bed with her back turned and a flipper at her face, tear drops flying off her head"}
+   ],
+   "props": ["bed", "lamp", "curtains"],
+   "prop_events": [],
+   "effects": ["tears"],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "exactly 21 frames. camera locked: motion on the ice-block wall (y0.05-0.30) and the bed (y0.65-0.95) 0.0 px at cc 1.000; compare 117/137 all furniture edges overlap. Polly is seen only from behind but clearly Polly. No caption or watermark"
+  }
+ ]
+}

@@ -1,0 +1,158 @@
+{
+ "skit": "iteration_7/293_videos/PP-Highlighter-Base.mp4",
+ "frames": 134,
+ "fps": 24.0,
+ "curated_by": "curator-v10-16",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "magenta highlighter doodles of hearts, stars and swirls all over his face and belly"
+ },
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a study corner with a round table and wooden chairs, drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 32,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with an open book, a teal book and loose papers on the table in front of her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 6,
+     "text": "Polly sits at the table holding a magenta highlighter up, glancing ahead and then blinking with a smile"
+    },
+    {
+     "start": 6,
+     "end": 26,
+     "text": "Polly leans over the open book and runs the highlighter along its lines, looking straight ahead"
+    },
+    {
+     "start": 26,
+     "end": 32,
+     "text": "Polly lifts the highlighter off the page and glances to the side with raised brows"
+    }
+   ],
+   "props": [
+    "highlighter",
+    "open book",
+    "books",
+    "papers"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "ECC on the table base and shadow (y 0.8-0.98) scale 1.0000, <= 1 px, cc 1.000 through f31; compare 0/31 table edges black. Pax is not in the picture until the pull-back starts at f32 | verification pass 2 (verify_v10_report_v09): beat 2: Polly's eyes are not on the page - f6-25 she looks straight ahead while the highlighter runs along the book"
+  },
+  {
+   "start": 32,
+   "end": 41,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "9 frames, also camera_move: fast ease-out pull-back from Polly to a wide of the whole table, revealing Pax (ECC scale 0.985 f32, 0.943 f33 vs f0; vs f60: 1.077 f38, 1.030 f39, 1.002 f40), the table band pixel-identical to f60 from f41"
+  },
+  {
+   "start": 41,
+   "end": 134,
+   "boundary": "camera",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with books, papers and highlighters spread across the table",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 41,
+     "end": 55,
+     "text": "Pax sits still, looking over at Polly, while she holds her highlighter to her beak and closes her eyes with blushing cheeks"
+    },
+    {
+     "start": 55,
+     "end": 64,
+     "text": "Pax raises a flipper and tucks it behind his head while Polly keeps her eyes closed"
+    },
+    {
+     "start": 64,
+     "end": 92,
+     "text": "Pax sits with his flipper behind his head while Polly holds the end of her highlighter to her beak, eyes closed and blushing"
+    },
+    {
+     "start": 92,
+     "end": 106,
+     "text": "Pax reaches down and picks up a yellow highlighter from the table while Polly opens her eyes"
+    },
+    {
+     "start": 106,
+     "end": 134,
+     "text": "Pax leans over and draws on Polly's cheek with the yellow highlighter while she squints and waves a flipper in delight"
+    }
+   ],
+   "props": [
+    "highlighters",
+    "open book",
+    "books",
+    "papers"
+   ],
+   "prop_events": [],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f41-133: mean |diff| on the table base and shadow band (y 0.72-0.92) vs f60 is 0.00-0.01 for every frame (ECC there degenerates on the flat band; on the table band 0.55-0.85 it holds a constant offset vs f39 at cc >= 0.95); compare 42/133 table edges black. The small rose shell on a chair leg is a carving, not a lead. Pax's doodles are recorded as outfit o1 so every window names them"
+  }
+ ]
+}

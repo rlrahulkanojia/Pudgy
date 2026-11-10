@@ -1,0 +1,56 @@
+{
+ "skit": "iteration_7/293_videos/2D_PP_HealthyWalk_Base.mp4",
+ "frames": 162,
+ "fps": 24.0,
+ "curated_by": "curator-v10-30",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {},
+ "spans": [
+  {
+   "start": 0,
+   "end": 91,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "push_in",
+   "notes": "Polly at her desk (shell chair, monitor, keyboard), gets up, picks up her purse and walks off left; empty desk f88-90. lead_copy: the water bottle on the desk is printed with Pax and Polly faces (full res f0), in view f0-57; the purse carries a Pax-head charm (blue penguin face, full res f80), visible f56 and f76-82. Camera also moves the whole shot: slow push-in from f0 (ECC on the table-leg band y 0.60-0.95 x 0-0.35, cc >= 0.96: scale 1.004 at f3, 1.029 at f30, 1.049 at f42), then a pan left following Polly f44-60 and a drift to f90 (table edges doubled in compare 60/90). The depiction-free gap f58-75 is 18 frames and moving, so not split off"
+  },
+  {
+   "start": 91,
+   "end": 129,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "pan_left",
+   "notes": "tracking shot: Polly walks in place with the purse on her shoulder while the room slides past (couch comes in from the left, ECC on the couch band +30 px/frame at f119-123); she sets the purse on the glass coffee table at f118-120. The Pax-head charm on the purse is in view f91-131 (on her shoulder, then on the table at the right edge)"
+  },
+  {
+   "start": 129,
+   "end": 136,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "fast pull-back as Polly leaps onto the couch, revealing Pax lying on it; settles at f136 (ECC on the couch/table band y 0.62-0.85: scale 0.892 f133, 0.855 f135, constant 0.8588 from f136). 7 frames"
+  },
+  {
+   "start": 136,
+   "end": 162,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "locked wide (ECC vs f136 on band y 0.62-0.85: scale 1.0000, 0 px, cc 1.000 to f161; compare 136/161 couch edges black): Polly lies on top of Pax on the couch and hugs and nuzzles him, hearts float up. Dropped because Pax's phone (grey back, lenses) carries a small pink Polly-figure charm on its top edge: clear at full res f132-138, then the phone lies on the couch with the pink figure at its end visible f139-161 (4x crops of f141/f150/f161). Same Polly-charm-on-phone ruling as other curators. Would be a clean keep if lead charms were allowed"
+  }
+ ]
+}

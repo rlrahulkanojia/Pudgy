@@ -1,0 +1,37 @@
+{
+ "skit": "iteration_7/293_videos/PP_Cute_9x16_base_v2.mov",
+ "frames": 160,
+ "fps": 24.0,
+ "curated_by": "curator-v10-04",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {},
+ "outfits": {},
+ "settings": {},
+ "spans": [
+  {
+   "start": 0,
+   "end": 122,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "graphic_overlay",
+   "camera": "static",
+   "overlays": [
+    "meme caption"
+   ],
+   "notes": "Client 2026-11-05: red-scarf and earmuffs penguins are removed from training (Q5, Q6); a clean copy would not bring this back. | meme caption (white text with a dark outline) drawn over the top-center of the picture on every frame f0-121; its wording changes once, around f61-64. Shot: the two sit side by side on a plain pale background, the yellow one waving and tapping the blue one's shoulder. Characters: a blue penguin in a red scarf and navy overalls (holds an iFin-like phone) and a yellow penguin wearing rose earmuffs, a mauve sailor collar and a rose bow. The blue one is the brief's example of a U5 lookalike, so this would also be a lookalike drop without the caption. Current design (orange feet), not OLD_DESIGN."
+  },
+  {
+   "start": 122,
+   "end": 160,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "graphic_overlay",
+   "camera": "static",
+   "overlays": [
+    "meme caption"
+   ],
+   "notes": "Client 2026-11-05: red-scarf and earmuffs penguins are removed from training (Q5, Q6); a clean copy would not bring this back. | hard cut at f122 on the same flat background (not in profile; confirmed on the strip). Meme caption over the top-center on every frame f122-159 (new wording from f123). Shot: the yellow penguin hugs the blue one from behind, hearts float up, a phone lies on the ground. Characters: a blue penguin in a red scarf and navy overalls (holds an iFin-like phone) and a yellow penguin wearing rose earmuffs, a mauve sailor collar and a rose bow. The blue one is the brief's example of a U5 lookalike, so this would also be a lookalike drop without the caption. Current design (orange feet), not OLD_DESIGN."
+  }
+ ]
+}

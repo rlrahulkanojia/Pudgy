@@ -1,0 +1,370 @@
+{
+ "skit": "iteration_7/293_videos/2D_PP_Unhelpful_Base.mp4",
+ "frames": 316,
+ "fps": 24.0,
+ "curated_by": "curator-v10-11",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "a towel wrapped up on her head",
+  "o2": "a fluffy bathrobe"
+ },
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "an empty space with a plain pale grey background"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "a kitchen drawn on a plain pale grey background"
+  },
+  "s3": {
+   "kind": "flat",
+   "desc": "a room drawn on a plain pale grey background"
+  },
+  "s4": {
+   "kind": "flat",
+   "desc": "a bathroom with a basin counter and a wooden-framed mirror, drawn on a plain grey background"
+  },
+  "s5": {
+   "kind": "flat",
+   "desc": "a dim room drawn on a plain grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 55,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 30,
+       "screen": "center"
+      }
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "exits",
+     "exits_at": 33,
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 4,
+     "text": "Polly stands facing Pax with her eyes squeezed shut and her cheeks flushed red, while Pax faces her with one flipper raised"
+    },
+    {
+     "start": 4,
+     "end": 14,
+     "text": "Polly opens her eyes and glares at Pax, then squeezes them shut again, while Pax holds a flipper out toward her"
+    },
+    {
+     "start": 14,
+     "end": 33,
+     "text": "Polly stomps off to the right and out of sight while Pax takes a few steps after her, reaching out a flipper"
+    },
+    {
+     "start": 33,
+     "end": 39,
+     "text": "Pax stands alone in the middle with his flippers at his sides, frowning toward the right"
+    },
+    {
+     "start": 39,
+     "end": 48,
+     "text": "Pax tips his head back and squeezes his eyes shut with his beak open in a big sigh"
+    },
+    {
+     "start": 48,
+     "end": 55,
+     "text": "Pax opens his eyes and frowns ahead with his beak slightly open"
+    }
+   ],
+   "props": [],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "exits",
+   "notes": "plain flat background with no texture, so no camera fit ('no fit'); judged by eye: Pax's height stays 480 px (dark-outline box f0-54) and his shadow stays under him; Pax and Polly move at different speeds (Pax's left edge 178->366 px f12-30, Polly's right edge 937->1079 f12-21), so it is the characters walking, not a pan, and Pax's box holds within 3 px f30-54. No caption or watermark (top third and bottom fifth empty on every 5th frame). Hard cut at f55 | verification pass 2 (verify_v10_report_v21): beat 1: Polly is not half turned away at f0-3; she faces Pax (face drawn on the left of her head, toward him) with her eyes squeezed shut and blushing; beat 2: she already faces him; at f4-11 she opens her eyes and glares, then squeezes them shut f12-13"
+  },
+  {
+   "start": 55,
+   "end": 90,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with an open cream fridge stocked with bottles and jars beside him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 55,
+     "end": 73,
+     "text": "Pax stands at the open fridge straining to twist the lid of a small red jar, his eyes squeezed shut and his cheeks flushing red"
+    },
+    {
+     "start": 73,
+     "end": 85,
+     "text": "Pax opens his eyes and puts the jar back on a fridge shelf, glancing sideways with half-closed eyes"
+    },
+    {
+     "start": 85,
+     "end": 90,
+     "text": "Pax keeps one flipper on the fridge shelf and glances to the side with half-closed eyes"
+    }
+   ],
+   "props": [
+    "fridge",
+    "jar"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: freezer-door region diff 0.00 vs f55 on every frame f55-89, fridge body 0.00 until the jar goes back on the shelf (f81-84). Fridge labels (cow on the milk, fish on a tub) checked at full res: no lead depiction. No caption or watermark"
+  },
+  {
+   "start": 90,
+   "end": 115,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with a stepladder under a hanging ceiling lamp and the corner of a window frame",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 90,
+     "end": 115,
+     "text": "Pax stands on top of a stepladder and reaches up into the hanging lamp shade, twisting the bulb with one flipper and blinking once"
+    }
+   ],
+   "props": [
+    "stepladder",
+    "ceiling lamp",
+    "light bulb"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: lamp-mount, window-frame and ladder-foot regions all diff 0.00 vs f90 on every frame f90-114. Eyes shut f101-103 (blink). The bulb turns grey on f114, the last frame before the room goes dark"
+  },
+  {
+   "start": 115,
+   "end": 136,
+   "boundary": "same_shot",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s5",
+   "view": "with a stepladder under a hanging ceiling lamp and the corner of a window frame",
+   "time": "night",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 115,
+     "end": 123,
+     "text": "Pax stays up on the stepladder with his flipper on the dark bulb, glancing over at it"
+    },
+    {
+     "start": 123,
+     "end": 128,
+     "text": "Pax squeezes his eyes shut in a wince, still holding the bulb"
+    },
+    {
+     "start": 128,
+     "end": 136,
+     "text": "Pax lowers his flipper from the lamp and stares at the dark bulb with heavy-lidded eyes"
+    }
+   ],
+   "props": [
+    "stepladder",
+    "ceiling lamp",
+    "light bulb"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "same locked view after the light goes out at f115: steady dim lights-off lighting over the whole room (whites ~78%, cool tint), constant through f135 (lamp-mount region diff 0.00, window 0.01, ladder foot 0.03 vs f115). Kept with time night under the 2026-11-04 ruling (steady night or dim lighting is kept); it is the bulb going out in story, so 'night' is the nearest time word. Eyes shut f124-126"
+  },
+  {
+   "start": 136,
+   "end": 189,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "locked view into an open kitchen wall cupboard (top region diff 0.00 vs f137 throughout): a pink mug with Polly's face on it sits on the lower shelf, Pax rises into view from below (seen from behind), lifts the mug and a bowl up to the top shelf and turns his head with a smile f185-188. The Polly-face mug is a lead copy; it is hidden behind Pax's head only f143-159 (17 frames)"
+  },
+  {
+   "start": 189,
+   "end": 198,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "9 frames: Polly cuts into the jar on a round table with a chainsaw, eyes squeezed; fast pull-back f194-197 to the wide table view (table-base region diff 0.00 from f199)"
+  },
+  {
+   "start": 198,
+   "end": 213,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "15 locked frames after the pull-back: Polly saws the jar on the round table by the fridge while Pax stands at the right and points at it"
+  },
+  {
+   "start": 213,
+   "end": 238,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s4",
+   "view": "with lit candles on the floor and on the counter",
+   "time": "night",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left",
+     "presence": "full",
+     "outfit": [
+      "o1",
+      "o2"
+     ],
+     "moves": [
+      {
+       "frame": 225,
+       "screen": "left-center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 213,
+     "end": 225,
+     "text": "Polly frowns as she shuffles toward the basin counter, holding a lit candle up in one flipper"
+    },
+    {
+     "start": 225,
+     "end": 233,
+     "text": "Polly sets the candle down on the counter beside the basin"
+    },
+    {
+     "start": 233,
+     "end": 238,
+     "text": "Polly squeezes her eyes shut and lifts a flipper toward her face"
+    }
+   ],
+   "props": [
+    "candles",
+    "basin",
+    "mirror"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "candle-lit bathroom, steady dim lighting with flickering in-world candle glows; kept with time night under the 2026-11-04 ruling. Camera locked: mirror-top region (y 0.25-0.33, x 0.5-1.0) and floor-left region diff 0.00 vs f213 on every frame; the top-left wall region changes only where Polly's turban moves in. Polly reads as Polly (face, beak, rose cheeks, flippers) with her tuft under the towel, as in FoodWithHim. Her left side touches the frame edge f213-218. A fast pull-back starts at f238"
+  },
+  {
+   "start": 238,
+   "end": 260,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "22 frames: a 4-frame pull-back f238-241 (too_short under the camera-move ruling), then 18 locked frames of the wide candle-lit bathroom with Pax peeking in at the doorway on the left while Polly stands by the candles"
+  },
+  {
+   "start": 260,
+   "end": 279,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "pull_back",
+   "notes": "Polly reaches up into the cupboard and takes the Polly-face mug (lead copy), locked f260-272, then a fast pull-back f273-278 to the wide kitchen (counter region settles at f279)"
+  },
+  {
+   "start": 279,
+   "end": 316,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "37 locked frames (counter region diff 0.00 f279-315): Polly stands on a teetering stack (stool, pot, jug, books) by the counter hugging the Polly-face mug, hops down f291-294 and walks out left with it while Pax stands at the right; a ball rolls across the floor. The mug is in her flippers the whole time (full-res f285, f300), so lead_copy"
+  }
+ ]
+}

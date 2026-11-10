@@ -1,0 +1,44 @@
+{
+ "skit": "iteration_7/293_videos/2D_PP_Unhealthy_Base.mp4",
+ "frames": 200,
+ "fps": 24.0,
+ "curated_by": "curator-v10-30",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {"kind": "lead"},
+  "polly": {"kind": "lead"}
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {"kind": "set", "desc": "a supermarket aisle"}
+ },
+ "spans": [
+  {
+   "start": 0, "end": 139, "boundary": "start", "keep": false, "drop_reason": "lead_copy", "camera": "push_in",
+   "notes": "Polly at the produce shelves with a full shopping cart, picks up an apple and studies it with a worried look. lead_copy for the whole run: the cart holds the water bottle printed with Pax and Polly faces and Polly's purse with the Pax-head charm (full res f0, f30, f60, f130), in view every frame. Camera: wide f0-43, a fast 3-frame push f44-46 (profile flags f44/45/46), then a slow push-in on the closer view (ECC on the fridge band, scale 1.04 at f52 to 1.17 at f112-124). One dropped run with one reason, so not split"
+  },
+  {
+   "start": 139, "end": 200, "boundary": "cut", "keep": false, "drop_reason": "camera_move", "camera": "push_in",
+   "framing": "medium", "angle": "eye level", "setting": "s1",
+   "view": "with a row of glass-door fridges behind him",
+   "time": "day", "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "center", "presence": "full", "outfit": []}
+   ],
+   "beats": [
+    {"start": 139, "end": 161, "text": "Pax bounces from foot to foot with a wide smile, hugging an armful of snack packs and holding one packet up high"},
+    {"start": 161, "end": 169, "text": "Pax squeezes his eyes shut in a happy grin while a chocolate bar slides out from under his armful"},
+    {"start": 169, "end": 183, "text": "Pax opens his eyes and keeps bouncing while a chocolate bar drops and lands on its end on the floor"},
+    {"start": 183, "end": 200, "text": "Pax hops from foot to foot hugging his snacks while a dropped chocolate bar tips over and lies flat"}
+   ],
+   "props": ["snack packs", "chocolate bar"],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": ["snack packaging"],
+   "travel": "none",
+   "notes": "steady push-in through the whole shot: Pax and the fridges grow together (fridge top edge drops from y~110 to y~65 px in full-res crops f139/f169/f199, door frames thicken), the dropped bar drifts left toward the edge as the view tightens; ECC on the fridge band at the left edge scale 1.01 -> 1.14 over f186-199 (cc 0.81-0.96, background soft-focus). Pax walks in place, no travel. Snack packs carry invented parody names (Fingles, Rocky, Orceos, Snowckers, Polar ...), not real brand names, so in-world packaging text under the brand ruling (same as the parody mayonnaise label precedent); never transcribed. No overlay in the top third or bottom fifth"
+  }
+ ]
+}

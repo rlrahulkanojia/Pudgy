@@ -1,0 +1,123 @@
+{
+ "skit": "iteration_7/293_videos/PP-Carry-Base.mp4",
+ "frames": 185,
+ "fps": 24.0,
+ "curated_by": "curator-v10-10",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "polly": {
+   "kind": "lead"
+  },
+  "pax": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a snowy landscape with pine trees and rolling hills"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 143,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with an igloo's arched wooden door on the right",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left",
+     "presence": "exits",
+     "exits_at": 103,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 24,
+       "screen": "center"
+      },
+      {
+       "frame": 84,
+       "screen": "right-center"
+      }
+     ]
+    },
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "enters",
+     "enters_at": 117,
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 30,
+     "text": "Polly waddles across the snow from the left toward the igloo door"
+    },
+    {
+     "start": 30,
+     "end": 60,
+     "text": "Polly stops beside the door, looks back and points off to the left with one flipper"
+    },
+    {
+     "start": 60,
+     "end": 75,
+     "text": "Polly faces forward with her eyes closed and a pleased little smile"
+    },
+    {
+     "start": 75,
+     "end": 90,
+     "text": "Polly turns to the igloo and pushes the wooden door open"
+    },
+    {
+     "start": 90,
+     "end": 103,
+     "text": "Polly steps through the open doorway and disappears inside the igloo"
+    },
+    {
+     "start": 103,
+     "end": 117,
+     "text": "The doorway stands empty while a tall stack of colorful boxes slides in at the left edge"
+    },
+    {
+     "start": 117,
+     "end": 143,
+     "text": "Pax waddles in from the left carrying a tall stack of boxes and a net bag of groceries, pulling a loaded wagon"
+    }
+   ],
+   "props": [
+    "igloo door",
+    "stack of boxes",
+    "net bag of groceries",
+    "wagon"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "exits",
+   "notes": "one locked shot for the whole skit: ECC on the igloo band 1.0000 / 0 px except while the door is open, and on the tree band under 1.5 px (drifting clouds). No lead visible f103-116 (only the box stack at the left edge). Ends at f143, where the Walmart-logo bag on Pax's wagon starts to enter"
+  },
+  {
+   "start": 143,
+   "end": 185,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "ad_merch",
+   "camera": "static",
+   "notes": "Pax's wagon carries a navy shopping bag with the yellow Walmart spark logo (edge visible from f143, logo legible ~f146 to the end), with a small dark penguin plush in a rose top peeking out of it (a Pudgy plush, possibly also lead_copy). Pax hauls the load up to the igloo door. Camera locked as in span 0"
+  }
+ ]
+}

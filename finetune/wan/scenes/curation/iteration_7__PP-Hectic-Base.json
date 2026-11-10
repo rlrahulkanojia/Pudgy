@@ -1,0 +1,181 @@
+{
+ "skit": "iteration_7/293_videos/PP-Hectic-Base.mp4",
+ "frames": 226,
+ "fps": 24.0,
+ "curated_by": "curator-v10-16",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "an office of grey filing cabinets drawn on a plain pale grey background"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "a living room with a cream sofa, drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 10,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "10 locked frames (ECC scale 1.0000 f1-9): Polly stands among the filing cabinets holding a sheet of paper up to her face. The pull-back starts at f10"
+  },
+  {
+   "start": 10,
+   "end": 39,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pull_back",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with stacks of papers piled on top of the cabinets and open drawers",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 35,
+       "screen": "right-center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 10,
+     "end": 16,
+     "text": "Polly stands between the filing cabinets holding a sheet of paper up to her face, reading it"
+    },
+    {
+     "start": 16,
+     "end": 30,
+     "text": "Polly flings her flippers up again and again, tossing papers into the air with an open beak"
+    },
+    {
+     "start": 30,
+     "end": 34,
+     "text": "Polly ducks down with her eyes squeezed shut as the papers flutter around her"
+    },
+    {
+     "start": 34,
+     "end": 39,
+     "text": "Polly pops back up and hurries off to the right with her flippers out"
+    }
+   ],
+   "props": [
+    "filing cabinets",
+    "papers"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "steady pull-back with a slight drift down-right, ECC on the cabinet bodies (y 0.42-0.62, x 0-0.3): scale 0.9998 f10, 0.9936 f16, 0.9853 f21, 0.9748 f29; on the cabinet tops 0.9654 f32 -> 0.9449 f40 (cc >= 0.98). Ends at f39, where papers carried by a second Polly come in at the left edge (her body from f42)"
+  },
+  {
+   "start": 39,
+   "end": 112,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "pull_back",
+   "notes": "copies of Polly: a second identical Polly comes in from the left (papers f39, body f42; two on screen together f44), more Pollys from ~f58 (three or four rushing about f84-100) while the pull-back continues (ECC scale 0.93 f44 -> 0.65 f92 vs f0) and filing cabinets slide into the foreground f100-111"
+  },
+  {
+   "start": 112,
+   "end": 130,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "18 frames, also camera_move: hard cut to Polly's face filling the picture, then a fast ease-out pull-back to her sitting on the sofa (ECC vs f130: scale 1.127 f122, 1.043 f125, 1.006 f128, 0.998 f129), locked from f130"
+  },
+  {
+   "start": 130,
+   "end": 226,
+   "boundary": "camera",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a peach cushion behind her and a yellow shell-shaped cushion at the sofa's arm",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 130,
+     "end": 166,
+     "text": "Polly sits back against a cushion on the sofa holding {ifin} up in front of her, gazing at it and blinking"
+    },
+    {
+     "start": 166,
+     "end": 188,
+     "text": "Polly taps at the phone's screen with her other flipper, watching it closely"
+    },
+    {
+     "start": 188,
+     "end": 196,
+     "text": "Polly squeezes her eyes shut and laughs with an open beak, her flipper raised beside the phone"
+    },
+    {
+     "start": 196,
+     "end": 210,
+     "text": "Polly opens her eyes and goes back to tapping at the phone, smiling"
+    },
+    {
+     "start": 210,
+     "end": 226,
+     "text": "Polly tips her head back with her eyes closed, laughing with an open beak as she hugs the phone to her chest"
+    }
+   ],
+   "props": [
+    "phone",
+    "sofa",
+    "cushions"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 130,
+     "by": "polly",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "ECC on the sofa front and floor shadow (y 0.66-0.92) vs f130: scale 1.0000, 0 px, cc 1.000 through f218; compare 130/225 sofa edges black. Phone has the pale grey back, three lenses and tuft = iFin; its screen faces away from us"
+  }
+ ]
+}

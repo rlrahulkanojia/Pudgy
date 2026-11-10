@@ -1,0 +1,401 @@
+{
+ "skit": "iteration_7/293_videos/PP-WhichOne-Base.mp4",
+ "frames": 371,
+ "fps": 24.0,
+ "curated_by": "curator-v10-24",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "a rose polka-dot sleep mask"
+ },
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "an empty space with a plain pale grey background"
+  },
+  "s2": {
+   "kind": "set",
+   "desc": "a snowy plain under a bright sky with fluffy clouds"
+  },
+  "s3": {
+   "kind": "flat",
+   "desc": "a dining area with a round cream table and wooden chairs, drawn on a plain pale grey background"
+  },
+  "s4": {
+   "kind": "flat",
+   "desc": "a bedroom drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 46,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 8,
+     "text": "Pax and Polly stand side by side holding flippers and wave their free flippers in the air"
+    },
+    {
+     "start": 8,
+     "end": 20,
+     "text": "Pax and Polly lift their joined flippers high and Polly twirls around beneath them"
+    },
+    {
+     "start": 20,
+     "end": 29,
+     "text": "Pax and Polly stand side by side with their joined flippers raised, smiling"
+    },
+    {
+     "start": 29,
+     "end": 38,
+     "text": "Polly leans in and kisses Pax on the cheek as a red heart pops up above them and Pax blushes"
+    },
+    {
+     "start": 38,
+     "end": 46,
+     "text": "Pax and Polly stand holding flippers with blushing cheeks while the heart fades away"
+    }
+   ],
+   "props": [],
+   "prop_events": [],
+   "effects": [
+    "heart",
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "Design note for the whole skit: the leads have amber-orange beaks and feet with a darker orange underside (feet ~RGB 240,160,48 / 208,96,32) and a slightly deeper blue Pax (~96,144,224), flat white faces; not the OLD_DESIGN yellow beak/feet or periwinkle gradient look, so curated as on style. Camera locked: fully plain ground; compare 0/45 both shadows overlap exactly (feet stay planted). No caption or watermark (top third and bottom fifth bare on every 10th frame)"
+  },
+  {
+   "start": 46,
+   "end": 111,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a red checkered picnic blanket holding a plate of cookies and two mugs",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 46,
+     "end": 64,
+     "text": "Polly pours tea from a teapot into a mug while Pax sits beside her on the blanket holding a cookie"
+    },
+    {
+     "start": 64,
+     "end": 82,
+     "text": "Polly lifts the steaming mug in one flipper and the teapot in the other while Pax watches, holding his cookie"
+    },
+    {
+     "start": 82,
+     "end": 92,
+     "text": "Polly hands the mug of tea to Pax, who leans over to take it"
+    },
+    {
+     "start": 92,
+     "end": 111,
+     "text": "Pax sips from the mug while Polly holds the teapot up and waves her other flipper"
+    }
+   ],
+   "props": [
+    "picnic blanket",
+    "teapot",
+    "mugs",
+    "plate of cookies"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: compare 46/110 blanket, horizon, ice marks and clouds black/unchanged (motion bands on sky and snow have too little texture; compare decides). The two mugs carry a small generic penguin face (white face, beak, dot eyes) on coral and peach mugs: neither Pax's nor Polly's colours and no crest, judged a prop, not lead_copy. No caption or watermark"
+  },
+  {
+   "start": 111,
+   "end": 171,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with bowls of noodle soup and plates of sushi rolls on the table",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 111,
+     "end": 130,
+     "text": "Pax tips a big bowl up to his face and gulps it down, droplets flying, while Polly eats from her bowl"
+    },
+    {
+     "start": 130,
+     "end": 142,
+     "text": "Pax sets the bowl down and pops the sushi rolls from his plate into his beak one after another"
+    },
+    {
+     "start": 142,
+     "end": 162,
+     "text": "Pax chews with his eyes closed and a flipper at his beak while Polly slurps a long strand of noodles"
+    },
+    {
+     "start": 162,
+     "end": 171,
+     "text": "Pax turns his eyes to Polly, still chewing, while she keeps slurping noodles from her fork"
+    }
+   ],
+   "props": [
+    "bowls",
+    "noodles",
+    "sushi rolls",
+    "plates",
+    "fork",
+    "round table",
+    "wooden chairs"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: ECC on the table pedestal band (y 0.64-0.76, x 0.25-0.75) within 0.5 px, scale 1.0001, cc 1.000; compare 111/170 table, chairs and shadow black. A small seashell sticker on Pax's chair leg (prop). No caption or watermark"
+  },
+  {
+   "start": 171,
+   "end": 258,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s4",
+   "view": "with a double bed between two nightstands with lamps and an alarm clock, the room dim",
+   "time": "night",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "exits",
+     "exits_at": 257,
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "enters",
+     "enters_at": 192,
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 171,
+     "end": 189,
+     "text": "Pax sleeps curled on his side under the covers beside the glowing alarm clock on the nightstand"
+    },
+    {
+     "start": 189,
+     "end": 197,
+     "text": "Pax rubs his eye, rolls onto his back and stretches both flippers up as he wakes"
+    },
+    {
+     "start": 197,
+     "end": 211,
+     "text": "Polly, a sleep mask pushed up on her head, climbs onto the bed from the right and slides under the covers beside Pax"
+    },
+    {
+     "start": 211,
+     "end": 218,
+     "text": "Pax and Polly lie close under the covers gazing at each other, until Polly shuts her eyes and leans in"
+    },
+    {
+     "start": 218,
+     "end": 226,
+     "text": "Pax and Polly nuzzle cheeks under the covers with their eyes closed"
+    },
+    {
+     "start": 226,
+     "end": 232,
+     "text": "Polly opens her eyes and looks ahead while Pax, his eyes still shut, eases back from her cheek"
+    },
+    {
+     "start": 232,
+     "end": 241,
+     "text": "Pax turns over and reaches out to tap the alarm clock on the nightstand while Polly watches"
+    },
+    {
+     "start": 241,
+     "end": 248,
+     "text": "Pax hops out of bed while Polly pulls her sleep mask down and sinks under the covers"
+    },
+    {
+     "start": 248,
+     "end": 258,
+     "text": "Pax waddles off to the left while Polly lies tucked under the covers with only her masked head showing"
+    }
+   ],
+   "props": [
+    "bed",
+    "blanket",
+    "alarm clock",
+    "lamps",
+    "nightstands"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "alarm clock display"
+   ],
+   "travel": "moves_within",
+   "notes": "steady dim lighting through the whole shot (ground ~RGB 178,190,195), kept with time night; the alarm clock shows an early-morning time. Camera locked: ECC on the footboard band (y 0.72-0.95) scale 1.0000, <= 0.2 px, cc 1.000; compare 171/265 bed, lamps and nightstands black. Polly comes in at the right edge f192 already wearing the mask; she pulls it over her eyes ~f242. Pax leaves past the left edge, last sliver f257. No caption or watermark | verification pass 2 (verify_v10_report_v16): beat 4 [211,232) said both have their eyes closed: Pax's eyes are open f210-217 and Polly's f210-214, both closed only f218-225, and Polly's are open again f226-232 while Pax's stay shut; split into three beats"
+  },
+  {
+   "start": 258,
+   "end": 266,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "8 frames after Pax leaves: only the top of Polly's head and her sleep mask show above the covers (also lead_hidden)"
+  },
+  {
+   "start": 266,
+   "end": 371,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 266,
+     "end": 281,
+     "text": "Pax stands with a flipper at his beak looking unsure while Polly clasps her flippers and giggles"
+    },
+    {
+     "start": 281,
+     "end": 289,
+     "text": "Pax leans over to Polly and wraps his flippers around her"
+    },
+    {
+     "start": 289,
+     "end": 318,
+     "text": "Pax holds Polly in a hug, leaning his face close to hers while she looks up at him"
+    },
+    {
+     "start": 318,
+     "end": 341,
+     "text": "Pax kisses Polly on the cheek while she shuts her eyes with a happy smile"
+    },
+    {
+     "start": 341,
+     "end": 356,
+     "text": "Pax lets go and stands beside Polly smiling while she keeps her eyes closed, blissful"
+    },
+    {
+     "start": 356,
+     "end": 371,
+     "text": "Pax reaches out a flipper and Polly clasps it in both of hers with a shy smile"
+    }
+   ],
+   "props": [],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: fully plain ground; the characters' extent left/right edges and shadow baseline stay at x 0.127-0.860, y 0.696 on every 3rd frame (only the top edge changes as Pax leans in); compare 266/370 shadows overlap. No caption or watermark"
+  }
+ ]
+}

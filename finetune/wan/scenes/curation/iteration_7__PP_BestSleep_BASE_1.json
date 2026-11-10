@@ -1,0 +1,500 @@
+{
+ "skit": "iteration_7/293_videos/PP_BestSleep_BASE_1.mp4",
+ "frames": 425,
+ "fps": 24.0,
+ "curated_by": "curator-v10-06",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "a lilac band wrapped over her head and under her chin",
+  "o2": "big periwinkle headphones"
+ },
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a bathroom drawn on a plain pale grey background"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "a bedroom drawn on a plain pale grey background"
+  },
+  "s3": {
+   "kind": "flat",
+   "desc": "a messy living room drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 32,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a round aqua vanity in front of her holding a tube of cream, a small jar and a lid",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 16,
+     "text": "Polly yawns with her eyes squeezed shut, one flipper stretched up high and the other rubbing her cheek"
+    },
+    {
+     "start": 16,
+     "end": 32,
+     "text": "Polly lowers her flippers to her cheeks and looks straight ahead with wide open eyes and a calm face"
+    }
+   ],
+   "props": [
+    "tube of cream",
+    "small jar"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: plain background gives no fit, but compare 0/31 shows the vanity, tube and jar edges black (overlapping exactly). Jar label is a small fish icon only. time left as day: a bedtime-routine skit, but nothing in the picture shows night (no dark window, no lamp light), so no night clause. No overlay | verification pass 2 (verify_v10_report_v05): beat [16,32): Polly's eyes are wide open from f18 with a neutral face; 'sleepy face' is not shown"
+  },
+  {
+   "start": 32,
+   "end": 50,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "18 static frames (motion on the nightstand band: scale 1.0000) of the nightstand close up: igloo humidifier puffing steam, a spotted penguin plush in headphones under a little teal blanket (not Pax or Polly: a prop). Only Polly's flipper at the left edge, which picks up a shell mirror f46-49 (also no_lead)"
+  },
+  {
+   "start": 50,
+   "end": 58,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "pull-back with a drift that reveals Polly on a cushion stool beside the nightstand: f50-57 (nightstand band scale 0.93 at f50, settling by f57; locked vs f58 from f58). 8 frames, so too_short ranks before camera_move"
+  },
+  {
+   "start": 58,
+   "end": 91,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a cream nightstand holding a stick of incense on a small dish, an igloo-shaped humidifier puffing steam and a spotted plush, and a bed behind",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 58,
+     "end": 64,
+     "text": "Polly sits on a cushion stool holding up a shell-shaped hand mirror and presses a little sticker onto her cheek"
+    },
+    {
+     "start": 64,
+     "end": 72,
+     "text": "Polly reaches down toward the nightstand with her free flipper, still holding the mirror up"
+    },
+    {
+     "start": 72,
+     "end": 80,
+     "text": "Polly presses another small sticker onto her forehead above her eye"
+    },
+    {
+     "start": 80,
+     "end": 91,
+     "text": "Polly lowers her flipper and gazes into the mirror with little stickers and a mint patch on her face"
+    }
+   ],
+   "props": [
+    "hand mirror",
+    "face stickers",
+    "nightstand",
+    "igloo-shaped humidifier",
+    "incense stick",
+    "plush",
+    "cushion stool"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked from f58 (frame-to-frame diff on the nightstand's front face 0.00-0.01 every frame f59-90; motion vs f58 on the nightstand band: 1.0000 at f62 and f74, small excursions are Polly's flipper in the band; compare 58/90: stool, nightstand, humidifier and bed edges black). The humidifier steam animates. Plush on the nightstand is a cream penguin with brown spots in yellow headphones: not a lead. No overlay | verification pass 2 (verify_v10_report_v05): beat timing (step-1 f60-81): flipper at the cheek f58-63, reaching to the nightstand f64-71, at the forehead f72-79 (cloud sticker appears f79), lowered from f80; beats were 2-3 frames late; beat [80,91): only one mint patch (under her left eye) in f80-90, not 'mint patches'; flag, not applied: Polly wears face stickers, a beak strip and mint under-eye patches throughout this span; by the outfit r"
+  },
+  {
+   "start": 91,
+   "end": 121,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "close-up",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "partial",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 91,
+     "end": 96,
+     "text": "Polly looks straight ahead with little stickers and a mint patch on her face"
+    },
+    {
+     "start": 96,
+     "end": 102,
+     "text": "Polly bobs down and comes back up holding another small mint patch"
+    },
+    {
+     "start": 102,
+     "end": 121,
+     "text": "Polly presses the patch under her other eye and holds her flipper there, gazing ahead"
+    }
+   ],
+   "props": [
+    "face stickers",
+    "under-eye patches"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "plain pale grey background, no texture to fit: judged by Polly's outline (compare 91/120: head outline the same size and place, offset only by her own sway). f96-100 Polly squashes down (head drops and widens) to pick up the patch: character animation, the head shape changes, not a camera bump. Body cut off at the bottom edge. Less certain than the other kept spans because the camera cannot be measured here"
+  },
+  {
+   "start": 121,
+   "end": 146,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "push_in",
+   "notes": "closer three-quarter shot of Polly putting a strip on her beak: static f121-134 (13 frames, motion on the headboard band 1.0000), a quick punch-in f135-137 (scale 1.004, 1.030, 1.059), static again f138-145 (8 frames). No piece reaches 21 frames"
+  },
+  {
+   "start": 146,
+   "end": 175,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a cream nightstand holding a stick of incense on a small dish and an igloo-shaped humidifier, and a bed behind",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 146,
+     "end": 158,
+     "text": "Polly lifts a lilac band from her lap and pulls it over her head so it wraps around her forehead and under her chin"
+    },
+    {
+     "start": 158,
+     "end": 163,
+     "text": "Polly closes her eyes for a moment as the band settles"
+    },
+    {
+     "start": 163,
+     "end": 175,
+     "text": "Polly rests a flipper against her cheek and looks ahead with a worried brow, patches and stickers on her face"
+    }
+   ],
+   "props": [
+    "lilac face band",
+    "face stickers",
+    "under-eye patches",
+    "nightstand",
+    "igloo-shaped humidifier",
+    "cushion stool"
+   ],
+   "prop_events": [
+    {
+     "prop": "lilac face band",
+     "event": "picks_up",
+     "frame": 149,
+     "by": "polly"
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked (frame diff on the stool and its shadow 0.00-0.03 every frame f147-174; compare 146/174: stool, nightstand and bed edges black). The band is put on inside the span; worn f157-174 (18 of 29 frames, most of the span), so listed as her outfit per the hand-over ruling, and the beats describe putting it on. No overlay | verification pass 2 (verify_v10_report_v05): outfit (known issue): the lilac band hangs in her lap f146-150, is lifted f151-153, pulled over her head f154-156 and is worn only from f157 (18 frames); 11 frames before and 18 after, so neither side reaches 21 and the ruling 'An outfit taken off or put on mid-shot' says leave it off `outfit` (the compiled caption said 'wearing a lilac band' for the f146 window). Beats already describe putting it"
+  },
+  {
+   "start": 175,
+   "end": 220,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a yellow headboard, and a nightstand holding an igloo-shaped humidifier puffing steam and a spotted plush",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "partial",
+     "outfit": [
+      "o1",
+      "o2"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 175,
+     "end": 220,
+     "text": "Polly sits up in bed under a pale blanket, little stickers on her face, scrolling on {ifin} held in her flipper"
+    }
+   ],
+   "props": [
+    "phone",
+    "blanket",
+    "igloo-shaped humidifier",
+    "plush"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 175,
+     "by": "polly",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked (motion on the blanket band y0.75-0.98: scale 1.0000, 0 px, cc 1.000 at f179-219; compare 175/219: headboard, blanket and nightstand edges black). Phone: pale grey back, lenses and the tuft on top (full res f190), the iFin. Lower body under the blanket. No overlay | verification pass 2 (verify_v10_report_v05): screen: Polly is in the middle at f175 (body x 0.33-0.68, centre 0.50; headphones 0.27-0.70), not left of center; flag, not applied: Polly wears face stickers, a beak strip and mint under-eye patches throughout this span; by the outfit rule (mask) and the doodle ruling (drawings on a lead's body go in outfits) they arguably belong in `outfits` so every window names them. Needs a new file-level out"
+  },
+  {
+   "start": 220,
+   "end": 274,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "iFin screen insert: a video app is scrolled by Polly's flipper; thumbnails show penguin characters including Polly- and Pax-like ones (also lead_copy). f264 is a scroll jump inside the insert, not a shot change. In-world screen text"
+  },
+  {
+   "start": 274,
+   "end": 350,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a yellow headboard, and a nightstand holding an igloo-shaped humidifier puffing steam and a spotted plush",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "partial",
+     "outfit": [
+      "o1",
+      "o2"
+     ],
+     "moves": [
+      {
+       "frame": 283,
+       "screen": "left-center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 274,
+     "end": 281,
+     "text": "Polly sits up in bed looking down at {ifin} in her flipper"
+    },
+    {
+     "start": 281,
+     "end": 320,
+     "text": "Polly flops back onto her pillow and holds the phone up beside her, blinking with heavy, drowsy eyes"
+    },
+    {
+     "start": 320,
+     "end": 332,
+     "text": "Polly lets her flipper droop so the phone sinks onto the bed as her eyes fall shut"
+    },
+    {
+     "start": 332,
+     "end": 350,
+     "text": "Polly sleeps peacefully on her pillow with her eyes closed, tucked under the blanket"
+    }
+   ],
+   "props": [
+    "phone",
+    "blanket",
+    "pillow",
+    "igloo-shaped humidifier",
+    "plush"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "puts_down",
+     "frame": 324,
+     "by": "polly",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f274-349 (motion on the blanket band vs f274: scale 1.0000, 0 px, cc 1.000 every 4th frame to f346; step-1 check: f349 1.0004, f350 0.9900). Same phone as the previous bed span (iFin). No overlay | verification pass 2 (verify_v10_report_v05): screen: Polly is in the middle at f274 (centre 0.50) and flops back to left of center by f283 (centre 0.36 from f284 to the end); windows starting after f283 need the move; flag, not applied: Polly wears face stickers, a beak strip and mint under-eye patches throughout this span; by the outfit rule (mask) and the doodle ruling (drawings on a lead's body go in outfits) they arguably belong in `outf"
+  },
+  {
+   "start": 350,
+   "end": 376,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pull_back",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a yellow headboard, and a nightstand holding an igloo-shaped humidifier puffing steam and a spotted plush",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "partial",
+     "outfit": [
+      "o1",
+      "o2"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 350,
+     "end": 376,
+     "text": "Polly sleeps soundly on her pillow with her eyes closed, tucked under the blanket, as steam puffs from the humidifier beside her"
+    }
+   ],
+   "props": [
+    "blanket",
+    "pillow",
+    "igloo-shaped humidifier",
+    "plush"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "slow pull-back with a slight drift: blanket band scale 0.990 at f350, 0.981 f351, mid band ~0.79 by f376; locked from f376 (motion 375->380: 1.0000). The bed's footboard comes into view at the bottom. The footboard knob enters at the bottom from ~f352, so it is left out of view"
+  },
+  {
+   "start": 376,
+   "end": 381,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "5 static frames after the pull-back, Polly asleep; hard cut at f381"
+  },
+  {
+   "start": 381,
+   "end": 425,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with a cream sofa, a wall shelf of small penguin figurines, and a speaker, a phone, a game controller and fish crackers scattered on the floor",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 381,
+     "end": 425,
+     "text": "Pax lies asleep on his back across the sofa with drool running from his open beak and an open pizza box on his belly, while a speaker on the floor bounces"
+    }
+   ],
+   "props": [
+    "sofa",
+    "pizza box",
+    "speaker",
+    "phone",
+    "game controller",
+    "fish crackers",
+    "wall shelf with penguin figurines"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked (motion on the wall band y0.05-0.30: scale 1.0000, 0 px, cc 1.000 f385-421; compare 381/424 everything black except the bouncing speaker). Pax himself is a held drawing: he does not move in this shot. Shelf figurines are the same three as in the FastText pilot (black-and-white penguin in a beanie and sunglasses, a yellow-suited penguin in goggles, a pale penguin in a starry wizard hat): props, not leads. The phone on the floor is the iFin (tuft on top), not handled. Skit ends on this shot. No overlay"
+  }
+ ]
+}

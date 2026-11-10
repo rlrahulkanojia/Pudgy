@@ -1,0 +1,234 @@
+{
+ "skit": "iteration_7/293_videos/PP-Cupboard-Base.mp4",
+ "frames": 270,
+ "fps": 24.0,
+ "curated_by": "curator-v10-11",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a kitchen with a white wall cupboard above a curved teal counter, drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 51,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the cupboard standing open and crammed with plastic food containers, and a round window",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 22,
+     "text": "Pax stands at the open cupboard hugging a tall stack of plastic food containers, swaying a little as he looks up at the crowded shelves"
+    },
+    {
+     "start": 22,
+     "end": 36,
+     "text": "Pax swings the stack over to one side and blinks, still hugging it to his chest"
+    },
+    {
+     "start": 36,
+     "end": 51,
+     "text": "Pax shifts the stack back in front of him and stares up at the full cupboard"
+    }
+   ],
+   "props": [
+    "plastic food containers",
+    "wall cupboard"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: ECC on the window/door band (y 0.15-0.40, x 0.45-1.0) scale 1.0000, 0 px, cc 1.000 every 5th frame f5-50; whole-frame diff exactly 0 on still frames f1-5, f15-21, f31-36, f47-50. Eyes shut f25-26 (blink). Containers are plain (no prints); no caption or watermark. Hard cut at f51"
+  },
+  {
+   "start": 51,
+   "end": 70,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "19 frames: insert of the crammed cupboard shelves, Pax's flippers shove more containers in and swing the door shut (only flippers visible, also lead_hidden)"
+  },
+  {
+   "start": 70,
+   "end": 153,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a round window beside the cupboard",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "exits",
+     "exits_at": 150,
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 70,
+     "end": 95,
+     "text": "Pax stands below the cupboard as its door swings shut, one flipper raised up toward it while he looks up at it"
+    },
+    {
+     "start": 95,
+     "end": 111,
+     "text": "Pax shifts his weight a little to the right, still holding his flipper up toward the cupboard"
+    },
+    {
+     "start": 111,
+     "end": 124,
+     "text": "Pax lowers his flipper and shuts his eyes with a pleased little smile"
+    },
+    {
+     "start": 124,
+     "end": 153,
+     "text": "Pax turns to face forward and waddles off to the left, out of the picture"
+    }
+   ],
+   "props": [
+    "wall cupboard"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "exits",
+   "notes": "camera locked: ECC on the window band (y 0.10-0.42, x 0.55-1.0) scale 1.0001, 0 px, cc 1.000 f78-142; counter-left band (y 0.60-0.75, x 0-0.30) identity until Pax walks through it; diff of f72 vs f100 is Pax only. The door is still swinging shut on f70-71. Eyes shut f117-122. Pax's body height stays ~750 px while he walks left (feet 1555 -> 1597 px), so size_change false. He is mostly gone by f150, last sliver f152; f153-157 empty"
+  },
+  {
+   "start": 153,
+   "end": 158,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "5 frames of the empty kitchen after Pax leaves (also no_lead)"
+  },
+  {
+   "start": 158,
+   "end": 165,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "7 frames: hard cut to the same kitchen at night (dim, crescent moon in the window), empty until Polly's flipper tip edges in at the right from f163 (also no_lead)"
+  },
+  {
+   "start": 165,
+   "end": 235,
+   "boundary": "same_shot",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a round window showing a crescent moon",
+   "time": "night",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "enters",
+     "enters_at": 167,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 196,
+       "screen": "center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 165,
+     "end": 199,
+     "text": "Polly walks in from the right and stops in front of the counter below the wall cupboard"
+    },
+    {
+     "start": 199,
+     "end": 211,
+     "text": "Polly stands under the cupboard and reaches one flipper up toward its closed door"
+    },
+    {
+     "start": 211,
+     "end": 216,
+     "text": "Polly smiles with her eyes shut, then turns her back and swings the cupboard door open"
+    },
+    {
+     "start": 216,
+     "end": 235,
+     "text": "Polly stands with her back turned, facing the overstuffed open cupboard with one flipper held out to the side"
+    }
+   ],
+   "props": [
+    "wall cupboard",
+    "plastic food containers"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "enters",
+   "notes": "camera locked: ECC on the cupboard band (y 0.15-0.42, x 0-0.30) scale 0.9999, 0 px, cc 1.000 f164-212, and on the window band identity except while Polly crosses it; window-region diff vs f158 constant 0.08 from f168 (a star twinkle). Night grade: a mild neutral dim (whites at 225/255, hues kept, Polly's colours still read), kept as time night like Eepy [134,160), not the tinted lights-off wash that was dropped as effect in Unhelpful. f213->f214 is a two-frame pose snap (Polly turns her back as the door flies open), same background, not a cut. The containers start to burst out on f235"
+  },
+  {
+   "start": 235,
+   "end": 253,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "transition",
+   "camera": "pan_right",
+   "notes": "the containers burst out as a teal splash shape that sweeps across the picture and buries Polly (f235-243), wiping to a new framing that slides in from the right and settles at f253 (pile region diff falls 18 -> 0 over f244-253)"
+  },
+  {
+   "start": 253,
+   "end": 270,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "17 locked frames: Pax stands beside a heap of spilled containers, a flipper poking out of the heap (Polly buried, lead_hidden), and puts a flipper to his chin. Skit ends"
+  }
+ ]
+}

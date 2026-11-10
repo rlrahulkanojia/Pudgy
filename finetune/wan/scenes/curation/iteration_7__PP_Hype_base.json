@@ -1,0 +1,383 @@
+{
+ "skit": "iteration_7/293_videos/PP_Hype_base.mp4",
+ "frames": 386,
+ "fps": 24.0,
+ "curated_by": "curator-v10-19",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "a gaming headset with a microphone"
+ },
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "an empty space with a plain pale grey background"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "a room drawn on a plain pale grey background"
+  },
+  "s3": {
+   "kind": "set",
+   "desc": "a room with a pale ice-brick wall"
+  },
+  "s4": {
+   "kind": "flat",
+   "desc": "a living room drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 30,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "lead_hidden",
+   "camera": "static",
+   "notes": "close view of Pax's big flipper holding a blue toy jet plane; no lead face or body visible"
+  },
+  {
+   "start": 30,
+   "end": 81,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 30,
+     "end": 40,
+     "text": "Pax stands holding a small toy jet plane while Polly stands beside him with a flipper raised to her cheek"
+    },
+    {
+     "start": 40,
+     "end": 56,
+     "text": "Pax swoops the toy jet up past his face while Polly holds up a big foam finger, cheering"
+    },
+    {
+     "start": 56,
+     "end": 81,
+     "text": "Polly bounces up and down waving the foam finger while Pax keeps flying the toy jet in front of him"
+    }
+   ],
+   "props": [
+    "toy jet plane",
+    "foam finger"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "foam finger lettering"
+   ],
+   "travel": "none",
+   "notes": "plain backdrop, no texture for ECC: judged by eye. compare 30/80: Pax's outline and both floor shadows overlap exactly, so the camera is locked (keep12 0.56 is the characters moving on a textureless ground). No overlays"
+  },
+  {
+   "start": 81,
+   "end": 111,
+   "boundary": "cut",
+   "keep": false,
+   "camera": "static",
+   "framing": "medium close-up",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a cream tabletop in front of him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "partial",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right",
+     "presence": "partial",
+     "outfit": []
+    }
+   ],
+   "props": [
+    "card pack",
+    "trading card",
+    "table"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "card back logo"
+   ],
+   "travel": "none",
+   "notes": "camera locked: ECC on the tabletop band scale 1.000, 0 px, cc 1.000 f84-87 (later rows hit Pax's flipper); compare 81/110 tabletop edge and Polly's head outline overlap exactly. The pack is a plain swirl foil; the card laid down at f106-110 shows a tiny printed logo on its back (in-world). No overlays | verification pass 2 (verify_v10_report_v10): ad_merch: Pax opens a Pudgy Penguins trading-card pack (f81-105) and lays down a card whose back shows a legible PUDGY PENGUINS logo (f106-110). Per the 'Real brands are ad_merch' ruling (Pudgy trading-card packs). Camera locked.",
+   "drop_reason": "ad_merch",
+   "beats_dropped": [
+    {
+     "start": 81,
+     "end": 89,
+     "text": "Pax holds a small foil card pack up to his beak with both flippers while Polly sits in the foreground with her back turned"
+    },
+    {
+     "start": 89,
+     "end": 94,
+     "text": "Pax tears the top off the foil pack with one flipper"
+    },
+    {
+     "start": 94,
+     "end": 106,
+     "text": "Pax holds the torn wrapper up in one flipper and a card in the other"
+    },
+    {
+     "start": 106,
+     "end": 111,
+     "text": "Pax drops the wrapper and lays the card face down on the table"
+    }
+   ]
+  },
+  {
+   "start": 111,
+   "end": 127,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "16 frames: Polly across the table with clasped flippers, a round window behind her, the back of Pax's head in the foreground"
+  },
+  {
+   "start": 127,
+   "end": 182,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "insert of Pudgy Penguins trading cards fanned out on a cream ground with only Pax's flipper tip; the card backs carry the PUDGY PENGUINS logo and a card face shows a small Polly-like pink penguin (also lead_copy, ad_merch)"
+  },
+  {
+   "start": 182,
+   "end": 231,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with a round cream table and wooden chairs",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 182,
+     "end": 191,
+     "text": "Pax and Polly sit across a round table with a few cards on it, looking at each other"
+    },
+    {
+     "start": 191,
+     "end": 198,
+     "text": "Polly leaps up from her seat with an air horn, sending her chair flying off to the side"
+    },
+    {
+     "start": 198,
+     "end": 231,
+     "text": "Polly blasts the air horn with her eyes squeezed shut while Pax waves a flipper in the air"
+    }
+   ],
+   "props": [
+    "air horn",
+    "trading cards",
+    "round table",
+    "wooden chairs"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: ECC on the brick wall band scale 1.000, 0 px, cc 1.000 every 4 frames f186-230; compare 182/230. Polly's chair flies out to the right edge f191-194. No overlays"
+  },
+  {
+   "start": 231,
+   "end": 280,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s4",
+   "view": "with a cream sofa, and the back of a teal television, a glass coffee table with snack bowls and a yellow footstool in the foreground",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 231,
+     "end": 261,
+     "text": "Pax sits on the sofa pressing buttons on a purple game controller while Polly sits beside him watching"
+    },
+    {
+     "start": 261,
+     "end": 271,
+     "text": "Pax slumps forward and lets the controller drop to his lap while Polly opens her beak in surprise"
+    },
+    {
+     "start": 271,
+     "end": 280,
+     "text": "Pax stares ahead with wide eyes while Polly turns her head to look at him"
+    }
+   ],
+   "props": [
+    "game controller",
+    "television",
+    "sofa",
+    "snack bowls"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: ECC on the TV/table band scale 1.000, 0 px, cc 1.000 every 6 frames; compare 231/279. No overlays"
+  },
+  {
+   "start": 280,
+   "end": 318,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "TV-screen insert: a teal TV showing a GAME OVER screen, then a chat notification with a mocking message pops up (screen text)"
+  },
+  {
+   "start": 318,
+   "end": 352,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s4",
+   "view": "with a cream sofa, and the back of a teal television, a glass coffee table with snack bowls and a yellow footstool in the foreground",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    },
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 318,
+     "end": 325,
+     "text": "Pax grips the purple controller with a determined frown while Polly sits beside him scowling"
+    },
+    {
+     "start": 325,
+     "end": 339,
+     "text": "Pax lowers the controller to his lap and flings one flipper out to the side while Polly turns her head and glares at him"
+    },
+    {
+     "start": 339,
+     "end": 348,
+     "text": "Polly turns and pulls the gaming headset off Pax's head"
+    },
+    {
+     "start": 348,
+     "end": 352,
+     "text": "Polly puts the headset on herself with a fierce frown while Pax stares in surprise"
+    }
+   ],
+   "props": [
+    "game controller",
+    "gaming headset",
+    "television",
+    "sofa"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "closer framing than [231,280). Camera locked: compare 318/351 sofa, TV and table edges overlap exactly (ECC on the TV band cc < 0.95 after f330, not trusted). Pax wears the headset f318-343, Polly from f348: o1 listed on Pax only, the beats describe the hand-over. Ends where the first speech bubble pops up (f352). No overlays | verification pass 2 (verify_v10_report_v10): beat 1 [318,339): Pax's determined frown with the controller gripped lasts only f318-324; at f325-326 he lowers the controller to his lap and flings one flipper out to the side, brows raised, and holds that pose to f338. Polly looks ahead scowling f318-326 and turns her glare on Pax from ~f327"
+  },
+  {
+   "start": 352,
+   "end": 386,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "graphic_overlay",
+   "camera": "static",
+   "overlays": [
+    "speech bubbles"
+   ],
+   "notes": "big speech-bubble graphics pop up from Polly f352-385: a skull icon, a poop emoji, a clown-faced penguin icon (f368-376, possibly a Pax depiction, also lead_copy) and grawlix symbols, while Polly rants into the headset"
+  }
+ ]
+}

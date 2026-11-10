@@ -1,0 +1,462 @@
+{
+ "skit": "iteration_7/293_videos/PP-Attractive-Base.mp4",
+ "frames": 267,
+ "fps": 24.0,
+ "curated_by": "curator-v10-09",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "an igloo bedroom with pale ice-brick walls and a bed with a cream headboard"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "a room with a rounded arched doorway, drawn on a plain pale grey background"
+  },
+  "s3": {
+   "kind": "flat",
+   "desc": "a dining area with a round cream table and wooden chairs, drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 38,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a checkered quilt with fish prints over them and a wooden wall shelf holding a small penguin figurine",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 38,
+     "text": "Polly sits up in bed reading a teal book while Pax sits beside her playing with a purple game controller"
+    }
+   ],
+   "props": [
+    "book",
+    "game controller",
+    "quilt",
+    "wall shelf with a penguin figurine"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "push-in from the first frame: ECC on the bed-foot band scale 1.002 at f2, 1.020 at f12, 1.084 at f23, 1.119 at f31, holding 1.1308 from f38. Shelf figurine (a black-and-white penguin in sunglasses with a gold medallion and a gold bobble hat, cut off by the right edge) is neither lead: treated as a prop"
+  },
+  {
+   "start": 38,
+   "end": 83,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a checkered quilt with fish prints over them and a wooden wall shelf holding a small penguin figurine",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 38,
+     "end": 60,
+     "text": "Polly sits up in bed reading her book, closing her eyes with a smile, while Pax plays with his game controller"
+    },
+    {
+     "start": 60,
+     "end": 68,
+     "text": "Pax turns his head and looks over at Polly while she keeps reading"
+    },
+    {
+     "start": 68,
+     "end": 79,
+     "text": "Pax gazes at Polly with a soft smile as a little heart floats up above his head"
+    },
+    {
+     "start": 79,
+     "end": 83,
+     "text": "Pax flings his game controller away and lunges toward Polly"
+    }
+   ],
+   "props": [
+    "book",
+    "game controller",
+    "quilt",
+    "wall shelf with a penguin figurine"
+   ],
+   "prop_events": [],
+   "effects": [
+    "hearts"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: ECC on the bed-foot band vs f40 scale 1.0000, under 0.5 px at cc 1.000 f42-82; the camera starts moving at f83 (tx +3.8, ty -9.8). Shelf figurine is a prop (see span 1)"
+  },
+  {
+   "start": 83,
+   "end": 93,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "other",
+   "notes": "10 frames: quick camera swing down and to the left with a push-in as Pax tackles Polly into a hug and her book flies to the floor; the window and nightstand come into view. Locked again from f93 (compare 93/115 wall lines and window overlap)"
+  },
+  {
+   "start": 93,
+   "end": 116,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a round porthole window, a yellow shell-shaped lamp on the nightstand and a book lying on the floor",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 93,
+     "end": 102,
+     "text": "Pax lies across the quilt hugging Polly and presses his face to her cheek while she squeezes her eyes shut"
+    },
+    {
+     "start": 102,
+     "end": 116,
+     "text": "Polly opens her eyes and stares ahead with a flat, awkward look as Pax keeps nuzzling her cheek"
+    }
+   ],
+   "props": [
+    "quilt",
+    "book",
+    "lamp"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: compare 93/115 and 94/115 keep the wall lines, window, lamp and stool edges black; ECC fits here are noisy (small low-texture bands) and were not used. The book finishes landing on the floor at f93-94 | verification pass 2 (verify_v10_report_v13): framing: the leads are drawn at the same scale as the medium wide [38,83) (Polly's head about 250 px wide, vs 230 px there; full drawn height about 26% of the picture; visible pink only 13%). By the framing rule for leads lying down or partly hidden, this is medium wide, not medium; camera locked from f93 (window, wall and lamp regions identical vs f110), beats are correct"
+  },
+  {
+   "start": 116,
+   "end": 165,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with the edge of a wall in the left foreground",
+   "time": "day",
+   "size_change": true,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "enters",
+     "enters_at": 116,
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 116,
+     "end": 134,
+     "text": "Polly waddles forward through the room while Pax peeks out from behind the wall at the left edge, watching her"
+    },
+    {
+     "start": 134,
+     "end": 143,
+     "text": "Pax leans out from behind the wall and watches Polly as she walks on"
+    },
+    {
+     "start": 143,
+     "end": 152,
+     "text": "Pax clasps his flippers together at his chest as a little heart pops up above his head while Polly walks on"
+    },
+    {
+     "start": 152,
+     "end": 159,
+     "text": "Pax leaps out from behind the wall toward Polly with a heart popping above him"
+    },
+    {
+     "start": 159,
+     "end": 165,
+     "text": "Pax throws his flippers around Polly and knocks her over in a hug as she squeezes her eyes shut"
+    }
+   ],
+   "props": [],
+   "prop_events": [],
+   "effects": [
+    "hearts"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "camera locked: compare 116/124, 116/132, 116/140 and 116/163 keep the arch edges black (ECC on the arch band is noisy, not used). Polly walks toward the viewer and grows f116-140. Pax is cut off by the left edge, peeking, until ~f150. The camera jumps at f165 | verification pass 2 (verify_v10_report_v13): beat 2 [134,152): Pax's flippers clasp only from f143 and the heart first appears at f144; f134-142 he just watches with his flippers down; beat 3/4 boundary: Pax's flippers are around Polly from f159 (her eyes squeeze shut there), so the hug beat starts at f159, not f161; camera locked through f164 (arch-top region identical vs f124); jolt starts f165"
+  },
+  {
+   "start": 165,
+   "end": 169,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "other",
+   "notes": "4-frame camera jolt (the arch jumps ~100 px left) as Pax and Polly hit the floor; compare 116/163 and 169/195 each overlap, 168/195 does not"
+  },
+  {
+   "start": 169,
+   "end": 196,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 169,
+     "end": 172,
+     "text": "Pax lies on top of Polly on the floor, hugging her tight, while she winces with her eyes squeezed shut"
+    },
+    {
+     "start": 172,
+     "end": 181,
+     "text": "Pax opens his eyes and gazes at Polly with a happy smile as she looks up at him with a worried face"
+    },
+    {
+     "start": 181,
+     "end": 196,
+     "text": "Pax nuzzles his cheek against Polly's with his eyes closed while she lies back with her eyes half shut"
+    }
+   ],
+   "props": [],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: compare 169/195 keeps the arch edges black | verification pass 2 (verify_v10_report_v13): beat 1 [169,175): Polly's eyes are squeezed shut only f169-171; from f172 she looks up with a worried face, and Pax opens his eyes at f172; beat 2/3 boundary: Pax's eyes close and the nuzzle starts at f181, not f184; camera locked f169-195 (arch-top region identical vs f185); framing kept at medium (drawn size about 34%, at the boundary)"
+  },
+  {
+   "start": 196,
+   "end": 239,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with a plate of food on the table and a wooden chair in the foreground",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right",
+     "presence": "enters",
+     "enters_at": 196,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 210,
+       "screen": "right-center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 196,
+     "end": 212,
+     "text": "Polly sits at the round table eating from a plate with a fork while Pax waddles in from the right edge"
+    },
+    {
+     "start": 212,
+     "end": 220,
+     "text": "Pax stands beside the table watching Polly while she lifts a forkful of food to her beak"
+    },
+    {
+     "start": 220,
+     "end": 233,
+     "text": "Polly chews with her eyes closed while Pax watches her and a little heart floats up above his head"
+    },
+    {
+     "start": 233,
+     "end": 239,
+     "text": "Pax throws his flippers around Polly in a hug and her fork flies out of her flipper"
+    }
+   ],
+   "props": [
+    "round table",
+    "wooden chairs",
+    "plate of food",
+    "fork"
+   ],
+   "prop_events": [],
+   "effects": [
+    "hearts"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "enters",
+   "notes": "camera locked: compare 196/238 keeps the table, chair and shadow edges black (ECC on the bottom band jitters at cc 0.98 on the plain floor, not used); compare 196/239 shows the move starting at f239 | verification pass 2 (verify_v10_report_v13): beat 2 [212,233): Polly's eyes are open f212-219 (she lifts the fork to her beak) and close only from f220; the heart above Pax first appears at f223-224, so the beat's eyes-closed and heart claims are false for its first 8-11 frames; camera locked through f238 (chair and table regions identical vs f200; the shift starts at f239)"
+  },
+  {
+   "start": 239,
+   "end": 244,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "other",
+   "notes": "5-frame camera shift to the left as Pax knocks Polly back off her chair; locked again from f244 (compare 244/266 matches 246/266)"
+  },
+  {
+   "start": 244,
+   "end": 267,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with a plate of food on the table beside them",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 244,
+     "end": 247,
+     "text": "Pax lies on top of Polly over her toppled chair, hugging her with his eyes closed, as she stares up with wide eyes"
+    },
+    {
+     "start": 247,
+     "end": 252,
+     "text": "Pax opens his eyes and gazes down at Polly while she lies back with her eyes closed and her beak open"
+    },
+    {
+     "start": 252,
+     "end": 267,
+     "text": "Pax squeezes his eyes shut and nuzzles Polly's cheek as little hearts float up around them"
+    }
+   ],
+   "props": [
+    "round table",
+    "wooden chairs",
+    "plate of food"
+   ],
+   "prop_events": [],
+   "effects": [
+    "hearts"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: compare 244/266 and 246/266 keep the table and chair edges black. Skit ends on this shot | verification pass 2 (verify_v10_report_v13): beat 1 [244,253): Polly stares up wide-eyed only f244-246; from f247 her eyes are closed (beak open) while Pax opens his eyes and gazes down at her f247-251; Pax's squeeze-shut nuzzle and the hearts start at f252; camera locked from f244 (chair and table regions identical vs f260; f243 still settling)"
+  }
+ ]
+}

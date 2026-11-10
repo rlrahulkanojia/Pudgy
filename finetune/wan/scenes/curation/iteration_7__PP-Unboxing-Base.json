@@ -1,0 +1,263 @@
+{
+ "skit": "iteration_7/293_videos/PP-Unboxing-Base.mp4",
+ "frames": 302,
+ "fps": 24.0,
+ "curated_by": "curator-v10-04",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a room drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 19,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "19 frames: Polly behind a taped cardboard box on the table, holding a yellow box cutter up, then leaning toward the box. Box sits still in strip f0-18"
+  },
+  {
+   "start": 19,
+   "end": 65,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the taped top of a cardboard box filling the lower half of the picture",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "partial",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 19,
+     "end": 25,
+     "text": "Polly peeks over the top of the box with a determined frown, holding a yellow box cutter up high"
+    },
+    {
+     "start": 25,
+     "end": 65,
+     "text": "Polly brings the box cutter down and presses the blade into the tape along the box top, frowning hard"
+    }
+   ],
+   "props": [
+    "cardboard box",
+    "box cutter"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "Polly's head fills the width, cut off below the beak by the box top. Background is plain (motion has no texture to fit: degenerate rows); compare 19/64 keeps the box-top and tape lines black and her head outline in place, so judged locked by eye. No overlay in the top third or bottom fifth"
+  },
+  {
+   "start": 65,
+   "end": 125,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a cream tabletop in front of her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "partial",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 65,
+     "end": 74,
+     "text": "Polly finishes slicing the tape on the cardboard box and drops the yellow box cutter on the table"
+    },
+    {
+     "start": 74,
+     "end": 98,
+     "text": "Polly pulls the flaps of the box open one by one with her flippers"
+    },
+    {
+     "start": 98,
+     "end": 116,
+     "text": "Polly leans over the open box and reaches inside"
+    },
+    {
+     "start": 116,
+     "end": 125,
+     "text": "Polly rummages in the box with her eyes closed and a happy smile"
+    }
+   ],
+   "props": [
+    "cardboard box",
+    "box cutter"
+   ],
+   "prop_events": [
+    {
+     "prop": "box cutter",
+     "event": "puts_down",
+     "frame": 70,
+     "by": "polly"
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "shipping label on the box"
+   ],
+   "travel": "none",
+   "notes": "locked by eye: plain background, motion has no texture to fit (box-front band rows jump when the flaps open); compare 70/120 and 65/160 keep the box's front and bottom edges and the table line black. Polly is seen from the belly up behind the table (partial). Ends at f125, the frame before the plush doll comes out of the box (span 3)"
+  },
+  {
+   "start": 125,
+   "end": 163,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "ad_merch",
+   "camera": "static",
+   "notes": "Client 2026-11-05: the plush is a Pudgy product (Q7), so this stays ad_merch and does not flip. | Polly pulls a plush doll out of the shipping box (first visible f126) and shows it off with sparkles (f134-146), then hugs it with her eyes closed. The doll is a black-and-white penguin with yellow feet, a rose sweater and a navy bow: not a lead, but it reads as a Pudgy plush product being unboxed, so dropped as ad_merch under the 2026-11-04 curator ruling (Pudgy's own merch shown as a product). If the client says it is not merch, f125-162 is otherwise keepable (locked, Polly visible, no overlay). Hard cut at f163 on the same flat background (not in profile): Polly and her box vanish"
+  },
+  {
+   "start": 163,
+   "end": 302,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a cream tabletop in front of him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right",
+     "presence": "enters",
+     "enters_at": 175,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 204,
+       "screen": "center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 163,
+     "end": 175,
+     "text": "A cardboard box with red warning print flies in from the right, lands on the table and tumbles over to the left"
+    },
+    {
+     "start": 175,
+     "end": 186,
+     "text": "Pax slides in from the right and stops beside the box, looking at it"
+    },
+    {
+     "start": 186,
+     "end": 204,
+     "text": "Pax leans in and wraps his flippers around the box"
+    },
+    {
+     "start": 204,
+     "end": 218,
+     "text": "Pax lifts the box up to his chest and squeezes it with his eyes shut tight"
+    },
+    {
+     "start": 218,
+     "end": 225,
+     "text": "Pax bursts the box apart and a pair of teal headphones and packing peanuts fly out"
+    },
+    {
+     "start": 225,
+     "end": 234,
+     "text": "Pax flings his flippers out wide, staring at the headphones lying among the packing peanuts"
+    },
+    {
+     "start": 234,
+     "end": 246,
+     "text": "Pax lowers his flippers and scoops the headphones up off the table"
+    },
+    {
+     "start": 246,
+     "end": 274,
+     "text": "Pax holds the headphones up by the band, looking them over and squeezing his eyes shut for a moment"
+    },
+    {
+     "start": 274,
+     "end": 284,
+     "text": "Pax holds the headphones out in front of him as sparkles twinkle beside them, smiling with his beak open"
+    },
+    {
+     "start": 284,
+     "end": 290,
+     "text": "Pax slips the headphones onto his head and smiles with his eyes closed"
+    },
+    {
+     "start": 290,
+     "end": 298,
+     "text": "Pax holds the ear cups with both flippers and looks ahead with his eyes open and his beak slightly open"
+    },
+    {
+     "start": 298,
+     "end": 302,
+     "text": "Pax closes his eyes again in a blissful smile, still holding the ear cups"
+    }
+   ],
+   "props": [
+    "cardboard box",
+    "headphones",
+    "packing peanuts"
+   ],
+   "prop_events": [
+    {
+     "prop": "headphones",
+     "event": "picks_up",
+     "frame": 240,
+     "by": "pax"
+    }
+   ],
+   "effects": [
+    "sparkles"
+   ],
+   "overlays": [],
+   "in_world_text": [
+    "warning print on the box"
+   ],
+   "travel": "enters",
+   "notes": "locked: compare 177/200 keeps the resting box and table line black; compare 230/301 keeps every packing peanut on the table black. No lead f163-176 (the box flies in), Pax visible from f177. Headphones are worn only from ~f286, so they are not listed as an outfit (the compiler would put them on every window); the beats say when he puts them on. No overlay in the top third or bottom fifth | verification pass 2 (verify_v10_report_v14): beat 0: the box flies in from the RIGHT edge (corner at the right edge f165-166, airborne f166-168), lands on the table f169-170 and tumbles end over end to the left, settling upside down by f176; it does not come from the left; Pax enters at f175 (flipper tip f174, body f175-176), not f177: enters_at 175 and beat 0/1 boundary moved to f175; checked: teal headphones carry no logo and are not Pudgy"
+  }
+ ]
+}

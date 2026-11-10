@@ -1,0 +1,81 @@
+{
+ "skit": "iteration_7/293_videos/PP-PoopBreak-Base.mp4",
+ "frames": 102,
+ "fps": 24.0,
+ "curated_by": "curator-v10-18",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "a coral bow on her head",
+  "o2": "a pearl necklace"
+ },
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "an igloo room with ice-brick walls and an open wooden door"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 34,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pull_back",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with snow outside the open doorway",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [
+      "o1",
+      "o2"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 27,
+     "text": "Polly stands beside the open door holding a coral shell-shaped purse in front of her with both flippers, glancing to the side"
+    },
+    {
+     "start": 27,
+     "end": 34,
+     "text": "Polly blinks and lifts her head, then looks straight ahead, still holding the purse"
+    }
+   ],
+   "props": [
+    "shell-shaped purse",
+    "wooden door"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "Client 2026-11-05: pearl necklace = Polly dressed up (Q3, U5), so filled as Polly. Single slow pull-back (ECC on the ice-brick wall band y0-0.25: scale 0.989 f8, 0.980 f16, cc >= 0.986). Faint seam on the bottom edge only from f13 (3 levels lighter, 2 px growing to 27 px, 1.41% of the height, at f33), noted and kept per the one-edge ruling. Ends at f34, where the seam reaches a second edge. No caption or watermark | verification 2026-11-05: framing medium wide (33.4% of the height at f0, 32.55% at f33); beat 2: eyes are not wider, head lift f27-f32 added; camera a single pull-back (scale 0.9553 at f33, rotation at most 0.045 degrees); f34 is the first frame with a second margin edge"
+  },
+  {
+   "start": 34,
+   "end": 102,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "other",
+   "camera": "pull_back",
+   "notes": "Client 2026-11-05: same pull-back, Polly as above, but the drawn floor no longer reaches the picture edge: lighter margin on the bottom and right from f34, the left too from f42 = inset panel, dropped per the two-edges ruling. Action for reference: looks ahead to ~f75, squeezes her eyes shut and blushes ~f76, holds an embarrassed frown with blush marks to f101. Original note: U5: pearl necklace. A Polly-shaped penguin with a coral bow on her head and a pearl necklace, carrying a coral shell-shaped purse; she is the only character in the skit (no other Polly, no Mother's Day context), so under the pearl-necklace ruling she plays Polly's part and would be a lookalike filled as polly. NOT filled here: the whole skit is also a slow pull-back (no static frame), and curate_check rejects a filled lookalike span whose camera is not static (and the pilot rule gives no fields with two open reasons). Fill recipe if U5 places her as Polly: cast polly; outfits 'a coral bow' and 'a pearl necklace' on polly; purse as a prop; camera pull_back, drop_reason camera_move; framing medium, setting an igloo room with ice-brick walls and an open wooden door, snow outside. Action, one shot, no cuts: she stands beside the open door holding the purse in both flippers, glances to the side (f0-20), blinks f27, looks ahead f30-75, squeezes her eyes shut and blushes ~f76, then holds an embarrassed frown with blush marks to f101. Pull-back: ECC on the ice-brick wall band scale 0.9960, 0.9922, 0.9876, 0.9831, 0.9794 at f3-15 vs f0, and the same ~0.12% per frame from f60, f80, f90; she shrinks and more wall shows. From ~f40 the pull-back exposes the edge of the drawn floor as a faint lighter rectangle along the bottom and sides. Same bow-and-pearls look as in PP-Purse-Base. No meme caption or watermark (equalised top third / bottom fifth scan every 8 frames)"
+  }
+ ]
+}

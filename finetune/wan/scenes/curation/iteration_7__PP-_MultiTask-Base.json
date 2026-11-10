@@ -1,0 +1,258 @@
+{
+ "skit": "iteration_7/293_videos/PP- MultiTask-Base.mp4",
+ "frames": 231,
+ "fps": 24.0,
+ "curated_by": "curator-v10-27",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "a mint face mask",
+  "o2": "a pair of yellow hair curlers",
+  "o3": "a pair of big cyan headphones"
+ },
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a living room drawn on a plain pale grey background"
+  },
+  "s2": {
+   "kind": "set",
+   "desc": "a kitchen with a stove under a tiled range hood and a round window"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 20,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "f0-12 locked (13 frames: Polly on the treadmill alone), then a pull-back with a sideways drift f13-19 as Pax walks in (treadmill-panel patch moves 45 px at f16, settles at f20). Both parts under 21 frames"
+  },
+  {
+   "start": 20,
+   "end": 93,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a cream sofa, a laptop resting on its back, a walking treadmill and a round window",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": [
+      "o1",
+      "o2",
+      "o3"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 20,
+     "end": 30,
+     "text": "Pax writes on a slip of paper with a pencil while Polly, on the treadmill, holds a book and types on the laptop"
+    },
+    {
+     "start": 30,
+     "end": 37,
+     "text": "Pax holds the slip of paper out to Polly and she takes it"
+    },
+    {
+     "start": 37,
+     "end": 60,
+     "text": "Polly scribbles on the slip with a pencil, her book tucked under one flipper, while Pax watches with a flat look"
+    },
+    {
+     "start": 60,
+     "end": 67,
+     "text": "Polly hands the slip back to Pax"
+    },
+    {
+     "start": 67,
+     "end": 93,
+     "text": "Pax writes on the slip again with his pencil while Polly goes back to typing on the laptop"
+    }
+   ],
+   "props": [
+    "laptop",
+    "book",
+    "slip of paper",
+    "pencil",
+    "walking treadmill",
+    "sofa"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "book cover title",
+    "shopping website on the laptop screen"
+   ],
+   "travel": "none",
+   "notes": "camera locked from f20 (treadmill-panel patch dx 0, dy 0, score 1.000 f20-29; motion on the panel band y0.66-0.74 x0.45-0.92 vs f26: scale 0.9999, 0.3 px, cc 1.000 to f92; compare 20/92: sofa, window and treadmill edges black). The treadmill belt lines move by themselves, so bands avoid the belt. Laptop shows an invented 'Snowmazon' shop page (hairbrush, a small yellow penguin plush, a phone, a game console, a book): no lead and no real brand, kept as in-world screen content. No overlay"
+  },
+  {
+   "start": 93,
+   "end": 113,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "Pax alone at the stove, locked f93-105 (13 frames), then a pull-back with a pan f106-112 that brings Polly in at the left (range-hood patch settles at f113). Both parts under 21 frames"
+  },
+  {
+   "start": 113,
+   "end": 146,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a skillet of egg and bacon on the stove, a fish hanging on the wall and a cutting board of vegetables in front",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 113,
+     "end": 121,
+     "text": "Pax holds a salt shaker tipped over the skillet on the stove while Polly stands beside him watching"
+    },
+    {
+     "start": 121,
+     "end": 131,
+     "text": "Polly holds a flipper out toward Pax while he keeps the shaker tipped over the skillet"
+    },
+    {
+     "start": 131,
+     "end": 135,
+     "text": "Pax turns from the skillet toward Polly with his eyes closed"
+    },
+    {
+     "start": 135,
+     "end": 146,
+     "text": "Pax looks at Polly with the shaker raised over the skillet and his other flipper on his chest while she watches him"
+    }
+   ],
+   "props": [
+    "salt shaker",
+    "skillet",
+    "stove",
+    "cutting board with vegetables"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f113-145 (range-hood patch from f130 matched at dx 0, dy 0, score 1.000 every frame f113-145; it is still moving at f112). Hard cut at f146. No overlay"
+  },
+  {
+   "start": 146,
+   "end": 188,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "graphic_overlay",
+   "camera": "other",
+   "overlays": [
+    "loading spinner icon"
+   ],
+   "notes": "closer shot of Pax at the stove with a computer-style loading spinner (a ring of dots) drawn above his head f149-187: a UI symbol, not one of the allowed in-style effects. The camera also drifts slowly (range-hood patch dy +11 to -16 px across the shot)"
+  },
+  {
+   "start": 188,
+   "end": 191,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "3-frame easing tail at the start of the shot (range-hood patch settles at f191)"
+  },
+  {
+   "start": 191,
+   "end": 231,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a skillet on the stove beside him and a cutting board with a carrot and leeks in front",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 191,
+     "end": 207,
+     "text": "Pax shakes a salt shaker over the skillet, smiling with his beak open"
+    },
+    {
+     "start": 207,
+     "end": 213,
+     "text": "Pax keeps shaking as the cap pops off the shaker and drops beside the skillet"
+    },
+    {
+     "start": 213,
+     "end": 231,
+     "text": "Pax keeps tipping the open shaker, pouring a heap of salt into the skillet while he smiles"
+    }
+   ],
+   "props": [
+    "salt shaker",
+    "skillet",
+    "stove",
+    "cutting board with vegetables"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f191-230 (range-hood patch from f210 matched at dx 0, dy 0, score 1.000 every frame f191-230). No overlay | verification pass 2 (verify_v10_report_v24): locked from f191 (hood band scale 0.9310 vs f188 constant from f191; vs f191 <= 0.2 px, cc 1.000 to f229); the loading spinner fades out f188-189 and is gone from f190, so the span start is clean; beat timing: the cap separates from the shaker at f208-209 and lands beside the skillet by f213; salt streams from f213-214. Beat [211,216) placed the pop outside its range; beats re-cut at f207 and f213"
+  }
+ ]
+}

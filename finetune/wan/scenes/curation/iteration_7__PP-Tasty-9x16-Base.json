@@ -1,0 +1,100 @@
+{
+ "skit": "iteration_7/293_videos/PP-Tasty-9x16-Base.mp4",
+ "frames": 141,
+ "fps": 24.0,
+ "curated_by": "curator-v10-22",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a living room drawn on a plain greyish-lavender background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 141,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a cream sofa, and a teal coffee table and a wooden crate blurred in the foreground",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 12,
+     "text": "Pax and Polly sit side by side on the sofa with their feet sticking out, looking ahead"
+    },
+    {
+     "start": 12,
+     "end": 27,
+     "text": "Polly closes her eyes and snuggles into Pax's side, wrapping her flippers around his flipper"
+    },
+    {
+     "start": 27,
+     "end": 63,
+     "text": "Polly hugs Pax's flipper and gazes up at him with big shining eyes while he looks ahead and blinks"
+    },
+    {
+     "start": 63,
+     "end": 99,
+     "text": "Polly nuzzles her cheek against Pax's flipper, glancing up at him now and then, while he sits still"
+    },
+    {
+     "start": 99,
+     "end": 112,
+     "text": "Polly opens her beak and chomps down on Pax's flipper while he keeps staring ahead"
+    },
+    {
+     "start": 112,
+     "end": 116,
+     "text": "Pax squeezes his eyes shut and flings his free flipper out to the side"
+    },
+    {
+     "start": 116,
+     "end": 141,
+     "text": "Pax cries out with his beak wide open and his eyes shut while Polly keeps gnawing on his flipper with a content face"
+    }
+   ],
+   "props": [
+    "sofa",
+    "coffee table"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "one take with a slow push-in from the first frame: sofa and foreground band y0.55-0.95 vs f0: scale 1.005 at f6, 1.024 f24, 1.050 f48, 1.078 f72, 1.100 f90, 1.123 f108, 1.160 f138 (cc 0.92-0.999); compare 0/140: every sofa and table edge doubled. Only reason is the camera move, so every field is filled (U3). Top third (plain ground) and bottom fifth clean every frame: no overlay | verification pass 2 (verify_v10_report_v17): camera confirmed steady push_in from f0 (ECC on sofa/foreground band scale 1.004 at f6 -> 1.157 at f138, cc 0.97-0.99); no overlay; fields hold; beat 1/2 boundary: Polly's eyes close at f12, inside beat 1 (which says both look ahead); boundary moved from f15 to f12"
+  }
+ ]
+}

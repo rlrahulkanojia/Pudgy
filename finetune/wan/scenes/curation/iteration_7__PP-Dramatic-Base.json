@@ -1,0 +1,438 @@
+{
+ "skit": "iteration_7/293_videos/PP-Dramatic-Base.mp4",
+ "frames": 303,
+ "fps": 24.0,
+ "curated_by": "curator-v10-05",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "a yellow polo shirt with a whistle on a cord"
+ },
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "an igloo kitchen with pale ice-brick walls and a long curved turquoise counter"
+  },
+  "s2": {
+   "kind": "flat",
+   "desc": "a living room with a cream sofa drawn on a plain pale grey background"
+  },
+  "s3": {
+   "kind": "set",
+   "desc": "a room with a big round window looking out over a snowy field"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 22,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a sink, a bowl of red apples and salt and pepper shakers on the counter and a dish shelf behind her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 22,
+     "text": "Polly stands behind the counter wiping it with a yellow cloth while holding a purple spray bottle in her other flipper"
+    }
+   ],
+   "props": [
+    "yellow cloth",
+    "spray bottle",
+    "bowl of apples",
+    "salt and pepper shakers"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f0-21: ECC on the cabinet band (y 0.8-0.98) and the dish-shelf band (y 0.08-0.3, x 0.6-1.0) scale 1.0000, 0 px, cc 1.000 at every frame; the shake starts at f22. Polly's lower body is behind the counter, upper body and face fully visible. No caption or watermark"
+  },
+  {
+   "start": 22,
+   "end": 45,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "shake",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a sink, a bowl of red apples and salt and pepper shakers on the counter and a dish shelf behind her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "exits",
+     "exits_at": 38,
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 22,
+     "end": 31,
+     "text": "Polly keeps wiping the counter with the yellow cloth, the spray bottle in her other flipper"
+    },
+    {
+     "start": 31,
+     "end": 34,
+     "text": "Polly flings the spray bottle and the cloth into the air and clutches her face"
+    },
+    {
+     "start": 34,
+     "end": 45,
+     "text": "Polly topples backward and drops out of sight behind the counter as the spray bottle lands on it"
+    }
+   ],
+   "props": [
+    "yellow cloth",
+    "spray bottle",
+    "bowl of apples"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "exits",
+   "notes": "camera shake f22-44: ECC on both the cabinet band and the dish-shelf band jitters frame to frame (tx -12 to +8 px, ty -46 to +14 px at cc >= 0.95 on most frames), locked again from f45. Polly is visible f22-37 (16 of 23 frames), then hidden behind the counter"
+  },
+  {
+   "start": 45,
+   "end": 73,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "lead_hidden",
+   "camera": "static",
+   "notes": "camera locked f45-72 (ECC scale 1.0000, 0 px), but Polly is behind the counter: nothing of her f38-49, a flipper tip and the top of her head f50-62; she pops up f63 and the cloth lands on her head f66-68 (visible only f63-72, 10 of 28 frames)"
+  },
+  {
+   "start": 73,
+   "end": 77,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pan_right",
+   "notes": "4-frame accelerating pan at the end of the kitchen shot (ECC tx -1, -4, -8 px), continued after the cut f77-85"
+  },
+  {
+   "start": 77,
+   "end": 86,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pan_right",
+   "notes": "9 frames: the pan carries on into the living-room shot and settles (ECC on the window band vs f77: -47, -80, ... -159 px by f84, locked from f86). Pax stands on the sofa hugging a fish cushion"
+  },
+  {
+   "start": 86,
+   "end": 87,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pan_right",
+   "notes": "verification pass 2 (verify_v10_report_v09): last frame of the pan settle (scale 0.9964, ty +4.7 px vs f87); belongs with the dropped pan [77,86)"
+  },
+  {
+   "start": 87,
+   "end": 114,
+   "boundary": "camera",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a round porthole window on the wall and the soft-focus back of a teal television in the foreground",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 87,
+     "end": 99,
+     "text": "Pax stands on the sofa hugging a peach fish-print cushion to his chest with his eyes squeezed shut, swaying"
+    },
+    {
+     "start": 99,
+     "end": 114,
+     "text": "Pax lifts the cushion up and presses it against his face"
+    }
+   ],
+   "props": [
+    "fish-print cushion",
+    "sofa",
+    "remote control",
+    "television"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f86-113: ECC on the window band scale 1.0000, 0 px, cc 1.000; compare 90/245 window, sofa and television edges black (one locked set-up f86-281). Jump cut on the same background at f114 (Pax pops from the sofa to the wall corner); profile missed it | verification pass 2 (verify_v10_report_v09): boundary: f86 is the last frame of the pan settle - window band vs f87: f86 scale 0.9964, ty +4.7 px (mean |diff| f86->f87 1.04 on the window band, 0.00 from f87 on; motion vs f87 reads 1.0000/0 px through f99). Start the kept span at f87; f86 becomes a 1-frame too_short tail of the pan"
+  },
+  {
+   "start": 114,
+   "end": 159,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a round porthole window on the wall and the soft-focus back of a teal television in the foreground",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 114,
+     "end": 159,
+     "text": "Pax stands at the end of the sofa with his back turned and his face pressed into the wall, his head bobbing slightly"
+    }
+   ],
+   "props": [
+    "sofa",
+    "remote control",
+    "television"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "jump cut on the same locked background at f114 and again at f159. Pax is seen from behind (back, tuft and a flipper), his lower body behind the sofa arm; kept as a visible lead (see report). compare 120/150 background edges black"
+  },
+  {
+   "start": 159,
+   "end": 207,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a round porthole window on the wall and the soft-focus back of a teal television in the foreground",
+   "time": "day",
+   "size_change": true,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": [
+      "o1"
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 159,
+     "end": 162,
+     "text": "Pax clutches his head with both flippers, his eyes squeezed shut"
+    },
+    {
+     "start": 162,
+     "end": 171,
+     "text": "Pax throws his flippers up and out wide, staring ahead with wide eyes"
+    },
+    {
+     "start": 171,
+     "end": 179,
+     "text": "Pax swings his flippers down to his belly, squeezing his eyes shut and then opening them"
+    },
+    {
+     "start": 179,
+     "end": 193,
+     "text": "Pax lifts the whistle to his beak and blows it with his eyes squeezed shut, holding a yellow card up high"
+    },
+    {
+     "start": 193,
+     "end": 207,
+     "text": "Pax steps forward toward the viewer and to the right, still blowing the whistle with the card held high"
+    }
+   ],
+   "props": [
+    "whistle",
+    "yellow card",
+    "sofa",
+    "television"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "jump cuts on the same locked background at f159 (Pax appears in the yellow polo) and f207 (polo gone, Pax sitting on the floor). Camera locked: ECC on the window band scale 1.0000, 0 px, cc 1.000 f161-203 | verification pass 2 (verify_v10_report_v09): size_change: Pax steps forward toward the viewer f193-206 - his floor shadow drops from y 1395 to 1497 and his feet widen 84-86 px -> 90-99 px; 'the characters stay the same size' is false; beat 1: f159-161 Pax clutches his head with his eyes squeezed shut before throwing his flippers out (eyes wide only f162-170); beat 2: f171-178 Pax swings his flippers down to his belly with eyes squeezed then"
+  },
+  {
+   "start": 207,
+   "end": 282,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with a round porthole window on the wall and the soft-focus back of a teal television in the foreground",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "exits",
+     "exits_at": 280,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 271,
+       "screen": "right"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 207,
+     "end": 229,
+     "text": "Pax sits on the floor in front of the sofa with his flippers clasped under his beak, eyes squeezed shut, peeking with one eye"
+    },
+    {
+     "start": 229,
+     "end": 237,
+     "text": "Pax opens his eyes wide, his flippers still clasped at his beak"
+    },
+    {
+     "start": 237,
+     "end": 241,
+     "text": "Pax lowers his flippers and squeezes his eyes shut in a smile"
+    },
+    {
+     "start": 241,
+     "end": 250,
+     "text": "Pax holds his flippers out at his sides and looks around with wide eyes"
+    },
+    {
+     "start": 250,
+     "end": 255,
+     "text": "Pax leans forward and scrambles up off the floor"
+    },
+    {
+     "start": 255,
+     "end": 263,
+     "text": "Pax jumps up with his flippers raised and his eyes shut in a big smile, then lands"
+    },
+    {
+     "start": 263,
+     "end": 282,
+     "text": "Pax waddles off to the right with his flippers out and his eyes shut, smiling, and leaves the picture"
+    }
+   ],
+   "props": [
+    "sofa",
+    "remote control",
+    "television"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "exits",
+   "notes": "camera locked f207-281: ECC on the window band scale 1.0000, 0 px, cc 1.000 through f281. Pax gone from f280; f280-281 show the empty sofa (2 frames) | verification pass 2 (verify_v10_report_v09): beat 2/3: Pax lowers his flippers from f237 and his eyes are shut (smiling arcs) f238-240; beat 2 claimed wide eyes and clasped flippers to f241; beat 5: Pax makes a single jump (airborne f255-259, lands f260-262), not repeated jumping; the waddle starts at f263-264, not f270"
+  },
+  {
+   "start": 282,
+   "end": 303,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "close-up",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with a wooden cross-shaped window frame, a sunny sky with clouds and small pine trees outside",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left",
+     "presence": "partial",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 282,
+     "end": 289,
+     "text": "Polly leans in from the left toward the round window, gazing out in profile"
+    },
+    {
+     "start": 289,
+     "end": 303,
+     "text": "Polly stays still at the window watching Pax, small and far away outside, waddle off across the snow"
+    }
+   ],
+   "props": [
+    "window"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "exactly 21 frames, to the end of the skit. Camera locked: ECC on the wall-and-window-frame band (y 0-0.75, x 0.82-1.0, no sky in it) scale 1.0000, <= 0.2 px, cc 1.000 at every 2nd frame; compare 282/302 window frame edges black. Polly is cut by the left edge the whole time (partial). The tiny penguin outside is Pax walking away (real, not a copy), leaving footprints"
+  }
+ ]
+}

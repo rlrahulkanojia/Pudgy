@@ -1,0 +1,317 @@
+{
+ "skit": "iteration_7/293_videos/PP-GentleOne-Base.mp4",
+ "frames": 398,
+ "fps": 24.0,
+ "curated_by": "curator-v10-12",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  },
+  "x1": {
+   "kind": "extra",
+   "desc": "a few penguins in small cars"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a living room drawn on a plain pale grey background"
+  },
+  "s2": {
+   "kind": "set",
+   "desc": "a snowy town street lined with colourful igloo shops"
+  },
+  "s3": {
+   "kind": "set",
+   "desc": "a snowy bus stop in the pouring rain"
+  },
+  "s4": {
+   "kind": "flat",
+   "desc": "a bathroom drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 65,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a cream sofa, a glass coffee table holding a phone and a remote, and a blurred teal armchair in the foreground",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 12,
+     "text": "Pax stands in front of the sofa looking at Polly, who sleeps lying on her front with her head on a pillow"
+    },
+    {
+     "start": 12,
+     "end": 44,
+     "text": "Pax turns to the sofa and gently pulls a checkered blanket up over the sleeping Polly"
+    },
+    {
+     "start": 44,
+     "end": 65,
+     "text": "Pax steps back and stands with his flippers clasped at his chest, looking at Polly as she sleeps"
+    }
+   ],
+   "props": [
+    "sofa",
+    "checkered blanket",
+    "pillow",
+    "coffee table",
+    "phone",
+    "remote"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: ECC on the coffee-table band (y 0.65-1.0) within 1 px, scale 0.9996-0.9998, cc >= 0.995 (Pax's feet touch the band); compare 0/64 sofa, coffee table and armchair edges black. The phone on the coffee table lies screen-up and is not handled (not identifiable as the iFin). No caption or watermark (top third and bottom fifth checked every 14 frames) | verification pass 2 (verify_v10_report_v08): beat 1: Polly sleeps stretched out on her front along the sofa, not curled up"
+  },
+  {
+   "start": 65,
+   "end": 121,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pan_left",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s2",
+   "view": "with cars driving along the road behind them",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 80,
+       "screen": "left-center"
+      }
+     ]
+    },
+    {
+     "id": "x1",
+     "screen": "left",
+     "presence": "enters",
+     "enters_at": 69,
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 65,
+     "end": 80,
+     "text": "Pax slips around behind Polly to walk on her other side while she waddles along the sidewalk"
+    },
+    {
+     "start": 80,
+     "end": 121,
+     "text": "Pax and Polly walk side by side along the snowy sidewalk while {x1} drive past on the road behind them"
+    }
+   ],
+   "props": [
+    "cars"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "tracking move through the whole shot: the street and shops slide steadily to the right while Pax and Polly stay near the middle (ECC has no stable fit on the scrolling background; seen on the step-4 strip, shop awnings move ~0.3 of the frame width over 36 frames). The drivers (a red penguin, a black-and-white penguin, a pale grey penguin) are side characters, grouped as x1. No overlay | verification pass 2 (verify_v10_report_v08): screen at f65: Polly is right of center (x~0.65), not in the middle, and stays there; Pax starts at the right edge (x~0.88, partly cut), not right-center, and moves to left-center by f80. Pan direction pan_left confirmed (phase correlation: background +12.9 px/frame to the right, steady f65-120)"
+  },
+  {
+   "start": 121,
+   "end": 214,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "static",
+   "notes": "a framed photo of four penguins, a pink one and a blue one among them (Pax and Polly with two others), stands on the small table under the round window for the whole shot (clearly visible f133-205, partly hidden behind Polly at f121). Action: Polly fiddles with the photo, knocks the flower vase off the table, Pax comes in from the right with a broom and dustpan and sweeps up. The view also widens between f146 and f153 (window-band ECC scale drops to ~0.82-0.92 and stays)"
+  },
+  {
+   "start": 214,
+   "end": 258,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "insert: Polly's flipper tip with a small red cut fills the picture, Pax's flipper comes in and sticks a bandage on it, then leaves; no face visible"
+  },
+  {
+   "start": 258,
+   "end": 277,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "19 frames: Polly sitting on the arm of the sofa with her bandaged flipper while Pax stands in front of her"
+  },
+  {
+   "start": 277,
+   "end": 346,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s3",
+   "view": "with a bus stop sign, snowy pine trees and dark rain clouds behind them",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 289,
+       "screen": "right-center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 277,
+     "end": 289,
+     "text": "Polly holds a teal book over her head against the rain while Pax steps up beside her with an open umbrella"
+    },
+    {
+     "start": 289,
+     "end": 305,
+     "text": "Pax holds the umbrella over Polly while she lowers the book from her head"
+    },
+    {
+     "start": 305,
+     "end": 321,
+     "text": "Polly holds the book against her chest under the umbrella while Pax turns his head to look at her"
+    },
+    {
+     "start": 321,
+     "end": 346,
+     "text": "Polly shuts her eyes in a happy smile, then opens them with blushing cheeks while Pax keeps the umbrella over them both"
+    }
+   ],
+   "props": [
+    "umbrella",
+    "teal book",
+    "bus stop sign"
+   ],
+   "prop_events": [],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: ECC on the bus-stop sign band (x 0-0.22, y 0.33-0.60) within 1.4 px and scale 0.998-1.003 with a repeating pattern (looped rain lines cross the band), cc >= 0.985; compare 277/345 sign, pole, clouds and pine edges black, only rain and characters change. Rain falls throughout (in-world weather). Bus sign shows a bus icon only. No overlay | verification pass 2 (verify_v10_report_v08): beat 3: Polly looks ahead, not up at Pax; it is Pax who turns his head to look at her (f311-319); beat 4: f321-324 Polly closes her eyes in a smile; the blush only appears from f325"
+  },
+  {
+   "start": 346,
+   "end": 368,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s4",
+   "view": "with a cream vanity holding two basin sinks, a cup of toothbrushes and a mirror",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 346,
+     "end": 352,
+     "text": "Pax stands by the bathroom sink holding a small pad of yellow sticky notes in his flippers"
+    },
+    {
+     "start": 352,
+     "end": 358,
+     "text": "Pax peels a sticky note off the pad with one flipper"
+    },
+    {
+     "start": 358,
+     "end": 368,
+     "text": "Pax reaches up toward the mirror with the sticky note in one flipper"
+    }
+   ],
+   "props": [
+    "sticky notes",
+    "mirror",
+    "toothbrushes"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: ECC on the wall band (y 0-0.35) scale 1.0000, 0 px, cc 1.000 every 3 frames; compare 346/367 vanity and mirror edges black. 22 frames. No overlay | verification pass 2 (verify_v10_report_v08): beats: the note is peeled off f352-357, inside beat 1's range; from f358 Pax only reaches up toward the mirror (it reaches the mirror edge at f367, the press itself is in the next shot)"
+  },
+  {
+   "start": 368,
+   "end": 398,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "insert to the end: the mirror fills the picture with a handwritten sticky note on it; Pax's flipper smooths the note on f368-381 and leaves. Note text is in-world (not transcribed)"
+  }
+ ]
+}

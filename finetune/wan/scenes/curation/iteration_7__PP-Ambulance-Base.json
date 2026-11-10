@@ -1,0 +1,166 @@
+{
+ "skit": "iteration_7/293_videos/PP-Ambulance-Base.mp4",
+ "frames": 153,
+ "fps": 24.0,
+ "curated_by": "curator-v10-03",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a snowy town street lined with colourful shops and igloo domes"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 75,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a soft-focus shop front with a striped awning behind her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 8,
+     "text": "Polly holds {ifin} at her chest and taps at its screen with her other flipper"
+    },
+    {
+     "start": 8,
+     "end": 20,
+     "text": "Polly raises a flipper to her cheek and stares wide-eyed with her beak slightly open"
+    },
+    {
+     "start": 20,
+     "end": 40,
+     "text": "Polly holds the phone out to her side and sways with her eyes closed and a dreamy open-beaked smile"
+    },
+    {
+     "start": 40,
+     "end": 56,
+     "text": "Polly brings the phone back to her chest and gazes down at it with teary eyes and a small smile"
+    },
+    {
+     "start": 56,
+     "end": 62,
+     "text": "Polly hugs the phone to her chest with her eyes squeezed shut and a tear at each eye"
+    },
+    {
+     "start": 62,
+     "end": 75,
+     "text": "Polly turns aside and presses a flipper to her face, beaming with her eyes shut and tears at their corners"
+    }
+   ],
+   "props": [
+    "phone"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 0,
+     "by": "polly",
+     "is_ifin": true
+    }
+   ],
+   "effects": [
+    "tears"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f0-74 (ECC on the shop band 0.02-0.30: scale 1.0000, 0 px, cc 1.000). Phone back is pale grey with the lens cluster and the little tuft on top = iFin. Screen faces Polly the whole span. No overlay in the top third or bottom fifth."
+  },
+  {
+   "start": 75,
+   "end": 109,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "pull_back",
+   "notes": "f76-108: Polly turns the phone round and its screen shows a picture of Pax (seen from behind, looking into a mirror), recognisable at full res also in the wide shot f96-108. Also camera moves: a small reframing shift f75-81 (background tx 0 -> -47 px), then a fast pull-back f90-97 to a wide shot (scale 0.98 -> 0.82 -> ... ), locked again from f98. One run, one reason (lead_copy outranks camera_move)."
+  },
+  {
+   "start": 109,
+   "end": 153,
+   "boundary": "same_shot",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a smashed black grand piano lying in the street beside her and debris scattered in front of it",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 109,
+     "end": 131,
+     "text": "Polly holds {ifin} in front of her chest and looks at it with a worried frown while Pax lies flattened under the smashed piano with crossed-out eyes"
+    },
+    {
+     "start": 131,
+     "end": 153,
+     "text": "Polly lifts the phone to her ear and waits with a worried frown while Pax lies dazed under the piano"
+    }
+   ],
+   "props": [
+    "phone",
+    "smashed grand piano",
+    "piano debris"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 109,
+     "by": "polly",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "starts the frame after the phone screen (Pax picture) turns away: f108 last screen frame, f109 shows the phone's back. Camera locked f98-152 (ECC on the shop band 0.28-0.45 vs f100: scale 1.0001, <1 px, cc 1.000; the sky band drifts only because the clouds move). Pax is pinned under the piano, head and belly visible, not moving. No overlay."
+  }
+ ]
+}

@@ -1,0 +1,320 @@
+{
+ "skit": "iteration_7/293_videos/PP-Hidden-Base.mp4",
+ "frames": 298,
+ "fps": 24.0,
+ "curated_by": "curator-v10-28",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a snowy yard beside a big igloo"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 112,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a snowy fir tree beside the igloo",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 6,
+     "text": "Polly stands at the edge of the igloo with her back half turned, peering around it"
+    },
+    {
+     "start": 6,
+     "end": 24,
+     "text": "Polly turns to face forward and shuffles along the igloo wall with her flippers out"
+    },
+    {
+     "start": 24,
+     "end": 36,
+     "text": "Polly stands against the igloo and glances off to the side with wide eyes"
+    },
+    {
+     "start": 36,
+     "end": 45,
+     "text": "Polly closes her eyes with a sly smile, her beak opening into a grin"
+    },
+    {
+     "start": 45,
+     "end": 57,
+     "text": "Polly opens her eyes and peers off to one side, checking around her"
+    },
+    {
+     "start": 57,
+     "end": 69,
+     "text": "Polly pulls a snack bag out from behind her back and hugs it to her chest"
+    },
+    {
+     "start": 69,
+     "end": 90,
+     "text": "Polly digs a snack out of the bag and pops it into her beak"
+    },
+    {
+     "start": 90,
+     "end": 112,
+     "text": "Polly munches with her eyes closed and a pleased smile, one flipper raised beside her face"
+    }
+   ],
+   "props": [
+    "snack bag",
+    "snacks",
+    "igloo"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "motion on the igloo and fir tree (y 0.05-0.30, full width) scale 1.0000, 0 px, cc 1.000 throughout; compare 0/111 igloo bricks black (the tree's snow tufts change slightly). Snack bag print is a bucket and a fish, no lettering. No overlay | verification pass 2 (verify_v10_report_v23): beat 3 [24,45): Polly looks off to one side with open eyes f24-35, then holds her eyes closed with a sly smile (beak open f38-42) f36-46; no side-to-side glancing and no blink; beat 4 [45,57): her eyes are still shut f45-46 and open from f48"
+  },
+  {
+   "start": 112,
+   "end": 175,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with snowy hills behind the igloo",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 127,
+       "screen": "center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 112,
+     "end": 127,
+     "text": "Pax steps back toward the igloo wall holding a snack bag, peering off to the side"
+    },
+    {
+     "start": 127,
+     "end": 142,
+     "text": "Pax turns to face forward, closing his eyes with a sly smile and then glancing around"
+    },
+    {
+     "start": 142,
+     "end": 151,
+     "text": "Pax swings the snack bag in front of him and hugs it"
+    },
+    {
+     "start": 151,
+     "end": 163,
+     "text": "Pax reaches into the bag and pops a snack into his beak"
+    },
+    {
+     "start": 163,
+     "end": 175,
+     "text": "Pax munches with his eyes squeezed shut, then freezes wide-eyed and blushing with another snack held up"
+    }
+   ],
+   "props": [
+    "snack bag",
+    "snacks",
+    "igloo"
+   ],
+   "prop_events": [],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "moves_within",
+   "notes": "motion on the igloo (y 0.12-0.30, x 0.30-1.00) scale 1.0000, 0 px, cc 1.000 from f112 to f174 (step 1 at the end); compare 112/174 igloo bricks black. A fast pan starts at f175. Bag print is an octopus. No overlay | verification pass 2 (verify_v10_report_v23): beat 5 [163,175): blush marks appear on Pax's cheeks from f169 when he freezes; missing from the beat and from effects"
+  },
+  {
+   "start": 175,
+   "end": 193,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pan_right",
+   "notes": "18 frames: fast pan along the igloo from Pax's side to Polly's side f175-181 (motion vs f170: tx -15 px at f175, -78 at f176, -375 at f177; both leads in frame at f178), then 11 static frames of Polly eating (f182-192)"
+  },
+  {
+   "start": 193,
+   "end": 214,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the igloo wall behind him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "partial",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 193,
+     "end": 214,
+     "text": "Pax freezes with a snack raised near his open beak and the bag in his other flipper, staring wide-eyed and blushing"
+    }
+   ],
+   "props": [
+    "snack bag",
+    "snacks"
+   ],
+   "prop_events": [],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "21 frames. motion on the igloo bricks (y 0-0.25) scale 1.0000-1.0011, under 0.5 px, cc 1.000 (Pax's tuft brushes the band); compare 193/213 brick edges black, diff map blank off Pax. No overlay"
+  },
+  {
+   "start": 214,
+   "end": 268,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "close-up",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with the igloo wall behind her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "partial",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 214,
+     "end": 248,
+     "text": "Polly freezes with a fish-shaped cracker at her open beak, staring wide-eyed and blushing, and blinks twice"
+    },
+    {
+     "start": 248,
+     "end": 256,
+     "text": "Polly pops the cracker into her beak and chews with her eyes closed"
+    },
+    {
+     "start": 256,
+     "end": 268,
+     "text": "Polly keeps chewing calmly, glancing off to the side"
+    }
+   ],
+   "props": [
+    "snack bag",
+    "fish-shaped cracker"
+   ],
+   "prop_events": [],
+   "effects": [
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "motion on the igloo bricks (y 0-0.25) scale 1.0000, 0 px, cc 1.000 throughout; compare 214/267 brick edges black. No overlay | verification pass 2 (verify_v10_report_v23): beat 1 [214,248): Polly blinks twice (eyes shut f222-223 and f228-230), not once"
+  },
+  {
+   "start": 268,
+   "end": 298,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with snowy fir trees and hills behind them",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 268,
+     "end": 284,
+     "text": "Pax and Polly sit side by side against the igloo with snack bags in their laps while Pax munches and reaches into her bag"
+    },
+    {
+     "start": 284,
+     "end": 294,
+     "text": "Polly reaches across into Pax's bag with an open-beaked smile while Pax looks on"
+    },
+    {
+     "start": 294,
+     "end": 298,
+     "text": "Polly lifts an octopus-shaped snack from Pax's bag up to her open beak"
+    }
+   ],
+   "props": [
+    "snack bags",
+    "snacks",
+    "igloo"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "compare 268/297: igloo, trees and snow lines black, diff map blank off the leads; the 0.26% drift in the sky band (y 0.10-0.40) comes from the clouds. No overlay | verification pass 2 (verify_v10_report_v23): beat 2 [284,294): they do not smile at each other; Polly smiles with her eyes shut then open-beaked looking ahead while Pax looks on"
+  }
+ ]
+}

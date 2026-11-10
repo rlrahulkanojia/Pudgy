@@ -1,0 +1,463 @@
+{
+ "skit": "iteration_7/293_videos/PP_Photogenic_Base.mp4",
+ "frames": 442,
+ "fps": 24.0,
+ "curated_by": "curator-v10-03",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a plain pale grey background"
+  },
+  "s2": {
+   "kind": "set",
+   "desc": "a dim bedroom with a big padded bed and a small bedside lamp"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 73,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 9,
+     "text": "Pax and Polly step to a stop side by side, Polly holding a phone in one flipper"
+    },
+    {
+     "start": 9,
+     "end": 27,
+     "text": "Pax gives Polly a worried look and holds out a flipper while she shuffles a little away, holding her phone"
+    },
+    {
+     "start": 27,
+     "end": 40,
+     "text": "Polly holds her phone in front of her chest with both flippers and looks at it while Pax watches"
+    },
+    {
+     "start": 40,
+     "end": 46,
+     "text": "Polly turns and holds her phone up beside her face, smiling with her eyes closed"
+    },
+    {
+     "start": 46,
+     "end": 57,
+     "text": "Pax leans in toward Polly with his eyes squeezed shut and a flipper raised while she keeps the phone up"
+    },
+    {
+     "start": 57,
+     "end": 73,
+     "text": "Pax hides his face behind a flipper while Polly lowers the phone and stares at it with a flat look"
+    }
+   ],
+   "props": [
+    "phone"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 0,
+     "by": "polly",
+     "is_ifin": false
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "plain ground (RGB ~212,228,236), so ECC has no texture. Camera judged locked by the characters: Pax's silhouette and shadow stay at the same box (y 414-666 at 540x960) from f8 to f72, Polly's from f24; the small shifts f0-24 differ between the two (they finish a step), so they are character motion, not the camera. Phone has two lenses and no tuft: not the iFin. No overlay."
+  },
+  {
+   "start": 73,
+   "end": 103,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "phone-screen insert: a photo of Pax with sparkles on the screen (also lead_copy), photo-app UI, only Polly's flippers at the bottom edge."
+  },
+  {
+   "start": 103,
+   "end": 129,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 103,
+     "end": 111,
+     "text": "Polly stands holding a phone up beside her and glances sideways with a blank look"
+    },
+    {
+     "start": 111,
+     "end": 129,
+     "text": "Polly narrows her eyes into a flat, unimpressed frown, still holding the phone beside her"
+    }
+   ],
+   "props": [
+    "phone"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 103,
+     "by": "polly",
+     "is_ifin": false
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "plain ground; Polly's box is fixed (x 130-383, y 355-681) from f112 to f128 and her feet and shadow never move: camera locked. No overlay."
+  },
+  {
+   "start": 129,
+   "end": 205,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a table in front of them holding a plate of salmon and a plate of sushi rolls",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 129,
+     "end": 143,
+     "text": "Pax stuffs pieces of salmon into his beak from a plate while Polly sits beside him holding a phone"
+    },
+    {
+     "start": 143,
+     "end": 153,
+     "text": "Pax looks up wide-eyed with his cheeks full, holding up a piece of salmon, while Polly glances at him"
+    },
+    {
+     "start": 153,
+     "end": 161,
+     "text": "Pax goes back to eating from the plate while Polly looks down at her phone"
+    },
+    {
+     "start": 161,
+     "end": 189,
+     "text": "Polly holds her phone up and points it at Pax while he keeps gobbling the salmon with his eyes closed"
+    },
+    {
+     "start": 189,
+     "end": 205,
+     "text": "Polly lowers the phone and looks at its screen while Pax keeps eating"
+    }
+   ],
+   "props": [
+    "phone",
+    "plate of salmon",
+    "plate of sushi rolls",
+    "table"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 129,
+     "by": "polly",
+     "is_ifin": false
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f129-204: pixel diff of the table-front band (y 0.70-0.80) is 0.00 vs f129 on every frame; compare 129/204 table edge and sushi plate black. Both leads seated behind the table, upper bodies in view. No overlay."
+  },
+  {
+   "start": 205,
+   "end": 235,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "phone-screen insert: a photo of Pax holding up a plate of salmon with sparkles (also lead_copy), photo-app UI, only Polly's flippers at the bottom edge."
+  },
+  {
+   "start": 235,
+   "end": 257,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a table in front of her holding a plate of sushi rolls",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 235,
+     "end": 240,
+     "text": "Polly hunches over her phone at the table and squints at it with a frown"
+    },
+    {
+     "start": 240,
+     "end": 257,
+     "text": "Polly lifts her head and stares ahead wide-eyed with her beak slightly open, the phone still in her flipper"
+    }
+   ],
+   "props": [
+    "phone",
+    "plate of sushi rolls",
+    "table"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 235,
+     "by": "polly",
+     "is_ifin": false
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "22 frames. Camera locked: compare 235/256 table edge and sushi plate edges black; the band diffs change only where Polly moves and are 0.00 frame to frame from f246. No overlay."
+  },
+  {
+   "start": 257,
+   "end": 336,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "high angle",
+   "setting": "s2",
+   "view": "with a cream blanket pulled up over the bed",
+   "time": "night",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 257,
+     "end": 289,
+     "text": "Polly sits up in bed looking at her phone while Pax sleeps beside her with his beak open"
+    },
+    {
+     "start": 289,
+     "end": 305,
+     "text": "Polly narrows her eyes and glances sideways at the sleeping Pax, holding her phone"
+    },
+    {
+     "start": 305,
+     "end": 316,
+     "text": "Polly lifts her phone and points it at Pax with a sly frown"
+    },
+    {
+     "start": 316,
+     "end": 325,
+     "text": "Polly aims the phone at Pax and a beam of light from it falls across his sleeping face"
+    },
+    {
+     "start": 325,
+     "end": 336,
+     "text": "Polly brings the phone back to her chest and peers at it while Pax sleeps on"
+    }
+   ],
+   "props": [
+    "phone",
+    "bed",
+    "bedside lamp"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 257,
+     "by": "polly",
+     "is_ifin": false
+    }
+   ],
+   "effects": [
+    "phone light beam"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "steady night lighting (dimmed palette), kept with time night per the curator ruling; current flat style, not OLD_DESIGN. Camera locked: compare 257/290 and 257/335 bed and lamp edges black; ECC on the bed-front band scale ~0.999, <1 px. The phone's light beam on Pax f316-324 is local, not a whole-picture effect. No overlay."
+  },
+  {
+   "start": 336,
+   "end": 372,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "phone-screen insert: an edited magazine-cover picture of the sleeping Pax with title text (also lead_copy), Polly's flippers at the bottom edge."
+  },
+  {
+   "start": 372,
+   "end": 408,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "high angle",
+   "setting": "s2",
+   "view": "with a cream blanket pulled up over the bed",
+   "time": "night",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 372,
+     "end": 386,
+     "text": "Polly holds her phone up close and stares at it with a small frown while Pax sleeps beside her"
+    },
+    {
+     "start": 386,
+     "end": 396,
+     "text": "Polly raises the phone beside her face and smiles with her eyes closed as its flash lights up her face"
+    },
+    {
+     "start": 396,
+     "end": 408,
+     "text": "Polly holds the pose, smiling with her eyes closed, while Pax sleeps beside her"
+    }
+   ],
+   "props": [
+    "phone",
+    "bed",
+    "bedside lamp"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 372,
+     "by": "polly",
+     "is_ifin": false
+    }
+   ],
+   "effects": [
+    "camera flash on her face"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "same night bedroom set-up as f257-335. Camera locked: ECC on the bed-front band vs f372 scale 1.0000, 0 px, cc 1.000; compare 372/407 bed edges black. The selfie flash f391-395 whitens only Polly's face. No overlay."
+  },
+  {
+   "start": 408,
+   "end": 442,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "phone-screen insert: Polly's selfie on the screen (also lead_copy), Polly's flippers at the bottom edge."
+  }
+ ]
+}

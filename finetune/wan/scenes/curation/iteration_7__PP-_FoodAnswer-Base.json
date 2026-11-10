@@ -1,0 +1,428 @@
+{
+ "skit": "iteration_7/293_videos/PP- FoodAnswer-Base.mp4",
+ "frames": 408,
+ "fps": 24.0,
+ "curated_by": "curator-v10-10",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a living room drawn on a plain pale grey background"
+  },
+  "s2": {
+   "kind": "set",
+   "desc": "an igloo hallway with pale ice-brick walls and a wooden door"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 20,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "shake",
+   "notes": "Pax alone on the cream sofa tapping a phone: locked f0-10 (11 frames), then a screen shake f11-19 as he flings the phone away (ECC sofa band jumps of 10-70 px at cc >= 0.98; compare 10/13 shows doubled sofa edges). 20 frames in all"
+  },
+  {
+   "start": 20,
+   "end": 39,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "whip",
+   "notes": "locked f20-34 (15 frames: Pax lands back on the sofa and looks to the right as the phone falls), then a whip pan f35-38 (ECC tx +8, +42, +510 px). 19 frames in all"
+  },
+  {
+   "start": 39,
+   "end": 55,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pan_right",
+   "notes": "Polly at an open wooden door in an ice-brick wall, flipper out, angry: the pan settles f39-46 (ECC tx +65 -> +122 px), locked only f47-54 (8 frames)"
+  },
+  {
+   "start": 55,
+   "end": 65,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "push_in",
+   "notes": "fast push-in from the doorway to Polly's glaring face f55-64"
+  },
+  {
+   "start": 65,
+   "end": 82,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "17 frames: extreme close-up of Polly's angry face with a dark vignette and a red glow (also effect)"
+  },
+  {
+   "start": 82,
+   "end": 135,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a cream sofa with scalloped yellow armrests",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "left",
+     "presence": "enters",
+     "enters_at": 82,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 109,
+       "screen": "left-center"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 82,
+     "end": 106,
+     "text": "Polly stomps in from the left toward the sofa with a red, scowling face while Pax sits on it, sweating nervously"
+    },
+    {
+     "start": 106,
+     "end": 116,
+     "text": "Polly hops up and plops down on the sofa beside Pax"
+    },
+    {
+     "start": 116,
+     "end": 127,
+     "text": "Polly squeezes her eyes shut, then glares sideways at Pax with a red, angry face while Pax glances back at her uneasily"
+    },
+    {
+     "start": 127,
+     "end": 135,
+     "text": "Polly folds her flippers and turns her face away with her eyes shut while Pax pulls a burger out from beside him, smiling"
+    }
+   ],
+   "props": [
+    "sofa",
+    "burger"
+   ],
+   "prop_events": [
+    {
+     "prop": "burger",
+     "event": "takes_out",
+     "frame": 132,
+     "by": "pax"
+    }
+   ],
+   "effects": [
+    "sweat drop",
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "enters",
+   "notes": "locked f82-134: consecutive ECC on the right sofa arm band (x 0.88-1.0) scale 1.0000, 0 px every frame; the left-arm band changes only while Polly walks past it. A punch-in starts at f135; compare 82/134: every sofa edge (arms, legs, cushions) overlaps | verification pass 2 (verify_v10_report_v07): beat [116,130): Polly's eyes are open and glaring at Pax f121-126; she only folds her flippers, shuts her eyes and turns her face away from f127; beat [130,135): split differently so Polly's turn-away and Pax's burger share one beat"
+  },
+  {
+   "start": 135,
+   "end": 141,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "push_in",
+   "notes": "punch-in f135-140 (both sofa-arm bands move, ~6% scale); Pax pushes the burger to Polly's beak"
+  },
+  {
+   "start": 141,
+   "end": 206,
+   "boundary": "camera",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a cream sofa with scalloped yellow armrests",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 141,
+     "end": 150,
+     "text": "Pax leans over with his eyes squeezed shut and presses a burger to Polly's beak while she sits with her flippers folded, staring wide-eyed"
+    },
+    {
+     "start": 150,
+     "end": 182,
+     "text": "Polly takes bites of the burger Pax holds to her beak, small blush marks on her cheeks, while Pax watches nervously"
+    },
+    {
+     "start": 182,
+     "end": 186,
+     "text": "Polly takes the burger into her own flippers and glares with a red face while Pax sits back"
+    },
+    {
+     "start": 186,
+     "end": 196,
+     "text": "Polly chews with her eyes squeezed shut and her face flushed red, holding the burger, while Pax watches her"
+    },
+    {
+     "start": 196,
+     "end": 206,
+     "text": "Polly raises one flipper and shouts with a red, angry face, the burger in her other flipper, while Pax sweats"
+    }
+   ],
+   "props": [
+    "sofa",
+    "burger"
+   ],
+   "prop_events": [
+    {
+     "prop": "burger",
+     "event": "hands_over",
+     "frame": 182,
+     "by": "pax"
+    }
+   ],
+   "effects": [
+    "sweat drop",
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "locked f141-205: consecutive ECC on both sofa-arm bands 1.0000 / 0 px (single-band blips at f182-194 and f203 are Pax's flipper; compare 202/204 background edges black). Punch-in from f206; compare 141/205: every sofa edge (arms, legs, cushions) overlaps | verification pass 2 (verify_v10_report_v07): beat [141,150): Polly's eyes are open (wide, staring at the burger); it is Pax whose eyes are squeezed shut f141-149; beat [150,182): Polly does not open her eyes here, they were already open; beat [182,196): Polly glares with open eyes and a red face f182-185, and f186-195 she chews with eyes squeezed shut and a red flush: not clearly happy"
+  },
+  {
+   "start": 206,
+   "end": 215,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "push_in",
+   "notes": "punch-in f206-214 (~20% scale, both sofa-arm bands) as Pax pushes a green ice pop at Polly"
+  },
+  {
+   "start": 215,
+   "end": 289,
+   "boundary": "camera",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a cream sofa with scalloped yellow armrests",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 215,
+     "end": 227,
+     "text": "Pax holds a green ice pop to Polly's beak while she clutches her burger, still blushing"
+    },
+    {
+     "start": 227,
+     "end": 242,
+     "text": "Polly takes the ice pop and licks it with her eyes closed as Pax sits back beside her"
+    },
+    {
+     "start": 242,
+     "end": 274,
+     "text": "Polly sits licking the ice pop and holding her burger while Pax watches her with a sweat drop"
+    },
+    {
+     "start": 274,
+     "end": 280,
+     "text": "Polly scowls again with a red face, holding the ice pop and the burger"
+    },
+    {
+     "start": 280,
+     "end": 289,
+     "text": "Pax leans away to the right and reaches over the sofa arm while Polly frowns, holding up the ice pop"
+    }
+   ],
+   "props": [
+    "sofa",
+    "burger",
+    "green ice pop"
+   ],
+   "prop_events": [
+    {
+     "prop": "green ice pop",
+     "event": "hands_over",
+     "frame": 227,
+     "by": "pax"
+    }
+   ],
+   "effects": [
+    "sweat drop",
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "locked f215-288: the left sofa-arm band is 1.0000 / 0 px throughout; right-band changes f240-247 and f278-287 are Pax leaning into it. The sofa's left arm is cut by the left edge in this tighter framing. Push-in from f289; compare 215/288: every sofa edge (arms, legs, cushions) overlaps"
+  },
+  {
+   "start": 289,
+   "end": 307,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "push_in",
+   "notes": "push-in f289-296 (~25% scale), then a 10-frame hold f297-306 as Pax holds a drink cup to Polly. 18 frames in all"
+  },
+  {
+   "start": 307,
+   "end": 315,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "pull-back f307-314 to the full sofa framing (both bands, scale -30%)"
+  },
+  {
+   "start": 315,
+   "end": 408,
+   "boundary": "camera",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a cream sofa with scalloped yellow armrests",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "left-center",
+     "presence": "exits",
+     "exits_at": 404,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 380,
+       "screen": "left"
+      }
+     ]
+    },
+    {
+     "id": "pax",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 315,
+     "end": 339,
+     "text": "Polly sits with her arms full of the burger, the ice pop and a drink cup, sipping and munching, while Pax sits beside her"
+    },
+    {
+     "start": 339,
+     "end": 357,
+     "text": "Polly munches happily with little hearts floating up above her head while Pax sits beside her"
+    },
+    {
+     "start": 357,
+     "end": 370,
+     "text": "Polly turns and leans in close against Pax's cheek, hugging her food, while Pax sweats"
+    },
+    {
+     "start": 370,
+     "end": 378,
+     "text": "Polly sits up and hops down off the front of the sofa with her armful of food"
+    },
+    {
+     "start": 378,
+     "end": 394,
+     "text": "Polly waddles away to the left with her food and her eyes closed while Pax raises a flipper after her"
+    },
+    {
+     "start": 394,
+     "end": 408,
+     "text": "Pax slumps back on the sofa with a sweat drop as Polly walks out of the picture on the left"
+    }
+   ],
+   "props": [
+    "sofa",
+    "burger",
+    "green ice pop",
+    "drink cup with a straw"
+   ],
+   "prop_events": [
+    {
+     "prop": "drink cup with a straw",
+     "event": "hands_over",
+     "frame": 315,
+     "by": "pax"
+    }
+   ],
+   "effects": [
+    "hearts",
+    "sweat drop",
+    "blush marks"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "exits",
+   "notes": "locked f315-407: consecutive ECC on the right sofa-arm band 1.0000 / 0 px every frame; the left-band changes f381-404 are Polly walking past. Polly's last sliver leaves at f403; compare 315/407: every sofa edge (arms, legs, cushions) overlaps"
+  }
+ ]
+}

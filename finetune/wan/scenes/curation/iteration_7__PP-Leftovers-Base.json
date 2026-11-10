@@ -1,0 +1,225 @@
+{
+ "skit": "iteration_7/293_videos/PP-Leftovers-Base.mp4",
+ "frames": 339,
+ "fps": 24,
+ "curated_by": "curator-v10-26",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a dining area with a round cream table and wooden chairs, drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 91,
+   "boundary": "start",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with paper trays of fried bites on lettuce on the table",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 28,
+     "text": "Pax gobbles the fried bites from his tray one after another while Polly picks up a single piece"
+    },
+    {
+     "start": 28,
+     "end": 48,
+     "text": "Pax sits back chewing with crumbs around his beak and one flipper raised, his tray now empty"
+    },
+    {
+     "start": 48,
+     "end": 72,
+     "text": "Pax stares over at Polly's tray with crumbs on his face while Polly sits with her flippers resting by her food"
+    },
+    {
+     "start": 72,
+     "end": 91,
+     "text": "Polly lifts a fried bite from her tray up toward her beak while Pax watches"
+    }
+   ],
+   "props": [
+    "paper trays",
+    "fried bites",
+    "lettuce"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "locked: ECC on the table-base and chair-leg band right of Pax (y 0.64-0.76, x 0.40-0.95) scale 1.0000, -0.1 px, cc 1.000 every 10 frames; compare 0/90 keeps table and chair edges black. (A full-width leg band reads ty +13 px only because Pax's feet are in it.) Hard cut to Polly at f91. A small pink seashell sticker on Pax's chair leg is a prop, not a penguin. Top third plain wall, bottom fifth plain floor: no overlay"
+  },
+  {
+   "start": 91,
+   "end": 127,
+   "boundary": "cut",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a paper tray of fried bites on the table in front of her",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 91,
+     "end": 101,
+     "text": "Polly holds up a fried bite on a pick and pops it into her beak"
+    },
+    {
+     "start": 101,
+     "end": 127,
+     "text": "Polly chews with her eyes closed and a happy smile, lowering her flipper to the tray"
+    }
+   ],
+   "props": [
+    "paper tray",
+    "fried bites"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "locked: ECC on the table and pedestal band (y 0.72-0.99, x 0-0.55) scale 1.0000 to 0.9999, drift under 1 px over 36 frames, cc 1.000; compare 91/124 keeps table and chair edges black. A fast pull-back starts at f127 (ECC scale 0.989 at f127, 0.956 at f128). Top third plain wall: no overlay"
+  },
+  {
+   "start": 127,
+   "end": 141,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pull_back",
+   "notes": "14-frame pull-back from Polly to the wide two-shot (ECC scale 0.79 by f136, easing until f141; f141-on static)"
+  },
+  {
+   "start": 141,
+   "end": 339,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with paper trays of fried bites on lettuce on the table",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    },
+    {
+     "id": "polly",
+     "screen": "right-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 141,
+     "end": 164,
+     "text": "Pax leans over toward Polly's tray, eyeing her food, while Polly chews with her eyes closed"
+    },
+    {
+     "start": 164,
+     "end": 176,
+     "text": "Pax sits back upright and gazes off to the side while Polly keeps chewing with her eyes closed"
+    },
+    {
+     "start": 176,
+     "end": 188,
+     "text": "Polly opens her eyes, lifts a fried bite and pops it into her beak while Pax watches"
+    },
+    {
+     "start": 188,
+     "end": 216,
+     "text": "Pax sits with his flippers on the table, staring at Polly's food, while Polly looks back at him"
+    },
+    {
+     "start": 216,
+     "end": 244,
+     "text": "Pax turns to face forward and folds his flippers on the table, glancing sideways at Polly"
+    },
+    {
+     "start": 244,
+     "end": 266,
+     "text": "Polly picks up a white napkin and dabs her beak with it while Pax sits with folded flippers"
+    },
+    {
+     "start": 266,
+     "end": 300,
+     "text": "Polly sits back with her eyes closed and a content smile while Pax watches her"
+    },
+    {
+     "start": 300,
+     "end": 320,
+     "text": "Polly opens her eyes and pushes her tray across the table toward Pax as he unfolds his flippers"
+    },
+    {
+     "start": 320,
+     "end": 339,
+     "text": "Pax grabs a fried bite from her tray and gobbles it with his eyes shut as a small heart floats up"
+    }
+   ],
+   "props": [
+    "paper trays",
+    "fried bites",
+    "lettuce",
+    "napkin"
+   ],
+   "prop_events": [],
+   "effects": [
+    "hearts"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "locked after the pull-back: ECC on the chair-leg band (y 0.70-0.82) scale 1.0000, 0.0 px, cc 1.000 every 20 frames f141-321; compare 150/338 keeps table, chair and shadow edges black. Polly's tray is left with only lettuce at the end. Top third plain wall, bottom fifth plain floor: no overlay"
+  }
+ ]
+}

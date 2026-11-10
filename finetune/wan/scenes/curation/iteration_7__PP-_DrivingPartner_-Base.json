@@ -1,0 +1,74 @@
+{
+ "skit": "iteration_7/293_videos/PP- DrivingPartner -Base.mp4",
+ "frames": 246,
+ "fps": 24.0,
+ "curated_by": "curator-v10-20",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {
+  "o1": "a red bow on her head",
+  "o2": "a pearl necklace",
+  "o3": "a lavender striped scarf",
+  "o4": "a white top with yellow flowers",
+  "o5": "a green hoodie",
+  "o6": "red cat-eye sunglasses"
+ },
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "the driver's seat of a red open-top car on a snowy country road"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 44,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "other",
+   "notes": "Client 2026-11-05: pearl necklace = Polly dressed up (Q3, U5). Still dropped: vehicle-mounted tracking shot, camera other, like spans 1-4 of this skit. | U5: pearl necklace. Polly-shaped penguin with a red bow on her head (o1) and a pearl necklace (o2), playing Polly's part: she is the only character, and the other four shots show the same driver as plain Polly in other outfits, so the skit does not present her as someone else. Reason order puts lookalike above camera_move, so drop_reason is lookalike. NOT filled although the pearl-necklace ruling says to fill: this is also a vehicle-mounted tracking shot (ruling: camera 'other', unfilled; 'other' has no caption clause and would not compile), so a U5 flip alone could not make it keepable. Camera evidence: vehicle-mounted tracking shot, the whole skit is five of these: the car hood and Polly stay locked (motion on the hood band y0.60-0.95: scale 1.000, ty bobs 2-10 px as the car bounces), while the scenery layer behind recedes and slides (motion on the iceberg band y0.22-0.44 (no clouds in this sky): scale 0.96 -> 0.86 over f0-42, cc 0.82-0.91; compare 0/43 doubled iceberg and car edges). Same handling as the v9b driving shots (KeepUsSafe, Savings, LifeWithHim). Not filled: no caption clause exists for this move ('other' does not compile, and push_in/pull_back would be false because the car does not change size). Content for a later fill: Polly with a red bow on her head and a pearl necklace drives, eating a fry, with a paper bag, a drink cup and fries on the passenger seat. No overlay, no lead copy, no real brand (the fries box carries an invented letter logo)"
+  },
+  {
+   "start": 44,
+   "end": 92,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "other",
+   "notes": "vehicle-mounted tracking as span 0: scenery recedes steadily: compare 50/90 doubled pine-tree and hill edges (the tree band is too sparse for motion to fit; the sky band reads scale 0.953 -> 0.760, but it holds clouds, so it is only supporting evidence); car locked. Not filled (no clause for this move). Content: Polly in a lavender striped scarf drives with both flippers on the wheel, a cake in a clear box on the passenger seat. No overlay"
+  },
+  {
+   "start": 92,
+   "end": 141,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "other",
+   "notes": "vehicle-mounted tracking as span 0: peach-sky scenery recedes, motion on the tree/hill band below the sky (y0.28-0.42, x0-0.5) scale 0.954 -> 0.812 over f92-124 at cc 0.999; car locked (compare 100/140: car edges black). Not filled (no clause for this move). Content: Polly in a white top with yellow flowers drives with her eyes shut in a smile, waves a flipper out to the side ~f115-125, then looks ahead; a tied bag of takeout boxes on the passenger seat. No overlay"
+  },
+  {
+   "start": 141,
+   "end": 176,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "other",
+   "notes": "vehicle-mounted tracking as span 0, at sunset: sun, dunes and cacti recede (motion on the low band y0.30-0.42, x0-0.5: scale 0.962 -> 0.852 over f141-165 at cc >= 0.998; compare 141/175 doubled cactus and dune edges), which also brings more of the dark upper sky into view (not a time-lapse effect). The car jolts once at f152 (car edges jump, sky does not; profile's f152 'cut' candidate is this jolt, not a cut). Not filled. Content: Polly in a green hoodie drives with a stack of pizza boxes on the passenger seat, glancing sideways, a squinting smile ~f168-172. No overlay"
+  },
+  {
+   "start": 176,
+   "end": 246,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "other",
+   "notes": "vehicle-mounted tracking as span 0: hills and pine trees recede (motion on the tree/hill band y0.28-0.42, x0-0.5: scale 0.970 -> 0.896 over f176-196 at cc >= 0.997; compare 180/240 doubled tree and hill edges, new trees come in); car hood locked apart from a small bounce (hood band scale 1.000, ty up to 17 px ~f204-218). Not filled. Content: Polly in red cat-eye sunglasses drives sipping an iced coffee through a straw, a carrier of coffee cups on the passenger seat. The cups' round green logo is a generic white penguin face with a crown (an invented coffee-brand parody, not a real logo), not Pax or Polly: in-world packaging, not ad_merch. No overlay. Skit ends on this shot"
+  }
+ ]
+}

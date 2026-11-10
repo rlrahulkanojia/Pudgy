@@ -1,0 +1,33 @@
+{
+ "skit": "iteration_7/293_videos/PP_Call_me_anytime_9x16_base.mov",
+ "frames": 255,
+ "fps": 24.0,
+ "curated_by": "curator-v10-01",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {},
+ "outfits": {},
+ "settings": {},
+ "spans": [
+  {
+   "start": 0,
+   "end": 133,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "off_style",
+   "camera": "static",
+   "overlays": [],
+   "notes": "Older Pudgy art style in an isometric cut-away: a glossy, shaded light-blue sofa seen from high above, floating on a flat cyan void, with thin dark-blue furniture outlines. The penguin looks like an earlier Polly design (pale pink body, three-strand tuft, bright yellow feet instead of orange), so identity is also unplaced (a U5-type question), but the drop stands on style alone. Action: she lies back on the sofa holding a phone to her ear and eating fish crackers from a bag on her belly, tosses a cracker up f25-40, then holds the phone in front of her face from ~f85; the bag tips and crackers spill to the floor from ~f110. Phone has two lenses and a logo, no tuft: not the iFin. Snack bag has printed text (in-world). No meme caption or watermark (scanned top 30% / bottom 20% of every frame: no dark pixels in this shot). Camera locked (compare 0/132)"
+  },
+  {
+   "start": 133,
+   "end": 255,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "off_style",
+   "camera": "static",
+   "overlays": [],
+   "notes": "Same older isometric style: a bed seen from high above with an ice-brick headboard, a rose scarf on the bedpost, headphones, a lamp on the nightstand and a white sheet. The penguin looks like an earlier Pax design (periwinkle body, bright yellow feet), identity unplaced (U5-type), drop stands on style. Action: he sleeps on his back with a phone on his belly that buzzes (small vibration lines), the phone slides off and drops to the floor ~f165-210, he rolls onto his side and sleeps on. Phone not the iFin. No meme caption or watermark (top band constant every frame; bottom band changes only when the phone lands). Camera locked (keep12 median 0.97, compare 133/254)"
+  }
+ ]
+}

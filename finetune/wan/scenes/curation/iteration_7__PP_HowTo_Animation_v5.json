@@ -1,0 +1,31 @@
+{
+ "skit": "iteration_7/293_videos/PP_HowTo_Animation_v5.mp4",
+ "frames": 322,
+ "fps": 24.0,
+ "curated_by": "curator-v10-15",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {},
+ "outfits": {},
+ "settings": {},
+ "spans": [
+  {
+   "start": 0, "end": 85, "boundary": "start", "keep": false, "drop_reason": "graphic_overlay",
+   "camera": "static",
+   "overlays": ["meme caption", "watermark", "cross and check mark icons"],
+   "notes": "a bold how-to meme caption sits in the top third (y~0.2) on every frame f0-321, the @pudgypenguins watermark in the bottom fifth (y~0.8) on every frame f0-321 (both measured per frame), and a red cross icon (~f25-34) and a green check icon (~f65-84) pop under the caption (ranges from step-5 strips). Content: Pax and Polly eat at a round table with flowers; first she feeds herself, then they feed each other"
+  },
+  {
+   "start": 85, "end": 190, "boundary": "cut", "keep": false, "drop_reason": "graphic_overlay",
+   "camera": "static",
+   "overlays": ["meme caption", "watermark", "cross and check mark icons"],
+   "notes": "same caption and watermark throughout; red cross ~f108-122, green check ~f180-189 (step-5 strips). Content: Pax naps alone under a checked blanket on a cream sofa, then Polly joins and they nap together"
+  },
+  {
+   "start": 190, "end": 322, "boundary": "cut", "keep": false, "drop_reason": "graphic_overlay",
+   "camera": "other",
+   "overlays": ["meme caption", "watermark", "cross and check mark icons"],
+   "notes": "same caption and watermark throughout; red cross ~f220-231, green check ~f271-321 (step-5 strips). Content: Pax in a white shirt and tie with a briefcase leaves through the igloo door, then zaps Polly with a ray, she shrinks with a ghosted double image (f240-256) and a giant flipper picks her up (f258-270, also an effect); the closing shots appear to move toward the door as Pax leaves (not measured: dropped for the overlay)"
+  }
+ ]
+}

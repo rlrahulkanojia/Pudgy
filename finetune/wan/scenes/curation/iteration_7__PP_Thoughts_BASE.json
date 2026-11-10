@@ -1,0 +1,79 @@
+{
+ "skit": "iteration_7/293_videos/PP_Thoughts_BASE.mp4",
+ "frames": 248,
+ "fps": 24.0,
+ "curated_by": "curator-v10-08",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a bedroom drawn on a plain greyish lavender background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 64,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "high angle",
+   "setting": "s1",
+   "view": "with a cream bed with duck-topped bedposts, white pillows and a pale blanket, and a nightstand with a phone beside it",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left-center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 48,
+     "text": "Pax lies tucked into bed on his back with his eyes closed and one flipper resting on the blanket"
+    },
+    {
+     "start": 48,
+     "end": 64,
+     "text": "Pax lies still with his eyes closed as small white thought puffs rise one by one above his head"
+    }
+   ],
+   "props": [
+    "bed",
+    "blanket",
+    "nightstand",
+    "phone"
+   ],
+   "prop_events": [],
+   "effects": [
+    "thought puffs"
+   ],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f0-63: full-res bedpost, nightstand and footboard regions 0 changed pixels per frame; the push-in starts at f65. Pax's head, tuft and a flipper are clearly visible above the blanket the whole time, so not lead_hidden. Drawn in the current flat style (thin outlines, no gloss, orange-footed leads in the bubble), not OLD_DESIGN, though seen from high above. Ground is greyish lavender (RGB 179,189,207), not the standard pale grey. The phone lies face up on the nightstand, not identifiable as the iFin and not used. Time left as day (neutral): he is asleep but the lighting is even and there is no window to confirm night. No caption or watermark | framing medium wide by drawn size (ruling: a lead in bed with only the head showing is not automatically wide): head ~17% of the height, the whole Pax ~30%. The phone on the nightstand has the iFin's tuft (seen face up, not used); the orange-and-white thing cut by the left edge is a duck-shaped nightstand ornament matching the duck bedposts, not a lead"
+  },
+  {
+   "start": 64,
+   "end": 248,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "lead_copy",
+   "camera": "push_in",
+   "notes": "a large thought bubble opens above Pax at f64 and stays to the end, showing Polly (f65-99), then Pax and Polly together in a run of remembered scenes: a gift (f100-127), at sunset (f128-159), Polly close up (f160-183), on a sofa with a heart (f184-227), a dim framed picture of the two (f228-247). Also a slow push-in from f65 (nightstand region changes from f65; ECC scale 1.019 at f80, 1.049 at f112)"
+  }
+ ]
+}

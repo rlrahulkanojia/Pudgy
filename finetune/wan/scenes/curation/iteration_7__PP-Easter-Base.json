@@ -1,0 +1,244 @@
+{
+ "skit": "iteration_7/293_videos/PP-Easter-Base.mp4",
+ "frames": 282,
+ "fps": 24.0,
+ "curated_by": "curator-v10-22",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "x2": {
+   "kind": "extra",
+   "desc": "a yellow penguin"
+  },
+  "x3": {
+   "kind": "extra",
+   "desc": "a purple penguin"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "set",
+   "desc": "a snowy landscape of rolling white hills"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 53,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "pan_right",
+   "notes": "Easter egg hunt of four side penguins (mint, purple, yellow, orange) under a pan right; no lead until Pax leaps in from the top left at f53. Pudgy toy figurines (a crowned penguin, an igloo, a goggled penguin in a red sweater) are held by the orange penguin and sit in the purple penguin's basket"
+  },
+  {
+   "start": 53,
+   "end": 124,
+   "boundary": "same_shot",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "pan_right",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with snow-covered pine trees on the hills behind him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "left",
+     "presence": "enters",
+     "enters_at": 54,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 60,
+       "screen": "center"
+      }
+     ]
+    },
+    {
+     "id": "x2",
+     "screen": "center",
+     "presence": "exits",
+     "exits_at": 81,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 70,
+       "screen": "left-center"
+      }
+     ]
+    },
+    {
+     "id": "x3",
+     "screen": "left-center",
+     "presence": "exits",
+     "exits_at": 78,
+     "outfit": [],
+     "moves": [
+      {
+       "frame": 68,
+       "screen": "left"
+      }
+     ]
+    }
+   ],
+   "beats": [
+    {
+     "start": 53,
+     "end": 59,
+     "text": "Pax leaps in from the top left and dives belly-first toward the snow beside {x3} and {x2}"
+    },
+    {
+     "start": 59,
+     "end": 67,
+     "text": "Pax lands on his belly and slides in between {x3} and {x2}, bumping into them"
+    },
+    {
+     "start": 67,
+     "end": 73,
+     "text": "{x2} topples onto Pax's back while {x3} squeezes both eyes shut and stumbles back"
+    },
+    {
+     "start": 73,
+     "end": 81,
+     "text": "Pax slides on his belly across the snow as {x2} tumbles over his back and falls away to the left"
+    },
+    {
+     "start": 81,
+     "end": 99,
+     "text": "Pax keeps sliding on his belly with a striped Easter egg pushed along in front of his beak"
+    },
+    {
+     "start": 99,
+     "end": 104,
+     "text": "Pax rolls over onto his back, grabbing the egg in his flippers"
+    },
+    {
+     "start": 104,
+     "end": 117,
+     "text": "Pax lies on his back hugging the egg to his chest with a dreamy open-beaked smile"
+    },
+    {
+     "start": 117,
+     "end": 124,
+     "text": "Pax rocks up from his back toward sitting, still clutching the egg"
+    }
+   ],
+   "props": [
+    "Easter egg",
+    "basket of toy figurines"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "enters",
+   "notes": "starts at f73, the first frame with no toy figurine left in view (the basket's last crown edge is at the left border at f72). The camera tracks Pax to the right the whole span (compare 86/98: every tree and hill edge doubled; tree band x0-0.30 vs f110: tx -12 at f112, -31 f116, -43 f120, settling about f122-124). {x3} is only a sliver at the left edge until f77. No overlay | verification pass 2 (verify_v10_report_v23, by hand): absorbed [53,73) (figurines are props under the loose-figurines ruling)"
+  },
+  {
+   "start": 124,
+   "end": 135,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "11-frame rest between the pan and a push-in: tree band vs f124 scale 1.0000, 0 px, cc 1.000 f125-134. Pax sits up holding the egg"
+  },
+  {
+   "start": 135,
+   "end": 142,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "push_in",
+   "notes": "fast push-in as Pax lifts the egg: scale 1.004 at f135, 1.057 f137, 1.170 f139, 1.218 f140 (vs f124); locked from f142. 7 frames, so too_short ranks before camera_move"
+  },
+  {
+   "start": 142,
+   "end": 220,
+   "boundary": "camera",
+   "keep": true,
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with snowy pine trees on the slope behind him",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "pax",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 142,
+     "end": 161,
+     "text": "Pax sits in the snow holding a striped Easter egg high in one flipper, his other flipper pressed to his cheek in delight"
+    },
+    {
+     "start": 161,
+     "end": 175,
+     "text": "Pax lowers the egg and hugs it to his chest, smiling with his eyes shut"
+    },
+    {
+     "start": 175,
+     "end": 186,
+     "text": "Pax opens his eyes and holds the egg still while a large shadow slides across the snow toward him from the right"
+    },
+    {
+     "start": 186,
+     "end": 193,
+     "text": "Pax sits still clutching the egg as the shadow climbs up over him until his whole body is darkened"
+    },
+    {
+     "start": 193,
+     "end": 209,
+     "text": "Pax sits in the shadow holding the egg and blinks with a wary look"
+    },
+    {
+     "start": 209,
+     "end": 220,
+     "text": "Pax turns his head to the right and looks over his shoulder with wide, worried eyes"
+    }
+   ],
+   "props": [
+    "Easter egg"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked f142-219: tree band y0.28-0.50 x0-0.25 vs f150: scale 1.0000, 0 px, cc 1.000 every 5 frames, and vs f141 identical values f142-151; compare 160/219: trees and hill line black, only the clouds drift (they faked a pan on the sky band). The shadow is an in-world cast shadow of the bunny-costume penguin, entering on the ground at the right about f166 and covering Pax f186-192; it darkens Pax and part of the ground, not the whole picture. No overlay"
+  },
+  {
+   "start": 220,
+   "end": 240,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "20 frames: low-angle silhouette of the bunny-costume penguin backlit by the sun, its face slowly lightening; no lead"
+  },
+  {
+   "start": 240,
+   "end": 282,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "lookalike",
+   "camera": "static",
+   "notes": "Client 2026-11-05: the bunny costume is a one-off, remove it from training (Q4). Unfilled so it no longer compiles. Pax sits holding the striped egg while the penguin in a full grey bunny costume with a lilac polka-dot scarf takes it from him."
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "skit": "iteration_7/293_videos/PP_delivered-BASE.mp4",
+ "frames": 293,
+ "fps": 24.0,
+ "curated_by": "curator-v10-29",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {
+   "kind": "lead"
+  },
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {},
+ "spans": [
+  {
+   "start": 0,
+   "end": 293,
+   "boundary": "start",
+   "keep": false,
+   "drop_reason": "off_style",
+   "camera": "other",
+   "notes": "OLD_DESIGN: yellow beaks and yellow feet on every penguin (Pax, Polly, the skateboarder and the courier), paler periwinkle Pax and pale rose Polly. Whole skit, one reason. Shots for reference: f0-57 Pax at a curtained window on a plain ground (locked) peeks behind the curtain; f58-88 outdoor snow scene, a white penguin in a cap skateboards past (no lead); f89-141 outside view of an igloo window, Pax peeks out then hides; f142-231 the curtain wall again, empty at first (no lead), then Polly wrapped in a towel and Pax come in and open the curtains to look out; f232-246 both at the window from outside; f247-263 wide igloo exterior with a courier at the door; f264-292 a black-and-white courier penguin in a cap holds a box with a legible Walmart logo (also ad_merch). Nothing here can be kept."
+  }
+ ]
+}

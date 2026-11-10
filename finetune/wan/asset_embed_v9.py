@@ -16,30 +16,52 @@ Captions without the phrase never see E: they are bit-identical to the base.
            expert active at load time (low noise), so without this the high-noise expert would
            train without its golden LoRA (RESEARCH_asset_memory section 3).
            --freeze-asset: E is spliced in as a constant (pivotal stage 2: train the LoRA, not E).
-           --preserve [--preserve-weight L]: on samples WITHOUT the asset phrase (replay), the target is
-           the base model's own prediction (same network, LoRA multiplier 0, no grad), so the loss
-           there is L * ||v_theta - v_base||^2 (RESEARCH_v9c_fixes section 3, fix 2). Batch size 1.
+           --preserve [--preserve-weight L]: on REPLAY samples the target is the base model's own
+           prediction (same network, LoRA multiplier 0, no grad), so the loss there is
+           L * ||v_theta - v_base||^2 (RESEARCH_v9c_fixes section 3, fix 2). Batch size 1. Which
+           samples are replay is set by --preserve-marker:
+             nospan (default, v9c2): every asset span is empty. Only right when the asset is in
+                    every non-replay caption (v9c2's phone set).
+             key    (v10): the sample's _te cache file carries `varlen_preserve` = 1 (written by
+                    cache_mark_v10.py). musubi's BucketBatchManager strips the `varlen_` prefix and
+                    passes it as batch["preserve"]. Every sample must carry `varlen_preserve` and
+                    `varlen_assetspan`, else the run stops (cache not marked).
+           The base pass runs with block swap switched to forward-only (RESEARCH_v9c_fixes section 6
+           "found and fixed" 1). With musubi's --base_weights (single-expert mode, v10) the base is
+           the DiT with those weights merged: musubi merges them into the Linear weights before the
+           trained LoRA is applied, so multiplier 0 still includes them.
+           --log-every N: print a `PRESERVE_STATS step=...` line every N optimizer steps (and at each
+           checkpoint save) with the sample counters; they are also in every .asset.safetensors.
+           --strict-base-weights: stop if a --base_weights / --base-weights-high file has LoRA modules
+           that do not match the DiT (musubi would skip them silently).
 
     python asset_embed_v9.py check --jsonl-dir /workspace/data_v9c --cache /workspace/wan_cache/latents_v9c
     python asset_embed_v9.py cache --jsonl-dir /workspace/data_v9c --cache /workspace/wan_cache/latents_v9c \
         --out /workspace/wan_cache/latents_v9c_emb
     python asset_embed_v9.py train --init /workspace/wan_cache/latents_v9c_emb/asset_init.safetensors \
         --asset-lr 5e-3 --embed-only -- <wan_train_network.py args>
+    # v10 Stage 1 (finetune/wan/train_pudgy_v10.sh):
+    python asset_embed_v9.py train --init <E5> --offset --freeze-asset --preserve --preserve-marker key \
+        --log-every 5 --strict-base-weights -- --dit <high-noise DiT> --base_weights <golden> ...
 """
 import argparse
 import json
 import os
+import re
 import sys
 import tomllib
 from pathlib import Path
 
 import torch
+from safetensors import safe_open
 from safetensors.torch import load_file, save_file
 
 HERE = Path(__file__).resolve().parent
 REGISTRY = HERE / "assets" / "registry.toml"
 SPAN_KEY = "varlen_assetspan"
 TE_KEY = "varlen_t5_bfloat16"
+PRESERVE_KEY = "varlen_preserve"            # replay marker in a _te file (cache_mark_v10.py)
+PRESERVE_BATCH = PRESERVE_KEY[len("varlen_"):]   # the key musubi's batch carries it under
 MUSUBI = Path(os.environ.get("MUSUBI", "/workspace/musubi-tuner"))
 
 
@@ -181,6 +203,26 @@ def merge_lora_into(model, path, multiplier=1.0):
     return n_mod
 
 
+def _restore_counters(rest, counters):
+    """--resume <dir>/<name>-stepNNNNNNNN-state: continue the sample counters from that step's
+    .asset.safetensors (musubi saves the weights, and so the sidecar, before the state), so every
+    sidecar stays cumulative over the whole run."""
+    if "--resume" not in rest:
+        return
+    st = os.path.normpath(rest[rest.index("--resume") + 1])
+    m = re.fullmatch(r"(.+)-step(\d+)-state", os.path.basename(st))
+    side = os.path.join(os.path.dirname(st), f"{m.group(1)}-step{m.group(2)}.asset.safetensors") if m else ""
+    if not side or not os.path.exists(side):
+        print(f"[asset] resume: no .asset.safetensors next to {st}; sample counters start at 0", flush=True)
+        return
+    with safe_open(side, "pt") as f:
+        md = f.metadata() or {}
+    for d in counters:
+        for k in d:
+            d[k] = int(md.get(f"samples_{k}", 0))
+    print(f"[asset] resume: sample counters continue from {Path(side).name}: {counters}", flush=True)
+
+
 def cmd_train(a, rest):
     """Patch musubi in memory, then hand over to its own main()."""
     sys.path.insert(0, str(MUSUBI / "src"))
@@ -188,15 +230,40 @@ def cmd_train(a, rest):
     import musubi_tuner.wan_train_network as W
     from musubi_tuner.networks import lora as L
 
-    dev = torch.device("cuda")
+    dev = torch.device(os.environ.get("ASSET_DEVICE", "cuda"))   # "cpu" only for the no-GPU unit tests
     expert_steps = {"high": 0, "low": 0, "preserve": 0}   # samples per expert; preservation samples
+    extra = {"data": 0, "asset": 0, "total": 0}           # non-replay samples; samples with E spliced in; all
+    window = {"preserve": [0.0, 0], "data": [0.0, 0]}     # unweighted MSE sums since the last stats line
+    key_mode = a.preserve_marker == "key"
+    two_expert = "--dit_high_noise" in rest
     assert not (a.embed_only and a.freeze_asset), "--embed-only and --freeze-asset leave nothing to train"
+    assert a.preserve or not key_mode, "--preserve-marker key only makes sense with --preserve"
+    assert not a.strict_base_weights or "--base_weights" in rest or a.base_weights_high, \
+        "--strict-base-weights: no --base_weights / --base-weights-high given"
     E0 = load_file(a.init)["E"].to(dev, torch.float32)
     E = E0.clone() if a.freeze_asset else torch.nn.Parameter(E0.clone())
     state = {}
     E_init = E.detach().clone()
     if os.environ.get("ASSET_DEBUG"):
         E.register_hook(lambda g: print(f"[asset-debug] E grad norm {g.norm():.3e}", flush=True))
+    _restore_counters(rest, (expert_steps, extra))
+    if key_mode or a.log_every or a.strict_base_weights:
+        print(f"[asset] train: {'two' if two_expert else 'single'}-expert, preserve "
+              f"{'x%g, marker %s' % (a.preserve_weight, a.preserve_marker) if a.preserve else 'off'}, "
+              f"E {'frozen' if a.freeze_asset else 'trained'} {'offset' if a.offset else 'replace'} "
+              f"{tuple(E0.shape)} from {a.init}", flush=True)
+
+    def stats_line(step, tag="", reset=True):
+        def mse(k):
+            s, n = window[k]
+            return f"{s / n:.3e} (n={n})" if n else "- (n=0)"
+        line = (f"PRESERVE_STATS step={step} total={extra['total']} preserve={expert_steps['preserve']} "
+                f"data={extra['data']} asset={extra['asset']} high={expert_steps['high']} low={expert_steps['low']} "
+                f"marker={a.preserve_marker}{tag} | since last line: preserve_mse {mse('preserve')} data_mse {mse('data')}")
+        if reset:
+            for v in window.values():
+                v[0], v[1] = 0.0, 0
+        print("\n" + line, flush=True)    # own line: tqdm's bar ends in \r, not \n
 
     orig_prep = L.LoRANetwork.prepare_optimizer_params
 
@@ -222,14 +289,33 @@ def cmd_train(a, rest):
         if not a.embed_only:
             orig_save(self, file, dtype, metadata)
         side = str(file).rsplit(".", 1)[0] + ".asset.safetensors"
+        step = str((metadata or {}).get("ss_steps", ""))
         print(f"[asset] samples per expert so far: {expert_steps}", flush=True)
         save_file({"E": E.detach().float().cpu().contiguous()}, side,
                   metadata={"phrase": phrase(), "delta_norm": f"{(E - E_init).norm():.4f}",
                            "init_norm": f"{E_init.norm():.4f}",
                            "samples_high": str(expert_steps["high"]), "samples_low": str(expert_steps["low"]),
-                           "samples_preserve": str(expert_steps["preserve"]), "frozen": str(a.freeze_asset)})
+                           "samples_preserve": str(expert_steps["preserve"]), "frozen": str(a.freeze_asset),
+                           "samples_data": str(extra["data"]), "samples_asset": str(extra["asset"]),
+                           "samples_total": str(extra["total"]), "preserve": str(a.preserve),
+                           "preserve_marker": a.preserve_marker, "preserve_weight": str(a.preserve_weight),
+                           "mode": "two-expert" if two_expert else "single-expert", "step": step})
+        if a.log_every > 0:
+            stats_line(step or "?", " (checkpoint)", reset=False)
 
     L.LoRANetwork.save_weights = save
+
+    def replay_flag(batch):
+        """--preserve-marker key: the sample's replay marker; every sample must have been marked."""
+        if PRESERVE_BATCH not in batch or "assetspan" not in batch:
+            raise RuntimeError(f"--preserve-marker key: a sample without {PRESERVE_KEY} / {SPAN_KEY} in its _te cache "
+                               f"(batch keys {sorted(batch)}). Run cache_mark_v10.py mark on the dataset's cache dirs.")
+        flags = [int(x.reshape(-1)[0]) for x in batch[PRESERVE_BATCH]]
+        if len(flags) != 1 or len(batch["assetspan"]) != 1:
+            raise RuntimeError("--preserve-marker key assumes batch size 1")
+        if flags[0] not in (0, 1):
+            raise RuntimeError(f"{PRESERVE_KEY} must be 0 or 1, got {flags[0]}")
+        return flags[0] == 1
 
     orig_call = W.WanNetworkTrainer.call_dit
 
@@ -239,12 +325,28 @@ def cmd_train(a, rest):
         if os.environ.get("ASSET_DEBUG"):
             print(f"[asset-debug] keys {sorted(batch)} spans {[x.tolist() for x in batch.get('assetspan', [])]} "
                   f"high={getattr(self, 'next_model_is_high_noise', None)} grad_enabled={torch.is_grad_enabled()}", flush=True)
+        marked = replay_flag(batch) if key_mode else None
+        if key_mode and any(int(e) - int(s_) != E.shape[0] for s_, e in batch["assetspan"] if e > s_):
+            raise RuntimeError(f"asset span {[x.tolist() for x in batch['assetspan']]} does not match E's "
+                               f"{E.shape[0]} rows")
         if "assetspan" in batch:
             batch["t5"] = splice([t.to(dev) for t in batch["t5"]], batch["assetspan"], E, a.offset)
             if os.environ.get("ASSET_DEBUG"):
                 print(f"[asset-debug] after splice: requires_grad {[t.requires_grad for t in batch['t5']]}", flush=True)
         spans = [x.tolist() for x in batch.get("assetspan", [])]
-        if a.preserve and spans and all(e <= s_ for s_, e in spans):        # replay sample: distil the base
+        spliced = any(e > s_ for s_, e in spans)
+        if key_mode:
+            if marked and spliced:
+                raise RuntimeError(f"a replay-marked sample names the asset (spans {spans}): re-run cache_mark_v10.py")
+            replay = marked
+        else:
+            replay = a.preserve and spans and all(e <= s_ for s_, e in spans)
+        extra["total"] += 1
+        extra["asset"] += int(spliced)
+        if key_mode and extra["total"] >= 100 and expert_steps["preserve"] == 0 and not replay:
+            raise RuntimeError(f"--preserve-marker key: {extra['total']} samples and not one replay-marked: "
+                               "the replay caches are not marked (cache_mark_v10.py); refusing to train without preservation")
+        if replay:        # replay sample: distil the base
             assert len(spans) == 1, "--preserve assumes batch size 1"
             net = state["net"]
             # Block swap in training mode moves blocks during a forward and relies on the BACKWARD pass to
@@ -265,11 +367,62 @@ def cmd_train(a, rest):
                         m.switch_block_swap_for_training()
             out = orig_call(self, args, accelerator, transformer, latents, batch, *rest_, **kw)
             expert_steps["preserve"] += 1
+            if a.log_every > 0:
+                window["preserve"][0] += float((out.pred.detach().float() - base.pred.float()).pow(2).mean())
+                window["preserve"][1] += 1
             w = a.preserve_weight ** 0.5
             return W.DiTOutput(pred=out.pred * w, target=base.pred.detach() * w)
-        return orig_call(self, args, accelerator, transformer, latents, batch, *rest_, **kw)
+        extra["data"] += 1
+        out = orig_call(self, args, accelerator, transformer, latents, batch, *rest_, **kw)
+        if a.log_every > 0:
+            window["data"][0] += float((out.pred.detach().float() - out.target.float()).pow(2).mean())
+            window["data"][1] += 1
+        return out
 
     W.WanNetworkTrainer.call_dit = call_dit
+
+    if a.log_every > 0:
+        orig_post = getattr(W.WanNetworkTrainer, "on_post_optimizer_step", None)
+        if orig_post is None:
+            print("[asset] this musubi has no on_post_optimizer_step: PRESERVE_STATS only at checkpoints", flush=True)
+        else:
+            def post(self, args, accelerator, network, transformer, sync_gradients, global_step, *r, **k):
+                orig_post(self, args, accelerator, network, transformer, sync_gradients, global_step, *r, **k)
+                step = global_step + 1             # musubi increments global_step after this hook
+                if sync_gradients and (step % a.log_every == 0 or step >= args.max_train_steps):
+                    stats_line(step)
+
+            W.WanNetworkTrainer.on_post_optimizer_step = post
+        orig_xl = getattr(W.WanNetworkTrainer, "extra_step_logs", None)
+        if orig_xl is not None:                    # the same counters in tensorboard / wandb
+            def xl(self, args, logs):
+                d = dict(orig_xl(self, args, logs) or {})
+                d.update({f"preserve/samples_{k}": v for k, v in {**expert_steps, **extra}.items()})
+                return d
+
+            W.WanNetworkTrainer.extra_step_logs = xl
+
+    if a.strict_base_weights:
+        import inspect
+        orig_cnfw = L.create_network_from_weights
+        sig = inspect.signature(orig_cnfw)
+
+        def create_network_from_weights(*args_, **kw):
+            net = orig_cnfw(*args_, **kw)
+            b = sig.bind(*args_, **kw)
+            b.apply_defaults()
+            if b.arguments["for_inference"]:       # musubi's --base_weights merge (and merge_lora_into)
+                sd = b.arguments["weights_sd"]
+                n_mod = len({k.split(".")[0] for k in sd if k.endswith("lora_down.weight")})
+                n_hit = len(net.unet_loras)
+                if n_mod == 0 or n_hit != n_mod:
+                    raise RuntimeError(f"--strict-base-weights: {n_mod} LoRA modules in the base weights, "
+                                       f"{n_hit} match the DiT")
+                print(f"[asset] base weights: {n_hit}/{n_mod} LoRA modules match the DiT "
+                      f"(x{b.arguments['multiplier']}); merged into its weights, so LoRA multiplier 0 keeps them", flush=True)
+            return net
+
+        L.create_network_from_weights = create_network_from_weights
 
     if a.base_weights_high:
         assert "--dit_high_noise" in rest, "--base-weights-high needs musubi's --dit_high_noise"
@@ -302,8 +455,13 @@ def main():
     p.add_argument("--offset", action="store_true", help="E is added to the phrase rows (init 0)")
     p.add_argument("--base-weights-high", help="LoRA merged into the high-noise expert (two-expert mode)")
     p.add_argument("--freeze-asset", action="store_true", help="splice E as a constant; train only the LoRA")
-    p.add_argument("--preserve", action="store_true", help="distil the base on samples without the asset phrase")
+    p.add_argument("--preserve", action="store_true", help="distil the base on replay samples (see --preserve-marker)")
     p.add_argument("--preserve-weight", type=float, default=1.0)
+    p.add_argument("--preserve-marker", choices=("nospan", "key"), default="nospan",
+                   help="replay = every asset span empty (nospan, v9c2) or varlen_preserve=1 in the _te file (key, v10)")
+    p.add_argument("--log-every", type=int, default=0, help="PRESERVE_STATS line every N optimizer steps (0: off)")
+    p.add_argument("--strict-base-weights", action="store_true",
+                   help="stop if a base-weights LoRA has modules that do not match the DiT")
     p.add_argument("--base-weights-high-mult", type=float, default=1.0)
     argv = sys.argv[1:]
     rest = []

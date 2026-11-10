@@ -1,0 +1,178 @@
+{
+ "skit": "iteration_7/293_videos/PP-Clumsy-Base.mp4",
+ "frames": 283,
+ "fps": 24.0,
+ "curated_by": "curator-v10-23",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "pax": {"kind": "lead"},
+  "polly": {"kind": "lead"}
+ },
+ "outfits": {
+  "o1": "a white napkin tied around her neck as a bib"
+ },
+ "settings": {
+  "s1": {"kind": "flat", "desc": "a noodle restaurant drawn on a plain pale grey background"}
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 67,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a low round wooden table in front and a large potted bonsai behind",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "center", "presence": "partial", "outfit": []}
+   ],
+   "beats": [
+    {"start": 0, "end": 12, "text": "Pax lifts a forkful of noodles from his bowl and slurps them up with his eyes shut"},
+    {"start": 12, "end": 24, "text": "Pax sucks the last noodle strand into his beak, holding his fork up beside him"},
+    {"start": 24, "end": 51, "text": "Pax chews with his eyes closed and a contented look, his fork still raised"},
+    {"start": 51, "end": 67, "text": "Pax opens his eyes, lowers his fork into the bowl and glances off to the side"}
+   ],
+   "props": ["bowl of noodles", "fork", "low round table", "napkins"],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: motion on the table (y0.72-0.95) 0.0 px at cc 1.000 f0-66; compare 0/66 table, plant and picture edges overlap exactly. Pax is cut off by the table (lower body hidden), drawn at medium size. The pan to Polly starts at f67. No caption or watermark (top third: plant and a hanging picture's edge; bottom fifth: table)"
+  },
+  {
+   "start": 67,
+   "end": 80,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "pan_left",
+   "notes": "13-frame pan across the table from Pax to Polly (top-band frame difference rises from f67, settles at f80; f80 and f81 identical)"
+  },
+  {
+   "start": 80,
+   "end": 183,
+   "boundary": "camera",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a low round wooden table in front and two framed pictures hanging on the wall behind",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {"id": "polly", "screen": "center", "presence": "partial", "outfit": ["o1"]}
+   ],
+   "beats": [
+    {"start": 80, "end": 92, "text": "Polly sits at the table with a fork resting in her bowl of noodles, looking down at it"},
+    {"start": 92, "end": 101, "text": "Polly squints one eye and twirls noodles around her fork"},
+    {"start": 101, "end": 119, "text": "Polly lifts a long forkful of noodles up to her open beak"},
+    {"start": 119, "end": 150, "text": "Polly slurps the noodles with her eyes shut, broth spattering all over her face and napkin"},
+    {"start": 150, "end": 164, "text": "Polly opens her eyes and stares ahead, her face and napkin dotted with broth"},
+    {"start": 164, "end": 183, "text": "Polly spreads her flippers out to the sides, a spoon in one and a fork in the other, staring blankly"}
+   ],
+   "props": ["bowl of noodles", "fork", "spoon", "low round table", "soy sauce bottle", "napkins"],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: motion on the hanging pictures (y0.05-0.25) 0.0 px at cc 1.000 f85-181, frames f80-85 identical in that band; compare 80/182 pictures and table edges overlap exactly. The hanging pictures show a noodle bowl and a bonsai (decor, no text). The d8 bump at f162-168 is Polly spreading her flippers. No caption or watermark"
+  },
+  {
+   "start": 183,
+   "end": 231,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a low round wooden table between them, two framed pictures on the wall and a potted bonsai behind",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {"id": "polly", "screen": "left", "presence": "partial", "outfit": ["o1"]},
+    {"id": "pax", "screen": "right", "presence": "partial", "outfit": []}
+   ],
+   "beats": [
+    {"start": 183, "end": 192, "text": "Polly sits with broth spattered on her face, holding her fork, while Pax looks at her across the table"},
+    {"start": 192, "end": 216, "text": "Pax turns away and covers his face with a flipper, eyes squeezed shut, while Polly looks over at him"},
+    {"start": 216, "end": 231, "text": "Polly digs her fork into her noodles and lifts some up while Pax keeps a flipper over his face"}
+   ],
+   "props": ["bowl of noodles", "fork", "spoon", "low round table", "soy sauce bottle", "napkins"],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: motion on the table (y0.60-0.75) within 0.5 px at cc 1.000 f183-213 (f219-225 +2 px at cc 0.998 as Polly's flipper enters the band); compare 183/230 pictures, plant pot and table edges overlap exactly. The top band is plain ground (no texture), not used. No caption or watermark"
+  },
+  {
+   "start": 231,
+   "end": 260,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a low round wooden table in front and two framed pictures hanging on the wall behind",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {"id": "polly", "screen": "center", "presence": "partial", "outfit": ["o1"]}
+   ],
+   "beats": [
+    {"start": 231, "end": 247, "text": "Polly, her face dotted with broth, glances sideways while poking her spoon and fork into the noodles"},
+    {"start": 247, "end": 256, "text": "Polly jabs her fork into the bowl and a big splash of broth flies out to the right"},
+    {"start": 256, "end": 260, "text": "Polly stares ahead blankly, her fork still in the bowl"}
+   ],
+   "props": ["bowl of noodles", "fork", "spoon", "low round table", "soy sauce bottle", "napkins"],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "camera locked: motion on the hanging pictures (y0.03-0.28) 0.0 px at cc 1.000 f231-259; compare 231/259 overlaps exactly. Same framing as [80,183). No caption or watermark"
+  },
+  {
+   "start": 260,
+   "end": 283,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a low round wooden table in front and a large potted bonsai behind",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {"id": "pax", "screen": "center", "presence": "partial", "outfit": []}
+   ],
+   "beats": [
+    {"start": 260, "end": 264, "text": "Pax holds his fork in his bowl as drops of broth fly toward him from the left"},
+    {"start": 264, "end": 283, "text": "Pax winces with one eye squeezed shut and broth splattered on his cheek, his flipper frozen over the bowl"}
+   ],
+   "props": ["bowl of noodles", "fork", "low round table", "napkins"],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [],
+   "travel": "none",
+   "notes": "hard cut at f260 (f259 Polly's side and f260 Pax's side are the two halves of one table layout; no pan). camera locked: motion on the table (y0.72-0.95) 0.0 px at cc 1.000 f260-282; compare 260/282 overlaps exactly. Same framing as [0,67). No caption or watermark"
+  }
+ ]
+}

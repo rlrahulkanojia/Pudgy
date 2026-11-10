@@ -1,0 +1,420 @@
+{
+ "skit": "iteration_7/293_videos/PP-Dude-Base.mp4",
+ "frames": 417,
+ "fps": 24.0,
+ "curated_by": "curator-v10-08",
+ "curated_at": "2026-11-04",
+ "storyboard_title": "",
+ "cast": {
+  "polly": {
+   "kind": "lead"
+  }
+ },
+ "outfits": {},
+ "settings": {
+  "s1": {
+   "kind": "flat",
+   "desc": "a home office drawn on a plain pale grey background"
+  }
+ },
+ "spans": [
+  {
+   "start": 0,
+   "end": 26,
+   "boundary": "start",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a glass desk on coral legs, a rounded computer monitor and keyboard, a wall clock and a wall calendar",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 0,
+     "end": 10,
+     "text": "Polly sits at the desk in a shell-backed chair with a flipper on the keyboard, looking at the computer monitor"
+    },
+    {
+     "start": 10,
+     "end": 26,
+     "text": "Polly swivels round to face forward and reaches a flipper toward the phone lying on the desk"
+    }
+   ],
+   "props": [
+    "phone",
+    "computer",
+    "keyboard",
+    "wall clock",
+    "wall calendar",
+    "small penguin figurine"
+   ],
+   "prop_events": [],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "wall calendar",
+    "clock face"
+   ],
+   "travel": "none",
+   "notes": "camera locked (ECC on the clock/calendar band scale 1.0000, 0 px). The phone lies on the desk too small to identify, written as a phone. The little figurine on the desk (dark penguin with a brown bowl cut in a coral patterned shirt, seen from behind) is neither lead: a prop. No caption or watermark | framing medium wide by drawn size: Polly is seated behind the desk, ~19% visible, ~22% drawn"
+  },
+  {
+   "start": 26,
+   "end": 65,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "phone-screen insert: the iFin chat fills the picture, Polly's flipper only at the edge; messages appear. Chat header shows a small Pax avatar (also lead_copy)"
+  },
+  {
+   "start": 65,
+   "end": 88,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a glass desk and keyboard in front of her, a wall clock and a wall calendar behind",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 65,
+     "end": 77,
+     "text": "Polly holds {ifin} in one flipper and lifts the other to tap at it, eyes on the screen"
+    },
+    {
+     "start": 77,
+     "end": 88,
+     "text": "Polly blinks and keeps staring at the phone with worried, raised brows"
+    }
+   ],
+   "props": [
+    "phone",
+    "keyboard",
+    "wall clock",
+    "wall calendar",
+    "small penguin figurine"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 65,
+     "by": "polly",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "wall calendar",
+    "clock face"
+   ],
+   "travel": "none",
+   "notes": "camera locked (ECC on the clock/calendar band scale 1.0000, 0 px through f85). Phone has the pale grey back, camera lenses and tuft = iFin. The desk's glass shine is animated (a faint drift in the lower band), not the camera. No caption or watermark"
+  },
+  {
+   "start": 88,
+   "end": 122,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "phone-screen insert again: Polly's flipper types and sends a message (internal screen change at f91, not a shot change). Pax avatar in the chat header"
+  },
+  {
+   "start": 122,
+   "end": 156,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a glass desk and keyboard in front of her, a wall clock and a wall calendar behind",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 122,
+     "end": 141,
+     "text": "Polly holds up {ifin} and stares at it with worried, raised brows while the minute hand of the wall clock creeps forward"
+    },
+    {
+     "start": 141,
+     "end": 156,
+     "text": "Polly narrows her eyes into an impatient frown at the phone as the clock's minute hand keeps moving"
+    }
+   ],
+   "props": [
+    "phone",
+    "keyboard",
+    "wall clock",
+    "wall calendar",
+    "small penguin figurine"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 122,
+     "by": "polly",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "wall calendar",
+    "clock face"
+   ],
+   "travel": "none",
+   "notes": "camera locked f122-155: calendar region 0 changed pixels per frame, compare 122/150 shows black edges on clock rim, calendar, coral and desk legs (only the clock hands, Polly and the animated desk shine change). A push-in eases in from f156 (sub-pixel creep of 2-20 px in the calendar region f147-155, invisible). The clock hands moving is in-world, not a time-lapse of the picture. No caption or watermark"
+  },
+  {
+   "start": 156,
+   "end": 217,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a glass desk and keyboard in front of her, a wall clock and a wall calendar behind",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 156,
+     "end": 170,
+     "text": "Polly frowns at {ifin} in her flipper and squeezes her eyes shut as a sweat drop appears by her head"
+    },
+    {
+     "start": 170,
+     "end": 187,
+     "text": "Polly stares at the phone with an anxious frown while the wall clock's minute hand sweeps on"
+    },
+    {
+     "start": 187,
+     "end": 217,
+     "text": "Polly raises her other flipper to the side of her head and gazes at the phone with wide, worried eyes"
+    }
+   ],
+   "props": [
+    "phone",
+    "keyboard",
+    "wall clock",
+    "wall calendar"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 156,
+     "by": "polly",
+     "is_ifin": true
+    }
+   ],
+   "effects": [
+    "sweat drop"
+   ],
+   "overlays": [],
+   "in_world_text": [
+    "wall calendar",
+    "clock face"
+   ],
+   "travel": "none",
+   "notes": "slow push-in with a slight up-left drift to the cut: ECC on the calendar band scale 1.003 at f159, 1.029 at f186, 1.072 at f214 (cc >= 0.94). No static run. No caption or watermark"
+  },
+  {
+   "start": 217,
+   "end": 240,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "phone-screen insert (chat unchanged, the phone moves slightly in Polly's flipper). Pax avatar in the chat header"
+  },
+  {
+   "start": 240,
+   "end": 323,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "camera_move",
+   "camera": "push_in",
+   "framing": "medium",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a glass desk and keyboard in front of her, a wall clock and a wall calendar behind",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 240,
+     "end": 264,
+     "text": "Polly frowns at {ifin} in her flipper, a sweat drop by her head, as the clock's hands move on"
+    },
+    {
+     "start": 264,
+     "end": 283,
+     "text": "Polly sits up and looks around with wide, anxious eyes, clutching the phone"
+    },
+    {
+     "start": 283,
+     "end": 313,
+     "text": "Polly hugs the phone to her chest with her eyes squeezed shut and a sweat drop on her head"
+    },
+    {
+     "start": 313,
+     "end": 323,
+     "text": "Polly peeks out with one eye open while keeping the other squeezed shut, holding the phone at her chest"
+    }
+   ],
+   "props": [
+    "phone",
+    "keyboard",
+    "wall clock",
+    "wall calendar"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 240,
+     "by": "polly",
+     "is_ifin": true
+    }
+   ],
+   "effects": [
+    "sweat drop"
+   ],
+   "overlays": [],
+   "in_world_text": [
+    "wall calendar",
+    "clock face"
+   ],
+   "travel": "none",
+   "notes": "push-in from the cut: ECC on the calendar band scale 1.009 at f246, 1.048 at f264, 1.073 at f276; coral-region diff steady ~1.7 per frame until f322, then 0. No caption or watermark | verification pass 2 (verify_v10_report_v12): beat 4 (313-323): Polly opens only one eye (from f314) and keeps the other shut through f323; both eyes open only at f324, outside the span. 'then both' is false for the span; camera confirmed push_in at a steady ~0.25%/frame f240-322 (coral/floor band scale 1.113 at f322 vs f276), stops at f323"
+  },
+  {
+   "start": 323,
+   "end": 338,
+   "boundary": "camera",
+   "keep": false,
+   "drop_reason": "too_short",
+   "camera": "static",
+   "notes": "15 static frames after the push-in stops: Polly holds the phone and looks at it with worried brows"
+  },
+  {
+   "start": 338,
+   "end": 392,
+   "boundary": "cut",
+   "keep": false,
+   "drop_reason": "no_lead",
+   "camera": "static",
+   "notes": "phone-screen insert: a new message arrives (f338-351), a quick punch-in f352-356, then the screen fills the picture showing a sent photo of two penguins with hearts (f357-391). Pax avatar in the chat header (also lead_copy)"
+  },
+  {
+   "start": 392,
+   "end": 417,
+   "boundary": "cut",
+   "keep": true,
+   "drop_reason": "",
+   "camera": "static",
+   "framing": "medium wide",
+   "angle": "eye level",
+   "setting": "s1",
+   "view": "with a glass desk and keyboard in front of her, and a soft-focus wall clock and calendar behind",
+   "time": "day",
+   "size_change": false,
+   "characters": [
+    {
+     "id": "polly",
+     "screen": "center",
+     "presence": "full",
+     "outfit": []
+    }
+   ],
+   "beats": [
+    {
+     "start": 392,
+     "end": 417,
+     "text": "Polly sits holding {ifin} at her chest, looking down at it with a calm face and blinking twice"
+    }
+   ],
+   "props": [
+    "phone",
+    "keyboard",
+    "wall clock",
+    "wall calendar",
+    "small penguin figurine"
+   ],
+   "prop_events": [
+    {
+     "prop": "phone",
+     "event": "uses",
+     "frame": 392,
+     "by": "polly",
+     "is_ifin": true
+    }
+   ],
+   "effects": [],
+   "overlays": [],
+   "in_world_text": [
+    "wall calendar",
+    "clock face"
+   ],
+   "travel": "none",
+   "notes": "camera locked (ECC on the calendar band scale 1.0000, 0 px through f416). Clock and calendar drawn soft-focus in this shot, Polly sharp. Skit ends on this shot. No caption or watermark"
+  }
+ ]
+}
