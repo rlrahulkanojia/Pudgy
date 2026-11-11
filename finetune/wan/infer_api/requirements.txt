@@ -1,0 +1,7 @@
+# The API server's own venv (serve.sh makes it from the trainer venv's Python, so the generator's
+# torch/musubi stack is never touched). Generation itself runs under /workspace/Pudgy/.venv-wan.
+fastapi>=0.115
+uvicorn>=0.30
+python-multipart>=0.0.9
+pillow>=10
+azure-storage-blob>=12.20

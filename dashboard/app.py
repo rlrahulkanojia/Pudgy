@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Pudgy Penguins — client-facing training/inference dashboard.
 
+Two pages: Training (runs, datasets, rendered output) and Generate videos (app_pages/generate.py:
+new clips through the GPU inference API, finetune/wan/infer_api).
+
 Run with:
     source .venv-dashboard/bin/activate
     streamlit run dashboard/app.py
@@ -261,7 +264,7 @@ def render_approach_tab(approach):
     render_outputs(approach)
 
 
-def main():
+def training_page():
     st.title("🐧 Pudgy Penguins — Training Dashboard")
     st.caption(
         "Training-run status and rendered inference output across every base-model track "
@@ -296,6 +299,13 @@ def main():
     for tab, approach in zip(tabs[1:], TRAINING_APPROACHES):
         with tab:
             render_approach_tab(approach)
+
+
+def main():
+    st.navigation([
+        st.Page(training_page, title="Training", icon=":material/monitoring:", default=True),
+        st.Page("app_pages/generate.py", title="Generate videos", icon=":material/movie:"),
+    ], position="top").run()
 
 
 if __name__ == "__main__":
