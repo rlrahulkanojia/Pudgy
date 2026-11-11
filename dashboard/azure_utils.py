@@ -76,6 +76,20 @@ def signed_url(blob_name):
     return f"https://{_account_name()}.blob.core.windows.net/{CONTAINER}/{quote(blob_name)}?{sas}"
 
 
+def list_inference_jobs(limit=24):
+    """Videos made through the inference API and saved here by it (inference/jobs/<id>/job.json),
+    newest first. They stay listed after the GPU server is switched off."""
+    from concurrent.futures import ThreadPoolExecutor
+    if not container_exists():
+        return []
+    cc = _service_client().get_container_client(CONTAINER)
+    names = sorted((b.name for b in cc.list_blobs(name_starts_with="inference/jobs/")
+                    if b.name.endswith("/job.json")), reverse=True)[:limit]
+    with ThreadPoolExecutor(8) as ex:
+        jobs = list(ex.map(read_json, names))
+    return [j for j in jobs if j and (j.get("result") or {}).get("blob")]
+
+
 def read_json(blob_name):
     """Read a small JSON blob (e.g. the live training status) from the dashboard container.
 
