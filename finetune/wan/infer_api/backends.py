@@ -71,7 +71,8 @@ class WanBackend:
     name = "wan"
 
     def __init__(self, ws, work, gpu="0", models=("v8merged",)):
-        self.ws, self.work, self.gpu = Path(ws), Path(work), str(gpu)
+        self.ws, self.work = Path(ws), Path(work)
+        self.gpu_id = str(gpu)        # not self.gpu: that name is the gpu() method
         self.repo = self.ws / "Pudgy"
         self.pyv = self.repo / ".venv-wan" / "bin" / "python"
         self.eval10 = self.repo / "finetune" / "wan" / "eval_v10"
@@ -98,7 +99,7 @@ class WanBackend:
         try:
             # CUDA_VISIBLE_DEVICES: common_v10 defaults it to GPU 1 at import; only a command is built here
             r = subprocess.run([str(self.pyv), "-c", code, cfg, str(self.raw), str(self.eval10)], capture_output=True,
-                               text=True, timeout=180, env=dict(os.environ, CUDA_VISIBLE_DEVICES=self.gpu))
+                               text=True, timeout=180, env=dict(os.environ, CUDA_VISIBLE_DEVICES=self.gpu_id))
             line = next((x for x in r.stdout.splitlines() if x.startswith("DESC ")), None)
             d = json.loads(line[5:]) if line else {"error": (r.stderr or r.stdout).strip()[-600:]}
         except Exception as e:
@@ -136,7 +137,7 @@ class WanBackend:
         return g
 
     def gpu_index(self):
-        return self.gpu
+        return self.gpu_id
 
     def busy_reason(self):
         """Why a new model load would not fit, or None. Once our generator is up, it is the user."""
@@ -165,7 +166,7 @@ class WanBackend:
             raise GenError(why)
         self.raw.mkdir(parents=True, exist_ok=True)
         self.log.parent.mkdir(parents=True, exist_ok=True)
-        env = dict(os.environ, CUDA_VISIBLE_DEVICES=self.gpu, CUDA_DEVICE_ORDER="PCI_BUS_ID",
+        env = dict(os.environ, CUDA_VISIBLE_DEVICES=self.gpu_id, CUDA_DEVICE_ORDER="PCI_BUS_ID",
                    PYTORCH_CUDA_ALLOC_CONF="expandable_segments:True", PYTHONUNBUFFERED="1",
                    MUSUBI=d["musubi"], HF_HUB_OFFLINE="1", TRANSFORMERS_OFFLINE="1")
         with open(self.log, "a") as f:
