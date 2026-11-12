@@ -205,6 +205,25 @@ def test_gpu_taken_by_another_job_makes_the_server_unavailable(client, monkeypat
     assert r.status_code == 503
 
 
+def test_wan_backend_reads_the_gpu_without_a_model_load(tmp_path, monkeypatch):
+    """The real backend's GPU checks (health, busy) run before any model load; the mock tests never reach them."""
+    import backends as B
+    seen = []
+
+    def fake_smi(index):
+        seen.append(index)
+        return {"name": "H100", "memory_used_mb": used, "memory_total_mb": 81559, "utilization": 0}
+
+    monkeypatch.setattr(B, "nvidia_smi", fake_smi)
+    b = B.WanBackend(tmp_path, tmp_path, gpu="1", models=["v8merged"])
+    used = 30000
+    assert "in use by another job" in b.busy_reason()
+    assert b.gpu()["name"] == "H100" and seen and set(seen) == {"1"}
+    b._gpu_cache = (0.0, None)
+    used = 1500
+    assert b.busy_reason() is None
+
+
 def test_a_restart_marks_running_jobs_interrupted_and_requeues_waiting_ones(tmp_path):
     root = tmp_path / "jobs"
     for jid, state in (("20260101-000000-aaaa", "running"), ("20260101-000001-bbbb", "queued")):
