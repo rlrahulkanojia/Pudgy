@@ -20,6 +20,29 @@ entry is the latest experiment — the one the main page highlights.
 
 DATASETS = [
     {
+        "name": "Scenes from the client's skits (v10)",
+        "used_by": ["v10"],
+        # 190 NEW skits: iteration_7 delivered 293 skit files, 99 of them byte re-sends of the
+        # iteration_1/2 skits that the earlier sets were cut from (not counted again).
+        "clip_count": 190,
+        "training_clips": 1525,
+        "resolution": "1080×1920 portrait skits → 480×848 trained",
+        "fps": "24",
+        "frames": "21 / 33 / 49 / 81 (4N+1)",
+        "duration": "0.875s – 3.4s",
+        "notes": "1,525 training clips: 991 scene windows cut from 216 of the client's finished "
+                 "skits (643 from 138 skits of the iteration_7 delivery, about 15.6 minutes; 348 "
+                 "from 78 earlier skits, about 8.7 minutes), plus 534 replay clips (35%) of v8's "
+                 "expressions and movements, so what v8 already does is protected. Every shot was "
+                 "curated by hand (who is on screen and where, the setting, the actions in order, "
+                 "the framing and the camera) and the captions are compiled from that curation. "
+                 "Shots with camera moves, effects, overlays or unnamed side characters were left "
+                 "out of training. Four clip lengths: 467 × 21, 213 × 33, 221 × 49 and 90 × 81 "
+                 "frames; 433 clips show Pax and Polly together and 80 show the phone. 22 whole "
+                 "skits (16 from iteration_7, 6 earlier) are held back as the test set and were "
+                 "never trained on.",
+    },
+    {
         "name": "Joint motion + expression set (v8)",
         "used_by": ["v8"],
         # 14 NEW clips: the iteration_5 blushing delivery. Everything else was already
@@ -141,6 +164,50 @@ DATASETS = [
 ]
 
 TRAINING_APPROACHES = [
+    {
+        "id": "v10",
+        "name": "Skit Scenes Wan 2.2",
+        "base_model": "Wan2.2-I2V-A14B: v8 kept unchanged for fine detail (low-noise expert), plus a "
+                      "new scene model on the high-noise expert, which sets the layout and motion",
+        "status": "Trained · automatic checks passed · 10 unseen skits remade end to end",
+        "status_color": "green",
+        "thesis": "Teach the model whole scenes from the client's finished skits (sets, props, two "
+                  "characters, framing) without losing what v8 learned. Only the part of the model "
+                  "that lays out the scene and its motion is trained; v8 keeps the fine detail, and "
+                  "a third of the training clips replay v8's own material to protect its "
+                  "expressions and movements.",
+        "summary": [
+            "**Trained on the client's skits.** 1,525 training clips: 991 scene windows from 216 "
+            "finished skits, each captioned from a shot-by-shot curation, plus 534 replay clips of "
+            "v8's expressions and movements. 22 whole skits were held back and never trained on, so "
+            "they test the model fairly.",
+            "**Fits unseen footage better than v8.** On held-out clips v10's error is about 6% lower "
+            "than v8's (ratio 0.943; expressions 0.908, movement 0.936; below 1.00 means better, and "
+            "the pass bar is 1.05). It improved at every checkpoint, most in the first half of its "
+            "300 training steps. Training took 18 hours on one A100 GPU.",
+            "**Full-length remakes of unseen skits.** Ten held-out skits (99 s in total) were remade "
+            "end to end with v10, and with v8 for comparison: every shot regenerated between the "
+            "skit's own first and last frames, joined at the original cuts, with the original "
+            "soundtrack. v10's shots pass the automatic checks (each character once, no jumps, a "
+            "clean join) 55 times out of 59. Nine of the remakes are shown below, with side-by-side "
+            "comparisons (original | v8 | v10).",
+            "**As good as v8 by eye, with a small measurable gain.** Side by side, v10 and v8 both "
+            "keep Pax and Polly on model, the sets and props in place and the original timing; "
+            "neither is consistently better. The gain shows in the measurements, not yet by eye.",
+            "**The gain is in layout and motion, not in following the text.** A test that compares "
+            "generations made with the right and with a wrong caption shows no change from v8: v10 "
+            "does not yet follow scene descriptions more closely.",
+            "Known limits: fast camera moves (whip pans, time-lapses) are the shots most often off; "
+            "the model sometimes invents a small detail (a phone screen lighting up, an extra "
+            "notebook); in a busy street shot a character can slip behind another for a moment.",
+            "**Next steps.** A blind side-by-side preference test decides whether v10 replaces v8 in "
+            "production. The error was still falling at step 300, so a longer run may add a little "
+            "more.",
+        ],
+        "video_prefix": "v10",
+        # Uploaded by dashboard/upload_assets_v10.py
+        "video_groups": ["Full-length_remakes", "Side_by_side"],
+    },
     {
         "id": "v8",
         "name": "Joint Motion + Expression Wan 2.2",
