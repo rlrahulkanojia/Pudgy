@@ -13,6 +13,8 @@
 #   bash finetune/wan/v10_box.sh train      # Stage 1 in the background + Azure monitor (GPU 0)
 #   bash finetune/wan/v10_box.sh gpu1       # GPU 1 scheduler: Tier-1 base, Tier 1 per checkpoint (+ early stop),
 #                                           #   baseline generation, Phase 0 #1; run in the background
+#   bash finetune/wan/v10_box.sh solo_watch # ONE-GPU box: solo + retries of failed stages (run THIS in tmux)
+#   bash finetune/wan/v10_box.sh solo       # ONE-GPU box: the whole sequence on GPU 0, resumable
 #   bash finetune/wan/v10_box.sh status     # training + GPU 1 state
 #   bash finetune/wan/v10_box.sh pause S    # stop the trainer once step S's state is saved
 #   bash finetune/wan/v10_box.sh candidate  # after training + gpu1: pick the candidate, run G2 / G4 / G5 on it
@@ -43,7 +45,8 @@ E10=$FW/eval_v10
 GEN_CHUNK="${GEN_CHUNK:-10}"     # clips per generation slice on GPU 1 (each slice reloads the model, ~5-15 min)
 LOGS=$W/logs_v10
 TRAIN_GPU="${TRAIN_GPU:-0}"
-EVAL_GPU="${EVAL_GPU:-1}"
+# GPU 1 evaluates on a 2-GPU box; on a one-GPU box everything is on GPU 0 (use the `solo` step there).
+EVAL_GPU="${EVAL_GPU:-$( [ "$(nvidia-smi -L 2>/dev/null | wc -l)" -ge 2 ] && echo 1 || echo 0 )}"
 TIER1_EVERY=50
 MAX_STEPS="${MAX_STEPS:-300}"
 export PUDGY_DATA=$W/Data
@@ -68,7 +71,7 @@ cache_cfg() {   # $1 = dataset toml; latents (+ T5 unless $2 = latents-only)
 smoke_gate() {   # $1 = smoke log, $2 = exit code. Gate lines from the training-side build (2026-11-10).
   local L=$1 RC=$2 OOM ST PRES ASSET
   OOM=$(grep -ac "memory mapping failed with OOM" "$L" || true)
-  ST=$(tr '\r' '\n' < "$L" | grep -a "PRESERVE_STATS" | tail -1)
+  ST=$(tr '\r' '\n' < "$L" | grep -a "PRESERVE_STATS" | tail -1 || true)   # none when the trainer never started
   PRES=$(echo "$ST" | sed -nE 's/.* preserve=([0-9]+) .*/\1/p'); ASSET=$(echo "$ST" | sed -nE 's/.* asset=([0-9]+) .*/\1/p')
   echo "exit $RC; mapping-OOM lines $OOM (must be 0); $ST"
   if [ "$RC" -eq 0 ] && grep -aq "== done:" "$L" && [ "${OOM:-1}" -eq 0 ] && [ "${PRES:-0}" -gt 0 ] && [ "${ASSET:-0}" -gt 0 ] \
@@ -111,7 +114,7 @@ eval_baseline_chunk() { gen_chunk phase0_p2 phase0_v10.py p2; }   # Phase 0 #2: 
 eval_phase0_chunk() { gen_chunk phase0_p1 phase0_v10.py p1; }     # Phase 0 #1: v9b@100/200 vs v8merged
 
 eval_candidate() {   # plan section 5.1: the latest Tier-1 checkpoint; full G2/G4/G5; on a FAIL, the previous one
-  local before="" C S RC G2 G4 G5 G5P
+  local before="${CANDIDATE_BEFORE:-}" C S RC G2 G4 G5 G5P   # CANDIDATE_BEFORE=S: skip S and later (an eye-check rejection)
   [ -f "$LOGS/phase0_p2.done" ] || { echo "the baseline (Phase 0 #2) is not complete - the gpu1 scheduler must finish first"; return 2; }
   while true; do
     set +e
@@ -120,12 +123,20 @@ eval_candidate() {   # plan section 5.1: the latest Tier-1 checkpoint; full G2/G
     cat "$LOGS/summary.out"
     if [ $RC -eq 30 ]; then log "NO CHECKPOINT HOLDS TIER 1 - Stage 1 is not kept; write the report (HANDOVER_v10 Step 12)"; return 30; fi
     C=$(tail -1 "$LOGS/summary.out"); S=${C#v10@}
-    log "candidate $C: G5 on GPU $TRAIN_GPU, G2 + G4 on GPU $EVAL_GPU"
-    ( cd "$E10" && CUDA_VISIBLE_DEVICES=$TRAIN_GPU RUN_NAME="$RUN_NAME" "$PY" g5_v10.py gen --config "$C" ) > "$LOGS/g5_$S.log" 2>&1 &
-    G5P=$!
-    ev suite_v10.py gen --config "$C"
-    ev g4_v10.py gen --config "$C"
-    wait $G5P || { log "G5 generation failed - see $LOGS/g5_$S.log"; return 2; }
+    if [ "$TRAIN_GPU" = "$EVAL_GPU" ]; then        # one GPU: one job at a time
+      log "candidate $C: G5, G2, G4 in turn on GPU $EVAL_GPU"
+      ( cd "$E10" && CUDA_VISIBLE_DEVICES=$TRAIN_GPU RUN_NAME="$RUN_NAME" "$PY" g5_v10.py gen --config "$C" ) > "$LOGS/g5_$S.log" 2>&1 \
+        || { log "G5 generation failed - see $LOGS/g5_$S.log"; return 2; }
+      ev suite_v10.py gen --config "$C"
+      ev g4_v10.py gen --config "$C"
+    else
+      log "candidate $C: G5 on GPU $TRAIN_GPU, G2 + G4 on GPU $EVAL_GPU"
+      ( cd "$E10" && CUDA_VISIBLE_DEVICES=$TRAIN_GPU RUN_NAME="$RUN_NAME" "$PY" g5_v10.py gen --config "$C" ) > "$LOGS/g5_$S.log" 2>&1 &
+      G5P=$!
+      ev suite_v10.py gen --config "$C"
+      ev g4_v10.py gen --config "$C"
+      wait $G5P || { log "G5 generation failed - see $LOGS/g5_$S.log"; return 2; }
+    fi
     ev suite_v10.py score --configs v8merged "$C"
     ev suite_v10.py sheets --configs v8merged "$C"
     ev g4_v10.py score --configs v8merged "$C"
@@ -197,7 +208,10 @@ pull_v9b)
 cache)
   [ -s "$CFG" ] || { echo "no $CFG - run pull first"; exit 1; }
   export CUDA_VISIBLE_DEVICES=$TRAIN_GPU
-  cache_cfg "$CFG" 2>&1 | tee "$LOGS/cache.log"
+  cache_cfg "$CFG" 2>&1 | tee -a "$LOGS/cache.log"
+  # Self-healing after an interrupted run: delete any file cut off mid-write, re-encode it, then verify strictly.
+  "$PY" "$FW/verify_cache_v8.py" --config "$CFG" --fix 2>&1 | tee -a "$LOGS/cache.log" || true
+  cache_cfg "$CFG" 2>&1 | tee -a "$LOGS/cache.log"
   "$PY" "$FW/verify_cache_v8.py" --config "$CFG" 2>&1 | tee -a "$LOGS/cache.log"
   # Spatial size: scene latents 480x848 / 8 = 60 x 106 (no silent re-bucketing), replay 1024 / 8 = 128 x 128.
   "$PY" - "$CFG" <<'PYEOF' 2>&1 | tee -a "$LOGS/cache.log"
@@ -281,7 +295,12 @@ pause)
   S=${2:?usage: v10_box.sh pause STEP}
   ST=$(printf "%s/%s-step%08d-state" "$RUN" "$RUN_NAME" "$S")
   log "waiting for $ST"
-  until [ -d "$ST" ]; do sleep 60; done
+  # Give up if the trainer is gone and the state never appeared (a crash before step S), instead of waiting forever.
+  until [ -d "$ST" ]; do
+    sleep 60
+    [ -d "$ST" ] && break
+    [ -n "$(trainer_pids)" ] || { log "pause: the trainer is not running and $ST never appeared - see $LOGS/train.log"; exit 1; }
+  done
   prev=-1; cur=$(du -sb "$ST" | cut -f1)
   while [ "$cur" != "$prev" ]; do sleep 30; prev=$cur; cur=$(du -sb "$ST" | cut -f1); done
   P=$(trainer_pids); [ -n "$P" ] && kill -INT $P
@@ -327,6 +346,98 @@ gpu1)
       rm -f "$LOGS/gpu1.pid"; break
     fi
     sleep 300
+  done
+  ;;
+
+solo)
+  # ONE-GPU SEQUENCE (decided 2026-11-10: the box has a single A100 80 GB). Everything runs on GPU $TRAIN_GPU, one job
+  # at a time. Resumable: re-running `solo` skips finished stages (flag files, Tier-1 results, existing clips) and the
+  # trainer resumes from its newest complete state. Run it in tmux. Exit 20 = early stop, 11 = G2 eye check needed,
+  # 30 = no checkpoint holds Tier 1; each is a stop to report (HANDOVER_v10 section 4b).
+  export EVAL_GPU=$TRAIN_GPU
+  POLL="${SOLO_POLL:-30}"
+  # One GPU: no interleaving needed, so each generation phase runs in ONE model load instead of 10-clip slices.
+  GEN_CHUNK="${GEN_CHUNK_SOLO:-1000000}"
+  stage() { echo "== [$(ts)] SOLO $*" | tee -a "$LOGS/solo.log" "$LOGS/v10_box.log"; }
+  wait_trainer_gone() { while [ -n "$(trainer_pids)" ]; do sleep "$POLL"; done; }
+  state_of() { printf "%s/%s-step%08d-state" "$RUN" "$RUN_NAME" "$1"; }
+  start_train() { [ -n "$(trainer_pids)" ] && { stage "trainer already running: $(trainer_pids | tr '\n' ' ')"; return 0; }; bash "$0" train; }
+  phase0_p1() {   # Phase 0 #1 needs no decision: run it whenever the sequence would otherwise leave the GPU idle
+    [ -f "$LOGS/phase0_p1.done" ] && return 0
+    if [ -s "$W/wan_output/pudgy-v9b-lownoise/pudgy-v9b-lownoise-step00000100.safetensors" ] && [ -s "$W/wan_output/pudgy-v9b-lownoise/pudgy-v9b-lownoise-step00000200.safetensors" ]; then
+      stage "Phase 0 #1"; while gen_chunk phase0_p1 phase0_v10.py p1; do :; done
+      ev phase0_v10.py report 2>&1 | tee "$LOGS/phase0_p1_report.txt"
+    else
+      stage "Phase 0 #1 skipped: v9b@100/200 missing (v10_box.sh pull_v9b, then re-run solo)"
+    fi
+  }
+  # A failed stage must stop solo (solo_watch retries it). `bash $0 X && touch` inside `[ -f ] || { }` did not:
+  # set -e is off there, and on 2026-11-10 a failed smoke went straight on to Tier 1 and training.
+  for ST in cache evalprep smoke; do
+    if [ ! -f "$LOGS/$ST.done" ]; then
+      stage "$ST"
+      bash "$0" "$ST" || { stage "$ST FAILED - see $LOGS/$ST.log"; exit 1; }
+      touch "$LOGS/$ST.done"
+    fi
+  done
+  evalenv
+  eval_tier1_base_done || { stage "Tier-1 base rows"; eval_tier1_base; }
+  FINAL=$(printf "%s/%s-step%08d.safetensors" "$RUN" "$RUN_NAME" "$MAX_STEPS")
+  # 1. train to step 100 (MAX_STEPS stays $MAX_STEPS, so the cosine schedule is the planned one), then the early stop
+  if ! eval_tier1_done 100; then
+    if [ ! -d "$(state_of 100)" ]; then stage "train to step 100"; start_train; bash "$0" pause 100; fi
+    wait_trainer_gone
+    for S in 50 100; do eval_tier1_done $S || { stage "Tier 1 step $S"; eval_tier1 $S; }; done
+  fi
+  if [ -f "$LOGS/EARLY_STOP" ]; then
+    stage "EARLY STOP: $(cat "$LOGS/EARLY_STOP") - Stage 1 is not kept; Phase 0 #1 runs first (it informs the next decision)"
+    bash "$0" archive; MSG="v10 box: early stop at step 100" bash "$0" git
+    phase0_p1; bash "$0" archive; MSG="v10 box: early stop; Phase 0 #1 done" bash "$0" git; exit 20
+  fi
+  # 2. finish training, then Tier 1 on the remaining checkpoints
+  if [ ! -s "$FINAL" ]; then
+    stage "train to step $MAX_STEPS"; start_train; sleep 60; wait_trainer_gone
+    [ -s "$FINAL" ] || { stage "training stopped before step $MAX_STEPS - see $LOGS/train.log; re-run solo to resume"; exit 1; }
+  fi
+  for S in $(seq 150 "$TIER1_EVERY" "$MAX_STEPS"); do eval_tier1_done $S || { stage "Tier 1 step $S"; eval_tier1 $S; }; done
+  # 3. baseline (Phase 0 #2), then the candidate's G5 / G2 / G4
+  [ -f "$LOGS/phase0_p2.done" ] || { stage "baseline (Phase 0 #2)"; while gen_chunk phase0_p2 phase0_v10.py p2; do :; done; }
+  if [ ! -f "$LOGS/CANDIDATE" ]; then
+    stage "candidate gates"
+    set +e; eval_candidate 2>&1 | tee -a "$LOGS/candidate.log"; RC=${PIPESTATUS[0]}; set -e
+    if [ $RC -eq 30 ]; then
+      stage "no checkpoint holds Tier 1 - Stage 1 is not kept; Phase 0 #1 runs first"
+      bash "$0" archive; MSG="v10 box: no checkpoint holds Tier 1" bash "$0" git; phase0_p1; bash "$0" archive; exit 30
+    fi
+    # 11 = G2 needs a human eye check: keep going (G1 page, Phase 0 #1) so the GPU is not idle while it waits
+    if [ $RC -eq 11 ]; then stage "G2 needs an eye check (HANDOVER_v10 Step 10); continuing meanwhile"; touch "$LOGS/G2_EYE_CHECK_PENDING"
+    elif [ $RC -ne 0 ]; then stage "candidate exit $RC"; exit $RC; fi
+  fi
+  # 4. the G1 page for the user, then Phase 0 #1 while they judge
+  if [ ! -f "$LOGS/g1.done" ]; then stage "G1 page"; eval_g1; touch "$LOGS/g1.done"; fi   # set -e stays on inside eval_g1
+  bash "$0" archive; MSG="v10 box: Stage 1 done, candidate $(cat "$LOGS/CANDIDATE"), G1 page ready" bash "$0" git
+  phase0_p1
+  bash "$0" archive; MSG="v10 box: solo sequence complete" bash "$0" git
+  if [ -f "$LOGS/G2_EYE_CHECK_PENDING" ]; then
+    stage "WAITING FOR THE G2 EYE CHECK of $(cat "$LOGS/CANDIDATE") (HANDOVER_v10 section 4b); the G1 page is built but must not be judged until it passes"
+    exit 11
+  fi
+  stage "SOLO DONE: candidate $(cat "$LOGS/CANDIDATE"); G1 page on Azure v10/eval/g1/pages/; write the report (Step 12)"
+  ;;
+
+solo_watch)
+  # solo + a watchdog: a failed stage (exit 1: a crash, an OOM, a network blip) is retried after 2 min, up to
+  # SOLO_RETRIES times (solo is resumable). Decision stops (0, 20, 11, 30) are never retried. Run THIS in tmux.
+  tries=0; max="${SOLO_RETRIES:-3}"
+  while true; do
+    set +e; bash "$0" solo; RC=$?; set -e
+    case $RC in
+      0|11|20|30) log "solo_watch: solo exited $RC - a stop for a person (HANDOVER_v10 section 4b)"; exit $RC ;;
+    esac
+    tries=$((tries + 1))
+    if [ $tries -gt "$max" ]; then log "solo_watch: solo failed $tries times (last exit $RC) - giving up; see $LOGS/solo.log"; exit $RC; fi
+    log "solo_watch: solo exited $RC (attempt $tries of $max) - retrying in 2 min"
+    sleep "${SOLO_RETRY_WAIT:-120}"
   done
   ;;
 

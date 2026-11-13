@@ -71,7 +71,17 @@ export CUDA_VISIBLE_DEVICES="${CUDA_VISIBLE_DEVICES:-0}"
 case "$CUDA_VISIBLE_DEVICES" in *,*|"") die "CUDA_VISIBLE_DEVICES must name exactly one GPU (got '$CUDA_VISIBLE_DEVICES')";; esac
 awk -v w="$PRESERVE_WEIGHT" 'BEGIN { exit !(w + 0 > 0) }' || die "PRESERVE_WEIGHT must be > 0 (got $PRESERVE_WEIGHT)"
 
-set -a; [ -f "$W/Pudgy/.env" ] && . "$W/Pudgy/.env"; set +a
+# Take only NAME=value lines from the repo's .env, never execute it: the file can hold notes and code,
+# and sourcing it under set -e killed every smoke and training start on 2026-11-10.
+if [ -f "$W/Pudgy/.env" ]; then
+  while IFS= read -r L || [ -n "$L" ]; do
+    if [[ $L =~ ^(export[[:space:]]+)?([A-Za-z_][A-Za-z0-9_]*)=(.*)$ ]]; then
+      K=${BASH_REMATCH[2]}; V=${BASH_REMATCH[3]%$'\r'}
+      if [[ $V =~ ^\"(.*)\"$ || $V =~ ^\'(.*)\'$ ]]; then V=${BASH_REMATCH[1]}; fi
+      export "$K=$V"
+    fi
+  done < "$W/Pudgy/.env"
+fi
 
 for f in "$DIT" "$GOLDEN" "$E5" "$DATASET"; do
   [ -s "$f" ] || die "missing: $f"
