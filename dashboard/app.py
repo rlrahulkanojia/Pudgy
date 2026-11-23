@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Pudgy Penguins — client-facing training/inference dashboard.
 
-Two pages: Training (runs, datasets, rendered output) and Generate videos (app_pages/generate.py:
-new clips through the GPU inference API, finetune/wan/infer_api).
+Three pages: Training (runs, datasets, rendered output), Samples (app_pages/samples.py: the v10
+remakes with their prompts, for the client) and Generate videos (app_pages/generate.py: new clips
+through the GPU inference API, finetune/wan/infer_api).
 
 Run with:
     source .venv-dashboard/bin/activate
@@ -326,6 +327,7 @@ def training_page():
 def main():
     st.navigation([
         st.Page(training_page, title="Training", icon=":material/monitoring:", default=True),
+        st.Page("app_pages/samples.py", title="Samples", icon=":material/video_library:"),
         st.Page("app_pages/generate.py", title="Generate videos", icon=":material/movie:"),
     ], position="top").run()
 
