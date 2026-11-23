@@ -53,6 +53,11 @@ def cached_live_status():
     return azure_utils.read_json("v8/status.json")
 
 
+@st.cache_data(ttl=300, show_spinner=False)
+def cached_read_json(blob_name):
+    return azure_utils.read_json(blob_name)
+
+
 def _pretty_name(display_name):
     return display_name.rsplit(".", 1)[0].replace("_", " ")
 
@@ -85,6 +90,23 @@ def render_outputs(approach):
     else:
         videos = cached_list_videos(approach["video_prefix"])
         render_video_grid(videos)
+    render_prompts(approach)
+
+
+def render_prompts(approach):
+    """The prompt behind every shot of the videos above, one expander per video (named like its caption)."""
+    doc = cached_read_json(approach["prompts_blob"]) if approach.get("prompts_blob") else None
+    if not doc:
+        return
+    st.markdown("#### Prompts")
+    st.caption(doc["note"])
+    for title, skit in doc["skits"].items():
+        n = len(skit["shots"])
+        with st.expander(f"{title}: {n} shot{'s' * (n > 1)}, {skit['seconds']:.1f} s"):
+            for i, s in enumerate(skit["shots"], 1):
+                st.markdown(f"**Shot {i}** · {s['start']:.1f}–{s['end']:.1f} s · {s['frames']} frames · "
+                            f"seed {s['seed']}" + (" · hand-written prompt (camera move)" if s["manual"] else ""))
+                st.code(s["prompt"], language=None, wrap_lines=True)
 
 
 def render_latest_experiment():

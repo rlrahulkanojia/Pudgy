@@ -190,7 +190,7 @@ TRAINING_APPROACHES = [
             "skit's own first and last frames, joined at the original cuts, with the original "
             "soundtrack. v10's shots pass the automatic checks (each character once, no jumps, a "
             "clean join) 55 times out of 59. Nine of the remakes are shown below, with side-by-side "
-            "comparisons (original | v8 | v10).",
+            "comparisons (original | v8 | v10) and the prompt used for every shot.",
             "**As good as v8 by eye, with a small measurable gain.** Side by side, v10 and v8 both "
             "keep Pax and Polly on model, the sets and props in place and the original timing; "
             "neither is consistently better. The gain shows in the measurements, not yet by eye.",
@@ -207,6 +207,8 @@ TRAINING_APPROACHES = [
         "video_prefix": "v10",
         # Uploaded by dashboard/upload_assets_v10.py
         "video_groups": ["Full-length_remakes", "Side_by_side"],
+        # Every shot's prompt and seed, also from upload_assets_v10.py; shown under the videos.
+        "prompts_blob": "v10/prompts.json",
     },
     {
         "id": "v8",
